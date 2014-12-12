@@ -1,0 +1,123 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: 16px;
+    color: #444;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    overflow: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* FOR IE9 */
+.gradient {
+   filter: none;
+}
+
+blockquote {
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(239,231,179,1) 10%, rgba(239,231,179,1) 90%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(239,231,179,1) 10%,rgba(239,231,179,1) 90%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(239,231,179,1) 10%,rgba(239,231,179,1) 90%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
+    padding: 10px 5%;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+
+blockquote cite:before {
+    content: "-- by ";
+    display: block;
+    float: left;
+    padding-right: .3rem;
+}
+
+blockquote a,
+blockquote a:visited{
+    color: blue;
+    text-decoration: none;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 5;
+    display: block;
+    margin: auto;
+    width: 100%;
+    transition: width .3s linear;
+}
+
+.clear {
+    clear: both;
+}
+
+.col-1 {
+    width: 33%;
+    float: left;
+}
+
+.col-2 {
+    width: 66%;
+    float: left;
+}
+
+.sect-content {
+    position: relative;
+    z-index: 7;
+}
+
+[lang="en-US"] .lang-pt {
+    display: none;
+}
+
+[lang="pt-BR"] .lang-en {
+    display: none;
+}
+
+.glassEffect {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    width: 130%;
+    height: 100%;
+    background: url(../images/light-effect.png) no-repeat;
+    background-size: 100% 100%;
+    pointer-events: none;
+}
+
+/* MEDIA QUERIES */
+@media ($mq_small) {
+    .wrapper {
+        width: 340px;
+    }
+}
+
+@media ($mq_medium) {
+    .wrapper {
+        width: 550px;
+    }
+}
+
+@media ($mq_large) {
+    .wrapper {
+        width: 620px;
+    }
+}
+
+@media ($mq_xlarge) {
+    .wrapper {
+        width: 900px;
+    }
+}
+

@@ -5,20 +5,11 @@
     
     function showContent (id, src, path) {
         if(currentlyShowing && currentlyShowing == id || id == 'home'){
-            hideContent();
-        } else {
-            currentlyShowing= id;
-            _b.setAttribute('data-showing-content', '1');
-            _b.setAttribute('data-showing-content-type', id);
-            history.pushState({}, "home", path || src);
+            src = id = 'home';
         }
-    }
-    
-    function hideContent () {
-        _b.removeAttribute('data-showing-content');
-        currentlyShowing= false;
-        
-        history.pushState({}, "home", "./");
+        currentlyShowing= id;
+        _b.setAttribute('data-page', id);
+        //history.pushState({}, path || src, path || src);
     }
     
     _b.addEventListener('click', function(event){
@@ -26,7 +17,7 @@
             tag= target.tagName.toLowerCase(),
             src= '#';
         
-        if(tag == 'a' && target.classList.contains('use-ajax')){
+        if(tag == 'a' && target.classList.contains('local')){
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
             
@@ -37,4 +28,6 @@
             event.stopPropagation();
         }
     });
+    
+    window.scrollTo(0, 0);
 })();

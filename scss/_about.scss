@@ -1,3 +1,15 @@
+.about-full-content {
+    background: white;
+    position: relative;
+    top: 6000px;
+/*    display: none;*/
+    transition: top linear .5s .1s;
+    z-index: 1;
+}
+body[data-page="about"] .about-full-content {
+    top: 0;
+/*    display: block;*/
+}
 
 #about-container .decorator {
     min-height: 160px;
@@ -5,6 +17,13 @@
     width: 100%;
     height: auto;
     position: relative;
+    top: -600px;
+    transition: top linear .5s;
+    z-index: 2;
+}
+
+body[data-page="about"] #about-container .decorator {
+    top: 0;
 }
 
 #about-container .decorator a {
@@ -14,6 +33,13 @@
 #about-container .col-1 {
     margin-top: 0px;
     text-align: center;
+    position: relative;
+    left: -2000px;
+    transition: left linear .5s;
+}
+
+body[data-page="about"] #about-container .col-1 {
+    left: 0;
 }
 
 #about-container .decorator .col-2 {
@@ -90,12 +116,73 @@
 .about-full-content .col-2 {
     float: right;
     padding: 1rem;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     position: relative;
 }
 
 #about-container h2 {
     margin-bottom: 1rem;
+}
+
+.contacts-label {
+    font-weight: bold;
+    color: #999;
+    border-bottom: solid 2px #999;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+@media ($mq_small){
+    .picture-square {
+        width: 120px;
+    }
+    
+    #about-container .about-content {
+        position: absolute;
+        top: 0;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #about-container {
+        .wrapper {
+            width: 100%;
+        }
+        
+        .decorator {
+            padding-top: 180px;
+        }
+    }
+    
+    #about-container .col-2 {
+        width: 100%;
+    }
+    
+    .about-content .col-1 {
+        width: 100%;
+    }
+    
+    .picture-square {
+        float: left;
+        margin: 1rem;
+    }
+    
+    .about-content ol {
+        clear: none;
+        color: white;
+        margin: 0;
+        
+        a {
+            color: white;
+        }
+    }
+}
+
+@media ($mq_medium){
+    .picture-square {
+        width: 180px;
+    }
 }
 
 
