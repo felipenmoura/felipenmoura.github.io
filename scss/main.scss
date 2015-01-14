@@ -4,3 +4,10 @@
 @import "home";
 @import "about";
 @import "utils";
+
+html, body {
+    height: 100% !important;
+}
+body{
+    min-height: 100% !important;
+}
