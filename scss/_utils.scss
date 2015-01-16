@@ -28,32 +28,34 @@ body[data-page="utils"] {
             position: relative;
             width: 32px;
             height: 32px;
-            //overflow: hidden;
+            cursor: pointer;
             display: inline-block;
-            border: solid 2px white;
+            //border: solid 2px white;
             border-radius: 50%;
             margin: 5px;
+            box-shadow: 0 0 0px 2px #fff;
             background-image: url(../images/icons.png);
-            //background-size: auto 100%;
+            transition: box-shadow linear .2s;
             
             &.talks {
-                background-position: -98px 0;
+                background-position: -96px 2px;
             }
             &.videos {
-                background-position: -2px 0;
+                background-position: 0 2px;
             }
             &.tools {
-                background-position: -258px 0;
+                background-position: -256px 2px;
             }
             &.articles {
-                background-position: -34px 0;
+                background-position: -32px 2px;
             }
             &.albums {
-                background-position: -67px 0;
+                background-position: -65px 2px;
             }
             
             &:hover {
-                background-position-y: -32px;
+                background-position-y: -30px;
+                box-shadow: 0 0 0px 4px #fff;
                 
                 .tooltip {
                     position: absolute;
@@ -64,6 +66,7 @@ body[data-page="utils"] {
             
             .tooltip {
                 position: relative;
+                color: #000;
                 left: 45px;
                 top: 0;
                 text-indent: 0;
@@ -75,7 +78,7 @@ body[data-page="utils"] {
                 height: 30px;
                 font-size: .8rem;
                 opacity: 0;
-                transition: all linear .2s;
+                transition: all linear .2s .3s;
                 
                 &:before {
                     content: "";
