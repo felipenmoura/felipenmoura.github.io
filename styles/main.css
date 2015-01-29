@@ -785,8 +785,7 @@ body[data-page="utils"] #utils-container {
   opacity: 1;
 }
 body[data-page="utils"] #utils-container .decorator {
-  left: 0;
-  top: 0;
+  transform: translate(0);
 }
 
 [data-page="utils"] #utils-container {
@@ -814,14 +813,18 @@ body[data-page="utils"] #utils-container .decorator {
 }
 #utils-container .decorator {
   position: fixed;
-  left: -44px;
+  left: 0;
   top: 0;
   background-color: #427FED;
   padding-top: 30px;
   text-align: center;
   border: solid 1px black;
   border-width: 0 1px 0 0;
-  transition: all linear .2s;
+  transform: translate(-44px, 0);
+  -webkit-transition: -webkit-transform linear .2s;
+  -moz-transition: -moz-transform linear .2s;
+  -ms-transition: -ms-transform linear .2s;
+  transition: transform linear .2s;
   width: 44px;
   height: 100%;
 }
@@ -934,9 +937,10 @@ body[data-page="utils"] #utils-container .decorator {
     height: 44px;
     width: 100%;
     left: 0;
-    top: -44px;
+    top: 0;
     border-width: 0 0 1px 0;
     padding-top: 0;
+    transform: translate(0, -44px);
   }
   #utils-container .decorator .icon:hover .tooltip {
     top: 50px;
