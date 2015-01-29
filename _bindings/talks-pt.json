@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Ta, e agora? Acessibilidade!",
+        "description": "Nesta apresentação, discutimos sobre acessibilidade na web, e como fazer o melhor uso das tecnologias web atuais.",
+        "link": "http://felipenmoura.org/talks/accessibility/",
+        "image": "resources/talk-accessibility.jpg"
+    },
+    {
+        "title": "Animações em CSS3",
+        "description": "Conheça algumas das tecnicas para criar e otimizar animações utilizando CSS3.<br/>Além disso, também veremos algumas técnicas interessantes para comina-las da melhor forma com HTML5 ",
+        "link": "http://felipenmoura.org/talks/css-animation/",
+        "image": "resources/talk-css-animation.jpg"
+    },
+    {
+        "title": "Aprenda ES6",
+        "description": "Comece a aprender ES6 agora! Teste e rode alguns códigos, veja como transpilar e entenda as diferenças com a versão anterior do JavaScript.<br/>Esta é uma palestra mão-na-massa, com muito código e exemplos.",
+        "link": "http://felipenmoura.org/talks/learn-es6/",
+        "image": "resources/talk-learn-es6.jpg"
+    },
+    {
+        "title": "Legal, mas pra que serve?",
+        "description": "Novas tecnologias são ótimas e muito legais! Mas, como podemos usa-las de fato hoje em dia?<br/>Vamos ver maneiras criativas de combinar tais técnicas e tecnologias para construir coisas incríveis, usando as últimas novidades do HTML5, JavaScript e CSS3.",
+        "link": "http://felipenmoura.org/talks/pra-que-serve/",
+        "image": "resources/talk-what-for.jpg"
+    },
+    {
+        "title": "A web, como interface",
+        "description": "Uma interface é o que fica entre as pessoas, e como elas atingem determinados objetivos...hoje em dia, a web é parte disto!<br/>Faremos esta analogia e comparações com o mundo real, checar algumas técnicas a fim de atingirmos melhores interfaces para usuários, alguns erros comúns cometidos em interfaces, e também algumas boas práticas.",
+        "link": "http://felipenmoura.org/talks/web-interface/",
+        "image": "resources/talk-web-as-interface.jpg"
+    },
+    {
+        "title": "Um demo Power Polygon - parallax",
+        "description": "Esta é uma apresentação demo, usando algumas das funcionalidades do Power Polygon",
+        "link": "http://felipenmoura.org/talks/demo-parallax/",
+        "image": "resources/talk-ppw-demo.jpg"
+    }
+]

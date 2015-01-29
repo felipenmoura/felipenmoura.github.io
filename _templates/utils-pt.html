@@ -1,0 +1,38 @@
+<section id="utils-container" class="sect-content">
+            <div class="decorator">
+                <a class="icon talks" href="#!talks">Palestras<span class="tooltip">Slides de minhas palestras</span></a>
+                <a class="icon videos" href="#!videos">Vídeos<span class="tooltip">Meus canais no youtube</span></a>
+                <a class="icon tools" href="#!tools">Ferramentas<span class="tooltip">Projetos, ferramentas, demos e experimentos</span></a>
+                <a class="icon articles" href="./articles">Artigos<span class="tooltip">Artigos</span></a>
+                <a class="icon albums" href="#!albums">Álbums<span class="tooltip">Fotos e Álbums</span></a>
+            </div>
+            
+            <div class="utils-content">
+                {% for talk in talks %}
+                <section class="talks">
+                    <h3>{{ talk.title }}</h3>
+                </section>
+                {% endfor %}
+<!--
+                <section class="talks lang-pt">
+                    <h3>Ta, e agora? Acessibilidade!</h3>
+                    <p>
+                        Discutimos acessibilidade na web e revisamos algumas técnicas para usarmos as tecnologias atuais a favor da acessibilidade e usabilidade.<br/>
+                        <a href="http://felipenmoura.org/talks/accessibility/" target="_blank">http://felipenmoura.org/talks/accessibility/</a>
+                    </p>
+                    <img src="resources/talks/talk-accessibility.jpg" title="" />
+                </section>
+                <section class="talks lang-en">
+                    <h3>Accessibility!</h3>
+                    <p>
+                        In this talk, we discuss about accessibility on the web, and how to make the best use of web technologies to make it better.<br/>
+                        <a href="http://felipenmoura.org/talks/accessibility/" target="_blank">http://felipenmoura.org/talks/accessibility/</a>
+                    </p>
+                    <img src="resources/talks/accessibility/" />
+                </section>
+-->
+            </div>
+            
+            <div class="clear"></div>
+            
+        </section>

@@ -1,0 +1,52 @@
+<section id="utils-container" class="sect-content">
+            
+            <div class="utils-content talks">
+                {% for talk in talks %}
+                <section>
+                    <h3>{{ talk.title }}</h3>
+                    <p>{{ talk.description }}<br/>
+                        <a href="{{ talk.link }}" target="_blank">{{ talk.link }}</a>
+                    </p>
+                    {% if talk.image %}
+                    <img src="{{ talk.image }}" title="{{ talk.title }}" />
+                    {% endif%}
+                </section>
+                {% endfor %}
+            </div>
+    
+            <div class="utils-content videos">
+                {% for video in videosList %}
+                <section class="video-item">
+                    <h3>{{ video.title.$t }}</h3>
+                    <div class="youtube-thumb">
+                        <img src="{{ video.media$group.media$thumbnail[1].url }}"
+                             title="{{ video.title.$t }}"
+                             data-yt-ref="{{ video.media$group.yt$videoid.$t }}" />
+                    </div>
+                    <span class="video-description">
+                        {{ video.media$group.media$description.$t }}
+                    </span>
+                </section>
+                {% endfor %}
+            </div>
+            
+            <div class="clear"></div>
+    
+            <div class="decorator">
+                <a class="icon talks" href="#!utils/talks">Talks<span class="tooltip">Slides from Talks</span></a>
+                <a class="icon videos" href="#!utils/videos">Videos<span class="tooltip">My youtube channels</span></a>
+                <a class="icon tools" href="#!utils/tools">Tools<span class="tooltip">Projects/Tools, experiments and demos</span></a>
+                <a class="icon articles" href="./articles">Articles<span class="tooltip">Articles</span></a>
+                <a class="icon albums" href="#!utils/albums">Albums<span class="tooltip">Pictures and Albums</span></a>
+            </div>
+            
+        </section>
+
+<div id="playerLayer">
+    <iframe id="playerElement"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen></iframe>
+    <span class="closeLayerBtn">close >></span>
+</div>

@@ -4,6 +4,7 @@
 @import "home";
 @import "about";
 @import "utils";
+@import "layers";
 
 html, body {
     height: 100% !important;
@@ -11,3 +12,58 @@ html, body {
 body{
     min-height: 100% !important;
 }
+
+.youtube-thumb {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    cursor: pointer;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 9;
+        background-image: url(../images/youtube-buttons-sprite.png);
+        width: 40px;
+        height: 30px;
+    }
+    &:hover:after {
+        background-position: 0 -30px;
+    }
+}
+
+.video-item {
+    padding: 1rem;
+    width: 100%;
+    display: inline-block;
+    
+    h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #427FED;
+    }
+    
+    .youtube-thumb {
+        float: left;
+        margin: 1rem 1rem 0 0;
+    }
+    
+    .video-description {
+        padding-top: 1rem;
+        display: block;
+        max-width: 800px;
+    }
+    
+    .video-link {
+        margin-top: 2rem;
+        display: block;
+    }
+}
+
+
+

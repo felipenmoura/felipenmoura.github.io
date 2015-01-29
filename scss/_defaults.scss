@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    overflow: auto;
+    overflow: hidden;
 }
 
 
@@ -94,6 +94,7 @@ blockquote a:visited{
     background: url(../images/light-effect.png) no-repeat;
     background-size: 100% 100%;
     pointer-events: none;
+    display: none;
 }
 
 /* MEDIA QUERIES */
@@ -112,6 +113,9 @@ blockquote a:visited{
 @media ($mq_large) {
     .wrapper {
         width: 620px;
+    }
+    .glassEffect {
+        display: block;
     }
 }
 

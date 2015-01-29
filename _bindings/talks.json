@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Accessibility!",
+        "description": "In this talk, we discuss about accessibility on the web, and how to make the best use of web technologies to make it better.",
+        "link": "http://felipenmoura.org/talks/accessibility/",
+        "image": "resources/talk-accessibility.jpg"
+    },
+    {
+        "title": "CSS Animation",
+        "description": "Meet some of the greatest techniques to animate and optimize animations using CSS3.<br/>Besides that, also some interesting techniques to use and combine with your HTML.",
+        "link": "http://felipenmoura.org/talks/css-animation/",
+        "image": "resources/talk-css-animation.jpg"
+    },
+    {
+        "title": "Learn ES6",
+        "description": "Start learning ES6 now, try and run some code, see how to transpile, understand the differences from the previous version of JavaScript.<br/>This is a talk full of code and examples.",
+        "link": "http://felipenmoura.org/talks/learn-es6/",
+        "image": "resources/talk-learn-es6.jpg"
+    },
+    {
+        "title": "What is that all for?",
+        "description": "Cool new technologies are great! But how can we really use them? Lets see cool and creative ways to combine techniques and tecnologies to build incredible stuff, using the latest features of HTML5, JavaScript and CSS3.",
+        "link": "http://felipenmoura.org/talks/pra-que-serve/",
+        "image": "resources/talk-what-for.jpg"
+    },
+    {
+        "title": "The web, as interface",
+        "description": "An interface is what is between people, and how they reach their goals...nowadays, web is part of it!<br/>Let's make some comparizons with real world, check some techniques to have better interfaces for users, some classic mistakes and good practices.",
+        "link": "http://felipenmoura.org/talks/web-interface/",
+        "image": "resources/talk-web-as-interface.jpg"
+    },
+    {
+        "title": "A Power Polygon parallax demo",
+        "description": "This talk is a demo presentation using some of the Power Polygon features.",
+        "link": "http://felipenmoura.org/talks/demo-parallax/",
+        "image": "resources/talk-ppw-demo.jpg"
+    }
+]

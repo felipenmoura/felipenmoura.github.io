@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>felipenmoura();</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        
+        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet" type="text/css" />
+        
+        <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+
+    </head>
+    <body data-page="home">
+        
+        <div class="background-video videobg">
+            <video id="background-video" class="background-video" autoplay loop poster="images/relax.jpg" >
+                <!--source src="assets/relax-bg.webm" type="video/webm" /-->
+                <source src="assets/relax-bg.mp4" type="video/mp4" />
+            </video>
+        </div>
+        
+        <h1 id="main-header">felipe n. moura</h1>
+        
+        {% if lang == 'en' %}
+            {% include '_templates/nav.html' %}
+            {% include '_templates/about.html' %}
+            {% include '_templates/utils.html' %}
+        {% else %}
+            {% include '_templates/nav-pt.html' %}
+            {% include '_templates/about-pt.html' %}
+            {% include '_templates/utils-pt.html' %}
+        {% endif %}
+        
+        <div id="decoration" class="glassEffect"></div>
+        
+        <script src="scripts/default.js"></script>
+        
+    </body>
+</html>
