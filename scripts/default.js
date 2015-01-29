@@ -26,7 +26,7 @@
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
             
-            // TODO: get it via jQuery
+            // TODO: get it via ajax
             showContent(src.replace(/^(\.|\/)+/, '').replace(/\/.+/, ''), src);
             
             event.preventDefault();
@@ -52,8 +52,16 @@
                 extra: url[2] || ''
             };
             _b.setAttribute('data-page', hashData.page);
-            _b.setAttribute('hash-bang-detail', hashData.detail);
-            _b.setAttribute('hash-bang-extra', hashData.extra);
+            if(hashData.detail){
+                _b.setAttribute('hash-bang-detail', hashData.detail);
+            }else{
+                _b.removeAttribute('hash-bang-detail');
+            }
+            if(hashData.extra){
+                _b.setAttribute('hash-bang-extra', hashData.extra);
+            }else{
+                _b.removeAttribute('hash-bang-extra');
+            }
         }else{
             _b.removeAttribute('data-page');
             _b.removeAttribute('hash-bang-detail');

@@ -15,8 +15,11 @@ body[data-page="utils"] {
 }
 
 [data-page="utils"] {
-    #utils-container {
-        overflow: auto;
+    
+    &[hash-bang-detail] {
+        #utils-container {
+            overflow: auto;
+        }
     }
 }
 

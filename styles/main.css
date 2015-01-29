@@ -788,7 +788,7 @@ body[data-page="utils"] #utils-container .decorator {
   transform: translate(0);
 }
 
-[data-page="utils"] #utils-container {
+[data-page="utils"][hash-bang-detail] #utils-container {
   overflow: auto;
 }
 
@@ -1034,7 +1034,6 @@ body {
 .youtube-thumb {
   position: relative;
   width: 320px;
-  height: 180px;
   cursor: pointer;
 }
 .youtube-thumb:after {
@@ -1067,15 +1066,31 @@ body {
 .video-item .youtube-thumb {
   float: left;
   margin: 1rem 1rem 0 0;
+  width: 100%;
+  text-align: center;
+}
+.video-item .youtube-thumb img {
+  max-width: 100%;
 }
 .video-item .video-description {
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: block;
+  clear: both;
   max-width: 800px;
 }
 .video-item .video-link {
   margin-top: 2rem;
   display: block;
+}
+
+@media (min-width: 570px) {
+  .video-description {
+    clear: none !important;
+  }
+
+  .video-item .youtube-thumb {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

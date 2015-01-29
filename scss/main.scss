@@ -16,7 +16,7 @@ body{
 .youtube-thumb {
     position: relative;
     width: 320px;
-    height: 180px;
+    //height: 180px;
     cursor: pointer;
     
     &:after {
@@ -51,17 +51,36 @@ body{
     .youtube-thumb {
         float: left;
         margin: 1rem 1rem 0 0;
+        width: 100%;
+        text-align: center;
+        
+        img {
+            max-width: 100%;
+        }
     }
     
     .video-description {
-        padding-top: 1rem;
+        padding-top: 2rem;
         display: block;
+        clear: both;
         max-width: 800px;
     }
     
     .video-link {
         margin-top: 2rem;
         display: block;
+    }
+}
+
+@media ($mq_medium) {
+    .video-description {
+        clear: none !important;
+    }
+    
+    .video-item {
+        .youtube-thumb {
+            width: auto;
+        }
     }
 }
 
