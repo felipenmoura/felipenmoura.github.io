@@ -569,8 +569,9 @@ body[data-page="articles"] #main-nav .menu-articles-btn a,
 .about-full-content {
   background: white;
   position: relative;
-  top: 6000px;
-  transition: top linear .5s .1s;
+  top: 0;
+  transition: transform linear .5s .1s;
+  transform: translate(0, 100%);
   z-index: 1;
 }
 
@@ -578,7 +579,7 @@ body[data-page="about"] #about-container {
   overflow: auto;
 }
 body[data-page="about"] .about-full-content {
-  top: 0;
+  transform: translate(0, 0);
 }
 
 body[data-page="about"] #about-container {
@@ -591,13 +592,14 @@ body[data-page="about"] #about-container {
   width: 100%;
   height: auto;
   position: relative;
-  top: -600px;
-  transition: top linear .5s;
+  top: 0;
+  transition: transform linear .5s;
+  transform: translate(0, -100%);
   z-index: 2;
 }
 
 body[data-page="about"] #about-container .decorator {
-  top: 0;
+  transform: translate(0, 0);
 }
 
 #about-container .decorator a {
@@ -608,12 +610,13 @@ body[data-page="about"] #about-container .decorator {
   margin-top: 0px;
   text-align: center;
   position: relative;
-  left: -2000px;
-  transition: left linear .5s;
+  left: 0;
+  transition: transform linear .5s;
+  transform: translate(-2000px, 0);
 }
 
 body[data-page="about"] #about-container .col-1 {
-  left: 0;
+  transform: translate(0, 0);
 }
 
 #about-container .decorator .col-2 {
@@ -788,22 +791,6 @@ body[data-page="utils"] #utils-container .decorator {
   transform: translate(0);
 }
 
-[data-page="utils"][hash-bang-detail] #utils-container {
-  overflow: auto;
-}
-
-[hash-bang-detail="talks"] #utils-container .talks section,
-[hash-bang-detail="videos"] #utils-container .videos section,
-[hash-bang-detail="tools"] #utils-container .tools section,
-[hash-bang-detail="articles"] #utils-container .articles section,
-[hash-bang-detail="albums"] #utils-container .albums section {
-  opacity: 1;
-  -webkit-transform: translate(0);
-  -moz-transform: translate(0);
-  -ms-transform: translate(0);
-  transform: translate(0);
-}
-
 #utils-container {
   background-color: rgba(240, 207, 180, 0.4);
   height: 100%;
@@ -815,6 +802,7 @@ body[data-page="utils"] #utils-container .decorator {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 6;
   background-color: #427FED;
   padding-top: 30px;
   text-align: center;
@@ -906,6 +894,7 @@ body[data-page="utils"] #utils-container .decorator {
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 #utils-container .utils-content section {
   opacity: 0;
@@ -916,20 +905,102 @@ body[data-page="utils"] #utils-container .decorator {
   background: #fff;
   transition: all linear .2s;
 }
-#utils-container .utils-content section:nth-child(n+1) {
+#utils-container .utils-content section:nth-child(1n+0) {
   transition-delay: .05s;
 }
-#utils-container .utils-content section:nth-child(n+2) {
+#utils-container .utils-content section:nth-child(2n+0) {
   transition-delay: .2s;
 }
-#utils-container .utils-content section:nth-child(n+3) {
+#utils-container .utils-content section:nth-child(3n+0) {
   transition-delay: .1s;
 }
-#utils-container .utils-content section:nth-child(n+4) {
+#utils-container .utils-content section:nth-child(4n+0) {
   transition-delay: .15s;
 }
 #utils-container .utils-content section:last-child {
-  padding-bottom: 140px;
+  margin-bottom: 140px;
+}
+
+.utils-item {
+  position: relative;
+  cursor: default;
+  min-height: 180px;
+}
+.utils-item h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0 0;
+  display: block;
+  margin-left: .5rem;
+}
+.utils-item .utils-thumb {
+  position: absolute;
+  float: left;
+  z-index: 1;
+  background-color: #f0f0f0;
+  height: 100%;
+  max-width: 320px;
+  width: 30%;
+  overflow: hidden;
+}
+.utils-item .utils-thumb img {
+  width: 320px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -160px;
+  min-height: 100%;
+}
+.utils-item .utils-thumb:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9;
+  background-image: url(../images/youtube-buttons-sprite.png);
+  width: 40px;
+  height: 30px;
+}
+.utils-item .utils-thumb:hover:after {
+  background-position: 0 -30px;
+}
+.utils-item .utils-description {
+  padding-left: .5rem;
+  float: right;
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.utils-item .utils-description .desc {
+  margin: .5rem;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.utils-item:hover {
+  background-color: #efefef !important;
+}
+
+[hash-bang-detail="talks"] .utils-content.talks,
+[hash-bang-detail="videos"] .utils-content.videos,
+[hash-bang-detail="tools"] .utils-content.tools,
+[hash-bang-detail="articles"] .utils-content.articles,
+[hash-bang-detail="albums"] .utils-content.albums {
+  height: 100% !important;
+  width: 100%;
+  overflow: auto;
+  z-index: 5 !important;
+}
+[hash-bang-detail="talks"] .utils-content.talks section,
+[hash-bang-detail="videos"] .utils-content.videos section,
+[hash-bang-detail="tools"] .utils-content.tools section,
+[hash-bang-detail="articles"] .utils-content.articles section,
+[hash-bang-detail="albums"] .utils-content.albums section {
+  opacity: 1 !important;
+  transform: translate(0) !important;
 }
 
 @media (max-width: 570px) {
@@ -967,6 +1038,13 @@ body[data-page="utils"] #utils-container .decorator {
   }
   #utils-container .utils-content {
     padding: 40px 0 0 0;
+  }
+  #utils-container .utils-thumb {
+    width: 60px;
+  }
+  #utils-container .utils-description {
+    width: auto;
+    margin-left: 50px;
   }
 }
 #playerLayer {
@@ -1057,9 +1135,10 @@ body {
   padding: 1rem;
   width: 100%;
   display: inline-block;
+  cursor: default;
 }
 .video-item h3 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #427FED;
 }
@@ -1068,19 +1147,26 @@ body {
   margin: 1rem 1rem 0 0;
   width: 100%;
   text-align: center;
+  max-width: 320px;
 }
 .video-item .youtube-thumb img {
   max-width: 100%;
+  min-height: 140px;
+  background-color: #f0f0f0;
 }
 .video-item .video-description {
   padding-top: 2rem;
   display: block;
   clear: both;
   max-width: 800px;
+  white-space: pre-line;
 }
 .video-item .video-link {
   margin-top: 2rem;
   display: block;
+}
+.video-item:hover {
+  background-color: #efefef !important;
 }
 
 @media (min-width: 570px) {

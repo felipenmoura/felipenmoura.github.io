@@ -12,8 +12,10 @@
 .about-full-content {
     background: white;
     position: relative;
-    top: 6000px;
-    transition: top linear .5s .1s;
+    //top: 6000px;
+    top: 0;
+    transition: transform linear .5s .1s;
+    transform: translate(0, 100%);
     z-index: 1;
 }
 
@@ -24,7 +26,8 @@ body[data-page="about"] {
     }
     
     .about-full-content {
-        top: 0;
+        //top: 0;
+        transform: translate(0, 0);
     }
     
 //    #about-container {
@@ -44,13 +47,16 @@ body[data-page="about"] {
     width: 100%;
     height: auto;
     position: relative;
-    top: -600px;
-    transition: top linear .5s;
+    //top: -600px;
+    top: 0;
+    transition: transform linear .5s;
+    transform: translate(0, -100%);
     z-index: 2;
 }
 
 body[data-page="about"] #about-container .decorator {
-    top: 0;
+    //top: 0;
+    transform: translate(0, 0);
 }
 
 #about-container .decorator a {
@@ -61,12 +67,15 @@ body[data-page="about"] #about-container .decorator {
     margin-top: 0px;
     text-align: center;
     position: relative;
-    left: -2000px;
-    transition: left linear .5s;
+    //left: -2000px;
+    left: 0;
+    transition: transform linear .5s;
+    transform: translate(-2000px, 0);
 }
 
 body[data-page="about"] #about-container .col-1 {
-    left: 0;
+    //left: 0;
+    transform: translate(0, 0);
 }
 
 #about-container .decorator .col-2 {

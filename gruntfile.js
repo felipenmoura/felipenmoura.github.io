@@ -102,12 +102,23 @@ module.exports = function(grunt) {
         };
         
         function render () {
+            if(data.talks){
+                data.talks = data.talks.map(function(val){
+                    val.description = applyURL(val.description);
+                    return val;
+                });
+            }
             fs.writeFileSync(idxFile, NunJucks.render('_templates/index.html', data), 'utf8');
             done();
+        }
+        
+        function applyURL(val){
+            return val.replace(/(https?:\/\/[^ \n\!\?]+)/ig, "<a href=\"$1\">$1</a>")
         }
 
         if(!videosList){
             var http = require('http');
+            var cachePath = 'resources/yt-feed-cache.json';
             var req = http.request(options, function(res) {
                 var buffer= "";
                 res.setEncoding('utf8');
@@ -119,11 +130,30 @@ module.exports = function(grunt) {
                     videosList = buffer.replace(/^\/\/.*|^foo\(|\);$/gm, '');
                     videosList = JSON.parse(videosList);
                     data.videosList = videosList.feed.entry;
+                    
+                    if(data.videosList && data.videosList.length){
+                        data.videosList = data.videosList.map( function(val) {
+                            val['media$group']
+                               ['media$description']
+                               ['$t'] = applyURL(val['media$group']['media$description']['$t']);
+                            return val;
+                        });
+                    }
+                    
+                    fs.writeFileSync(cachePath, data.videosList, 'utf-8');
                     render();
                 });
             });
             req.on('error', function(e) {
                 console.log('problem with request: ' + e.message);
+                if(fs.existsSync(cachePath)){
+                    console.log('using youtube feed from cache');
+                    data.videosList = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
+                }else{
+                    console.warn('no cache found for youtube feed.\nThere will be no video rendered from the feed!');
+                    data.videosList = {};
+                }
+                render();
             });
             req.end();
         }else{

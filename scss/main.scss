@@ -41,9 +41,10 @@ body{
     padding: 1rem;
     width: 100%;
     display: inline-block;
+    cursor: default;
     
     h3 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         font-weight: bold;
         color: #427FED;
     }
@@ -53,9 +54,12 @@ body{
         margin: 1rem 1rem 0 0;
         width: 100%;
         text-align: center;
+        max-width: 320px;
         
         img {
             max-width: 100%;
+            min-height: 140px;
+            background-color: #f0f0f0;
         }
     }
     
@@ -64,11 +68,16 @@ body{
         display: block;
         clear: both;
         max-width: 800px;
+        white-space: pre-line;
     }
     
     .video-link {
         margin-top: 2rem;
         display: block;
+    }
+    
+    &:hover {
+        background-color: #efefef !important;
     }
 }
 
