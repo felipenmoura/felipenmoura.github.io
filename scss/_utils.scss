@@ -74,7 +74,7 @@ body[data-page="utils"] {
             &.videos {
                 background-position: 0 2px;
             }
-            &.tools {
+            &.labs {
                 background-position: -256px 2px;
             }
             &.articles {
@@ -227,12 +227,13 @@ body[data-page="utils"] {
 //            background-color: #f0f0f0;
         }
 
-        &:after {
+        &.youtube:after {
             content: "";
             position: absolute;
             left: 0;
             top: 0;
             bottom: 0;
+            cursor: pointer;
             right: 0;
             margin: auto;
             z-index: 9;
@@ -240,7 +241,7 @@ body[data-page="utils"] {
             width: 40px;
             height: 30px;
         }
-        &:hover:after {
+        &.youtube:hover:after {
             background-position: 0 -30px;
         }
     }
@@ -293,7 +294,7 @@ body[data-page="utils"] {
 
 [hash-bang-detail="talks"] .utils-content.talks,
 [hash-bang-detail="videos"] .utils-content.videos,
-[hash-bang-detail="tools"] .utils-content.tools,
+[hash-bang-detail="labs"] .utils-content.labs,
 [hash-bang-detail="articles"] .utils-content.articles,
 [hash-bang-detail="albums"] .utils-content.albums {
     height: 100% !important;

@@ -426,6 +426,9 @@ blockquote a:visited {
 body[data-page="home"] {
   overflow: hidden;
 }
+body[data-page="home"] #main-header {
+  opacity: 1;
+}
 
 #background-video {
   display: none;
@@ -455,6 +458,7 @@ body[data-page="home"] {
   color: #000;
   margin-top: 3rem;
   cursor: default;
+  opacity: 0;
 }
 
 #main-nav {
@@ -836,7 +840,7 @@ body[data-page="utils"] #utils-container .decorator {
 #utils-container .decorator .icon.videos {
   background-position: 0 2px;
 }
-#utils-container .decorator .icon.tools {
+#utils-container .decorator .icon.labs {
   background-position: -256px 2px;
 }
 #utils-container .decorator .icon.articles {
@@ -951,12 +955,13 @@ body[data-page="utils"] #utils-container .decorator {
   margin-left: -160px;
   min-height: 100%;
 }
-.utils-item .utils-thumb:after {
+.utils-item .utils-thumb.youtube:after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
+  cursor: pointer;
   right: 0;
   margin: auto;
   z-index: 9;
@@ -964,7 +969,7 @@ body[data-page="utils"] #utils-container .decorator {
   width: 40px;
   height: 30px;
 }
-.utils-item .utils-thumb:hover:after {
+.utils-item .utils-thumb.youtube:hover:after {
   background-position: 0 -30px;
 }
 .utils-item .utils-description {
@@ -986,7 +991,7 @@ body[data-page="utils"] #utils-container .decorator {
 
 [hash-bang-detail="talks"] .utils-content.talks,
 [hash-bang-detail="videos"] .utils-content.videos,
-[hash-bang-detail="tools"] .utils-content.tools,
+[hash-bang-detail="labs"] .utils-content.labs,
 [hash-bang-detail="articles"] .utils-content.articles,
 [hash-bang-detail="albums"] .utils-content.albums {
   height: 100% !important;
@@ -996,7 +1001,7 @@ body[data-page="utils"] #utils-container .decorator {
 }
 [hash-bang-detail="talks"] .utils-content.talks section,
 [hash-bang-detail="videos"] .utils-content.videos section,
-[hash-bang-detail="tools"] .utils-content.tools section,
+[hash-bang-detail="labs"] .utils-content.labs section,
 [hash-bang-detail="articles"] .utils-content.articles section,
 [hash-bang-detail="albums"] .utils-content.albums section {
   opacity: 1 !important;
@@ -1047,6 +1052,91 @@ body[data-page="utils"] #utils-container .decorator {
     margin-left: 50px;
   }
 }
+body[data-page="articles"] {
+  overflow: hidden;
+}
+body[data-page="articles"] #articles-container {
+  z-index: 7;
+  opacity: 1;
+}
+body[data-page="articles"] #articles-container .decorator {
+  transform: translate(0);
+}
+
+#articles-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+#articles-container .decorator {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+  z-index: 5;
+}
+#articles-container .decorator .wrapper, #articles-container .decorator img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+#articles-container .decorator .wrapper:after, #articles-container .decorator img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/white-bg-transparent.png);
+}
+#articles-container .decorator h2 {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  z-index: 10;
+  display: block;
+  line-height: 2rem;
+  padding: .7rem 1rem .4rem 1rem;
+  background: #CD1A04;
+  color: #fff;
+  font-weight: 100;
+}
+#articles-container .decorator h2 em {
+  font-style: normal;
+  color: #FFD6D6;
+}
+#articles-container .decorator abs {
+  position: relative;
+  z-index: 9;
+  float: right;
+  display: block;
+  max-width: 340px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: .3rem 1.2rem;
+  margin-right: 2rem;
+  margin-top: 8rem;
+  text-align: justify;
+}
+#articles-container .articles-content {
+  background-color: white;
+  width: 100%;
+  max-width: 760px;
+  margin-top: -1rem;
+  z-index: 1;
+  padding: 1rem;
+  padding-bottom: 100px;
+  margin-bottom: 60px;
+}
+
 #playerLayer {
   position: fixed;
   top: 0;

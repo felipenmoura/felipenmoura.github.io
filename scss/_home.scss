@@ -5,6 +5,10 @@ body[data-page="home"] {
     .menu-home-btn {
         
     }
+    
+    #main-header {
+        opacity: 1;
+    }
 }
 
 #background-video {
@@ -35,6 +39,7 @@ body[data-page="home"] {
     color: #000;
     margin-top: 3rem;
     cursor: default;
+    opacity: 0;
 }
 
 #main-nav {

@@ -23,11 +23,11 @@
             <div class="utils-content videos">
                 {% for video in videosList %}
                 <section class="utils-item">
-                    <div class="utils-thumb">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="{{ video.media$group.yt$videoid.$t }}">
                         <img src="{{ video.media$group.media$thumbnail[1].url }}"
                              title="{{ video.title.$t }}"
-                             alt="{{ video.title.$t }}"
-                             data-yt-ref="{{ video.media$group.yt$videoid.$t }}" />
+                             alt="{{ video.title.$t }}" />
                     </div>
                     <div class="utils-description">
                         <h3 data-title="{{ video.title.$t }}">{{ video.title.$t }}</h3>
@@ -39,13 +39,34 @@
                 </section>
                 {% endfor %}
             </div>
+    
+            <div class="utils-content labs">
+                {% for lab in labs %}
+                <section class="utils-item">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="{{ tool.videoID }}">
+                        <a href="{{ talk.link }}" target="_blank">
+                            <img src="{{ talk.image }}"
+                                 title="{{ talk.title }}"
+                                 alt="{{ talk.title }}" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="{{ talk.title }}">{{ talk.title }}</h3>
+                        <span class="desc">
+                            {{ talk.description }}
+                        </span>
+                    </div>
+                </section>
+                {% endfor %}
+            </div>
             
             <div class="clear"></div>
     
             <div class="decorator">
                 <a class="icon talks" href="#!utils/talks">Talks<span class="tooltip">Slides from Talks</span></a>
                 <a class="icon videos" href="#!utils/videos">Videos<span class="tooltip">My youtube channels</span></a>
-                <a class="icon tools" href="#!utils/tools">Tools<span class="tooltip">Projects/Tools, experiments and demos</span></a>
+                <a class="icon labs" href="#!utils/labs">Tools<span class="tooltip">Projects/Tools/experiments/demos</span></a>
                 <a class="icon articles" href="./articles">Articles<span class="tooltip">Articles</span></a>
                 <a class="icon albums" href="#!utils/albums">Albums<span class="tooltip">Pictures and Albums</span></a>
             </div>

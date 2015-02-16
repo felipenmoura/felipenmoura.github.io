@@ -140,7 +140,7 @@ module.exports = function(grunt) {
                         });
                     }
                     
-                    fs.writeFileSync(cachePath, data.videosList, 'utf-8');
+                    fs.writeFileSync(cachePath, JSON.stringify(data.videosList), 'utf-8');
                     render();
                 });
             });
@@ -148,7 +148,12 @@ module.exports = function(grunt) {
                 console.log('problem with request: ' + e.message);
                 if(fs.existsSync(cachePath)){
                     console.log('using youtube feed from cache');
-                    data.videosList = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
+                    try{
+                        data.videosList = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
+                    }catch(e){
+                        e.message = "Failed parsing JSON from cache file\n" + e.message;
+                        console.error(e);
+                    }
                 }else{
                     console.warn('no cache found for youtube feed.\nThere will be no video rendered from the feed!');
                     data.videosList = {};
