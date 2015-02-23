@@ -1063,13 +1063,25 @@ body[data-page="articles"] #articles-container .decorator {
   transform: translate(0);
 }
 
+#article-meta-data {
+  position: absolute;
+  right: 2rem;
+  z-index: 5;
+  bottom: 280px;
+  text-shadow: 0 0 2px white;
+  font-size: .8rem;
+  font-weight: bold;
+}
+
 #articles-container {
   position: absolute;
+  background: #666;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
+  padding-top: 1rem;
 }
 #articles-container .decorator {
   position: relative;
@@ -1078,6 +1090,8 @@ body[data-page="articles"] #articles-container .decorator {
   max-width: 760px;
   margin: auto;
   z-index: 5;
+  border: solid 1px #000;
+  border-bottom: none;
 }
 #articles-container .decorator .wrapper, #articles-container .decorator img {
   position: absolute;
@@ -1095,7 +1109,9 @@ body[data-page="articles"] #articles-container .decorator {
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-image: url(../images/white-bg-transparent.png);
+  background-image: url(../images/article-decoration.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
 }
 #articles-container .decorator h2 {
   position: absolute;
@@ -1120,14 +1136,22 @@ body[data-page="articles"] #articles-container .decorator {
   display: block;
   max-width: 340px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #dfdfdf;
   padding: .3rem 1.2rem;
-  margin-right: 2rem;
-  margin-top: 8rem;
+  margin: 8rem 2rem .5rem .5rem;
   text-align: justify;
+  line-height: 1.1rem;
+  font-size: .8rem;
+}
+#articles-container .decorator abs b, #articles-container .decorator abs strong, #articles-container .decorator abs a {
+  color: white;
+}
+#articles-container .decorator abs em, #articles-container .decorator abs i {
+  font-style: italic;
+  color: #c0c0c0;
 }
 #articles-container .articles-content {
-  background-color: white;
+  background-color: #fefefe;
   width: 100%;
   max-width: 760px;
   margin-top: -1rem;
@@ -1135,6 +1159,24 @@ body[data-page="articles"] #articles-container .decorator {
   padding: 1rem;
   padding-bottom: 100px;
   margin-bottom: 60px;
+  color: #666;
+  cursor: default;
+  border: solid 1px #000;
+  border-top: none;
+  line-height: 1.3rem;
+}
+#articles-container .articles-content b, #articles-container .articles-content strong {
+  color: #000;
+}
+#articles-container .articles-content em, #articles-container .articles-content i {
+  font-style: italic;
+  padding: 5px;
+  font-weight: 100;
+}
+#articles-container .articles-content a {
+  color: #00f;
+  padding: 5px;
+  letter-spacing: 2px;
 }
 
 #playerLayer {
