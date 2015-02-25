@@ -17,12 +17,13 @@
     }
     
     _b.addEventListener('click', function(event){
-        var target= event.target || event.srcElement,
-            tag= target.tagName.toLowerCase(),
+        var target = event.target || event.srcElement,
+            tag = target.tagName.toLowerCase(),
             tmp,
+            cl = target.classList,
             src= '#';
         
-        if(tag == 'a' && target.classList.contains('local')){
+        if(tag == 'a' && cl.contains('local')){
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
             
@@ -37,8 +38,41 @@
                 bg: target.getAttribute('src'),
                 ytRef: tmp
             });
-        }else if(target.classList.contains('closeLayerBtn')){
+        }else if(cl.contains('closeLayerBtn')){
             closeModal();
+        }else if(cl.contains('art-nav-tbn')){
+            if(cl.contains('art-tools')){
+                var el = document.getElementById('articles-nav');
+                if(el.getAttribute('data-show') != 'tools'){
+                    el.setAttribute('data-show', 'tools');
+                }else{
+                    el.removeAttribute('data-show');
+                }
+            }else{
+                var el = document.getElementById('the-article');
+                var curTextSize = parseInt(el.getAttribute('data-text-size'));
+                switch(target.id){
+                    case 'article-tool-bigger':
+                        if(curTextSize < 4){
+                            curTextSize++;
+                            el.setAttribute('data-text-size', curTextSize);
+                        }
+                    break;
+                    case 'article-tool-smaller':
+                        if(curTextSize > 1){
+                            curTextSize--;
+                            el.setAttribute('data-text-size', curTextSize);
+                        }
+                    break;
+                    case 'article-tool-contrast':
+                        if(el.getAttribute('data-contrast') == 'on'){
+                           el.setAttribute('data-contrast', 'off');
+                        }else{
+                            el.setAttribute('data-contrast', 'on');
+                        }
+                    break;
+                }
+            }
         }
     });
     

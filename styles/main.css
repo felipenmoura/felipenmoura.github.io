@@ -1125,14 +1125,14 @@ body[data-page="articles"] #articles-container .decorator {
   color: white;
   text-decoration: none;
 }
-.articles-nav a small {
+.articles-nav a:hover {
+  text-decoration: underline;
+}
+.articles-nav small {
   font-size: .5rem;
   bottom: .1rem;
   position: relative;
   display: inline-block;
-}
-.articles-nav a:hover {
-  text-decoration: underline;
 }
 .articles-nav .btn {
   position: absolute;
@@ -1164,6 +1164,16 @@ body[data-page="articles"] #articles-container .decorator {
   border-top: solid 1px #333;
   text-align: center;
   padding-right: 1.2rem;
+  transform: translateY(-5rem);
+  z-index: -1;
+  transition: transform .2s ease-in;
+}
+.articles-nav[data-show="tools"] .article-tools {
+  transform: translateY(0);
+}
+.articles-nav .art-nav-tbn {
+  color: white;
+  cursor: pointer;
 }
 .articles-nav #article-tool-bigger {
   padding: 0 .5rem;
@@ -1200,6 +1210,36 @@ body[data-page="articles"] #articles-container .decorator {
 .articles-nav #article-tool-contrast:after {
   border-bottom-color: white;
   top: 1em;
+}
+
+#the-article[data-text-size="1"] {
+  font-size: .8rem;
+}
+
+#the-article[data-text-size="2"] {
+  font-size: 1rem;
+}
+
+#the-article[data-text-size="3"] {
+  font-size: 1.2rem;
+}
+
+#the-article[data-text-size="4"] {
+  font-size: 1.4rem;
+}
+
+#the-article[data-contrast="on"] .articles-content {
+  background: #222;
+  color: #f0f0f0;
+}
+#the-article[data-contrast="on"] .articles-content a {
+  color: white;
+}
+#the-article[data-contrast="on"] .articles-content strong, #the-article[data-contrast="on"] .articles-content b {
+  color: white;
+}
+#the-article[data-contrast="on"] .articles-content q, #the-article[data-contrast="on"] .articles-content blockquote {
+  color: black;
 }
 
 #articles-container {
@@ -1245,6 +1285,7 @@ body[data-page="articles"] #articles-container .decorator {
   position: absolute;
   left: 0;
   top: 2rem;
+  font-size: 1.5rem;
   z-index: 10;
   display: block;
   line-height: 2rem;
@@ -1268,8 +1309,8 @@ body[data-page="articles"] #articles-container .decorator {
   padding: .3rem 1.2rem;
   margin: 8rem 2rem .5rem .5rem;
   text-align: justify;
-  line-height: 1.1rem;
-  font-size: .8rem;
+  line-height: 1.1em;
+  font-size: .8em;
 }
 #articles-container .decorator abs b, #articles-container .decorator abs strong, #articles-container .decorator abs a {
   color: white;
@@ -1291,7 +1332,7 @@ body[data-page="articles"] #articles-container .decorator {
   cursor: default;
   border: solid 1px #000;
   border-top: none;
-  line-height: 1.3rem;
+  line-height: 1.3em;
 }
 #articles-container .articles-content b, #articles-container .articles-content strong {
   color: #000;

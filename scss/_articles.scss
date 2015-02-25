@@ -48,16 +48,16 @@ body[data-page="articles"] {
         color: white;
         text-decoration: none;
 
-        small {
-            font-size: .5rem;
-            bottom: .1rem;
-            position: relative;
-            display: inline-block;
-        }
-
         &:hover {
             text-decoration: underline;
         }
+    }
+    
+    small {
+        font-size: .5rem;
+        bottom: .1rem;
+        position: relative;
+        display: inline-block;
     }
 
     .btn {
@@ -92,6 +92,20 @@ body[data-page="articles"] {
         border-top: solid 1px #333;
         text-align: center;
         padding-right: 1.2rem;
+        transform: translateY(-5rem);
+        z-index: -1;
+        transition: transform .2s ease-in;
+    }
+    
+    &[data-show="tools"] {
+        .article-tools {
+            transform: translateY(0);
+        }
+    }
+    
+    .art-nav-tbn {
+        color: white;
+        cursor: pointer;
     }
     
     #article-tool-bigger {
@@ -138,6 +152,45 @@ body[data-page="articles"] {
     }
     
 }
+
+#the-article[data-text-size="1"] {
+    font-size: .8rem;
+}
+#the-article[data-text-size="2"] {
+    font-size: 1rem;
+}
+#the-article[data-text-size="3"] {
+    font-size: 1.2rem;
+}
+#the-article[data-text-size="4"] {
+    font-size: 1.4rem;
+}
+#the-article[data-contrast="on"] {
+    .articles-content {
+        background: #222;
+        color: #f0f0f0;
+        
+        a {
+            color: white;
+        }
+        strong, b {
+            color: white;
+        }
+        
+        q, blockquote {
+            color: black;
+        }
+    }
+}
+
+//
+//#the-article[data-text-size="5"] {
+//    font-size: 1.8rem;
+//}
+//
+//#the-article[data-text-size="6"] {
+//    font-size: 2rem;
+//}
 
 #articles-container {
     position: absolute;
@@ -187,6 +240,7 @@ body[data-page="articles"] {
             position: absolute;
             left: 0;
             top: 2rem;
+            font-size: 1.5rem;
             z-index: 10;
             display: block;
             line-height: 2rem;
@@ -212,8 +266,8 @@ body[data-page="articles"] {
             padding: .3rem 1.2rem;
             margin: 8rem 2rem .5rem .5rem;
             text-align: justify;
-            line-height: 1.1rem;
-            font-size: .8rem;
+            line-height: 1.1em;
+            font-size: .8em;
             
             b, strong, a {
                 color: white;
@@ -239,7 +293,7 @@ body[data-page="articles"] {
         cursor: default;
         border: solid 1px #000;
         border-top: none;
-        line-height: 1.3rem;
+        line-height: 1.3em;
         
         b, strong {
             color: #000;
