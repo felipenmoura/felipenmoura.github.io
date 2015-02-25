@@ -325,17 +325,6 @@ h1, h2, h3, h4, h5, h6 {
   filter: none;
 }
 
-blockquote {
-  background: white;
-  background: -moz-linear-gradient(left, white 0%, #efe7b3 10%, #efe7b3 90%, white 100%);
-  background: -ms-linear-gradient(left, white 0%, #efe7b3 10%, #efe7b3 90%, white 100%);
-  background: linear-gradient(to right, white 0%, #efe7b3 10%, #efe7b3 90%, white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
-  padding: 10px 5%;
-  text-align: justify;
-  line-height: 1.6rem;
-}
-
 blockquote cite:before {
   content: "-- by ";
   display: block;
@@ -347,6 +336,48 @@ blockquote a,
 blockquote a:visited {
   color: blue;
   text-decoration: none;
+}
+
+blockquote,
+picture,
+.picture {
+  position: relative;
+  background: #ddd;
+  margin: .5rem;
+}
+blockquote:after,
+picture:after,
+.picture:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  background-image: url(../images/_small-shadow.png);
+  background-size: 100% auto;
+}
+
+blockquote {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding: .7rem;
+}
+blockquote cite {
+  position: absolute;
+  right: 5px;
+  bottom: -30px;
+}
+blockquote:before {
+  content: "\"";
+  position: absolute;
+  left: -1rem;
+  top: -16px;
+  font-size: 4rem;
+  z-index: 9;
+  font-weight: bold;
 }
 
 .wrapper {
@@ -1067,21 +1098,118 @@ body[data-page="articles"] #articles-container .decorator {
   position: absolute;
   right: 2rem;
   z-index: 5;
-  bottom: 280px;
-  text-shadow: 0 0 2px white;
+  bottom: 271px;
   font-size: .8rem;
   font-weight: bold;
+  background: white;
+  padding: .3rem;
+  text-align: right;
+}
+
+.articles-nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 999;
+}
+.articles-nav ul {
+  width: 100%;
+  height: 2.3rem;
+  background-color: #444;
+  margin: 0;
+  padding: 0;
+}
+.articles-nav a {
+  color: white;
+  text-decoration: none;
+}
+.articles-nav a small {
+  font-size: .5rem;
+  bottom: .1rem;
+  position: relative;
+  display: inline-block;
+}
+.articles-nav a:hover {
+  text-decoration: underline;
+}
+.articles-nav .btn {
+  position: absolute;
+  top: 0;
+  padding: .6rem .3rem;
+}
+.articles-nav .btn.left {
+  text-align: left;
+  left: 0;
+}
+.articles-nav .btn.center {
+  text-align: center;
+  position: relative;
+}
+.articles-nav .btn.right {
+  text-align: right;
+  right: 0;
+}
+.articles-nav .article-tools {
+  position: absolute;
+  width: 170px;
+  background: #444;
+  border-radius: 0 0 5px 5px;
+  color: white;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: .5rem;
+  border-top: solid 1px #333;
+  text-align: center;
+  padding-right: 1.2rem;
+}
+.articles-nav #article-tool-bigger {
+  padding: 0 .5rem;
+  border-right: solid 1px white;
+}
+.articles-nav #article-tool-smaller {
+  font-size: .5rem;
+  padding: 0;
+  display: inline-block;
+  padding: 0 .5rem;
+  border-right: solid 1px white;
+  height: 1.1rem;
+  padding-top: .5rem;
+  padding-right: .7rem;
+}
+.articles-nav #article-tool-contrast {
+  position: relative;
+  margin-left: .5rem;
+}
+.articles-nav #article-tool-contrast:before, .articles-nav #article-tool-contrast:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid transparent 1em;
+  transform: rotateZ(135deg);
+  font-size: .5rem;
+}
+.articles-nav #article-tool-contrast:before {
+  border-top-color: black;
+  top: -0.5em;
+  left: -1.5em;
+}
+.articles-nav #article-tool-contrast:after {
+  border-bottom-color: white;
+  top: 1em;
 }
 
 #articles-container {
   position: absolute;
-  background: #666;
+  background: rgba(0, 0, 0, 0.5);
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
-  padding-top: 1rem;
 }
 #articles-container .decorator {
   position: relative;
@@ -1135,7 +1263,7 @@ body[data-page="articles"] #articles-container .decorator {
   float: right;
   display: block;
   max-width: 340px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #dfdfdf;
   padding: .3rem 1.2rem;
   margin: 8rem 2rem .5rem .5rem;
@@ -1177,6 +1305,24 @@ body[data-page="articles"] #articles-container .decorator {
   color: #00f;
   padding: 5px;
   letter-spacing: 2px;
+}
+#articles-container .articles-content img {
+  position: relative;
+  margin: 2px;
+  margin-bottom: -1px;
+}
+#articles-container .articles-content .left {
+  float: left;
+}
+#articles-container .articles-content .right {
+  float: right;
+}
+#articles-container .articles-content .center {
+  display: table;
+  margin: auto;
+}
+#articles-container .articles-content blockquote:before, #articles-container .articles-content q:before {
+  top: 0px;
 }
 
 #playerLayer {
