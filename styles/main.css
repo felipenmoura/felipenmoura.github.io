@@ -1089,9 +1089,25 @@ body[data-page="articles"] {
 body[data-page="articles"] #articles-container {
   z-index: 7;
   opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all linear 0.5s 1.2s;
 }
 body[data-page="articles"] #articles-container .decorator {
-  transform: translate(0);
+  transform: translateY(0);
+}
+body[data-page="articles"] #articles-container abs {
+  transform: translateY(0);
+}
+body[data-page="articles"] #articles-container h2 {
+  transform: translateX(0);
+}
+body[data-page="articles"] #articles-container .articles-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+body[data-page="articles"] .articles-nav {
+  transform: translateY(0);
+  transition: all linear .4s 1s;
 }
 
 #article-meta-data {
@@ -1104,6 +1120,7 @@ body[data-page="articles"] #articles-container .decorator {
   background: white;
   padding: .3rem;
   text-align: right;
+  transform: translateY(-1000px);
 }
 
 .articles-nav {
@@ -1113,6 +1130,8 @@ body[data-page="articles"] #articles-container .decorator {
   width: 100%;
   height: 40px;
   z-index: 999;
+  transform: translateY(-50px);
+  transition: all linear 0.5s 0;
 }
 .articles-nav ul {
   width: 100%;
@@ -1166,7 +1185,7 @@ body[data-page="articles"] #articles-container .decorator {
   padding-right: 1.2rem;
   transform: translateY(-5rem);
   z-index: -1;
-  transition: transform .2s ease-in;
+  transition: transform 0.5s ease-in;
 }
 .articles-nav[data-show="tools"] .article-tools {
   transform: translateY(0);
@@ -1244,12 +1263,13 @@ body[data-page="articles"] #articles-container .decorator {
 
 #articles-container {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
+  transition: all linear 0.5s 0;
 }
 #articles-container .decorator {
   position: relative;
@@ -1260,6 +1280,8 @@ body[data-page="articles"] #articles-container .decorator {
   z-index: 5;
   border: solid 1px #000;
   border-bottom: none;
+  transform: translateY(-200%);
+  transition: all linear 0.5s;
 }
 #articles-container .decorator .wrapper, #articles-container .decorator img {
   position: absolute;
@@ -1281,23 +1303,6 @@ body[data-page="articles"] #articles-container .decorator {
   background-position: left bottom;
   background-repeat: no-repeat;
 }
-#articles-container .decorator h2 {
-  position: absolute;
-  left: 0;
-  top: 2rem;
-  font-size: 1.5rem;
-  z-index: 10;
-  display: block;
-  line-height: 2rem;
-  padding: .7rem 1rem .4rem 1rem;
-  background: #CD1A04;
-  color: #fff;
-  font-weight: 100;
-}
-#articles-container .decorator h2 em {
-  font-style: normal;
-  color: #FFD6D6;
-}
 #articles-container .decorator abs {
   position: relative;
   z-index: 9;
@@ -1311,6 +1316,8 @@ body[data-page="articles"] #articles-container .decorator {
   text-align: justify;
   line-height: 1.1em;
   font-size: .8em;
+  transform: translateY(-1000px);
+  transition: transform linear .8s;
 }
 #articles-container .decorator abs b, #articles-container .decorator abs strong, #articles-container .decorator abs a {
   color: white;
@@ -1318,6 +1325,25 @@ body[data-page="articles"] #articles-container .decorator {
 #articles-container .decorator abs em, #articles-container .decorator abs i {
   font-style: italic;
   color: #c0c0c0;
+}
+#articles-container .decorator h2 {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  display: block;
+  line-height: 2rem;
+  padding: .7rem 1rem .4rem 1rem;
+  background: #CD1A04;
+  color: #fff;
+  font-weight: 100;
+  transform: translateX(-150%);
+  transition: all linear 0.5s 0.4s;
+}
+#articles-container .decorator h2 em {
+  font-style: normal;
+  color: #FFD6D6;
 }
 #articles-container .articles-content {
   background-color: #fefefe;
@@ -1333,6 +1359,9 @@ body[data-page="articles"] #articles-container .decorator {
   border: solid 1px #000;
   border-top: none;
   line-height: 1.3em;
+  opacity: 0;
+  transform: translateY(500px);
+  transition: all linear .4s;
 }
 #articles-container .articles-content b, #articles-container .articles-content strong {
   color: #000;
@@ -1366,6 +1395,20 @@ body[data-page="articles"] #articles-container .decorator {
   top: 0px;
 }
 
+@media (max-width: 570px) {
+  #articles-container .decorator .wrapper:after {
+    display: none;
+  }
+  #articles-container .decorator abs {
+    max-width: 100%;
+    margin: 6rem .5rem .5rem;
+  }
+  #articles-container .decorator h2 {
+    width: 100%;
+    text-align: center;
+    top: 0;
+  }
+}
 #playerLayer {
   position: fixed;
   top: 0;

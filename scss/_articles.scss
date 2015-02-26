@@ -1,3 +1,5 @@
+$transSpeed: .5s;
+
 body[data-page="articles"] {
     
     overflow: hidden;
@@ -6,11 +8,30 @@ body[data-page="articles"] {
         z-index: 7;
         opacity: 1;
         
+        background: rgba(0, 0, 0, .5);
+        transition: all linear $transSpeed 1.2s;
+        
         .decorator {
-            //left: 0;
-            //top: 0;
-            transform: translate(0);
+            transform: translateY(0);
         }
+        
+        abs {
+            transform: translateY(0);
+        }
+        
+        h2 {
+            transform: translateX(0);
+        }
+        
+        .articles-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .articles-nav {
+        transform: translateY(0);
+        transition: all linear .4s 1s;
     }
     
 }
@@ -26,6 +47,8 @@ body[data-page="articles"] {
     background: white;
     padding: .3rem;
     text-align: right;
+    
+    transform: translateY(-1000px);
 }
 
 .articles-nav {
@@ -35,6 +58,9 @@ body[data-page="articles"] {
     width: 100%;
     height: 40px;
     z-index: 999;
+    
+    transform: translateY(-50px);
+    transition: all linear $transSpeed 0;
 
     ul {
         width: 100%;
@@ -94,7 +120,7 @@ body[data-page="articles"] {
         padding-right: 1.2rem;
         transform: translateY(-5rem);
         z-index: -1;
-        transition: transform .2s ease-in;
+        transition: transform $transSpeed ease-in;
     }
     
     &[data-show="tools"] {
@@ -194,12 +220,13 @@ body[data-page="articles"] {
 
 #articles-container {
     position: absolute;
-    background: rgba(0, 0, 0, .5); // #666;
+    background: rgba(0, 0, 0, 0);
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     overflow: auto;
+    transition: all linear $transSpeed 0;
     //padding-top: 1rem;
     
     .decorator {
@@ -209,9 +236,11 @@ body[data-page="articles"] {
         max-width: 760px;
         margin: auto;
         z-index: 5;
-        
         border: solid 1px #000;
         border-bottom: none;
+        
+        transform: translateY(-200%);
+        transition: all linear $transSpeed;
         
         .wrapper, img {
             position: absolute;
@@ -236,25 +265,6 @@ body[data-page="articles"] {
             }
         }
         
-        h2 {
-            position: absolute;
-            left: 0;
-            top: 2rem;
-            font-size: 1.5rem;
-            z-index: 10;
-            display: block;
-            line-height: 2rem;
-            padding: .7rem 1rem .4rem 1rem;
-            background: #CD1A04;
-            color: #fff;
-            font-weight: 100;
-            
-            em {
-                font-style: normal;
-                color: #FFD6D6;
-            }
-        }
-        
         abs {
             position: relative;
             z-index: 9;
@@ -269,6 +279,9 @@ body[data-page="articles"] {
             line-height: 1.1em;
             font-size: .8em;
             
+            transform: translateY(-1000px);
+            transition: transform linear .8s;
+            
             b, strong, a {
                 color: white;
             }
@@ -276,6 +289,28 @@ body[data-page="articles"] {
             em, i {
                 font-style: italic;
                 color: #c0c0c0;
+            }
+        }
+        
+        h2 {
+            position: absolute;
+            left: 0;
+            top: 2rem;
+            font-size: 1.5rem;
+            z-index: 10;
+            display: block;
+            line-height: 2rem;
+            padding: .7rem 1rem .4rem 1rem;
+            background: #CD1A04;
+            color: #fff;
+            font-weight: 100;
+            
+            transform: translateX(-150%);
+            transition: all linear $transSpeed .4s;
+            
+            em {
+                font-style: normal;
+                color: #FFD6D6;
             }
         }
     }
@@ -294,6 +329,10 @@ body[data-page="articles"] {
         border: solid 1px #000;
         border-top: none;
         line-height: 1.3em;
+        
+        opacity: 0;
+        transform: translateY(500px);
+        transition: all linear .4s;
         
         b, strong {
             color: #000;
@@ -337,5 +376,24 @@ body[data-page="articles"] {
 }
 
 @media ($mq_small) {
+    #articles-container {
+        
+        .decorator {
+            .wrapper:after {
+                display: none;
+            }
+            
+            abs {
+                max-width: 100%;
+                margin: 6rem .5rem .5rem;
+            }
+            
+            h2 {
+                width: 100%;
+                text-align: center;
+                top: 0;
+            }
+        }
+    }
 }
 
