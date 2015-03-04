@@ -5,6 +5,11 @@ module.exports = function(grunt) {
         nunEnv = new NunJucks.FileSystemLoader(['templates']),
         defaultLang = 'en';
     
+    
+    function applyURL(val){
+        return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\">$1</a>")
+    }
+    
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -57,10 +62,10 @@ module.exports = function(grunt) {
         
         compileTemplates: {
             en: {
-                talks: JSON.parse(fs.readFileSync('_bindings/talks.json', 'utf8'))//,
+                talks: JSON.parse(fs.readFileSync('_bindings/talks.json', 'utf8')),
                 //videos: fs.readFileSync('_bindings/videos.json', 'utf8'),
-                //tools: fs.readFileSync('_bindings/tools.json', 'utf8'),
-                //albums: fs.readFileSync('_bindings/albums.json', 'utf8')
+                labs: JSON.parse(fs.readFileSync('_bindings/labs.json', 'utf8')),
+                photos: JSON.parse(fs.readFileSync('_bindings/photos.json', 'utf8'))
             },
             pt: "def"
         },
@@ -101,19 +106,21 @@ module.exports = function(grunt) {
             headers: { 'Content-Type': 'text/javascript' }
         };
         
-        function render () {
-            if(data.talks){
-                data.talks = data.talks.map(function(val){
-                    val.description = applyURL(val.description);
+        function applyURLsTo(data, target, prop){
+            if(data[target]){
+                data[target] = data[target].map(function(val){
+                    val[prop] = applyURL(val[prop]);
                     return val;
                 });
             }
-            fs.writeFileSync(idxFile, NunJucks.render('_templates/index.html', data), 'utf8');
-            done();
         }
         
-        function applyURL(val){
-            return val.replace(/(https?:\/\/[^ \n\!\?]+)/ig, "<a href=\"$1\">$1</a>")
+        function render () {
+            applyURLsTo(data, 'talks', 'description');
+            applyURLsTo(data, 'labs', 'description');
+            
+            fs.writeFileSync(idxFile, NunJucks.render('_templates/index.html', data), 'utf8');
+            done();
         }
 
         if(!videosList){

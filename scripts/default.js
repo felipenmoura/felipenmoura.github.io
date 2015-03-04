@@ -97,7 +97,8 @@
                 _b.removeAttribute('hash-bang-extra');
             }
         }else{
-            _b.removeAttribute('data-page');
+            //_b.removeAttribute('data-page');
+            _b.setAttribute('data-page', 'home');
             _b.removeAttribute('hash-bang-detail');
             _b.removeAttribute('hash-bang-extra');
             hashData = {};

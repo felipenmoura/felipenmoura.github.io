@@ -1,36 +1,40 @@
 [
     {
-        "title": "HTML5 Image Editor",
-        "description": "See it working at: http://felipenmoura.org/labs/html5-imager/ <br/>This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also pick a color, and remove all the pixels in the image that correspond to that color.<br/><br/>Check this out on github: https://github.com/felipenmoura/html5-imager",
+        "title": "Tool: HTML5 Image Editor",
+        "description": "This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also remove all the pixels in the image based on a color.",
         "link": "http://felipenmoura.org/labs/html5-imager/",
-        "image": false,
+        "github": "https://github.com/felipenmoura/html5-imager",
+        "image": "resources/lab-canvas-image-editor-gama.png",
         "videoID": "VDBSv8cBSy8"
     },
     {
         "title": "Experiment: Stereoscopic 3D using JS, HTML and CSS",
-        "description": "A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.<br/>More experiments at http://felipenmoura.org :)",
+        "description": "A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.",
         "link": "http://felipenmoura.org/projects/tv3d/index.html",
-        "image": false,
+        "image": "resources/lab-tv-3d-stereoscopic-html.png",
         "videoID": "e2JdJKEz_xE"
     },
     {
-        "title": "ChromaKey in JavaScript",
-        "description": "During the W3C's WebBR-2012 I had the opportunity to give two talks.<br/>This talk had no slides, just live coding!<br/>We built in one hour, with just 100 JavaScript lines of code, a chroma key effect with Open Web Technologies, such as HTML5 and CSS3.<br/><br/>To do that, we used canvas, html5 video and the user's camera(user media). And also, a lot of math!<br/><br/>The source code and running demo is on github: <br/><br/>https://github.com/felipenmoura/js-chroma-key",
+        "title": "Experiment: ChromaKey in JavaScript",
+        "description": "Chroma key effect using HTML, CSS and JavaScript.<br/>I used canvas, html5 video and the user's camera(user media).",
         "link": "http://felipenmoura.org/talks/chromakey/",
-        "image": false,
+        "github": "https://github.com/felipenmoura/js-chroma-key",
+        "image": "resources/lab-chroma-key-js.png",
         "videoID": "RonpitSO-u4"
     },
     {
         "title": "Experiment: CSS3 3D environment tool ",
-        "description": "This is the Root3D, the CSS3D environment: http://felipenmoura.org/projects/root3d<br/>Everything you see here is made of DIVs with CSS3, running on a web browser.<br/><br/>In this video, I show you the demo I've built and how to use some of the tool's features.<br/><br/>I've been working on this tool for some time and I'd like you to test it and share your opinion and feedback.<br/><br/><br/>** It is deprecated...once technology and even some of the syntax changed! Feel free to submit fixing patches! :)",
-        "link": "",
-        "image": false,
+        "description": "This is the Root3D, a CSS3, 3D environment, for you to build some cool 3D groups",
+        "link": "http://felipenmoura.org/projects/root3d",
+        "github": "https://github.com/felipenmoura/Root3D",
+        "image": "resources/lab-3d-builder-tool-environment.png",
         "videoID": "0ZxFwNgc0e0"
     },
     {
-        "title": "Test your markup",
-        "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.<br/>http://felipenmoura.org/projects/test-your-markup/index.html",
+        "title": "Game: Test your markup",
+        "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.",
         "link": "http://felipenmoura.org/projects/test-your-markup/index.html",
+        "github": "https://github.com/felipenmoura/test-your-markup",
         "image": "resources/exp-test-your-might.png",
         "videoID": false
     }

@@ -877,7 +877,7 @@ body[data-page="utils"] #utils-container .decorator {
 #utils-container .decorator .icon.articles {
   background-position: -32px 2px;
 }
-#utils-container .decorator .icon.albums {
+#utils-container .decorator .icon.photos {
   background-position: -65px 2px;
 }
 #utils-container .decorator .icon:hover {
@@ -1024,7 +1024,7 @@ body[data-page="utils"] #utils-container .decorator {
 [hash-bang-detail="videos"] .utils-content.videos,
 [hash-bang-detail="labs"] .utils-content.labs,
 [hash-bang-detail="articles"] .utils-content.articles,
-[hash-bang-detail="albums"] .utils-content.albums {
+[hash-bang-detail="photos"] .utils-content.photos {
   height: 100% !important;
   width: 100%;
   overflow: auto;
@@ -1034,7 +1034,7 @@ body[data-page="utils"] #utils-container .decorator {
 [hash-bang-detail="videos"] .utils-content.videos section,
 [hash-bang-detail="labs"] .utils-content.labs section,
 [hash-bang-detail="articles"] .utils-content.articles section,
-[hash-bang-detail="albums"] .utils-content.albums section {
+[hash-bang-detail="photos"] .utils-content.photos section {
   opacity: 1 !important;
   transform: translate(0) !important;
 }

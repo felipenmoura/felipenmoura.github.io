@@ -43,20 +43,64 @@
             <div class="utils-content labs">
                 {% for lab in labs %}
                 <section class="utils-item">
+                    {% if lab.videoID %}
                     <div class="utils-thumb youtube"
-                         data-yt-ref="{{ tool.videoID }}">
-                        <a href="{{ talk.link }}" target="_blank">
-                            <img src="{{ talk.image }}"
-                                 title="{{ talk.title }}"
-                                 alt="{{ talk.title }}" />
-                        </a>
+                         data-yt-ref="{{ lab.videoID }}">
+                        <img src="{{ lab.image }}"
+                             title="{{ lab.title }}"
+                             alt="{{ lab.title }}" />
                     </div>
+                    {% else %}
+                    <div class="utils-thumb">
+                        <img src="{{ lab.image }}"
+                             title="{{ lab.title }}"
+                             alt="{{ lab.title }}" />
+                    </div>
+                    {% endif %}
                     <div class="utils-description">
-                        <h3 data-title="{{ talk.title }}">{{ talk.title }}</h3>
+                        <h3 data-title="{{ lab.title }}">{{ lab.title }}</h3>
                         <span class="desc">
-                            {{ talk.description }}
+                            {{ lab.description }}
+                            <br/><br/>
+                            {% if lab.github %}
+                            <a href="{{ lab.github }}" target="_blank">
+                                Github
+                            </a><br/>
+                            {% endif %}
+                            {% if lab.link %}
+                            <a href="{{ lab.link }}" target="_blank">
+                                See it working
+                            </a><br/>
+                            {% endif %}
                         </span>
                     </div>
+                    <div class="clear"></div>
+                </section>
+                {% endfor %}
+            </div>
+    
+    
+            <div class="utils-content photos">
+                {% for photo in photos %}
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="{{ photo.fullSize }}"
+                       target="_blank">
+                        {% if photo.thumb %}
+                        <img src="{{ photo.thumb }}"
+                        {% else %}
+                        <img src="{{ photo.fullSize }}"
+                        {% endif %}
+                             title="{{ photo.title }}"
+                             alt="{{ photo.title }}" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="{{ photo.title }}">{{ photo.title }}</h3>
+                        <span class="desc">
+                            {{ photo.description }}
+                        </span>
+                    </div>
+                    <div class="clear"></div>
                 </section>
                 {% endfor %}
             </div>
@@ -66,9 +110,9 @@
             <div class="decorator">
                 <a class="icon talks" href="#!utils/talks">Talks<span class="tooltip">Slides from Talks</span></a>
                 <a class="icon videos" href="#!utils/videos">Videos<span class="tooltip">My youtube channels</span></a>
-                <a class="icon labs" href="#!utils/labs">Tools<span class="tooltip">Projects/Tools/experiments/demos</span></a>
-                <a class="icon articles" href="./articles">Articles<span class="tooltip">Articles</span></a>
-                <a class="icon albums" href="#!utils/albums">Albums<span class="tooltip">Pictures and Albums</span></a>
+                <a class="icon labs" href="#!utils/labs">Labs<span class="tooltip">Projects/Tools/experiments/demos</span></a>
+                <a class="icon articles local" href="./articles">Articles<span class="tooltip">Articles</span></a>
+                <a class="icon photos" href="#!utils/photos">Photos<span class="tooltip">Pictures and Albums</span></a>
             </div>
             
         </section>

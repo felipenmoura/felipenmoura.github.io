@@ -80,7 +80,7 @@ body[data-page="utils"] {
             &.articles {
                 background-position: -32px 2px;
             }
-            &.albums {
+            &.photos {
                 background-position: -65px 2px;
             }
             
@@ -296,7 +296,7 @@ body[data-page="utils"] {
 [hash-bang-detail="videos"] .utils-content.videos,
 [hash-bang-detail="labs"] .utils-content.labs,
 [hash-bang-detail="articles"] .utils-content.articles,
-[hash-bang-detail="albums"] .utils-content.albums {
+[hash-bang-detail="photos"] .utils-content.photos {
     height: 100% !important;
     width: 100%;
     overflow: auto;
