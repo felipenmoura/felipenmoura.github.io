@@ -54,7 +54,27 @@ body[data-page="utils"] {
         height: 100%;
         
         .icon {
+            
+            @include animation(jumpForAttentionV 4s infinite linear);
+            
+            &:nth-child(1){
+                -webkit-animation-delay: 3.2s;
+            }
+            &:nth-child(2){
+                -webkit-animation-delay: 3.1s;
+            }
+            &:nth-child(3){
+                -webkit-animation-delay: 3s;
+            }
+            &:nth-child(4){
+                -webkit-animation-delay: 3.1s;
+            }
+            &:nth-child(5){
+                -webkit-animation-delay: 3.2s;
+            }
+            
             text-indent: -99999px;
+            background-color: #427FED;
             position: relative;
             width: 32px;
             height: 32px;
@@ -290,6 +310,18 @@ body[data-page="utils"] {
     }
 }
 
+[hash-bang-detail="talks"],
+[hash-bang-detail="videos"],
+[hash-bang-detail="labs"],
+[hash-bang-detail="articles"],
+[hash-bang-detail="photos"] {
+    #utils-container .decorator .icon{
+        @include animation(none);
+    }
+}
+#utils-container .decorator:hover .icon{
+    @include animation(none);
+}
 
 
 [hash-bang-detail="talks"] .utils-content.talks,
@@ -323,11 +355,15 @@ body[data-page="utils"] {
             transform: translate(0, -44px);
             
             .icon {
+                
+                @include animation(jumpForAttentionH 4s infinite linear);
+                
                 &:hover {
                     .tooltip {
                         top: 50px;
                     }
                 }
+                
                 .tooltip {
                     top: 40px;
                     left: -90px !important;
@@ -367,6 +403,45 @@ body[data-page="utils"] {
         
     }
 }
+
+@include keyframes(jumpForAttentionV) {
+    0%   {
+        @include transform(translateX(0px));
+    }
+    6%   {
+        @include transform(translateX(20px));
+    }
+    12%   {
+        @include transform(translateX(0px));
+    }
+    16%   {
+        @include transform(translateX(10px));
+    }
+    20% {
+        @include transform(translateX(0px));
+    }
+}
+@include keyframes(jumpForAttentionH) {
+    0%   {
+        @include transform(translateY(0px));
+    }
+    6%   {
+        @include transform(translateY(20px));
+    }
+    12%   {
+        @include transform(translateY(0px));
+    }
+    16%   {
+        @include transform(translateY(10px));
+    }
+    20% {
+        @include transform(translateY(0px));
+    }
+}
+
+
+
+
 
 
 
