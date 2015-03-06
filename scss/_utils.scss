@@ -319,8 +319,15 @@ body[data-page="utils"] {
         @include animation(none);
     }
 }
+
 #utils-container .decorator:hover .icon{
     @include animation(none);
+}
+
+body:not([data-page="utils"]) {
+    #utils-container .decorator .icon{
+        @include animation(none);
+    }
 }
 
 
@@ -329,6 +336,7 @@ body[data-page="utils"] {
 [hash-bang-detail="labs"] .utils-content.labs,
 [hash-bang-detail="articles"] .utils-content.articles,
 [hash-bang-detail="photos"] .utils-content.photos {
+    
     height: 100% !important;
     width: 100%;
     overflow: auto;
@@ -368,6 +376,7 @@ body[data-page="utils"] {
                     top: 40px;
                     left: -90px !important;
                     width: 200px;
+                    overflow: hidden;
                     white-space: normal;
                     height: auto;
                     border-left: solid 1px #000;
@@ -415,7 +424,7 @@ body[data-page="utils"] {
         @include transform(translateX(0px));
     }
     16%   {
-        @include transform(translateX(10px));
+        @include transform(translateX(5px));
     }
     20% {
         @include transform(translateX(0px));
@@ -432,7 +441,7 @@ body[data-page="utils"] {
         @include transform(translateY(0px));
     }
     16%   {
-        @include transform(translateY(10px));
+        @include transform(translateY(5px));
     }
     20% {
         @include transform(translateY(0px));

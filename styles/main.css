@@ -569,6 +569,10 @@ body[data-page="articles"] #main-nav .menu-articles-btn a,
   #main-header {
     text-align: center;
   }
+
+  #main-nav ul {
+    max-width: 300px;
+  }
 }
 @media (min-width: 570px) {
   #main-nav li {
@@ -1058,6 +1062,13 @@ body[data-page="utils"] #utils-container .decorator {
   animation: none;
 }
 
+body:not([data-page="utils"]) #utils-container .decorator .icon {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
 [hash-bang-detail="talks"] .utils-content.talks,
 [hash-bang-detail="videos"] .utils-content.videos,
 [hash-bang-detail="labs"] .utils-content.labs,
@@ -1100,6 +1111,7 @@ body[data-page="utils"] #utils-container .decorator {
     top: 40px;
     left: -90px !important;
     width: 200px;
+    overflow: hidden;
     white-space: normal;
     height: auto;
     border-left: solid 1px #000;
@@ -1147,10 +1159,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateX(0px);
   }
   16% {
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
   }
   20% {
     -webkit-transform: translateX(0px);
@@ -1179,10 +1191,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateX(0px);
   }
   16% {
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
   }
   20% {
     -webkit-transform: translateX(0px);
@@ -1211,10 +1223,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateX(0px);
   }
   16% {
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
   }
   20% {
     -webkit-transform: translateX(0px);
@@ -1243,10 +1255,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateX(0px);
   }
   16% {
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    transform: translateX(10px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px);
   }
   20% {
     -webkit-transform: translateX(0px);
@@ -1275,10 +1287,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateY(0px);
   }
   16% {
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
   }
   20% {
     -webkit-transform: translateY(0px);
@@ -1307,10 +1319,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateY(0px);
   }
   16% {
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
   }
   20% {
     -webkit-transform: translateY(0px);
@@ -1339,10 +1351,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateY(0px);
   }
   16% {
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
   }
   20% {
     -webkit-transform: translateY(0px);
@@ -1371,10 +1383,10 @@ body[data-page="utils"] #utils-container .decorator {
     transform: translateY(0px);
   }
   16% {
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    -ms-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
   }
   20% {
     -webkit-transform: translateY(0px);

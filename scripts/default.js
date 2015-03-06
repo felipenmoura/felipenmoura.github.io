@@ -172,9 +172,14 @@
     
     window.addEventListener('hashchange', function(event){
         getHash(event.newURL);
+        // ga('send', 'event', 'button', 'click', 'nav buttons', 4);
+        ga('send', 'pageview', {
+            'page': location.pathname + location.search  + location.hash
+        });
     });
     window.addEventListener('load', function(event){
         getHash(location.href);
+        ga('send', 'pageview');
     });
     
     window.scrollTo(0, 0);

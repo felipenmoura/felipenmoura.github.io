@@ -136,6 +136,9 @@ body[data-page="articles"] #main-nav .menu-articles-btn,
     #main-header {
         text-align: center;
     }
+    #main-nav ul {
+        max-width: 300px;
+    }
 }
 
 @media ($mq_medium){
