@@ -3,7 +3,7 @@
     var l = location,
         redirectFrom404 = l.protocol + '//' +
                           l.hostname + '/?' +
-                          "redirected="
+                          "redirected=" +
                           l.pathname + '&search=' +
                           l.search;
     location.href = redirectFrom404;
