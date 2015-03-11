@@ -1,1 +1,10 @@
-oi
+...redirecting
+<script>
+    var l = null,
+        redirectFrom404 = l.protocol + '//' +
+                          l.hostname + '/?' +
+                          "redirected="
+                          l.pathname + '&search=' +
+                          l.search;
+    location.href = redirectFrom404;
+</script>
