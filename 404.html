@@ -5,6 +5,6 @@
                           l.hostname + '/?' +
                           "redirected=" +
                           l.pathname + '&search=' +
-                          l.search;
+                          (l.search || null);
     location.href = redirectFrom404;
 </script>
