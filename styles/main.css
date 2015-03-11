@@ -608,7 +608,9 @@ body[data-page="articles"] #main-nav .menu-articles-btn a,
 .about-full-content {
   background: white;
   position: relative;
+  height: 100%;
   top: 0;
+  opacity: 0;
   transition: transform linear .5s .1s;
   transform: translate(0, 100%);
   z-index: 1;
@@ -618,6 +620,7 @@ body[data-page="about"] #about-container {
   overflow: auto;
 }
 body[data-page="about"] .about-full-content {
+  opacity: 1;
   transform: translate(0, 0);
 }
 
