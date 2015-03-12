@@ -16,7 +16,7 @@
     min-height: 100%;
     top: 0;
     opacity: 0;
-    transition: transform linear .5s .1s;
+    transition: all linear .5s .1s;
     transform: translate(0, 100%);
     z-index: 1;
 }
