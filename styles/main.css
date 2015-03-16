@@ -1404,6 +1404,7 @@ body[data-page="articles"] {
 body[data-page="articles"] #articles-container {
   z-index: 7;
   opacity: 1;
+  overflow: auto;
   background: rgba(0, 0, 0, 0.5);
   transition: all linear 0.5s 1.2s;
 }
@@ -1583,7 +1584,7 @@ body[data-page="articles"] .articles-nav {
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   transition: all linear 0.5s 0;
 }
 #articles-container .decorator {

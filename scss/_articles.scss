@@ -7,6 +7,7 @@ body[data-page="articles"] {
     #articles-container {
         z-index: 7;
         opacity: 1;
+        overflow: auto;
         
         background: rgba(0, 0, 0, .5);
         transition: all linear $transSpeed 1.2s;
@@ -225,7 +226,7 @@ body[data-page="articles"] {
     top: 0;
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     transition: all linear $transSpeed 0;
     //padding-top: 1rem;
     
