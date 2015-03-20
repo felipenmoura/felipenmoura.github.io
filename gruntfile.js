@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     var NunJucks = require('nunjucks'),
         fs = require('fs'),
-        nunEnv = new NunJucks.FileSystemLoader(['templates']),
+        //nunEnv = new NunJucks.FileSystemLoader(['templates']),
         defaultLang = 'en',
         months = [
             "Jan",
@@ -18,6 +18,12 @@ module.exports = function(grunt) {
             "Nov",
             "Dec"
         ];
+    
+    nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''));
+    //nunEnv = new NunJucks.FileSystemLoader(['templates']);
+    nunEnv.addFilter('striptags', function(str, count) {
+        return str && str.replace? str.replace(/(<([^>]+)>)/ig, ''): str;
+    });
     
     function formatDate(date){
         var tmpDt = new Date(date);
@@ -215,7 +221,7 @@ module.exports = function(grunt) {
                 
                 // sort them out
                 validArticles.sort(function(left, right){
-                    return left.creationDate >= right.creationDate;
+                    return left.creationDate <= right.creationDate;
                 });
                 
                 // set the previous and next links
@@ -252,7 +258,8 @@ module.exports = function(grunt) {
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
                     metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
-                    renderedArticle = NunJucks.render(tplArtPath, metaData);
+                    
+                    renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
                     fs.writeFileSync(artPath + cur.name + '/index-ajax.html',
                                      renderedArticle,
@@ -261,7 +268,7 @@ module.exports = function(grunt) {
                     metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
                     fs.writeFileSync(artPath + cur.name + '/index.html',
-                                     NunJucks.render(tplPath, data),
+                                     nunEnv.render(tplPath, data),
                                      'utf8');
                 });
                 
@@ -276,7 +283,7 @@ module.exports = function(grunt) {
             applyURLsTo(data, 'labs', 'description');
             
             createIndexesForArticles(data, function(data){
-                fs.writeFileSync(idxFile, NunJucks.render('_templates/index.html', data), 'utf8');
+                fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 done();
             });
         }

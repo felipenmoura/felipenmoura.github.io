@@ -16,7 +16,7 @@
                 {% else %}
                 <a class="local art-nav-tbn inactive"
                 {% endif %}
-                   title="previous: {{ previous.title }}"><< Prev</a>
+                   title="previous: {{ previous.title | striptags }}"><< Prev</a>
             </li>
             <li class="btn right">
                 {% if next %}
@@ -40,7 +40,7 @@
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
                     colour-{{ colourId }}
-                    {% if not resume %}
+                    {% if not resume and not headerImg %}
                     resumeless
                     {% endif %}">
             <h2><a href="{{ url }}">{{ title }}</a></h2>
