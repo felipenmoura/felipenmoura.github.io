@@ -85,7 +85,7 @@ body[data-page="utils"] {
             outline: none;
             margin: 5px;
             box-shadow: 0 0 0px 2px #fff;
-            background-image: url(../images/icons.png);
+            background-image: url(/images/icons.png);
             transition: box-shadow linear .2s;
             
             &.talks {
@@ -257,7 +257,7 @@ body[data-page="utils"] {
             right: 0;
             margin: auto;
             z-index: 9;
-            background-image: url(../images/youtube-buttons-sprite.png);
+            background-image: url(/images/youtube-buttons-sprite.png);
             width: 40px;
             height: 30px;
         }

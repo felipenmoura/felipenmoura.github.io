@@ -5,18 +5,18 @@
         <!-- Meta -->
         <meta charset="UTF-8">
         <link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/main.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <!-- Info -->
         <title>felipeNMoura();</title>
-        <link rel="shortcut icon" type="image/png" href="./felipenmoura-felipe-nascimento-moura-favico.png"/>
+        <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
         <meta name="author" content="Felipe Nascimento de Moura">
         
         <!-- FACEBOOK -->
-        <meta property="og:image" content="./images/og-image-fb.png"/>
+        <meta property="og:image" content="/images/og-image-fb.png"/>
         <meta property="og:site_name" content="Felipe N. Moura . org"/>
         <meta property="og:type" content="blog"/>
         <meta property="og:title" content="home : Felipe N Moura | Web development, demos and talks"/>
@@ -28,14 +28,14 @@
         <meta name="twitter:title" content="home : Felipe N Moura | Web development, demos and talks">
         <meta name="twitter:description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="twitter:creator" content="@felipenmoura">
-        <meta name="twitter:image:src" content="./images/og-image-fb.png">
+        <meta name="twitter:image:src" content="/images/og-image-fb.png">
             
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/posts"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
         <meta itemprop="name" content="The Name or Title Here">
         <meta itemprop="description" content="Home page of Felipe Nascimento de Moura. Find information about me and my projects and articles.">
-        <meta itemprop="image" content="./images/og-image-fb.png">
+        <meta itemprop="image" content="/images/og-image-fb.png">
         
         <!-- RSS -->
         <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="http://felipenmoura.org/feed/">
@@ -51,18 +51,7 @@
 
             ga('create', 'UA-1270869-17', 'auto');
             ga('send', 'pageview');
-            
-            
-//            var _gaq = _gaq || [];
-//            _gaq.push(['_setAccount', 'UA-1270869-17']);
-//            _gaq.push(['_setDomainName', 'felipenmoura.org']);
-//            _gaq.push(['_trackPageview']);
-//
-//            (function() {
-//                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//            })();
+
         </script>
         
         <div class="background-video videobg">
@@ -78,17 +67,17 @@
             {% include '_templates/nav.html' %}
             {% include '_templates/about.html' %}
             {% include '_templates/utils.html' %}
-            {% include '_templates/articles.html' %}
+            {{ currentArticle }}
         {% else %}
             {% include '_templates/nav-pt.html' %}
             {% include '_templates/about-pt.html' %}
             {% include '_templates/utils-pt.html' %}
-            {% include '_templates/articles-pt.html' %}
+            {{ currentArticle }}
         {% endif %}
         
         <div id="decoration" class="glassEffect"></div>
         
-        <script src="scripts/default.js"></script>
+        <script src="/scripts/default.js"></script>
         
     </body>
 </html>

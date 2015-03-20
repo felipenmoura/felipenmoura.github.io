@@ -5,18 +5,18 @@
         <!-- Meta -->
         <meta charset="UTF-8">
         <link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/main.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <!-- Info -->
         <title>felipeNMoura();</title>
-        <link rel="shortcut icon" type="image/png" href="./felipenmoura-felipe-nascimento-moura-favico.png"/>
+        <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
         <meta name="author" content="Felipe Nascimento de Moura">
         
         <!-- FACEBOOK -->
-        <meta property="og:image" content="./images/og-image-fb.png"/>
+        <meta property="og:image" content="/images/og-image-fb.png"/>
         <meta property="og:site_name" content="Felipe N. Moura . org"/>
         <meta property="og:type" content="blog"/>
         <meta property="og:title" content="home : Felipe N Moura | Web development, demos and talks"/>
@@ -28,14 +28,14 @@
         <meta name="twitter:title" content="home : Felipe N Moura | Web development, demos and talks">
         <meta name="twitter:description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="twitter:creator" content="@felipenmoura">
-        <meta name="twitter:image:src" content="./images/og-image-fb.png">
+        <meta name="twitter:image:src" content="/images/og-image-fb.png">
             
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/posts"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
         <meta itemprop="name" content="The Name or Title Here">
         <meta itemprop="description" content="Home page of Felipe Nascimento de Moura. Find information about me and my projects and articles.">
-        <meta itemprop="image" content="./images/og-image-fb.png">
+        <meta itemprop="image" content="/images/og-image-fb.png">
         
         <!-- RSS -->
         <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="http://felipenmoura.org/feed/">
@@ -51,18 +51,7 @@
 
             ga('create', 'UA-1270869-17', 'auto');
             ga('send', 'pageview');
-            
-            
-//            var _gaq = _gaq || [];
-//            _gaq.push(['_setAccount', 'UA-1270869-17']);
-//            _gaq.push(['_setDomainName', 'felipenmoura.org']);
-//            _gaq.push(['_trackPageview']);
-//
-//            (function() {
-//                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-//                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-//                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-//            })();
+
         </script>
         
         <div class="background-video videobg">
@@ -339,6 +328,9 @@ Na entrevista, os organizadores falam sobre a linguagem JavaScript e sobre o Bra
 Veja algumas vantagens e desvantagens que encontrei no aparelho, usando-o no dia-a-dia.
 Sou um "heavy user", usando várias apps, redes sociais, e configurando e personalizando bastante coisa, também.
 Neste video, mostro a interface padrão, mas atualmente utilizo launchers e diallers. Até então, estão rodando sem problemas.
+
+Caso queira conhecer alguns dos launchers mais conhecidos para Android, assista a este outro vídeo, em que demonstro um pouco como cada uma funciona, e seus prós e contras:
+7 Launchers (homes) Android: <a href="https://www.youtube.com/watch" target="_blank">https://www.youtube.com/watch</a>?v=Im9b98P5-Vw
                         </span>
                     </div>
                     <div class="clear"></div>
@@ -867,14 +859,25 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <nav id="articles-nav" class="articles-nav">
         <ul>
             <li class="btn center">
-                <span class="local art-nav-tbn" title="See all Posts">See all&nbsp; |<!--small>▼</small--></span>
-                <span class="art-nav-tbn art-tools" title="Article Tools">&nbsp;&#9881; <!--small>▼</small--></span>
+                <span class="local art-nav-tbn" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    &nbsp;&#9881; <!--small>▼</small-->
+                </span>
             </li>
             <li class="btn left">
-                <a href="#" class="local art-nav-tbn" title="Read Previous Post"><< Prev</a>
+                
+                <a class="local art-nav-tbn inactive"
+                
+                   title="previous: "><< Prev</a>
             </li>
             <li class="btn right">
-                <a href="#" class="local art-nav-tbn" title="Read next Post">Next >></a>
+                
+                <a href=""
+                   class="local art-nav-tbn inactive"
+                
+                   title="Next: ">Next >></a>
             </li>
         </ul>
         
@@ -884,47 +887,96 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             <span id="article-tool-contrast" class="art-nav-tbn"></span>
         </div>
     </nav>
+    
     <div id="the-article" class="the-article" data-text-size="2">
-        <div class="decorator">
-            <h2>Some article's <em>title comes here</em></h2>
+        <div class="decorator
+                    colour-5
+                    
+                    resumeless
+                    ">
+            <h2>Hoisting no <em>JavaScript</em></h2>
             <div class="wrapper">
-                <img src="images/eg-article-bg.jpg" alt="" title="" />
+                <img src="" alt="" title="" />
             </div>
             <span id="article-meta-data">
-                July, 19/2015 : <a href="#">JavaScript</a>, <a href="#">CSS</a>, <a href="#">HTML</a>
+                Sept 15th, 2014 : es6, javascript, es2015
             </span>
-            <abs>
-                <p>Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                Then we write down some other shit just to test it out.</p>
-                <p>And now, we can keep writing <a href="#">down some</a> other things just to test it out. Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                If we want, then we apply some other shit just to test it out.</p>
-                <p>Loren Ipsun, dollor <em>sit amet</em> something else entirely is written here.</br>
-                Now we simply to this and that, we write down some other shit just to test it out.</p>
-                <p>Loren Ipsun, dollor <strong>sit amet</strong> something else entirely is written here.</br>
-                Now we simply to this and that, we write down some other shit just to test it out.</p>
-            </abs>
+            
         </div>
+
         <div class="wrapper articles-content">
             <article>
-                <p>Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                Then we write down <b>some other</b> shit just to test it out.</p>
-                <p>And now, we can keep writing down some other things just to test it out. Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                If we want, then we apply <a href="#">some</a> other shit just to test it out.</p>
-                <div class="picture center">
-                    <img src="images/learn-es6.jpg" alt="" title="" />
-                </div>
-                <p>Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                Now we simply to this and that, we write down some other shit just to test it out.</p>
-                <p>And now, we can keep writing <strong>down some other</strong> things just to test it out. Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                If we want, then we apply some other shit just to test it out.</p>
-                <p>Loren Ipsun, <em>dollor sit</em> amet something else entirely is written here.</br>
-                Now we simply to this and that, we write down some other shit just to test it out.</p>
-                <blockquote>
-                    Some cool very interesting quote comes here!
-                    <cite>Some one</cite>
-                </blockquote>
-                <p>And now, we can keep writing <strong>down some other</strong> things just to test it out. Loren Ipsun, dollor sit amet something else entirely is written here.</br>
-                If we want, then we apply some other shit just to test it out.</p>
+                Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+<br/>
+<img src="http://felipenmoura.org/wp-content/uploads/2014/09/hoisting.jpg" alt="javascript hoisting" width="140" height="287" class="aligncenter size-full wp-image-968" /><br/>
+<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!<br/>
+Todavia, o valor apenas será atribuído no momento correto.<br/>
+<br/>
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:<br/>
+<pre lang='javascript'><br/>
+var x= 1;<br/>
+<br/>
+if(x === 3){<br/>
+    var y= 1;<br/>
+}<br/>
+<br/>
+console.log(x); // 1<br/>
+console.log(y); // undefined<br/>
+console.log(z); // ERROR<br/>
+</pre><br/>
+<br/>
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.<br/>
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".<br/>
+<br/>
+Ainda duvida?<br/>
+Façamos assim, então:<br/>
+<br/>
+<pre lang='javascript'><br/>
+var x= 1;<br/>
+<br/>
+console.log(x); // 1<br/>
+console.log(y); // undefined<br/>
+console.log(z); // ERROR<br/>
+<br/>
+if(x === 3){<br/>
+    var y= 1;<br/>
+}<br/>
+<br/>
+</pre><br/>
+<br/>
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.<br/>
+<br/>
+Da mesma forma, funções podem ser declaradas ou atribuídas.<br/>
+<br/>
+<pre lang='javascript'><br/>
+// chamando a funcão 1<br/>
+func1(); // joga 1 no console<br/>
+<br/>
+// a declaração desta função foi puxada para o topo<br/>
+// pelo JavaScript<br/>
+function func1(){<br/>
+    console.log(1);<br/>
+}<br/>
+<br/>
+// chamando a função 2<br/>
+func2(); // ERROR<br/>
+<br/>
+// a variável func2 foi criada antes, com o valor "undefined"<br/>
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função<br/>
+var func2= function(){<br/>
+    console.log(2);<br/>
+}<br/>
+<br/>
+// a partir de agora, func2 poderia ser evocada<br/>
+</pre><br/>
+<br/>
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!<br/>
+<br/>
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.<br/>
+<br/>
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!<br/>
+
             </article>
         </div>
     </div>
@@ -933,7 +985,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
         
         <div id="decoration" class="glassEffect"></div>
         
-        <script src="scripts/default.js"></script>
+        <script src="/scripts/default.js"></script>
         
     </body>
 </html>

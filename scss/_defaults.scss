@@ -62,7 +62,7 @@ picture,
         position: absolute;
         left: 0;
         bottom: -9px;
-        background-image: url(../images/small-shadow.png);
+        background-image: url(/images/small-shadow.png);
         background-size: 100% auto;
     }
 
@@ -135,7 +135,7 @@ blockquote {
     z-index: 999999;
     width: 130%;
     height: 100%;
-    background: url(../images/light-effect.png) no-repeat;
+    background: url(/images/light-effect.png) no-repeat;
     background-size: 100% 100%;
     pointer-events: none;
     display: none;
