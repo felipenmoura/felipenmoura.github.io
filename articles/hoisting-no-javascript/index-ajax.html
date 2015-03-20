@@ -1,0 +1,126 @@
+<section id="articles-container" class="sect-content">
+    <nav id="articles-nav" class="articles-nav">
+        <ul>
+            <li class="btn center">
+                <span class="local art-nav-tbn" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    &nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a class="local art-nav-tbn inactive"
+                
+                   title="previous: "><< Prev</a>
+            </li>
+            <li class="btn right">
+                
+                <a href="articles/hoisting-no-javascript"
+                   class="local art-nav-tbn"
+                
+                   title="Next: Hoisting no <em>JavaScript</em>">Next >></a>
+            </li>
+        </ul>
+        
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+    
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-2
+                    
+                    resumeless
+                    ">
+            <h2>Hoisting no <em>JavaScript</em></h2>
+            <div class="wrapper">
+                <img src="" alt="" title="" />
+            </div>
+            <span id="article-meta-data">
+                Sept 15th, 2014 : es6, javascript, es2015
+            </span>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            <article>
+                Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+<br/>
+<img src="http://felipenmoura.org/wp-content/uploads/2014/09/hoisting.jpg" alt="javascript hoisting" width="140" height="287" class="aligncenter size-full wp-image-968" /><br/>
+<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!<br/>
+Todavia, o valor apenas será atribuído no momento correto.<br/>
+<br/>
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:<br/>
+<pre lang='javascript'><br/>
+var x= 1;<br/>
+<br/>
+if(x === 3){<br/>
+    var y= 1;<br/>
+}<br/>
+<br/>
+console.log(x); // 1<br/>
+console.log(y); // undefined<br/>
+console.log(z); // ERROR<br/>
+</pre><br/>
+<br/>
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.<br/>
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".<br/>
+<br/>
+Ainda duvida?<br/>
+Façamos assim, então:<br/>
+<br/>
+<pre lang='javascript'><br/>
+var x= 1;<br/>
+<br/>
+console.log(x); // 1<br/>
+console.log(y); // undefined<br/>
+console.log(z); // ERROR<br/>
+<br/>
+if(x === 3){<br/>
+    var y= 1;<br/>
+}<br/>
+<br/>
+</pre><br/>
+<br/>
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.<br/>
+<br/>
+Da mesma forma, funções podem ser declaradas ou atribuídas.<br/>
+<br/>
+<pre lang='javascript'><br/>
+// chamando a funcão 1<br/>
+func1(); // joga 1 no console<br/>
+<br/>
+// a declaração desta função foi puxada para o topo<br/>
+// pelo JavaScript<br/>
+function func1(){<br/>
+    console.log(1);<br/>
+}<br/>
+<br/>
+// chamando a função 2<br/>
+func2(); // ERROR<br/>
+<br/>
+// a variável func2 foi criada antes, com o valor "undefined"<br/>
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função<br/>
+var func2= function(){<br/>
+    console.log(2);<br/>
+}<br/>
+<br/>
+// a partir de agora, func2 poderia ser evocada<br/>
+</pre><br/>
+<br/>
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!<br/>
+<br/>
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.<br/>
+<br/>
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!<br/>
+
+            </article>
+        </div>
+    </div>
+</section>
