@@ -360,6 +360,11 @@ body[data-page="articles"] {
                 font-style: normal;
                 color: #FFD6D6;
             }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
         }
     }
     
@@ -440,6 +445,10 @@ body[data-page="articles"] {
                 width: 100%;
                 text-align: center;
                 top: 0;
+            }
+            
+            .articles-content{
+                background-image: none;
             }
         }
     }

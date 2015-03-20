@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 
                 // sort them out
                 validArticles.sort(function(left, right){
-                    return left.creationDate <= right.creationDate;
+                    return left.creationDate >= right.creationDate;
                 });
                 
                 // set the previous and next links
@@ -230,16 +230,23 @@ module.exports = function(grunt) {
                     }else{
                         validArticles[i].next = false;
                     }
+                    
+                    validArticles[i].url = artPath + cur.name;
                 });
                 
                 // create the index files for each one
                 validArticles.forEach(function(cur){
-                    
-                    metaData.currentArticle = data.currentArticle = cur.content;
-                    metaData.next = cur.next;
-                    metaData.previous = cur.previous;
-                    metaData.next.url = artPath + cur.next.name;
-                    metaData.previous.url = artPath + cur.previous.name;
+                    metaData = cur;
+//                    metaData.next = cur.next? {
+//                        title: cur.next.title,
+//                        url: artPath + cur.next.name,
+//                        name: cur.next.name
+//                    }: false;
+//                    metaData.previous = cur.previous? {
+//                        title: cur.previous.title,
+//                        url: artPath + cur.previous.name,
+//                        name: cur.previous.name
+//                    }: false;
                     
                     // create index-ajax for each article
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
@@ -252,6 +259,7 @@ module.exports = function(grunt) {
                                      'utf-8');
                     // index inside the article itself
                     metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
+                    metaData.currentArticle = data.currentArticle = metaData.content;
                     fs.writeFileSync(artPath + cur.name + '/index.html',
                                      NunJucks.render(tplPath, data),
                                      'utf8');

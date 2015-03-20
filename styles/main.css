@@ -1701,6 +1701,10 @@ body[data-page="articles"] .articles-nav {
   font-style: normal;
   color: #FFD6D6;
 }
+#articles-container .decorator h2 a {
+  text-decoration: none;
+  color: inherit;
+}
 #articles-container .articles-content {
   background: #fefefe url(/images/_article-bg.jpg);
   width: 100%;
@@ -1763,6 +1767,9 @@ body[data-page="articles"] .articles-nav {
     width: 100%;
     text-align: center;
     top: 0;
+  }
+  #articles-container .decorator .articles-content {
+    background-image: none;
   }
 }
 #playerLayer {
