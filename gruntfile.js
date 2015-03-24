@@ -207,7 +207,7 @@ module.exports = function(grunt) {
 
                 // get all the meta datas
                 files.forEach(function(cur){
-                    if(cur[0] == '.'){
+                    if(cur[0] == '.' || !fs.lstatSync(artPath + cur).isDirectory()){
                         return;
                     }
                     metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
@@ -243,20 +243,13 @@ module.exports = function(grunt) {
                 // create the index files for each one
                 validArticles.forEach(function(cur){
                     metaData = cur;
-//                    metaData.next = cur.next? {
-//                        title: cur.next.title,
-//                        url: artPath + cur.next.name,
-//                        name: cur.next.name
-//                    }: false;
-//                    metaData.previous = cur.previous? {
-//                        title: cur.previous.title,
-//                        url: artPath + cur.previous.name,
-//                        name: cur.previous.name
-//                    }: false;
                     
                     // create index-ajax for each article
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
-                    metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
+                    //metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
+                    metaData.content = metaData.content.replace(/\<pre lang\='javascript'\>/ig, '<pre class="sh_javascript">');
+                    metaData.content = metaData.content.replace(/\<pre lang\='css'\>/ig, '<pre class="sh_css">');
+                    metaData.content = metaData.content.replace(/\<pre lang\='html'\>/ig, '<pre class="sh_html">');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
@@ -277,6 +270,14 @@ module.exports = function(grunt) {
             });
         }
         
+        function copyIndexTo (where) {
+            if(!fs.existsSync(where)){
+                fs.mkdirSync(where);
+            }
+            
+            //fs.createReadStream('index.html').pipe(fs.createWriteStream(where + '/index.html'));
+        }
+        
         function render () {
             
             applyURLsTo(data, 'talks', 'description');
@@ -284,6 +285,13 @@ module.exports = function(grunt) {
             
             createIndexesForArticles(data, function(data){
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
+                
+                copyIndexTo("articles");
+                copyIndexTo("utils");
+                copyIndexTo("home");
+                copyIndexTo("about");
+                copyIndexTo("sobre");
+
                 done();
             });
         }

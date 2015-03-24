@@ -2,9 +2,17 @@
 <script>
     var l = location,
         redirectFrom404 = l.protocol + '//' +
-                          l.hostname + '/?' +
-                          "redirected=" +
-                          l.pathname + '&search=' +
-                          (l.search || null);
+                          l.hostname + ':' +
+                          l.port + '/';
+    
+    if(l.search){
+        redirectFrom404 += l.search
+    }
+    
+    if(l.hash){
+        redirectFrom404 += l.hash;
+    }else{
+        redirectFrom404 += '#!' + (l.pathname.replace(/^\//, '') || 'home');
+    }
     location.href = redirectFrom404;
 </script>

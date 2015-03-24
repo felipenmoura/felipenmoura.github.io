@@ -1719,6 +1719,7 @@ body[data-page="articles"] .articles-nav {
   border: solid 1px #000;
   border-top: none;
   line-height: 1.3em;
+  white-space: pre-line;
   opacity: 0;
   transform: translateY(500px);
   transition: all linear .4s;

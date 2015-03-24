@@ -161,6 +161,11 @@
         _b.removeAttribute('data-full-layer');
     }
     
+    function applySH(){
+        debugger;
+        sh_highlightDocument();
+    }
+    
     window.addEventListener('keyup', function(event){
         switch(event.keyCode){
             case 27: { // esc
@@ -177,9 +182,11 @@
             'page': location.pathname + location.search  + location.hash
         });
     });
+    
     window.addEventListener('load', function(event){
         getHash(location.href);
         ga('send', 'pageview');
+        applySH();
     });
     
     window.scrollTo(0, 0);

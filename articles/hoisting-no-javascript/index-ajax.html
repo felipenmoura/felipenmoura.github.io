@@ -34,7 +34,7 @@
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-6
+                    colour-2
                     ">
             <h2><a href="articles/hoisting-no-javascript">Hoisting no <em>JavaScript</em></a></h2>
             <div class="wrapper">
@@ -51,76 +51,73 @@
         </div>
 
         <div class="wrapper articles-content">
-            <article>
-                <br/>
-O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!<br/>
-Todavia, o valor apenas será atribuído no momento correto.<br/>
-<br/>
-Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:<br/>
-<pre lang='javascript'><br/>
-var x= 1;<br/>
-<br/>
-if(x === 3){<br/>
-    var y= 1;<br/>
-}<br/>
-<br/>
-console.log(x); // 1<br/>
-console.log(y); // undefined<br/>
-console.log(z); // ERROR<br/>
-</pre><br/>
-<br/>
-Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.<br/>
-A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".<br/>
-<br/>
-Ainda duvida?<br/>
-Façamos assim, então:<br/>
-<br/>
-<pre lang='javascript'><br/>
-var x= 1;<br/>
-<br/>
-console.log(x); // 1<br/>
-console.log(y); // undefined<br/>
-console.log(z); // ERROR<br/>
-<br/>
-if(x === 3){<br/>
-    var y= 1;<br/>
-}<br/>
-<br/>
-</pre><br/>
-<br/>
-O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.<br/>
-<br/>
-Da mesma forma, funções podem ser declaradas ou atribuídas.<br/>
-<br/>
-<pre lang='javascript'><br/>
-// chamando a funcão 1<br/>
-func1(); // joga 1 no console<br/>
-<br/>
-// a declaração desta função foi puxada para o topo<br/>
-// pelo JavaScript<br/>
-function func1(){<br/>
-    console.log(1);<br/>
-}<br/>
-<br/>
-// chamando a função 2<br/>
-func2(); // ERROR<br/>
-<br/>
-// a variável func2 foi criada antes, com o valor "undefined"<br/>
-// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função<br/>
-var func2= function(){<br/>
-    console.log(2);<br/>
-}<br/>
-<br/>
-// a partir de agora, func2 poderia ser evocada<br/>
-</pre><br/>
-<br/>
-Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!<br/>
-<br/>
-Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.<br/>
-<br/>
-Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!<br/>
+            <article>O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
 
-            </article>
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
+<pre class="sh_javascript">
+var x= 1;
+
+if(x === 3){
+    var y= 1;
+}
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+</pre>
+
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
+
+Ainda duvida?
+Façamos assim, então:
+
+<pre class="sh_javascript">
+var x= 1;
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+
+if(x === 3){
+    var y= 1;
+}
+
+</pre>
+
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
+
+Da mesma forma, funções podem ser declaradas ou atribuídas.
+
+<pre class="sh_javascript">
+// chamando a funcão 1
+func1(); // joga 1 no console
+
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
+}
+
+// chamando a função 2
+func2(); // ERROR
+
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
+}
+
+// a partir de agora, func2 poderia ser evocada
+</pre>
+
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
+
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
+</article>
         </div>
     </div>
 </section>

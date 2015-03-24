@@ -33,7 +33,7 @@
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-1
                     ">
             <h2><a href="articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
             <div class="wrapper">
@@ -51,188 +51,186 @@
 
         <div class="wrapper articles-content">
             <article>
-                <br/>
-<strong>.call()</strong><br/>
-<br/>
-O método <em>.call</em>, literalmente, "chama" a sua função.<br/>
-<br/>
-<pre lang="javascript"><br/>
-function func1(){<br/>
-    return 1;<br/>
-}<br/>
-<br/>
-var func2= function(){<br/>
-    return 2;<br/>
-}<br/>
-<br/>
-func1.call(); // 1<br/>
-func2.call(); // 2<br/>
-<br/>
-</pre><br/>
-<br/>
-A diferença, está nos argumentos(parâmetros) passados a esta função.<br/>
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.<br/>
-<br/>
-<pre lang="javascript"><br/>
-// criando uma variável global apenas para demonstração<br/>
-window.blah= 1;<br/>
-<br/>
-// uma função que utiliza o this<br/>
-function func1 () {<br/>
-    console.log(this.blah);<br/>
-}<br/>
-<br/>
-// um objeto a ser usado como exemplo<br/>
-var obj= {<br/>
-    blah: 2<br/>
-};<br/>
-<br/>
-func1(); // 1 (vindo do objeto window), escopo atual<br/>
-func1.call(obj); // 2 (vindo do objecto obj)<br/>
-<br/>
-</pre><br/>
-<br/>
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.<br/>
-<pre lang="javascript"><br/>
-<br/>
-function func1 (arg1, arg2) {<br/>
-    console.log(this.blah, arg1, arg2);<br/>
-}<br/>
-<br/>
-var obj= {<br/>
-    blah: "x"<br/>
-};<br/>
-<br/>
-func1.call(obj, "a", 3); // "x", "a", 3<br/>
-<br/>
-</pre><br/>
-<br/>
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.<br/>
-Daí, podemos resolver isto usando:<br/>
-<br/>
-<pre lang="javascript"><br/>
-function (){<br/>
-    var args= Array.prototype.slice.call(arguments);<br/>
-    args.forEach(...);<br/>
-}<br/>
-</pre><br/>
-<br/>
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.<br/>
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).<br/>
-<br/>
-<strong>.apply()</strong><br/>
-<br/>
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.<br/>
-<br/>
-<pre lang="javascript"><br/>
-// igual exemplo anterior<br/>
-function func1 (arg1, arg2) {<br/>
-    console.log(this.blah, arg1, arg2);<br/>
-}<br/>
-<br/>
-var obj= {<br/>
-    blah: "x"<br/>
-};<br/>
-<br/>
-// apply está enviando uma Array, com a lista de parâmetros<br/>
-func1.apply(obj, ["a", 3]); // "x", "a", 3<br/>
-</pre><br/>
-<br/>
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.<br/>
-<br/>
-<pre lang="javascript"><br/>
-function func1(){<br/>
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));<br/>
-}<br/>
-</pre><br/>
-<br/>
-<strong>.bind()</strong><br/>
-<br/>
-O bind, funciona um pouco diferente.<br/>
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.<br/>
-<br/>
-<br/>
-<pre lang="javascript"><br/>
-// igual exemplo anterior<br/>
-function func1 (arg1, arg2) {<br/>
-    console.log(this.blah, arg1, arg2);<br/>
-}<br/>
-<br/>
-var obj= {<br/>
-    blah: "x"<br/>
-};<br/>
-<br/>
-// a variável theFunction se tornará a função func1<br/>
-// amarrada ao obj.<br/>
-var theFunction= func1.bind(obj);<br/>
-<br/>
-// ao chamar theFunction, o "this" dela já é o obj<br/>
-theFunction("a", 123); // "x", "a", 123<br/>
-<br/>
-</pre><br/>
-<br/>
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.<br/>
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!<br/>
-Eis uma alternativa que o pessoal faz:<br/>
-<br/>
-<pre lang="javascript"><br/>
-// igual exemplo anterior<br/>
-function func1 (arg1, arg2) {<br/>
-    console.log(this.blah, arg1, arg2);<br/>
-}<br/>
-<br/>
-var obj= {<br/>
-    blah: "x"<br/>
-};<br/>
-<br/>
-// theFunction recebe, literalmente, uma função, a qual usará<br/>
-// o .apply, quando chamada<br/>
-var theFunction= function(){<br/>
-    func1.apply(obj, Array.prototype.slice.call(arguments));<br/>
-};<br/>
-<br/>
-theFunction("a", 123); // "x", "a", 123<br/>
-<br/>
-</pre><br/>
-<br/>
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.<br/>
-<br/>
-<strong>Finalizando</strong><br/>
-<br/>
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...<br/>
-<br/>
-<pre lang="javascript"><br/>
-function func3() {<br/>
-    console.log(this);<br/>
-}<br/>
-<br/>
-func3(); // window<br/>
-func3.call({ some: "prop" }); // object { some: "prop" }<br/>
-func3.call("just a string"); // string "just a string"<br/>
-func3.call(123); // number 123<br/>
-func3.call(document.body); // object HTMLBodyElement<br/>
-<br/>
-</pre><br/>
-<br/>
-O que pode acabar sendo usado em situações como esta:<br/>
-<br/>
-<pre lang="javascript"><br/>
-function calc(val1, val2){<br/>
-    console.log(this.max(val1, val2));<br/>
-    console.log(this.cos(val2));<br/>
-    console.log(this.min(val1, val2));<br/>
-    console.log(this.pow(val1, val2));<br/>
-}<br/>
-<br/>
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8<br/>
-<br/>
-</pre><br/>
-<br/>
-Espero que tenha sido um post útil e bem explicativo! :)<br/>
-<br/>
-Não deixem de divulgar o post, e dar sua opinião.<br/>
+<strong>.call()</strong>
 
-            </article>
+O método <em>.call</em>, literalmente, "chama" a sua função.
+
+<pre lang="javascript">
+function func1(){
+    return 1;
+}
+
+var func2= function(){
+    return 2;
+}
+
+func1.call(); // 1
+func2.call(); // 2
+
+</pre>
+
+A diferença, está nos argumentos(parâmetros) passados a esta função.
+Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+
+<pre lang="javascript">
+// criando uma variável global apenas para demonstração
+window.blah= 1;
+
+// uma função que utiliza o this
+function func1 () {
+    console.log(this.blah);
+}
+
+// um objeto a ser usado como exemplo
+var obj= {
+    blah: 2
+};
+
+func1(); // 1 (vindo do objeto window), escopo atual
+func1.call(obj); // 2 (vindo do objecto obj)
+
+</pre>
+
+Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+<pre lang="javascript">
+
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+func1.call(obj, "a", 3); // "x", "a", 3
+
+</pre>
+
+Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
+Daí, podemos resolver isto usando:
+
+<pre lang="javascript">
+function (){
+    var args= Array.prototype.slice.call(arguments);
+    args.forEach(...);
+}
+</pre>
+
+Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
+Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+
+<strong>.apply()</strong>
+
+O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+
+<pre lang="javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// apply está enviando uma Array, com a lista de parâmetros
+func1.apply(obj, ["a", 3]); // "x", "a", 3
+</pre>
+
+A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
+
+<pre lang="javascript">
+function func1(){
+    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+}
+</pre>
+
+<strong>.bind()</strong>
+
+O bind, funciona um pouco diferente.
+Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
+
+
+<pre lang="javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// a variável theFunction se tornará a função func1
+// amarrada ao obj.
+var theFunction= func1.bind(obj);
+
+// ao chamar theFunction, o "this" dela já é o obj
+theFunction("a", 123); // "x", "a", 123
+
+</pre>
+
+Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
+Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
+Eis uma alternativa que o pessoal faz:
+
+<pre lang="javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// theFunction recebe, literalmente, uma função, a qual usará
+// o .apply, quando chamada
+var theFunction= function(){
+    func1.apply(obj, Array.prototype.slice.call(arguments));
+};
+
+theFunction("a", 123); // "x", "a", 123
+
+</pre>
+
+O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+
+<strong>Finalizando</strong>
+
+Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
+
+<pre lang="javascript">
+function func3() {
+    console.log(this);
+}
+
+func3(); // window
+func3.call({ some: "prop" }); // object { some: "prop" }
+func3.call("just a string"); // string "just a string"
+func3.call(123); // number 123
+func3.call(document.body); // object HTMLBodyElement
+
+</pre>
+
+O que pode acabar sendo usado em situações como esta:
+
+<pre lang="javascript">
+function calc(val1, val2){
+    console.log(this.max(val1, val2));
+    console.log(this.cos(val2));
+    console.log(this.min(val1, val2));
+    console.log(this.pow(val1, val2));
+}
+
+calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
+
+</pre>
+
+Espero que tenha sido um post útil e bem explicativo! :)
+
+Não deixem de divulgar o post, e dar sua opinião.
+</article>
         </div>
     </div>
 </section>
