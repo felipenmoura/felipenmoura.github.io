@@ -1444,15 +1444,33 @@ body[data-page="articles"] .articles-nav {
   transform: translateY(-1000px);
 }
 
+#articleTmpElement {
+  position: absolute;
+  left: -99999px;
+  width: 10px;
+  overflow: hidden;
+}
+
 .articles-nav {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  margin-bottom: 6px;
   z-index: 999;
   transform: translateY(-50px);
   transition: all linear 0.5s 0;
+}
+.articles-nav #loading-bar {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  z-index: 0;
+  background: #cd1a04;
+  height: 100%;
+  width: 0;
+  transition: width 400ms ease-in-out;
+  transform: skew(40deg);
 }
 .articles-nav ul {
   width: 100%;
@@ -1760,9 +1778,15 @@ body[data-page="articles"] .articles-nav {
   #articles-container .decorator .wrapper:after {
     display: none;
   }
+  #articles-container .decorator #article-meta-data {
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: left;
+  }
   #articles-container .decorator abs {
     max-width: 100%;
-    margin: 6rem .5rem .5rem;
+    margin: 8rem .5rem .5rem;
   }
   #articles-container .decorator h2 {
     width: 100%;

@@ -105,15 +105,13 @@ module.exports = function(grunt) {
                 //videos: fs.readFileSync('_bindings/videos.json', 'utf8'),
                 labs: JSON.parse(fs.readFileSync('_bindings/labs.json', 'utf8')),
                 photos: JSON.parse(fs.readFileSync('_bindings/photos.json', 'utf8'))
-            },
-            pt: "def"
+            }//,
+            //pt: "def"
         },
         
         compileArticles: {
-//            en: {
-//                
-//            },
-            pt: {}
+            en: {},
+            //pt: {}
         },
 
         watch: {
@@ -260,6 +258,7 @@ module.exports = function(grunt) {
                     // index inside the article itself
                     metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
+                    console.log(data.lang);
                     fs.writeFileSync(artPath + cur.name + '/index.html',
                                      nunEnv.render(tplPath, data),
                                      'utf8');
