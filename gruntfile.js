@@ -275,7 +275,10 @@ module.exports = function(grunt) {
                 fs.mkdirSync(where);
             }
             
-            //fs.createReadStream('index.html').pipe(fs.createWriteStream(where + '/index.html'));
+            var idxOrig = fs.readFileSync('./index.html', 'utf-8');
+            fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
+            
+            //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
         
         function render () {
@@ -286,11 +289,15 @@ module.exports = function(grunt) {
             createIndexesForArticles(data, function(data){
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 
-                copyIndexTo("articles");
-                copyIndexTo("utils");
                 copyIndexTo("home");
                 copyIndexTo("about");
                 copyIndexTo("sobre");
+                copyIndexTo("utils");
+                copyIndexTo("utils/talks");
+                copyIndexTo("utils/videos");
+                copyIndexTo("utils/labs");
+                copyIndexTo("utils/photos");
+                copyIndexTo("articles");
 
                 done();
             });

@@ -4,19 +4,25 @@
         currentlyShowing= false,
         hashData = {};
     
-    function showContent (id, src, path) {
-        if(currentlyShowing && currentlyShowing == id || id == 'home'){
-            src = id = 'home';
+    var UTILS= {};
+    
+    UTILS.showContent = function (id, src, path) {
+        hashData = {
+            page: id,
+            detail: src,
+            extra: path
         }
-        currentlyShowing= id;
-        _b.setAttribute('data-page', id);
-        setHash({
-            page: (path || src).replace(/^(\.|\/)+/g, '')
-        });
-        //history.pushState({}, path || src, path || src);
+        UTILS.updatePageStatus();
+//        if(currentlyShowing && currentlyShowing == id || id == 'home'){
+//            src = id = 'home';
+//        }
+//        currentlyShowing= id;
+//        hashData.page = id;
+//        UTILS.updatePageStatus();
     }
     
-    _b.addEventListener('click', function(event){
+    UTILS.clickManager = function(event){
+        
         var target = event.target || event.srcElement,
             tag = target.tagName.toLowerCase(),
             tmp,
@@ -27,8 +33,9 @@
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
             
-            // TODO: get it via ajax
-            showContent(src.replace(/^(\.|\/)+/, '').replace(/\/.+/, ''), src);
+            //UTILS.showContent(src.replace(/^(\.|\/)+/, '').replace(/\/.+/, ''), src);
+            tmp = src.replace('/', '').split('/');
+            UTILS.showContent(tmp[0], tmp[1], tmp[2]);
             
             event.preventDefault();
             event.stopPropagation();
@@ -39,7 +46,7 @@
                 ytRef: tmp
             });
         }else if(cl.contains('closeLayerBtn')){
-            closeModal();
+            UTILS.closeModal();
         }else if(cl.contains('art-nav-tbn')){
             if(cl.contains('art-tools')){
                 var el = document.getElementById('articles-nav');
@@ -74,52 +81,53 @@
                 }
             }
         }
-    });
+    };
     
-    function getHash(url){
-        if(url.indexOf('#!') > 0){
-            url = url.split('#!')[1];
-            url = url.split('/');
-            hashData = {
-                page: url[0] || '',
-                detail: url[1] || '',
-                extra: url[2] || ''
-            };
-            _b.setAttribute('data-page', hashData.page);
-            if(hashData.detail){
-                _b.setAttribute('hash-bang-detail', hashData.detail);
-            }else{
-                _b.removeAttribute('hash-bang-detail');
-            }
-            if(hashData.extra){
-                _b.setAttribute('hash-bang-extra', hashData.extra);
-            }else{
-                _b.removeAttribute('hash-bang-extra');
-            }
-        }else{
-            //_b.removeAttribute('data-page');
-            _b.setAttribute('data-page', 'home');
-            _b.removeAttribute('hash-bang-detail');
-            _b.removeAttribute('hash-bang-extra');
-            hashData = {};
-        }
-        if(!hashData.extra){
-            closeModal();
-        }
-    }
+//    function getHash(url){
+//        debugger;
+//        if(url.indexOf('#!') > 0){
+//            url = url.split('#!')[1];
+//            url = url.split('/');
+//            hashData = {
+//                page: url[0] || '',
+//                detail: url[1] || '',
+//                extra: url[2] || ''
+//            };
+//            _b.setAttribute('data-page', hashData.page);
+//            if(hashData.detail){
+//                _b.setAttribute('hash-bang-detail', hashData.detail);
+//            }else{
+//                _b.removeAttribute('hash-bang-detail');
+//            }
+//            if(hashData.extra){
+//                _b.setAttribute('hash-bang-extra', hashData.extra);
+//            }else{
+//                _b.removeAttribute('hash-bang-extra');
+//            }
+//        }else{
+//            //_b.removeAttribute('data-page');
+//            _b.setAttribute('data-page', 'home');
+//            _b.removeAttribute('hash-bang-detail');
+//            _b.removeAttribute('hash-bang-extra');
+//            hashData = {};
+//        }
+//        if(!hashData.extra){
+//            closeModal();
+//        }
+//    }
     
-    function setHash(data){
-        var newHash = '#!' + data.page;
-        if(data.detail){
-            newHash+= '/' + data.detail;
-            if(data.extra){
-                newHash+= '/' + data.extra;
-            }
-        }
-        location.hash = newHash;
-    }
+//    function setHash(data){
+//        var newHash = '#!' + data.page;
+//        if(data.detail){
+//            newHash+= '/' + data.detail;
+//            if(data.extra){
+//                newHash+= '/' + data.extra;
+//            }
+//        }
+//        location.hash = newHash;
+//    }
     
-    function showPlayer(data){
+    UTILS.showPlayer = function (data) {
         var bg = document.getElementById('playerLayer'),
             player = document.getElementById('playerElement');
         bg.style.backgroundImage = 'url('+ data.bg +')';
@@ -131,7 +139,8 @@
             extra: data.ytRef
         });
     }
-    function closePlayer(){
+    
+    UTILS.closePlayer = function () {
         document.getElementById('playerElement').removeAttribute('src');
         setHash({
             page: hashData.page,
@@ -140,17 +149,17 @@
         });
     }
     
-    function showModal(data){
+    UTILS.showModal = function (data) {
         switch(data.type){
             case 'player': {
-                showPlayer(data);
+                UTILS.showPlayer(data);
                 break;
             }
         }
         _b.setAttribute('data-full-layer', data.type);
     }
     
-    function closeModal(){
+    UTILS.closeModal = function () {
         var curModal = _b.getAttribute('data-full-layer');
         switch(curModal){
             case 'player': {
@@ -161,33 +170,97 @@
         _b.removeAttribute('data-full-layer');
     }
     
-    function applySH(){
-        debugger;
+    UTILS.applySH = function () {
         sh_highlightDocument();
     }
     
-    window.addEventListener('keyup', function(event){
-        switch(event.keyCode){
-            case 27: { // esc
-                closeModal();
-                break;
-            }
+    
+    UTILS.updatePageStatus = function () {
+        if(hashData.page){
+            _b.setAttribute('data-page', hashData.page);
+        }else{
+            _b.setAttribute('data-page', 'home');
         }
-    });
+        if(hashData.detail){
+            _b.setAttribute('hash-bang-detail', hashData.detail);
+        }else{
+            _b.removeAttribute('hash-bang-detail');
+        }
+        if(hashData.extra){
+            _b.setAttribute('hash-bang-extra', hashData.extra);
+        }else{
+            _b.removeAttribute('hash-bang-extra');
+        }
+        
+        var path = "/" + (hashData.page || 'home');
+        if(hashData.detail){
+            path += "/" + hashData.detail + location.hash;
+        }
+        history.pushState({}, path, path);
+    }
     
-    window.addEventListener('hashchange', function(event){
-        getHash(event.newURL);
-        // ga('send', 'event', 'button', 'click', 'nav buttons', 4);
-        ga('send', 'pageview', {
-            'page': location.pathname + location.search  + location.hash
+    UTILS.goToPage = function  (url) {
+        url = url || location;
+        var path = url.pathname;
+        
+        path = path.split('/') ;
+        
+        if ( path.length ) {
+            
+            hashData.page = path[1];
+            hashData.detail = (location.hash.replace(/^#/, '')) || path[2]; // path[2];
+            hashData.extra = path[3];
+            
+            UTILS.updatePageStatus();
+        } else {
+            //_b.setAttribute('data-page', 'home');
+            //_b.removeAttribute('hash-bang-detail');
+            //_b.removeAttribute('hash-bang-extra');
+            hashData = {};
+            UTILS.updatePageStatus();
+        }
+    }
+
+    
+    function applyEvents () {
+        
+        _b.addEventListener('click', UTILS.clickManager);
+        
+        window.addEventListener('popstate', function onPopStateChange (event) {
+            UTILS.goToPage(location);
+            ga('send', 'pageview', {
+                'page': location.pathname + location.search  + location.hash
+            });
         });
-    });
+
+//        window.addEventListener('hashchange', function(event){
+//            //getHash(event.newURL);
+//            hashData.detail = location.hash.replace(/^#!/, ''); //event.newURL;
+//            hashData.extra = "";
+//            UTILS.updatePageStatus();
+//
+//            ga('send', 'pageview', {
+//                'page': location.pathname + location.search  + location.hash
+//            });
+//        });
+
+        window.addEventListener('load', function onPageLoad (event) {
+            window.scrollTo(0, 0);
+            ga('send', 'pageview');
+            UTILS.applySH();
+        });
+
+        window.addEventListener('keyup', function onKeyUpEvent (event) {
+            switch(event.keyCode){
+                case 27: { // esc
+                    UTILS.closeModal();
+                    break;
+                }
+            }
+        });
+    }
     
-    window.addEventListener('load', function(event){
-        getHash(location.href);
-        ga('send', 'pageview');
-        applySH();
-    });
+    applyEvents();
+    UTILS.goToPage(location);
     
-    window.scrollTo(0, 0);
 })();
