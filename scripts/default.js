@@ -187,10 +187,11 @@
         
         if(status >= 100){
             UTILS.articlesloader.style.width= '120%';
-            UTILS.applySH();
             setTimeout(function(){
-                UTILS.articlesContainer.innerHTML = UTILS.tmpContainer.innerHTML;
+                UTILS.articlesContainer.innerHTML = UTILS.tmpContainer.querySelector('section').innerHTML;
                 UTILS.tmpContainer.innerHTML = '';
+                UTILS.applySH();
+                UTILS.applyComments();
             }, 400);
         }else{
             UTILS.articlesloader.style.width= status + '%';
@@ -207,6 +208,7 @@
         UTILS.articlesContainer = UTILS.articlesContainer || document.getElementById('articles-container');
         UTILS.articlesloader = document.getElementById('loading-bar');
         UTILS.setArticlesLoadStatus(30);
+        _b.classList.remove('see-all-articles');
         
         UTILS.XHR.askFor('/articles/' + articleURL + '/index-ajax.html',
                          function (data, status) {
@@ -236,9 +238,31 @@
     };
     
     UTILS.applySH = function () {
-        sh_highlightDocument();
+        Prism.highlightAll();
     };
     
+    UTILS.applyComments = function(){
+        
+        
+        if(UTILS.disqusApplied){
+            DISQUS.reset({
+                reload: true,
+//                config: function () {  
+//                    this.page.identifier = '/'+hashData.page+'/'+hashData.detail+'/';
+//                    this.page.url = location.href;
+//                }
+            });
+        }else{
+            UTILS.disqusApplied = true;
+            var disqus_shortname = 'felipenmoura';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        }
+    }
     
     UTILS.updatePageStatus = function () {
         if(hashData.page){
@@ -248,7 +272,9 @@
         }
         
         if(hashData.page == 'articles' && hashData.detail) {
-            UTILS.loadArticleAsync(hashData.detail);
+            if(location.pathname != ('/' + hashData.page + '/' + hashData.detail + '/')){
+                UTILS.loadArticleAsync(hashData.detail);
+            }
         }
         
         if(hashData.detail){
@@ -277,7 +303,9 @@
             }
         }
         
-        history.pushState({}, path, path);
+        if(location.pathname != path) {
+            history.pushState({}, path, path);
+        }
     }
     
     UTILS.goToPage = function  (url) {
@@ -334,6 +362,7 @@
             window.scrollTo(0, 0);
             ga('send', 'pageview');
             UTILS.applySH();
+            UTILS.applyComments();
         });
 
         window.addEventListener('keyup', function onKeyUpEvent (event) {

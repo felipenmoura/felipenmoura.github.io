@@ -1519,7 +1519,7 @@ body[data-page="articles"] .articles-nav {
   left: -20px;
   top: 0;
   z-index: 0;
-  background: #cd1a04;
+  background: #ddd;
   height: 100%;
   width: 0;
   transition: width 400ms ease-in-out;
@@ -1857,6 +1857,10 @@ body[data-page="articles"] .articles-nav {
     background-image: none;
   }
 }
+pre[class*="language-"].line-numbers code {
+  overflow-y: hidden;
+}
+
 #playerLayer {
   position: fixed;
   top: 0;

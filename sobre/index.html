@@ -9,7 +9,7 @@
         
         <!-- Styles -->
         <link rel="stylesheet" type="text/css" href="/styles/main.css" />
-        <link rel="stylesheet" type="text/css" href="/sh/sh_styles.css" />
+        <link rel="stylesheet" type="text/css" href="/sh/prism.css" />
         
         <!-- Info -->
         <title>felipeNMoura();</title>
@@ -896,7 +896,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-4
+                    colour-6
                     ">
             <h2><a href="articles/hoisting-no-javascript">Hoisting no <em>JavaScript</em></a></h2>
             <div class="wrapper">
@@ -913,11 +913,12 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
         </div>
 
         <div class="wrapper articles-content">
+            
             <article>O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
 Todavia, o valor apenas será atribuído no momento correto.
 
 Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
-<pre class="sh_javascript">
+<pre class="line-numbers"><code class="language-javascript">
 var x= 1;
 
 if(x === 3){
@@ -927,7 +928,7 @@ if(x === 3){
 console.log(x); // 1
 console.log(y); // undefined
 console.log(z); // ERROR
-</pre>
+</code></pre>
 
 Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
 A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
@@ -935,7 +936,7 @@ A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naqu
 Ainda duvida?
 Façamos assim, então:
 
-<pre class="sh_javascript">
+<pre class="line-numbers"><code class="language-javascript">
 var x= 1;
 
 console.log(x); // 1
@@ -946,13 +947,13 @@ if(x === 3){
     var y= 1;
 }
 
-</pre>
+</code></pre>
 
 O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
 
 Da mesma forma, funções podem ser declaradas ou atribuídas.
 
-<pre class="sh_javascript">
+<pre class="line-numbers"><code class="language-javascript">
 // chamando a funcão 1
 func1(); // joga 1 no console
 
@@ -972,7 +973,7 @@ var func2= function(){
 }
 
 // a partir de agora, func2 poderia ser evocada
-</pre>
+</code></pre>
 
 Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
 
@@ -980,6 +981,10 @@ Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder,
 
 Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
 </article>
+            
+            <aside>
+                <div id="disqus_thread"></div>
+            </aside>
         </div>
     </div>
 </section>
@@ -1002,11 +1007,7 @@ Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
         <div id="decoration" class="glassEffect"></div>
         
         <!-- Scripts -->
-        <script src="/sh/shjs.js"></script>
-        <script src="/sh/sh_javascript.js"></script>
-        <script src="/sh/sh_html.js"></script>
-        <script src="/sh/sh_css.js"></script>
-        
+        <script src="/sh/prism.js"></script>
         <script src="/scripts/default.js"></script>
         
     </body>

@@ -144,7 +144,7 @@ body[data-page="articles"] {
         left: -20px;
         top: 0;
         z-index: 0;
-        background: #cd1a04;
+        background: #ddd; //#cd1a04;
         height: 100%;
         width: 0;
         
@@ -555,3 +555,6 @@ body[data-page="articles"] {
     }
 }
 
+pre[class*="language-"].line-numbers code {
+    overflow-y: hidden;
+}
