@@ -4,5 +4,6 @@
     "tags": ["es6", "javascript", "ecma6", "es2015"],
     "resume": "Este post, é uma continuação de outro post, <a href='http://felipenmoura.org/articles/article/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='http://felipenmoura.org/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank'>hoisting</a>, <a href='http://felipenmoura.org/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' target='_blank'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/>",
     "headerImg": "http://felipenmoura.org/wp-content/uploads/2014/09/tied-binded.jpg",
-    "status": "published"
+    "status": "published",
+    "articleLang": "pt-BR"
 }

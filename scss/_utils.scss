@@ -247,6 +247,10 @@ body[data-page="utils"] {
 //            background-color: #f0f0f0;
         }
 
+        &.youtube {
+            cursor: pointer;
+        }
+        
         &.youtube:after {
             content: "";
             position: absolute;

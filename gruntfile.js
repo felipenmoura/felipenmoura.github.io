@@ -129,30 +129,6 @@ module.exports = function(grunt) {
     grunt.registerMultiTask('compileArticles', 'generates the articles files.', function() {
         
         var done = this.async();
-//        var lang = this.target,
-//            artPath = 'articles/article/',
-//            metaData,
-//            tplPath = '_templates/article.html',
-//            renderedArticle,
-//            renderedFullArticle;
-//        
-//        fs.readdir(artPath, function(err, files){
-//            if(err){
-//                console.error("Failed reading articles");
-//            }
-//            
-//            files.forEach(function(cur){
-//                metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
-//                metaData.content = fs.readFileSync( artPath + cur + '/_content.html', 'utf-8');
-//                metaData.creationDate = formatDate(metaData.creationDate);
-//                metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
-//                metaData.tags = metaData.tags? metaData.tags.join(', '): 'no tags';
-//                metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
-//                renderedArticle = NunJucks.render(tplPath, metaData);
-//                fs.writeFileSync(artPath + cur + '/index-ajax.html', renderedArticle, 'utf-8');
-//            });
-//            done();
-//        });
         done();
     });
     
@@ -196,6 +172,7 @@ module.exports = function(grunt) {
                 tplArtPath = '_templates/article.html',
                 validArticles= [],
                 renderedArticle,
+                articlesList= [],
                 tmpDt;
             
             fs.readdir(artPath, function(err, files){
@@ -224,6 +201,13 @@ module.exports = function(grunt) {
                 
                 // set the previous and next links
                 validArticles.forEach(function(cur, i){
+                    
+                    articlesList.push({
+                        title: cur.title,
+                        tags: cur.tags,
+                        name: cur.name
+                    });
+                    
                     if(validArticles[i-1]){
                         validArticles[i].previous = validArticles[i-1];
                     }else{
@@ -237,6 +221,8 @@ module.exports = function(grunt) {
                     
                     validArticles[i].url = artPath + cur.name;
                 });
+                
+                data.articlesList = articlesList;
                 
                 // create the index files for each one
                 validArticles.forEach(function(cur){
@@ -258,7 +244,6 @@ module.exports = function(grunt) {
                     // index inside the article itself
                     metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
-                    console.log(data.lang);
                     fs.writeFileSync(artPath + cur.name + '/index.html',
                                      nunEnv.render(tplPath, data),
                                      'utf8');
