@@ -27,12 +27,6 @@
             extra: path
         }
         UTILS.updatePageStatus();
-//        if(currentlyShowing && currentlyShowing == id || id == 'home'){
-//            src = id = 'home';
-//        }
-//        currentlyShowing= id;
-//        hashData.page = id;
-//        UTILS.updatePageStatus();
     }
     
     UTILS.clickManager = function(event){
@@ -106,50 +100,6 @@
             }
         }
     };
-    
-//    function getHash(url){
-//        debugger;
-//        if(url.indexOf('#!') > 0){
-//            url = url.split('#!')[1];
-//            url = url.split('/');
-//            hashData = {
-//                page: url[0] || '',
-//                detail: url[1] || '',
-//                extra: url[2] || ''
-//            };
-//            _b.setAttribute('data-page', hashData.page);
-//            if(hashData.detail){
-//                _b.setAttribute('hash-bang-detail', hashData.detail);
-//            }else{
-//                _b.removeAttribute('hash-bang-detail');
-//            }
-//            if(hashData.extra){
-//                _b.setAttribute('hash-bang-extra', hashData.extra);
-//            }else{
-//                _b.removeAttribute('hash-bang-extra');
-//            }
-//        }else{
-//            //_b.removeAttribute('data-page');
-//            _b.setAttribute('data-page', 'home');
-//            _b.removeAttribute('hash-bang-detail');
-//            _b.removeAttribute('hash-bang-extra');
-//            hashData = {};
-//        }
-//        if(!hashData.extra){
-//            closeModal();
-//        }
-//    }
-    
-//    function setHash(data){
-//        var newHash = '#!' + data.page;
-//        if(data.detail){
-//            newHash+= '/' + data.detail;
-//            if(data.extra){
-//                newHash+= '/' + data.extra;
-//            }
-//        }
-//        location.hash = newHash;
-//    }
     
     UTILS.setHash = function (hash) {
         hashData.extra = hash;
@@ -282,7 +232,8 @@
         }
         
         if(hashData.page == 'articles' && hashData.detail) {
-            if(location.pathname != ('/' + hashData.page + '/' + hashData.detail + '/')){
+            
+            if(UTILS.loaded){// && location.pathname != ('/' + hashData.page + '/' + hashData.detail + '/')){
                 UTILS.loadArticleAsync(hashData.detail);
             }
         }
@@ -374,6 +325,9 @@
             UTILS.registerPageView();
             UTILS.applySH();
             UTILS.applyComments();
+            setTimeout(function(){
+                UTILS.loaded = true;
+            });
         });
 
         window.addEventListener('keyup', function onKeyUpEvent (event) {
