@@ -222,6 +222,8 @@ module.exports = function(grunt) {
                     validArticles[i].url = artPath + cur.name;
                 });
                 
+                articlesList.reverse();
+                
                 data.articlesList = articlesList;
                 
                 // create the index files for each one
