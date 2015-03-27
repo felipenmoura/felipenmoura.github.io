@@ -1783,7 +1783,7 @@ body[data-page="articles"] .articles-nav {
   color: inherit;
 }
 #articles-container .articles-content {
-  background: #fefefe url(/images/_article-bg.jpg);
+  background: #fefefe url(/images/article-bg.jpg);
   width: 100%;
   max-width: 760px;
   margin-top: -1rem;
