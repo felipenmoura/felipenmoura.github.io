@@ -57,6 +57,8 @@
             tmp = src.replace('/', '').split('/');
             UTILS.showContent(tmp[0], tmp[1], tmp[2]);
             
+            //UTILS.registerPageView();
+            
             event.preventDefault();
             event.stopPropagation();
         }else if((tmp = target.getAttribute('data-yt-ref')) || (tmp = target.parentNode.getAttribute('data-yt-ref'))){
@@ -176,6 +178,7 @@
             }
         }
         _b.setAttribute('data-full-layer', data.type);
+        UTILS.registerPageView();
     };
     
     UTILS.closeModal = function () {
@@ -187,10 +190,10 @@
             }
         }
         _b.removeAttribute('data-full-layer');
+        UTILS.registerPageView();
     };
     
     UTILS.setArticlesLoadStatus = function (status) {
-        
         if(status >= 100){
             UTILS.articlesloader.style.width= '120%';
             setTimeout(function(){
@@ -198,6 +201,7 @@
                 UTILS.tmpContainer.innerHTML = '';
                 UTILS.applySH();
                 UTILS.applyComments();
+                UTILS.registerPageView();
             }, 400);
         }else{
             UTILS.articlesloader.style.width= status + '%';
@@ -309,10 +313,19 @@
             }
         }
         
+        UTILS.registerPageView();
+        
         if(location.pathname != path) {
             history.pushState({}, path, path);
         }
-    }
+    };
+    
+    UTILS.registerPageView = function () {
+        debugger;
+        ga('send', 'pageview', {
+            'page': location.pathname + location.search  + location.hash
+        });
+    };
     
     UTILS.goToPage = function  (url) {
         url = url || location;
@@ -348,9 +361,6 @@
         
         window.addEventListener('popstate', function onPopStateChange (event) {
             UTILS.goToPage(location);
-            ga('send', 'pageview', {
-                'page': location.pathname + location.search  + location.hash
-            });
         });
 
         window.addEventListener('hashchange', function(event){
@@ -358,15 +368,11 @@
             //hashData.detail = location.hash.replace(/^#!/, ''); //event.newURL;
             hashData.extra = "";
             UTILS.updatePageStatus();
-
-            ga('send', 'pageview', {
-                'page': location.pathname + location.search  + location.hash
-            });
         });
 
         window.addEventListener('load', function onPageLoad (event) {
             window.scrollTo(0, 0);
-            ga('send', 'pageview');
+            UTILS.registerPageView();
             UTILS.applySH();
             UTILS.applyComments();
         });
