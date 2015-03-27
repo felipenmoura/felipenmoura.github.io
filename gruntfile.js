@@ -219,7 +219,7 @@ module.exports = function(grunt) {
                         validArticles[i].next = false;
                     }
                     
-                    validArticles[i].url = artPath + cur.name;
+                    validArticles[i].url = '/'+artPath + cur.name;
                 });
                 
                 articlesList.reverse();

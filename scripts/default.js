@@ -56,11 +56,14 @@
             event.preventDefault();
             event.stopPropagation();
         }else if((tmp = target.getAttribute('data-yt-ref')) || (tmp = target.parentNode.getAttribute('data-yt-ref'))){
-            UTILS.showModal({
-                type: "player",
-                bg: target.getAttribute('src') || target.firstElementChild.getAttribute('src'),
-                ytRef: tmp
-            });
+            hashData.extra = tmp;
+            UTILS.videoBg = target.getAttribute('src') || target.firstElementChild.getAttribute('src');
+            UTILS.updatePageStatus();
+//            UTILS.showModal({
+//                type: "player",
+//                bg: target.getAttribute('src') || target.firstElementChild.getAttribute('src'),
+//                ytRef: tmp
+//            });
         }else if(cl.contains('closeLayerBtn')){
             UTILS.closeModal();
         }else if(cl.contains('art-nav-tbn')){
@@ -68,6 +71,7 @@
                 var el = document.getElementById('articles-nav');
                 if(el.getAttribute('data-show') != 'tools'){
                     el.setAttribute('data-show', 'tools');
+                    _b.classList.remove('see-all-articles');
                 }else{
                     el.removeAttribute('data-show');
                 }
@@ -101,10 +105,10 @@
         }
     };
     
-    UTILS.setHash = function (hash) {
-        hashData.extra = hash;
-        UTILS.updatePageStatus();
-    }
+//    UTILS.setHash = function (hash) {
+//        hashData.extra = hash;
+//        UTILS.updatePageStatus();
+//    }
     
     UTILS.showPlayer = function (data) {
         var bg = document.getElementById('playerLayer'),
@@ -112,12 +116,12 @@
         bg.style.backgroundImage = 'url('+ data.bg +')';
         player.style.backgroundImage = 'url('+ data.bg +')';
         player.setAttribute('src', "//www.youtube.com/embed/"+data.ytRef+"?showinfo=0");
-        UTILS.setHash(data.ytRef);
+        //UTILS.setHash(data.ytRef);
     };
     
     UTILS.closePlayer = function () {
         document.getElementById('playerElement').removeAttribute('src');
-        UTILS.setHash('');
+        //UTILS.setHash('');
     };
     
     UTILS.showModal = function (data) {
@@ -131,7 +135,7 @@
         UTILS.registerPageView();
     };
     
-    UTILS.closeModal = function () {
+    UTILS.closeModalLayer = function () {
         var curModal = _b.getAttribute('data-full-layer');
         switch(curModal){
             case 'player': {
@@ -141,6 +145,11 @@
         }
         _b.removeAttribute('data-full-layer');
         UTILS.registerPageView();
+    };
+    
+    UTILS.closeModal = function () {
+        hashData.extra = false;
+        UTILS.updatePageStatus();
     };
     
     UTILS.setArticlesLoadStatus = function (status) {
@@ -232,9 +241,23 @@
         }
         
         if(hashData.page == 'articles' && hashData.detail) {
-            
             if(UTILS.loaded){// && location.pathname != ('/' + hashData.page + '/' + hashData.detail + '/')){
                 UTILS.loadArticleAsync(hashData.detail);
+            }
+        }else{
+            _b.classList.remove('see-all-articles');
+            document.getElementById('articles-nav').removeAttribute('data-show');
+        }
+        
+        if(hashData.detail == 'videos'){
+            if(hashData.extra){
+                UTILS.showModal({
+                    type: "player",
+                    bg: UTILS.videoBg || '',
+                    ytRef: hashData.extra
+                });
+            }else{
+                UTILS.closeModalLayer();
             }
         }
         
@@ -266,9 +289,22 @@
         
         UTILS.registerPageView();
         
-        if(location.pathname != path) {
+        //if(location.pathname != path) {
+        if(location.pathname + (location.hash || '#' ) != path + (hashData.extra || '#')) {
             history.pushState({}, path, path);
+            UTILS.setTitle();
         }
+    };
+    
+    UTILS.setTitle = function () {
+        var tt = 'felipenmoura: ' + (hashData.page || 'home');
+        if(hashData.detail){
+            tt+= ' | ' + hashData.detail
+        }
+        if(hashData.extra){
+            tt+= ' | ' + hashData.extra
+        }
+        document.title = tt;
     };
     
     UTILS.registerPageView = function () {
@@ -288,14 +324,6 @@
             hashData.page = path[1];
             hashData.detail = path[2];
             hashData.extra = location.hash.replace('#', '');
-            
-            if(hashData.extra && hashData.detail == 'videos'){
-                UTILS.showModal({
-                    type: "player",
-                    bg: '',
-                    ytRef: hashData.extra
-                });
-            }
             
             UTILS.updatePageStatus();
         } else {
@@ -322,12 +350,14 @@
 
         window.addEventListener('load', function onPageLoad (event) {
             window.scrollTo(0, 0);
-            UTILS.registerPageView();
+            //UTILS.registerPageView();
+            UTILS.goToPage(location);
             UTILS.applySH();
             UTILS.applyComments();
             setTimeout(function(){
                 UTILS.loaded = true;
             });
+            UTILS.setTitle();
         });
 
         window.addEventListener('keyup', function onKeyUpEvent (event) {
