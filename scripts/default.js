@@ -44,6 +44,12 @@
             src= '#';
         
         if(tag == 'a' && cl.contains('local')){
+            
+            if(cl.contains('inactive')){
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
             
@@ -367,8 +373,9 @@
 
         window.addEventListener('keyup', function onKeyUpEvent (event) {
             switch(event.keyCode){
-                case 27: { // esc
+                case 27: { // esc key
                     UTILS.closeModal();
+                    _b.classList.remove('see-all-articles');
                     break;
                 }
             }
