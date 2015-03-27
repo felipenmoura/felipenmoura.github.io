@@ -321,7 +321,6 @@
     };
     
     UTILS.registerPageView = function () {
-        debugger;
         ga('send', 'pageview', {
             'page': location.pathname + location.search  + location.hash
         });
