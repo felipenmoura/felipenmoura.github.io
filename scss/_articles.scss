@@ -440,6 +440,7 @@ body[data-page="articles"] {
             color: #fff;
             font-weight: 100;
             box-shadow: 5px 5px 1px 0 black;
+            max-width: 600px;
             
             transform: translateX(-150%);
             transition: all linear $transSpeed .4s;

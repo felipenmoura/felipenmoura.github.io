@@ -1770,6 +1770,7 @@ body[data-page="articles"] .articles-nav {
   color: #fff;
   font-weight: 100;
   box-shadow: 5px 5px 1px 0 black;
+  max-width: 600px;
   transform: translateX(-150%);
   transition: all linear 0.5s 0.4s;
 }
