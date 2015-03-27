@@ -1,0 +1,151 @@
+<strong>Escopo</strong>
+
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre lang='javascript'>
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+}
+
+someFunc();
+
+</pre>
+
+Funções que cumprem o papel de construtores também.
+
+
+<pre lang='javascript'>
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
+}
+
+var instance= new SomeConstructor();
+
+</pre>
+
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
+<pre lang='javascript'>
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
+</pre>
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
+<pre lang='javascript'>
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
+</pre>
+
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
+<pre lang='javascript'>
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
+</pre>
+
+- Em funções construtoras
+<pre lang='javascript'>
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
+
+var instance= new Klass();
+</pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre lang='javascript'>
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre lang='javascript'>
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+

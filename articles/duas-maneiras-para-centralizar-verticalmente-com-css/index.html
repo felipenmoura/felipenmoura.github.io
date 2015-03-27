@@ -873,17 +873,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             </li>
             <li class="btn left">
                 
-                <a href="/articles/escopo-this-e-that"
+                <a href="/articles/hoisting-no-javascript"
                    class="local art-nav-tbn"
                 
-                   title="previous: Escopo, this e that"><< Prev</a>
+                   title="previous: Hoisting no JavaScript"><< Prev</a>
             </li>
             <li class="btn right">
                 
-                <a href="/articles/call-bind-e-apply-no-javascript-parte-1"
+                <a href="/articles/participacao-na-webbr-2013"
                    class="local art-nav-tbn"
                 
-                   title="Next: Call, bind e apply no JavaScript<em> - parte 1</em>">Next >></a>
+                   title="Next: Participação na <em>WebBR 2013</em>">Next >></a>
             </li>
         </ul>
         
@@ -898,205 +898,88 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
         <div class="decorator
                     colour-5
                     ">
-            <h2><a href="articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
+            <h2><a href="articles/duas-maneiras-para-centralizar-verticalmente-com-css">Duas maneiras para <em>centralizar</em> verticalmente com <em>CSS</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg" alt="call, bind e apply no JavaScript<em> - parte 2</em>" title="" />
+                    <img src="/articles/duas-maneiras-para-centralizar-verticalmente-com-css/vertical-align.jpg" alt="Duas maneiras para <em>centralizar</em> verticalmente com <em>CSS</em>" title="" />
                 
             </div>
             <span id="article-meta-data">
-                Sept 22nd, 2014 : es6, javascript, ecma6, es2015
+                Sept 10th, 2014 : css, technique
             </span>
             
             <abs>
-                Este post, é uma continuação de outro post, <a href='http://felipenmoura.org/articles/article/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='http://felipenmoura.org/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank'>hoisting</a>, <a href='http://felipenmoura.org/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' target='_blank'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/>
+                Centralizar com <em>CSS</em>, algumas vezes, pode ser meio "tricky"!<br/><br/>Mas não se escabele, há mais de uma maneira de atingir este objetivo, só depende de quais dados você já tem à mão!
             </abs>
             
         </div>
 
         <div class="wrapper articles-content">
             
-            <article>
-<strong>.call()</strong>
+            <article><strong>Usando Margin negativa</strong>
 
-O método <em>.call</em>, literalmente, "chama" a sua função.
+Por exemplo, caso o elemento a ser centralizado tenha um tamanho pré-definido, podemos posiciona-lo a 50% do topo e left, e utilizamos uma margin negativa para ajustar isto.
+Este é o método mais tradicionalmente utilizado para fazer isto.
 
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
-
-var func2= function(){
-    return 2;
-}
-
-func1.call(); // 1
-func2.call(); // 2
-
+<pre class="line-numbers"><code class="language-markup">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
 </code></pre>
-
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
-
-<pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
-
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
+<pre class="line-numbers"><code class="language-css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
 }
-
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
-};
-
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
-
-</code></pre>
-
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
-<pre class="line-numbers"><code class="language-javascript">
-
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-func1.call(obj, "a", 3); // "x", "a", 3
-
-</code></pre>
-
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
-
-<pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
+#centrelized {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    margin-top: -50px;
+    width: 100px;
+    margin-left: -50px;
 }
 </code></pre>
 
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+O resultado final pode ser visto <a href="http://jsfiddle.net/kxe2thsw/" title="Centralizando verticalmente com margin negativa" target="_blank">aqui</a>.
 
-<strong>.apply()</strong>
+<strong>Usando posicionamento</strong>
 
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+Este é um método pouco conhecido, mas que pode atender bem a demanda caso você não tenha os tamanhos do elemento a ser centralizado, já definidos...a única condição é que este elemento precisa estar com <em>display:inline</em>
 
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
+<pre class="line-numbers"><code class="language-markup">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
+</code></pre>
+<pre class="line-numbers"><code class="language-css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
 }
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
+#centrelized {
+    display: inline;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
 </code></pre>
 
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
-}
-</code></pre>
-
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
-
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
-<pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
-}
-
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
-
-</code></pre>
-
-O que pode acabar sendo usado em situações como esta:
-
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
-}
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
-</code></pre>
-
-Espero que tenha sido um post útil e bem explicativo! :)
-
-Não deixem de divulgar o post, e dar sua opinião.
-</article>
+Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.</article>
             
             <aside>
                 <div id="disqus_thread"></div>

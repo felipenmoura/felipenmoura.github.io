@@ -231,9 +231,9 @@ module.exports = function(grunt) {
                     // create index-ajax for each article
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
                     //metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
-                    metaData.content = metaData.content.replace(/\<pre lang\=["']javascript["']\>/ig, '<pre class="line-numbers"><code class="language-javascript">');
-                    metaData.content = metaData.content.replace(/\<pre lang\=["']css["']\>/ig, '<pre class="line-numbers"><code class="language-css">');
-                    metaData.content = metaData.content.replace(/\<pre lang\=["']html["']\>/ig, '<pre class="line-numbers"><code class="language-markup">');
+                    metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']javascript["']\>/ig, '<pre class="line-numbers"><code class="language-javascript">');
+                    metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']css["']\>/ig, '<pre class="line-numbers"><code class="language-css">');
+                    metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']html["']\>/ig, '<pre class="line-numbers"><code class="language-markup">');
                     metaData.content = metaData.content.replace(/\<pre lang\=["']([0-9a-z_\-]+)["']\>/ig, '<pre class="line-numbers"><code class="language-$1">');
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;

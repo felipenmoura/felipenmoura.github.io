@@ -67,17 +67,16 @@ body[data-page="articles"] {
 
 .see-all-articles {
     #articlesList {
-        transform: translateY(245px);
+        transform: translateY(275px);
     }
 }
 
 #articlesList {
     position: fixed;
-    top: -210px;
-    max-height: 200px;
+    top: -240px;
+    max-height: 205px;
     width: 80%;
     min-width: 300px;
-    max-height: 450px;
     margin: auto;
     left: 0;
     right: 0;
@@ -87,6 +86,8 @@ body[data-page="articles"] {
     border-top: none;
     box-shadow: 0 20px 40px -10px black;
     transition: transform ease-out 300ms;
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 9;
     
     ol {

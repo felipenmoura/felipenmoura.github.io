@@ -1,0 +1,64 @@
+<strong>Usando Margin negativa</strong>
+
+Por exemplo, caso o elemento a ser centralizado tenha um tamanho pré-definido, podemos posiciona-lo a 50% do topo e left, e utilizamos uma margin negativa para ajustar isto.
+Este é o método mais tradicionalmente utilizado para fazer isto.
+
+<pre lang="html">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
+</pre>
+<pre lang="css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+}
+#centrelized {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    margin-top: -50px;
+    width: 100px;
+    margin-left: -50px;
+}
+</pre>
+
+O resultado final pode ser visto <a href="http://jsfiddle.net/kxe2thsw/" title="Centralizando verticalmente com margin negativa" target="_blank">aqui</a>.
+
+<strong>Usando posicionamento</strong>
+
+Este é um método pouco conhecido, mas que pode atender bem a demanda caso você não tenha os tamanhos do elemento a ser centralizado, já definidos...a única condição é que este elemento precisa estar com <em>display:inline</em>
+
+<pre lang="html">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
+</pre>
+<pre lang="css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+}
+#centrelized {
+    display: inline;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+</pre>
+
+Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.

@@ -1,0 +1,9 @@
+{
+    "title": "Escopo, this e that",
+    "creationDate": "Wed, 03 Sep 2014 21:53:31 +0000",
+    "tags": ["javascript", "scope", "ecma"],
+    "resume": "Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.",
+    "headerImg": "/articles/escopo-this-e-that/scopes-javascript-closure.jpg",
+    "status": "published",
+    "articleLang": "pt-BR"
+}

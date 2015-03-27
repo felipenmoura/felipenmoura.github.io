@@ -47,7 +47,9 @@
                     {% endif %}">
             <h2><a href="{{ url }}">{{ title }}</a></h2>
             <div class="wrapper">
-                <img src="{{ headerImg }}" alt="" title="" />
+                {% if headerImg %}
+                    <img src="{{ headerImg }}" alt="{{ title }}" title="" />
+                {% endif %}
             </div>
             <span id="article-meta-data">
                 {{ creationDate }} : {{ tags }}

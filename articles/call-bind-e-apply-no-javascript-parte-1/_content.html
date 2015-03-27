@@ -1,0 +1,111 @@
+Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
+
+<pre lang='javascript'>
+// declarando uma função no escopo atual
+function funcName () {};
+
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
+</pre>
+
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="http://felipenmoura.org/articles/hoisting-no-javascript" title="Hoisting no JavaScript">post sobre o hoisting</a> que escrevi.
+
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
+<pre lang='javascript'>
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
+};
+
+myFunc(); // 123
+funcName(); // ERROR
+</pre>
+
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
+<pre lang='javascript'>
+
+console.log(func1); // function
+console.log(func2); // undefined
+
+// ou seja:
+func1(); // 1
+func2(); // ERROR
+
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
+
+</pre>
+
+Agora, pense no seguinte exemplo:
+<pre lang='javascript'>
+var d= new Date().getTime();
+</pre>
+
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
+
+Da mesma forma, podemos evocar automáticamente uma função: 
+<pre lang='javascript'>
+var x= function(){ return 123; }();
+console.log(x); // 123
+</pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
+
+Uma curiosidade aqui, é que:
+<pre lang='javascript'>
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
+</pre>
+
+E também:
+<pre lang='javascript'>
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
+</pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
+
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
+<pre lang='javascript'>
+(function (){
+    ...
+    console.log( "algo" );
+}());
+</pre>
+
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
+
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
+<pre lang='javascript'>
+-function (){
+    ...
+    console.log( "algo" );
+}();
+
+// ou
+
+!function (){
+    ...
+    console.log( "algo" );
+}();
+</pre>
+
+Esta foi a primeira parte deste assunto.
+
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.

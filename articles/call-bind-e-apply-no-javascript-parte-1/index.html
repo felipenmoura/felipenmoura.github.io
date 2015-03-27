@@ -873,17 +873,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             </li>
             <li class="btn left">
                 
-                <a href="/articles/escopo-this-e-that"
+                <a href="/articles/call-bind-e-apply-no-javascript-parte-2"
                    class="local art-nav-tbn"
                 
-                   title="previous: Escopo, this e that"><< Prev</a>
+                   title="previous: call, bind e apply no JavaScript - parte 2"><< Prev</a>
             </li>
             <li class="btn right">
                 
-                <a href="/articles/call-bind-e-apply-no-javascript-parte-1"
+                <a href="/articles/hoisting-no-javascript"
                    class="local art-nav-tbn"
                 
-                   title="Next: Call, bind e apply no JavaScript<em> - parte 1</em>">Next >></a>
+                   title="Next: Hoisting no <em>JavaScript</em>">Next >></a>
             </li>
         </ul>
         
@@ -896,207 +896,137 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-5
+                    colour-3
                     ">
-            <h2><a href="articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
+            <h2><a href="articles/call-bind-e-apply-no-javascript-parte-1">Call, bind e apply no JavaScript<em> - parte 1</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg" alt="call, bind e apply no JavaScript<em> - parte 2</em>" title="" />
+                    <img src="/articles/call-bind-e-apply-no-javascript-parte-1/bind-call-apply.jpg" alt="Call, bind e apply no JavaScript<em> - parte 1</em>" title="" />
                 
             </div>
             <span id="article-meta-data">
-                Sept 22nd, 2014 : es6, javascript, ecma6, es2015
+                Sept 17th, 2014 : JavaScript, ECMA, ES6, ES5
             </span>
             
             <abs>
-                Este post, é uma continuação de outro post, <a href='http://felipenmoura.org/articles/article/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='http://felipenmoura.org/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank'>hoisting</a>, <a href='http://felipenmoura.org/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' target='_blank'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/>
+                Como prometido <a href='http://felipenmoura.org/articles/escopo-this-e-that' title='Escopo no JavaScript'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.
             </abs>
             
         </div>
 
         <div class="wrapper articles-content">
             
-            <article>
-<strong>.call()</strong>
-
-O método <em>.call</em>, literalmente, "chama" a sua função.
+            <article>Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
 
 <pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
+// declarando uma função no escopo atual
+function funcName () {};
 
-var func2= function(){
-    return 2;
-}
-
-func1.call(); // 1
-func2.call(); // 2
-
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
 </code></pre>
 
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="http://felipenmoura.org/articles/hoisting-no-javascript" title="Hoisting no JavaScript">post sobre o hoisting</a> que escrevi.
 
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
 <pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
-
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
-}
-
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
 };
 
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
-
+myFunc(); // 123
+funcName(); // ERROR
 </code></pre>
 
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
 <pre class="line-numbers"><code class="language-javascript">
 
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
+console.log(func1); // function
+console.log(func2); // undefined
 
-var obj= {
-    blah: "x"
-};
+// ou seja:
+func1(); // 1
+func2(); // ERROR
 
-func1.call(obj, "a", 3); // "x", "a", 3
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
 
 </code></pre>
 
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
-
+Agora, pense no seguinte exemplo:
 <pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
-}
+var d= new Date().getTime();
 </code></pre>
 
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
 
-<strong>.apply()</strong>
-
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
-
+Da mesma forma, podemos evocar automáticamente uma função: 
 <pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
+var x= function(){ return 123; }();
+console.log(x); // 123
 </code></pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
 
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
+Uma curiosidade aqui, é que:
 <pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
-}
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
 </code></pre>
 
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
+E também:
 <pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
 </code></pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
 
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
 <pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
+(function (){
+    ...
+    console.log( "algo" );
+}());
 </code></pre>
 
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
 
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
 <pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
-}
+-function (){
+    ...
+    console.log( "algo" );
+}();
 
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
+// ou
 
+!function (){
+    ...
+    console.log( "algo" );
+}();
 </code></pre>
 
-O que pode acabar sendo usado em situações como esta:
+Esta foi a primeira parte deste assunto.
 
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
-}
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
-</code></pre>
-
-Espero que tenha sido um post útil e bem explicativo! :)
-
-Não deixem de divulgar o post, e dar sua opinião.
-</article>
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.</article>
             
             <aside>
                 <div id="disqus_thread"></div>

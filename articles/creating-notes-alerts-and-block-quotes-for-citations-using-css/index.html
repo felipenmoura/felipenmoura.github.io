@@ -859,7 +859,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container" class="sect-content" lang="en-US">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -873,17 +873,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             </li>
             <li class="btn left">
                 
-                <a href="/articles/escopo-this-e-that"
+                <a href="/articles/participacao-na-webbr-2013"
                    class="local art-nav-tbn"
                 
-                   title="previous: Escopo, this e that"><< Prev</a>
+                   title="previous: Participação na WebBR 2013"><< Prev</a>
             </li>
             <li class="btn right">
                 
-                <a href="/articles/call-bind-e-apply-no-javascript-parte-1"
+                <a href="/articles/mozilla-summit-2013"
                    class="local art-nav-tbn"
                 
-                   title="Next: Call, bind e apply no JavaScript<em> - parte 1</em>">Next >></a>
+                   title="Next: <em>Mozilla</em> Summit 2013">Next >></a>
             </li>
         </ul>
         
@@ -896,207 +896,126 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-5
+                    colour-1
+                    
+                    resumeless
                     ">
-            <h2><a href="articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
+            <h2><a href="articles/creating-notes-alerts-and-block-quotes-for-citations-using-css">Creating notes, <em>alerts</em> and <em>block quotes</em> for citations using <em>CSS</em></a></h2>
             <div class="wrapper">
-                
-                    <img src="/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg" alt="call, bind e apply no JavaScript<em> - parte 2</em>" title="" />
                 
             </div>
             <span id="article-meta-data">
-                Sept 22nd, 2014 : es6, javascript, ecma6, es2015
+                Oct 22nd, 2013 : css, pseudo-element
             </span>
-            
-            <abs>
-                Este post, é uma continuação de outro post, <a href='http://felipenmoura.org/articles/article/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='http://felipenmoura.org/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank'>hoisting</a>, <a href='http://felipenmoura.org/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' target='_blank'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/>
-            </abs>
             
         </div>
 
         <div class="wrapper articles-content">
             
-            <article>
-<strong>.call()</strong>
+            <article>Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
 
-O método <em>.call</em>, literalmente, "chama" a sua função.
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
-
-var func2= function(){
-    return 2;
-}
-
-func1.call(); // 1
-func2.call(); // 2
-
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+            &lt;div class="citation-content">The quote message.&lt;/div>
+            &lt;cite class="citation-author">
+                &lt;a href="link" target="_blank">author&lt;/a>
+            &lt;/cite>
+&lt;/blockquote>
 </code></pre>
-
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
-
-<pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
-
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
 }
 
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
-};
-
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
-
-</code></pre>
-
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
-<pre class="line-numbers"><code class="language-javascript">
-
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
 }
-
-var obj= {
-    blah: "x"
-};
-
-func1.call(obj, "a", 3); // "x", "a", 3
-
-</code></pre>
-
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
-
-<pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
 }
 </code></pre>
-
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
-
-<strong>.apply()</strong>
-
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
-</code></pre>
-
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
 }
 </code></pre>
-
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
 }
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
 }
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
 </code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
-
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
-<pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
 }
-
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
-
-</code></pre>
-
-O que pode acabar sendo usado em situações como esta:
-
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
 }
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
 </code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
 
-Espero que tenha sido um post útil e bem explicativo! :)
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Não deixem de divulgar o post, e dar sua opinião.
-</article>
+Cool thing, right?
+Now go ahead and customize yours!</article>
             
             <aside>
                 <div id="disqus_thread"></div>

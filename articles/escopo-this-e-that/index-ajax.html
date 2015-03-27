@@ -1,0 +1,216 @@
+<div id="articleTmpElement"></div>
+<section id="articles-container" class="sect-content" lang="pt-BR">
+    <nav id="articles-nav" class="articles-nav">
+        <div id="loading-bar"></div>
+        <ul>
+            <li class="btn center">
+                <span class="art-nav-tbn art-see-list" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    &nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a class="local art-nav-tbn inactive"
+                
+                   title="previous: "><< Prev</a>
+            </li>
+            <li class="btn right">
+                
+                <a href="/articles/call-bind-e-apply-no-javascript-parte-2"
+                   class="local art-nav-tbn"
+                
+                   title="Next: call, bind e apply no JavaScript<em> - parte 2</em>">Next >></a>
+            </li>
+        </ul>
+        
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+    
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-4
+                    ">
+            <h2><a href="articles/escopo-this-e-that">Escopo, this e that</a></h2>
+            <div class="wrapper">
+                
+                    <img src="/articles/escopo-this-e-that/scopes-javascript-closure.jpg" alt="Escopo, this e that" title="" />
+                
+            </div>
+            <span id="article-meta-data">
+                Sept 3rd, 2014 : javascript, scope, ecma
+            </span>
+            
+            <abs>
+                Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.
+            </abs>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            
+            <article><strong>Escopo</strong>
+
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+}
+
+someFunc();
+
+</code></pre>
+
+Funções que cumprem o papel de construtores também.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
+}
+
+var instance= new SomeConstructor();
+
+</code></pre>
+
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
+</code></pre>
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
+</code></pre>
+
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
+<pre class="line-numbers"><code class="language-javascript">
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
+</code></pre>
+
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
+
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+</article>
+            
+            <aside>
+                <div id="disqus_thread"></div>
+            </aside>
+        </div>
+    </div>
+</section>
