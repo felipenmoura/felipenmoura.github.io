@@ -195,7 +195,7 @@
                 
                 if(imgList.length){
                     imgList.forEach(function(cur){
-                        cur.onload= onImgLoad;
+                        cur.onload= cur.onerror = onImgLoad;
                     });
                 }else{
                     onImgLoad();

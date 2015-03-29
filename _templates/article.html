@@ -13,7 +13,7 @@
             </li>
             <li class="btn left">
                 {% if previous %}
-                <a href="/{{ previous.url }}"
+                <a href="/articles/{{ previous.name }}"
                    class="local art-nav-tbn"
                 {% else %}
                 <a class="local art-nav-tbn inactive"
@@ -22,7 +22,7 @@
             </li>
             <li class="btn right">
                 {% if next %}
-                <a href="/{{ next.url }}"
+                <a href="/articles/{{ next.name }}"
                    class="local art-nav-tbn"
                 {% else %}
                 <a href=""
