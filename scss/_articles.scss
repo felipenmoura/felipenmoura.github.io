@@ -371,6 +371,10 @@ body[data-page="articles"] {
                 top: 0;
                 right: 0;
             }
+            
+            h2 {
+                top: 2rem;
+            }
         }
         
         transform: translateY(-200%);
@@ -430,7 +434,7 @@ body[data-page="articles"] {
         h2 {
             position: absolute;
             left: 0;
-            top: 2rem;
+            top: 1rem;
             font-size: 1.5rem;
             z-index: 10;
             display: block;

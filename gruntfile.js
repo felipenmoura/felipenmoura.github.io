@@ -233,6 +233,9 @@ module.exports = function(grunt) {
                     // create index-ajax for each article
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
                     //metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
+                    metaData.content = metaData.content.replace(/\<pre class\="lang:javascript decode\:1 " >/ig, '<pre class="line-numbers"><code class="language-javascript">');
+                    metaData.content = metaData.content.replace(/\<pre class\="lang:css decode\:1 " >/ig, '<pre class="line-numbers"><code class="language-css">');
+                    metaData.content = metaData.content.replace(/\<pre class\="lang:html decode\:1 " >/ig, '<pre class="line-numbers"><code class="language-markup">');
                     metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']javascript["']\>/ig, '<pre class="line-numbers"><code class="language-javascript">');
                     metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']css["']\>/ig, '<pre class="line-numbers"><code class="language-css">');
                     metaData.content = metaData.content.replace(/\<pre (lang|sh)\=["']html["']\>/ig, '<pre class="line-numbers"><code class="language-markup">');

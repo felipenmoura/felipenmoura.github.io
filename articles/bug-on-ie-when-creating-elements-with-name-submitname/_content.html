@@ -1,0 +1,32 @@
+Hi, yesterday I had to fight against this problem, which is not very touched out there.
+In the beginning, people from <em>jQuery</em> thought it was a jQuery bug, but searching a bit more I could find out the root of this problem.
+
+<b>What is it?</b>
+When running your javascript in Internet Explorer 6, or 7 or 8 in compatible mode, if you create dynamically an iframe, for example, and set it a <strong>name</strong> attribute, Internet Explorer will reaplace it by an <strong>submitName</strong> attribute. This attribute cannot be found with .getAttribute('submitName'), but that is the problem, neither can be with .getAttribute('name')!
+
+<b>How to see it happening? Try this:</b>
+<pre class="lang:javascript decode:1 " >
+var ifr= document.createElement('iframe');
+ifr.setAttribute('name', 'iFrameOne');
+document.body.appendChild(ifr);
+alert(ifr.getAttribute('name'));
+// you can also see it through the &quot;developer tool&quot; in the IE tools menu
+</pre>
+
+The main problem is that ... when you have something like a link or a form targeting this iframe, you loose it! The same happens with inputs with name, which are dynamically created.
+
+<b>How to fix it without ask your users to migrate to a real browser? I did this and it worked:</b>
+<pre class="lang:javascript decode:1 " >
+var ifrDiv= document.createElement('div');
+ifrDiv.innerHTML= &quot;&lt;iframe name='iFrameOne' &gt;&lt;/iframe&gt;&quot;;
+document.body.appendChild(ifrDiv);
+</pre>
+
+<b>Now, why does it happen?!</b>
+I had the chance to search for this and found in the Microsoft's webpage something about this old, known bug in <em>Internet Explorer</em>, with names on dynamic elements. Due to "fix" this, instead of fixing, then "provided" this workarounded attribute. When you try to deal with the name attribute, it applies like an alias, redirecting it to the Microsoft's Internet Explorer imaginary <strong>submitName</strong> attribute. But with this, you cant access a form that has a name, like this:
+<pre class="lang:javascript decode:1 " >
+document.forms['dynamicFormName'];
+</pre>
+because the DOM hasn't rendered that form with the name you asked for.
+
+I hope it can help you, if you get stuck with this some day.

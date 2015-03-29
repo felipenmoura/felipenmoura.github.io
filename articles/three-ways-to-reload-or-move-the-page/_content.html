@@ -1,0 +1,23 @@
+Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
+Por tanto, podemos fazer desta maneira:
+<pre class="lang:javascript decode:1 " >
+ 
+history.go(0);
+ 
+</pre>
+Isto irá simplesmente recarregar a página. Claro que você pode usar iframes, adotando parent, top, self ou name para trabalhar com suas relações.
+
+Outra alternativa seria usar o método reload, oferecido pelo <em>location</em>, assim:
+<pre class="lang:javascript decode:1 " >
+
+self.location.reload();
+
+</pre>
+
+Agora, uma outra alternativa que também servirá para mover-mos para uma nova página, usando a propriedade <em>href</em>, também do <em>location</em>.
+<pre class="lang:javascript decode:1 " >
+
+self.location.href= self.location.href;
+
+</pre>
+Este código recarregará a página, ms poderia ser qualquer outro endereço alí, a ser carregado.

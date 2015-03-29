@@ -1,0 +1,88 @@
+<div id="articleTmpElement"></div>
+<section id="articles-container" class="sect-content" lang="pt-BR">
+    <nav id="articles-nav" class="articles-nav">
+        <div id="loading-bar"></div>
+        <ul>
+            <li class="btn center">
+                <span class="art-nav-tbn art-see-list" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    &nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a href="/articles/bug-on-ie-when-creating-elements-with-name-submitname"
+                   class="local art-nav-tbn"
+                
+                   title="previous: Bug on IE - Elements with name/submitName"><< Prev</a>
+            </li>
+            <li class="btn right">
+                
+                <a href="/articles/mozilla-summit-2013"
+                   class="local art-nav-tbn"
+                
+                   title="Next: <em>Mozilla</em> Summit 2013">Next >></a>
+            </li>
+        </ul>
+        
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+    
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-3
+                    ">
+            <h2><a href="/articles/three-ways-to-reload-or-move-the-page">Três maneiras de recarregar a página usando <em>JavaScript</em></a></h2>
+            <div class="wrapper">
+                
+                    <img src="/articles/three-ways-to-reload-or-move-the-page/reload-web-page.jpg" alt="Três maneiras de recarregar a página usando <em>JavaScript</em>" title="" />
+                
+            </div>
+            <span id="article-meta-data">
+                Aug 19th, 2010 : javascript, html
+            </span>
+            
+            <abs>
+                Hey, olá pessoal.<br/>Bom, esta é uma pergunta que vejo muita gente fazendo, então, decidi postar aqui sobre isto.
+            </abs>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            
+            <article>Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
+Por tanto, podemos fazer desta maneira:
+<pre class="line-numbers"><code class="language-javascript">
+ 
+history.go(0);
+ 
+</code></pre>
+Isto irá simplesmente recarregar a página. Claro que você pode usar iframes, adotando parent, top, self ou name para trabalhar com suas relações.
+
+Outra alternativa seria usar o método reload, oferecido pelo <em>location</em>, assim:
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.reload();
+
+</code></pre>
+
+Agora, uma outra alternativa que também servirá para mover-mos para uma nova página, usando a propriedade <em>href</em>, também do <em>location</em>.
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.href= self.location.href;
+
+</code></pre>
+Este código recarregará a página, ms poderia ser qualquer outro endereço alí, a ser carregado.</article>
+            
+            <aside>
+                <div id="disqus_thread"></div>
+            </aside>
+        </div>
+    </div>
+</section>

@@ -1713,6 +1713,9 @@ body[data-page="articles"] .articles-nav {
   top: 0;
   right: 0;
 }
+#articles-container .decorator.resumeless h2 {
+  top: 2rem;
+}
 #articles-container .decorator .wrapper, #articles-container .decorator img {
   position: absolute;
   left: 0;
@@ -1760,7 +1763,7 @@ body[data-page="articles"] .articles-nav {
 #articles-container .decorator h2 {
   position: absolute;
   left: 0;
-  top: 2rem;
+  top: 1rem;
   font-size: 1.5rem;
   z-index: 10;
   display: block;
