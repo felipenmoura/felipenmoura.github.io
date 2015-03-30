@@ -22,22 +22,22 @@
         <meta property="og:image" content="/images/og-image-fb.png"/>
         <meta property="og:site_name" content="Felipe N. Moura . org"/>
         <meta property="og:type" content="blog"/>
-        <meta property="og:title" content="home : Felipe N Moura | Web development, demos and talks"/>
-        <meta property="og:description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
+        <meta property="og:title" content="{{ pageTitle }} | Felipe N Moura"/>
+        <meta property="og:description" content="{{ socialDesc | striptags }}">
 
         <!-- TWITTER -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@felipenmoura">
-        <meta name="twitter:title" content="home : Felipe N Moura | Web development, demos and talks">
-        <meta name="twitter:description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
+        <meta name="twitter:title" content="{{ pageTitle }} | Felipe N Moura">
+        <meta name="twitter:description" content="{{ socialDesc | striptags }}">
         <meta name="twitter:creator" content="@felipenmoura">
         <meta name="twitter:image:src" content="/images/og-image-fb.png">
             
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/posts"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
-        <meta itemprop="name" content="The Name or Title Here">
-        <meta itemprop="description" content="Home page of Felipe Nascimento de Moura. Find information about me and my projects and articles.">
+        <meta itemprop="name" content="{{ pageTitle }} | Felipe N Moura">
+        <meta itemprop="description" content="{{ socialDesc | striptags }}">
         <meta itemprop="image" content="/images/og-image-fb.png">
         
         <!-- RSS -->
@@ -51,10 +51,8 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
             ga('create', 'UA-1270869-17', 'auto');
             ga('send', 'pageview');
-
         </script>
         
         <div class="background-video videobg">

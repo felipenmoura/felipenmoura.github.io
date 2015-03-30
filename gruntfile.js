@@ -17,12 +17,13 @@ module.exports = function(grunt) {
             "Oct",
             "Nov",
             "Dec"
-        ];
+        ],
+        pageTitle = 'felipenmoura';
     
     nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''));
     //nunEnv = new NunJucks.FileSystemLoader(['templates']);
     nunEnv.addFilter('striptags', function(str, count) {
-        return str && str.replace? str.replace(/(<([^>]+)>)/ig, ''): str;
+        return str && str.replace? str.replace(/(<([^>]+)>)/ig, ' '): str;
     });
     
     function formatDate(date){
@@ -242,6 +243,10 @@ module.exports = function(grunt) {
                     metaData.content = metaData.content.replace(/\<pre lang\=["']([0-9a-z_\-]+)["']\>/ig, '<pre class="line-numbers"><code class="language-$1">');
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
+                    metaData.pageType = 'articles';
+                    
+                    data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + metaData.name;
+                    data.socialDesc = metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
                     
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
@@ -261,13 +266,16 @@ module.exports = function(grunt) {
             });
         }
         
-        function copyIndexTo (where) {
+        function copyIndexTo (where, data) {
             if(!fs.existsSync(where)){
                 fs.mkdirSync(where);
             }
             
-            var idxOrig = fs.readFileSync('./index.html', 'utf-8');
-            fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
+            //var idxOrig = fs.readFileSync('./index.html', 'utf-8');
+            //fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
+            fs.writeFileSync(where + '/index.html',
+                             nunEnv.render('_templates/index.html', data), 'utf8');
+            
             
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
@@ -280,15 +288,27 @@ module.exports = function(grunt) {
             createIndexesForArticles(data, function(data){
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 
-                copyIndexTo("home");
-                copyIndexTo("about");
-                copyIndexTo("sobre");
-                copyIndexTo("utils");
-                copyIndexTo("utils/talks");
-                copyIndexTo("utils/videos");
-                copyIndexTo("utils/labs");
-                copyIndexTo("utils/photos");
-                copyIndexTo("articles");
+                data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
+                
+                data.pageTitle = 'felipenmoura:page:home';
+                copyIndexTo("home", data);
+                
+                data.pageTitle = 'felipenmoura:page:about';
+                copyIndexTo("about", data);
+                copyIndexTo("sobre", data);
+                
+                data.pageTitle = 'felipenmoura:page:utils';
+                copyIndexTo("utils", data);
+                data.pageTitle = 'felipenmoura:page:utils talks';
+                copyIndexTo("utils/talks", data);
+                data.pageTitle = 'felipenmoura:page:utils videos';
+                copyIndexTo("utils/videos", data);
+                data.pageTitle = 'felipenmoura:page:utils labs';
+                copyIndexTo("utils/labs", data);
+                data.pageTitle = 'felipenmoura:page:utils photos';
+                copyIndexTo("utils/photos", data);
+                data.pageTitle = 'felipenmoura:page:utils articles';
+                copyIndexTo("articles", data);
 
                 done();
             });

@@ -1,0 +1,118 @@
+Well, one of the most interesting effects is the <em>transition</em> property.
+With this, you can specify how the elements will behave when changing from or to a specific state.
+For example, let's say we have the following structure:
+<pre class="lang:html decode:1 " >
+&lt;div class='toBeAnimated'>content&lt;/div>
+</pre>
+Then, with CSS3 we can:
+<pre class="lang:css decode:1 " >
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   text-align:center;
+   transition: background 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+</pre>
+
+In case we want to apply more than one transaction, we can use
+<pre class="lang:css decode:1 " >
+   transition: background-color 1s linear, color 1s linear;
+</pre>
+
+Here is an example(hover it with your mouse):
+
+<div class='toBeAnimated'>content</div>
+<style type='text/css'>
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   height: 30px;
+   padding-top: 8px;
+   border:solid 1px black;
+   text-align:center;
+   transition: background-color 1s ease-in, color 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+
+</style>
+
+These transition properties accept the property to suffer the animation as it changes, the time to elapse it and the easing of it, working with linear, ease, ease-in, ease-out, ease-in-out or cubic-bezier(n,n,n,n)
+
+Now, let's get deeper :)
+The first thing you'll have to do is to create the animation itself, like this:
+<pre class="lang:css decode:1 " >
+@-webkit-keyframes yourAnimationName
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</pre>
+Now that we created out animation called <em>yourAnimationName</em>, it's time to use it by declaring the elements that will adopt it, this way:
+<pre class="lang:css decode:1 " >
+div.animatedDiv
+{
+    -webkit-animation-name: <strong>yourAnimationName</strong>;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    ...
+}
+</pre>
+
+And then, all the divs that have the class "animatedDiv" will look like this:
+<style type='text/css'>
+.divToAnimate
+{
+    -webkit-animation-name: yourAnimationName;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    height: 50px;
+    width: 140px;
+    margin: auto;
+    padding-top: 1rem;
+    text-align:center;
+}
+@-webkit-keyframes yourAnimationName /*Safari and Chrome */
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</style>
+<div class='divToAnimate' >SPAM</div>
+
+I hope this have helped/inspired you to use and create new things :)
+Cheers...

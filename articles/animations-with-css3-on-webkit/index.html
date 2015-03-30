@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/sh/prism.css" />
         
         <!-- Info -->
-        <title>felipenmoura:page:home</title>
+        <title>felipenmoura:articles: animations-with-css3-on-webkit</title>
         <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
@@ -22,22 +22,22 @@
         <meta property="og:image" content="/images/og-image-fb.png"/>
         <meta property="og:site_name" content="Felipe N. Moura . org"/>
         <meta property="og:type" content="blog"/>
-        <meta property="og:title" content="felipenmoura:page:home | Felipe N Moura"/>
-        <meta property="og:description" content="Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.">
+        <meta property="og:title" content="felipenmoura:articles: animations-with-css3-on-webkit | Felipe N Moura"/>
+        <meta property="og:description" content="Hey folks. Tonight's talk will be about  CSS3 animations ...yes, animations.">
 
         <!-- TWITTER -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@felipenmoura">
-        <meta name="twitter:title" content="felipenmoura:page:home | Felipe N Moura">
-        <meta name="twitter:description" content="Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.">
+        <meta name="twitter:title" content="felipenmoura:articles: animations-with-css3-on-webkit | Felipe N Moura">
+        <meta name="twitter:description" content="Hey folks. Tonight's talk will be about  CSS3 animations ...yes, animations.">
         <meta name="twitter:creator" content="@felipenmoura">
         <meta name="twitter:image:src" content="/images/og-image-fb.png">
             
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/posts"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
-        <meta itemprop="name" content="felipenmoura:page:home | Felipe N Moura">
-        <meta itemprop="description" content="Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.">
+        <meta itemprop="name" content="felipenmoura:articles: animations-with-css3-on-webkit | Felipe N Moura">
+        <meta itemprop="description" content="Hey folks. Tonight's talk will be about  CSS3 animations ...yes, animations.">
         <meta itemprop="image" content="/images/og-image-fb.png">
         
         <!-- RSS -->
@@ -857,7 +857,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container" class="sect-content" lang="en-US">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -871,17 +871,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             </li>
             <li class="btn left">
                 
-                <a href="/articles/call-bind-e-apply-no-javascript-parte-2"
+                <a href="/articles/iniciando-com-canvas-no-javascript"
                    class="local art-nav-tbn"
                 
-                   title="previous: call, bind e apply no JavaScript  - parte 2 "><< Prev</a>
+                   title="previous:  Iniciando com o Canvas  javascript"><< Prev</a>
             </li>
             <li class="btn right">
                 
-                <a href=""
-                   class="local art-nav-tbn inactive"
+                <a href="/articles/three-ways-to-reload-or-move-the-page"
+                   class="local art-nav-tbn"
                 
-                   title="Next: ">Next >></a>
+                   title="Next: Três maneiras de recarregar a página usando <em>JavaScript</em>">Next >></a>
             </li>
         </ul>
         
@@ -894,178 +894,144 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-4
+                    colour-1
                     ">
-            <h2><a href="/articles/escopo-this-e-that">Escopo, this e that</a></h2>
+            <h2><a href="/articles/animations-with-css3-on-webkit"><em>Animations with</em> CSS3</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/escopo-this-e-that/scopes-javascript-closure.jpg" alt="Escopo, this e that" title="" />
+                    <img src="/articles/animations-with-css3-on-webkit/animations.jpg" alt="<em>Animations with</em> CSS3" title="" />
                 
             </div>
             <span id="article-meta-data">
-                Sept 3rd, 2014 : javascript, scope, ecma
+                Dec 28th, 2010 : css3, animações
             </span>
             
             <abs>
-                Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.
+                Hey folks. Tonight's talk will be about <strong>CSS3 animations</strong>...yes, animations.
             </abs>
             
         </div>
 
         <div class="wrapper articles-content">
             
-            <article><strong>Escopo</strong>
-
-O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
-Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
-Uma maneira de criar um escopo, é utilizando uma função.
-
-<pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
-
-function someFunc () {
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
+            <article>Well, one of the most interesting effects is the <em>transition</em> property.
+With this, you can specify how the elements will behave when changing from or to a specific state.
+For example, let's say we have the following structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class='toBeAnimated'>content&lt;/div>
+</code></pre>
+Then, with CSS3 we can:
+<pre class="line-numbers"><code class="language-css">
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   text-align:center;
+   transition: background 1s linear;
 }
-
-someFunc();
-
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
 </code></pre>
 
-Funções que cumprem o papel de construtores também.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
-
-function SomeConstructor () {
-
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-
-    function internalFunc () {
-        var secondLevelVariable= 789;
-
-        console.log(localVariable);
-        console.log(secondLevelVariable);
-        console.log(globalVariable);
-    }
-  
-    internalFunc();
-}
-
-var instance= new SomeConstructor();
-
+In case we want to apply more than one transaction, we can use
+<pre class="line-numbers"><code class="language-css">
+   transition: background-color 1s linear, color 1s linear;
 </code></pre>
 
-Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
-Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+Here is an example(hover it with your mouse):
 
-<pre class="line-numbers"><code class="language-javascript">
-"use strict";
-
-var global1= 1;
-
-function someFunc () {
-    var localVar= 123;
-    global2= 456; // isto, criará uma variável global, por acidente.
-
-    console.log( window.global1 );
+<div class='toBeAnimated'>content</div>
+<style type='text/css'>
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   height: 30px;
+   padding-top: 8px;
+   border:solid 1px black;
+   text-align:center;
+   transition: background-color 1s ease-in, color 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
 }
 
-</code></pre>
+</style>
 
-<strong>this</strong>
+These transition properties accept the property to suffer the animation as it changes, the time to elapse it and the easing of it, working with linear, ease, ease-in, ease-out, ease-in-out or cubic-bezier(n,n,n,n)
 
-Escopos, normalmente setam um valor para <em>this</em>.
-Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
-
-Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-"use strict";
-function blah(){
-    console.log(this); // imprime Window
+Now, let's get deeper :)
+The first thing you'll have to do is to create the animation itself, like this:
+<pre class="line-numbers"><code class="language-css">
+@-webkit-keyframes yourAnimationName
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
 }
-blah();
 </code></pre>
-
-Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
-
-- Dentro de objetos
-<pre class="line-numbers"><code class="language-javascript">
-var o= {
-    doSomething: function () {
-        console.log(this); // imprime Object(o)
-    }
+Now that we created out animation called <em>yourAnimationName</em>, it's time to use it by declaring the elements that will adopt it, this way:
+<pre class="line-numbers"><code class="language-css">
+div.animatedDiv
+{
+    -webkit-animation-name: <strong>yourAnimationName</strong>;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    ...
 }
-o.doSomething();
 </code></pre>
 
-- Em funções construtoras
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    console.log(this); // imprime Klass {foo: "bar"} 
+And then, all the divs that have the class "animatedDiv" will look like this:
+<style type='text/css'>
+.divToAnimate
+{
+    -webkit-animation-name: yourAnimationName;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    height: 50px;
+    width: 140px;
+    margin: auto;
+    padding-top: 1rem;
+    text-align:center;
 }
-
-var instance= new Klass();
-</code></pre>
-
-- Usando call, bind e apply
-Será discutido em outro post, com maiores detalhes.
-
-<strong>that</strong>
-
-A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
-O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
-
-Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(this);
-    }
+@-webkit-keyframes yourAnimationName /*Safari and Chrome */
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
 }
+</style>
+<div class='divToAnimate' >SPAM</div>
 
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"} 
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
-</code></pre>
-
-Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    var that= this; // guarda a referência ao this
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(that);
-    }
-}
-
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"}
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
-</code></pre>
-
-Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
-Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
-
-Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
-
-Espero que tenha sido útil! :)
-
-</article>
+I hope this have helped/inspired you to use and create new things :)
+Cheers...</article>
             
             <aside>
                 <div id="disqus_thread"></div>
