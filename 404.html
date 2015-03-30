@@ -2,9 +2,10 @@
 <script>
     
     var l = location,
-        redirectFrom404 = l.protocol + '//' +
-                          l.hostname + ':' +
-                          l.port + '/',
+        rooURL =  l.protocol + '//' +
+                  l.hostname + ':' +
+                  l.port + '/',
+        redirectFrom404 = rooURL;
         path = l.pathname.split('/'),
         notTreated = false;
     
@@ -61,8 +62,8 @@
     if(path[0] == 'articles' && path[1] == 'article') {
         redirectFrom404+= path[2];
     }else{
-        if(path[1]){
-            redirectFrom404 += '?r404=' + l.pathname.replace(/^\//, '')
+        if(path[1] || notTreated){
+            redirectFrom404 = rooURL + '?r404=' + path.pop(); //l.pathname.replace(/^\//, '')
                            //+ '&q=' + encodeURIComponent(l.search.replace(/^\?/, ''));
         }
     }
