@@ -296,7 +296,6 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:about';
                 copyIndexTo("about", data);
                 copyIndexTo("sobre", data);
-                
                 data.pageTitle = 'felipenmoura:page:utils';
                 copyIndexTo("utils", data);
                 data.pageTitle = 'felipenmoura:page:utils talks';
