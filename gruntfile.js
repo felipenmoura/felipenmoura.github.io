@@ -188,7 +188,9 @@ module.exports = function(grunt) {
                     }
                     metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
                     metaData.name= cur;
+                    metaData.oCreationDate = metaData.creationDate;
                     metaData.creationDate = formatDate(metaData.creationDate);
+                    metaData.oTags = metaData.tags || [];
                     metaData.tags = metaData.tags? metaData.tags.join(', '): 'no tags';
                     if(metaData.status == 'published'){
                         validArticles.push(metaData);
@@ -254,6 +256,7 @@ module.exports = function(grunt) {
                                      renderedArticle,
                                      'utf-8');
                     // index inside the article itself
+                    metaData.oContent = metaData.content;
                     metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
                     fs.writeFileSync(artPath + cur.name + '/index.html',
@@ -262,7 +265,7 @@ module.exports = function(grunt) {
                 });
                 
                 // return the last article
-                cb(data);
+                cb(data, validArticles);
             });
         }
         
@@ -285,7 +288,7 @@ module.exports = function(grunt) {
             applyURLsTo(data, 'talks', 'description');
             applyURLsTo(data, 'labs', 'description');
             
-            createIndexesForArticles(data, function(data){
+            createIndexesForArticles(data, function(data, list){
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 
                 data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
@@ -308,7 +311,31 @@ module.exports = function(grunt) {
                 copyIndexTo("utils/photos", data);
                 data.pageTitle = 'felipenmoura:page:utils articles';
                 copyIndexTo("articles", data);
-
+                
+                var renderedRSS = nunEnv.render('_templates/rss.html', {
+                    updateDate: (new Date()).toString(),
+                    list: list
+                });
+                fs.writeFileSync('./feed.xml', renderedRSS, 'utf-8');
+                
+                var dt = (new Date()).toString(),
+                    renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
+                    updateDate: (new Date()).toString(),
+                    list: list,
+                    pages: [
+                        { name: '', lastModified: dt },
+                        { name: 'home/', lastModified: dt },
+                        { name: 'about/', lastModified: dt },
+                        { name: 'utils/', lastModified: dt },
+                        { name: 'utils/videos/', lastModified: dt },
+                        { name: 'utils/photos/', lastModified: dt },
+                        { name: 'utils/talks/', lastModified: dt },
+                        { name: 'utils/labs/', lastModified: dt },
+                        { name: 'articles/', lastModified: dt }
+                    ]
+                });
+                fs.writeFileSync('./sitemap.xml', renderedSiteMap, 'utf-8');
+                
                 done();
             });
         }

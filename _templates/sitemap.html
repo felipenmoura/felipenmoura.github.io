@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+{% for item in pages %}
+   <url>
+      <loc>http://felipenmoura.org/{{ item.name }}</loc>
+      <lastmod>{{ item.lastModified }}</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1</priority>
+   </url>
+{% endfor %}
+
+{% for item in list %}
+   <url>
+      <loc>http://felipenmoura.org/articles/{{ item.name }}/</loc>
+      <lastmod>{{ item.oCreationDate }}</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+{% endfor %}
+</urlset>
