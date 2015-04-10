@@ -355,15 +355,21 @@ module.exports = function(grunt) {
                 data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("articles", data);
                 
-                var renderedRSS = nunEnv.render('_templates/rss.html', {
+                var dt = (new Date()).toISOString().split('T')[0],
+                    renderedRSS = nunEnv.render('_templates/rss.html', {
                     updateDate: (new Date()).toString(),
                     list: list
                 });
                 fs.writeFileSync('./feed.xml', renderedRSS, 'utf-8');
                 
-                var dt = (new Date()).toISOString().split('T')[0],
-                    renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
-                        updateDate: (new Date()).toString(),
+                list.forEach(function(cur, idx){
+                    cur.oCreationDate = dt;
+                    console.log(cur.name, cur.lastModified, "\n\n");
+                    list[idx] = cur;
+                });
+                
+                var renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
+                        updateDate: dt,
                         list: list,
                         pages: [
                             { name: '', lastModified: dt },
