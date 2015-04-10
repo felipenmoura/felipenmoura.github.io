@@ -9,9 +9,9 @@
 
 <channel>
   <title>Felipe N. de moura Home Page</title>
-  <link>http://felipenmoura.org/</link>
-  <atom:link href="http://felipenmoura.org/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu Apr 09 2015 23:42:42 GMT-0300 (BRT)</lastBuildDate>
+  <link>http://felipenmoura.com/</link>
+  <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Fri Apr 10 2015 00:24:11 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
@@ -19,7 +19,7 @@
   
   <item>
     <title> Iniciando com o Canvas  javascript</title>
-    <link>http://felipenmoura.org/articles/iniciando-com-canvas-no-javascript/</link>
+    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
     
     <category>
     <![CDATA[ javascript ]]>
@@ -119,7 +119,7 @@ Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando
   
   <item>
     <title> Animations with  CSS3</title>
-    <link>http://felipenmoura.org/articles/animations-with-css3-on-webkit/</link>
+    <link>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</link>
     
     <category>
     <![CDATA[ css3 ]]>
@@ -254,7 +254,7 @@ Cheers...
   
   <item>
     <title>Três maneiras de recarregar a página usando  JavaScript </title>
-    <link>http://felipenmoura.org/articles/three-ways-to-reload-or-move-the-page/</link>
+    <link>http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page/</link>
     
     <category>
     <![CDATA[ javascript ]]>
@@ -294,7 +294,7 @@ Este código recarregará a página, ms poderia ser qualquer outro endereço al�
   
   <item>
     <title> PHP ZCE -  A prova de certificação PHP</title>
-    <link>http://felipenmoura.org/articles/php-zce-a-prova-de-certificacao-php/</link>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
     
     <category>
     <![CDATA[ php ]]>
@@ -343,7 +343,7 @@ O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu m
   
   <item>
     <title>Bug on IE  - Elements with name/submitName </title>
-    <link>http://felipenmoura.org/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
+    <link>http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
     
     <category>
     <![CDATA[ javascript ]]>
@@ -396,7 +396,7 @@ I hope it can help you, if you get stuck with this some day.
   
   <item>
     <title> Mozilla  Summit 2013</title>
-    <link>http://felipenmoura.org/articles/mozilla-summit-2013/</link>
+    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
     <category>
     <![CDATA[ events ]]>
@@ -442,7 +442,7 @@ Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https:
   
   <item>
     <title>Where is this web  going to? </title>
-    <link>http://felipenmoura.org/articles/where-is-this-web-going-to/</link>
+    <link>http://felipenmoura.com/articles/where-is-this-web-going-to/</link>
     
     <category>
     <![CDATA[ web ]]>
@@ -471,7 +471,7 @@ Links do evento:
   
   <item>
     <title>Mortal Kombat 9  - list of fatalities </title>
-    <link>http://felipenmoura.org/articles/mortal-kombat-9-list-of-fatalities/</link>
+    <link>http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities/</link>
     
     <category>
     <![CDATA[ MK ]]>
@@ -732,7 +732,7 @@ To choose an alternative costume, when you earn a new cloth, use the START butto
   
   <item>
     <title>Criando formas geométricas usando  DIVs e CSS3 </title>
-    <link>http://felipenmoura.org/articles/creating-geometric-forms-using-divs-and-css3/</link>
+    <link>http://felipenmoura.com/articles/creating-geometric-forms-using-divs-and-css3/</link>
     
     <category>
     <![CDATA[ CSS3 ]]>
@@ -1123,7 +1123,7 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   
   <item>
     <title>Starting with Canvas in  javascript </title>
-    <link>http://felipenmoura.org/articles/starting-with-canvas-in-javascript/</link>
+    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
     
     <category>
     <![CDATA[ javascript ]]>
@@ -1218,7 +1218,7 @@ Soon, I'll post about how to really draw  into your canvas through javascript, a
   
   <item>
     <title>O  Brasil  e suas decisões...</title>
-    <link>http://felipenmoura.org/articles/o-brasil-e-suas-decisoes/</link>
+    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
     
     <category>
     <![CDATA[ politica ]]>
@@ -1255,7 +1255,7 @@ O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
   
   <item>
     <title>Creating notes,  alerts  and  block quotes  for citations using  CSS </title>
-    <link>http://felipenmoura.org/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
     
     <category>
     <![CDATA[ css ]]>
@@ -1376,7 +1376,7 @@ Now go ahead and customize yours!
   
   <item>
     <title>Participação na  WebBR 2013 </title>
-    <link>http://felipenmoura.org/articles/participacao-na-webbr-2013/</link>
+    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
     
     <category>
     <![CDATA[ events ]]>
@@ -1408,7 +1408,7 @@ e é dada a largada!
   
   <item>
     <title>Duas maneiras para  centralizar  verticalmente com  CSS </title>
-    <link>http://felipenmoura.org/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
+    <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
     <category>
     <![CDATA[ css ]]>
@@ -1489,7 +1489,7 @@ Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizan
   
   <item>
     <title>Hoisting no  JavaScript </title>
-    <link>http://felipenmoura.org/articles/hoisting-no-javascript/</link>
+    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
     
     <category>
     <![CDATA[ es6 ]]>
@@ -1577,7 +1577,7 @@ Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
   
   <item>
     <title>Call, bind e apply no JavaScript  - parte 1 </title>
-    <link>http://felipenmoura.org/articles/call-bind-e-apply-no-javascript-parte-1/</link>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
     
     <category>
     <![CDATA[ JavaScript ]]>
@@ -1713,7 +1713,7 @@ Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</stron
   
   <item>
     <title>call, bind e apply no JavaScript  - parte 2 </title>
-    <link>http://felipenmoura.org/articles/call-bind-e-apply-no-javascript-parte-2/</link>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
     
     <category>
     <![CDATA[ es6 ]]>
@@ -1919,7 +1919,7 @@ Não deixem de divulgar o post, e dar sua opinião.
   
   <item>
     <title>Escopo, this e that</title>
-    <link>http://felipenmoura.org/articles/escopo-this-e-that/</link>
+    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
     
     <category>
     <![CDATA[ javascript ]]>

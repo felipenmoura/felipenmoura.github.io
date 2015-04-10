@@ -9,8 +9,8 @@
 
 <channel>
   <title>Felipe N. de moura Home Page</title>
-  <link>http://felipenmoura.org/</link>
-  <atom:link href="http://felipenmoura.org/rss.xml" rel="self" type="application/rss+xml"/>
+  <link>http://felipenmoura.com/</link>
+  <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
   <lastBuildDate>{{ updateDate }}</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
@@ -19,7 +19,7 @@
   {% for item in list%}
   <item>
     <title>{{ item.title | striptags }}</title>
-    <link>http://felipenmoura.org/articles/{{ item.name }}/</link>
+    <link>http://felipenmoura.com/articles/{{ item.name }}/</link>
     {% for tag in item.oTags %}
     <category>
     <![CDATA[ {{ tag }} ]]>
