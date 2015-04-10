@@ -84,6 +84,15 @@ module.exports = function(grunt) {
             }
         },
         
+        uglify : {
+            all: {
+                files: {
+                    'scripts/default.min.js': ['scripts/default.js']
+                }
+            },
+            options: {}
+        },
+        
         scsslint: {
             allFiles: [
                 'scss/**/*',
@@ -124,6 +133,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-nunjucks');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
     //grunt.loadNpmTasks('grunt-scss-lint');
     //grunt.loadNpmTasks('grunt-jslint');
     
@@ -390,7 +401,7 @@ module.exports = function(grunt) {
         }
     });
     
-    grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates'/*, 'uglify'*/]);
+    grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates', 'uglify']);
 
     grunt.registerTask('default', ['build']);
 
