@@ -361,22 +361,22 @@ module.exports = function(grunt) {
                 });
                 fs.writeFileSync('./feed.xml', renderedRSS, 'utf-8');
                 
-                var dt = (new Date()).toISOString(),
+                var dt = (new Date()).toISOString().split('T')[0],
                     renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
-                    updateDate: (new Date()).toString(),
-                    list: list,
-                    pages: [
-                        { name: '', lastModified: dt },
-                        { name: 'home/', lastModified: dt },
-                        { name: 'about/', lastModified: dt },
-                        { name: 'utils/', lastModified: dt },
-                        { name: 'utils/videos/', lastModified: dt },
-                        { name: 'utils/photos/', lastModified: dt },
-                        { name: 'utils/talks/', lastModified: dt },
-                        { name: 'utils/labs/', lastModified: dt },
-                        { name: 'articles/', lastModified: dt }
-                    ]
-                });
+                        updateDate: (new Date()).toString(),
+                        list: list,
+                        pages: [
+                            { name: '', lastModified: dt },
+                            { name: 'home/', lastModified: dt },
+                            { name: 'about/', lastModified: dt },
+                            { name: 'utils/', lastModified: dt },
+                            { name: 'utils/videos/', lastModified: dt },
+                            { name: 'utils/photos/', lastModified: dt },
+                            { name: 'utils/talks/', lastModified: dt },
+                            { name: 'utils/labs/', lastModified: dt },
+                            { name: 'articles/', lastModified: dt }
+                        ]
+                    });
                 fs.writeFileSync('./sitemap.xml', renderedSiteMap, 'utf-8');
                 
                 done();
