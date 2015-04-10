@@ -93,6 +93,18 @@ module.exports = function(grunt) {
             options: {}
         },
         
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'styles/',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'styles/',
+                    ext: '.min.css'
+                }]
+            }
+        },
+        
         scsslint: {
             allFiles: [
                 'scss/**/*',
@@ -134,6 +146,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-nunjucks');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //grunt.loadNpmTasks('grunt-scss-lint');
     //grunt.loadNpmTasks('grunt-jslint');
@@ -401,7 +414,7 @@ module.exports = function(grunt) {
         }
     });
     
-    grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates', 'uglify']);
+    grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates', 'uglify', 'cssmin']);
 
     grunt.registerTask('default', ['build']);
 

@@ -8,6 +8,7 @@
   },
   "engine": "node 0.4.1",
   "devDependencies": {
+    "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-jslint": "*",
     "grunt-scss-lint": "^0.3.4",
