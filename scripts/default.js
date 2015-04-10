@@ -20,6 +20,15 @@
         }
     };
     
+//    UTILS.currentSocialData = {};
+//    UTILS.setSocialData = function () {
+//        
+//    };
+//    
+//    UTILS.resetSocialData = function () {
+//        
+//    };
+    
     UTILS.showContent = function (id, src, path) {
         hashData = {
             page: id,
@@ -46,12 +55,8 @@
             }
             // clicked on a link that must be retrieved via Ajax
             src= target.getAttribute('href');
-            
-            //UTILS.showContent(src.replace(/^(\.|\/)+/, '').replace(/\/.+/, ''), src);
             tmp = src.replace('/', '').split('/');
             UTILS.showContent(tmp[0], tmp[1], tmp[2]);
-            
-            //UTILS.registerPageView();
             
             event.preventDefault();
             event.stopPropagation();
@@ -59,11 +64,6 @@
             hashData.extra = tmp;
             UTILS.videoBg = target.getAttribute('src') || target.firstElementChild.getAttribute('src');
             UTILS.updatePageStatus();
-//            UTILS.showModal({
-//                type: "player",
-//                bg: target.getAttribute('src') || target.firstElementChild.getAttribute('src'),
-//                ytRef: tmp
-//            });
         }else if(cl.contains('closeLayerBtn')){
             UTILS.closeModal();
         }else if(cl.contains('art-nav-tbn')){
@@ -105,23 +105,16 @@
         }
     };
     
-//    UTILS.setHash = function (hash) {
-//        hashData.extra = hash;
-//        UTILS.updatePageStatus();
-//    }
-    
     UTILS.showPlayer = function (data) {
         var bg = document.getElementById('playerLayer'),
             player = document.getElementById('playerElement');
         bg.style.backgroundImage = 'url('+ data.bg +')';
         player.style.backgroundImage = 'url('+ data.bg +')';
         player.setAttribute('src', "//www.youtube.com/embed/"+data.ytRef+"?showinfo=0");
-        //UTILS.setHash(data.ytRef);
     };
     
     UTILS.closePlayer = function () {
         document.getElementById('playerElement').removeAttribute('src');
-        //UTILS.setHash('');
     };
     
     UTILS.showModal = function (data) {
@@ -249,7 +242,7 @@
             document.getElementById('articles-nav').removeAttribute('data-show');
         }
         
-        if(hashData.detail == 'videos'){
+        if(hashData.detail == 'videos' || hashData.detail == 'labs'){
             if(hashData.extra){
                 UTILS.showModal({
                     type: "player",
@@ -259,6 +252,8 @@
             }else{
                 UTILS.closeModalLayer();
             }
+        }else{
+            UTILS.closeModalLayer();
         }
         
         if(hashData.detail){

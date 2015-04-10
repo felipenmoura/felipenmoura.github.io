@@ -321,19 +321,38 @@ module.exports = function(grunt) {
                 copyIndexTo("home", data);
                 
                 data.pageTitle = 'felipenmoura:page:about';
+                data.socialDesc = 'Know more about Felipe, his past, experiences and find his personal contacts and social connections.';
                 copyIndexTo("about", data);
                 copyIndexTo("sobre", data);
+                data.pageTitle = 'felipenmoura:page:sobre';
+                data.socialDesc = 'Saiba mais sobre Felipe, seu passado, experiências e encontre seus contatos pessoais e sociais.';
                 data.pageTitle = 'felipenmoura:page:utils';
+                data.socialDesc = 'Useful tools, talk materials, demos and lab experiments, videos and photos and articles from Felipe';
                 copyIndexTo("utils", data);
-                data.pageTitle = 'felipenmoura:page:utils talks';
+                data.socialDesc = 'Ferramentas úteis, materiais de palestras, demos e experimentos, videos, fotos e artigos de Felipe';
+                copyIndexTo("uteis", data);
+                data.pageTitle = 'felipenmoura:page:talks';
+                data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
                 copyIndexTo("utils/talks", data);
-                data.pageTitle = 'felipenmoura:page:utils videos';
+                data.pageTitle = 'felipenmoura:page:palestras';
+                data.socialDesc = "Tenha acesso ao material das palestras de Felipe, slides, links e videos.";
+                copyIndexTo("uteis/palestras", data);
+                data.pageTitle = 'felipenmoura:page:videos';
+                data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
                 copyIndexTo("utils/videos", data);
-                data.pageTitle = 'felipenmoura:page:utils labs';
+                data.pageTitle = 'felipenmoura:page:labs';
+                data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
                 copyIndexTo("utils/labs", data);
-                data.pageTitle = 'felipenmoura:page:utils photos';
+                data.pageTitle = 'felipenmoura:page:photos';
+                data.socialDesc = "Some of the prefered photos of Felipe";
                 copyIndexTo("utils/photos", data);
-                data.pageTitle = 'felipenmoura:page:utils articles';
+                data.socialDesc = "Algumas das fotos preferidas de Felipe";
+                copyIndexTo("utils/fotos", data);
+                data.pageTitle = 'felipenmoura:page:articles';
+                data.socialDesc = "Articles from Felipe, talking about web development, technology, important announcements, some news and ideas, besides some personal thoughts, as well!";
+                copyIndexTo("articles", data);
+                data.pageTitle = 'felipenmoura:page:artigos';
+                data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("articles", data);
                 
                 var renderedRSS = nunEnv.render('_templates/rss.html', {

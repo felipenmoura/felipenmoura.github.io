@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/sh/prism.min.css" />
         
         <!-- Info -->
-        <title>felipenmoura:articles: starting-with-canvas-in-javascript</title>
+        <title>felipenmoura:page:photos</title>
         <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
@@ -22,22 +22,22 @@
         <meta property="og:image" content="/images/og-image-fb.png"/>
         <meta property="og:site_name" content="Felipe N. Moura . com"/>
         <meta property="og:type" content="blog"/>
-        <meta property="og:title" content="felipenmoura:articles: starting-with-canvas-in-javascript | Felipe N Moura"/>
-        <meta property="og:description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon. Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta property="og:title" content="felipenmoura:page:photos | Felipe N Moura"/>
+        <meta property="og:description" content="Algumas das fotos preferidas de Felipe">
 
         <!-- TWITTER -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@felipenmoura">
-        <meta name="twitter:title" content="felipenmoura:articles: starting-with-canvas-in-javascript | Felipe N Moura">
-        <meta name="twitter:description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon. Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta name="twitter:title" content="felipenmoura:page:photos | Felipe N Moura">
+        <meta name="twitter:description" content="Algumas das fotos preferidas de Felipe">
         <meta name="twitter:creator" content="@felipenmoura">
         <meta name="twitter:image" content="/images/og-image-fb.png">
             
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/posts"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
-        <meta itemprop="name" content="felipenmoura:articles: starting-with-canvas-in-javascript | Felipe N Moura">
-        <meta itemprop="description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon. Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta itemprop="name" content="felipenmoura:page:photos | Felipe N Moura">
+        <meta itemprop="description" content="Algumas das fotos preferidas de Felipe">
         <meta itemprop="image" content="/images/og-image-fb.png">
         
         <!-- RSS -->
@@ -900,7 +900,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container" class="sect-content" lang="pt-BR">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -914,17 +914,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             </li>
             <li class="btn left">
                 
-                <a href="/articles/creating-geometric-forms-using-divs-and-css3"
+                <a href="/articles/call-bind-e-apply-no-javascript-parte-2"
                    class="local art-nav-tbn"
-                   title="previous: Criando formas geométricas usando  DIVs e CSS3 ">&lt;&lt; Prev
+                   title="previous: call, bind e apply no JavaScript  - parte 2 ">&lt;&lt; Prev
                 
                    </a>
             </li>
             <li class="btn right">
                 
-                <a href="/articles/o-brasil-e-suas-decisoes"
-                   class="local art-nav-tbn"
-                   title="Next: O <em>Brasil</em> e suas decisões...">Next &gt;&gt;
+                <a href=""
+                   class="local art-nav-tbn inactive"
+                   title="">Next &gt;&gt;
                 
                    </a>
             </li>
@@ -939,104 +939,178 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-5
                     ">
-            <h2><a href="/articles/starting-with-canvas-in-javascript">Starting with Canvas in <em>javascript</em></a></h2>
+            <h2><a href="/articles/escopo-this-e-that">Escopo, this e that</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/starting-with-canvas-in-javascript/canvas.jpg" alt="Starting with Canvas in <em>javascript</em>" title="" />
+                    <img src="/articles/escopo-this-e-that/scopes-javascript-closure.jpg" alt="Escopo, this e that" title="" />
                 
             </div>
             <span id="article-meta-data">
-                Jun 17th, 2010 : javascript, canvas
+                Sept 3rd, 2014 : javascript, scope, ecma
             </span>
             
             <abs>
-                Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.
+                Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.
             </abs>
             
         </div>
 
         <div class="wrapper articles-content">
             
-            <article>First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+            <article><strong>Escopo</strong>
 
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
-            whatever you write in here, will be shown ONLY
-            when your canvas cannot be rendered.
-            Of course, it accepts HTML tags
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
 
-Ok, now, using event handlers we will treat it in our  javascript
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // yes, addEventListener does not work on IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
 <pre class="line-numbers"><code class="language-javascript">
-// let's create some global variables.
-// You can use it better with namespaces
-var canvas= null;
-var ctx= null;
-canvasHandler= function(){
-    // first of all, we simply get the canvas element itself
-    canvas= document.getElementById('theCanvasElement');
-    // now, we need to have the CONTEXT to work with
-    ctx= canvas.getContext('2d');
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
 }
+
+someFunc();
+
 </code></pre>
 
-Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
-No, unfortunately it does not offer any other context besides 2D.
-Our canvas still has no properties. It has no with and height, we can set it then.
-From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+Funções que cumprem o papel de construtores também.
+
+
 <pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
+}
+
+var instance= new SomeConstructor();
+
 </code></pre>
 
-You probably know how to load an image  from js, right?
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
 <pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
 </code></pre>
-Ok, you can use it to insert images inside your canvas. Just like this.
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
 <pre class="line-numbers"><code class="language-javascript">
-    // instantiate an image
-    var img= new Image();
-    // we need to use the image when it has finished to load
-    img.addEventListener('load', function(){
-        // after downloading the image, we can draw it into the canvas
-        ctx.drawImage(this);
-        // where this= the image just downloaded
-    });
-    // then, we say the image's url, to it start loading
-    img.src= 'url.png';
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
 </code></pre>
 
-Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
 <pre class="line-numbers"><code class="language-javascript">
-    // draws the image in the position left=30, top=30
-    ctx.drawImage(this, 30, 30);
-    // draws the image in the 0/0 position, changing its size
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // more complex, draws the image croping it
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
 </code></pre>
 
-When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
 
-Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.</article>
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+</article>
             
             <aside>
                 <div id="disqus_thread"></div>
