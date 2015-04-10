@@ -7,7 +7,8 @@
                         <a href="{{ talk.link }}" target="_blank">
                             <img src="{{ talk.image }}"
                                  title="Open {{ talk.title }}"
-                                 alt="{{ talk.title }}" />
+                                 alt="{{ talk.title }}"
+                                 width="200" />
                         </a>
                     </div>
                     <div class="utils-description">
@@ -27,7 +28,9 @@
                          data-yt-ref="{{ video.media$group.yt$videoid.$t }}">
                         <img src="{{ video.media$group.media$thumbnail[1].url }}"
                              title="Watch: {{ video.title.$t }}"
-                             alt="{{ video.title.$t }}" />
+                             alt="{{ video.title.$t }}"
+                             width="320"
+                             height="180" />
                     </div>
                     <div class="utils-description">
                         <h3 data-title="{{ video.title.$t }}">{{ video.title.$t }}</h3>
@@ -48,7 +51,8 @@
                          data-yt-ref="{{ lab.videoID }}">
                         <img src="{{ lab.image }}"
                              title="Watch {{ lab.title }}"
-                             alt="{{ lab.title }}" />
+                             alt="{{ lab.title }}"
+                             width="300" />
                     </div>
                     {% else %}
                     <div class="utils-thumb">
@@ -92,7 +96,8 @@
                         <img src="{{ photo.fullSize }}"
                         {% endif %}
                              title="Full Size: {{ photo.title }}"
-                             alt="{{ photo.title }}" />
+                             alt="{{ photo.title }}"
+                             width="300" />
                     </a>
                     <div class="utils-description">
                         <h3 data-title="{{ photo.title }}">{{ photo.title }}</h3>
