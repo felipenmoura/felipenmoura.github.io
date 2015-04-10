@@ -3,7 +3,7 @@
         "title": "Tool: HTML5 Image Editor",
         "description": "This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also remove all the pixels in the image based on a color.",
         "link": "http://felipenmoura.com/labs/html5-imager/",
-        "github": "https://github.com/felipenmoura/html5-imager",
+        "github": "https://github.com/felipenmoura/html5-imager/",
         "image": "/resources/lab-canvas-image-editor-gama.png",
         "videoID": "VDBSv8cBSy8"
     },
