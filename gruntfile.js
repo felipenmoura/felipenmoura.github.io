@@ -313,11 +313,11 @@ module.exports = function(grunt) {
             applyURLsTo(data, 'labs', 'description');
             
             createIndexesForArticles(data, function(data, list){
-                fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 
                 data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
-                
                 data.pageTitle = 'felipenmoura:page:home';
+                
+                fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 copyIndexTo("home", data);
                 
                 data.pageTitle = 'felipenmoura:page:about';
