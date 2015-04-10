@@ -26,7 +26,7 @@
                     <div class="utils-thumb youtube"
                          data-yt-ref="{{ video.media$group.yt$videoid.$t }}">
                         <img src="{{ video.media$group.media$thumbnail[1].url }}"
-                             title="{{ video.title.$t }}"
+                             title="Watch: {{ video.title.$t }}"
                              alt="{{ video.title.$t }}" />
                     </div>
                     <div class="utils-description">
@@ -47,13 +47,13 @@
                     <div class="utils-thumb youtube"
                          data-yt-ref="{{ lab.videoID }}">
                         <img src="{{ lab.image }}"
-                             title="{{ lab.title }}"
+                             title="Watch {{ lab.title }}"
                              alt="{{ lab.title }}" />
                     </div>
                     {% else %}
                     <div class="utils-thumb">
                         <img src="{{ lab.image }}"
-                             title="{{ lab.title }}"
+                             title="Open {{ lab.title }}"
                              alt="{{ lab.title }}" />
                     </div>
                     {% endif %}
@@ -91,7 +91,7 @@
                         {% else %}
                         <img src="{{ photo.fullSize }}"
                         {% endif %}
-                             title="{{ photo.title }}"
+                             title="Full Size: {{ photo.title }}"
                              alt="{{ photo.title }}" />
                     </a>
                     <div class="utils-description">

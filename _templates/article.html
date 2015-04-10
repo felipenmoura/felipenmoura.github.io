@@ -15,20 +15,24 @@
                 {% if previous %}
                 <a href="/articles/{{ previous.name }}"
                    class="local art-nav-tbn"
+                   title="previous: {{ previous.title | striptags }}">&lt;&lt; Prev
                 {% else %}
                 <a class="local art-nav-tbn inactive"
+                   title="">&lt;&lt; Prev
                 {% endif %}
-                   title="previous: {{ previous.title | striptags }}">&lt;&lt; Prev</a>
+                   </a>
             </li>
             <li class="btn right">
                 {% if next %}
                 <a href="/articles/{{ next.name }}"
                    class="local art-nav-tbn"
+                   title="Next: {{ next.title }}">Next &gt;&gt;
                 {% else %}
                 <a href=""
                    class="local art-nav-tbn inactive"
+                   title="">Next &gt;&gt;
                 {% endif %}
-                   title="Next: {{ next.title }}">Next &gt;&gt;</a>
+                   </a>
             </li>
         </ul>
         
