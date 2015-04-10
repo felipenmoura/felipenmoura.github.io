@@ -2,7 +2,7 @@
     {
         "title": "Tool: HTML5 Image Editor",
         "description": "This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also remove all the pixels in the image based on a color.",
-        "link": "http://felipenmoura.org/labs/html5-imager/",
+        "link": "http://felipenmoura.com/labs/html5-imager/",
         "github": "https://github.com/felipenmoura/html5-imager",
         "image": "/resources/lab-canvas-image-editor-gama.png",
         "videoID": "VDBSv8cBSy8"
@@ -10,14 +10,14 @@
     {
         "title": "Experiment: Stereoscopic 3D using JS, HTML and CSS",
         "description": "A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.",
-        "link": "http://felipenmoura.org/projects/tv3d/index.html",
+        "link": "http://felipenmoura.com/projects/tv3d/index.html",
         "image": "/resources/lab-tv-3d-stereoscopic-html.png",
         "videoID": "e2JdJKEz_xE"
     },
     {
         "title": "Experiment: ChromaKey in JavaScript",
         "description": "Chroma key effect using HTML, CSS and JavaScript.<br/>I used canvas, html5 video and the user's camera(user media).",
-        "link": "http://felipenmoura.org/talks/chromakey/",
+        "link": "http://felipenmoura.com/talks/chromakey/",
         "github": "https://github.com/felipenmoura/js-chroma-key",
         "image": "/resources/lab-chroma-key-js.png",
         "videoID": "RonpitSO-u4"
@@ -25,7 +25,7 @@
     {
         "title": "Experiment: CSS3 3D environment tool ",
         "description": "This is the Root3D, a CSS3, 3D environment, for you to build some cool 3D groups",
-        "link": "http://felipenmoura.org/projects/root3d",
+        "link": "http://felipenmoura.com/projects/root3d",
         "github": "https://github.com/felipenmoura/Root3D",
         "image": "/resources/lab-3d-builder-tool-environment.png",
         "videoID": "0ZxFwNgc0e0"
@@ -33,7 +33,7 @@
     {
         "title": "Game: Test your markup",
         "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.",
-        "link": "http://felipenmoura.org/projects/test-your-markup/index.html",
+        "link": "http://felipenmoura.com/projects/test-your-markup/index.html",
         "github": "https://github.com/felipenmoura/test-your-markup",
         "image": "/resources/exp-test-your-might.png",
         "videoID": false
