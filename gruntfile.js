@@ -361,7 +361,7 @@ module.exports = function(grunt) {
                 });
                 fs.writeFileSync('./feed.xml', renderedRSS, 'utf-8');
                 
-                var dt = (new Date()).toString(),
+                var dt = (new Date()).toISOString(),
                     renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
                     updateDate: (new Date()).toString(),
                     list: list,
