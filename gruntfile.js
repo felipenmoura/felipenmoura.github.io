@@ -4,6 +4,7 @@ module.exports = function(grunt) {
         fs = require('fs'),
         //nunEnv = new NunJucks.FileSystemLoader(['templates']),
         defaultLang = 'en',
+        DOMAIN = 'http://felipenmoura.com/'
         months = [
             "Jan",
             "Feb",
@@ -247,6 +248,7 @@ module.exports = function(grunt) {
                     }
                     
                     validArticles[i].url = '/'+artPath + cur.name;
+                    
                 });
                 
                 articlesList.reverse();
@@ -271,6 +273,7 @@ module.exports = function(grunt) {
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     metaData.pageType = 'articles';
                     
+                    data.fullURL = DOMAIN + artPath + cur.name + '/';
                     data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + metaData.name;
                     data.socialDesc = metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
                     
@@ -312,45 +315,63 @@ module.exports = function(grunt) {
             applyURLsTo(data, 'talks', 'description');
             applyURLsTo(data, 'labs', 'description');
             
-            createIndexesForArticles(data, function(data, list){
+            createIndexesForArticles(data, function then (data, list){
                 
                 data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
                 data.pageTitle = 'felipenmoura:page:home';
-                
+                data.fullURL = DOMAIN;
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 copyIndexTo("home", data);
                 
                 data.pageTitle = 'felipenmoura:page:about';
                 data.socialDesc = 'Know more about Felipe, his past, experiences and find his personal contacts and social connections.';
+                data.fullURL = DOMAIN + 'about/';
                 copyIndexTo("about", data);
-                copyIndexTo("sobre", data);
+                
                 data.pageTitle = 'felipenmoura:page:sobre';
                 data.socialDesc = 'Saiba mais sobre Felipe, seu passado, experiências e encontre seus contatos pessoais e sociais.';
+                copyIndexTo("sobre", data);
+                
                 data.pageTitle = 'felipenmoura:page:utils';
                 data.socialDesc = 'Useful tools, talk materials, demos and lab experiments, videos and photos and articles from Felipe';
+                data.fullURL = DOMAIN + 'utils/';
                 copyIndexTo("utils", data);
+                
                 data.socialDesc = 'Ferramentas úteis, materiais de palestras, demos e experimentos, videos, fotos e artigos de Felipe';
                 copyIndexTo("uteis", data);
+                
                 data.pageTitle = 'felipenmoura:page:talks';
                 data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
+                data.fullURL = DOMAIN + 'utils/talks/';
                 copyIndexTo("utils/talks", data);
-                data.pageTitle = 'felipenmoura:page:palestras';
+                
+                data.pageTitle = 'felipenmoura:page:palestras/';
                 data.socialDesc = "Tenha acesso ao material das palestras de Felipe, slides, links e videos.";
                 copyIndexTo("uteis/palestras", data);
+                
                 data.pageTitle = 'felipenmoura:page:videos';
                 data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
+                data.fullURL = DOMAIN + 'utils/videos/';
                 copyIndexTo("utils/videos", data);
+                
                 data.pageTitle = 'felipenmoura:page:labs';
                 data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
+                data.fullURL = DOMAIN + 'utils/labs/';
                 copyIndexTo("utils/labs", data);
+                
                 data.pageTitle = 'felipenmoura:page:photos';
                 data.socialDesc = "Some of the prefered photos of Felipe";
+                data.fullURL = DOMAIN + 'utils/photos/';
                 copyIndexTo("utils/photos", data);
+                
                 data.socialDesc = "Algumas das fotos preferidas de Felipe";
                 copyIndexTo("utils/fotos", data);
+                
                 data.pageTitle = 'felipenmoura:page:articles';
                 data.socialDesc = "Articles from Felipe, talking about web development, technology, important announcements, some news and ideas, besides some personal thoughts, as well!";
+                data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
+                
                 data.pageTitle = 'felipenmoura:page:artigos';
                 data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("articles", data);
@@ -364,7 +385,6 @@ module.exports = function(grunt) {
                 
                 list.forEach(function(cur, idx){
                     cur.oCreationDate = dt;
-                    console.log(cur.name, cur.lastModified, "\n\n");
                     list[idx] = cur;
                 });
                 
