@@ -353,7 +353,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:talks';
                 data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
                 data.fullURL = DOMAIN + 'utils/talks/';
-                data.ogImage = DOMAIN + 'resources/og/fb-talks.jpg';
+                data.ogImage = DOMAIN + 'resources/og/fb-utils-talks.jpg';
                 copyIndexTo("utils/talks", data);
                 
                 data.pageTitle = 'felipenmoura:page:palestras/';
@@ -363,19 +363,19 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:videos';
                 data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
                 data.fullURL = DOMAIN + 'utils/videos/';
-                data.ogImage = DOMAIN + 'resources/og/fb-videos.jpg';
+                data.ogImage = DOMAIN + 'resources/og/fb-utils-videos.jpg';
                 copyIndexTo("utils/videos", data);
                 
                 data.pageTitle = 'felipenmoura:page:labs';
                 data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
                 data.fullURL = DOMAIN + 'utils/labs/';
-                data.ogImage = DOMAIN + 'resources/og/fb-labs.jpg';
+                data.ogImage = DOMAIN + 'resources/og/fb-utils-labs.jpg';
                 copyIndexTo("utils/labs", data);
                 
                 data.pageTitle = 'felipenmoura:page:photos';
                 data.socialDesc = "Some of the prefered photos of Felipe";
                 data.fullURL = DOMAIN + 'utils/photos/';
-                data.ogImage = DOMAIN + 'resources/og/fb-photos.jpg';
+                data.ogImage = DOMAIN + 'resources/og/fb-utils-photos.jpg';
                 copyIndexTo("utils/photos", data);
                 
                 data.socialDesc = "Algumas das fotos preferidas de Felipe";
