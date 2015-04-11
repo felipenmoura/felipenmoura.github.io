@@ -4,7 +4,10 @@ module.exports = function(grunt) {
         fs = require('fs'),
         //nunEnv = new NunJucks.FileSystemLoader(['templates']),
         defaultLang = 'en',
-        DOMAIN = 'http://felipenmoura.com/'
+        DOMAIN = 'http://felipenmoura.com/',
+        OGIMAGE= 'resources/og/fb-home.png',
+        DEFAULT_ART_IMG= 'resources/og/fb-articles.jpg',
+        DEFAULT_ART_DESC = "Articles from Felipe, talking about web development, technology, important announcements, some news and ideas, besides some personal thoughts, as well!",
         months = [
             "Jan",
             "Feb",
@@ -273,6 +276,8 @@ module.exports = function(grunt) {
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     metaData.pageType = 'articles';
                     
+                    data.ogImage = DOMAIN + (metaData.headerImg || OGIMAGE).replace(/^\//, '');
+                    
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
                     data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + metaData.name;
                     data.socialDesc = metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
@@ -289,6 +294,7 @@ module.exports = function(grunt) {
                     fs.writeFileSync(artPath + cur.name + '/index.html',
                                      nunEnv.render(tplPath, data),
                                      'utf8');
+                    data.currentArticleMetaData = metaData;
                 });
                 
                 // return the last article
@@ -317,6 +323,8 @@ module.exports = function(grunt) {
             
             createIndexesForArticles(data, function then (data, list){
                 
+                data.ogImage = DOMAIN + OGIMAGE;
+                
                 data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
                 data.pageTitle = 'felipenmoura:page:home';
                 data.fullURL = DOMAIN;
@@ -326,6 +334,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:about';
                 data.socialDesc = 'Know more about Felipe, his past, experiences and find his personal contacts and social connections.';
                 data.fullURL = DOMAIN + 'about/';
+                data.ogImage = DOMAIN + 'resources/og/fb-about.jpg';
                 copyIndexTo("about", data);
                 
                 data.pageTitle = 'felipenmoura:page:sobre';
@@ -335,6 +344,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:utils';
                 data.socialDesc = 'Useful tools, talk materials, demos and lab experiments, videos and photos and articles from Felipe';
                 data.fullURL = DOMAIN + 'utils/';
+                data.ogImage = DOMAIN + 'resources/og/fb-utils.jpg';
                 copyIndexTo("utils", data);
                 
                 data.socialDesc = 'Ferramentas úteis, materiais de palestras, demos e experimentos, videos, fotos e artigos de Felipe';
@@ -343,6 +353,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:talks';
                 data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
                 data.fullURL = DOMAIN + 'utils/talks/';
+                data.ogImage = DOMAIN + 'resources/og/fb-talks.jpg';
                 copyIndexTo("utils/talks", data);
                 
                 data.pageTitle = 'felipenmoura:page:palestras/';
@@ -352,29 +363,40 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:videos';
                 data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
                 data.fullURL = DOMAIN + 'utils/videos/';
+                data.ogImage = DOMAIN + 'resources/og/fb-videos.jpg';
                 copyIndexTo("utils/videos", data);
                 
                 data.pageTitle = 'felipenmoura:page:labs';
                 data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
                 data.fullURL = DOMAIN + 'utils/labs/';
+                data.ogImage = DOMAIN + 'resources/og/fb-labs.jpg';
                 copyIndexTo("utils/labs", data);
                 
                 data.pageTitle = 'felipenmoura:page:photos';
                 data.socialDesc = "Some of the prefered photos of Felipe";
                 data.fullURL = DOMAIN + 'utils/photos/';
+                data.ogImage = DOMAIN + 'resources/og/fb-photos.jpg';
                 copyIndexTo("utils/photos", data);
                 
                 data.socialDesc = "Algumas das fotos preferidas de Felipe";
                 copyIndexTo("utils/fotos", data);
                 
-                data.pageTitle = 'felipenmoura:page:articles';
-                data.socialDesc = "Articles from Felipe, talking about web development, technology, important announcements, some news and ideas, besides some personal thoughts, as well!";
+                if(data.currentArticleMetaData.headerImg){
+                    data.ogImage = DOMAIN + data.currentArticleMetaData.headerImg.replace(/^\//, '');
+                }else{
+                    data.ogImage = DOMAIN + DEFAULT_ART_IMG;
+                }
+                
+                data.socialDesc = data.currentArticleMetaData.resume || DEFAULT_ART_DESC;
+                
+                console.log(data.currentArticleMetaData.headerImg);
+                data.pageTitle = 'felipenmoura:page:articles | ' + data.currentArticleMetaData.name;
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
                 
-                data.pageTitle = 'felipenmoura:page:artigos';
-                data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
-                copyIndexTo("articles", data);
+                data.pageTitle = 'felipenmoura:page:artigos | ' + data.currentArticleMetaData.name;
+                //data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
+                copyIndexTo("artigos", data);
                 
                 var dt = (new Date()).toISOString().split('T')[0],
                     renderedRSS = nunEnv.render('_templates/rss.html', {
