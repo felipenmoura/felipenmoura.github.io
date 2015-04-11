@@ -276,7 +276,7 @@ module.exports = function(grunt) {
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     metaData.pageType = 'articles';
                     
-                    data.ogImage = DOMAIN + (metaData.headerImg || OGIMAGE).replace(/^\//, '');
+                    data.ogImage = DOMAIN + (metaData.headerImg || DEFAULT_ART_IMG).replace(/^\//, '');
                     
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
                     data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + metaData.name;
@@ -389,7 +389,6 @@ module.exports = function(grunt) {
                 
                 data.socialDesc = data.currentArticleMetaData.resume || DEFAULT_ART_DESC;
                 
-                console.log(data.currentArticleMetaData.headerImg);
                 data.pageTitle = 'felipenmoura:page:articles | ' + data.currentArticleMetaData.name;
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
