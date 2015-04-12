@@ -11,14 +11,14 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri Apr 10 2015 21:41:15 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Sun Apr 12 2015 10:05:59 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
   
   <item>
-    <title> Iniciando com o Canvas  javascript</title>
+    <title>Iniciando com o Canvas javascript</title>
     <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
     
     <category>
@@ -118,7 +118,7 @@ Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando
   </item>
   
   <item>
-    <title> Animations with  CSS3</title>
+    <title>Animations with CSS3</title>
     <link>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</link>
     
     <category>
@@ -253,7 +253,7 @@ Cheers...
   </item>
   
   <item>
-    <title>Três maneiras de recarregar a página usando  JavaScript </title>
+    <title>Três maneiras de recarregar a página usando JavaScript</title>
     <link>http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page/</link>
     
     <category>
@@ -293,7 +293,7 @@ Este código recarregará a página, ms poderia ser qualquer outro endereço al�
   </item>
   
   <item>
-    <title> PHP ZCE -  A prova de certificação PHP</title>
+    <title>PHP ZCE - A prova de certificação PHP</title>
     <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
     
     <category>
@@ -342,7 +342,7 @@ O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu m
   </item>
   
   <item>
-    <title>Bug on IE  - Elements with name/submitName </title>
+    <title>Bug on IE - Elements with name/submitName</title>
     <link>http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
     
     <category>
@@ -395,7 +395,7 @@ I hope it can help you, if you get stuck with this some day.
   </item>
   
   <item>
-    <title> Mozilla  Summit 2013</title>
+    <title>Mozilla Summit 2013</title>
     <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
     <category>
@@ -441,7 +441,7 @@ Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https:
   </item>
   
   <item>
-    <title>Where is this web  going to? </title>
+    <title>Where is this web going to?</title>
     <link>http://felipenmoura.com/articles/where-is-this-web-going-to/</link>
     
     <category>
@@ -470,7 +470,7 @@ Links do evento:
   </item>
   
   <item>
-    <title>Mortal Kombat 9  - list of fatalities </title>
+    <title>Mortal Kombat 9 - list of fatalities</title>
     <link>http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities/</link>
     
     <category>
@@ -731,7 +731,7 @@ To choose an alternative costume, when you earn a new cloth, use the START butto
   </item>
   
   <item>
-    <title>Criando formas geométricas usando  DIVs e CSS3 </title>
+    <title>Criando formas geométricas usando DIVs e CSS3</title>
     <link>http://felipenmoura.com/articles/creating-geometric-forms-using-divs-and-css3/</link>
     
     <category>
@@ -1122,7 +1122,7 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   </item>
   
   <item>
-    <title>Starting with Canvas in  javascript </title>
+    <title>Starting with Canvas in javascript</title>
     <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
     
     <category>
@@ -1217,7 +1217,7 @@ Soon, I'll post about how to really draw  into your canvas through javascript, a
   </item>
   
   <item>
-    <title>O  Brasil  e suas decisões...</title>
+    <title>O Brasil e suas decisões...</title>
     <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
     
     <category>
@@ -1254,7 +1254,7 @@ O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
   </item>
   
   <item>
-    <title>Creating notes,  alerts  and  block quotes  for citations using  CSS </title>
+    <title>Creating notes, alerts and block quotes for citations using CSS</title>
     <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
     
     <category>
@@ -1375,7 +1375,7 @@ Now go ahead and customize yours!
   </item>
   
   <item>
-    <title>Participação na  WebBR 2013 </title>
+    <title>Participação na WebBR 2013</title>
     <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
     
     <category>
@@ -1407,7 +1407,7 @@ e é dada a largada!
   </item>
   
   <item>
-    <title>Duas maneiras para  centralizar  verticalmente com  CSS </title>
+    <title>Duas maneiras para centralizar verticalmente com CSS</title>
     <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
     <category>
@@ -1488,7 +1488,7 @@ Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizan
   </item>
   
   <item>
-    <title>Hoisting no  JavaScript </title>
+    <title>Hoisting no JavaScript</title>
     <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
     
     <category>
@@ -1576,7 +1576,7 @@ Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
   </item>
   
   <item>
-    <title>Call, bind e apply no JavaScript  - parte 1 </title>
+    <title>Call, bind e apply no JavaScript - parte 1</title>
     <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
     
     <category>
@@ -1712,7 +1712,7 @@ Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</stron
   </item>
   
   <item>
-    <title>call, bind e apply no JavaScript  - parte 2 </title>
+    <title>call, bind e apply no JavaScript - parte 2</title>
     <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
     
     <category>

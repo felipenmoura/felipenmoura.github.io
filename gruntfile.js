@@ -24,11 +24,13 @@ module.exports = function(grunt) {
         ],
         pageTitle = 'felipenmoura';
     
+    function stripTags (str, count) {
+        return str && str.replace? str.replace(/(<([^>]+)>)/ig, ''): str;
+    }
+    
     nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''));
     //nunEnv = new NunJucks.FileSystemLoader(['templates']);
-    nunEnv.addFilter('striptags', function(str, count) {
-        return str && str.replace? str.replace(/(<([^>]+)>)/ig, ' '): str;
-    });
+    nunEnv.addFilter('striptags', stripTags);
     
     function formatDate(date){
         var tmpDt = new Date(date);
@@ -251,6 +253,7 @@ module.exports = function(grunt) {
                     }
                     
                     validArticles[i].url = '/'+artPath + cur.name;
+                    validArticles[i].fullURL = DOMAIN + artPath + cur.name;
                     
                 });
                 
@@ -279,8 +282,8 @@ module.exports = function(grunt) {
                     data.ogImage = DOMAIN + (metaData.headerImg || DEFAULT_ART_IMG).replace(/^\//, '');
                     
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
-                    data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + metaData.name;
-                    data.socialDesc = metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
+                    data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + stripTags(metaData.title);
+                    data.socialDesc = addslashes(metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
                     
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
@@ -316,6 +319,14 @@ module.exports = function(grunt) {
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
         
+        function addslashes(str) {
+            return str.replace(/"/g, '&quote;');
+            return str.replace(/'/g, "&#39;");
+//            return (str + '')
+//                .replace(/[\\"']/g, '\\$&')
+//                .replace(/\u0000/g, '\\0');
+        }
+        
         function render () {
             
             applyURLsTo(data, 'talks', 'description');
@@ -325,7 +336,7 @@ module.exports = function(grunt) {
                 
                 data.ogImage = DOMAIN + OGIMAGE;
                 
-                data.socialDesc = data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.';
+                data.socialDesc = addslashes(data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
                 data.pageTitle = 'felipenmoura:page:home';
                 data.fullURL = DOMAIN;
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
@@ -387,13 +398,13 @@ module.exports = function(grunt) {
                     data.ogImage = DOMAIN + DEFAULT_ART_IMG;
                 }
                 
-                data.socialDesc = data.currentArticleMetaData.resume || DEFAULT_ART_DESC;
+                data.socialDesc = addslashes(data.currentArticleMetaData.resume || DEFAULT_ART_DESC);
                 
-                data.pageTitle = 'felipenmoura:page:articles | ' + data.currentArticleMetaData.name;
+                data.pageTitle = 'felipenmoura:page:articles | ' + stripTags(data.currentArticleMetaData.title);
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
                 
-                data.pageTitle = 'felipenmoura:page:artigos | ' + data.currentArticleMetaData.name;
+                data.pageTitle = 'felipenmoura:page:artigos | ' + stripTags(data.currentArticleMetaData.title);
                 //data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("artigos", data);
                 

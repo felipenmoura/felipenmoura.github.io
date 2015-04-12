@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="/sh/prism.min.css" />
         
         <!-- Info -->
-        <title>{{ pageTitle }}</title>
+        <title>X{{ pageTitle }}</title>
         <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
@@ -42,7 +42,7 @@
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
         <meta itemprop="name" content="{{ pageTitle }} | Felipe N Moura">
         <meta itemprop="description" content="{{ socialDesc | striptags }}">
-        <meta itemprop="image" content="/images/og-image-fb.png">
+        <meta itemprop="image" content="{{ ogImage }}">
         
         <!-- RSS -->
         <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="http://felipenmoura.com/feed.xml">
@@ -58,6 +58,8 @@
             ga('create', 'UA-1270869-17', 'auto');
             ga('send', 'pageview');
         </script>
+        
+        <div id="fb-root"></div>
         
         <div class="background-video videobg">
             <video id="background-video" class="background-video" autoplay loop poster="/images/relax.jpg" >

@@ -141,6 +141,21 @@ blockquote {
     display: none;
 }
 
+.social-buttons-container {
+    white-space: normal;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.twitter-share-button[style] {
+    vertical-align: text-bottom !important;
+}
+
+iframe[data-gapiattached="true"] {
+    transform: translateY(3px);
+}
+
+
 /* MEDIA QUERIES */
 @media ($mq_small) {
     .wrapper {

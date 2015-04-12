@@ -429,6 +429,20 @@ blockquote:before {
   display: none;
 }
 
+.social-buttons-container {
+  white-space: normal;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.twitter-share-button[style] {
+  vertical-align: text-bottom !important;
+}
+
+iframe[data-gapiattached="true"] {
+  transform: translateY(3px);
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 570px) {
   .wrapper {
@@ -1751,7 +1765,7 @@ body[data-page="articles"] .articles-nav {
   padding: .3rem 1.2rem;
   margin: 8rem 2rem .5rem .5rem;
   text-align: justify;
-  line-height: 1.1em;
+  line-height: 1.1rem;
   font-size: .8em;
   transform: translateY(-1000px);
   transition: transform linear .8s;
