@@ -292,14 +292,14 @@
     };
     
     UTILS.setTitle = function () {
-        var tt = 'felipenmoura: ' + (hashData.page || 'home');
+        var tt = (hashData.page || 'home');
         if(hashData.detail){
             tt+= ' | ' + hashData.detail
         }
         if(hashData.extra){
             tt+= ' | ' + hashData.extra
         }
-        document.title = tt;
+        document.title = tt.replace(/\-/g, ' ') + ' | Felipe N. Moura';
     };
     
     UTILS.registerPageView = function () {
