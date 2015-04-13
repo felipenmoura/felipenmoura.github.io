@@ -329,35 +329,36 @@
     
     UTILS.applpiedSocialButtons = false;
     UTILS.applySocialButtons = function () {
-        
-        if(!UTILS.applpiedSocialButtons){
-            // load twitter
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        setTimeout(function(){
+            if(!UTILS.applpiedSocialButtons){
+                // load twitter
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+                // load facebook
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=427975900560419";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            }else{
+                // reload twitter
+                twttr.widgets.load();
+                // reload facebook
+                FB.XFBML.parse(document.body);
+            }
             
-            // load facebook
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=427975900560419";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        }else{
-            // reload twitter
-            twttr.widgets.load();
-            // reload facebook
-            FB.XFBML.parse(document.body);
-        }
-        
-        // gp
-        //window.___gcfg = {lang: 'pt-BR'};
-        (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/platform.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-        
-        UTILS.applpiedSocialButtons = true;
+            // gp
+            //window.___gcfg = {lang: 'pt-BR'};
+            (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+
+            UTILS.applpiedSocialButtons = true;
+        }, 2000);
     }
 
     

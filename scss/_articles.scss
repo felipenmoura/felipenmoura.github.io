@@ -68,13 +68,28 @@ body[data-page="articles"] {
 
 .see-all-articles {
     #articlesList {
-        @include transform(translateY(275px));
+        @include transform(translateY(235px));
+    }
+    
+    #articlesListContainer {
+        height: 100%;
         z-index: 9;
+        transition: setTransition(height, linear, .01s, 0);
     }
 }
 
-#articlesList {
+#articlesListContainer {
     position: fixed;
+    top: 38px;
+    height: 0;
+    width: 100%;
+    z-index: 9;
+    overflow: hidden;
+    transition: setTransition(height, linear, .01s, .5s);
+}
+
+#articlesList {
+    position: absolute;
     top: -240px;
     max-height: 205px;
     width: 80%;

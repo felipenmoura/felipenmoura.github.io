@@ -77,15 +77,17 @@
             {{ currentArticle }}
         {% endif %}
         
-        <nav id="articlesList">
-            <ol>
-            {% for art in articlesList %}
-                <li>
-                    <a href="/articles/{{ art.name }}/" class="local">{{ art.title | striptags }}</a> <span class="tagsList">[{{ art.tags }}]</span>
-                </li>
-            {% endfor %}
-            </ol>
-        </nav>
+        <div id="articlesListContainer">
+            <nav id="articlesList">
+                <ol>
+                {% for art in articlesList %}
+                    <li>
+                        <a href="/articles/{{ art.name }}/" class="local">{{ art.title | striptags }}</a> <span class="tagsList">[{{ art.tags }}]</span>
+                    </li>
+                {% endfor %}
+                </ol>
+            </nav>
+        </div>
         
         <div id="decoration" class="glassEffect"></div>
         
