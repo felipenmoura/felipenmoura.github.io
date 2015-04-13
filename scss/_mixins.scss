@@ -1,8 +1,25 @@
-@mixin transform($value){
-    -webkit-transform: $value;
-    -moz-transform: $value;
-    -ms-transform: $value;
-    transform: $value;
+
+@function setTransition ($prop:all, $easing:linear, $duration:.3s, $delay:0) {
+    $str : $prop + " " + $easing + " " + $duration;
+    @if $delay > 0 {
+        $str : $str +  ' ' + $delay;
+    }
+    
+    @if $prop == "transform" {
+        $prop : "-webkit-" + $prop;
+        $str : $str + "; " + "-webkit-transition: " + $prop + " " + $easing + " " + $duration;
+    }
+    $str : $str + "; -webkit-backface-visibility: hidden";
+    
+    @return $str;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
 }
 
 @mixin animation($animate...) {

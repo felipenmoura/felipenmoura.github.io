@@ -75,7 +75,7 @@ body[data-page="home"] {
         margin-bottom: .5rem;
         position: relative;
         bottom: 0;
-        transition: all 200ms linear;
+        transition: setTransition(all, 200ms, linear);
     }
     
     ul {
@@ -109,7 +109,7 @@ body[data-page="home"] {
             margin: auto;
             border-top: solid 0 #444;
 
-            transition: all 200ms linear;
+            transition: setTransition(all, 200ms, linear);
         }
     }
 }

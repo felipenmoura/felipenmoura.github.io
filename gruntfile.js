@@ -315,7 +315,6 @@ module.exports = function(grunt) {
             fs.writeFileSync(where + '/index.html',
                              nunEnv.render('_templates/index.html', data), 'utf8');
             
-            
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
         

@@ -16,8 +16,8 @@
     min-height: 100%;
     top: 0;
     opacity: 0;
-    transition: all linear .5s .1s;
-    transform: translate(0, 100%);
+    transition: setTransition(all, linear, .5s, .1s);
+    @include transform(translate(0, 100%));
     z-index: 1;
 }
 
@@ -30,7 +30,7 @@ body[data-page="about"] {
     .about-full-content {
         //top: 0;
         opacity: 1;
-        transform: translate(0, 0);
+        @include transform(translate(0, 0));
     }
     
 //    #about-container {
@@ -52,14 +52,16 @@ body[data-page="about"] {
     position: relative;
     //top: -600px;
     top: 0;
-    transition: transform linear .5s;
-    transform: translate(0, -100%);
+    
+    transition: setTransition(transform, linear, .5s);
+    
+    @include transform(translate(0, -100%));
     z-index: 2;
 }
 
 body[data-page="about"] #about-container .decorator {
     //top: 0;
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
 }
 
 #about-container .decorator a {
@@ -72,13 +74,13 @@ body[data-page="about"] #about-container .decorator {
     position: relative;
     //left: -2000px;
     left: 0;
-    transition: transform linear .5s;
-    transform: translate(-2000px, 0);
+    transition: setTransition(transform, linear, .5s);
+    @include transform(translate(-2000px, 0));
 }
 
 body[data-page="about"] #about-container .col-1 {
     //left: 0;
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
 }
 
 #about-container .decorator .col-2 {
@@ -118,7 +120,7 @@ body[data-page="about"] #about-container .col-1 {
 }
 
 .picture-content {
-    transform: rotate(-5deg);
+    @include transform(rotate(-5deg));
 }
 
 .picture-square:before {
@@ -132,7 +134,7 @@ body[data-page="about"] #about-container .col-1 {
     background: white;
     border: solid 1px #999;
     box-shadow: 0 0 4px #999;
-    transform: rotate(-5deg);
+    @include transform(rotate(-5deg));
     z-index: -1;
 }
 

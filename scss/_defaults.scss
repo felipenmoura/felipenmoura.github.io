@@ -1,5 +1,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
 }
 
 html, body {
@@ -98,7 +99,7 @@ blockquote {
     display: block;
     margin: auto;
     width: 100%;
-    transition: width .3s linear;
+    transition: setTransition(width, .3s, linear);
 }
 
 .clear {
@@ -152,7 +153,7 @@ blockquote {
 }
 
 iframe[data-gapiattached="true"] {
-    transform: translateY(3px);
+    @include transform(translateY(3px));
 }
 
 

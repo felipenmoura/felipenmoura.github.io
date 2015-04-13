@@ -5,7 +5,7 @@ body[data-page="articles"] {
     overflow: hidden;
     
     #article-meta-data {
-        transform: translateY(0);
+        @include transform(translateY(0));
     }
     
     #articles-container {
@@ -14,29 +14,30 @@ body[data-page="articles"] {
         overflow: auto;
         
         background: rgba(0, 0, 0, .5);
-        transition: all linear $transSpeed 1.2s;
+        transition: setTransition(all, linear, $transSpeed, 1.2s);
         
         .decorator {
-            transform: translateY(0);
+            @include transform(translateY(0));
         }
         
         abs {
-            transform: translateY(0);
+            @include transform(translateY(0));
         }
         
         h2 {
-            transform: translateX(0);
+            @include transform(translateX(0));
         }
         
         .articles-content {
             opacity: 1;
-            transform: translateY(0);
+            @include transform(translateY(0));
         }
     }
     
     .articles-nav {
-        transform: translateY(0);
-        transition: all linear .4s 1s;
+        @include transform(translateY(0));
+        
+        transition: setTransition(all, linear, .4s, 1s);
     }
     
 }
@@ -54,8 +55,8 @@ body[data-page="articles"] {
     padding: .3rem;
     text-align: right;
     
-    transition: transform linear .8s;
-    transform: translateY(-1000px);
+    transition: setTransition(transform, linear, .8s);
+    @include transform(translateY(-1000px));
 }
 
 #articleTmpElement {
@@ -67,7 +68,7 @@ body[data-page="articles"] {
 
 .see-all-articles {
     #articlesList {
-        transform: translateY(275px);
+        @include transform(translateY(275px));
     }
 }
 
@@ -85,7 +86,7 @@ body[data-page="articles"] {
     border: solid 1px #000;
     border-top: none;
     box-shadow: 0 20px 40px -10px black;
-    transition: transform ease-out 300ms;
+    transition: setTransition(transform, ease-out, 300ms);
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 9;
@@ -137,8 +138,8 @@ body[data-page="articles"] {
     border-bottom: solid 1px #000;
     z-index: 999;
     
-    transform: translateY(-50px);
-    transition: all linear $transSpeed 0;
+    @include transform(translateY(-50px));
+    transition: setTransition(all, linear, $transSpeed, 0);
     
     #loading-bar {
         position: absolute;
@@ -149,8 +150,8 @@ body[data-page="articles"] {
         height: 100%;
         width: 0;
         
-        transition: width 400ms ease-in-out;
-        transform: skew(40deg);
+        transition: setTransition(width, 400ms, ease-in-out);
+        @include transform(skew(40deg));
     }
 
     ul {
@@ -219,14 +220,14 @@ body[data-page="articles"] {
         border-top: solid 1px #333;
         text-align: center;
         padding-right: 1.2rem;
-        transform: translateY(-5rem);
+        @include transform(translateY(-5rem));
         z-index: -1;
-        transition: transform $transSpeed ease-in;
+        transition: setTransition(transform, $transSpeed, ease-in);
     }
     
     &[data-show="tools"] {
         .article-tools {
-            transform: translateY(0);
+            @include transform(translateY(0));
         }
     }
     
@@ -262,7 +263,7 @@ body[data-page="articles"] {
             width: 0;
             height: 0;
             border: solid transparent 1em;
-            transform: rotateZ(135deg);
+            @include transform(rotateZ(135deg));
             font-size: .5rem;
         }
         
@@ -331,7 +332,7 @@ body[data-page="articles"] {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    transition: all linear $transSpeed 0;
+    transition: setTransition(all, linear, $transSpeed, 0);
     //padding-top: 1rem;
     
     .decorator {
@@ -377,8 +378,8 @@ body[data-page="articles"] {
             }
         }
         
-        transform: translateY(-200%);
-        transition: all linear $transSpeed;
+        @include transform(translateY(-200%));
+        transition: setTransition(all, linear, $transSpeed);
         
         .wrapper, img {
             position: absolute;
@@ -418,8 +419,8 @@ body[data-page="articles"] {
             line-height: 1.1rem;
             font-size: .8em;
             
-            transform: translateY(-1000px);
-            transition: transform linear .8s;
+            @include transform(translateY(-1000px));
+            transition: setTransition(transform, linear, .8s);
             
             b, strong, a {
                 color: white;
@@ -446,8 +447,8 @@ body[data-page="articles"] {
             box-shadow: 5px 5px 1px 0 black;
             max-width: 600px;
             
-            transform: translateX(-150%);
-            transition: all linear $transSpeed .4s;
+            @include transform(translateX(-150%));
+            transition: setTransition(all, linear, $transSpeed, .4s);
             
             em {
                 font-style: normal;
@@ -479,8 +480,8 @@ body[data-page="articles"] {
         white-space: pre-line;
         
         opacity: 0;
-        transform: translateY(500px);
-        transition: all linear .4s;
+        @include transform(translateY(500px));
+        transition: setTransition(all, linear, .4s);
         
         b, strong {
             color: #000;

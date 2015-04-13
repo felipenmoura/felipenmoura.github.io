@@ -8,7 +8,7 @@ body[data-page="utils"] {
         .decorator {
             //left: 0;
             //top: 0;
-            transform: translate(0);
+            @include transform(translate(0));
         }
     }
     
@@ -29,7 +29,7 @@ body[data-page="utils"] {
     width: 100%;
     //overflow: auto;
     opacity: 0;
-    transition: all linear .2s;
+    transition: setTransition(all, linear, .2s);
     
     .decorator {
         position: fixed;
@@ -43,12 +43,9 @@ body[data-page="utils"] {
         border: solid 1px black;
         border-width: 0 1px 0 0;
         
-        transform: translate(-44px, 0);
+        @include transform(translate(-44px, 0));
         
-        -webkit-transition: -webkit-transform linear .2s;
-        -moz-transition: -moz-transform linear .2s;
-        -ms-transition: -ms-transform linear .2s;
-        transition: transform linear .2s;
+        transition: setTransition(transform, linear, .2s);
         
         width: 44px;
         height: 100%;
@@ -86,7 +83,7 @@ body[data-page="utils"] {
             margin: 5px;
             box-shadow: 0 0 0px 2px #fff;
             background-image: url(/images/icons.png);
-            transition: box-shadow linear .2s;
+            transition: setTransition(box-shadow, linear, .2s);
             
             &.talks {
                 background-position: -96px 2px;
@@ -129,7 +126,7 @@ body[data-page="utils"] {
                 height: 30px;
                 font-size: .8rem;
                 opacity: 0;
-                transition: all linear .2s .3s;
+                transition: setTransition(all, linear, .2s, .3s);
                 
                 &:before {
                     content: "";
@@ -143,10 +140,10 @@ body[data-page="utils"] {
                     border-right: none;
                     border-bottom: none;
                     z-index: -1;
-                    -webkit-transform: rotate(-45deg);
-                    -moz-transform: rotate(-45deg);
-                    -ms-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
+                    @include transform(rotate(-45deg));
+                    @include transform(rotate(-45deg));
+                    @include transform(rotate(-45deg));
+                    @include transform(rotate(-45deg));
                 }
             }
         }
@@ -165,26 +162,30 @@ body[data-page="utils"] {
         section {
             opacity: 0;
             //margin-left: -100px;
-            -webkit-transform: translate(-100%, 0);
-            -moz-transform: translate(-100%, 0);
-            -ms-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+            @include transform(translate(-100%, 0));
+            @include transform(translate(-100%, 0));
+            @include transform(translate(-100%, 0));
+            @include transform(translate(-100%, 0));
             
             background: #fff;
             //border-top: solid 1px black;
-            transition: all linear .2s;
+            transition: setTransition(all, linear, .2s);
             
             &:nth-child(1n+0){
                 transition-delay: .05s;
+                -webkit-transition-delay: .05s;
             }
             &:nth-child(2n+0){
                 transition-delay: .2s;
+                -webkit-transition-delay: .2s;
             }
             &:nth-child(3n+0){
                 transition-delay: .1s;
+                -webkit-transition-delay: .1s;
             }
             &:nth-child(4n+0){
                 transition-delay: .15s;
+                -webkit-transition-delay: .15s;
             }
             &:last-child{
                 //padding-bottom: 140px;
@@ -351,7 +352,7 @@ body:not([data-page="utils"]) {
     
     section {
         opacity: 1 !important;
-        transform: translate(0) !important;
+        @include transform(translate(0) !important);
     }
 }
 
@@ -367,7 +368,7 @@ body:not([data-page="utils"]) {
             border-width: 0 0 1px 0;
             padding-top: 0;
             
-            transform: translate(0, -44px);
+            @include transform(translate(0, -44px));
             
             .icon {
                 
@@ -395,10 +396,10 @@ body:not([data-page="utils"]) {
                         height: 12px;
                         margin-left: -3px;
                         z-index: 1;
-                        -webkit-transform: rotate(-45deg);
-                        -moz-transform: rotate(-45deg);
-                        -ms-transform: rotate(-45deg);
-                        transform: rotate(45deg);
+                        @include transform(rotate(-45deg));
+                        @include transform(rotate(-45deg));
+                        @include transform(rotate(-45deg));
+                        @include transform(rotate(45deg));
                     }
                 }
             }
