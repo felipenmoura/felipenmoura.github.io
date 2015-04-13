@@ -13,8 +13,8 @@ body[data-page="articles"] {
         opacity: 1;
         overflow: auto;
         
-        background: rgba(0, 0, 0, .5);
-        transition: setTransition(all, linear, $transSpeed, 1.2s);
+        //background: rgba(0, 0, 0, .5);
+        //transition: setTransition(all, linear, $transSpeed, 3.2s);
         
         .decorator {
             @include transform(translateY(0));
@@ -332,7 +332,7 @@ body[data-page="articles"] {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    transition: setTransition(all, linear, $transSpeed, 0);
+    //transition: setTransition(all, linear, $transSpeed, 0);
     //padding-top: 1rem;
     
     .decorator {

@@ -302,7 +302,6 @@ table {
 
 *, *:before, *:after {
   box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
 }
 
 html, body {
@@ -1574,8 +1573,6 @@ body[data-page="articles"] #articles-container {
   z-index: 7;
   opacity: 1;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.5);
-  transition: all linear 0.5s 1.2s; -webkit-backface-visibility: hidden;
 }
 body[data-page="articles"] #articles-container .decorator {
   -moz-transform: translateY(0);
@@ -1884,7 +1881,6 @@ body[data-page="articles"] .articles-nav {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  transition: all linear 0.5s; -webkit-backface-visibility: hidden;
 }
 #articles-container .decorator {
   position: relative;
