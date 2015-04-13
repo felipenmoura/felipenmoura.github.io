@@ -69,6 +69,7 @@ body[data-page="articles"] {
 .see-all-articles {
     #articlesList {
         @include transform(translateY(275px));
+        z-index: 9;
     }
 }
 
@@ -89,7 +90,7 @@ body[data-page="articles"] {
     transition: setTransition(transform, ease-out, 300ms);
     overflow-y: auto;
     overflow-x: hidden;
-    z-index: 9;
+    z-index: 0;
     
     ol {
         margin: 0;
