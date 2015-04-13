@@ -234,6 +234,16 @@ body[data-page="articles"] {
     .art-nav-tbn {
         color: white;
         cursor: pointer;
+        
+        &.art-tools {
+              background-image: url(/images/gear.png);
+              background-position: center bottom;
+              background-repeat: no-repeat;
+              background-size: contain;
+              width: 18px;
+              height: 16px;
+              display: inline-block;
+        }
     }
     
     #article-tool-bigger {
@@ -525,6 +535,14 @@ body[data-page="articles"] {
 }
 
 @media ($mq_small) {
+    
+    .see-all-articles {
+        #articles-container {
+            .articles-nav {
+                position: fixed;
+            }
+        }
+    }
     
     #articles-container {
         

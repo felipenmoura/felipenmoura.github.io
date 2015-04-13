@@ -1798,6 +1798,15 @@ body[data-page="articles"] .articles-nav {
   color: white;
   cursor: pointer;
 }
+.articles-nav .art-nav-tbn.art-tools {
+  background-image: url(/images/gear.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 16px;
+  display: inline-block;
+}
 .articles-nav #article-tool-bigger {
   padding: 0 .5rem;
   border-right: solid 1px white;
@@ -2060,6 +2069,10 @@ body[data-page="articles"] .articles-nav {
 }
 
 @media (max-width: 570px) {
+  .see-all-articles #articles-container .articles-nav {
+    position: fixed;
+  }
+
   #articles-container .articles-nav {
     position: absolute;
   }
