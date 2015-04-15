@@ -570,14 +570,16 @@ body[data-page="home"] #main-nav .menu-home-btn:before,
 body[data-page="about"] #main-nav .menu-about-btn:before,
 body[data-page="utils"] #main-nav .menu-utils-btn:before,
 body[data-page="articles"] #main-nav .menu-articles-btn:before,
-#main-nav li:hover:before {
+#main-nav li:hover:before,
+#main-nav li:focus:before {
   border-top-width: 8px;
 }
 body[data-page="home"] #main-nav .menu-home-btn a,
 body[data-page="about"] #main-nav .menu-about-btn a,
 body[data-page="utils"] #main-nav .menu-utils-btn a,
 body[data-page="articles"] #main-nav .menu-articles-btn a,
-#main-nav li:hover a {
+#main-nav li:hover a,
+#main-nav li:focus a {
   bottom: -6px;
 }
 
@@ -2197,7 +2199,7 @@ body {
   width: 40px;
   height: 30px;
 }
-.youtube-thumb:hover:after {
+.youtube-thumb:focus:after, .youtube-thumb:hover:after {
   background-position: 0 -30px;
 }
 
