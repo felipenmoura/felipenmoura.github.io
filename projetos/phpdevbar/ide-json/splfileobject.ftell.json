@@ -1,0 +1,1 @@
+{"name":"SplFileObject.ftell","purpose":"Return current file position","manualid":"splfileobject.ftell","version":false,"params":[],"return":{"type":"int","description":"Returns the position of the file pointer as an integer, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ftell"}]}

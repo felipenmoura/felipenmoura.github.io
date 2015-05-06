@@ -1,0 +1,21 @@
+<h2>A quem deve facilitar?</h2>
+
+<div id="step1" class="content" style="background-color: rgba(250, 250, 250, 0.3); padding: 10px;">
+    <strong>diferentes usuários</strong><br/>
+        Dificuldades no controle motor, visual, audicao, cognição e aprendizagem.<br/>
+    <strong>Acesso à informação</strong><br/>
+        Acesso mobile, leitores de tela, lupa virtual<br/>
+</div>
+
+<div id="step2" class="content" style="display: none; background-color: rgba(250, 250, 250, 0.3); padding: 10px;">
+    <strong>Questões tecnológicoas</strong><br/>
+        Hardware, tamanho da tela, velocidade da internet...(mouse a pilha?)<br/>
+    <strong>Diferenças culturais</strong><br/>
+        Idioma, icones, cores, tamanho e orientacao de palavras, etc<br/>
+</div>
+
+<script>
+    PPW.addAction(function(){
+        $('#step1').fadeOut(function(){$('#step2').fadeIn();});
+    });
+</script>

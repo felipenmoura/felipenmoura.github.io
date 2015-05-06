@@ -1,0 +1,1 @@
+{"name":"HttpDeflateStream.finish","purpose":"Finalize deflate stream","manualid":"function.httpdeflatestream-finish","version":false,"params":[{"name":"data","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns the final part of deflated data."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

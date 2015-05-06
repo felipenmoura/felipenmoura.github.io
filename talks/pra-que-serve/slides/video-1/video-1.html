@@ -1,0 +1,53 @@
+<h2>Video</h2>
+
+<pre id="video-src-code" class="sh_html">
+&lt;video poster="images.png" controls autoplay>
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+  Video tag not supported. Download the video <a href="movie.webm">here</a>.
+&lt;/video></pre>
+
+<video id="theVideo-1" controls height="200" style="margin: auto; display: block;">
+    <source src="slides/video-1/shadows.ogv" type='video/ogg; codecs="theora, vorbis"' />
+    <source src="slides/video-1/shadows.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+</video>
+
+<script>
+
+
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [1, 6]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', false);
+        }
+    });
+
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [2, 3, 4]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', [1, 6]);
+        }
+    });
+
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [5]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', [2, 3, 4]);
+        }
+    });
+
+    PPW.onSlideExit(function(){
+        var el= document.getElementById('theVideo-1');
+        el.pause();
+        el.currentTime= 0;
+    });
+
+
+</script>

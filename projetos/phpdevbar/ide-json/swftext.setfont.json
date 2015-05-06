@@ -1,0 +1,1 @@
+{"name":"SWFText.setFont","purpose":"Sets the current font","manualid":"function.swftext.setfont","version":false,"params":[{"name":"font","type":"SWFFont","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

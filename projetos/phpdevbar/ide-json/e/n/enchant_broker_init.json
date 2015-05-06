@@ -1,0 +1,1 @@
+{"name":"enchant_broker_init","purpose":"create a new broker object capable of requesting","manualid":"function.enchant-broker-init","version":"PECL enchant >= 0.1.0 ","params":[],"return":{"type":"resource","description":"Returns a broker resource on success or FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"enchant_broker_free"}]}

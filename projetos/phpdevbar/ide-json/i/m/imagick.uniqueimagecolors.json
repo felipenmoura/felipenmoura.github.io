@@ -1,0 +1,1 @@
+{"name":"Imagick.uniqueImageColors","purpose":"Discards all but one of any pixel color","manualid":"function.imagick-uniqueimagecolors","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

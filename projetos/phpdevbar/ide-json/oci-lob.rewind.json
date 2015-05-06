@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.rewind","purpose":"Moves the internal pointer to the beginning of the large object","manualid":"function.oci-lob-rewind","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

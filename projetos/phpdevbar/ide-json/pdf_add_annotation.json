@@ -1,0 +1,1 @@
+{"name":"PDF_add_annotation","purpose":"Add annotation [deprecated]","manualid":"function.pdf-add-annotation","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

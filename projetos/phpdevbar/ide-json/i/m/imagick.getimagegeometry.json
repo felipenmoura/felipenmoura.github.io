@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageGeometry","purpose":"Gets the width and height as an associative array","manualid":"function.imagick-getimagegeometry","version":false,"params":[],"return":{"type":"array","description":"Returns an array with the width\/height of the image.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

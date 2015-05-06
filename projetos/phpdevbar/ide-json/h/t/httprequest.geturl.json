@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getUrl","purpose":"Get url","manualid":"function.httprequest-geturl","version":false,"params":[],"return":{"type":"string","description":"Returns the currently set request url as string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

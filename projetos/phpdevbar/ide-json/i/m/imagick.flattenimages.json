@@ -1,0 +1,1 @@
+{"name":"Imagick.flattenImages","purpose":"Merges a sequence of images","manualid":"function.imagick-flattenimages","version":false,"params":[],"return":{"type":"Imagick","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

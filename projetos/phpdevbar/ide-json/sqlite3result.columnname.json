@@ -1,0 +1,1 @@
+{"name":"SQLite3Result.columnName","purpose":"Returns the name of the nth column","manualid":"sqlite3result.columnname","version":false,"params":[{"name":"column_number","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns the string name of the column identified by\n   column_number."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

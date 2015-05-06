@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagechanneldepth","purpose":"Gets the depth for a particular image channel","manualid":"gmagick.getimagechanneldepth","version":false,"params":[],"return":{"type":"void","description":"Depth of image channel"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

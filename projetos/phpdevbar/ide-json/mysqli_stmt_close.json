@@ -1,0 +1,1 @@
+{"name":"mysqli_stmt_close","purpose":"Closes a prepared statement","manualid":"mysqli-stmt.close","version":false,"params":[{"name":"stmt","type":"mysqli_stmt","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"mysqli_prepare"}]}

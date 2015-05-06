@@ -1,0 +1,1 @@
+{"name":"OuterIterator.getInnerIterator","purpose":"Returns the inner iterator for the current entry.","manualid":"outeriterator.getchildren","version":false,"params":[],"return":{"type":"Iterator","description":"The inner iterator for the current entry."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

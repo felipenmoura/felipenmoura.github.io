@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagecolorspace","purpose":"Gets the image colorspace","manualid":"gmagick.getimagecolorspace","version":false,"params":[],"return":{"type":"void","description":"Colorspace"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

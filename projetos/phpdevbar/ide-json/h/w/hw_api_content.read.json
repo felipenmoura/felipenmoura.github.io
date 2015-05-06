@@ -1,0 +1,1 @@
+{"name":"hw_api_content.read","purpose":"Read content","manualid":"function.hwapi-content-read","version":false,"params":[{"name":"buffer","type":"string","optional":"false"},{"name":"len","type":"int","optional":"false"}],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

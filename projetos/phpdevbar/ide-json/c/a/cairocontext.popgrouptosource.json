@@ -1,0 +1,1 @@
+{"name":"CairoContext.popGroupToSource","purpose":"The popGroupToSource purpose","manualid":"cairocontext.popgrouptosource","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

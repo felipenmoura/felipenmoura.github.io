@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getStatsFacets","purpose":"Returns all the stats facets that were set","manualid":"solrquery.getstatsfacets","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ZipArchive.GetStatusString","purpose":"Returns the status error message, system and\/or zip messages","manualid":"function.ziparchive-getstatusstring","version":false,"params":[],"return":{"type":"string","description":"Returns a file pointer (resource) on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

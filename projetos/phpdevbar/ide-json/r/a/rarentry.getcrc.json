@@ -1,0 +1,1 @@
+{"name":"RarEntry.getCrc","purpose":"Get CRC of the entry.","manualid":"rarentry.getcrc","version":false,"params":[],"return":{"type":"string","description":"Returns the CRC of the archive entry or FALSE on error."},"errors":null,"notes":[],"changelog":[{"version":"2.0.0","change":"This method now returns correct values for multiple volume archives."}],"seealso":[]}

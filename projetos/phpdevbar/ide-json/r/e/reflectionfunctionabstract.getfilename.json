@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.getFileName","purpose":"Gets file name","manualid":"reflectionfunctionabstract.getfilename","version":false,"params":[],"return":{"type":"string","description":"The file name."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::getNamespaceName"}]}

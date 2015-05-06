@@ -1,0 +1,1 @@
+{"name":"CairoImageSurface.getStride","purpose":"The getStride purpose","manualid":"cairoimagesurface.getstride","version":false,"params":[],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

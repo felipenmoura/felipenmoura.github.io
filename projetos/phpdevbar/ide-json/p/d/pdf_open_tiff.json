@@ -1,0 +1,1 @@
+{"name":"PDF_open_tiff","purpose":"Open TIFF image [deprecated]","manualid":"function.pdf-open-tiff","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

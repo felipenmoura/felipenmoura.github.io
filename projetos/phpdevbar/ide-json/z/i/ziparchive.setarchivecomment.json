@@ -1,0 +1,1 @@
+{"name":"ZipArchive.setArchiveComment","purpose":"Set the comment of a ZIP archive","manualid":"function.ziparchive-setarchivecomment","version":false,"params":[{"name":"comment","type":"string","optional":"false"}],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

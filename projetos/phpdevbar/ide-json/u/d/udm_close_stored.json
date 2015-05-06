@@ -1,0 +1,1 @@
+{"name":"udm_close_stored","purpose":"Close connection to stored","manualid":"function.udm-close-stored","version":"PHP 4 >= 4.2.0","params":[{"name":"agent","type":"resource","optional":"false"},{"name":"link","type":"int","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

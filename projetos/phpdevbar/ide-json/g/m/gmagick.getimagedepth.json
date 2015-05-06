@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagedepth","purpose":"Gets the depth of the image","manualid":"gmagick.getimagedepth","version":false,"params":[],"return":{"type":"void","description":"Image depth"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.flopimage","purpose":"The flopimage purpose","manualid":"gmagick.flopimage","version":false,"params":[],"return":{"type":"void","description":"The flopped Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrResponse.getRequestUrl","purpose":"Returns the full URL the request was sent to","manualid":"solrresponse.getrequesturl","version":false,"params":[],"return":{"type":"string","description":"Returns the full URL the request was sent to"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

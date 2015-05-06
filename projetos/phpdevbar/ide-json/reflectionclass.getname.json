@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getName","purpose":"Gets class name","manualid":"reflectionclass.getname","version":false,"params":[],"return":{"type":"string","description":"The class name."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getNamespaceName"}]}

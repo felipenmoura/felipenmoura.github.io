@@ -1,0 +1,1 @@
+{"name":"imap_listsubscribed","purpose":"Alias of imap_lsub","manualid":"function.imap-listsubscribed","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

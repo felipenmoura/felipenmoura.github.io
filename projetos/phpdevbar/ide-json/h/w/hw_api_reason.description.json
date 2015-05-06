@@ -1,0 +1,1 @@
+{"name":"hw_api_reason.description","purpose":"Returns description of reason","manualid":"function.hwapi-reason-description","version":false,"params":[],"return":{"type":"string","description":"Returns the description, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

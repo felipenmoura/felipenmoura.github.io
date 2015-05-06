@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getstrokewidth","purpose":"Returns the width of the stroke used to draw object outlines","manualid":"gmagickdraw.getstrokewidth","version":false,"params":[],"return":{"type":"void","description":"Returns a double describing the stroke width."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

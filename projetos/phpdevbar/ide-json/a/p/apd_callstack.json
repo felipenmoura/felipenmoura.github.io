@@ -1,0 +1,1 @@
+{"name":"apd_callstack","purpose":"Returns the current call stack as an array","manualid":"function.apd-callstack","version":"PECL apd 0.2-0.4","params":[],"return":{"type":"array","description":"An array containing the current call stack."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

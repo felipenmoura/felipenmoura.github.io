@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+
+        <h3>Look the console of your browser</h3>
+
+        <div>
+            Throttle will simply ignore repeated calls for given methods, in case they are too fast.<br/>
+            Interesting implementation for cases like input auto-completes, window resize or mousemove.<br/>
+            The source code:<br/>
+            <pre id='sc'></pre>
+            The output is in your console.
+        </div>
+
+        <script src='../dist/maker.min.js'></script>
+
+        <script id='sampleCode'>
+            var CONST= {
+                pi: 3.14,
+                author: 'Felipe',
+                version: '0.1.0'
+            };
+
+            make.readonly(CONST);
+
+            console.log(CONST.author);
+            CONST.author= 'moura';
+            console.log(CONST.author);
+
+        </script>
+
+        <script>
+            setTimeout(function(){
+                document.getElementById('sc').innerHTML= document.getElementById('sampleCode').text;
+            }, 100);
+        </script>
+
+    </body>
+</html>

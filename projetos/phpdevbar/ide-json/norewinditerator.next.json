@@ -1,0 +1,1 @@
+{"name":"NoRewindIterator.next","purpose":"Forward to the next element","manualid":"norewinditerator.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"NoRewindIterator::rewind"}]}

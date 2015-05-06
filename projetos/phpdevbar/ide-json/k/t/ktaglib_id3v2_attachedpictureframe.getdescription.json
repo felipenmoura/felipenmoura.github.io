@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_AttachedPictureFrame.getDescription","purpose":"Returns a description for the picture in a picture frame","manualid":"id3v2attachedpictureframe.getDescription","version":false,"params":[],"return":{"type":"string","description":"Returns a description for the picture in a picture frame"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

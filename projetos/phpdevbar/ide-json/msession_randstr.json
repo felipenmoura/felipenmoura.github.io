@@ -1,0 +1,1 @@
+{"name":"msession_randstr","purpose":"Get random string","manualid":"function.msession-randstr","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"param","type":"int","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

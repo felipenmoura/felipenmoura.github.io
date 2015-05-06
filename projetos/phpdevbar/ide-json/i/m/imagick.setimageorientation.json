@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageOrientation","purpose":"Sets the image orientation","manualid":"function.imagick-setimageorientation","version":false,"params":[{"name":"orientation","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

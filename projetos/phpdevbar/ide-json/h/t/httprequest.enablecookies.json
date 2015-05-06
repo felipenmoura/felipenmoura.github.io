@@ -1,0 +1,1 @@
+{"name":"HttpRequest.enableCookies","purpose":"Enable cookies","manualid":"function.httprequest-enablecookies","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

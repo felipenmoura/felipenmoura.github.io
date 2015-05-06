@@ -1,0 +1,1 @@
+{"name":"dns_check_record","purpose":"Alias of checkdnsrr","manualid":"function.dns-check-record","version":"PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

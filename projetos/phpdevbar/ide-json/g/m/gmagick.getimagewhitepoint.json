@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagewhitepoint","purpose":"Returns the chromaticity white point","manualid":"gmagick.getimagewhitepoint","version":false,"params":[],"return":{"type":"void","description":"Returns the chromaticity white point as an associative array with the keys \"x\" and \"y\"."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

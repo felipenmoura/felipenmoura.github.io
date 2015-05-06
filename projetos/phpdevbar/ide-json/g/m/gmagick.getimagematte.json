@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagematte","purpose":"Return if the image has a matte channel","manualid":"gmagick.getimagematte","version":false,"params":[],"return":{"type":"void","description":"Returns TRUE if the image has a matte channel otherwise false."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

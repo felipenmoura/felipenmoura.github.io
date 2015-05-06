@@ -1,0 +1,1 @@
+{"name":"Gmagick.cyclecolormapimage","purpose":"Displaces an image's colormap","manualid":"gmagick.cyclecolormapimage","version":false,"params":[{"name":"displace","type":"float","optional":"false"}],"return":{"type":"void","description":"Returns self on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"printer_end_page","purpose":"Close active page","manualid":"function.printer-end-page","version":"PECL printer SVN","params":[{"name":"printer_handle","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

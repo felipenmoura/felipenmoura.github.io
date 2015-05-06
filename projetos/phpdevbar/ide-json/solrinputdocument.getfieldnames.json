@@ -1,0 +1,1 @@
+{"name":"SolrInputDocument.getFieldNames","purpose":"Returns an array containing all the fields in the document","manualid":"solrinputdocument.getfieldnames","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

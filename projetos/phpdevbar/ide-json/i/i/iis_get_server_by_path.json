@@ -1,0 +1,1 @@
+{"name":"iis_get_server_by_path","purpose":"Return the instance number associated with the Path","manualid":"function.iis-get-server-by-path","version":"PECL iisfunc SVN","params":[{"name":"path","type":"string","optional":"false"}],"return":{"type":"int","description":"Returns the server instance number."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

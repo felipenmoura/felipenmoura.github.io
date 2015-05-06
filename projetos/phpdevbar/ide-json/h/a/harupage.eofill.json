@@ -1,0 +1,1 @@
+{"name":"HaruPage.eofill","purpose":"Fill current path using even-odd rule","manualid":"function.harupage-eofill","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

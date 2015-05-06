@@ -1,0 +1,1 @@
+{"name":"curl_copy_handle","purpose":"Copy a cURL handle along with all of its preferences","manualid":"function.curl-copy-handle","version":"PHP 5","params":[{"name":"ch","type":"resource","optional":"false"}],"return":{"type":"resource","description":"Returns a new cURL handle."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

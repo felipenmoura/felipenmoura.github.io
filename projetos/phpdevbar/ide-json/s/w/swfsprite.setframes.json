@@ -1,0 +1,1 @@
+{"name":"SWFSprite.setFrames","purpose":"Sets the total number of frames in the animation","manualid":"function.swfsprite.setframes","version":false,"params":[{"name":"number","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"hash_copy","purpose":"Copy hashing context","manualid":"function.hash-copy","version":"PHP 5 >= 5.3.0","params":[{"name":"context","type":"resource","optional":"false"}],"return":{"type":"resource","description":"Returns a copy of Hashing Context resource."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

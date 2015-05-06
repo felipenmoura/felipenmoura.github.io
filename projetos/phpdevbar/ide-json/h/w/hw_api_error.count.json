@@ -1,0 +1,1 @@
+{"name":"hw_api_error.count","purpose":"Returns number of reasons","manualid":"function.hwapi-error-count","version":false,"params":[],"return":{"type":"int","description":"Returns the number of errors, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

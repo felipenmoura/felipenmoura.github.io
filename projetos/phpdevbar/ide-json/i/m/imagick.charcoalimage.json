@@ -1,0 +1,1 @@
+{"name":"Imagick.charcoalImage","purpose":"Simulates a charcoal drawing","manualid":"function.imagick-charcoalimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"},{"name":"sigma","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

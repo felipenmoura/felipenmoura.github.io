@@ -1,0 +1,1 @@
+{"name":"SolrDocument.clear","purpose":"Drops all the fields in the document","manualid":"solrdocument.clear","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

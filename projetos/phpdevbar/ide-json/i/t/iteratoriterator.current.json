@@ -1,0 +1,1 @@
+{"name":"IteratorIterator.current","purpose":"Get the current value","manualid":"iteratoriterator.current","version":false,"params":[],"return":{"type":"void","description":"The value of the current element."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"IteratorIterator::key"}]}

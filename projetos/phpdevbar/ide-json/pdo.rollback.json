@@ -1,0 +1,1 @@
+{"name":"PDO.rollBack","purpose":"Rolls back a transaction","manualid":"pdo.rollback","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"PDO::beginTransaction"},{"type":"function","name":"PDO::commit"}]}

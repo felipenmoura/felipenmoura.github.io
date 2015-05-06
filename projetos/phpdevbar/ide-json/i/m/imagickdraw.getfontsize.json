@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFontSize","purpose":"Returns the font pointsize","manualid":"function.imagickdraw-getfontsize","version":false,"params":[],"return":{"type":"float","description":"Returns the font size associated with the current ImagickDraw object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

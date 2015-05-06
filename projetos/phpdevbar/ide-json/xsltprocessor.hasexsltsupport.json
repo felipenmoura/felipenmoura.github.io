@@ -1,0 +1,1 @@
+{"name":"XSLTProcessor.hasExsltSupport","purpose":"Determine if PHP has EXSLT support","manualid":"xsltprocessor.hasexsltsupport","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

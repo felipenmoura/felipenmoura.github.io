@@ -1,0 +1,1 @@
+{"name":"set_socket_blocking","purpose":"Alias of stream_set_blocking","manualid":"function.set-socket-blocking","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SphinxClient.escapeString","purpose":"Escape special characters","manualid":"sphinxclient.escapestring","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns escaped string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ArrayObject.natcasesort","purpose":"Sort an array using a case insensitive \"natural order\" algorithm","manualid":"arrayobject.natcasesort","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.equalizeImage","purpose":"Equalizes the image histogram","manualid":"function.imagick-equalizeimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

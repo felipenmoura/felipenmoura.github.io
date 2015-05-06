@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.toArray","purpose":"Returns a PHP array from the fixed array","manualid":"splfixedarray.toarray","version":false,"params":[],"return":{"type":"array","description":"Returns a PHP array, similar to the fixed array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

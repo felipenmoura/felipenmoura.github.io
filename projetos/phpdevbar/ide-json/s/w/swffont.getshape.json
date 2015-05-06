@@ -1,0 +1,1 @@
+{"name":"SWFFont.getShape","purpose":"Returns the glyph shape of a char as a text string","manualid":"function.swffont.getshape","version":false,"params":[{"name":"code","type":"int","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

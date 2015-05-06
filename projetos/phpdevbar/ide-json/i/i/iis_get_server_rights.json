@@ -1,0 +1,1 @@
+{"name":"iis_get_server_rights","purpose":"Gets server rights","manualid":"function.iis-get-server-rights","version":"PECL iisfunc SVN","params":[{"name":"server_instance","type":"int","optional":"false"},{"name":"virtual_path","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

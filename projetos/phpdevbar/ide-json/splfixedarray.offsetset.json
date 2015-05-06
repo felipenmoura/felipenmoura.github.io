@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.offsetSet","purpose":"Sets a new value at a specified index","manualid":"splfixedarray.offsetset","version":false,"params":[{"name":"index","type":"int","optional":"false"},{"name":"newval","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

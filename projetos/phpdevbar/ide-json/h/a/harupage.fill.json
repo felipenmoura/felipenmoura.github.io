@@ -1,0 +1,1 @@
+{"name":"HaruPage.fill","purpose":"Fill current path using nonzero winding number rule","manualid":"function.harupage-fill","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

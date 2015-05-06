@@ -1,0 +1,1 @@
+{"name":"lzf_compress","purpose":"LZF compression","manualid":"function.lzf-compress","version":"PECL lzf >= 0.1.0","params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the compressed data or FALSE if an error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"lzf_decompress"}]}

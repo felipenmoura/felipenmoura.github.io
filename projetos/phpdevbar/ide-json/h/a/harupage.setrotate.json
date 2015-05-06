@@ -1,0 +1,1 @@
+{"name":"HaruPage.setRotate","purpose":"Set rotation angle of the page","manualid":"function.harupage-setrotate","version":false,"params":[{"name":"angle","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

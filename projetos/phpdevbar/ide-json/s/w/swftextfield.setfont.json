@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setFont","purpose":"Sets the text field font","manualid":"function.swftextfield.setfont","version":false,"params":[{"name":"font","type":"SWFFont","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

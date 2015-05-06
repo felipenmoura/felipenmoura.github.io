@@ -1,0 +1,1 @@
+{"name":"Imagick.getSize","purpose":"Returns the size associated with the Imagick object","manualid":"function.imagick-getsize","version":false,"params":[],"return":{"type":"array","description":"Returns the size associated with the Imagick object as an array with the\n   keys \"columns\" and \"rows\"."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

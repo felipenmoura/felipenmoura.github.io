@@ -1,0 +1,1 @@
+{"name":"SolrUtils.escapeQueryChars","purpose":"Escapes a lucene query string","manualid":"solrutils.escapequerychars","version":false,"params":[{"name":"str","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the escaped string or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

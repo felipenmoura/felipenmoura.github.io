@@ -1,0 +1,1 @@
+{"name":"vpopmail_del_domain","purpose":"Delete a virtual domain","manualid":"function.vpopmail-del-domain","version":"PHP 4 >= 4.0.5, PECL vpopmail >= 0.2","params":[{"name":"domain","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

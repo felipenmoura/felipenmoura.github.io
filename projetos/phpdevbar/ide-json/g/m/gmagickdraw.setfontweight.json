@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setfontweight","purpose":"Sets the font weight","manualid":"gmagickdraw.setfontweight","version":false,"params":[{"name":"weight","type":"int","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

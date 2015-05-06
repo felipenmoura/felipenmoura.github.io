@@ -1,0 +1,1 @@
+{"name":"array_product","purpose":"Calculate the product of values in an array","manualid":"function.array-product","version":"PHP 5 >= 5.1.0","params":[{"name":"array","type":"array","optional":"false"}],"return":{"type":"number","description":"Returns the product as an integer or float."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

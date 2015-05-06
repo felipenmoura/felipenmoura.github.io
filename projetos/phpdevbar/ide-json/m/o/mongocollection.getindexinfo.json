@@ -1,0 +1,1 @@
+{"name":"MongoCollection.getIndexInfo","purpose":"Returns an array of index names for this collection","manualid":"mongocollection.getindexinfo","version":false,"params":[],"return":{"type":"array","description":"Returns a list of index names."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

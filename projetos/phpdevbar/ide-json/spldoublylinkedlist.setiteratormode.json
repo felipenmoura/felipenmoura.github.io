@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.setIteratorMode","purpose":"Sets the mode of iteration","manualid":"spldoublylinkedlist.setiteratormode","version":false,"params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimageinterlacescheme","purpose":"Sets the interlace scheme of the image.","manualid":"gmagick.setimageinterlacescheme","version":false,"params":[{"name":"interlace","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

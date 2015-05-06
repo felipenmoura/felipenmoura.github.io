@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setConnectTimeout","purpose":"Set connection timeout","manualid":"sphinxclient.setconnecttimeout","version":false,"params":[{"name":"timeout","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

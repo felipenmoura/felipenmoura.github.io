@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsPrefix","purpose":"Returns the term prefix","manualid":"solrquery.gettermsprefix","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

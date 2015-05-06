@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFillAlpha","purpose":"Sets the opacity to use when drawing using the fill color or fill texture","manualid":"function.imagickdraw-setfillalpha","version":false,"params":[{"name":"opacity","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

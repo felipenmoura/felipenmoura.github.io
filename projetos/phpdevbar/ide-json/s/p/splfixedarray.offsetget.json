@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.offsetGet","purpose":"Returns the value at the specified index","manualid":"splfixedarray.offsetget","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"mixed","description":"The value at the specified index."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_ChangeSummary.getChangedDataObjects","purpose":"Get the changed data objects from a change summary","manualid":"function.sdo-das-changesummary-getchangeddataobjects","version":false,"params":[],"return":{"type":"SDO_List","description":"Returns an SDO_List of SDO_DataObjects."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

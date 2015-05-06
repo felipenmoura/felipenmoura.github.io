@@ -1,0 +1,1 @@
+{"name":"ming_keypress","purpose":"Returns the action flag for keyPress(char)","manualid":"function.ming-keypress","version":"PHP 5 <= 5.3.0, PECL ming SVN","params":[{"name":"char","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"variant_abs","purpose":"Returns the absolute value of a variant","manualid":"function.variant-abs","version":"PHP 5","params":[{"name":"val","type":"mixed","optional":"false"}],"return":{"type":"mixed","description":"Returns the absolute value of val."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"abs"}]}

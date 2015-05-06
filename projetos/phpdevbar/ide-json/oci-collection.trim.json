@@ -1,0 +1,1 @@
+{"name":"OCI-Collection.trim","purpose":"Trims elements from the end of the collection","manualid":"function.oci-collection-trim","version":false,"params":[{"name":"num","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

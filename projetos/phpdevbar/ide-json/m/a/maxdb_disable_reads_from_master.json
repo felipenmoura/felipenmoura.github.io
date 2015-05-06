@@ -1,0 +1,1 @@
+{"name":"maxdb_disable_reads_from_master","purpose":"Disable reads from master","manualid":"function.maxdb-disable-reads-from-master","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

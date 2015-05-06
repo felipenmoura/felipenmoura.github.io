@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getClipPath","purpose":"Obtains the current clipping path ID","manualid":"function.imagickdraw-getclippath","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the clip path ID or false if no clip path exists."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFText.getWidth","purpose":"Computes string's width","manualid":"function.swftext.getwidth","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"float","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

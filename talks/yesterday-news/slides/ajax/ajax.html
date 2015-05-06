@@ -1,0 +1,30 @@
+<h2 class="LANG-PT">Em uma entrevista...</h2>
+<h2 class="LANG-EN">In an interview...</h2>
+
+<span class="LANG-PT">"_Então, diga-me um diferencial seu..."</span>
+<span class="LANG-EN">"_So, tell me, what is your differential?"</span>
+<div class="ajax-answer"><span class="LANG-PT">"_Eu sei Ajax!"</span></div>
+<div class="ajax-answer"><span class="LANG-EN">"_I know Ajax!"</span></div>
+
+<img src="slides/ajax/eu-sei-ajax.jpg" class="fulfill ajax-img" />
+
+<script>
+    PPW.addAction({
+        does: function(){
+            PPW.animate('.ajax-answer', 'tada');
+        },
+        undo: function(){
+            PPW.animate('.ajax-answer', 'fadeOut');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 3000,
+        does: function(){
+            $('.ajax-img').show();
+        },
+        undo: function(){
+            $('.ajax-img').hide();
+        }
+    });
+</script>

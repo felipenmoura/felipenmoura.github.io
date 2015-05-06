@@ -1,0 +1,18 @@
+<?php
+session_start();
+session_destroy();
+session_unset();
+$HTTP_SESSION_VARS['usf_id']="";
+
+//header("Location: ../home.php");
+?>
+<script>
+	try
+	{
+		top.opener.onlyEvalAjax("requests/_direita.php", "", "document.getElementById('td_form_login').innerHTML= ajax");
+		window.close();
+	}catch(exception)
+	{
+		top.location.href= '../home.php';
+	}
+</script>

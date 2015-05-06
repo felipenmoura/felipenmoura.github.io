@@ -1,0 +1,1 @@
+{"name":"SWFMovie.startSound","purpose":"","manualid":"function.swfmovie.startsound","version":false,"params":[{"name":"sound","type":"SWFSound","optional":"false"}],"return":{"type":"SWFSoundInstance","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

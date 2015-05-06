@@ -1,0 +1,1 @@
+{"name":"SWFText.setSpacing","purpose":"Sets the current font spacing","manualid":"function.swftext.setspacing","version":false,"params":[{"name":"spacing","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

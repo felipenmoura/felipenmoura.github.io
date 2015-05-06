@@ -1,0 +1,1 @@
+{"name":"Gmagick.__construct","purpose":"The Gmagick constructor","manualid":"gmagick.construct","version":false,"params":[{"name":"filename","type":"string","optional":"true"}],"return":{"type":null,"description":"Returns a new Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

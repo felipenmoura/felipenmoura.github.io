@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setEchoHandler","purpose":"Toggles the echoHandler parameter","manualid":"solrquery.setechohandler","version":false,"params":[{"name":"flag","type":"bool","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

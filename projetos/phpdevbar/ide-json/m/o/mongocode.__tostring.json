@@ -1,0 +1,1 @@
+{"name":"MongoCode.__toString","purpose":"Returns this code as a string","manualid":"mongocode.tostring","version":false,"params":[],"return":{"type":"string","description":"This code, the scope is not returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

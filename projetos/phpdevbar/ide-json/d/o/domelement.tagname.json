@@ -1,0 +1,1 @@
+{"name":"DomElement.tagname","purpose":"Returns the name of the current element","manualid":"function.domelement-tagname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the current DomElement node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setfillcolor","purpose":"Sets the fill color to be used for drawing filled objects.","manualid":"gmagickdraw.setfillcolor","version":false,"params":[{"name":"color","type":"string","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

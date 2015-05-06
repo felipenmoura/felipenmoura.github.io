@@ -1,0 +1,1 @@
+{"name":"GearmanTask.isRunning","purpose":"Test whether the task is currently running","manualid":"gearmantask.isrunning","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the task is running, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

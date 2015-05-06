@@ -1,0 +1,1 @@
+{"name":"CairoContext.getMatrix","purpose":"The getMatrix purpose","manualid":"cairocontext.getmatrix","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

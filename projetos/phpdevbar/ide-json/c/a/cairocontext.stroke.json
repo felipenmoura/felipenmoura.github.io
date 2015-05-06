@@ -1,0 +1,1 @@
+{"name":"CairoContext.stroke","purpose":"The stroke purpose","manualid":"cairocontext.stroke","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

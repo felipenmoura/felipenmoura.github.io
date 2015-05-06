@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pathLineToVerticalRelative","purpose":"Draws a vertical line path","manualid":"function.imagickdraw-pathlinetoverticalrelative","version":false,"params":[{"name":"y","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

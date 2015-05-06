@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageUnits","purpose":"Gets the image units of resolution","manualid":"function.imagick-getimageunits","version":false,"params":[],"return":{"type":"int","description":"Returns the image units of resolution.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"notes_create_note","purpose":"Create a note using form form_name","manualid":"function.notes-create-note","version":"PHP 4 >= 4.0.5","params":[{"name":"database_name","type":"string","optional":"false"},{"name":"form_name","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

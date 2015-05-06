@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageHeight","purpose":"Returns the image height","manualid":"function.imagick-getimageheight","version":false,"params":[],"return":{"type":"int","description":"Returns the image height in pixels.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

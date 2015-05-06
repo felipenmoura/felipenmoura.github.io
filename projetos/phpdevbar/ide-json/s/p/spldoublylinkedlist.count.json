@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.count","purpose":"Counts the number of elements in the doubly linked list.","manualid":"spldoublylinkedlist.count","version":false,"params":[],"return":{"type":"int","description":"Returns the number of elements in the doubly linked list."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

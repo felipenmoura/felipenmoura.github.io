@@ -1,0 +1,1 @@
+{"name":"ReflectionExtension.info","purpose":"Gets extension info","manualid":"reflectionextension.info","version":false,"params":[],"return":{"type":"string","description":"Information about the extension."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionExtension::getName"},{"type":"function","name":"phpinfo"}]}

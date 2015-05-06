@@ -1,0 +1,1 @@
+{"name":"PDF_end_item","purpose":"Close structure element or other content item","manualid":"function.pdf-end-item","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"id","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

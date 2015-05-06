@@ -1,0 +1,133 @@
+<h1>
+	Avan&ccedil;ando...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin: auto;
+				margin-top: 30px;
+				width: 550px;'>
+		<div onclick="showModalExample()" id='showModalButton' onkeydown="showModalExample(event)" tabindex='0' class='clickable decoratedButton' style='width: 190px;float:none;margin:auto;'>
+			<span class='clickable'>Show Modal</span>
+		</div>
+		
+		<div id='modalBlocker' class='clickable' style='display: none;'></div>
+		<div id='modalWindow'
+			 class='clickable'
+			 style='display: none;
+					background-color: white;
+					color: #444;
+					text-align: left;
+					position: relative;
+					z-index: 10;
+					padding: 8px;
+					border-radius: 8px;
+					box-shadow: 0px 0px 20px 5px black;'>
+			<input type='text' class='hiddenInput' onfocus="document.getElementById('modalMessage').focus();" />
+			<span class='clickable' tabindex='0' id='modalMessage'>This is an important message<br/>
+			And you MUST click in Ok or Cancel.</span><br/>
+			<div class='clickable' style='text-align: center;'>
+				<input type='button'
+					   value='Ok'
+					   class='decoratedButton'
+					   onclick="showModalExample()"/>
+				<input type='button'
+					   value='Cancel'
+					   class='decoratedButton'
+					   onclick="showModalExample()"/>
+				<input type='text' class='hiddenInput' onfocus="document.getElementById('modalMessage').focus();" />
+			</div>
+		</div>
+	</div>
+	<div id='step2' style='display: none;'>
+		<div class='sourceCode'>
+			<pre>
+&lt;div id='showModalBtn'
+     <span>tabindex='0'</span>
+     <span>onclick="showModal()"</span>
+     <span>onkeydown="return showModalKeyDown(event)"</span> />
+			</pre>
+		</div>
+	</div>
+	<div id='step3' style='display: none;'>
+		<div class='sourceCode'>
+			<pre>
+function showModalKeyDown(event){
+  // enter or space
+  if(event.keyCode == 13 || event.keyCode == 32)
+    showModal();
+}
+			</pre>
+		</div>
+	</div>
+	
+	<!-- yes, I know! this code really sucks! the problem of using the "pre" tag! -->
+	<div id='step4' style='display: none; margin-top: -40px;'>
+		<div class='sourceCode'>
+			<pre>
+&lt;div id='modalWindow'><div id='hidenIptDiv1' style='height: 1px; overflow: hidden; margin-left: 20px;' class='animate'>&lt;input type='text'
+  class='hiddenInput'
+  onfocus="document.getElementById('modalMsg').focus();"/></div><div class='pieceOfCode' style='width: 250px;'>  &lt;div id='modalMsg'
+       tabindex='0'>
+    ...
+  &lt;/div></div><div class='pieceOfCode'>  &lt;button value='Ok' ... />&lt;button value='Cancel' ... /></div><div id='hidenIptDiv2'
+	style='height: 1px; overflow: hidden; margin-left: 20px;' class='animate'>&lt;input type='text'
+  class='hiddenInput'
+  onfocus="document.getElementById('modalMsg').focus();"/></div>&lt;/div>
+			</pre>
+		</div>
+	</div>
+</div>
+<script>
+	window.showModalExample= function(event){
+		if(!event || event.keyCode == 13 || event.keyCode == 32) // if enter
+		{
+			var modal= document.getElementById('modalWindow');
+			if(modal.style.display=='none'){
+				$('#modalBlocker, #modalWindow').fadeIn(function(){
+					document.getElementById('modalMessage').focus();
+				});
+			}else{
+				$('#modalBlocker, #modalWindow').fadeOut();
+				document.getElementById('showModalButton').focus();
+			}
+		}
+	}
+	PPW.addAction(function(){
+		$('#step2').fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#step2 span').eq(0).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step2 span').eq(0).removeClass('selectedPieceOfCode');
+		$('#step2 span').eq(1).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step2 span').eq(1).removeClass('selectedPieceOfCode');
+		$('#step2 span').eq(2).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step1, #step2').fadeOut(function(){
+			$('#step3').fadeIn();
+		})
+	});
+	PPW.addAction(function(){
+		$('#step3').fadeOut(function(){
+			$('#step4').fadeIn();
+		})
+	});
+	PPW.addAction(function(){
+		$('#step4 .pieceOfCode').eq(0).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step4 .pieceOfCode').eq(0).removeClass('selectedPieceOfCode');
+		$('#step4 .pieceOfCode').eq(1).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step4 .pieceOfCode').eq(1).removeClass('selectedPieceOfCode');
+		$('#hidenIptDiv1, #hidenIptDiv2').css({
+			height: '75px'
+		}).addClass('selectedPieceOfCode');
+	});
+</script>

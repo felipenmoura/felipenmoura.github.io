@@ -1,0 +1,1 @@
+{"name":"SplFileObject.getCurrentLine","purpose":"Alias of SplFileObject::fgets","manualid":"splfileobject.getcurrentline","version":false,"params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

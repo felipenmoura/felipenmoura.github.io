@@ -1,0 +1,1 @@
+{"name":"HaruPage.getCurrentFontSize","purpose":"Get the current font size","manualid":"function.harupage-getcurrentfontsize","version":false,"params":[],"return":{"type":"float","description":"Returns the current font size."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

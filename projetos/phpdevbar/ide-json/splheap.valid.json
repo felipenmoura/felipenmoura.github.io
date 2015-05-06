@@ -1,0 +1,1 @@
+{"name":"SplHeap.valid","purpose":"Check whether the heap contains more nodes","manualid":"splheap.valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the heap contains any more nodes, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

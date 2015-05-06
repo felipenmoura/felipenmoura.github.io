@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageVirtualPixelMethod","purpose":"Sets the image virtual pixel method","manualid":"function.imagick-setimagevirtualpixelmethod","version":false,"params":[{"name":"method","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

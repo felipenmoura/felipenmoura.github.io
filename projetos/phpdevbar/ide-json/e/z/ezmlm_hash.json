@@ -1,0 +1,1 @@
+{"name":"ezmlm_hash","purpose":"Calculate the hash value needed by EZMLM","manualid":"function.ezmlm-hash","version":"PHP 4 >= 4.0.2, PHP 5","params":[{"name":"addr","type":"string","optional":"false"}],"return":{"type":"int","description":"The hash value of addr."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

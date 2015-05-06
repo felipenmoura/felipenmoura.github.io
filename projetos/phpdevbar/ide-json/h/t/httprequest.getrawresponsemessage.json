@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getRawResponseMessage","purpose":"Get raw response message","manualid":"function.httprequest-getrawresponsemessage","version":false,"params":[],"return":{"type":"string","description":"Returns the complete web server response, including the headers in a form of a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

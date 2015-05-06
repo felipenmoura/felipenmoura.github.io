@@ -1,0 +1,1 @@
+{"name":"RarEntry.getStream","purpose":"Get file handler for entry.","manualid":"rarentry.getstream","version":false,"params":[{"name":"password","type":"string","optional":"true"}],"return":{"type":"resource","description":"The file handler  or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RarEntry::extract"}]}

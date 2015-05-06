@@ -1,0 +1,1 @@
+{"name":"PDO_PGSQL DSN","purpose":"Connecting to PostgreSQL databases","manualid":"ref.pdo-pgsql.connection","version":"PECL PDO_PGSQL >= 0.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

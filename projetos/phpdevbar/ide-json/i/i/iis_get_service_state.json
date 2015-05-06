@@ -1,0 +1,1 @@
+{"name":"iis_get_service_state","purpose":"Returns the state for the service defined by ServiceId","manualid":"function.iis-get-service-state","version":"PECL iisfunc SVN","params":[{"name":"service_id","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

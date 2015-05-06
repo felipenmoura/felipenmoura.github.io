@@ -1,0 +1,1 @@
+{"name":"session_pgsql_status","purpose":"Get current save handler status","manualid":"function.session-pgsql-status","version":"PECL session_pgsql SVN","params":[],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

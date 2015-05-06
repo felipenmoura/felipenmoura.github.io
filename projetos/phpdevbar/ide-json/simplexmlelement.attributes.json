@@ -1,0 +1,1 @@
+{"name":"SimpleXMLElement.attributes","purpose":"Identifies an element's attributes","manualid":"simplexmlelement.attributes","version":false,"params":[{"name":"ns","type":"string","optional":"true"},{"name":"is_prefix","type":"bool","optional":"true"}],"return":{"type":"SimpleXMLElement","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HaruPage.getGrayStroke","purpose":"Get the current stroking color","manualid":"function.harupage-getgraystroke","version":false,"params":[],"return":{"type":"float","description":"Returns the current stroking color."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setGrayStroke"}]}

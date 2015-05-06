@@ -1,0 +1,1 @@
+{"name":"newt_radio_get_current","purpose":"","manualid":"function.newt-radio-get-current","version":"PECL newt >= 0.1","params":[{"name":"set_member","type":"resource","optional":"false"}],"return":{"type":"resource","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

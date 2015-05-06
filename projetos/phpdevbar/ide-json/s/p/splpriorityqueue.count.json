@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.count","purpose":"Counts the number of elements in the queue.","manualid":"splpriorityqueue.count","version":false,"params":[],"return":{"type":"int","description":"Returns the number of elements in the queue."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

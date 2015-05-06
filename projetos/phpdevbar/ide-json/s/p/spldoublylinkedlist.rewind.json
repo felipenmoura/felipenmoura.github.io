@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.rewind","purpose":"Rewind iterator back to the start","manualid":"spldoublylinkedlist.rewind","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.isEmpty","purpose":"Checks whether the doubly linked list is empty.","manualid":"spldoublylinkedlist.isempty","version":false,"params":[],"return":{"type":"bool","description":"Returns whether the doubly linked list is empty."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

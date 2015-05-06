@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getShortName","purpose":"Gets short name","manualid":"reflectionclass.getshortname","version":false,"params":[],"return":{"type":"string","description":"The class short name."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getName"}]}

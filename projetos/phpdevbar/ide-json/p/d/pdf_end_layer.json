@@ -1,0 +1,1 @@
+{"name":"PDF_end_layer","purpose":"Deactivate all active layers","manualid":"function.pdf-end-layer","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpMessage.setHeaders","purpose":"Set headers","manualid":"function.httpmessage-setheaders","version":false,"params":[{"name":"headers","type":"array","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

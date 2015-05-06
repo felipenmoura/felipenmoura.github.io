@@ -1,0 +1,1 @@
+{"name":"SWFMovie.remove","purpose":"Removes the object instance from the display list","manualid":"function.swfmovie.remove","version":false,"params":[{"name":"instance","type":"object","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

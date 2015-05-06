@@ -1,0 +1,1 @@
+{"name":"mysqli_disable_rpl_parse","purpose":"Disable RPL parse","manualid":"function.mysqli-disable-rpl-parse","version":"PHP 5","params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

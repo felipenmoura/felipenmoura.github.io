@@ -1,0 +1,1 @@
+{"name":"HaruPage.endPath","purpose":"End current path object without filling and painting operations","manualid":"function.harupage-endpath","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setRawPostData","purpose":"Set raw post data","manualid":"function.httprequest-setrawpostdata","version":false,"params":[{"name":"raw_post_data","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

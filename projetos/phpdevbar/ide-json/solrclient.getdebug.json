@@ -1,0 +1,1 @@
+{"name":"SolrClient.getDebug","purpose":"Returns the debug data for the last connection attempt","manualid":"solrclient.getdebug","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and null if there is nothing to return."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

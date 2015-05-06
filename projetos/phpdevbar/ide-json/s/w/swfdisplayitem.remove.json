@@ -1,0 +1,1 @@
+{"name":"SWFDisplayItem.remove","purpose":"Removes the object from the movie","manualid":"function.swfdisplayitem.remove","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

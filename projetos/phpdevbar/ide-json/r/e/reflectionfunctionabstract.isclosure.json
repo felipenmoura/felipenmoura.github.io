@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.isClosure","purpose":"Checks if closure","manualid":"reflectionfunctionabstract.isclosure","version":false,"params":[],"return":{"type":"bool","description":"TRUE if it's a closure, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::"}]}

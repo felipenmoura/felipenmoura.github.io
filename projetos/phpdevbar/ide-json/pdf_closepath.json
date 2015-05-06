@@ -1,0 +1,1 @@
+{"name":"PDF_closepath","purpose":"Close current path","manualid":"function.pdf-closepath","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

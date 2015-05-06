@@ -1,0 +1,20 @@
+<h1>
+	Interface
+</h1>
+<div class='content'>
+	<div style='text-align: center;'>
+		<img id="img1" src='slides/interface2/fogao1.png' style='margin-top: 10px;'>
+		<img id="img2" src='slides/interface2/fogao2.png' style='margin-top: 50px; display: none;'>
+		<img id="img3" src='slides/interface2/fogao3.png' style='margin-top: 50px; display: none; position: absolute;margin-left:-350px;'>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#img1').fadeOut(function(){
+			$('#img2').fadeIn();
+		})
+	});
+	PPW.addAction(function(){
+		$('#img3').fadeIn();
+	});
+</script>

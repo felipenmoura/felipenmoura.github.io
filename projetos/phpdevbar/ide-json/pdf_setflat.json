@@ -1,0 +1,1 @@
+{"name":"PDF_setflat","purpose":"Set flatness","manualid":"function.pdf-setflat","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"flatness","type":"float","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

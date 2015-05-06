@@ -1,0 +1,1 @@
+{"name":"HttpMessage.setType","purpose":"Set message type","manualid":"function.httpmessage-settype","version":false,"params":[{"name":"type","type":"int","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Reflection.getModifierNames","purpose":"Gets modifier names","manualid":"reflection.getmodifiernames","version":false,"params":[{"name":"modifiers","type":"int","optional":"false"}],"return":{"type":"array","description":"An array of modifier names."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Reflection::export"}]}

@@ -1,0 +1,1 @@
+{"name":"kadm5_get_policies","purpose":"Gets all policies from the Kerberos database","manualid":"function.kadm5-get-policies","version":"PECL kadm5 >= 0.2.3","params":[{"name":"handle","type":"resource","optional":"false"}],"return":{"type":"array","description":"Returns array of policies on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

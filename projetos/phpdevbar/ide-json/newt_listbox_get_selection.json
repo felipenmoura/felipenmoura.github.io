@@ -1,0 +1,1 @@
+{"name":"newt_listbox_get_selection","purpose":"","manualid":"function.newt-listbox-get-selection","version":"PECL newt >= 0.1","params":[{"name":"listbox","type":"resource","optional":"false"}],"return":{"type":"array","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

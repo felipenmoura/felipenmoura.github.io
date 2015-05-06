@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.beginIteration","purpose":"Begin iteration","manualid":"recursivetreeiterator.beginiteration","version":false,"params":[],"return":{"type":"RecursiveIterator","description":"A RecursiveIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"maxdb_rpl_query_type","purpose":"Returns RPL query type","manualid":"function.maxdb-rpl-query-type","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

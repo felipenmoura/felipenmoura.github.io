@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageExtrema","purpose":"Gets the extrema for the image","manualid":"function.imagick-getimageextrema","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array with the keys \"min\" and \"max\".\n   Throw an\nImagickException on error."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

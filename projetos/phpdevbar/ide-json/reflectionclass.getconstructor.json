@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getConstructor","purpose":"Gets constructor","manualid":"reflectionclass.getconstructor","version":false,"params":[],"return":{"type":"object","description":"A ReflectionMethod object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getName"}]}

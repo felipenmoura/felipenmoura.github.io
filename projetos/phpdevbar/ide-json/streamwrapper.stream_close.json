@@ -1,0 +1,1 @@
+{"name":"streamWrapper.stream_close","purpose":"Close an resource","manualid":"streamwrapper.stream-close","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"fclose"},{"type":"methodname","name":"streamWrapper::dir_closedir"}]}

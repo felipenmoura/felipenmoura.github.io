@@ -1,0 +1,1 @@
+{"name":"SolrObject.__construct","purpose":"Creates Solr object","manualid":"solrobject.construct","version":false,"params":[],"return":{"type":null,"description":"None"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

@@ -1,0 +1,1 @@
+{"name":"HaruAnnotation.setIcon","purpose":"Set the icon style of the annotation","manualid":"function.haruannotation-seticon","version":false,"params":[{"name":"icon","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

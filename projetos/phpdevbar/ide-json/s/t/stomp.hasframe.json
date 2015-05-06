@@ -1,0 +1,1 @@
+{"name":"Stomp.hasFrame","purpose":"Indicates whether or not there is a frame ready to read","manualid":"stomp.hasframe","version":false,"params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if a frame is ready to read, or FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"domxml_version","purpose":"Gets the XML library version","manualid":"function.domxml-version","version":"PHP 4 >= 4.1.0","params":[],"return":{"type":"string","description":"The version of the XML library, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

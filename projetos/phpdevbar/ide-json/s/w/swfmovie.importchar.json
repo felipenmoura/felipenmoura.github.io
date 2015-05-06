@@ -1,0 +1,1 @@
+{"name":"SWFMovie.importChar","purpose":"","manualid":"function.swfmovie.importchar","version":false,"params":[{"name":"libswf","type":"string","optional":"false"},{"name":"name","type":"string","optional":"false"}],"return":{"type":"SWFSprite","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

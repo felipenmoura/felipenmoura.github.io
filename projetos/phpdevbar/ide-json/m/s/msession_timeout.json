@@ -1,0 +1,1 @@
+{"name":"msession_timeout","purpose":"Set\/get session timeout","manualid":"function.msession-timeout","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"session","type":"string","optional":"false"},{"name":"param","type":"int","optional":"true"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

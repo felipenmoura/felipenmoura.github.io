@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageOrientation","purpose":"Gets the image orientation","manualid":"function.imagick-getimageorientation","version":false,"params":[],"return":{"type":"int","description":"Returns an int on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

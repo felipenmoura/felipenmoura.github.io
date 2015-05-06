@@ -1,0 +1,1 @@
+{"name":"MongoId.__toString","purpose":"Returns a hexidecimal representation of this id","manualid":"mongoid.tostring","version":false,"params":[],"return":{"type":"string","description":"This id."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

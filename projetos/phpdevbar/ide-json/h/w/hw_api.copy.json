@@ -1,0 +1,1 @@
+{"name":"hw_api.copy","purpose":"Copies physically","manualid":"function.hwapi-copy","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"hw_api_content","description":"Returns the copied object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

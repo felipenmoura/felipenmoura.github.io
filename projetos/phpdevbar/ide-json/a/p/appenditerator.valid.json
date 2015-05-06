@@ -1,0 +1,1 @@
+{"name":"AppendIterator.valid","purpose":"Checks validity of the current element","manualid":"appenditerator.valid","version":false,"params":[],"return":{"type":"void","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"AppendIterator::append"}]}

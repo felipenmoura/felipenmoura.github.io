@@ -1,0 +1,1 @@
+{"name":"fbsql_get_autostart_info","purpose":"","manualid":"function.fbsql-get-autostart-info","version":"PHP 4 >= 4.0.7, PHP 5","params":[{"name":"link_identifier","type":"resource","optional":"true"}],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

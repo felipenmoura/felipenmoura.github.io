@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setTermsMaxCount","purpose":"Sets the maximum document frequency","manualid":"solrquery.settermsmaxcount","version":false,"params":[{"name":"frequency","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

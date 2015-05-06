@@ -1,0 +1,1 @@
+{"name":"stripcslashes","purpose":"Un-quote string quoted with addcslashes","manualid":"function.stripcslashes","version":"PHP 4, PHP 5","params":[{"name":"str","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the unescaped string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"addcslashes"}]}

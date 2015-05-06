@@ -1,0 +1,1 @@
+{"name":"odbc_num_fields","purpose":"Number of columns in a result","manualid":"function.odbc-num-fields","version":"PHP 4, PHP 5","params":[{"name":"result_id","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the number of fields, or -1 on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

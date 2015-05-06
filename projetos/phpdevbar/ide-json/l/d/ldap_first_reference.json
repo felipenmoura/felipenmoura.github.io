@@ -1,0 +1,1 @@
+{"name":"ldap_first_reference","purpose":"Return first reference","manualid":"function.ldap-first-reference","version":"PHP 4 >= 4.0.5, PHP 5","params":[{"name":"link","type":"resource","optional":"false"},{"name":"result","type":"resource","optional":"false"}],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

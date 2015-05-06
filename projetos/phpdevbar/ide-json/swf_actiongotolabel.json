@@ -1,0 +1,1 @@
+{"name":"swf_actiongotolabel","purpose":"Display a frame with the specified label","manualid":"function.swf-actiongotolabel","version":"PHP 4","params":[{"name":"label","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

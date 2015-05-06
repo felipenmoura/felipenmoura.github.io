@@ -1,0 +1,1 @@
+{"name":"session_name","purpose":"Get and\/or set the current session name","manualid":"function.session-name","version":"PHP 4, PHP 5","params":[{"name":"name","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns the name of the current session."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

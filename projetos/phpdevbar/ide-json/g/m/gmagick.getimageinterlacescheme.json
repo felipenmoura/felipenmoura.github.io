@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageinterlacescheme","purpose":"Gets the image interlace scheme","manualid":"gmagick.getimageinterlacescheme","version":false,"params":[],"return":{"type":"void","description":"Returns the interlace scheme as an integer on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"DomElement.set_attribute_node","purpose":"Adds new attribute","manualid":"function.domelement-set-attribute-node","version":false,"params":[{"name":"attr","type":"DomNode","optional":"false"}],"return":{"type":"DomNode","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

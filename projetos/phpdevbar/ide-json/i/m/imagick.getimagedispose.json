@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageDispose","purpose":"Gets the image disposal method","manualid":"function.imagick-getimagedispose","version":false,"params":[],"return":{"type":"int","description":"Returns the dispose method on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

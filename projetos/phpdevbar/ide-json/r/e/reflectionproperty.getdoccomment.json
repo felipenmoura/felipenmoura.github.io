@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.getDocComment","purpose":"Gets doc comment","manualid":"reflectionproperty.getdoccomment","version":false,"params":[],"return":{"type":"string","description":"The doc comment."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::export"}]}

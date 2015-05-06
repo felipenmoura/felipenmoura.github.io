@@ -1,0 +1,1 @@
+{"name":"SWFText.getUTF8Width","purpose":"calculates the width of the given string in this text objects current font and size","manualid":"function.swftext.getutf8width","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"float","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"MongoDBRef.isRef","purpose":"Checks if an array is a database reference","manualid":"mongodbref.isref","version":false,"params":[{"name":"ref","type":"mixed","optional":"false"}],"return":{"type":"boolean","description":"Returns if ref is a reference."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

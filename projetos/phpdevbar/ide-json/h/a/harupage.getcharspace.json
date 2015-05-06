@@ -1,0 +1,1 @@
+{"name":"HaruPage.getCharSpace","purpose":"Get the current value of character spacing","manualid":"function.harupage-getcharspace","version":false,"params":[],"return":{"type":"float","description":"Returns the current value of character spacing."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

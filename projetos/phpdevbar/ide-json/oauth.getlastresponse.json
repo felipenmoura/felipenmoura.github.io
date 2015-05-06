@@ -1,0 +1,1 @@
+{"name":"OAuth.getLastResponse","purpose":"Get the last response","manualid":"oauth.getlastresponse","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the last response."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"OAuth::getLastResponseInfo"},{"type":"methodname","name":"OAuth::fetch"}]}

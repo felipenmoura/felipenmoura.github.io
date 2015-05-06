@@ -1,0 +1,1 @@
+{"name":"Gmagick.stripimage","purpose":"Strips an image of all profiles and comments","manualid":"gmagick.stripimage","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

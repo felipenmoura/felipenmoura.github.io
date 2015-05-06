@@ -1,0 +1,1 @@
+{"name":"PDF_setgray_fill","purpose":"Set fill color to gray [deprecated]","manualid":"function.pdf-setgray-fill","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"},{"name":"g","type":"float","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.isProtected","purpose":"Checks if property is protected","manualid":"reflectionproperty.isprotected","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the property is protected, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::isPrivate"}]}

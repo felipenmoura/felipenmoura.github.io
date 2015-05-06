@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageTotalInkDensity","purpose":"Gets the image total ink density","manualid":"function.imagick-getimagetotalinkdensity","version":false,"params":[],"return":{"type":"float","description":"Returns the image total ink density of the image.\n    Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

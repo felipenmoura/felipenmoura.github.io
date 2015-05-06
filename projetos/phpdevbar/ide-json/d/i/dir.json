@@ -1,0 +1,1 @@
+{"name":"dir","purpose":"Return an instance of the Directory class","manualid":"class.dir","version":"PHP 4, PHP 5","params":[],"return":{"type":"void","description":null},"errors":null,"notes":[{"type":"note","description":"The order in which directory entries are returned by the read method is\n    system-dependent."}],"changelog":[],"seealso":[]}

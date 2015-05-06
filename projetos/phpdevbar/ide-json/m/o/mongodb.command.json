@@ -1,0 +1,1 @@
+{"name":"MongoDB.command","purpose":"Execute a database command","manualid":"mongodb.command","version":false,"params":[{"name":"data","type":"array","optional":"false"}],"return":{"type":"array","description":"Returns database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

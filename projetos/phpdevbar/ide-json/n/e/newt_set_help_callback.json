@@ -1,0 +1,1 @@
+{"name":"newt_set_help_callback","purpose":"","manualid":"function.newt-set-help-callback","version":"PECL newt >= 0.1","params":[{"name":"function","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

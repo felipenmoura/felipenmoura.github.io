@@ -1,0 +1,1 @@
+{"name":"event_new","purpose":"Create new event","manualid":"function.event-new","version":"PECL libevent >= 0.0.1","params":[],"return":{"type":"resource","description":"event_new returns a new event resource on success or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

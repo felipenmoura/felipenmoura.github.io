@@ -1,0 +1,1 @@
+{"name":"ftp_pasv","purpose":"Turns passive mode on or off","manualid":"function.ftp-pasv","version":"PHP 4, PHP 5","params":[{"name":"ftp_stream","type":"resource","optional":"false"},{"name":"pasv","type":"bool","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

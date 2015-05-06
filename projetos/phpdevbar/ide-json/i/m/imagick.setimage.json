@@ -1,0 +1,1 @@
+{"name":"Imagick.setImage","purpose":"Replaces image in the object","manualid":"function.imagick-setimage","version":false,"params":[{"name":"replace","type":"Imagick","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

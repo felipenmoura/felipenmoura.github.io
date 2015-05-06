@@ -1,0 +1,1 @@
+{"name":"SolrDocument.__get","purpose":"Acess the field as a property","manualid":"solrdocument.get","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"SolrDocumentField","description":"Returns a SolrDocumentField instance."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

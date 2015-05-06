@@ -1,0 +1,1 @@
+{"name":"SDO_DataObject.clear","purpose":"Clear an SDO_DataObject's properties","manualid":"function.sdo-dataobject-clear","version":false,"params":[],"return":{"type":"void","description":"No return values."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

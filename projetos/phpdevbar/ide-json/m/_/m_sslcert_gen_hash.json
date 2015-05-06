@@ -1,0 +1,1 @@
+{"name":"m_sslcert_gen_hash","purpose":"Generate hash for SSL client certificate verification","manualid":"function.m-sslcert-gen-hash","version":"PECL mcve >= 5.2.0","params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

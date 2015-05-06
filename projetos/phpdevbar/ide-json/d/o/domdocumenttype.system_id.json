@@ -1,0 +1,1 @@
+{"name":"DomDocumentType.system_id","purpose":"Returns the system id of document type","manualid":"function.domdocumenttype-system-id","version":false,"params":[],"return":{"type":"string","description":"Returns the system id of the DomDocumentType, as a\n   string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

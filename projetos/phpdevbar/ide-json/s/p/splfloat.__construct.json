@@ -1,0 +1,1 @@
+{"name":"SplFloat.__construct","purpose":"Constructs a float object type","manualid":"splfloat.construct","version":false,"params":[{"name":"input","type":"float","optional":"false"}],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

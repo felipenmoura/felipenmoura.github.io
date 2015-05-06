@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addField","purpose":"Specifies which fields to return in the result","manualid":"solrquery.addfield","version":false,"params":[{"name":"field","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

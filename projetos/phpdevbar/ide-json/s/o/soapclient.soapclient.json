@@ -1,0 +1,1 @@
+{"name":"SoapClient.SoapClient","purpose":"SoapClient constructor","manualid":"soapclient.soapclient","version":false,"params":[{"name":"wsdl","type":"mixed","optional":"false"},{"name":"options","type":"array","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

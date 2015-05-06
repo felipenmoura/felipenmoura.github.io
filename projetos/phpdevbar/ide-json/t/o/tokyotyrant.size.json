@@ -1,0 +1,1 @@
+{"name":"TokyoTyrant.size","purpose":"Returns the size of the value","manualid":"tokyotyrant.size","version":false,"params":[{"name":"key","type":"string","optional":"false"}],"return":{"type":"int","description":"Returns the size of the key or throw TokyoTyrantException on error"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

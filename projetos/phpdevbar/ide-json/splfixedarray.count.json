@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.count","purpose":"Returns the size of the array","manualid":"splfixedarray.count","version":false,"params":[],"return":{"type":"int","description":"Returns the size of the array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

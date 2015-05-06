@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setMaxQueryTime","purpose":"Set maximum query time","manualid":"sphinxclient.setmaxquerytime","version":false,"params":[{"name":"qtime","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

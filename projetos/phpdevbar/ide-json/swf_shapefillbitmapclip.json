@@ -1,0 +1,1 @@
+{"name":"swf_shapefillbitmapclip","purpose":"Set current fill mode to clipped bitmap","manualid":"function.swf-shapefillbitmapclip","version":"PHP 4","params":[{"name":"bitmapid","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_shapefillbitmaptile"}]}

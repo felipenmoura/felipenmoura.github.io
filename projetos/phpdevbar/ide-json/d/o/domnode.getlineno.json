@@ -1,0 +1,1 @@
+{"name":"DOMNode.getLineNo","purpose":"Get line number for a node","manualid":"domnode.getlineno","version":false,"params":[],"return":{"type":"int","description":"Always returns the line number where the node was defined in."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

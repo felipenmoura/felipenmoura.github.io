@@ -1,0 +1,1 @@
+{"name":"Gmagick.solarizeimage","purpose":"Applies a solarizing effect to the image","manualid":"gmagick.solarizeimage","version":false,"params":[{"name":"threshold","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

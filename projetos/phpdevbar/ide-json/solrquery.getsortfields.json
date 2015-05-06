@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getSortFields","purpose":"Returns all the sort fields","manualid":"solrquery.getsortfields","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if none of the parameters was set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageSignature","purpose":"Generates an SHA-256 message digest","manualid":"function.imagick-getimagesignature","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the SHA-256 hash of the file.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

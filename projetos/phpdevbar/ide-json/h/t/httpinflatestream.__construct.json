@@ -1,0 +1,1 @@
+{"name":"HttpInflateStream.__construct","purpose":"HttpInflateStream class constructor","manualid":"function.httpinflatestream-construct","version":false,"params":[{"name":"flags","type":"int","optional":"true"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HttpInflateStream::factory"}]}

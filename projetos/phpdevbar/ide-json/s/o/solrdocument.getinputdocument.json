@@ -1,0 +1,1 @@
+{"name":"SolrDocument.getInputDocument","purpose":"Returns a SolrInputDocument equivalent of the object","manualid":"solrdocument.getinputdocument","version":false,"params":[],"return":{"type":"SolrInputDocument","description":"Returns a SolrInputDocument on success and NULL on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

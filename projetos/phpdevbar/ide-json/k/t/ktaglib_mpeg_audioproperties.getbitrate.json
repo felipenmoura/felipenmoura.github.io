@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.getBitrate","purpose":"Returns the bitrate of the MPEG file","manualid":"audioproperties.getBitrate","version":false,"params":[],"return":{"type":"int","description":"Returns the bitrate as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

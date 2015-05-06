@@ -1,0 +1,1 @@
+{"name":"OCI-Collection.append","purpose":"Appends element to the collection","manualid":"function.oci-collection-append","version":false,"params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

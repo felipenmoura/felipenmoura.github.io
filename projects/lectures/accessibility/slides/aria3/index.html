@@ -1,0 +1,72 @@
+<h1>
+	ARIAs...
+</h1>
+<div class='content' style='width: 100%; padding-top: 50px;'>
+	<div id='step1'
+		 style=''>
+		<div id='chk1'
+			 style='width: 40px;
+					height: 40px;
+					float: left;
+					margin-right: 6px;
+					border: solid 3px white;
+					background-color: #ddf;
+					background-size: 1005;
+					background-position: center;
+					background-repeat: no-repeat;'
+			 tabindex='0'
+			 role='checkbox'
+			 title='Check this option'
+			 aria-checked='false'
+			 data-checked='false'
+			 onkeypress='checkThis(this, event)'
+			 onclick='checkThis(this)'
+			 class='clickable'>
+			<img src='slides/situacoes1/check.png' alt='' style='display:none;' />
+		</div>
+		This is the option one
+	</div>
+	<div id='step2'>
+		<pre>
+&lt;div class='checkableDiv'
+     <span>title='Check this option'</span>
+     <span>role='checkbox'</span>
+     <span>aria-checked='false'</span>
+     onkeypress='checkThisKeyPress(event)'
+     onclick='checkThis()'>
+&lt;/div>
+		</pre>
+	</div>
+</div>
+<script>
+	window.checkThis= function(el, event){
+		if(event)
+			if(!event.keyCode || (event.keyCode!=13 && event.keyCode!=32))
+				return;
+		if(el.dataset.checked == 'true')
+		{
+			//el.style.backgroundImage= 'none';
+			el.dataset.checked= 'false';
+			el.setAttribute('aria-checked', 'false');
+			el.getElementsByTagName('img')[0].style.display= 'none';
+		}else{
+			el.dataset.checked= 'true';
+			el.setAttribute('aria-checked', 'true');
+			el.getElementsByTagName('img')[0].style.display= '';
+			//el.style.backgroundImage= 'url(slides/situacoes1/check.png)';
+		}
+		PPW.speak(el);
+	};
+	
+	PPW.addAction(function(){
+		$('#step2 span').eq(0).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step2 span').eq(0).removeClass('selectedPieceOfCode');
+		$('#step2 span').eq(1).addClass('selectedPieceOfCode');
+	});
+	PPW.addAction(function(){
+		$('#step2 span').eq(1).removeClass('selectedPieceOfCode');
+		$('#step2 span').eq(2).addClass('selectedPieceOfCode');
+	});
+</script>

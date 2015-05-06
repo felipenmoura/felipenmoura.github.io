@@ -1,0 +1,1 @@
+{"name":"pclose","purpose":"Closes process file pointer","manualid":"function.pclose","version":"PHP 4, PHP 5","params":[{"name":"handle","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the termination status of the process that was run."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"popen"}]}

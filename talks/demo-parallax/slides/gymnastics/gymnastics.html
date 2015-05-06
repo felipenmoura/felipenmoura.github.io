@@ -1,0 +1,25 @@
+<div class="parallax-set white-content">
+    <img src="slides/gymnastics/gymnastics-bg.png" class="far mv-right"/>
+    <div id="gym-girl" class="far mv-left"><img src="slides/gymnastics/gymnastics-girl.png" /></div>
+    <div class="close mv-closer" id="gym-content">
+        <h2>Parallax effects</h2>
+        <div>
+            A parallax effect causes this sensation of distance.<br/>
+            It's light and cozy, though noticeable.
+        </div>
+    </div>
+</div>
+<script>
+    PPW.addAction({
+        timing: 'auto',
+        does: function(){
+            PPW.lock();
+        }
+    });
+    PPW.addAction({
+        timing: 4000,
+        does: function(){
+            PPW.goNextSlide();
+        }
+    });
+</script>

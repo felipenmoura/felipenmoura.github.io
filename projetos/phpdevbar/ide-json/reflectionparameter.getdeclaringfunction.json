@@ -1,0 +1,1 @@
+{"name":"ReflectionParameter.getDeclaringFunction","purpose":"Gets declaring function","manualid":"reflectionparameter.getdeclaringfunction","version":false,"params":[],"return":{"type":"ReflectionFunction","description":"A ReflectionFunction object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionParameter::getDeclaringClass"}]}

@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.getIteratorRow","purpose":"Returns the current pixel iterator row","manualid":"function.imagickpixeliterator-getiteratorrow","version":false,"params":[],"return":{"type":"int","description":"Returns the integer offset of the row, throwing\n   ImagickPixelIteratorException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

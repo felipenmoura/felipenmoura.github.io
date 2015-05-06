@@ -1,0 +1,1 @@
+{"name":"Imagick.pingImage","purpose":"Fetch basic attributes about the image","manualid":"function.imagick-pingimage","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

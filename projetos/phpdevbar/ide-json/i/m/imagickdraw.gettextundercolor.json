@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getTextUnderColor","purpose":"Returns the text under color","manualid":"function.imagickdraw-gettextundercolor","version":false,"params":[],"return":{"type":"ImagickPixel","description":"Returns an ImagickPixel object describing the color."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

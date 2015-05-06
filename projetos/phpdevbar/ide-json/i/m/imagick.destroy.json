@@ -1,0 +1,1 @@
+{"name":"Imagick.destroy","purpose":"Destroys the Imagick object","manualid":"function.imagick-destroy","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

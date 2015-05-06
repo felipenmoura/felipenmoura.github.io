@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.top","purpose":"Peaks at the node from the top of the queue","manualid":"splpriorityqueue.top","version":false,"params":[],"return":{"type":"mixed","description":"The value or priority (or both) of the top node, depending on the extract flag."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

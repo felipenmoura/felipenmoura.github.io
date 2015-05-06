@@ -1,0 +1,1 @@
+{"name":"CairoSurface.__construct","purpose":"The __construct purpose","manualid":"cairosurface.construct","version":false,"params":[],"return":{"type":null,"description":"No return value"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"CairoImageSurface::__construct"}]}

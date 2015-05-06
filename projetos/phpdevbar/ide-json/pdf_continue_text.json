@@ -1,0 +1,1 @@
+{"name":"PDF_continue_text","purpose":"Output text in next line","manualid":"function.pdf-continue-text","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"},{"name":"text","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

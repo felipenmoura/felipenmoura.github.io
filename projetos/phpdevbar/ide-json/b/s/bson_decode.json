@@ -1,0 +1,1 @@
+{"name":"bson_decode","purpose":"Deserializes a BSON object into a PHP array","manualid":"function.bson-decode","version":"PECL mongo >=1.0.1","params":[{"name":"bson","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns the deserialized BSON object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

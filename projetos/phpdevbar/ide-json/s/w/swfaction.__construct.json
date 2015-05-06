@@ -1,0 +1,1 @@
+{"name":"SWFAction.__construct","purpose":"Creates a new SWFAction","manualid":"function.swfaction.construct","version":false,"params":[{"name":"script","type":"string","optional":"false"}],"return":{"type":"SWFAction","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"stomp_version","purpose":"Gets the current stomp extension version","manualid":"function.stomp-version","version":"PECL stomp >= 0.1.0","params":[],"return":{"type":"string","description":"It returns the current stomp extension version"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

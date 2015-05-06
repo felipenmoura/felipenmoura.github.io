@@ -1,0 +1,1 @@
+{"name":"apc_compile_file","purpose":"Stores a file in the bytecode cache, bypassing all filters.","manualid":"function.apc-compile-file","version":"PECL apc >= 3.0.13","params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

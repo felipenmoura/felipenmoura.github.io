@@ -1,0 +1,1 @@
+{"name":"Imagick.previousImage","purpose":"Move to the previous image in the object","manualid":"function.imagick-previousimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

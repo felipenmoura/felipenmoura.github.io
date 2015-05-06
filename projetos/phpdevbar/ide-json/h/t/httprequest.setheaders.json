@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setHeaders","purpose":"Set headers","manualid":"function.httprequest-setheaders","version":false,"params":[{"name":"headers","type":"array","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

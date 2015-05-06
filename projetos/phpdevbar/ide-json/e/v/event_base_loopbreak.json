@@ -1,0 +1,1 @@
+{"name":"event_base_loopbreak","purpose":"Abort event loop","manualid":"function.event-base-loopbreak","version":"PECL libevent >= 0.0.1","params":[{"name":"event_base","type":"resource","optional":"false"}],"return":{"type":"bool","description":"event_base_loopbreak returns TRUE on success or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

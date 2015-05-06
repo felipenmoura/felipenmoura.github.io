@@ -1,0 +1,1 @@
+{"name":"Memcached.getVersion","purpose":"Get server pool version info","manualid":"memcached.getversion","version":false,"params":[],"return":{"type":"array","description":"Array of server versions, one entry per server."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

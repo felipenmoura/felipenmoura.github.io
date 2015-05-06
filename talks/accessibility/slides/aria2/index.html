@@ -1,0 +1,50 @@
+<h1>
+	ARIAs...
+</h1>
+
+<div id="step-1" style="padding: 30px; margin-top: 60px;">
+    <b>Tem como manter a acessibilidade mesmo carregando conteúdo via Ajax :)</b>
+</div>
+
+<div class='content' id="step-2" style='width: 100%; margin-left:0px; padding-top: 50px; display: none;'>
+	<div id='IWillChange' tabindex='0' onfocus='changeThisContent()' >This content will change...</div>
+	<div id='IWillChangeToo' tabindex='0' onfocus='changeThatContent()'>And this content will also change, soon!</div>
+	<div id='step-3' style='width: 80%; margin: auto; display: none;'>
+		<pre>
+&lt;div tabindex='0'
+     onfocus='changeInFiveSec()'
+     aria-live='assertive'>
+    And this content will also change, soon!
+&lt;/div>
+		</pre>
+	</div>
+</div>
+
+<div id="step3" style="display: none; margin: 30px;"><br/><br/>
+    Use o atributo <em>aria-live</em> para indicar que o conteúdo daquele elemento será dinamicamente alterado.<br/>
+    Valores aceitos: off, polite e assertive
+</div>
+
+<script>
+
+        PPW.addAction(function(){
+            $('#step-1').fadeOut(function(){$('#step-2').fadeIn();});
+        });
+    
+        PPW.addAction(function(){
+		$('#step-2').fadeOut(function(){$('#step3').fadeIn();});
+	});
+    
+	window.changeThisContent= function(){
+		setTimeout(function(){
+			document.getElementById('IWillChange').innerHTML= 'I have just changed!';
+		}, 3000);
+	};
+	window.changeThatContent= function(){
+		document.getElementById('IWillChangeToo').setAttribute('aria-live', 'assertive');
+		setTimeout(function(){
+			document.getElementById('IWillChangeToo').innerHTML= 'I have just changed!';
+		}, 5000);
+	};
+	
+</script>

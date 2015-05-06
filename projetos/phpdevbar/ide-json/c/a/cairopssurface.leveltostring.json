@@ -1,0 +1,1 @@
+{"name":"CairoPsSurface.levelToString","purpose":"The levelToString purpose","manualid":"cairopssurface.leveltostring","version":false,"params":[{"name":"level","type":"string","optional":"false"}],"return":{"type":"string","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

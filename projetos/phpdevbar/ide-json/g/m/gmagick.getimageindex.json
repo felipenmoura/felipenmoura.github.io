@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageindex","purpose":"Gets the index of the current active image","manualid":"gmagick.getimageindex","version":false,"params":[],"return":{"type":"void","description":"Index of current active image"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

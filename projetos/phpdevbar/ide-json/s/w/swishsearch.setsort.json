@@ -1,0 +1,1 @@
+{"name":"SwishSearch.setSort","purpose":"Set the sort order","manualid":"function.swishsearch-setsort","version":false,"params":[{"name":"sort","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

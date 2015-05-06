@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_AttachedPictureFrame.getMimeType","purpose":"Returns the mime type of the picture","manualid":"id3v2attachedpictureframe.getMimeType","version":false,"params":[],"return":{"type":"string","description":"Returns the mime type of the image represented by the attached picture frame."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

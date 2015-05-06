@@ -1,0 +1,1 @@
+{"name":"event_del","purpose":"Remove an event from the set of monitored events","manualid":"function.event-del","version":"PECL libevent >= 0.0.1","params":[{"name":"event","type":"resource","optional":"false"}],"return":{"type":"bool","description":"event_del returns TRUE on success or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

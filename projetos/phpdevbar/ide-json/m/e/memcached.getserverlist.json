@@ -1,0 +1,1 @@
+{"name":"Memcached.getServerList","purpose":"Get the list of the servers in the pool","manualid":"memcached.getserverlist","version":false,"params":[],"return":{"type":"array","description":"The list of all servers in the server pool."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"mcrypt_enc_get_modes_name","purpose":"Returns the name of the opened mode","manualid":"function.mcrypt-enc-get-modes-name","version":"PHP 4 >= 4.0.2, PHP 5","params":[{"name":"td","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns the name as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

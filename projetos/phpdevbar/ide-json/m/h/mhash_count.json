@@ -1,0 +1,1 @@
+{"name":"mhash_count","purpose":"Get the highest available hash id","manualid":"function.mhash-count","version":"PHP 4, PHP 5","params":[],"return":{"type":"int","description":"Returns the highest available hash id. Hashes are numbered from 0 to this\n   hash id."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

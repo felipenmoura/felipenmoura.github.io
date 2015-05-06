@@ -1,0 +1,1 @@
+{"name":"CachingIterator.getInnerIterator","purpose":"Return the innter iterator","manualid":"cachingiterator.getinneriterator","version":false,"params":[],"return":{"type":"void","description":"Returns an object implementing the Iterator interface."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"maxdb_server_init","purpose":"Initialize embedded server","manualid":"function.maxdb-server-init","version":"PECL maxdb >= 1.0","params":[{"name":"server","type":"array","optional":"true"},{"name":"groups","type":"array","optional":"true"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

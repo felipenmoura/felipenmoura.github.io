@@ -1,0 +1,1 @@
+{"name":"Imagick.current","purpose":"Returns a reference to the current Imagick object","manualid":"function.imagick-current","version":false,"params":[],"return":{"type":"Imagick","description":"Returns self on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoCursor.hint","purpose":"Gives the database a hint about the query","manualid":"mongocursor.hint","version":false,"params":[{"name":"key_pattern","type":"array","optional":"false"}],"return":{"type":"MongoCursor","description":"Returns this cursor."},"errors":"Throws MongoCursorException if this cursor has started iterating.","notes":[],"changelog":[],"seealso":[]}

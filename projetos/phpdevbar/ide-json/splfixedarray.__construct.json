@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.__construct","purpose":"Constructs a new fixed array","manualid":"splfixedarray.construct","version":false,"params":[{"name":"size","type":"int","optional":"true"}],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

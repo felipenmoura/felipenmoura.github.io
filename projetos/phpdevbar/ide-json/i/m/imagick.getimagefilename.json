@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageFilename","purpose":"Returns the filename of a particular image in a sequence","manualid":"function.imagick-getimagefilename","version":false,"params":[],"return":{"type":"string","description":"Returns a string with the filename of the image.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

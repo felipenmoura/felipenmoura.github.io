@@ -1,0 +1,1 @@
+{"name":"swf_removeobject","purpose":"Remove an object","manualid":"function.swf-removeobject","version":"PHP 4","params":[{"name":"depth","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

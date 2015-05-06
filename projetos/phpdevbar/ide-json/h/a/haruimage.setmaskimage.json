@@ -1,0 +1,1 @@
+{"name":"HaruImage.setMaskImage","purpose":"Set the image mask","manualid":"function.haruimage-setmaskimage","version":false,"params":[{"name":"mask_image","type":"object","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

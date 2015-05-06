@@ -1,0 +1,1 @@
+{"name":"ldap_unbind","purpose":"Unbind from LDAP directory","manualid":"function.ldap-unbind","version":"PHP 4, PHP 5","params":[{"name":"link_identifier","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ldap_bind"}]}

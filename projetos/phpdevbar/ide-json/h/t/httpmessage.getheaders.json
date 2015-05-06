@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getHeaders","purpose":"Get message headers","manualid":"function.httpmessage-getheaders","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array containing the messages HTTP headers."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.seek","purpose":"Seek to position","manualid":"arrayiterator.seek","version":false,"params":[{"name":"position","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

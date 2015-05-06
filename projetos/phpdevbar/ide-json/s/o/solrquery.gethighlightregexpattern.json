@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightRegexPattern","purpose":"Returns the regular expression for fragmenting","manualid":"solrquery.gethighlightregexpattern","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

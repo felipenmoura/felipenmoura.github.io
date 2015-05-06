@@ -1,0 +1,1 @@
+{"name":"ncurses_killchar","purpose":"Returns current line kill character","manualid":"function.ncurses-killchar","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"string","description":"Returns the kill character, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ncurses_erasechar"}]}

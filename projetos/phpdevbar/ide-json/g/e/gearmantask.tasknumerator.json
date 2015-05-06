@@ -1,0 +1,1 @@
+{"name":"GearmanTask.taskNumerator","purpose":"Get completion percentage numerator","manualid":"gearmantask.tasknumerator","version":false,"params":[],"return":{"type":"int","description":"A number between 0 and 100, or FALSE if cannot be determined."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanTask::taskDenominator"}]}

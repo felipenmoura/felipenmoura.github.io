@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltMaxNumQueryTerms","purpose":"Returns the maximum number of query terms that will be included in any generated query","manualid":"solrquery.getmltmaxnumqueryterms","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

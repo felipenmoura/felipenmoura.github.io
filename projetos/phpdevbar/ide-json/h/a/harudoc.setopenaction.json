@@ -1,0 +1,1 @@
+{"name":"HaruDoc.setOpenAction","purpose":"Define which page is shown when the document is opened","manualid":"function.harudoc-setopenaction","version":false,"params":[{"name":"destination","type":"object","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

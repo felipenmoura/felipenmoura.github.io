@@ -1,0 +1,1 @@
+{"name":"iis_get_dir_security","purpose":"Gets Directory Security","manualid":"function.iis-get-dir-security","version":"PECL iisfunc SVN","params":[{"name":"server_instance","type":"int","optional":"false"},{"name":"virtual_path","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

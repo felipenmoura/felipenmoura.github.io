@@ -1,0 +1,1 @@
+{"name":"printer_create_dc","purpose":"Create a new device context","manualid":"function.printer-create-dc","version":"PECL printer SVN","params":[{"name":"printer_handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

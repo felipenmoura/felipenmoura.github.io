@@ -1,0 +1,1 @@
+{"name":"PDF_show","purpose":"Output text at current position","manualid":"function.pdf-show","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"text","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"utf8_encode","purpose":"Encodes an ISO-8859-1 string to UTF-8","manualid":"function.utf8-encode","version":"PHP 4, PHP 5","params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the UTF-8 translation of data."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

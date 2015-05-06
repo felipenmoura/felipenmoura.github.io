@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagesignature","purpose":"Generates an SHA-256 message digest","manualid":"gmagick.getimagesignature","version":false,"params":[],"return":{"type":"void","description":"Returns a string containing the SHA-256 hash of the file."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

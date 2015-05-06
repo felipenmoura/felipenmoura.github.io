@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeLineCap","purpose":"Specifies the shape to be used at the end of open subpaths when they are stroked","manualid":"function.imagickdraw-setstrokelinecap","version":false,"params":[{"name":"linecap","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

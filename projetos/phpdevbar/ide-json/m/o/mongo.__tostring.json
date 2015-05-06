@@ -1,0 +1,1 @@
+{"name":"Mongo.__toString","purpose":"String representation of this connection","manualid":"mongo.tostring","version":false,"params":[],"return":{"type":"string","description":"Returns hostname and port for this connection."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

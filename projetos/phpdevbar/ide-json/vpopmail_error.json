@@ -1,0 +1,1 @@
+{"name":"vpopmail_error","purpose":"Get text message for last vpopmail error","manualid":"function.vpopmail-error","version":"PHP 4 >= 4.0.5, PECL vpopmail >= 0.2","params":[],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

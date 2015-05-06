@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pathFinish","purpose":"Terminates the current path","manualid":"function.imagickdraw-pathfinish","version":false,"params":[],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

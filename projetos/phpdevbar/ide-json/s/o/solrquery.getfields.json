@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFields","purpose":"Returns the list of fields that will be returned in the response","manualid":"solrquery.getfields","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

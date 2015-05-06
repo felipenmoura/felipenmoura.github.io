@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageMatte","purpose":"Return if the image has a matte channel","manualid":"function.imagick-getimagematte","version":false,"params":[],"return":{"type":"int","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

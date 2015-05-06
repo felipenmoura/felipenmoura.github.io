@@ -1,0 +1,1 @@
+{"name":"ZipArchive.getNameIndex","purpose":"Returns the name of an entry using its index","manualid":"function.ziparchive-getnameindex","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns the name on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

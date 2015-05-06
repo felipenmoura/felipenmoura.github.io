@@ -1,0 +1,1 @@
+{"name":"chop","purpose":"Alias of rtrim","manualid":"function.chop","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[{"type":"note","description":"chop is different than the Perl\n    chop() function, which removes the last\n    character in the string."}],"changelog":[],"seealso":[]}

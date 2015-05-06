@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pathLineToVerticalAbsolute","purpose":"Draws a vertical line","manualid":"function.imagickdraw-pathlinetoverticalabsolute","version":false,"params":[{"name":"y","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

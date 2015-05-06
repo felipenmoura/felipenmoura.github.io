@@ -1,0 +1,1 @@
+{"name":"Imagick.getQuantumDepth","purpose":"Gets the quantum depth","manualid":"function.imagick-getquantumdepth","version":false,"params":[],"return":{"type":"array","description":"Returns the Imagick quantum depth as a string.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

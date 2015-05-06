@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getRequestMessage","purpose":"Get request message","manualid":"function.httprequest-getrequestmessage","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns an HttpMessage object representing the sent request."},"errors":"Throws HttpMalformedHeadersException, HttpEncodingException.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFSprite.remove","purpose":"Removes an object to a sprite","manualid":"function.swfsprite.remove","version":false,"params":[{"name":"object","type":"object","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

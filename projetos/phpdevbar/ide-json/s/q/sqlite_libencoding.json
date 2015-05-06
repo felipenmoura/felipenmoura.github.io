@@ -1,0 +1,1 @@
+{"name":"sqlite_libencoding","purpose":"Returns the encoding of the linked SQLite library","manualid":"function.sqlite-libencoding","version":"PHP 5, PECL sqlite >= 1.0.0","params":[],"return":{"type":"string","description":"Returns the library encoding."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"sqlite_lib_version"}]}

@@ -1,0 +1,1 @@
+{"name":"mysqli_stmt.insert_id","purpose":"Get the ID generated from the previous INSERT operation","manualid":"mysqli-stmt.insert-id","version":false,"params":[{"name":"stmt","type":"mysqli_stmt","optional":"false"}],"return":{"type":"mixed","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrDocument.fieldExists","purpose":"Checks if a field exists in the document","manualid":"solrdocument.fieldexists","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the field is present and FALSE if it does not."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

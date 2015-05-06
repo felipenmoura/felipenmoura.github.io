@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageTicksPerSecond","purpose":"Gets the image ticks-per-second","manualid":"function.imagick-getimagetickspersecond","version":false,"params":[],"return":{"type":"int","description":"Returns the image ticks-per-second.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

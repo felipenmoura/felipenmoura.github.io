@@ -1,0 +1,1 @@
+{"name":"imap_qprint","purpose":"Convert a quoted-printable string to an 8 bit string","manualid":"function.imap-qprint","version":"PHP 4, PHP 5","params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns an 8 bits string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"imap_8bit"}]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.getImagesBlob","purpose":"Returns all image sequences as a blob","manualid":"function.imagick-getimagesblob","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the images. On failure, throws\n   ImagickException."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

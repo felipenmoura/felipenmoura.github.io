@@ -1,0 +1,1 @@
+{"name":"SWFFill.skewYTo","purpose":"Sets fill y-skew","manualid":"function.swffill.skewyto","version":false,"params":[{"name":"y","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

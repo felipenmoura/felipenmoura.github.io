@@ -1,0 +1,1 @@
+{"name":"maxdb_dump_debug_info","purpose":"Dump debugging information into the log","manualid":"function.maxdb-dump-debug-info","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

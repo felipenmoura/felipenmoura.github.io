@@ -1,0 +1,1 @@
+{"name":"ifx_nullformat","purpose":"Sets the default return value on a fetch row","manualid":"function.ifx-nullformat","version":"PHP 4, PHP <=5.2.0","params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

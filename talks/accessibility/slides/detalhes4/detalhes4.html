@@ -1,0 +1,71 @@
+<h1>
+	Detalhes...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; '>
+	<div id='step1'
+		 style='text-align: justify;
+				width: 450px;
+				margin: auto;'>
+		Usando CSS para ajustar o layout, algumas vezes o que vemos n&atilde;o &eacute; a estrutura real...
+	</div>
+	<div id='step2'
+		 style='display: none;
+				width: 450px;
+				margin: auto;'>
+		<div style='width: 100px;
+					border-right: solid 1px;
+					float: left;
+					margin-top: 40px;'>
+			<a href='#'>Menu 1</a><br/>
+			<a href='#'>Menu 2</a><br/>
+			<a href='#'>Menu 3</a><br/>
+			<a href='#'>Menu 4</a><br/>
+			<a href='#'>Menu 5</a><br/>
+		</div>
+		<div style='position: absolute;'>
+			<a href='#0' class='clickable'>Click here</a> to go to the homepage
+		</div>
+		<div style='width: 345px;
+					float: right;
+					margin-top: 40px;'
+			 id='contentToSpeak'>
+			This is a very curious text, please click <a href='#'>here</a> to read the rest of this amazing story!
+		</div>
+	</div>
+	<div id='step3'
+		 style='display: none;
+				width: 450px;
+				margin: auto;'>
+		<ul>
+			<li>
+				Use tags sem&acirc;nticas como <em>nav</em> e <em>header</em>
+			</li>
+			<li>
+				Mantenha controles como menus e submenus, pr&iacute;ximos
+			</li>
+			<li>
+				Use <em>CSS</em> para layout, n&atilde;o tabelas
+			</li>
+			<li>
+				Leitores de tela enxergam por meio do <em>DOM</em>, ou seja, de cima a baixo
+			</li>
+		</ul>
+	</div>	
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#step1').fadeOut(function(){
+			$('#step2').fadeIn(function(){
+			})
+		});
+	});
+	PPW.addAction(function(){
+		PPW.speak(document.getElementById('contentToSpeak'));
+	});
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3').fadeIn(function(){
+			})
+		});
+	});
+</script>

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getResponseStatus","purpose":"Get response status","manualid":"function.httprequest-getresponsestatus","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the response status text."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

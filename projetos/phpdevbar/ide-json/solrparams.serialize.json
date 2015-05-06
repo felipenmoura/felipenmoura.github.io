@@ -1,0 +1,1 @@
+{"name":"SolrParams.serialize","purpose":"Used for custom serialization","manualid":"solrparams.serialize","version":false,"params":[],"return":{"type":"string","description":"Used for custom serialization"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

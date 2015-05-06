@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagecompose","purpose":"Returns the composite operator associated with the image","manualid":"gmagick.getimagecompose","version":false,"params":[],"return":{"type":"void","description":"Returns the composite operator associated with the image."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

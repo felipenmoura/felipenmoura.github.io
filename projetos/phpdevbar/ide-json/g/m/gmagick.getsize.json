@@ -1,0 +1,1 @@
+{"name":"Gmagick.getsize","purpose":"Returns the size associated with the Gmagick object","manualid":"gmagick.getsize","version":false,"params":[],"return":{"type":"void","description":"Returns the size associated with the Gmagick object as an array with the keys \"columns\" and \"rows\"."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

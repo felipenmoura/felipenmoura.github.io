@@ -1,0 +1,1 @@
+{"name":"XMLReader.lookupNamespace","purpose":"Lookup namespace for a prefix","manualid":"xmlreader.lookupnamespace","version":false,"params":[{"name":"prefix","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

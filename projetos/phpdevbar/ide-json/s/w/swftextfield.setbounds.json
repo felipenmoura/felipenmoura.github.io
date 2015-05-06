@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setBounds","purpose":"Sets the text field width and height","manualid":"function.swftextfield.setbounds","version":false,"params":[{"name":"width","type":"float","optional":"false"},{"name":"height","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

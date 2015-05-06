@@ -1,0 +1,1 @@
+{"name":"SplHeap.current","purpose":"Return current node pointed by the iterator","manualid":"splheap.current","version":false,"params":[],"return":{"type":"mixed","description":"The current node value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

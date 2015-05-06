@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageextrema","purpose":"Gets the extrema for the image","manualid":"gmagick.getimageextrema","version":false,"params":[],"return":{"type":"void","description":"Returns an associative array with the keys \"min\" and \"max\"."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

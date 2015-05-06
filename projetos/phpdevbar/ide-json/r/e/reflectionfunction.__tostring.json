@@ -1,0 +1,1 @@
+{"name":"ReflectionFunction.__toString","purpose":"To string","manualid":"reflectionfunction.tostring","version":false,"params":[],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClassAbstract::clone"},{"type":false,"name":false}]}

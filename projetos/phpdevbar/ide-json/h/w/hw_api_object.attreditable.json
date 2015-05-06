@@ -1,0 +1,1 @@
+{"name":"hw_api_object.attreditable","purpose":"Checks whether an attribute is editable","manualid":"function.hwapi-object-attreditable","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the attribute is editable, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

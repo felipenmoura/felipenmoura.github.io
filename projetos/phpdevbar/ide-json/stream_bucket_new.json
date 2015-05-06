@@ -1,0 +1,1 @@
+{"name":"stream_bucket_new","purpose":"Create a new bucket for use on the current stream","manualid":"function.stream-bucket-new","version":"PHP 5","params":[{"name":"stream","type":"resource","optional":"false"},{"name":"buffer","type":"string","optional":"false"}],"return":{"type":"object","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

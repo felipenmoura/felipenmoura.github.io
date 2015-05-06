@@ -1,0 +1,1 @@
+{"name":"SoapClient.__setCookie","purpose":"The __setCookie purpose","manualid":"soapclient.setcookie","version":false,"params":[{"name":"name","type":"string","optional":"false"},{"name":"value","type":"string","optional":"true"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

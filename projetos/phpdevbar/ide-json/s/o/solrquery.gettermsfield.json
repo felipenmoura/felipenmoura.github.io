@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsField","purpose":"Returns the field from which the terms are retrieved","manualid":"solrquery.gettermsfield","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

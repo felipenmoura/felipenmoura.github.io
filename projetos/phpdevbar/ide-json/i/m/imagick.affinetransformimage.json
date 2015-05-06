@@ -1,0 +1,1 @@
+{"name":"Imagick.affineTransformImage","purpose":"Transforms an image","manualid":"function.imagick-affinetransformimage","version":false,"params":[{"name":"matrix","type":"ImagickDraw","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

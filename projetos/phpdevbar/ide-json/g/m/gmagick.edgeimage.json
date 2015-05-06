@@ -1,0 +1,1 @@
+{"name":"Gmagick.edgeimage","purpose":"Enhance edges within the image","manualid":"gmagick.edgeimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object with edges enhanced."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

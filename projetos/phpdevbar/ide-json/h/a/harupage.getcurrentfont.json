@@ -1,0 +1,1 @@
+{"name":"HaruPage.getCurrentFont","purpose":"Get the currently used font","manualid":"function.harupage-getcurrentfont","version":false,"params":[],"return":{"type":"object","description":"Returns the currently used font as an instance of HaruFont."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"newt_textbox_get_num_lines","purpose":"","manualid":"function.newt-textbox-get-num-lines","version":"PECL newt >= 0.1","params":[{"name":"textbox","type":"resource","optional":"false"}],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

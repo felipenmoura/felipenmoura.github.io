@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setstrokeopacity","purpose":"Specifies the opacity of stroked object outlines.","manualid":"gmagickdraw.setstrokeopacity","version":false,"params":[{"name":"stroke_opacity","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

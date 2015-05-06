@@ -1,0 +1,1 @@
+{"name":"Mongo.dropDB","purpose":"Drops a database","manualid":"mongo.dropdb","version":false,"params":[{"name":"db","type":"mixed","optional":"false"}],"return":{"type":"array","description":"Returns the database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

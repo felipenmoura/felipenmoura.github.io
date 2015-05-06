@@ -1,0 +1,1 @@
+{"name":"iis_stop_server","purpose":"Stops the virtual web server","manualid":"function.iis-stop-server","version":"PECL iisfunc SVN","params":[{"name":"server_instance","type":"int","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"xmlrpc_server_destroy","purpose":"Destroys server resources","manualid":"function.xmlrpc-server-destroy","version":"PHP 4 >= 4.1.0, PHP 5","params":[{"name":"server","type":"resource","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

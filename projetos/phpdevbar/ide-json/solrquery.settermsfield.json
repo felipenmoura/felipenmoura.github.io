@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setTermsField","purpose":"Sets the name of the field to get the Terms from","manualid":"solrquery.settermsfield","version":false,"params":[{"name":"fieldname","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getSize","purpose":"Gets file size","manualid":"splfileinfo.getsize","version":false,"params":[],"return":{"type":"int","description":"The filesize in bytes."},"errors":"A RuntimeException will be thrown if the file does not exist or an error occurs.","notes":[],"changelog":[],"seealso":[{"type":"function","name":"filesize"}]}

@@ -1,0 +1,1 @@
+{"name":"CairoPsSurface.setEps","purpose":"The setEps purpose","manualid":"cairopssurface.seteps","version":false,"params":[{"name":"level","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

@@ -1,0 +1,60 @@
+<style type='text/css'>
+	.div-animado{
+		width: 90px;
+		height: 90px;
+		margin: auto;
+		margin-top: 20px;
+		border: solid 1px white;
+		background-color: green;
+		-webkit-transition: all 1s ease-out;
+		   -moz-transition: all 1s ease-out;
+			-ms-transition: all 1s ease-out;
+			 -o-transition: all 1s ease-out;
+				transition: all 1s ease-out;
+	}
+	.div-animado:hover{
+		-webkit-transform: rotate(360deg);
+		   -moz-transform: rotate(360deg);
+		    -ms-transform: rotate(360deg);
+		     -o-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+</style>
+<h1>
+	Animando
+</h1>
+<div class='content' style='margin-top: 0px;'>
+	<div id='step1'
+		 class='anim-step1'
+		 style='text-align:center;'>
+		Combinando o que vimos<br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>.div-animado{	
+-webkit-transition: all 1s ease-out;
+   -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+     -o-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+}</div><br/>
+	</div>
+
+	<div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		<br/><br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>.div-animado:hover{
+-webkit-transform: rotate(360deg);
+   -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+     -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+}</div><br/>
+	</div>
+</div>
+<script>
+</script>

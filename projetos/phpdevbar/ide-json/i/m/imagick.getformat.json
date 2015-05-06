@@ -1,0 +1,1 @@
+{"name":"Imagick.getFormat","purpose":"Returns the format of the Imagick object","manualid":"function.imagick-getformat","version":false,"params":[],"return":{"type":"string","description":"Returns the format of the image.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

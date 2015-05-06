@@ -1,0 +1,1 @@
+{"name":"Imagick.setFormat","purpose":"Sets the format of the Imagick object","manualid":"function.imagick-setformat","version":false,"params":[{"name":"format","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

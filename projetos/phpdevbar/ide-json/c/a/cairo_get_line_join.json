@@ -1,0 +1,1 @@
+{"name":"cairo_get_line_join","purpose":"The getLineJoin purpose","manualid":"cairocontext.getlinejoin","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

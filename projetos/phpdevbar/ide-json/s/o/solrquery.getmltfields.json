@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltFields","purpose":"Returns all the fields to use for similarity","manualid":"solrquery.getmltfields","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.writeimage","purpose":"Writes an image to the specified filename","manualid":"gmagick.writeimage","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"FilterIterator.__construct","purpose":"Construct a filterIterator","manualid":"filteriterator.construct","version":false,"params":[{"name":"iterator","type":"Iterator","optional":"false"}],"return":{"type":null,"description":"The FilterIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"LimitIterator::__construct"}]}

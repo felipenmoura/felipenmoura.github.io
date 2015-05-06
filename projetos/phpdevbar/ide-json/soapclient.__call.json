@@ -1,0 +1,1 @@
+{"name":"SoapClient.__call","purpose":"Calls a SOAP function (deprecated)","manualid":"soapclient.call","version":false,"params":[{"name":"function_name","type":"string","optional":"false"},{"name":"arguments","type":"string","optional":"false"}],"return":{"type":"mixed","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

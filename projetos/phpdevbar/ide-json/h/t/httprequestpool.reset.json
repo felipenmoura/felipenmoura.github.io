@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.reset","purpose":"Reset request pool","manualid":"function.httprequestpool-reset","version":false,"params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

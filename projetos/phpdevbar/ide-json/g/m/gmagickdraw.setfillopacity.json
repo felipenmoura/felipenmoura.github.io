@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setfillopacity","purpose":"The setfillopacity purpose","manualid":"gmagickdraw.setfillopacity","version":false,"params":[{"name":"fill_opacity","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

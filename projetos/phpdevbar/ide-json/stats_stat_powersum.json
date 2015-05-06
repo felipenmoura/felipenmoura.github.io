@@ -1,0 +1,1 @@
+{"name":"stats_stat_powersum","purpose":"Not documented","manualid":"function.stats-stat-powersum","version":"PECL stats >= 1.0.0","params":[{"name":"arr","type":"array","optional":"false"},{"name":"power","type":"float","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageIterations","purpose":"Gets the image iterations","manualid":"function.imagick-getimageiterations","version":false,"params":[],"return":{"type":"int","description":"Returns the image iterations as an integer.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

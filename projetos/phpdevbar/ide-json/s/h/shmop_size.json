@@ -1,0 +1,1 @@
+{"name":"shmop_size","purpose":"Get size of shared memory block","manualid":"function.shmop-size","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"shmid","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns an int, which represents the number of bytes the shared memory\n   block occupies."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

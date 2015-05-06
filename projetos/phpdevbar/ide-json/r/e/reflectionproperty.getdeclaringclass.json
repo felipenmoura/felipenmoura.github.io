@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.getDeclaringClass","purpose":"Gets declaring class","manualid":"reflectionproperty.getdeclaringclass","version":false,"params":[],"return":{"type":"ReflectionClass","description":"A ReflectionClass object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::getName"}]}

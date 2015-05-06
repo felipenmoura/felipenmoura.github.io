@@ -1,0 +1,1 @@
+{"name":"SplFileObject.fflush","purpose":"Flushes the output to the file","manualid":"splfileobject.fflush","version":false,"params":[],"return":{"type":"boolean","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplFileInfo::fwrite"}]}

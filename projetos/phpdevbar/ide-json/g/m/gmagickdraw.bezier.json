@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.bezier","purpose":"Draws a bezier curve","manualid":"gmagickdraw.bezier","version":false,"params":[{"name":"coordinate_array","type":"array","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

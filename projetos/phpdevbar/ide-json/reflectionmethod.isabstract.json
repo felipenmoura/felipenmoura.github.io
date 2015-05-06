@@ -1,0 +1,1 @@
+{"name":"ReflectionMethod.isAbstract","purpose":"Checks if method is abstract","manualid":"reflectionmethod.isabstract","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the method is abstract, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionMethod::getDeclaringClass"}]}

@@ -1,0 +1,1 @@
+{"name":"mysqli_disable_reads_from_master","purpose":"Disable reads from master","manualid":"function.mysqli-disable-reads-from-master","version":"PHP 5","params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

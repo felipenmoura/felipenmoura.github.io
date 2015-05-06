@@ -1,0 +1,1 @@
+{"name":"PDF_utf16_to_utf8","purpose":"Convert string from UTF-16 to UTF-8","manualid":"function.pdf-utf16-to-utf8","version":"PECL pdflib >= 2.0.3","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"utf16string","type":"string","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

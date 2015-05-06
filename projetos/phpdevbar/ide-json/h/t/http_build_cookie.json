@@ -1,0 +1,1 @@
+{"name":"http_build_cookie","purpose":"Build cookie string","manualid":"function.http-build-cookie","version":"PECL pecl_http >= 1.2.0","params":[{"name":"cookie","type":"array","optional":"false"}],"return":{"type":"string","description":"Returns the cookie(s) as string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"http_parse_cookie"}]}

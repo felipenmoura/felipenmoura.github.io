@@ -1,0 +1,1 @@
+{"name":"Imagick.despeckleImage","purpose":"Reduces the speckle noise in an image","manualid":"function.imagick-despeckleimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

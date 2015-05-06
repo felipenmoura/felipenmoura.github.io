@@ -1,0 +1,1 @@
+{"name":"msession_get_data","purpose":"Get data session unstructured data","manualid":"function.msession-get-data","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"session","type":"string","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

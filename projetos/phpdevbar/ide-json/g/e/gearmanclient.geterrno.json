@@ -1,0 +1,1 @@
+{"name":"GearmanClient.getErrno","purpose":"Get an errno value","manualid":"gearmanclient.geterrno","version":false,"params":[],"return":{"type":"int","description":"A valid Gearman errno."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::error"}]}

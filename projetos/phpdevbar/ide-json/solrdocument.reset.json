@@ -1,0 +1,1 @@
+{"name":"SolrDocument.reset","purpose":"This is an alias to SolrDocument::clear()","manualid":"solrdocument.reset","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

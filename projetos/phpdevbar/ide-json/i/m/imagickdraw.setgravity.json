@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setGravity","purpose":"Sets the text placement gravity","manualid":"function.imagickdraw-setgravity","version":false,"params":[{"name":"gravity","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

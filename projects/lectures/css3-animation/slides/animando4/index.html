@@ -1,0 +1,60 @@
+<style type='text/css'>
+	.div-animado{
+		width: 90px;
+		height: 90px;
+		margin: auto;
+		margin-top: 20px;
+		border: solid 1px white;
+		background-color: #f00;
+		-webkit-transition: all 2s ease-out;
+		   -moz-transition: all 2s ease-out;
+			-ms-transition: all 2s ease-out;
+			 -o-transition: all 2s ease-out;
+				transition: all 2s ease-out;
+	}
+	.div-animado:hover{
+		-webkit-transform: rotate(180deg) scale(3);
+		   -moz-transform: rotate(180deg) scale(3);
+		    -ms-transform: rotate(180deg) scale(3);
+		     -o-transform: rotate(180deg) scale(3);
+		        transform: rotate(180deg) scale(3);
+	}
+</style>
+<h1>
+	Animando
+</h1>
+<div class='content' style='margin-top: 0px;'>
+	<div id='step1'
+		 class='anim-step1'
+		 style='text-align:center;'>
+		Enriquecendo a anima&ccedil;&atilde;o<br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>.div-animado{	
+-webkit-transition: all 2s ease-out;
+   -moz-transition: all 2s ease-out;
+    -ms-transition: all 2s ease-out;
+     -o-transition: all 2s ease-out;
+        transition: all 2s ease-out;
+}</div><br/>
+	</div>
+
+	<div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		<br/><br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>.div-animado:hover{
+-webkit-transform: rotate(180deg) scale(3);
+   -moz-transform: rotate(180deg) scale(3);
+    -ms-transform: rotate(180deg) scale(3);
+     -o-transform: rotate(180deg) scale(3);
+        transform: rotate(180deg) scale(3);
+}</div><br/>
+	</div>
+</div>
+<script>
+</script>

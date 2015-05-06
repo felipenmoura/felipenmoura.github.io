@@ -1,0 +1,1 @@
+{"name":"MongoGridfsFile.__construct","purpose":"Create a new GridFS file","manualid":"mongogridfsfile.construct","version":false,"params":[{"name":"gridfs","type":"MongoGridFS","optional":"false"},{"name":"file","type":"array","optional":"false"}],"return":{"type":null,"description":"Returns a new MongoGridFSFile."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

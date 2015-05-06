@@ -1,0 +1,1 @@
+{"name":"HaruImage.getSize","purpose":"Get size of the image","manualid":"function.haruimage-getsize","version":false,"params":[],"return":{"type":"array","description":"Returns an array with two elements: width and height, which contain\n   appropriate dimensions of the image."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"PharException","purpose":"The PharException class provides a phar-specific exception class\n    for try\/catch blocks.","manualid":"PharException.intro.unused","version":"Unknown","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

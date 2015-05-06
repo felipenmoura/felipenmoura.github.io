@@ -1,0 +1,1 @@
+{"name":"Gmagick.separateimagechannel","purpose":"Separates a channel from the image","manualid":"gmagick.separateimagechannel","version":false,"params":[{"name":"channel","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

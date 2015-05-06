@@ -1,0 +1,1 @@
+{"name":"apd_set_session","purpose":"Changes or sets the current debugging level","manualid":"function.apd-set-session","version":"PECL apd 0.2-0.4","params":[{"name":"debug_level","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

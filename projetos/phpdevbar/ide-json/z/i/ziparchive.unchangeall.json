@@ -1,0 +1,1 @@
+{"name":"ZipArchive.unchangeAll","purpose":"Undo all changes done in the archive","manualid":"function.ziparchive-unchangeall","version":false,"params":[],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

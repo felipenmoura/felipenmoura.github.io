@@ -1,0 +1,1 @@
+{"name":"iterator_count","purpose":"Count the elements in an iterator","manualid":"function.iterator-count","version":"PHP 5 >= 5.1.0","params":[{"name":"iterator","type":"Traversable","optional":"false"}],"return":{"type":"int","description":"The number of elements in iterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

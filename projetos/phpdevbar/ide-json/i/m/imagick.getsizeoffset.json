@@ -1,0 +1,1 @@
+{"name":"Imagick.getSizeOffset","purpose":"Returns the size offset","manualid":"function.imagick-getsizeoffset","version":false,"params":[],"return":{"type":"int","description":"Returns the size offset associated with the Imagick object.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

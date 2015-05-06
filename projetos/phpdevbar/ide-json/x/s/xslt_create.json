@@ -1,0 +1,1 @@
+{"name":"xslt_create","purpose":"Create a new XSLT processor","manualid":"function.xslt-create","version":"PHP 4 >= 4.0.3","params":[],"return":{"type":"resource","description":"Returns an XSLT processor link identifier on success, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"xslt_free"}]}

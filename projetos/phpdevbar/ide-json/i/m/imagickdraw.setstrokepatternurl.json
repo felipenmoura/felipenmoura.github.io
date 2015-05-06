@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokePatternURL","purpose":"Sets the pattern used for stroking object outlines","manualid":"function.imagickdraw-setstrokepatternurl","version":false,"params":[{"name":"stroke_url","type":"string","optional":"false"}],"return":{"type":"bool","description":"imagick.imagickdraw.return.success;"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

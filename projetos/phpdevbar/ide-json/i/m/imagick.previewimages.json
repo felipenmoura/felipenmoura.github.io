@@ -1,0 +1,1 @@
+{"name":"Imagick.previewImages","purpose":"Quickly pin-point appropriate parameters for image processing","manualid":"function.imagick-previewimages","version":false,"params":[{"name":"preview","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

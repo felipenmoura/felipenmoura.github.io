@@ -1,0 +1,1 @@
+{"name":"ResourceBundle.count","purpose":"Get number of elements in the bundle","manualid":"resourcebundle.count","version":false,"params":[{"name":"r","type":"ResourceBundle","optional":"false"}],"return":{"type":"int","description":"Returns number of elements in the bundle."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"resourcebundle_get"}]}

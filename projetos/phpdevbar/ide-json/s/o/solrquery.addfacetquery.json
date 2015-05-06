@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addFacetQuery","purpose":"Adds a facet query","manualid":"solrquery.addfacetquery","version":false,"params":[{"name":"facetQuery","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

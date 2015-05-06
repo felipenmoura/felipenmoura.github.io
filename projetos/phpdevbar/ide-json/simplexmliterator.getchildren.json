@@ -1,0 +1,1 @@
+{"name":"SimpleXMLIterator.getChildren","purpose":"Returns the sub-elements of the current element","manualid":"simplexmliterator.getchildren","version":false,"params":[],"return":{"type":"object","description":"Returns a SimpleXMLIterator object containing\n   the sub-elements of the current element."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

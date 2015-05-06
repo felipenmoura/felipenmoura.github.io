@@ -1,0 +1,1 @@
+{"name":"xmlrpc_get_type","purpose":"Gets xmlrpc type for a PHP value","manualid":"function.xmlrpc-get-type","version":"PHP 4 >= 4.1.0, PHP 5","params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

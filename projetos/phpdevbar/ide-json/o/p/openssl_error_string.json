@@ -1,0 +1,1 @@
+{"name":"openssl_error_string","purpose":"Return openSSL error message","manualid":"function.openssl-error-string","version":"PHP 4 >= 4.0.6, PHP 5","params":[],"return":{"type":"string","description":"Returns an error message string, or FALSE if there are no more error\n   messages to return."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

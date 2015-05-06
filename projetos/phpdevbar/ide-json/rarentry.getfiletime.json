@@ -1,0 +1,1 @@
+{"name":"RarEntry.getFileTime","purpose":"Get entry last modification time.","manualid":"rarentry.getfiletime","version":false,"params":[],"return":{"type":"string","description":"Returns entry last modification time as string in format \n   YYYY-MM-DD HH:II:SS, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

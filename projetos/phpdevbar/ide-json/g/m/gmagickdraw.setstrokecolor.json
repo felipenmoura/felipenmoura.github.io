@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setstrokecolor","purpose":"Sets the color used for stroking object outlines.","manualid":"gmagickdraw.setstrokecolor","version":false,"params":[{"name":"color","type":"GmagickPixel","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

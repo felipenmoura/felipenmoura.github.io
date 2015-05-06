@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.getProperties","purpose":"Get the SDO_Model_Property objects defined for the type","manualid":"function.sdo-model-type-getproperties","version":false,"params":[],"return":{"type":"array","description":"Returns an array of SDO_Model_Property objects."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

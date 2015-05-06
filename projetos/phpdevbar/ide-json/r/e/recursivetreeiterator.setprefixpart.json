@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.setPrefixPart","purpose":"Set a part of the prefix","manualid":"recursivetreeiterator.setprefixpart","version":false,"params":[{"name":"part","type":"int","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

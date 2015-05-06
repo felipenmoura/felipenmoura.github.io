@@ -1,0 +1,1 @@
+{"name":"Imagick.getReleaseDate","purpose":"Returns the ImageMagick release date","manualid":"function.imagick-getreleasedate","version":false,"params":[],"return":{"type":"string","description":"Returns the ImageMagick release date as a string.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

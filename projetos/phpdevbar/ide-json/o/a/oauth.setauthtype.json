@@ -1,0 +1,1 @@
+{"name":"OAuth.setAuthType","purpose":"Set authorization type","manualid":"oauth.setauthtype","version":false,"params":[{"name":"auth_type","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

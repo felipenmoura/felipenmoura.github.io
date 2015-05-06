@@ -1,0 +1,1 @@
+{"name":"CachingIterator.__toString","purpose":"Return the string representation of the current element","manualid":"cachingiterator.tostring","version":false,"params":[],"return":{"type":"void","description":"The string representation of the current element."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

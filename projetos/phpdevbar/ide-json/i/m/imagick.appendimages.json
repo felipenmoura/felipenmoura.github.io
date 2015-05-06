@@ -1,0 +1,1 @@
+{"name":"Imagick.appendImages","purpose":"Append a set of images","manualid":"function.imagick-appendimages","version":false,"params":[{"name":"stack","type":"bool","optional":"false"}],"return":{"type":"Imagick","description":"Returns Imagick instance on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

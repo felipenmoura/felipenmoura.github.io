@@ -1,0 +1,1 @@
+{"name":"SWFMovie.labelFrame","purpose":"Labels a frame","manualid":"function.swfmovie.labelframe","version":false,"params":[{"name":"label","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setUrl","purpose":"Set URL","manualid":"function.httprequest-seturl","version":false,"params":[{"name":"url","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

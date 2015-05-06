@@ -1,0 +1,1 @@
+{"name":"SwishResults.nextResult","purpose":"Get the next search result","manualid":"function.swishresults-nextresult","version":false,"params":[],"return":{"type":"object","description":"Returns the next SwishResult object in the result\n   set or FALSE if there are no more results available."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

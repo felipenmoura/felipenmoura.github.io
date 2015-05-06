@@ -1,0 +1,1 @@
+{"name":"ZipArchive.unchangeName","purpose":"Revert all changes done to an entry with the given name.","manualid":"function.ziparchive-unchangename","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

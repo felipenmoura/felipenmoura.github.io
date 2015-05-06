@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.isWritable","purpose":"Tells if the entry is writable","manualid":"splfileinfo.iswritable","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if writable, FALSE otherwise;"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

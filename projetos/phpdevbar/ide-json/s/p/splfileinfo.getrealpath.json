@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getRealPath","purpose":"Gets absolute path to file","manualid":"splfileinfo.getrealpath","version":false,"params":[],"return":{"type":"string","description":"Returns the path to the file."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplFileInfo::isLink"}]}

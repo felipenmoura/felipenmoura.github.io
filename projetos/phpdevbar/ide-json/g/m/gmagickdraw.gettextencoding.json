@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.gettextencoding","purpose":"Returns the code set used for text annotations","manualid":"gmagickdraw.gettextencoding","version":false,"params":[],"return":{"type":"void","description":"Returns a string specifying the code set or false if text encoding is not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

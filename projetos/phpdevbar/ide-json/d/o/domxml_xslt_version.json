@@ -1,0 +1,1 @@
+{"name":"domxml_xslt_version","purpose":"Gets the XSLT library version","manualid":"function.domxml-xslt-version","version":"PHP 4 >= 4.2.0","params":[],"return":{"type":"int","description":"Returns the version number of the XSLT library, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"domxml_version"}]}

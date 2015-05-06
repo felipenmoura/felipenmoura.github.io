@@ -1,0 +1,1 @@
+{"name":"gmp_fact","purpose":"Factorial","manualid":"function.gmp-fact","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"mixed","optional":"false"}],"return":{"type":"resource","description":"A GMP number resource."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

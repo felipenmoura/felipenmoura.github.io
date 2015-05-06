@@ -1,0 +1,1 @@
+{"name":"iis_start_service","purpose":"Starts the service defined by ServiceId","manualid":"function.iis-start-service","version":"PECL iisfunc SVN","params":[{"name":"service_id","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

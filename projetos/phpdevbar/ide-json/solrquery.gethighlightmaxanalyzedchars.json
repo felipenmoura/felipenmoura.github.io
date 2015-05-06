@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightMaxAnalyzedChars","purpose":"Returns the maximum number of characters into a document to look for suitable snippets","manualid":"solrquery.gethighlightmaxanalyzedchars","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

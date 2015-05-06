@@ -1,0 +1,1 @@
+{"name":"HttpInflateStream.finish","purpose":"Finalize inflate stream","manualid":"function.httpinflatestream-finish","version":false,"params":[{"name":"data","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns the final part of inflated data."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

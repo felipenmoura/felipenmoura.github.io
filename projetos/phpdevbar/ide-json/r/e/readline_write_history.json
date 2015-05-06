@@ -1,0 +1,1 @@
+{"name":"readline_write_history","purpose":"Writes the history","manualid":"function.readline-write-history","version":"PHP 4, PHP 5","params":[{"name":"filename","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

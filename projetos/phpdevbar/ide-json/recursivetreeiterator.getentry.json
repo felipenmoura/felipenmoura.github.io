@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.getEntry","purpose":"Get current entry","manualid":"recursivetreeiterator.getentry","version":false,"params":[],"return":{"type":"string","description":"Returns the part of the tree built for the current element."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

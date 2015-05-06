@@ -1,0 +1,1 @@
+{"name":"RecursiveCachingIterator.hasChildren","purpose":"Check whether the current element of the inner iterator has children","manualid":"recursivecachingiterator.haschildren","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the inner iterator has children, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

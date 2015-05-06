@@ -1,0 +1,1 @@
+{"name":"pspell_clear_session","purpose":"Clear the current session","manualid":"function.pspell-clear-session","version":"PHP 4 >= 4.0.2, PHP 5","params":[{"name":"dictionary_link","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

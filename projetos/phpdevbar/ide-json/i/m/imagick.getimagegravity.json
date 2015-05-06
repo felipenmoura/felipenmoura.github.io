@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageGravity","purpose":"Gets the image gravity","manualid":"function.imagick-getimagegravity","version":false,"params":[],"return":{"type":"bool","description":"Returns the images gravity property. Refer to the list of \n   gravity constants."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

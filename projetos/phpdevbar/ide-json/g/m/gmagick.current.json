@@ -1,0 +1,1 @@
+{"name":"Gmagick.current","purpose":"The current purpose","manualid":"gmagick.current","version":false,"params":[],"return":{"type":"void","description":"Returns self on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"gzeof","purpose":"Test for EOF on a gz-file pointer","manualid":"function.gzeof","version":"PHP 4, PHP 5","params":[{"name":"zp","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns TRUE if the gz-file pointer is at EOF or an error occurs;\n   otherwise returns FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pathMoveToRelative","purpose":"Starts a new sub-path","manualid":"function.imagickdraw-pathmovetorelative","version":false,"params":[{"name":"x","type":"float","optional":"false"},{"name":"y","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

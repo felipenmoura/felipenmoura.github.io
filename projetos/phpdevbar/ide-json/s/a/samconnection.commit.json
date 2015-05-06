@@ -1,0 +1,1 @@
+{"name":"SAMConnection.commit","purpose":"Commits (completes) the current unit of work.","manualid":"function.samconnection-commit","version":false,"params":[],"return":{"type":"bool","description":"This method returns FALSE if an error occurs."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

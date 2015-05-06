@@ -1,0 +1,1 @@
+{"name":"Phar.count","purpose":"Returns the number of entries (files) in the Phar archive","manualid":"phar.count","version":false,"params":[],"return":{"type":"int","description":"The number of files contained within this phar, or 0 (the number zero)\n   if none."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SQLite3Stmt.execute","purpose":"Executes a prepared statement and returns a result set object","manualid":"sqlite3stmt.execute","version":false,"params":[],"return":{"type":"SQLite3Result","description":"Returns an SQLite3Result object on successful execution of the prepared\n   statement, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

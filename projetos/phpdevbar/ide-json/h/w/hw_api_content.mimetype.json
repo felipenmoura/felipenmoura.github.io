@@ -1,0 +1,1 @@
+{"name":"hw_api_content.mimetype","purpose":"Returns mimetype","manualid":"function.hwapi-content-mimetype","version":false,"params":[],"return":{"type":"string","description":"Returns the mimetype as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

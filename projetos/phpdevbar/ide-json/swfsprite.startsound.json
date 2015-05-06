@@ -1,0 +1,1 @@
+{"name":"SWFSprite.startSound","purpose":"","manualid":"function.swfsprite.startsound","version":false,"params":[{"name":"sount","type":"SWFSound","optional":"false"}],"return":{"type":"SWFSoundInstance","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

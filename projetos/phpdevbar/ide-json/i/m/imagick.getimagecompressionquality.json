@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageCompressionQuality","purpose":"Gets the current image's compression quality","manualid":"function.imagick-getimagecompressionquality","version":false,"params":[],"return":{"type":"int","description":"Returns integer describing the images compression quality"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

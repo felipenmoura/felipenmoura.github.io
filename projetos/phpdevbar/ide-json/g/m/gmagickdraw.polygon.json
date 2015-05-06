@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.polygon","purpose":"Draws a polygon","manualid":"gmagickdraw.polygon","version":false,"params":[{"name":"coordinates","type":"array","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

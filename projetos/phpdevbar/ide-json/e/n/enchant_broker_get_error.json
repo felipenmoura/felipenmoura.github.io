@@ -1,0 +1,1 @@
+{"name":"enchant_broker_get_error","purpose":"Returns the last error of the broker","manualid":"function.enchant-broker-get-error","version":"PECL enchant >= 0.1.0 ","params":[{"name":"broker","type":"resource","optional":"false"}],"return":{"type":"string","description":"Return the msg string if an error was found or FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

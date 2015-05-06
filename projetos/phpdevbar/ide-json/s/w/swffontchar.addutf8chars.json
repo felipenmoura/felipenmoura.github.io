@@ -1,0 +1,1 @@
+{"name":"SWFFontChar.addUTF8Chars","purpose":"Adds characters to a font for exporting font","manualid":"function.swffontchar.addutf8chars","version":false,"params":[{"name":"char","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageredprimary","purpose":"Returns the chromaticity red primary point","manualid":"gmagick.getimageredprimary","version":false,"params":[],"return":{"type":"void","description":"Returns the chromaticity red primary point as an array with the keys \"x\" and \"y\"."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsLowerBound","purpose":"Returns the term to start at","manualid":"solrquery.gettermslowerbound","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

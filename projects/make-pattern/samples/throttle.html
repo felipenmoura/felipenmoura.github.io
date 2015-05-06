@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+
+    	<h3>Look the console of your browser</h3>
+
+        <div>
+            Throttle will simply ignore repeated calls for given methods, in case they are too fast.<br/>
+            Interesting implementation for cases like input auto-completes, window resize or mousemove.<br/>
+    		The source code:<br/>
+    		<pre id='sc'></pre>
+    		The output is in your console.
+    	</div>
+
+        <script src='../dist/maker.js'></script>
+
+        <script id='sampleCode'>
+            /*
+                var o= {
+                    meth: function(i){
+                        var b;
+                        if(typeof i == 'object'){
+                            b= document.body;
+                            // dealing with offset, what is most likelly to be slow
+                            // so, it will be executed only for each 100ms(default)
+                            i= b.offsetWidth + '/' + b.offsetHeight;
+                        };
+                        console.log('Doing something right now! ', i);
+                    }
+                }
+                // every method of o
+                make.throttle(o);
+                // or only meth
+                //make.throttle(o, { methods: ['meth'] } );
+                for(var i=0; i<1000000; i++){
+                    o.meth(i);
+                }
+                window.onresize= o.meth;
+            */
+            // OR
+
+            var fn= make.throttle(function(i){
+                var b;
+                if(typeof i == 'object'){
+                    b= document.body;
+                    // dealing with offset, what is most likelly to be slow
+                    // so, it will be executed only for each 100ms(default)
+                    i= b.offsetWidth + '/' + b.offsetHeight;
+                };
+                console.log('Doing something right now! ', i);
+            });
+
+            for(var i=0; i<1000000; i++){
+                fn(i);
+            }
+            window.onresize= fn;
+
+        </script>
+
+        <script>
+            setTimeout(function(){
+                document.getElementById('sc').innerHTML= document.getElementById('sampleCode').text;
+            }, 100);
+        </script>
+
+    </body>
+</html>

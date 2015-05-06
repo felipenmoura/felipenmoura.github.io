@@ -1,0 +1,1 @@
+{"name":"DateTime.getLastErrors","purpose":"Returns the warnings and errors","manualid":"datetime.getlasterrors","version":false,"params":[],"return":{"type":"array","description":"Returns array containing info about warnings and errors."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

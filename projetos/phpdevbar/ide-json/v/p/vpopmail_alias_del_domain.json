@@ -1,0 +1,1 @@
+{"name":"vpopmail_alias_del_domain","purpose":"Deletes all virtual aliases of a domain","manualid":"function.vpopmail-alias-del-domain","version":"PHP 4 >= 4.0.7, PECL vpopmail >= 0.2","params":[{"name":"domain","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

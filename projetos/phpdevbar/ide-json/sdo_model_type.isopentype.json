@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.isOpenType","purpose":"Test to see if this type is an open type","manualid":"function.sdo-model-type-isopentype","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this type is open, otherwise returns FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

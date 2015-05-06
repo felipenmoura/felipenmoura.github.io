@@ -1,0 +1,1 @@
+{"name":"MongoGridFSFile.getSize","purpose":"Returns this file's size","manualid":"mongogridfsfile.getsize","version":false,"params":[],"return":{"type":"int","description":"Returns this file's size"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

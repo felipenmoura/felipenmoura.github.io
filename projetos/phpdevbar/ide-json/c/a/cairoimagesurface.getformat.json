@@ -1,0 +1,1 @@
+{"name":"CairoImageSurface.getFormat","purpose":"Get the image format","manualid":"cairoimagesurface.getformat","version":false,"params":[],"return":{"type":"int","description":"One of the CairoFormat enums"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"CairoImageSurface::getHeight"},{"type":"methodname","name":"CairoImageSurface::getWidth"}]}

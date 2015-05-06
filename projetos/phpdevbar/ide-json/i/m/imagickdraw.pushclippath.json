@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pushClipPath","purpose":"Starts a clip path definition","manualid":"function.imagickdraw-pushclippath","version":false,"params":[{"name":"clip_mask_id","type":"string","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

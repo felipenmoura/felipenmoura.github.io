@@ -1,0 +1,82 @@
+<?php
+//session_start();
+require_once("inc/valida_sessao.php");
+require_once("inc/calendar_input.php");
+
+include("../connections/flp_db_connection.php");
+$db_connection= @connectTo();
+if(!$db_connection)
+{
+	?>
+		<flp_script>
+			alert("Ocorreu um problema ao tentar verificar o login !");
+		<script>
+			alert("Ocorreu um problema ao tentar verificar o login !");
+		</script>
+	<?php
+	exit;
+}
+
+if($_POST)
+{
+	$insert= "INSERT INTO tb_tipo_contrato_func
+						(
+							s_label
+						)
+				   VALUES
+						(
+							'".$_POST['nome']."'
+						)
+			 ";
+	$data= @pg_query($db_connection, $insert);
+	if(!$data)
+	{
+		echo "<script> top.setLoad(false); showAlert('erro', 'Falha ao tentar cadastrar novo tipo de contrato'); </script>";
+		exit;
+	}else{
+			echo "<script> top.setLoad(false); top.filho.atualizaComponents('tipoContratoFunc'); top.c.closeBlock('tipo_contrato_func_add');</script>";
+		 }
+}
+
+?>
+<div style="width: 100%;
+			height: 100%;
+			overflow: auto;">
+	<form action="tipo_contrato_func_add.php"
+		  target="tipoContratoAddIframe"
+		  method="POST"
+		  id="tipoContratoAddForm">
+		<input type="hidden"
+			   name="nome"
+			   id="tipoContratoAddNomeSub"
+			   maxlength="90">
+	</form>
+		<table align="center">
+			<tr>
+				<td>
+					Nome&nbsp;&nbsp;
+				</td>
+				<td>
+					<input type="text"
+						   name="nome"
+						   id="tipoContratoAddNome"
+						   onkeyup="document.getElementById('tipoContratoAddNomeSub').value= this.value;"
+						   maxlength="90">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"
+					style="text-align: center;">
+					<input type="button"
+						   value="Salvar"
+						   onclick="if(document.getElementById('tipoContratoAddNomeSub').value.replace(/ /g, '') == '') top.showAlert('alerta', 'O campo <i>nome</i> &eacute; obrigat&oacute;rio'); else{ top.setLoad(true); document.getElementById('tipoContratoAddForm').submit();document.getElementById('tipoContratoAddForm').reset();}">
+				</td>
+			</tr>
+		</table>
+	<iframe id="tipoContratoAddIframe"
+			name="tipoContratoAddIframe"
+			style="display: none;">
+	</iframe>
+<?php
+?>
+</div>

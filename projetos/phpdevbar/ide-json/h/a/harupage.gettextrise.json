@@ -1,0 +1,1 @@
+{"name":"HaruPage.getTextRise","purpose":"Get the current value of text rising","manualid":"function.harupage-gettextrise","version":false,"params":[],"return":{"type":"float","description":"Returns the current value of text rising."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setTextRise"}]}

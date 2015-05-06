@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageDepth","purpose":"Gets the image depth","manualid":"function.imagick-getimagedepth","version":false,"params":[],"return":{"type":"int","description":"The image depth."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setPostFields","purpose":"Set post fields","manualid":"function.httprequest-setpostfields","version":false,"params":[{"name":"post_data","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

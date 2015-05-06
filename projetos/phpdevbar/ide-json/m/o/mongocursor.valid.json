@@ -1,0 +1,1 @@
+{"name":"MongoCursor.valid","purpose":"Checks if the cursor is reading a valid result.","manualid":"mongocursor.valid","version":false,"params":[],"return":{"type":"boolean","description":"If the current result is not null."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

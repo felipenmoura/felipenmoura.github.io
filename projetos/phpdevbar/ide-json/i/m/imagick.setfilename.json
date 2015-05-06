@@ -1,0 +1,1 @@
+{"name":"Imagick.setFilename","purpose":"Sets the filename before you read or write the image","manualid":"function.imagick-setfilename","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

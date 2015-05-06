@@ -1,0 +1,1 @@
+{"name":"set_file_buffer","purpose":"Alias of stream_set_write_buffer","manualid":"function.set-file-buffer","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

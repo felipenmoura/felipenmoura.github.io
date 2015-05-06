@@ -1,0 +1,1 @@
+{"name":"imap_ping","purpose":"Check if the IMAP stream is still active","manualid":"function.imap-ping","version":"PHP 4, PHP 5","params":[{"name":"imap_stream","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the stream is still alive, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

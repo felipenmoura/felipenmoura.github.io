@@ -1,0 +1,1 @@
+{"name":"apd_get_active_symbols","purpose":"Get an array of the current variables names in the local scope","manualid":"function.apd-get-active-symbols","version":"PECL apd 0.2","params":[],"return":{"type":"array","description":"A multidimensional array with all the variables."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

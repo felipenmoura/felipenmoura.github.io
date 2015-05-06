@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.__clone","purpose":"Clone","manualid":"reflectionproperty.clone","version":false,"params":[],"return":{"type":"void","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::export"},{"type":false,"name":false}]}

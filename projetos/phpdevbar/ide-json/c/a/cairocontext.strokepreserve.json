@@ -1,0 +1,1 @@
+{"name":"CairoContext.strokePreserve","purpose":"The strokePreserve purpose","manualid":"cairocontext.strokepreserve","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

@@ -1,0 +1,69 @@
+14/03/2008
+
+nova filial, verificar ao fechar      								OK
+novo contato, verificar ao fechar      								OK
+---------------------------------------------------------------------------------
+melhorar layout de pesquisar clientes, quando nao retorna nenhum 	OK
+---------------------------------------------------------------------------------
+ao editar um grupo de usuarios, fechar o bloco 			 			OK
+---------------------------------------------------------------------------------
+enter loga, na tela inicial											OK
+---------------------------------------------------------------------------------
+erro ao selecionar um grupo de usuarios em gerenciar funcionarios 	OK
+erro ao excluir um grupo de usuarios em gerenciar funcionarios 		OK
+erro ao selecionar grupo em gerenciar permissoes 					OK
+---------------------------------------------------------------------------------
+Logs, nao está pesquisando											OK
+---------------------------------------------------------------------------------
+Preencher os campos de selecao em componente que abrem				OK
+exploradores, com o valor "Selecionar..."e alterar 					OK
+os botoes de adicionar, por uma imagem diferenciada					OK
+---------------------------------------------------------------------------------
+componente tipo de telefone											OK
+verificar ao adicionar 												OK
+mais um na lista, na tela componente select        					OK
+---------------------------------------------------------------------------------
+Ao buscar um cep, alterar tambem o campo RS                			OK
+---------------------------------------------------------------------------------
+Acentuação e espaços no campo de tipo de telefone					OK
+Acentuação no campo de nome da empresa, e nome fantasia				OK
+---------------------------------------------------------------------------------
+Corrigir cadastro Novo Cliente, limpar dados apos o cadastro		OK
+---------------------------------------------------------------------------------
+Orgao emissor, permitir letras										OK
+Contatos, padronizar o componente de seleção						OK
+criar tabela de vinculo entre dependente e funcionario				
+Data de admissão, arrumar para calendario							OK
+---------------------------------------------------------------------------------
+erro ao arrastar icones
+alerta "b" ao enviar nova mensagem
+remover mensagem de "mensagem enviada com sucesso"
+finalizar o load inicial apenas depois do carregamento da imagem de background
+---------------------------------------------------------------------------------
+funcionario - validar campos										
+verificar NOVO funcionario com ids iguais nas abas do editar		
+---------------------------------------------------------------------------------
+popular campos em banco												
+---------------------------------------------------------------------------------
+Cadastrar na tabela de permissoes, permissao						
+de lançar novas circulares											
+---------------------------------------------------------------------------------
+Ao imprimir, caso cancelado, ha um bug								
+---------------------------------------------------------------------------------
+quando estiver bloqueado, deve bloquear tambem os menus e			
+a barra lateral no index.php										
+---------------------------------------------------------------------------------
+adicionar as permissoes nos arquivos								
+---------------------------------------------------------------------------------
+Criar um pesquisar dinamico 										
+---------------------------------------------------------------------------------
+OnFocus do select, abrir caixinha com as options					
+---------------------------------------------------------------------------------
+Pesquisar Processos													
+Pesquisar Contatos													
+Pesquisa Avançada													
+Circulares															
+Alertas do Sistema													
+Pesquisar Funcionários												
+---------------------------------------------------------------------------------
+Verificar logoff													

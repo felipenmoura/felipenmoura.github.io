@@ -1,0 +1,1 @@
+{"name":"imagedestroy","purpose":"Destroy an image","manualid":"function.imagedestroy","version":"PHP 4, PHP 5","params":[{"name":"image","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

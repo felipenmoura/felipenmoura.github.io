@@ -1,0 +1,1 @@
+{"name":"locale_get_default","purpose":"Gets the default locale value from the INTL global 'default_locale'","manualid":"locale.getdefault","version":false,"params":[],"return":{"type":"string","description":"The current runtime locale"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"locale_set_default"}]}

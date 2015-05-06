@@ -1,0 +1,1 @@
+{"name":"OAuth.disableDebug","purpose":"Turn off verbose debugging","manualid":"oauth.disabledebug","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[{"version":"0.99.8","change":"The debug member was added"}],"seealso":[{"type":"methodname","name":"OAuth::enableDebug"}]}

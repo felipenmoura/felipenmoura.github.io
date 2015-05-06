@@ -1,0 +1,1 @@
+{"name":"HttpMessage.reverse","purpose":"Reverse message chain","manualid":"function.httpmessage-reverse","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns the most parent HttpMessage object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

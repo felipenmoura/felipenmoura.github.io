@@ -1,0 +1,1 @@
+{"name":"Gmagick.drawimage","purpose":"Renders the GmagickDraw object on the current image","manualid":"gmagick.drawimage","version":false,"params":[{"name":"GmagickDraw","type":"GmagickDraw","optional":"false"}],"return":{"type":"void","description":"The drawn Gmagick object"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

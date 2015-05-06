@@ -1,0 +1,1 @@
+{"name":"notes_version","purpose":"Get the version Lotus Notes","manualid":"function.notes-version","version":"PHP 4 >= 4.0.5","params":[{"name":"database_name","type":"string","optional":"false"}],"return":{"type":"float","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

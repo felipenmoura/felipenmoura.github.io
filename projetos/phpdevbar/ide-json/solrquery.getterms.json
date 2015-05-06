@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTerms","purpose":"Returns whether or not the TermsComponent is enabled","manualid":"solrquery.getterms","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

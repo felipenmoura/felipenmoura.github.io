@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getArtist","purpose":"Returns the artist string from a ID3 tag","manualid":"tag.getArtist","version":false,"params":[],"return":{"type":"string","description":"Returns the artist string"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

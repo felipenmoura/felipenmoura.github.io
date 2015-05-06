@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.insert","purpose":"Inserts an element in the queue by sifting it up.","manualid":"splpriorityqueue.insert","version":false,"params":[{"name":"value","type":"mixed","optional":"false"},{"name":"priority","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

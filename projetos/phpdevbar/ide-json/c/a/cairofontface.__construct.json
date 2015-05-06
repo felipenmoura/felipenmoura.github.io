@@ -1,0 +1,1 @@
+{"name":"CairoFontFace.__construct","purpose":"Creates a new CairoFontFace object","manualid":"cairofontface.construct","version":false,"params":[],"return":{"type":null,"description":"CairoFontFace"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Class::Method"}]}

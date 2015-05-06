@@ -1,0 +1,1 @@
+{"name":"SwishResult.stem","purpose":"Stems the given word","manualid":"function.swishresult-stem","version":false,"params":[{"name":"word","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns array containing the stemmed word variants (usually just one)."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

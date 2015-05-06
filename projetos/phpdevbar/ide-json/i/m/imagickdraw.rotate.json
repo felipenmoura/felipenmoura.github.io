@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.rotate","purpose":"Applies the specified rotation to the current coordinate space","manualid":"function.imagickdraw-rotate","version":false,"params":[{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

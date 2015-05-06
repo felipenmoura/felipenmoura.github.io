@@ -1,0 +1,1 @@
+{"name":"gmp_gcdext","purpose":"Calculate GCD and multipliers","manualid":"function.gmp-gcdext","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"},{"name":"b","type":"resource","optional":"false"}],"return":{"type":"array","description":"An array of GMP numbers."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ibase_rollback","purpose":"Roll back a transaction","manualid":"function.ibase-rollback","version":"PHP 4, PHP 5","params":[{"name":"link_or_trans_identifier","type":"resource","optional":"true","initializer":"NULL"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

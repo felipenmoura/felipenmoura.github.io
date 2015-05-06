@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagegreenprimary","purpose":"Returns the chromaticy green primary point","manualid":"gmagick.getimagegreenprimary","version":false,"params":[],"return":{"type":"void","description":"Returns an array with the keys \"x\" and \"y\" on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

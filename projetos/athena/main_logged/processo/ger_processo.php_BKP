@@ -1,0 +1,35 @@
+<?php
+// PERMISSÃO
+$acessoWeb = 2;
+
+require_once("../inc/valida_sessao.php");
+require_once("../inc/calendar_input.php");
+require_once("../inc/styles.php");
+require_once("../inc/query_control.php");
+require_once("../inc/class_explorer.php");
+//if(!$db_connection= @connectTo())
+	include("../../connections/flp_db_connection.php");
+$db_connection= connectTo();
+if(!$db_connection)
+{
+	?>
+		<flp_script>
+			alert("Ocorreu um problema ao tentar verificar o login !");
+		<script>
+			alert("Ocorreu um problema ao tentar verificar o login !");
+		</script>
+	<?
+	exit;
+}
+	$PREID= date('ymdhis').microtime();
+	$PREID= str_replace('.', '', str_replace(' ', '', $PREID));
+?>
+	<div id="<?php echo $PREID; ?>ger_processoDivList">
+		Clientes
+	</div>
+<?php
+	$_GET['component']= 'explorador';
+	$_GET['on_click']= "gerenciarProcessosEdit";
+	$_GET['containerId']= $PREID.'ger_processoDivList';
+	include('../components.php');
+?>

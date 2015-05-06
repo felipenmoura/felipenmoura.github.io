@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageVirtualPixelMethod","purpose":"Returns the virtual pixel method","manualid":"function.imagick-getimagevirtualpixelmethod","version":false,"params":[],"return":{"type":"int","description":"Returns the virtual pixel method on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

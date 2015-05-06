@@ -1,0 +1,1 @@
+{"name":"ps_closepath_stroke","purpose":"Closes and strokes path","manualid":"function.ps-closepath-stroke","version":"PECL ps >= 1.1.0","params":[{"name":"psdoc","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ps_closepath"}]}

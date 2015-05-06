@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.valid","purpose":"Check whether the doubly linked list contains more nodes","manualid":"spldoublylinkedlist.valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the doubly linked list contains any more nodes, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_AttachedPictureFrame.getType","purpose":"Returns the type of the image","manualid":"id3v2attachedpictureframe.getType","version":false,"params":[],"return":{"type":"int","description":"Returns the integer representation of the type."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

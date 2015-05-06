@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.push","purpose":"Pushes an element at the end of the doubly linked list","manualid":"spldoublylinkedlist.push","version":false,"params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

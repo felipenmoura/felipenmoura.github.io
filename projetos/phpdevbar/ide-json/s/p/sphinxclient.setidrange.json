@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setIDRange","purpose":"Set a range of accepted document IDs","manualid":"sphinxclient.setidrange","version":false,"params":[{"name":"min","type":"int","optional":"false"},{"name":"max","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

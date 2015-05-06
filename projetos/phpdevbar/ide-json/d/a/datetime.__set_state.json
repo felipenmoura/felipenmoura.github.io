@@ -1,0 +1,1 @@
+{"name":"DateTime.__set_state","purpose":"The __set_state handler","manualid":"datetime.set-state","version":false,"params":[{"name":"array","type":"array","optional":"false"}],"return":{"type":"DateTime","description":"Returns a new instance of a DateTime object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

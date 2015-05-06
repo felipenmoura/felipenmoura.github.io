@@ -1,0 +1,1 @@
+{"name":"flush","purpose":"Flush the output buffer","manualid":"function.flush","version":"PHP 4, PHP 5","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

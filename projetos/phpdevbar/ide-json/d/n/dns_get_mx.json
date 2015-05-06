@@ -1,0 +1,1 @@
+{"name":"dns_get_mx","purpose":"Alias of getmxrr","manualid":"function.dns-get-mx","version":"PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

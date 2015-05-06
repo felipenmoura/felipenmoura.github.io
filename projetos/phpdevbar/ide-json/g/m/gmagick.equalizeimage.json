@@ -1,0 +1,1 @@
+{"name":"Gmagick.equalizeimage","purpose":"Equalizes the image histogram","manualid":"gmagick.equalizeimage","version":false,"params":[],"return":{"type":"void","description":"The equalized Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

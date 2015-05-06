@@ -1,0 +1,1 @@
+{"name":"RecursiveIterator.getChildren","purpose":"Returns an iterator for the current entry.","manualid":"recursiveiterator.getchildren","version":false,"params":[],"return":{"type":"RecursiveIterator","description":"An iterator for the current entry."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"RecursiveIterator::hasChildren"}]}

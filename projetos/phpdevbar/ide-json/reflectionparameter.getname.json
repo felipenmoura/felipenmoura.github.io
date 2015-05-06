@@ -1,0 +1,1 @@
+{"name":"ReflectionParameter.getName","purpose":"Gets parameter name","manualid":"reflectionparameter.getname","version":false,"params":[],"return":{"type":"string","description":"The name of the reflected parameter."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionParameter::getValue"}]}

@@ -1,0 +1,1 @@
+{"name":"m_initconn","purpose":"Create and initialize an MCVE_CONN structure","manualid":"function.m-initconn","version":"PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0","params":[],"return":{"type":"resource","description":"Returns an MCVE_CONN resource."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"m_destroyconn"}]}

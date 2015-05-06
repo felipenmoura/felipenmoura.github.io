@@ -1,0 +1,1 @@
+{"name":"CachingIterator.current","purpose":"Return the current element","manualid":"cachingiterator.current","version":false,"params":[],"return":{"type":"void","description":"Mixed"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Iterator::current"}]}

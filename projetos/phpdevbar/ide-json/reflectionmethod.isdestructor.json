@@ -1,0 +1,1 @@
+{"name":"ReflectionMethod.isDestructor","purpose":"Checks if method is a destructor","manualid":"reflectionmethod.isdestructor","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the method is a destructor, otherwise false;"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionMethod::isConstructor"}]}

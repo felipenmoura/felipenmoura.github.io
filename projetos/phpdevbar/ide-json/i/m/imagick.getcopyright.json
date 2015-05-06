@@ -1,0 +1,1 @@
+{"name":"Imagick.getCopyright","purpose":"Returns the ImageMagick API copyright as a string","manualid":"function.imagick-getcopyright","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the copyright notice of Imagemagick and\n   Magickwand C API."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

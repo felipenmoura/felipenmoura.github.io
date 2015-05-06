@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.current","purpose":"Return current array entry","manualid":"splfixedarray.current","version":false,"params":[],"return":{"type":"mixed","description":"The current element value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

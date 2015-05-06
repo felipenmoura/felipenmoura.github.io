@@ -1,0 +1,1 @@
+{"name":"assert","purpose":"Checks if assertion is FALSE","manualid":"function.assert","version":"PHP 4, PHP 5","params":[{"name":"assertion","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"FALSE if the assertion is false, TRUE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"assert_options"}]}

@@ -1,0 +1,1 @@
+{"name":"stats_rand_phrase_to_seeds","purpose":"generate two seeds for the RGN random number generator","manualid":"function.stats-rand-phrase-to-seeds","version":"PECL stats >= 1.0.0","params":[{"name":"phrase","type":"string","optional":"false"}],"return":{"type":"array","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

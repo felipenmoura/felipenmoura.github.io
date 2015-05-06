@@ -1,0 +1,1 @@
+{"name":"HttpInflateStream.flush","purpose":"Flush inflate stream","manualid":"function.httpinflatestream-flush","version":false,"params":[{"name":"data","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns some inflated data as string on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,19 @@
+<h1>structure</h1>
+<div class='anim-step1'>AAA</div>
+<div class='myDIv anim-step2'>CCC</div>
+<div class='anim-step1'>BBB</div>
+<div class='anim-step3'>DDD</div>
+<div class='anim-step4'>EEE</div>
+<script>
+	PPW.addAction(function(){
+			alert('Fisrt animation');
+		},
+		{
+			goToNext: '5000'//, // click, time(in milesseconds) or now
+			//step: 1
+		}
+	);
+	PPW.addAction(function(){
+		alert('second animation')
+	});
+</script>

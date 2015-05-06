@@ -1,0 +1,1 @@
+{"name":"com_addref","purpose":"Increases the components reference counter [deprecated]","manualid":"function.com-addref","version":"PHP 4 >= 4.1.0","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[{"type":"warning","description":"You should never need to use this function."}],"changelog":[],"seealso":[]}

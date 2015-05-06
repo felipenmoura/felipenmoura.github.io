@@ -1,0 +1,1 @@
+{"name":"Gmagick.rotateimage","purpose":"Rotates an image","manualid":"gmagick.rotateimage","version":false,"params":[{"name":"color","type":"mixed","optional":"false"},{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

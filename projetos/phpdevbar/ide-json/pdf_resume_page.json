@@ -1,0 +1,1 @@
+{"name":"PDF_resume_page","purpose":"Resume page","manualid":"function.pdf-resume-page","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"optlist","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

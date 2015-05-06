@@ -1,0 +1,1 @@
+{"name":"TokyoTyrant.sync","purpose":"Synchronize the database","manualid":"tokyotyrant.sync","version":false,"params":[],"return":{"type":"mixed","description":"This method returns the current object and throws TokyoTyrantException on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

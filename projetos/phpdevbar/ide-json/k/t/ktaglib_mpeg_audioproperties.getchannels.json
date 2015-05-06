@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.getChannels","purpose":"Returns the amount of channels of a MPEG file","manualid":"audioproperties.getChannels","version":false,"params":[],"return":{"type":"int","description":"Returns the channel count as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

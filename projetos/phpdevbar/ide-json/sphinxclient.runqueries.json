@@ -1,0 +1,1 @@
+{"name":"SphinxClient.runQueries","purpose":"Run a batch of search queries","manualid":"sphinxclient.runqueries","version":false,"params":[],"return":{"type":"array","description":"Returns FALSE on failure and array of result sets on success."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

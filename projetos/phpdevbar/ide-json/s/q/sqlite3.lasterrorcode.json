@@ -1,0 +1,1 @@
+{"name":"SQLite3.lastErrorCode","purpose":"Returns the numeric result code of the most recent failed SQLite request","manualid":"sqlite3.lasterrorcode","version":false,"params":[],"return":{"type":"int","description":"Returns an integer value representing the numeric result code of the most\n   recent failed SQLite request."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

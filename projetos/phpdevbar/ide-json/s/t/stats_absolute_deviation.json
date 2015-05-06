@@ -1,0 +1,1 @@
+{"name":"stats_absolute_deviation","purpose":"Returns the absolute deviation of an array of values","manualid":"function.stats-absolute-deviation","version":"PECL stats >= 1.0.0","params":[{"name":"a","type":"array","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

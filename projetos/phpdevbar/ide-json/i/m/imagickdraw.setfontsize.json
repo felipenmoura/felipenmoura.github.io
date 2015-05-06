@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFontSize","purpose":"Sets the font pointsize to use when annotating with text","manualid":"function.imagickdraw-setfontsize","version":false,"params":[{"name":"pointsize","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

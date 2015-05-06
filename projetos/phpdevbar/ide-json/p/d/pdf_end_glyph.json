@@ -1,0 +1,1 @@
+{"name":"PDF_end_glyph","purpose":"Terminate glyph definition for Type 3 font","manualid":"function.pdf-end-glyph","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

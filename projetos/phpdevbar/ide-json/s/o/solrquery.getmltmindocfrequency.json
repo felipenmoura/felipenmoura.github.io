@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltMinDocFrequency","purpose":"Returns the treshold frequency at which words will be ignored which do not occur in at least this many docs","manualid":"solrquery.getmltmindocfrequency","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

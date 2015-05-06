@@ -1,0 +1,1 @@
+{"name":"hw_api.hwstat","purpose":"Returns statistics about Hyperwave server","manualid":"function.hwapi-hwstat","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"hw_api_object","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false},{"type":false,"name":false}]}

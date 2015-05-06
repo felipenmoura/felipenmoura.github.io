@@ -1,0 +1,1 @@
+{"name":"GmagickPixel.setcolor","purpose":"Sets the color","manualid":"gmagickpixel.setcolor","version":false,"params":[{"name":"color","type":"string","optional":"false"}],"return":{"type":"void","description":"The GmagickPixel object on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

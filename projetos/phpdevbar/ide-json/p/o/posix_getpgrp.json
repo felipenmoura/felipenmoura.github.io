@@ -1,0 +1,1 @@
+{"name":"posix_getpgrp","purpose":"Return the current process group identifier","manualid":"function.posix-getpgrp","version":"PHP 4, PHP 5","params":[],"return":{"type":"int","description":"Returns the identifier, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

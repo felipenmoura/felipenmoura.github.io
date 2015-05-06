@@ -1,0 +1,1 @@
+{"name":"stream_bucket_prepend","purpose":"Prepend bucket to brigade","manualid":"function.stream-bucket-prepend","version":"PHP 5","params":[{"name":"brigade","type":"resource","optional":"false"},{"name":"bucket","type":"resource","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

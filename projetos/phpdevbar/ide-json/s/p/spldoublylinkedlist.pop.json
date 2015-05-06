@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.pop","purpose":"Pops a node from the end of the doubly linked list","manualid":"spldoublylinkedlist.pop","version":false,"params":[],"return":{"type":"mixed","description":"The value of the popped node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

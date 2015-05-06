@@ -1,0 +1,71 @@
+ok - about
+ok - mitos
+ok -	jsvalidar
+ok - 	html5==dhtml
+ok -	web2.0
+ok - web semantica
+ok - cliente tem sempre razao
+ok - don't be afraid
+ok - don't be afr...
+ok - seja desconfiado
+ok - use o qua ha ao seu alcance
+ok - Antigas novidades
+ok - 	Ajax
+ok - 	JSon
+ok - 	XP, Scrum, entre outros
+ok - 	sprites/URIs,
+ok - 	RIA
+ok - Mergulhando
+ok - 	html5
+ok - 		video / audio
+ok - 		canvas
+ok - 		3D*
+ok - 		Semantica
+ok - 	css3
+ok - 		transform
+ok - 		seletores
+ok - 		pseudo-elements
+ok - 		transitions
+ok - 		cores e backgrounds
+ok - 		animations
+ok - 		SVG-WebGL
+ok - 	js
+ok - 		Seletores
+ok - 		validadores
+ok - 		DataStore
+ok -  browsers
+ok - 	[FireFox, Chrome e Safari, Opera, Internet Explorer!]
+ok - 	estatisticas
+ok - 	mobile
+	 mercado
+ok - 	transmita confianca
+ok - 	perca preconceitos
+ok - 	Uma guerra mundial onde todos ganham
+		2012 está próximo (lancamento oficial da HTML5 previsto para 2012 imagine os novos navegadores até lá!)
+		
+   [ CoolStuff
+	   JS Server
+	   NoSQL ]
+		
+	 <s>the end?</s>
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+ 
+
+
+
+ 
+ 
+ 
+http://www.css3.info/preview/
+Statistics
+	http://www.w3schools.com/browsers/browsers_stats.asp
+	http://www.netmarketshare.com/browser-market-share.aspx?qprid=0
+	http://gs.statcounter.com/
+	http://www.marketingcharts.com/direct/mobile-access-content-revenues-poised-for-growth-13321/
+	http://www.tobeguarany.com/internet_no_brasil.php

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+	<head>
+		<title>T&aacute;, e agora? ... acessibilidade</title>
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<style type='text/css'>
+			@font-face{  
+			  font-family: jokerman;
+			  src: url(slides/detalhes5/jokerman.ttf);
+			}
+			.exemploWebFonte{
+				color: #1F81B6;
+				text-decoration: none;
+				font-family: "jokerman";
+				font-size: 30px;
+			}
+			.exemploWebFonte:hover{
+				text-shadow: 0px 0px 20px #1F81B6;
+			}
+			.decoratedButton{
+				border: solid 1px black;
+				box-shadow: 0px 0px 10px black;
+				width: 110px;
+				border-radius: 4px;
+				
+				margin: auto;
+				margin-top: 4px;
+				margin-bottom: 4px;
+				height: 32px;
+				color: #444;
+				font-size: 25px !IMPORTANT;
+				font-family: Arial, Tahoma !IMPORTANT;
+				font-weight: normal !IMPORTANT;
+				background-image: -webkit-linear-gradient(top, white, gray);
+				background-image:    -moz-linear-gradient(top, white, gray);
+				background-image:     -ms-linear-gradient(top, white, gray);
+				background-image:      -o-linear-gradient(top, white, gray);
+				background-image:         linear-gradient(top, white, gray);
+			}
+			.decoratedButton:hover{
+				background-image: -webkit-linear-gradient(top, white, gray);
+				background-image:    -moz-linear-gradient(top, #eef, #44b);
+				background-image:     -ms-linear-gradient(top, white, gray);
+				background-image:      -o-linear-gradient(top, white, gray);
+				background-image:         linear-gradient(top, white, gray);
+			}
+			.hiddenInput{
+				position: absolute;
+				left: -9000px;
+			}
+			#modalBlocker{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				background-color: white;
+				opacity: 0.7;
+				width: 100%;
+				height: 100%;
+				z-index: 9;
+			}
+			.sourceCode{
+				width: 100%;
+				font-size: 20px;
+				padding: 8px;
+			}
+			.selectedPieceOfCode{
+				max-width: 90%;
+				background-color: #d0d0d0;
+				color: #000;
+				border: solid inset 2px white;
+				border-radius: 8px;
+				box-shadow: 0px 0px 10px black;
+			}
+		</style>
+		<script src="scripts/jquery.js"></script>
+		<script src="../PowerPolygon/PowerPolygon.js"></script>
+		<script type="text/javascript">        var _gaq = _gaq || [];        _gaq.push(['_setAccount', 'UA-1270869-17']);        _gaq.push(['_setDomainName', '.felipenmoura.org']);        _gaq.push(['_trackPageview']);        (function() {        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);        })();    </script>
+	</head>
+	<body>
+	</body>
+	<script>
+		PPW.init({
+			fwSrc: '../PowerPolygon/',
+			name: "T&aacute;, e agora? ... acessibilidade",
+			authors: [
+						{
+							name: 'Felipe N. Moura',
+							email: 'felipenmoura@gmail.com'
+						}
+					],
+			links:  [
+						{
+							type: 'website',
+							name: "Felipe's website",
+							url: 'http://felipenmoura.org'
+						}
+					],
+			slides: [
+						{src: 'capa', 			title: 'Capa', 				type: 'title'}, // ok
+						{src: 'about', 			title: 'Sobre mim', 		type: 'content'}, // ok
+						{src: 'interfaceTitle', title: 'Interface', 		type: 'section', notes: ["precisamos compreender as interfaces!", "mostrar como NOS tambem necessitamos de uma certa acessibilidade"]}, // ok
+						{src: 'interface1', 	title: 'Interface',			type: 'content', notes: ["Falar da maçaneta das portas e a sua evolução"]}, // ok
+						{src: 'interface2', 	title: 'Interface',			type: 'content', notes: ["Usar exemplo do FOGAO"]}, // ok
+						{src: 'interface3', 	title: 'Interface',			type: 'content', notes: ["Formularios e login atual, com integração do google ou facebook"]}, // ok
+						{src: 'numeros', 		title: 'Números',			type: 'section', notes: ["57mi deficientes visuais", "23% deficientes motores"]}, // ok
+						{src: 'situacoes', 		title: 'Situações reais',	type: 'section'}, // ok
+						{src: 'situacoes1', 	title: 'Situações reais',	type: 'content', notes: ["cores", "costumes (historia dos CHINESES)"]}, // ok
+						{src: 'situacoes2', 	title: 'Situações reais',	type: 'content', notes: ["pilhas no teclado!", "Pau no monitor!"]}, // ok
+						{src: 'situacoes3', 	title: 'Situações reais',	type: 'content', notes: ["browsers diferentes....SOs diferentes", "noscript, mobile", "flash, java: longdesc"]}, // ok
+						{src: 'armas',			title: 'armas',				type: 'section'}, // ok
+						{src: 'armas1', 		title: 'armas',				type: 'content', notes: ["Teclados", "screenreaders", "Shaders"]}, // ok
+						{src: 'detalhes', 		title: 'Detalhes',			type: 'section'}, // ok
+						{src: 'detalhes1', 		title: 'Detalhes',			type: 'content', notes: ["Tecnologias existentes, simples", "link no topo", "labels e TIPOS de inputs(neste momento, mostrar o chromeVox)"]}, // ok
+						{src: 'detalhes2', 		title: 'Detalhes',			type: 'content', notes: ["alt", "deixar alt em branco para imagens decorativas"/*, useChromeVox: true */]}, // ok
+						{src: 'detalhes3', 		title: 'Detalhes',			type: 'content', notes: ["buttons ao inves de divs estilizados"]}, // OK
+						{src: 'detalhes4', 		title: 'Detalhes',			type: 'content', notes: ["estrutura HTML deve ser concisa e semantica", "NAO PODEM haver erros no html"]}, // ok
+						{src: 'detalhes5', 		title: 'Detalhes',			type: 'content', notes: ["use title em links", "fonts...permita q aumente o tamanho", "use web-fonts ao inves de imagens"]}, // ok
+						{src: 'detalhes6', 		title: 'Detalhes',			type: 'content', notes: ["tabindex"]}, // ok
+						{src: 'avancado', 		title: 'Avançado',			type: 'section'}, // ok
+						{src: 'avancado1', 		title: 'Avançado',			type: 'content', notes: ["JS vs Accessibilidade"]}, // ok
+						{src: 'avancado2', 		title: 'Avançado',			type: 'content', notes: ["Criando um modal"]}, // ok
+						{src: 'aria', 			title: 'ARIAs',				type: 'section'}, // ok
+						{src: 'aria1', 			title: 'ARIAs',				type: 'content', notes: ["o que sao", "Elas tambem precisarao do seu js"]},
+						{src: 'aria2', 			title: 'ARIAs',				type: 'content', notes: ["roles", "aria-states"]},
+						{src: 'aria3', 			title: 'ARIAs',				type: 'content', notes: ["roles", "aria-states"]},
+						{src: 'obrigado', 		title: 'agradecimentos',	type: 'ending'}
+					],
+			//stage: 'elementID',
+			theme: 'diagonal',
+			presentationTool: false,
+			themeParameters: {
+				
+			}
+		});
+	</script>
+</html>

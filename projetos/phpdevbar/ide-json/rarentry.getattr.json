@@ -1,0 +1,1 @@
+{"name":"RarEntry.getAttr","purpose":"Get attributes of the entry.","manualid":"rarentry.getattr","version":false,"params":[],"return":{"type":"int","description":"Returns the attributes or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RarEntry::getHostOs"},{"type":false,"name":false}]}

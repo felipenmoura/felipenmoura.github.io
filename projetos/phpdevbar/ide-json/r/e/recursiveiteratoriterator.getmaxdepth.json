@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.getMaxDepth","purpose":"Get max depth","manualid":"recursiveiteratoriterator.getmaxdepth","version":false,"params":[],"return":{"type":"mixed","description":"The maximum accepted depth, or FALSE if any depth is allowed."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RecursiveIteratorIterator::setMaxDepth"}]}

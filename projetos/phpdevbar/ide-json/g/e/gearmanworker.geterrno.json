@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.getErrno","purpose":"Get errno","manualid":"gearmanworker.geterrno","version":false,"params":[],"return":{"type":"int","description":"A valid errno."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanWorker::error"}]}

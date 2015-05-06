@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getCookies","purpose":"Get cookies","manualid":"function.httprequest-getcookies","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array containing any previously set cookies."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

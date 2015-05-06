@@ -1,0 +1,1 @@
+{"name":"HaruFont.getCapHeight","purpose":"Get the distance from the baseline of uppercase letters","manualid":"function.harufont-getcapheight","version":false,"params":[],"return":{"type":"int","description":"Returns the distance from the baseline of uppercase letters."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

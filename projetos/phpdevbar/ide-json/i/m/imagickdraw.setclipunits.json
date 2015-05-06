@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setClipUnits","purpose":"Sets the interpretation of clip path units","manualid":"function.imagickdraw-setclipunits","version":false,"params":[{"name":"clip_units","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.truncate","purpose":"Truncates large object","manualid":"function.oci-lob-truncate","version":false,"params":[{"name":"length","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

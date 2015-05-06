@@ -1,0 +1,1 @@
+{"name":"domxml_xmltree","purpose":"Creates a tree of PHP objects from an XML document","manualid":"function.domxml-xmltree","version":"PHP 4 >= 4.2.0","params":[{"name":"str","type":"string","optional":"false"}],"return":{"type":"DomDocument","description":"Returns a tree of Dom objects starting by a \n   DomDocument."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

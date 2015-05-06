@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_Tag.addFrame","purpose":"Add a frame to the ID3v2 tag","manualid":"id3v2tag.addFrame","version":false,"params":[{"name":"frame","type":"KTagLib_ID3v2_Frame","optional":"false"}],"return":{"type":"bool","description":"Returns true on success, otherwise false."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

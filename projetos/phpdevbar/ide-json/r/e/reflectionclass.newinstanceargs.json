@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.newInstanceArgs","purpose":"New instance args","manualid":"reflectionclass.newinstanceargs","version":false,"params":[{"name":"args","type":"array","optional":"true"}],"return":{"type":"object","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::newInstance"}]}

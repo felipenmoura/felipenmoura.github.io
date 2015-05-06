@@ -1,0 +1,1 @@
+{"name":"mysqli_thread_safe","purpose":"Returns whether thread safety is given or not","manualid":"mysqli.thread-safe","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the client library is thread-safe, otherwise FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

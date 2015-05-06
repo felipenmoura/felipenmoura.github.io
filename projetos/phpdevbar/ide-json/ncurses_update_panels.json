@@ -1,0 +1,1 @@
+{"name":"ncurses_update_panels","purpose":"Refreshes the virtual screen to reflect the relations between panels in the stack","manualid":"function.ncurses-update-panels","version":"PHP 4 >= 4.3.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

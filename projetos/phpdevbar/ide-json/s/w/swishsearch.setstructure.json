@@ -1,0 +1,1 @@
+{"name":"SwishSearch.setStructure","purpose":"Set the structure flag in the search object","manualid":"function.swishsearch-setstructure","version":false,"params":[{"name":"structure","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

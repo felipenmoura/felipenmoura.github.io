@@ -1,0 +1,1 @@
+{"name":"HaruDoc.useJPFonts","purpose":"Enable builtin Japanese fonts","manualid":"function.harudoc-usejpfonts","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruDoc::useJPEncodings"}]}

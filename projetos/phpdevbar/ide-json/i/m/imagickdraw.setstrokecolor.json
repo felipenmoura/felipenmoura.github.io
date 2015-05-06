@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeColor","purpose":"Sets the color used for stroking object outlines","manualid":"function.imagickdraw-setstrokecolor","version":false,"params":[{"name":"stroke_pixel","type":"ImagickPixel","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

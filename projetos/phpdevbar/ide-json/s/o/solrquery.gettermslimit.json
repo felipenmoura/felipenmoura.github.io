@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsLimit","purpose":"Returns the maximum number of terms Solr should return","manualid":"solrquery.gettermslimit","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"streamWrapper.dir_rewinddir","purpose":"Rewind directory handle","manualid":"streamwrapper.dir-rewinddir","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"rewinddir"},{"type":"methodname","name":"streamWrapper::dir_readdir"}]}

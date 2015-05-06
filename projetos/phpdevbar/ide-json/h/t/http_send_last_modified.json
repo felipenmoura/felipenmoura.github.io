@@ -1,0 +1,1 @@
+{"name":"http_send_last_modified","purpose":"Send Last-Modified","manualid":"function.http-send-last-modified","version":"PECL pecl_http >= 0.1.0","params":[{"name":"timestamp","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

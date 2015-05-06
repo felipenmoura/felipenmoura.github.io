@@ -1,0 +1,1 @@
+{"name":"Gmagick.oilpaintimage","purpose":"Simulates an oil painting","manualid":"gmagick.oilpaintimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

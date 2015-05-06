@@ -1,0 +1,1 @@
+{"name":"hw_setlinkroot","purpose":"Set the id to which links are calculated","manualid":"function.hw-setlinkroot","version":"PHP 4","params":[{"name":"link","type":"int","optional":"false"},{"name":"rootid","type":"int","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

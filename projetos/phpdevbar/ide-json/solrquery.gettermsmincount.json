@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsMinCount","purpose":"Returns the minimum document frequency to return in order to be included","manualid":"solrquery.gettermsmincount","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

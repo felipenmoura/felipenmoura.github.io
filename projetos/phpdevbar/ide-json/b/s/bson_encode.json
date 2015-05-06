@@ -1,0 +1,1 @@
+{"name":"bson_encode","purpose":"Serializes a PHP variable into a BSON string","manualid":"function.bson-encode","version":"PECL mongo >=1.0.1","params":[{"name":"anything","type":"mixed","optional":"false"}],"return":{"type":"string","description":"Returns the serialized string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,46 @@
+<h2 class="LANG-EN">CSS3 Animations</h2>
+<h2 class="LANG-PT">Animcações em CSS3</h2>
+<br/>
+* @-vendor-keyframes<br/><br/>
+* -vendor-transition
+
+
+    
+    <div id="anim-eg-1" style="text-align: center;">
+	<div id='exemplo'>
+		Modelo
+	</div>
+
+	<input type='button' value='Flash'  onclick="PPW.animate('#exemplo', 'flash', 'slow')" />
+	<input type='button' value='Bounce' onclick="PPW.animate('#exemplo', 'bounce', 'slow')" />
+	<input type='button' value='Ta-dah' onclick="PPW.animate('#exemplo', 'tada', 'slow')" />
+	<input type='button' value='Wobble' onclick="PPW.animate('#exemplo', 'wobble', 'slow')" />
+	<input type='button' value='hinge'  onclick="PPW.animate('#exemplo', 'hinge', 'slow')" />
+    </div>
+
+
+    <div id="anim-eg-2" style="text-align: center;">
+        <div id="squareStage" style="width: 120px; height: 120px;">
+            <div id="spinner">
+                <div class="face1">1</div>
+                <div class="face2">2</div>
+                <div class="face3">3</div>
+                <div class="face4">4</div>
+                <div class="face5">5</div>
+                <div class="face6">6</div>
+            </div>
+	</div>
+    </div>
+    
+<script>
+    
+    PPW.addAction({
+        does: function(){
+            $('#anim-eg-1').fadeOut(function(){$('#anim-eg-2').fadeIn()});
+        },
+        undo: function(){
+            $('#anim-eg-2').fadeOut(function(){$('#anim-eg-1').fadeIn()});
+        }
+    });
+    
+</script>

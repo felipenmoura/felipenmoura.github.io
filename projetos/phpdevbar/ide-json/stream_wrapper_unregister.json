@@ -1,0 +1,1 @@
+{"name":"stream_wrapper_unregister","purpose":"Unregister a URL wrapper","manualid":"function.stream-wrapper-unregister","version":"PHP 5 >= 5.1.0","params":[{"name":"protocol","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getParentMessage","purpose":"Get parent message","manualid":"function.httpmessage-getparentmessage","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns the parent HttpMessage object."},"errors":"Throws HttpRuntimeException.","notes":[],"changelog":[],"seealso":[]}

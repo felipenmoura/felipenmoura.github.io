@@ -1,0 +1,1 @@
+{"name":"MongoGridFSCursor.getNext","purpose":"Return the next file to which this cursor points, and advance the cursor","manualid":"mongogridfscursor.getnext","version":false,"params":[],"return":{"type":"MongoGridFSFile","description":"Returns the next file."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

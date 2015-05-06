@@ -1,0 +1,1 @@
+{"name":"SolrQuery.removeFacetField","purpose":"Removes one of the facet.date parameters","manualid":"solrquery.removefacetfield","version":false,"params":[{"name":"field","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

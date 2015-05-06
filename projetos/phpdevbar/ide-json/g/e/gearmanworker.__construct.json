@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.__construct","purpose":"Create a GearmanWorker instance","manualid":"gearmanworker.construct","version":false,"params":[],"return":{"type":null,"description":"A GearmanWorker object"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanWorker::clone"}]}

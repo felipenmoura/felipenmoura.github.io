@@ -1,0 +1,1 @@
+{"name":"Cairo.availableSurfaces","purpose":"Retrieves all available surfaces","manualid":"cairo.availablesurfaces","version":false,"params":[],"return":{"type":"array","description":"A list-type array with all available surface backends."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Cairo::availableFonts"}]}

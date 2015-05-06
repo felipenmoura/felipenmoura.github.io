@@ -1,0 +1,1 @@
+{"name":"SplHeap.count","purpose":"Counts the number of elements in the heap.","manualid":"splheap.count","version":false,"params":[],"return":{"type":"int","description":"Returns the number of elements in the heap."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

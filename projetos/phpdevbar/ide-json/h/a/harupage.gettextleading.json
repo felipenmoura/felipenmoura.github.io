@@ -1,0 +1,1 @@
+{"name":"HaruPage.getTextLeading","purpose":"Get the current value of line spacing","manualid":"function.harupage-gettextleading","version":false,"params":[],"return":{"type":"float","description":"Returns the current value of line spacing."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setTextLeading"}]}

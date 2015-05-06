@@ -1,0 +1,1 @@
+{"name":"OAuth.enableSSLChecks","purpose":"Turn on SSL checks","manualid":"oauth.enablesslchecks","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[{"version":"0.99.8","change":"The sslChecks member was added"}],"seealso":[{"type":"methodname","name":"OAuth::disableSSLChecks"}]}

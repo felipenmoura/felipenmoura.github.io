@@ -1,0 +1,1 @@
+{"name":"SolrDocument.offsetUnset","purpose":"Removes a field","manualid":"solrdocument.offsetunset","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"void","description":"No return value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

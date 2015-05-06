@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageUnits","purpose":"Sets the image units of resolution","manualid":"function.imagick-setimageunits","version":false,"params":[{"name":"units","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

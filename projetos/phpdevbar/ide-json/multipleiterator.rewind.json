@@ -1,0 +1,1 @@
+{"name":"MultipleIterator.rewind","purpose":"Rewinds all attached iterator instances","manualid":"multipleiterator.rewind","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"MultipleIterator::next"}]}

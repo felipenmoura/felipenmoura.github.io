@@ -1,0 +1,1 @@
+{"name":"variant_neg","purpose":"Performs logical negation on a variant","manualid":"function.variant-neg","version":"PHP 5","params":[{"name":"variant","type":"mixed","optional":"false"}],"return":{"type":"mixed","description":"Returns the result of the logical negation."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

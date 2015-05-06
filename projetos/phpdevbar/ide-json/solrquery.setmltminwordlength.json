@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setMltMinWordLength","purpose":"Sets the minimum word length","manualid":"solrquery.setmltminwordlength","version":false,"params":[{"name":"minWordLength","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

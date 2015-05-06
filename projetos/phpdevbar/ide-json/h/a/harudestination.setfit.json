@@ -1,0 +1,1 @@
+{"name":"HaruDestination.setFit","purpose":"Set the appearance of the page to fit the window","manualid":"function.harudestination-setfit","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

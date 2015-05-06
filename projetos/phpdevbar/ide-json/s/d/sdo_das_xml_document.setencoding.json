@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.setEncoding","purpose":"Sets the given string as encoding","manualid":"function.sdo-das-xml-document-setencoding","version":false,"params":[{"name":"encoding","type":"string","optional":"false"}],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

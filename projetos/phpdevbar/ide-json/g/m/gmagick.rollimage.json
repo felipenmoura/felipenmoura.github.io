@@ -1,0 +1,1 @@
+{"name":"Gmagick.rollimage","purpose":"Offsets an image","manualid":"gmagick.rollimage","version":false,"params":[{"name":"x","type":"int","optional":"false"},{"name":"y","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

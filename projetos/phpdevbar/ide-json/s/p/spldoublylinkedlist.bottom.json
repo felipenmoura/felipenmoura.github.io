@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.bottom","purpose":"Peeks at the node from the beginning of the doubly linked list","manualid":"spldoublylinkedlist.bottom","version":false,"params":[],"return":{"type":"mixed","description":"The value of the first node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

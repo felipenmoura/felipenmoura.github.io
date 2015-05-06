@@ -1,0 +1,37 @@
+
+								Jaydson Gomes - F2J WEB
+								13/02/2008
+-----------------------------------------------------------------------------------
+								#Menus e Permissoes
+-----------------------------------------------------------------------------------
+#Menus
+Arquivo  ---->
+		     |
+			 |-> Novo Cliente               (Cadastrar Novo Cliente)
+			 |-> Novo Processo    		    (Cadastrar Novo Processo)   
+			 |-> Nova Pasta       		    (Cadastrar Nova Pasta)   
+			 |-> Novo Funcionário 		    (Cadastrar Novo Funcionário)
+			 |-> Novo Grupo				    (Cadastrar Novo Grupo)
+			 |-> Imprimir				    (Imprimir)
+			 |-> Sobre O Sistema			(Iformaçoes Sobre O Sistema)
+			 |-> Logoff  				    (Encerra Sessao do Usuário)
+			 |	
+Informes ---->
+			 |
+			 |-> Alertas do Sistema 		(Alertas do Sistema)
+			 |-> Açoes Pendentes  			(Açoes Pendentes)
+			 |-> Mensagens  				(Mensagens)
+			 |-> Circulares         		(Circulares)
+			 |
+Pesquisar---->
+			 |
+			 |-> Clientes          			(Pesquisar Clientes)
+			 |-> Processos         			(Pesquisar Processos)
+			 |-> Funcionários      			(Pesquisar Funcionários)
+			 |-> Pastas            			(Pesquisar Pastas)
+		
+			
+			
+#Permissoes
+
+

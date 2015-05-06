@@ -1,0 +1,1 @@
+{"name":"PDO_ODBC DSN","purpose":"Connecting to ODBC or DB2 databases","manualid":"ref.pdo-odbc.connection","version":"PECL PDO_ODBC >= 0.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"printer_delete_brush","purpose":"Delete a brush","manualid":"function.printer-delete-brush","version":"PECL printer SVN","params":[{"name":"brush_handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

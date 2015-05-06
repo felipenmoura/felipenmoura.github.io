@@ -1,0 +1,14 @@
+<h2>SVG Demo</h2>
+<iframe id="svg-demo-3-iframe"
+        style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%;"
+        src="_blank">
+</iframe>
+
+<script>
+    PPW.onSlideEnter(function(){
+        $('#svg-demo-3-iframe').attr('src', 'http://svg-wow.org/audio/animated-lyrics.svg');
+    });
+    PPW.onSlideExit(function(){
+        $('#svg-demo-3-iframe').attr('src', '_blank');
+    })
+</script>

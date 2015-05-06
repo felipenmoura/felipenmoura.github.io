@@ -1,0 +1,1 @@
+{"name":"Imagick.getImage","purpose":"Returns a new Imagick object","manualid":"function.imagick-getimage","version":false,"params":[],"return":{"type":"Imagick","description":"Returns a new Imagick object with the current image sequence.\n   Throw an\nImagickException on error."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

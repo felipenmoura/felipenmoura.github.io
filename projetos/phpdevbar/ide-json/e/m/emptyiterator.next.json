@@ -1,0 +1,1 @@
+{"name":"EmptyIterator.next","purpose":"The next() method","manualid":"emptyiterator.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

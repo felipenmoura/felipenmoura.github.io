@@ -1,0 +1,1 @@
+{"name":"ImagickPixel.getColorCount","purpose":"Returns the color count associated with this color","manualid":"function.imagickpixel-getcolorcount","version":false,"params":[],"return":{"type":"int","description":"Returns the color count as an integer on success, throws\n  ImagickPixelException on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

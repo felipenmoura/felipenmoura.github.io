@@ -1,0 +1,1 @@
+{"name":"http_chunked_decode","purpose":"Decode chunked-encoded data","manualid":"function.http-chunked-decode","version":"PECL pecl_http >= 0.1.0","params":[{"name":"encoded","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the decoded string on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

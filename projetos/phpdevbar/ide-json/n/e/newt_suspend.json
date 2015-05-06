@@ -1,0 +1,1 @@
+{"name":"newt_suspend","purpose":"Tells newt to return the terminal to its initial state","manualid":"function.newt-suspend","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_resume"}]}

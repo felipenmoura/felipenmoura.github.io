@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.__destruct","purpose":"HttpRequestPool destructor","manualid":"function.httprequestpool-destruct","version":false,"params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

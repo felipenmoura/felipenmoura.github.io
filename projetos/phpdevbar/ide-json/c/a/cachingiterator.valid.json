@@ -1,0 +1,1 @@
+{"name":"CachingIterator.valid","purpose":"Check whether the current element is valid","manualid":"cachingiterator.valid","version":false,"params":[],"return":{"type":"void","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

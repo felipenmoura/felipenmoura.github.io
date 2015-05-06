@@ -1,0 +1,1 @@
+{"name":"Gmagick.labelimage","purpose":"Adds a label to an image.","manualid":"gmagick.labelimage","version":false,"params":[{"name":"label","type":"string","optional":"false"}],"return":{"type":"void","description":"Gmagick with label."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

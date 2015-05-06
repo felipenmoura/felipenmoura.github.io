@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.unshift","purpose":"Prepends the doubly linked list with an element","manualid":"spldoublylinkedlist.unshift","version":false,"params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

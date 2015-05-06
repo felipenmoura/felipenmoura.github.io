@@ -1,0 +1,1 @@
+{"name":"Memcached.getStats","purpose":"Get server pool statistics","manualid":"memcached.getstats","version":false,"params":[],"return":{"type":"array","description":"Array of server statistics, one entry per server."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Property.getContainingType","purpose":"Get the SDO_Model_Type which contains this property","manualid":"function.sdo-model-property-getcontainingtype","version":false,"params":[],"return":{"type":"SDO_Model_Type","description":"Returns the SDO_Model_Type which contains this property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

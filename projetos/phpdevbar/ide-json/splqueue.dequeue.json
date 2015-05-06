@@ -1,0 +1,1 @@
+{"name":"SplQueue.dequeue","purpose":"Dequeues a node from the queue","manualid":"splqueue.dequeue","version":false,"params":[],"return":{"type":"mixed","description":"The value of the dequeued node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

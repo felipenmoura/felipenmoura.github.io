@@ -1,0 +1,1 @@
+{"name":"readline_on_new_line","purpose":"Inform readline that the cursor has moved to a new line","manualid":"function.readline-on-new-line","version":"PHP 5 >= 5.1.0","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

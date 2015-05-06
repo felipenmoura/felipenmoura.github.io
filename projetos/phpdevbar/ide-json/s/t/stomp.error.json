@@ -1,0 +1,1 @@
+{"name":"Stomp.error","purpose":"Gets the last stomp error","manualid":"stomp.error","version":false,"params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns an error string or FALSE if no error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Mongo.pairConnect","purpose":"Connects to paired database server [deprecated]","manualid":"mongo.pairconnect","version":false,"params":[],"return":{"type":"boolean","description":"If the connection was successful."},"errors":"Throws MongoConnectionException if it fails to connect \n   to the databases.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"msession_connect","purpose":"Connect to msession server","manualid":"function.msession-connect","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"host","type":"string","optional":"false"},{"name":"port","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

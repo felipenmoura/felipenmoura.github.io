@@ -1,0 +1,1 @@
+{"name":"HaruPage.getWidth","purpose":"Get the width of the page","manualid":"function.harupage-getwidth","version":false,"params":[],"return":{"type":"float","description":"Returns the width of the page."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setWidth"}]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageInterpolateMethod","purpose":"Returns the interpolation method","manualid":"function.imagick-getimageinterpolatemethod","version":false,"params":[],"return":{"type":"int","description":"Returns the interpolate method on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"convert_uudecode","purpose":"Decode a uuencoded string","manualid":"function.convert-uudecode","version":"PHP 5","params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the decoded data as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"convert_uuencode"}]}

@@ -1,0 +1,1 @@
+{"name":"Countable.count","purpose":"Count elements of an object","manualid":"countable.count","version":false,"params":[],"return":{"type":"int","description":"The custom count as an integer.The return value is cast to an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

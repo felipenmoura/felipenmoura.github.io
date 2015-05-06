@@ -1,0 +1,1 @@
+{"name":"cairo_path_extents","purpose":"The pathExtents purpose","manualid":"cairocontext.pathextents","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"array","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

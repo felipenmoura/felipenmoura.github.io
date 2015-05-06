@@ -1,0 +1,1 @@
+{"name":"SQLite3.exec","purpose":"Executes a result-less query against a given database","manualid":"sqlite3.exec","version":false,"params":[{"name":"query","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the query succeeded, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

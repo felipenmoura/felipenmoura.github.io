@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setName","purpose":"Sets the variable name","manualid":"function.swftextfield.setname","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

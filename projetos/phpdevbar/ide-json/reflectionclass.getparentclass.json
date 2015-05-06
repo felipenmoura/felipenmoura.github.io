@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getParentClass","purpose":"Gets parent class","manualid":"reflectionclass.getparentclass","version":false,"params":[],"return":{"type":"object","description":"A ReflectionClass."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::__construct"}]}

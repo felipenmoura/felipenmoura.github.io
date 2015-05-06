@@ -1,0 +1,1 @@
+{"name":"notes_copy_db","purpose":"Copy a Lotus Notes database","manualid":"function.notes-copy-db","version":"PHP 4 >= 4.0.5","params":[{"name":"from_database_name","type":"string","optional":"false"},{"name":"to_database_name","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

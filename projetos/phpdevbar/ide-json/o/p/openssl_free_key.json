@@ -1,0 +1,1 @@
+{"name":"openssl_free_key","purpose":"Free key resource","manualid":"function.openssl-free-key","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"key_identifier","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

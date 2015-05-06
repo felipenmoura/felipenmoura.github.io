@@ -1,0 +1,1 @@
+{"name":"hw_api_object.value","purpose":"Returns value of attribute","manualid":"function.hwapi-object-value","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the value of the attribute with the given name or FALSE if an\n   error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

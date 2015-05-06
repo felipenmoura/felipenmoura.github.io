@@ -1,0 +1,1 @@
+{"name":"maxdb_rpl_probe","purpose":"RPL probe","manualid":"function.maxdb-rpl-probe","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

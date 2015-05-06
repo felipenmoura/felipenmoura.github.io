@@ -1,0 +1,1 @@
+{"name":"PDF_get_image_width","purpose":"Get image width [deprecated]","manualid":"function.pdf-get-image-width","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

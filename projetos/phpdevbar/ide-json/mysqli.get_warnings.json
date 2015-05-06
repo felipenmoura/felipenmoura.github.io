@@ -1,0 +1,1 @@
+{"name":"mysqli.get_warnings","purpose":"Get result of SHOW WARNINGS","manualid":"mysqli.get-warnings","version":false,"params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"mysqli_warnings","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

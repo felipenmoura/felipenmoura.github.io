@@ -1,0 +1,1 @@
+{"name":"SWFShape.drawLine","purpose":"Draws a line (relative)","manualid":"function.swfshape.drawline","version":false,"params":[{"name":"dx","type":"float","optional":"false"},{"name":"dy","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

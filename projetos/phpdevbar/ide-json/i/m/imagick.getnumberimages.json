@@ -1,0 +1,1 @@
+{"name":"Imagick.getNumberImages","purpose":"Returns the number of images in the object","manualid":"function.imagick-getnumberimages","version":false,"params":[],"return":{"type":"int","description":"Returns the number of images associated with Imagick object.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

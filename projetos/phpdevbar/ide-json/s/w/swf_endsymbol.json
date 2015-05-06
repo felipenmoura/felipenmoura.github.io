@@ -1,0 +1,1 @@
+{"name":"swf_endsymbol","purpose":"End the definition of a symbol","manualid":"function.swf-endsymbol","version":"PHP 4","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_startsymbol"}]}

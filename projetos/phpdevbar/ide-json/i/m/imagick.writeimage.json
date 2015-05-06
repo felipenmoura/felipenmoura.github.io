@@ -1,0 +1,1 @@
+{"name":"Imagick.writeImage","purpose":"Writes an image to the specified filename","manualid":"function.imagick-writeimage","version":false,"params":[{"name":"filename","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

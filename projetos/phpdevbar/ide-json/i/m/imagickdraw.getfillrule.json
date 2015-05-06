@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFillRule","purpose":"Returns the fill rule","manualid":"function.imagickdraw-getfillrule","version":false,"params":[],"return":{"type":"int","description":"Returns a FILLRULE_ constant"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

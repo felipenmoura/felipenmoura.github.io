@@ -1,0 +1,1 @@
+{"name":"SWFMovie.__construct","purpose":"Creates a new movie object, representing an SWF version 4 movie","manualid":"function.swfmovie.construct","version":false,"params":[{"name":"version","type":"int","optional":"true"}],"return":{"type":"SWFMovie","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

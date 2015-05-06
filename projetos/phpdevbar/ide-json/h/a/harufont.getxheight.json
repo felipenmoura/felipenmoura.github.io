@@ -1,0 +1,1 @@
+{"name":"HaruFont.getXHeight","purpose":"Get the distance from the baseline of lowercase letters","manualid":"function.harufont-getxheight","version":false,"params":[],"return":{"type":"int","description":"Returns the distance from the baseline of lowercase letters."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

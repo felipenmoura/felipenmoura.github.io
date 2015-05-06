@@ -1,0 +1,1 @@
+{"name":"ming_setcubicthreshold","purpose":"Set cubic threshold","manualid":"function.ming-setcubicthreshold","version":"PHP 4 >= 4.0.5, PHP 5, PECL ming SVN","params":[{"name":"threshold","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

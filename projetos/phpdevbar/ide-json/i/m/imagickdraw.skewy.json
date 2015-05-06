@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.skewY","purpose":"Skews the current coordinate system in the vertical direction","manualid":"function.imagickdraw-skewy","version":false,"params":[{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

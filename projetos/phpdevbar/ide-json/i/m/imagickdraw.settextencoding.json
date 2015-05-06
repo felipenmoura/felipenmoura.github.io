@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setTextEncoding","purpose":"Specifies specifies the text code set","manualid":"function.imagickdraw-settextencoding","version":false,"params":[{"name":"encoding","type":"string","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

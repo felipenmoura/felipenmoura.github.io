@@ -1,0 +1,1 @@
+{"name":"bzclose","purpose":"Close a bzip2 file","manualid":"function.bzclose","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"bz","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"bzopen"}]}

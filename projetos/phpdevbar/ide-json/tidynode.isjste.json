@@ -1,0 +1,1 @@
+{"name":"tidyNode.isJste","purpose":"Checks if this node is JSTE","manualid":"tidynode.isjste","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the node is JSTE, FALSE otherwise."},"errors":null,"notes":[{"type":"note","description":"This function was named tidy_node::is_jste in\n    PHP 4\/Tidy 1."}],"changelog":[],"seealso":[]}

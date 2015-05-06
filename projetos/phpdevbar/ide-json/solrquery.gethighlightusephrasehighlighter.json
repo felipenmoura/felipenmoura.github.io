@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightUsePhraseHighlighter","purpose":"Returns the state of the hl.usePhraseHighlighter parameter","manualid":"solrquery.gethighlightusephrasehighlighter","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

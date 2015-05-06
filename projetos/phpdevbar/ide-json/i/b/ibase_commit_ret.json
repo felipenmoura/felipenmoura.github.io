@@ -1,0 +1,1 @@
+{"name":"ibase_commit_ret","purpose":"Commit a transaction without closing it","manualid":"function.ibase-commit-ret","version":"PHP 5","params":[{"name":"link_or_trans_identifier","type":"resource","optional":"true","initializer":"NULL"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

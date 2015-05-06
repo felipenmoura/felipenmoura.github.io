@@ -1,0 +1,1 @@
+{"name":"newt_listbox_clear_selection","purpose":"","manualid":"function.newt-listbox-clear-selection","version":"PECL newt >= 0.1","params":[{"name":"listbox","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

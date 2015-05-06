@@ -1,0 +1,1 @@
+{"name":"GearmanClient.__construct","purpose":"Create a GearmanClient instance","manualid":"gearmanclient.construct","version":false,"params":[],"return":{"type":null,"description":"A GearmanClient object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::clone"}]}

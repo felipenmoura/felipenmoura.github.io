@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.isUserDefined","purpose":"Checks if user defined","manualid":"reflectionfunctionabstract.isuserdefined","version":false,"params":[],"return":{"type":"bool","description":"TRUE if it's user-defined, otherwise false;"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::isInternal"}]}

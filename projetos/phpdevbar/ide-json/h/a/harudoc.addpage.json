@@ -1,0 +1,1 @@
+{"name":"HaruDoc.addPage","purpose":"Add new page to the document","manualid":"function.harudoc-addpage","version":false,"params":[],"return":{"type":"object","description":"Returns a new HaruPage instance."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruDoc::insertPage"}]}

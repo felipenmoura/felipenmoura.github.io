@@ -1,0 +1,1 @@
+{"name":"event_base_new","purpose":"Create and initialize new event base","manualid":"function.event-base-new","version":"PECL libevent >= 0.0.1","params":[],"return":{"type":"resource","description":"event_base_new returns valid event base resource on\n   success or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

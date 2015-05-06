@@ -1,0 +1,1 @@
+{"name":"notes_create_db","purpose":"Create a Lotus Notes database","manualid":"function.notes-create-db","version":"PHP 4 >= 4.0.5","params":[{"name":"database_name","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

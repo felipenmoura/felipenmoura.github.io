@@ -1,0 +1,1 @@
+{"name":"newt_label_set_text","purpose":"","manualid":"function.newt-label-set-text","version":"PECL newt >= 0.1","params":[{"name":"label","type":"resource","optional":"false"},{"name":"text","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.setExtractFlags","purpose":"Sets the mode of extraction","manualid":"splpriorityqueue.setextractflags","version":false,"params":[{"name":"flags","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

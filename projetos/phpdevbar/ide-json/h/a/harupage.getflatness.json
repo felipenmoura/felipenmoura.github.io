@@ -1,0 +1,1 @@
+{"name":"HaruPage.getFlatness","purpose":"Get the flatness of the page","manualid":"function.harupage-getflatness","version":false,"params":[],"return":{"type":"float","description":"Returns the flatness of the page."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setFlatness"}]}

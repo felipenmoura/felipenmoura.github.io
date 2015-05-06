@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.valid","purpose":"Check validity","manualid":"recursivetreeiterator.valid","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the current position is valid, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

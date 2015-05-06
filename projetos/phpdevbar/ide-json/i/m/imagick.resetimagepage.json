@@ -1,0 +1,1 @@
+{"name":"Imagick.resetImagePage","purpose":"Reset image page","manualid":"function.imagick-resetimagepage","version":false,"params":[{"name":"page","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

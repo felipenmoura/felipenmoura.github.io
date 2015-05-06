@@ -1,0 +1,1 @@
+{"name":"DomAttribute.name","purpose":"Returns the name of attribute","manualid":"function.domattribute-name","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the attribute."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

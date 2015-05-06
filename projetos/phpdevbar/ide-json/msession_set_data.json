@@ -1,0 +1,1 @@
+{"name":"msession_set_data","purpose":"Set data session unstructured data","manualid":"function.msession-set-data","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"session","type":"string","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

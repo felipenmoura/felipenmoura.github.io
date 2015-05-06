@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.scale","purpose":"Adjusts the scaling factor","manualid":"gmagickdraw.scale","version":false,"params":[{"name":"x","type":"float","optional":"false"},{"name":"y","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

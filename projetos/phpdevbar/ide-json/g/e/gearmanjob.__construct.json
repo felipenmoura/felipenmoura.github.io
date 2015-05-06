@@ -1,0 +1,1 @@
+{"name":"GearmanJob.__construct","purpose":"Create a GearmanJob instance","manualid":"gearmanjob.construct","version":false,"params":[],"return":{"type":null,"description":"A GearmanJob object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

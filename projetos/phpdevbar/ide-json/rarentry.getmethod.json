@@ -1,0 +1,1 @@
+{"name":"RarEntry.getMethod","purpose":"Get pack method of the entry.","manualid":"rarentry.getmethod","version":false,"params":[],"return":{"type":"int","description":"Returns the method number or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

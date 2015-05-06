@@ -1,0 +1,1 @@
+{"name":"hw_api.identify","purpose":"Log into Hyperwave Server","manualid":"function.hwapi-identify","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns an object of typeHW_API_Error if\n   identification failed or TRUE if it was successful."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"maxdb_debug","purpose":"Performs debugging operations","manualid":"function.maxdb-debug","version":"PECL maxdb >= 1.0","params":[{"name":"debug","type":"string","optional":"false"}],"return":{"type":"void","description":"maxdb_debug doesn't return any value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getPostFields","purpose":"Get post fields","manualid":"function.httprequest-getpostfields","version":false,"params":[],"return":{"type":"array","description":"Returns the currently set post fields as associative array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

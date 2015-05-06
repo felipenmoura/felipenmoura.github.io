@@ -1,0 +1,1 @@
+{"name":"stream_is_local","purpose":"Checks if a stream is a local stream","manualid":"function.stream-is-local","version":"PHP 5 >= 5.2.4","params":[{"name":"stream_or_url","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

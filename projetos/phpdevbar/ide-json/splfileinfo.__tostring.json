@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.__toString","purpose":"Returns the path to the file as a string","manualid":"splfileinfo.tostring","version":false,"params":[],"return":{"type":"void","description":"Returns the path to the file."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

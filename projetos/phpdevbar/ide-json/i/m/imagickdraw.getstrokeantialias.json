@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getStrokeAntialias","purpose":"Returns the current stroke antialias setting","manualid":"function.imagickdraw-getstrokeantialias","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if antialiasing is on and false if it is off."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

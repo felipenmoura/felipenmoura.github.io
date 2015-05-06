@@ -1,0 +1,1 @@
+{"name":"stats_stat_gennch","purpose":"Not documented","manualid":"function.stats-stat-gennch","version":"PECL stats >= 1.0.0","params":[{"name":"n","type":"int","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

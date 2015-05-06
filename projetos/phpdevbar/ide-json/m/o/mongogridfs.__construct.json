@@ -1,0 +1,1 @@
+{"name":"MongoGridFS.__construct","purpose":"Creates new file collections","manualid":"mongogridfs.--construct","version":false,"params":[{"name":"db","type":"MongoDB","optional":"false"},{"name":"prefix","type":"string","optional":"true","initializer":"\"fs\""}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

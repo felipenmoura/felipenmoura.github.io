@@ -1,0 +1,1 @@
+{"name":"Mongo.connect","purpose":"Connects to a database server","manualid":"mongo.connect","version":false,"params":[],"return":{"type":"boolean","description":"If the connection was successful."},"errors":"Throws MongoConnectionException if it fails to connect\n   to the database.","notes":[],"changelog":[],"seealso":[]}

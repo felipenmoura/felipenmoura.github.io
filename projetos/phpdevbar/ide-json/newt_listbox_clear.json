@@ -1,0 +1,1 @@
+{"name":"newt_listbox_clear","purpose":"","manualid":"function.newt-listbox-clear","version":"PECL newt >= 0.1","params":[{"name":"listobx","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

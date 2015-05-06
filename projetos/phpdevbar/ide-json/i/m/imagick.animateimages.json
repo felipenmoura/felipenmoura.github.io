@@ -1,0 +1,1 @@
+{"name":"Imagick.animateImages","purpose":"Animates an image or images","manualid":"function.imagick-animateimages","version":false,"params":[{"name":"x_server","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"Imagick::displayImage"}]}

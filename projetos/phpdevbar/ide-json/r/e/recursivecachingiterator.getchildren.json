@@ -1,0 +1,1 @@
+{"name":"RecursiveCachingIterator.getChildren","purpose":"Return the inner iterator's children as a RecursiveCachingIterator","manualid":"recursivecachingiterator.getchildren","version":false,"params":[],"return":{"type":"RecursiveCachingIterator","description":"The inner iterator's children, as a RecursiveCachingIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

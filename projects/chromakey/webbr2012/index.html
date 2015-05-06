@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <style type="text/css">
+            canvas{
+                border: solid 1px red;
+                background-image: url(bg1.gif);
+                background-size: 100% 100%;
+                margin: auto;
+            }
+            video{
+                border: solid 1px red;
+            }
+            body{
+                background-color: appworkspace;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div>
+            <video id="video" autoplay="autoplay" width="360" height="270"></video>
+            <canvas id="canvas" width="360" height="270"></canvas>
+            <br/><br/>
+            <!--<input id="range" type="range" value="100" min="10" max="255" />-->
+            <input id="range" type="range" value="100" min="0" max="255" />
+        </div>
+        <script src="ck.js"></script>
+    </body>
+</html>

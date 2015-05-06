@@ -1,0 +1,1 @@
+{"name":"udm_free_agent","purpose":"Free mnoGoSearch session","manualid":"function.udm-free-agent","version":"PHP 4 >= 4.0.5, PHP 5 <= 5.0.5, PECL mnogosearch >= 1.0.0","params":[{"name":"agent","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

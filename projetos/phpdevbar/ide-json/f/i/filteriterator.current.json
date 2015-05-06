@@ -1,0 +1,1 @@
+{"name":"FilterIterator.current","purpose":"Get the current element value","manualid":"filteriterator.current","version":false,"params":[],"return":{"type":"mixed","description":"The current element value."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"FilterIterator::key"},{"type":"function","name":"FilterIterator::next"}]}

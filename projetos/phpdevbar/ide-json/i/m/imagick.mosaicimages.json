@@ -1,0 +1,1 @@
+{"name":"Imagick.mosaicImages","purpose":"Forms a mosaic from images","manualid":"function.imagick-mosaicimages","version":false,"params":[],"return":{"type":"Imagick","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

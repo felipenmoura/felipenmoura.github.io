@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setHighlight","purpose":"Enables or disables highlighting","manualid":"solrquery.sethighlight","version":false,"params":[{"name":"flag","type":"bool","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

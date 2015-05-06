@@ -1,0 +1,1 @@
+{"name":"ZipArchive.close","purpose":"Close the active archive (opened or newly created)","manualid":"function.ziparchive-close","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

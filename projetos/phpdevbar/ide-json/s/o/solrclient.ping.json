@@ -1,0 +1,1 @@
+{"name":"SolrClient.ping","purpose":"Checks if Solr server is still up","manualid":"solrclient.ping","version":false,"params":[],"return":{"type":"SolrPingResponse","description":"Returns a SolrPingResponse object on success and throws a SolrClientException on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

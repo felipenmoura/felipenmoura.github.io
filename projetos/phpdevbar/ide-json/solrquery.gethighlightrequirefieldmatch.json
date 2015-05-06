@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightRequireFieldMatch","purpose":"Returns if a field will only be highlighted if the query matched in this particular field","manualid":"solrquery.gethighlightrequirefieldmatch","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

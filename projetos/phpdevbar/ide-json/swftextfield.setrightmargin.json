@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setRightMargin","purpose":"Sets the right margin width of the text field","manualid":"function.swftextfield.setrightmargin","version":false,"params":[{"name":"width","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

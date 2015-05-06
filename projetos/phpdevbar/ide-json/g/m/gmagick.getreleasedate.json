@@ -1,0 +1,1 @@
+{"name":"Gmagick.getreleasedate","purpose":"Returns the GraphicsMagick release date as a string.","manualid":"gmagick.getreleasedate","version":false,"params":[],"return":{"type":"void","description":"Returns the GraphicsMagick release date as a string."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HaruPage.getWordSpace","purpose":"Get the current value of word spacing","manualid":"function.harupage-getwordspace","version":false,"params":[],"return":{"type":"float","description":"Returns the current value of word spacing."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setWordSpace"}]}

@@ -1,0 +1,1 @@
+{"name":"SplQueue.__construct","purpose":"Constructs a new queue implemented using a doubly linked list","manualid":"splqueue.construct","version":false,"params":[],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

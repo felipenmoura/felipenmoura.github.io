@@ -1,0 +1,1 @@
+{"name":"DomProcessingInstruction.data","purpose":"Returns the data of ProcessingInstruction node","manualid":"function.domprocessinginstruction-data","version":false,"params":[],"return":{"type":"string","description":"Returns the data of the Processing Instruction."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

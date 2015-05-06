@@ -1,0 +1,1 @@
+{"name":"Imagick.setCompressionQuality","purpose":"Sets the object's default compression quality","manualid":"function.imagick-setcompressionquality","version":false,"params":[{"name":"quality","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

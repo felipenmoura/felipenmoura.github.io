@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.isDir","purpose":"Tells if the file is a directory","manualid":"splfileinfo.isdir","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if a directory, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

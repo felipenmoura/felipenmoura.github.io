@@ -1,0 +1,1 @@
+{"name":"stomp_connect_error","purpose":"Returns a string description of the last connect error","manualid":"function.stomp-connect-error","version":"PECL stomp >= 0.3.0","params":[],"return":{"type":"string","description":"A string that describes the error, or NULL if no error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

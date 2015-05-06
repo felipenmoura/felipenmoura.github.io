@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.callGetChildren","purpose":"Get children","manualid":"recursivetreeiterator.callgetchildren","version":false,"params":[],"return":{"type":"RecursiveIterator","description":"A RecursiveIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

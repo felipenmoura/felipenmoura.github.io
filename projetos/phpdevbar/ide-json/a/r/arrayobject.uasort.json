@@ -1,0 +1,1 @@
+{"name":"ArrayObject.uasort","purpose":"Sort the entries with a user-defined comparison function and maintain key association","manualid":"arrayobject.uasort","version":false,"params":[{"name":"cmp_function","type":"callback","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

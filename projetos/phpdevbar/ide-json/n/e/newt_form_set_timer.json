@@ -1,0 +1,1 @@
+{"name":"newt_form_set_timer","purpose":"","manualid":"function.newt-form-set-timer","version":"PECL newt >= 0.1","params":[{"name":"form","type":"resource","optional":"false"},{"name":"milliseconds","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

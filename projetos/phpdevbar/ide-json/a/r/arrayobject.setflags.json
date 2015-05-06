@@ -1,0 +1,1 @@
+{"name":"ArrayObject.setFlags","purpose":"Sets the behavior flags.","manualid":"arrayobject.setflags","version":false,"params":[{"name":"flags","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

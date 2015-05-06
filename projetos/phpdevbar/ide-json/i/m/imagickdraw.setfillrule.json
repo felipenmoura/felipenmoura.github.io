@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFillRule","purpose":"Sets the fill rule to use while drawing polygons","manualid":"function.imagickdraw-setfillrule","version":false,"params":[{"name":"fill_rule","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

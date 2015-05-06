@@ -1,0 +1,1 @@
+{"name":"Gmagick.nextimage","purpose":"Moves to the next image","manualid":"gmagick.nextimage","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

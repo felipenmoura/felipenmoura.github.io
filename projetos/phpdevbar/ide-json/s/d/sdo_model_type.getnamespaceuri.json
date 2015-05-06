@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.getNamespaceURI","purpose":"Get the namespace URI of the type","manualid":"function.sdo-model-type-getnamespaceuri","version":false,"params":[],"return":{"type":"string","description":"Returns the namespace URI of the type."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

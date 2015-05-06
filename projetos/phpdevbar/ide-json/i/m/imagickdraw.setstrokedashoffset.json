@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeDashOffset","purpose":"Specifies the offset into the dash pattern to start the dash","manualid":"function.imagickdraw-setstrokedashoffset","version":false,"params":[{"name":"dash_offset","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

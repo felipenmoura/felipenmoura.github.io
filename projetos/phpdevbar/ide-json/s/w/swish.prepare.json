@@ -1,0 +1,1 @@
+{"name":"Swish.prepare","purpose":"Prepare a search query","manualid":"function.swish-prepare","version":false,"params":[{"name":"query","type":"string","optional":"true"}],"return":{"type":"object","description":"Returns SwishSearch object."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setIndentation","purpose":"Sets the indentation of the first line","manualid":"function.swftextfield.setindentation","version":false,"params":[{"name":"width","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

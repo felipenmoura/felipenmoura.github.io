@@ -1,0 +1,1 @@
+{"name":"event_buffer_read","purpose":"Read data from a buffered event","manualid":"function.event-buffer-read","version":"PECL libevent >= 0.0.1","params":[{"name":"bevent","type":"resource","optional":"false"},{"name":"data_size","type":"int","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

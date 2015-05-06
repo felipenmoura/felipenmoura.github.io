@@ -1,0 +1,1 @@
+{"name":"HttpQueryString.xlate","purpose":"Change query strings charset","manualid":"function.httpquerystring-xlate","version":false,"params":[{"name":"ie","type":"string","optional":"false"},{"name":"oe","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"inclued_get_data","purpose":"Get the inclued data","manualid":"function.inclued-get-data","version":"PECL inclued >= 0.1.0","params":[],"return":{"type":"array","description":"The inclued data."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":"function","name":"debug_backtrace"},{"type":"function","name":"include"}]}

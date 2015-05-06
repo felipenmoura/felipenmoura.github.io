@@ -1,0 +1,67 @@
+<style type="text/css">
+
+  @-webkit-keyframes spincube {
+    from,to  {                                                    }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg); }
+    50%      { -webkit-transform: rotateY(180deg) rotateZ(90deg); }
+    66%      { -webkit-transform: rotateY(90deg)   }
+    83%      { -webkit-transform: rotateX(90deg);                 }
+  }
+  #squareStage{
+	width: 200px;
+	margin: auto;
+	margin-top: 40px;
+	-webkit-perspective: 1200px;
+  }
+  #spinner {
+	width: 200px;
+	margin: auto;
+    -webkit-animation-name: spincube;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 12s;
+	-webkit-transform-style: preserve-3d;
+	
+	-webkit-transform-origin-x: 60px;
+	-webkit-transform-origin-y: 60px;
+	-webkit-transform-origin-z: 0px;
+  }
+
+  #spinner div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+    line-height: 120px;
+    font-size: 100px;
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
+  #spinner>div{color: black; font-family: Verdana, Arial, Helvetica, sans-serif !IMPORTANT; box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 20px 0px inset; border: solid 1px black;
+				line-height: 120px;}
+  #spinner .face1 { -webkit-transform: translateZ(60px);                                }
+  #spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
+  #spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);  }
+  #spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); }
+  #spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); }
+  #spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);                }
+
+</style>
+<h1>
+	Animando
+</h1>
+<div class='content' style='margin-top: 20px; text-align: center;'>
+	<br/><br/>
+	Combinando com o 3D (apenas para Google Chrome, por hora)<br/>
+	<div id="squareStage" style="width: 120px; height: 120px;">
+		<div id="spinner">
+			<div class="face1">1</div>
+			<div class="face2">2</div>
+			<div class="face3">3</div>
+			<div class="face4">4</div>
+			<div class="face5">5</div>
+			<div class="face6">6</div>
+		</div>
+	</div>
+</div>

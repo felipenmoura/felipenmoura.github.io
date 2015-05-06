@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsIncludeUpperBound","purpose":"Returns whether or not to include the upper bound term in the result set","manualid":"solrquery.gettermsincludeupperbound","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

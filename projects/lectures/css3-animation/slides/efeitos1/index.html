@@ -1,0 +1,503 @@
+<h1>
+	Efeitos no CSS3
+</h1>
+<style type='text/css'>
+	@-webkit-keyframes blink{
+		0%{
+			margin-top: 40px;
+			height: 18px;
+		}
+		90%{
+			margin-top: 40px;
+			height: 18px;
+		}
+		100%{
+			margin-top: 58px;
+			height: 2px;
+		}
+	}
+	@-moz-keyframes blink{
+		0%{
+			margin-top: 40px;
+			height: 18px;
+		}
+		90%{
+			margin-top: 40px;
+			height: 18px;
+		}
+		100%{
+			margin-top: 58px;
+			height: 2px;
+		}
+	}
+	
+	.olhos{
+		width: 10px;
+		height: 18px;
+		background-color: black;
+		border-bottom: solid 3px black;
+		border-radius: 50%;
+		margin-left: 40px;
+		margin-top: 40px;
+		float: left;
+		
+		-webkit-animation: blink 2s infinite alternate;
+		-moz-animation: blink 2s infinite alternate;
+	}
+	.boca{
+		position: absolute;
+		bottom: 40px;
+		width: 80px;
+		height: 1px;
+		border-radius: 50%;
+		border-bottom: solid 3px black;
+		margin-left: 40px;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.cabeca{
+		position: relative;
+		margin: auto;
+		background-color: #ffefef;
+		width: 210px;
+		height: 240px;
+		border-radius: 50%;
+		border: solid 3px black;
+		-webkit-transform: rotate(-15deg);
+		-moz-transform: rotate(-15deg);
+		-o-transform: rotate(-15deg);
+		-ms-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+		z-index: 2;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.nariz{
+		border-radius: 50%;
+		width: 40px;
+		height: 20px;
+		border-left: solid 3px black;
+		margin-top: 110px;
+		margin-left: 50px;
+	}
+	.cabeca:hover .boca{
+		height: 80px !IMPORTANT;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.cabeca:hover{
+		-webkit-transform: rotate(3deg) translate(20px);
+		-moz-transform: rotate(3deg) translate(20px);
+		
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.corpo{
+		width: 1px;
+		height: 1px;
+		z-index: 1;
+		margin: auto;
+		margin-top: -40px;
+		border-style: solid;
+		border-color: transparent transparent #9e9 transparent;
+		border-width: 0px 40px 200px 40px;
+		-webkit-transform: rotate(-7deg) translate(20px);
+		-moz-transform: rotate(-7deg) translate(20px);
+		-o-transform: rotate(-7deg) translate(20px);
+		-ms-transform: rotate(-7deg) translate(20px);
+		transform: rotate(-7deg) translate(20px);
+	}
+	.manga{
+		position: absolute;
+		top: 60px;
+		left: -10px;
+		width: 20px;
+		height: 30px;
+		background-color: #dfd;
+		border: solid 3px black;
+		border-radius: 50% 50% 0% 0%;
+	}
+	.braco{
+		position: absolute;
+		top: 93px;
+		left: -4px;
+		width: 8px;
+		height: 116px;
+		background-color: #ffefef;
+		border: solid 3px black;
+		z-index: 9;
+	}
+	#boneco{
+		position: absolute;
+		left: 350px;
+		width: 300px;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.bermuda{
+		position: absolute;
+		z-index: -1;
+		width: 80px;
+		height: 40px;
+		background-color: #99e;
+		border: solid 3px black;
+		border-radius: 0px 0px 40px 20px;
+		-webkit-transform: rotate(-7deg) translate(140px, 16px);
+		-moz-transform: rotate(-7deg) translate(140px, 16px);
+	}
+	.bolso{
+		position: absolute;
+		top: 6px;
+		left: 30px;
+		width: 20px;
+		height: 20px;
+		background-color: #88d;
+		border: solid 3px black;
+		border-right: dotted 2px black;
+		border-radius: 0% 0% 0% 50%;
+	}
+	.pernaBermuda{
+		width: 36px;
+		height: 20px;
+		background-color: #99e;
+		border: solid 3px black;
+		position: absolute;
+		top: 40px;
+	}
+	.pernaEsq{
+		left: 10px;
+		z-index: 3;
+	}
+	.pernaDir{
+		left: 16px;
+		z-index: 1;
+	}
+	.perna{
+		width: 22px;
+		height: 40px;
+		background-color: #ffefef;
+		border: solid 3px black;
+		position: absolute;
+		top: 20px;
+		left: 4px;
+	}
+	.sapato{
+		background-color: brown;
+		border: solid 3px black;
+		border-right: none;
+		height: 20px;
+		width: 70px;
+		border-radius: 50%;
+		position: absolute;
+	}
+	.esquerdo{
+		left: 135px;
+		top: 500px;
+		z-index: 3;
+	}
+	.direito{
+		left: 140px;
+		top: 500px;
+		z-index: 2;
+	}
+	
+	.quadrado{
+		width: 100px;
+		height: 100px;
+		border: solid 1px white;
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	
+	.sombra{
+		position: relative;
+		width: 120px;
+		height: 0px;
+		border-radius: 10px;
+		background-color: transparent;
+		box-shadow: 0px 0px 20px 5px black;
+		left: 110px;
+		top: 115px;
+	}
+	
+	.arredonde-se{
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		background-color: #a66;
+		border: solid 3px black;
+		border-radius: 20px;
+	}
+	.assombrado{
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		border: solid 1px white;
+		margin: auto;
+		box-shadow: 10px 10px 30px 10px black;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.assombrado:hover{
+		box-shadow: -10px -10px 30px 10px red;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.transparente{
+		opacity: 0.9;
+		background-color: blue;
+	}
+	.transparente:hover{
+		opacity: 0.1;
+	}
+	.girado{
+		background-color: yellow;
+		margin-bottom: 30px;
+	}
+	.girado:hover{
+		-webkit-transform: rotate(15deg);
+		-moz-transform: rotate(15deg);
+		-o-transform: rotate(15deg);
+		-ms-transform: rotate(15deg);
+		transform: rotate(15deg);
+	}
+	.deslocado{
+		background-color: purple;
+		margin-bottom: 30px;
+	}
+	.deslocado:hover{
+		-webkit-transform: translate(30px, 30px);
+		-moz-transform: translate(30px, 30px);
+		-ms-transform: translate(30px, 30px);
+		 -o-transform: translate(30px, 30px);
+			transform: translate(30px, 30px);
+	}
+	.escalado{
+		background-color: gray;
+		margin-bottom: 30px;
+	}
+	.escalado:hover{
+	-webkit-transform: scale(2);
+	   -moz-transform: scale(2);
+		-ms-transform: scale(2);
+		 -o-transform: scale(2);
+			transform: scale(2);
+	}
+	.distorcido{
+		background-color: orange;
+		margin-bottom: 30px;
+	}
+	.distorcido:hover{
+    -webkit-transform: skew(15deg, 15deg);
+       -moz-transform: skew(15deg, 15deg);
+    	-ms-transform: skew(15deg, 15deg);
+    	 -o-transform: skew(15deg, 15deg);
+    		transform: skew(15deg, 15deg);
+	}
+	
+	.textShadowed{
+		font-family: Tahoma, Arial;
+		font-weight: bold;
+		background-color: white;
+		font-size: 80px;
+		color: blue;
+		text-shadow: 10px 10px 30px black;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	.textShadowed:hover{
+		text-shadow: -10px -10px 30px black;
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+	
+	.origin{
+		background-color: yellow;
+		
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+		
+		-webkit-transform-origin: 160px 0px;
+		-moz-transform-origin: 160px 0px;
+		-ms-transform-origin: 160px 0px;
+		-o-transform-origin: 160px 0px;
+		transform-origin: 160px 0px;
+	}
+	.originParent{
+		width: 200px;
+		height: 200px;
+		margin: auto;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		border: dashed 1px white;
+	}
+	.originParent:hover .origin{
+		
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+	}
+</style>
+		<div id='boneco'>
+			<div class='cabeca'>
+				<div class='olhos'></div>
+				<div class='olhos'></div>
+				<div class='nariz'></div>
+				<div class='boca'></div>
+			</div>
+			<div class='corpo'>
+				<div class='manga'></div>
+				<div class='braco'></div>
+			</div>
+			<div class='bermuda'>
+				<div class='bolso'></div>
+				<div class='pernaEsq pernaBermuda'>
+					<div class='perna'></div>
+				</div>
+				<div class='pernaDir pernaBermuda'>
+					<div class='perna'></div>
+				</div>
+			</div>
+			<div class='sapato esquerdo'></div>
+			<div class='sapato direito'></div>
+			<div class='sombra'></div>
+		</div>
+<div class='content' style='width: 90%; padding-top: 10px;'>
+	<div id='step1'
+		 class='anim-step1'
+		 style='text-align:center;'>
+		<div style='float: left; width: 300px;padding-top: 100px;'>
+			Antes de come&ccedil;armos com as anima&ccedil;&otilde;es em CSS, &eacute; interessante conhecermos alguns efeitos poss&iacute;veis
+		</div>
+	</div>
+	<div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		Borda arredondada:<br/><br/>
+		<div class='arredonde-se quadrado'></div>
+		<br/>
+		<div class='source'>
+.bola-quadrada{
+    border-radius: 50%;
+}
+		</div>
+	</div>
+	<div id='step3'
+		 class='anim-step3'
+		 style='text-align:center;'>
+		Sombra<br/><br/>
+		<div class='quadrado assombrado'></div>
+		<br/><br/>
+		<div class='source'>
+.assombrado{
+    box-shadow: 10px 10px 30px 10px black;
+}
+		</div>
+	</div>
+	<div id='step4'
+		 class='anim-step4'
+		 style='text-align:center;'>
+		Transpar&ecirc;ncia
+		<div class='transparente quadrado'></div>
+		<br/>
+		<div class='source'>
+.transparente{
+    opacity: 0.5;
+}
+		</div>
+	</div>
+	<div id='step5'
+		 class='anim-step5'
+		 style='text-align:center;'>
+		Efeitos de transform<br/><br/><br/><br/><br/><br/>
+		<div class='source'>
+-vendor-transform[-efeito]: efeito(propriedades);
+		</div>
+	</div>
+	<div id='step6'
+		 class='anim-step6'
+		 style='text-align:center;'>
+		Rotate
+		<div class='girado quadrado'></div>
+		<div class='source'>-webkit-transform: rotate(15deg);
+   -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+     -o-transform: rotate(15deg);
+        transform: rotate(15deg);
+		</div>
+	</div>
+	<div id='step7'
+		 class='anim-step7'
+		 style='text-align:center;'>
+		Deslocar
+		<div class='deslocado quadrado'></div>
+		<div class='source'>-webkit-transform: translate(30px, 30px);
+   -moz-transform: translate(30px, 30px);
+    -ms-transform: translate(30px, 30px);
+     -o-transform: translate(30px, 30px);
+        transform: translate(30px, 30px);
+		</div>
+	</div>
+	<div id='step8'
+		 class='anim-step8'
+		 style='text-align:center;'>
+		Escala
+		<div class='escalado quadrado'></div>
+		<div class='source'>-webkit-transform: scale(2);
+   -moz-transform: scale(2);
+    -ms-transform: scale(2);
+     -o-transform: scale(2);
+        transform: scale(2);
+		</div>
+	</div>
+	<div id='step9'
+		 class='anim-step9'
+		 style='text-align:center;'>
+		Distor&ccedil;&atilde;o
+		<div class='distorcido quadrado'></div>
+		<div class='source'>
+-webkit-transform: skew(15deg, 15deg);
+   -moz-transform: skew(15deg, 15deg);
+    -ms-transform: skew(15deg, 15deg);
+     -o-transform: skew(15deg, 15deg);
+        transform: skew(15deg, 15deg);
+		</div>
+	</div>
+	<div id='step10'
+		 class='anim-step10'
+		 style='text-align:center;'>
+		Sombra do Texto
+		<div class='textShadowed quadrado'>A</div>
+		<div class='source'>
+text-shadow: 10px 10px 30px black;
+		</div>
+	</div>
+	<div id='step11'
+		 class='anim-step11'
+		 style='text-align:center;'>
+		Ponto de Origem
+		<div class='originParent'><div class='quadrado origin'></div></div>
+		<div class='source'>
+-webkit-transform-origin: 160px 0px;
+   -moz-transform-origin: 160px 0px;
+    -ms-transform-origin: 160px 0px;
+     -o-transform-origin: 160px 0px;
+        transform-origin: 160px 0px;
+		</div>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#boneco').animate({
+			'left': document.body.clientWidth-300+"px"
+		});
+	});
+</script>

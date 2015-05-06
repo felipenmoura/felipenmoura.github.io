@@ -1,0 +1,1 @@
+{"name":"rpm_close","purpose":"Closes an RPM file","manualid":"function.rpm-close","version":"PECL rpmreader >= 0.1.0","params":[{"name":"rpmr","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"rpm_open"}]}

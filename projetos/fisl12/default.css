@@ -1,0 +1,275 @@
+@charset "ISO-8859-1";
+@font-face /*Arquivo de texto para estilização dos titulos*/
+{
+	font-family: "commersial_script";
+	src: url("./commersial_script.ttf");
+	
+}
+*
+{
+	font-variant:normal;
+}
+pre
+{
+	font-size:18px;
+}
+pre b
+{
+	color: #000;
+}
+pre i
+{
+	font-style:normal;
+	color: #44b;
+}
+
+pre.dark i
+{
+	font-style:normal;
+	color: #99f;
+}
+
+pre u
+{
+	text-decoration:none;
+	color: #4b4;
+}
+
+pre.dark u
+{
+	text-decoration:none;
+	color: #494;
+}
+pre s
+{
+	font-style:none;
+	color: #944;
+	text-decoration:none;
+}
+.mainBody
+{
+	box-shadow: 0px 0px 8px #fff;
+	-webkit-box-shadow: 0px 0px 8px #fff;
+	-moz-box-shadow: 0px 0px 8px #fff;
+	border:solid 1px #f00;
+}
+BODY
+{
+	font-family:Arial, Tahoma;
+	overflow:hidden;
+	text-shadow: 2px 2px 4px #999;
+}
+.slideTitle
+{
+	font-weight:bold;
+	font-size:32px;
+	white-space:nowrap;
+	text-shadow: 2px 4px 8px #999;
+}
+.firstTitle
+{
+	font-size: 60px;
+}
+#footer
+{
+	height:60px;
+	width:800px;
+	padding-left:7px;
+	border-top: solid 1px #000;
+}
+#titleLine
+{
+	border-bottom: solid 1px #000;
+}
+.add
+{
+	box-shadow: 0px 0px 8px #000;
+	-webkit-box-shadow: 0px 0px 8px #000;
+	-moz-box-shadow: 0px 0px 8px #000;
+	border:solid 1px #fff;
+}
+a img
+{
+	border:none;
+}
+b
+{
+	color: #c00000;
+}
+
+#slideBody, #slideBody td
+{
+	font-size: 32px;
+}
+
+.transitionTest
+{
+	font-size: 90px;
+	color: blue;
+	-webkit-transition:color 1s ease-in-out; 
+}
+
+input[type=text], input[type=tel], input[type=numeric], input[type=email],input[type=password]
+{
+	background-color:#fff;
+	border:solid 1px #644;
+	-webkit-border-radius: 4px;
+}
+
+/****************************************************/
+
+.pseudo {border:solid 1px #444;font-family: "commersial_script"; text-align:justify;}
+.pseudo P               { font-size: 12pt; line-height: 1.2 }
+.pseudo P::first-letter { font-size: 200%; font-weight: bold; float: left; font-style:italic; }
+
+a
+{
+	text-decoration:none;
+	color:black;
+}
+
+a.anim
+{
+	color:black;
+	text-decoration:none;
+	background-color: transparent;
+	-webkit-border-radius: 5px;
+	-webkit-transition-property:color, background;  
+	-webkit-transition-duration: 1s, 1s;  
+	-webkit-transition-timing-function: linear, ease-in;
+	padding:6px; 
+}
+a.anim:hover
+{
+	color:red;
+	background-color: #ddf;
+	text-decoration:none;
+	padding:6px;
+}
+
+#rot
+{
+	width:90px;
+	height:40px;
+	text-align:center;
+	position:relative;
+	left:0px;
+	-webkit-transition-property:-webkit-transform, left;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-timing-function: ease-i-out;
+	/*-webkit-transform-origin:50px 20px;*/
+	-webkit-transform-origin:0px 0px;
+}
+#rot:hover
+{ 
+	-webkit-transform: rotate(86deg);
+	left:55px;
+}
+/* boneco */
+.boneco
+{
+	width:55px;
+	height:140px;
+	float:left;
+	background:url(images/boneco.png) no-repeat;
+}
+.boneco .esq
+{
+	border-top: solid 1px #333;
+	width:40px;
+	height:2px;
+	overflow:hidden;
+	position:relative;
+	left: 2px;
+	top:50px;
+	-webkit-transform-origin: 40px 0px;
+	-webkit-transform: rotate(-70deg);
+	-webkit-transition-property:-webkit-transform;  
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-timing-function: ease-out;
+}
+.boneco .dir
+{
+	border-top: solid 1px #333;
+	width:40px;
+	height:2px;
+	overflow:hidden;
+	position:relative;
+	left: 43px;
+	top:47px;
+	-webkit-transform-origin:0px 0px;
+	-webkit-transform: rotate(70deg);
+	-webkit-transition-property:-webkit-transform;  
+	-webkit-transition-duration: 0.7s;
+	-webkit-transition-timing-function: ease-out;
+}
+.boneco:hover .esq
+{
+	-webkit-transform: rotate(45deg);
+}
+.boneco:hover .dir
+{
+	-webkit-transform: rotate(-50deg);
+}
+/* grid */
+.grid
+{
+}
+.grid th
+{
+	background-color:#944;
+	color:#fff;
+	border-bottom:solid 1px #fff;
+	font-weight:bold;
+	text-align:center;
+}
+.grid tr
+{
+	background-color:#900;
+	color:#fff;
+	border-bottom:solid 1px #fff;
+	text-align:center;
+	font-weight:bold;
+}
+#grid tr td
+{
+	background-color:#fff;
+	color:#000;
+	font-size:20px;
+	border-bottom:solid 1px #900;
+	border-right:solid 1px #900;
+	text-align:left;
+	font-weight:normal;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes compre {
+ from{
+	   opacity: 0.3;
+	   font-size: 20px;
+	   color: #000;
+	   background-color: white;
+	 }
+ to  {
+	   opacity: 1.0;
+	   font-size: 40px;
+	   color: #900;
+	   background-color: rgba(255, 180, 180, 0.7);
+	 }
+}
+
+div.animated {
+  -webkit-animation-name: compre;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-direction: alternate;
+}
+
+
+
+
+
+
+
+

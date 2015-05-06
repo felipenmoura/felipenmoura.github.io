@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.setIteratorLastRow","purpose":"Sets the pixel iterator to the last pixel row","manualid":"function.imagickpixeliterator-setiteratorlastrow","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

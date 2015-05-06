@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setTextAntialias","purpose":"Controls whether text is antialiased","manualid":"function.imagickdraw-settextantialias","version":false,"params":[{"name":"antiAlias","type":"bool","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

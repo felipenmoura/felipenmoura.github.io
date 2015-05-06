@@ -1,0 +1,1 @@
+{"name":"timezone_transitions_get","purpose":"Alias of DateTimeZone::getTransitions","manualid":"function.timezone-transitions-get","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

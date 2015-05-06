@@ -1,0 +1,1 @@
+{"name":"qdom_error","purpose":"Returns the error string from the last QDOM operation or FALSE if no errors occurred","manualid":"function.qdom-error","version":"PHP 4 >= 4.0.5","params":[],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"nsapi_request_headers","purpose":"Fetch all HTTP request headers","manualid":"function.nsapi-request-headers","version":"PHP 4 >= 4.3.3, PHP 5","params":[],"return":{"type":"array","description":"Returns an associative array with all the HTTP headers."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

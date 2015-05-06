@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.current","purpose":"Return current node pointed by the iterator","manualid":"splpriorityqueue.current","version":false,"params":[],"return":{"type":"mixed","description":"The value or priority (or both) of the current node, depending on the extract flag."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

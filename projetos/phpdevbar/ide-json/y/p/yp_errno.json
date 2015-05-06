@@ -1,0 +1,1 @@
+{"name":"yp_errno","purpose":"Returns the error code of the previous operation","manualid":"function.yp-errno","version":"PHP 4 >= 4.0.6, PHP 5 <= 5.0.5","params":[],"return":{"type":"int","description":"Returns one of the YPERR_XXX error constants."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"yp_err_string"}]}

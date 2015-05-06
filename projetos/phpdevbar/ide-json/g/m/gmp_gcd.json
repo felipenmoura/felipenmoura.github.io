@@ -1,0 +1,1 @@
+{"name":"gmp_gcd","purpose":"Calculate GCD","manualid":"function.gmp-gcd","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"},{"name":"b","type":"resource","optional":"false"}],"return":{"type":"resource","description":"A positive GMP number that divides into both\n   a and b."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

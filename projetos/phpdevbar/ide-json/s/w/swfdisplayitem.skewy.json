@@ -1,0 +1,1 @@
+{"name":"SWFDisplayItem.skewY","purpose":"Sets the Y-skew","manualid":"function.swfdisplayitem.skewy","version":false,"params":[{"name":"ddegrees","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false},{"type":false,"name":false}]}

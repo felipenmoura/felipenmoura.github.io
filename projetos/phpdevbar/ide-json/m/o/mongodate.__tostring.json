@@ -1,0 +1,1 @@
+{"name":"MongoDate.__toString","purpose":"Returns a string representation of this date","manualid":"mongodate.tostring","version":false,"params":[],"return":{"type":"string","description":"This date."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

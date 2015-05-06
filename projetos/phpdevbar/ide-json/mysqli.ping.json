@@ -1,0 +1,1 @@
+{"name":"mysqli.ping","purpose":"Pings a server connection, or tries to reconnect if the connection has gone down","manualid":"mysqli.ping","version":false,"params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"hw_api_object.count","purpose":"Returns number of attributes","manualid":"function.hwapi-object-count","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"int","description":"Returns the number as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

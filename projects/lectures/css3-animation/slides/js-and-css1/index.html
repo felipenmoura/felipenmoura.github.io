@@ -1,0 +1,72 @@
+<style type="text/css">
+	@-webkit-keyframes circledL {
+		0% {}
+		100% { -webkit-transform: rotate(-360deg); }
+	}
+	@-webkit-keyframes circledR {
+		0% {}
+		100% { -webkit-transform: rotate(360deg); }
+	}
+	@-moz-keyframes circledL {
+		0% {}
+		100% { -moz-transform: rotate(-360deg); }
+	}
+	@-moz-keyframes circledR {
+		0% {}
+		100% { -moz-transform: rotate(360deg); }
+	}
+	
+	.spiningLeft>div{
+		-webkit-animation: circledL 5s infinite linear;
+		-moz-animation: circledL 5s infinite linear;
+	}
+	.spiningRight>div{
+		-webkit-animation: circledR 5s infinite linear;
+		-moz-animation: circledR 5s infinite linear;
+	}
+
+	.square{
+		width: 60px;
+		height: 60px;
+		background-color: green;
+		border: solid 3px white;
+		position: absolute;
+		left: 280px;
+		top: 70px;
+		
+		/*-webkit-transform-origin: 160px 0px;*/
+	}
+
+</style>
+<h1>
+	JS+CSS3
+</h1>
+<div class='content' style='margin-top: 20px; text-align: center;'>
+	<br/><br/>Unindo Javascript &agrave; CSS3<br/>
+	para anima&ccedil;&otilde;es
+	<div class='anim-step1'>
+		<div id='squareStage' style='width: 600px; margin: auto; height: 220px; position: relative;' class='spiningLeft'>
+			<div class="square" ></div>
+		</div>
+		Use A ou D para alterar a dire&ccedil;&atilde;o
+	</div>
+	<div class='anim-step2'>
+		<br/>
+		Basta alterar o atributo className de um elemento
+		<div class='source'>if(event.keyCode == 97){
+    document.getElementById('squareStage')
+            .className= 'spiningLeft';
+}else if(event.keyCode == 100){
+    document.getElementById('squareStage')
+            .className= 'spiningRight';
+}</div>
+	</div>
+</div>
+<script>
+	document.onkeypress= function(event){
+		if(event.keyCode == 97)
+			document.getElementById('squareStage').className= 'spiningLeft';
+		else if(event.keyCode == 100)
+			document.getElementById('squareStage').className= 'spiningRight';
+	}
+</script>

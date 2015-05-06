@@ -1,0 +1,1 @@
+{"name":"newt_checkbox_get_value","purpose":"Retreives value of checkox resource","manualid":"function.newt-checkbox-get-value","version":"PECL newt >= 0.1","params":[{"name":"checkbox","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns character indicating the value of the checkbox."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

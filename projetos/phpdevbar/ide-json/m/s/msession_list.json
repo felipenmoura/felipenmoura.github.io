@@ -1,0 +1,1 @@
+{"name":"msession_list","purpose":"List all sessions","manualid":"function.msession-list","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"RarEntry.__toString","purpose":"Get text representation of entry.","manualid":"rarentry.tostring","version":false,"params":[],"return":{"type":"string","description":"A textual representation for the entry."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

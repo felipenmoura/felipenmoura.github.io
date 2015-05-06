@@ -1,0 +1,1 @@
+{"name":"SphinxClient.getLastError","purpose":"Get the last error message","manualid":"sphinxclient.getlasterror","version":false,"params":[],"return":{"type":"string","description":"Returns the last error message or an empty string if there were no errors."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

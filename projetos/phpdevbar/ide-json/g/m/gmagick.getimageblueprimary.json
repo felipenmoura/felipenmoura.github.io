@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageblueprimary","purpose":"Returns the chromaticy blue primary point","manualid":"gmagick.getimageblueprimary","version":false,"params":[],"return":{"type":"void","description":"Array consisting of \"x\" and \"y\" coordinates of point."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

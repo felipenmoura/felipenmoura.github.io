@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfontstyle","purpose":"Returns the font style","manualid":"gmagickdraw.getfontstyle","version":false,"params":[],"return":{"type":"void","description":"Returns the font style constant (STYLE_) associated with the GmagickDraw object or 0 if no style is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

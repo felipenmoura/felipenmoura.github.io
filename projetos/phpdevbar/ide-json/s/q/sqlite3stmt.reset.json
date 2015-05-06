@@ -1,0 +1,1 @@
+{"name":"SQLite3Stmt.reset","purpose":"Resets the prepared statement","manualid":"sqlite3stmt.reset","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the statement is successfully reset, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

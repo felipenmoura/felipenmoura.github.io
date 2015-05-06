@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.getRootDataObject","purpose":"Returns the root SDO_DataObject","manualid":"function.sdo-das-xml-document-getrootdataobject","version":false,"params":[],"return":{"type":"SDO_DataObject","description":"Returns the root SDO_DataObject."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

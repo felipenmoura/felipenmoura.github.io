@@ -1,0 +1,1 @@
+{"name":"hw_api_error.reason","purpose":"Returns reason of error","manualid":"function.hwapi-error-reason","version":false,"params":[],"return":{"type":"HW_API_Reason","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

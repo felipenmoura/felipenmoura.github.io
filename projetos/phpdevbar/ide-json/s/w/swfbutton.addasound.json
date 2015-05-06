@@ -1,0 +1,1 @@
+{"name":"SWFButton.addASound","purpose":"Associates a sound with a button transition","manualid":"function.swfbutton.addasound","version":false,"params":[{"name":"sound","type":"SWFSound","optional":"false"},{"name":"flags","type":"int","optional":"false"}],"return":{"type":"SWFSoundInstance","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

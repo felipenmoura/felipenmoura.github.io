@@ -1,0 +1,1 @@
+{"name":"rad2deg","purpose":"Converts the radian number to the equivalent number in degrees","manualid":"function.rad2deg","version":"PHP 4, PHP 5","params":[{"name":"number","type":"float","optional":"false"}],"return":{"type":"float","description":"The equivalent of number in degrees"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"deg2rad"}]}

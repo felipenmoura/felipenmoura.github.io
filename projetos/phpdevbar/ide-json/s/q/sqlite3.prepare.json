@@ -1,0 +1,1 @@
+{"name":"SQLite3.prepare","purpose":"Prepares an SQL statement for execution","manualid":"sqlite3.prepare","version":false,"params":[{"name":"query","type":"string","optional":"false"}],"return":{"type":"SQLite3Stmt","description":"Returns an SQLite3Stmt object on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

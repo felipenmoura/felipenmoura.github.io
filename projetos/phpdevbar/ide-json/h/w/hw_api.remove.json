@@ -1,0 +1,1 @@
+{"name":"hw_api.remove","purpose":"Delete an object","manualid":"function.hwapi-remove","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

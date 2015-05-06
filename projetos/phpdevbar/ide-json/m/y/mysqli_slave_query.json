@@ -1,0 +1,1 @@
+{"name":"mysqli_slave_query","purpose":"Force execution of a query on a slave in a master\/slave setup","manualid":"function.mysqli-slave-query","version":"PHP 5","params":[{"name":"link","type":"mysqli","optional":"false"},{"name":"query","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

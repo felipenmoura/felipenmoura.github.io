@@ -1,0 +1,1 @@
+{"name":"date_time_set","purpose":"Alias of DateTime::setTime","manualid":"function.date-time-set","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

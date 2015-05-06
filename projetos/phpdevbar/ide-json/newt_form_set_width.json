@@ -1,0 +1,1 @@
+{"name":"newt_form_set_width","purpose":"","manualid":"function.newt-form-set-width","version":"PECL newt >= 0.1","params":[{"name":"form","type":"resource","optional":"false"},{"name":"width","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

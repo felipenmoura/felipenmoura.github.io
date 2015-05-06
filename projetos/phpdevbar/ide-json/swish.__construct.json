@@ -1,0 +1,1 @@
+{"name":"Swish.__construct","purpose":"Construct a Swish object","manualid":"function.swish-construct","version":false,"params":[{"name":"index_names","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

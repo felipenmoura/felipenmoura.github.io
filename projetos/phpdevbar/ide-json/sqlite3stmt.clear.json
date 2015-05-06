@@ -1,0 +1,1 @@
+{"name":"SQLite3Stmt.clear","purpose":"Clears all current bound parameters","manualid":"sqlite3stmt.clear","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on successful clearing of bound parameters, FALSE on\n   failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

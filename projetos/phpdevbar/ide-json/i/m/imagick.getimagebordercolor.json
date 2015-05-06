@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageBorderColor","purpose":"Returns the image border color","manualid":"function.imagick-getimagebordercolor","version":false,"params":[],"return":{"type":"ImagickPixel","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

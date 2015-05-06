@@ -1,0 +1,1 @@
+{"name":"apd_dump_function_table","purpose":"Outputs the current function table","manualid":"function.apd-dump-function-table","version":"Unknown","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoDB.getProfilingLevel","purpose":"Gets this database's profiling level","manualid":"mongodb.getprofilinglevel","version":false,"params":[],"return":{"type":"int","description":"Returns the profiling level."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

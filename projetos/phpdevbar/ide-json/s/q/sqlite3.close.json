@@ -1,0 +1,1 @@
+{"name":"SQLite3.close","purpose":"Closes the database connection","manualid":"sqlite3.close","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SAMConnection.setDebug","purpose":"Turn on or off additional debugging output.","manualid":"function.samconnection-setDebug","version":false,"params":[{"name":"switch","type":"bool","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

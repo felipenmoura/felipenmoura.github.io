@@ -1,0 +1,1 @@
+{"name":"SolrParams.toString","purpose":"Returns all the name-value pair parameters in the object","manualid":"solrparams.tostring","version":false,"params":[{"name":"url_encode","type":"bool","optional":"true","initializer":"false"}],"return":{"type":"string","description":"Returns a string on success and FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"IteratorIterator.rewind","purpose":"Rewind to the first element","manualid":"iteratoriterator.rewind","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"IteratorIterator::next"},{"type":"methodname","name":"IteratorIterator::valid"}]}

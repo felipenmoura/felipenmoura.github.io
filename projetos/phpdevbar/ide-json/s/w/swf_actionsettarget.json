@@ -1,0 +1,1 @@
+{"name":"swf_actionsettarget","purpose":"Set the context for actions","manualid":"function.swf-actionsettarget","version":"PHP 4","params":[{"name":"target","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

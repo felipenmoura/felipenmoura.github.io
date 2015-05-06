@@ -1,0 +1,1 @@
+{"name":"xmlrpc_server_create","purpose":"Creates an xmlrpc server","manualid":"function.xmlrpc-server-create","version":"PHP 4 >= 4.1.0, PHP 5","params":[],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

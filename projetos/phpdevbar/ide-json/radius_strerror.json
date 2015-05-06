@@ -1,0 +1,1 @@
+{"name":"radius_strerror","purpose":"Returns an error message","manualid":"function.radius-strerror","version":"PECL radius >= 1.1.0","params":[{"name":"radius_handle","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns error messages as string from failed radius functions."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

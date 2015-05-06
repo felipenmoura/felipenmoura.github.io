@@ -1,0 +1,1 @@
+{"name":"xpath_eval_expression","purpose":"Evaluates the XPath Location Path in the given string","manualid":"function.xpath-eval-expression","version":"PHP 4","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

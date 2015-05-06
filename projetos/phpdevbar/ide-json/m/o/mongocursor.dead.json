@@ -1,0 +1,1 @@
+{"name":"MongoCursor.dead","purpose":"Checks if there are documents that have not been sent yet from the database for this cursor","manualid":"mongocursor.dead","version":false,"params":[],"return":{"type":"boolean","description":"Returns if there are more results that have not been sent to the client, yet."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

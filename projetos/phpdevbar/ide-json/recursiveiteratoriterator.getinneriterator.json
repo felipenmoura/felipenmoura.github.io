@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.getInnerIterator","purpose":"Get inner iterator","manualid":"recursiveiteratoriterator.getinneriterator","version":false,"params":[],"return":{"type":"iterator","description":"The current active sub iterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

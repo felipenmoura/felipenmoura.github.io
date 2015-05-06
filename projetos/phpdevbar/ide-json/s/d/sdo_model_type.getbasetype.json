@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.getBaseType","purpose":"Get the base type for this type","manualid":"function.sdo-model-type-getbasetype","version":false,"params":[],"return":{"type":"SDO_Model_Type","description":"Returns the SDO_Model_Type for the base type if this type inherits from \n   another, otherwise returns NULL."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

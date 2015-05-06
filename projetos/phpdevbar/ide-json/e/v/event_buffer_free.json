@@ -1,0 +1,1 @@
+{"name":"event_buffer_free","purpose":"Destroy buffered event","manualid":"function.event-buffer-free","version":"PECL libevent >= 0.0.1","params":[{"name":"bevent","type":"resource","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"msession_disconnect","purpose":"Close connection to msession server","manualid":"function.msession-disconnect","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

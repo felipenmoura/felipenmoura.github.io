@@ -1,0 +1,1 @@
+{"name":"CairoContext.showPage","purpose":"The showPage purpose","manualid":"cairocontext.showpage","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageCompose","purpose":"Sets the image composite operator","manualid":"function.imagick-setimagecompose","version":false,"params":[{"name":"compose","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

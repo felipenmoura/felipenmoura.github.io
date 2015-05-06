@@ -1,0 +1,1 @@
+{"name":"ZipArchive.getArchiveComment","purpose":"Returns the Zip archive comment","manualid":"function.ziparchive-getarchivecomment","version":false,"params":[],"return":{"type":"string","description":"Returns the Zip archive comment or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

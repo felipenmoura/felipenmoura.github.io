@@ -1,0 +1,1 @@
+{"name":"PDF_set_gstate","purpose":"Activate graphics state object","manualid":"function.pdf-set-gstate","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"gstate","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

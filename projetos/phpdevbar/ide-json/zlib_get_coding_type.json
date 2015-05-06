@@ -1,0 +1,1 @@
+{"name":"zlib_get_coding_type","purpose":"Returns the coding type used for output compression","manualid":"function.zlib-get-coding-type","version":"PHP 4 >= 4.3.2, PHP 5","params":[],"return":{"type":"string","description":"Possible return values are gzip, deflate,\n   or FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightRegexSlop","purpose":"Returns the deviation factor from the ideal fragment size","manualid":"solrquery.gethighlightregexslop","version":false,"params":[],"return":{"type":"float","description":"Returns a double on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

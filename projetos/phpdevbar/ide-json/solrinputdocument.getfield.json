@@ -1,0 +1,1 @@
+{"name":"SolrInputDocument.getField","purpose":"Retrieves a field by name","manualid":"solrinputdocument.getfield","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"SolrDocumentField","description":"Returns a SolrDocumentField object on success and FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

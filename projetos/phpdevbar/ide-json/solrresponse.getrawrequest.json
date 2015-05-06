@@ -1,0 +1,1 @@
+{"name":"SolrResponse.getRawRequest","purpose":"Returns the raw request sent to the Solr server","manualid":"solrresponse.getrawrequest","version":false,"params":[],"return":{"type":"string","description":"Returns the raw request sent to the Solr server"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

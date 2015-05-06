@@ -1,0 +1,1 @@
+{"name":"SWFShape.drawCircle","purpose":"Draws a circle of radius r centered at the current location, in a counter-clockwise fashion","manualid":"function.swfshape.drawcircle","version":false,"params":[{"name":"r","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

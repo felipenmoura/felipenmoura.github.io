@@ -1,0 +1,1 @@
+{"name":"DOMText.__construct","purpose":"Creates a new DOMText object","manualid":"domtext.construct","version":false,"params":[{"name":"value","type":"string","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"DOMDocument::createTextNode"}]}

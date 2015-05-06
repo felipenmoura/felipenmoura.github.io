@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_Setting.getPropertyIndex","purpose":"Get the property index for a changed property","manualid":"function.sdo-das-setting-getpropertyindex","version":false,"params":[],"return":{"type":"int","description":"The property index for a changed property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

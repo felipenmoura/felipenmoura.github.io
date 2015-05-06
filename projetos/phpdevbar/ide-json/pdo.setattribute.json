@@ -1,0 +1,1 @@
+{"name":"PDO.setAttribute","purpose":"Set an attribute","manualid":"pdo.setattribute","version":false,"params":[{"name":"attribute","type":"int","optional":"false"},{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"int","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

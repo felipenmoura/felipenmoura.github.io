@@ -1,0 +1,1 @@
+{"name":"SQLite3.lastErrorMsg","purpose":"Returns English text describing the most recent failed SQLite request","manualid":"sqlite3.lasterrormsg","version":false,"params":[],"return":{"type":"string","description":"Returns an English string describing the most recent failed SQLite request."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

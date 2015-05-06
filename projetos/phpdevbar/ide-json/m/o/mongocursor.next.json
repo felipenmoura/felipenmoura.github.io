@@ -1,0 +1,1 @@
+{"name":"MongoCursor.next","purpose":"Advances the cursor to the next result","manualid":"mongocursor.next","version":false,"params":[],"return":{"type":"void","description":"NULL."},"errors":"Throws MongoConnectionException if it cannot reach the\n   database and MongoCursorTimeoutException if the\n   timeout is exceeded.","notes":[],"changelog":[],"seealso":[]}

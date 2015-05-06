@@ -1,0 +1,1 @@
+{"name":"NoRewindIterator.valid","purpose":"Validates the iterator","manualid":"norewinditerator.valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"NoRewindIterator::getInnerIterator"}]}

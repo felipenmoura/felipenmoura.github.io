@@ -1,0 +1,1 @@
+{"name":"MongoDB.setProfilingLevel","purpose":"Sets this database's profiling level","manualid":"mongodb.setprofilinglevel","version":false,"params":[{"name":"level","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns the previous profiling level."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

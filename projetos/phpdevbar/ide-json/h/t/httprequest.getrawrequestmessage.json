@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getRawRequestMessage","purpose":"Get raw request message","manualid":"function.httprequest-getrawrequestmessage","version":false,"params":[],"return":{"type":"string","description":"Returns an HttpMessage in a form of a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

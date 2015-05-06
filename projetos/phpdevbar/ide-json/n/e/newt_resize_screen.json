@@ -1,0 +1,1 @@
+{"name":"newt_resize_screen","purpose":"","manualid":"function.newt-resize-screen","version":"PECL newt >= 0.1","params":[{"name":"redraw","type":"bool","optional":"true"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

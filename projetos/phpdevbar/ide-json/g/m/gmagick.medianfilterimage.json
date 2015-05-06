@@ -1,0 +1,1 @@
+{"name":"Gmagick.medianfilterimage","purpose":"Applies a digital filter","manualid":"gmagick.medianfilterimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"void","description":"Gmagick object with median filter applied."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

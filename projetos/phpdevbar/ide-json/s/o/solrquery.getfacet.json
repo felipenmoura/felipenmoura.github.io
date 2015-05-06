@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFacet","purpose":"Returns the value of the facet parameter","manualid":"solrquery.getfacet","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

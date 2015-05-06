@@ -1,0 +1,1 @@
+{"name":"Imagick.combineImages","purpose":"Combines one or more images into a single image","manualid":"function.imagick-combineimages","version":false,"params":[{"name":"channelType","type":"int","optional":"false"}],"return":{"type":"Imagick","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

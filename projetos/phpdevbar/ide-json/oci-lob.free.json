@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.free","purpose":"Frees resources associated with the LOB descriptor","manualid":"function.oci-lob-free","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

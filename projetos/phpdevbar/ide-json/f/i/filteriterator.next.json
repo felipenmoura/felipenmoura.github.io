@@ -1,0 +1,1 @@
+{"name":"FilterIterator.next","purpose":"Move the iterator forward","manualid":"filteriterator.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"FilterIterator::current"},{"type":"function","name":"FilterIterator::next"}]}

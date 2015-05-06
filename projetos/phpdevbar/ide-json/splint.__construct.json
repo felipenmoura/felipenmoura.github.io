@@ -1,0 +1,1 @@
+{"name":"SplInt.__construct","purpose":"Constructs an integer object type","manualid":"splint.construct","version":false,"params":[{"name":"input","type":"integer","optional":"false"}],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

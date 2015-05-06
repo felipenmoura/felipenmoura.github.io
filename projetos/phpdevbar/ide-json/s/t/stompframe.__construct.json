@@ -1,0 +1,1 @@
+{"name":"StompFrame.__construct","purpose":"Constructor","manualid":"stompframe.construct","version":false,"params":[{"name":"command","type":"string","optional":"true"},{"name":"headers","type":"array","optional":"true"},{"name":"body","type":"string","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

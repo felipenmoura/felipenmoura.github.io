@@ -1,0 +1,1 @@
+{"name":"gnupg_init","purpose":"Initialize a connection","manualid":"function.gnupg-init","version":"PECL gnupg >= 0.4","params":[],"return":{"type":"resource","description":"A GnuPG resource connection used by other GnuPG functions."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

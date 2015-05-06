@@ -1,0 +1,1 @@
+{"name":"SolrDocument.next","purpose":"Moves the internal pointer to the next field","manualid":"solrdocument.next","version":false,"params":[],"return":{"type":"void","description":"This method has no return value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

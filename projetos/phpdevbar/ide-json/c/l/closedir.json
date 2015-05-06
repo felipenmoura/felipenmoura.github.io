@@ -1,0 +1,1 @@
+{"name":"closedir","purpose":"Close directory handle","manualid":"function.closedir","version":"PHP 4, PHP 5","params":[{"name":"dir_handle","type":"resource","optional":"true"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

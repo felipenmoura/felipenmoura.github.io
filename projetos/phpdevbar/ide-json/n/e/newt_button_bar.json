@@ -1,0 +1,1 @@
+{"name":"newt_button_bar","purpose":"This function returns a grid containing the buttons created.","manualid":"function.newt-button-bar","version":"PECL newt >= 0.1","params":[{"name":"buttons","type":"array","optional":"false"}],"return":{"type":"resource","description":"Returns grid containing the buttons created."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

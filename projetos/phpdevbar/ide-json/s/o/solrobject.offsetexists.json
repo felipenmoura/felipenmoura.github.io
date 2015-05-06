@@ -1,0 +1,1 @@
+{"name":"SolrObject.offsetExists","purpose":"Checks if the property exists","manualid":"solrobject.offsetexists","version":false,"params":[{"name":"property_name","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

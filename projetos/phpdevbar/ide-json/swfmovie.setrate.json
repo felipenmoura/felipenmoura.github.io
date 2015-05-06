@@ -1,0 +1,1 @@
+{"name":"SWFMovie.setRate","purpose":"Sets the animation's frame rate","manualid":"function.swfmovie.setrate","version":false,"params":[{"name":"rate","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoGridFSFile.getBytes","purpose":"Returns this file's contents as a string of bytes","manualid":"mongogridfsfile.getbytes","version":false,"params":[],"return":{"type":"string","description":"Returns a string of the bytes in the file."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

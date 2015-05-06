@@ -1,0 +1,1 @@
+{"name":"SolrResponse.getRawRequestHeaders","purpose":"Returns the raw request headers sent to the Solr server","manualid":"solrresponse.getrawrequestheaders","version":false,"params":[],"return":{"type":"string","description":"Returns the raw request headers sent to the Solr server"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

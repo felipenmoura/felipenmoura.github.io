@@ -1,0 +1,1 @@
+{"name":"yaz_sort","purpose":"Sets sorting criteria","manualid":"function.yaz-sort","version":"PHP 4 >= 4.0.7, PECL yaz >= 0.9.0","params":[{"name":"id","type":"resource","optional":"false"},{"name":"criteria","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

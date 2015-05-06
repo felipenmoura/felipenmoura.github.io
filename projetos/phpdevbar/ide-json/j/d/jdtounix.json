@@ -1,0 +1,1 @@
+{"name":"jdtounix","purpose":"Convert Julian Day to Unix timestamp","manualid":"function.jdtounix","version":"PHP 4, PHP 5","params":[{"name":"jday","type":"int","optional":"false"}],"return":{"type":"int","description":"The unix timestamp for the start of the given julian day."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"unixtojd"}]}

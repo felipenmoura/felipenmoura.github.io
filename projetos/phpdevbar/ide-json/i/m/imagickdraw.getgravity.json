@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getGravity","purpose":"Returns the text placement gravity","manualid":"function.imagickdraw-getgravity","version":false,"params":[],"return":{"type":"int","description":"Returns a GRAVITY_ constant on success and 0 if no gravity is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

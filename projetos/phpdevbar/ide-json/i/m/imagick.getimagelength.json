@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageLength","purpose":"Returns the image length in bytes","manualid":"function.imagick-getimagelength","version":false,"params":[],"return":{"type":"int","description":"Returns an int containing the current image size."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

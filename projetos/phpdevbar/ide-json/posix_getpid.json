@@ -1,0 +1,1 @@
+{"name":"posix_getpid","purpose":"Return the current process identifier","manualid":"function.posix-getpid","version":"PHP 4, PHP 5","params":[],"return":{"type":"int","description":"Returns the identifier, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"posix_kill"},{"type":false,"name":false}]}

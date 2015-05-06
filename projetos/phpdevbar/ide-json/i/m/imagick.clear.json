@@ -1,0 +1,1 @@
+{"name":"Imagick.clear","purpose":"Clears all resources associated to Imagick object","manualid":"function.imagick-clear","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

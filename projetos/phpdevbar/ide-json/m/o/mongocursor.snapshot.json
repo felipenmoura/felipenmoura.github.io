@@ -1,0 +1,1 @@
+{"name":"MongoCursor.snapshot","purpose":"Use snapshot mode for the query","manualid":"mongocursor.snapshot","version":false,"params":[],"return":{"type":"MongoCursor","description":"Returns this cursor."},"errors":"Throws MongoCursorException if this cursor has started iterating.","notes":[],"changelog":[],"seealso":[]}

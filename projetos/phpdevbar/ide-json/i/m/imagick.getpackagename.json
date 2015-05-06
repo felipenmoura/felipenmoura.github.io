@@ -1,0 +1,1 @@
+{"name":"Imagick.getPackageName","purpose":"Returns the ImageMagick package name","manualid":"function.imagick-getpackagename","version":false,"params":[],"return":{"type":"string","description":"Returns the ImageMagick package name as a string.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

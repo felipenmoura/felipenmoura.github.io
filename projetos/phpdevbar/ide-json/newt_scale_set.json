@@ -1,0 +1,1 @@
+{"name":"newt_scale_set","purpose":"","manualid":"function.newt-scale-set","version":"PECL newt >= 0.1","params":[{"name":"scale","type":"resource","optional":"false"},{"name":"amount","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"filepro_fieldname","purpose":"Gets the name of a field","manualid":"function.filepro-fieldname","version":"PHP 4, PHP 5 <= 5.1.6","params":[{"name":"field_number","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns the name of the field as a string, or FALSE on errors."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

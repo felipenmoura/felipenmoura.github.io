@@ -1,0 +1,1 @@
+{"name":"Imagick.averageImages","purpose":"Average a set of images","manualid":"function.imagick-averageimages","version":false,"params":[],"return":{"type":"Imagick","description":"Returns a new Imagick object on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getContentType","purpose":"Get content type","manualid":"function.httprequest-getcontenttype","version":false,"params":[],"return":{"type":"string","description":"Returns the previously set content type as string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

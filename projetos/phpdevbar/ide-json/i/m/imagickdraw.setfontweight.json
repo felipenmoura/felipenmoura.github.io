@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFontWeight","purpose":"Sets the font weight","manualid":"function.imagickdraw-setfontweight","version":false,"params":[{"name":"font_weight","type":"int","optional":"false"}],"return":{"type":"bool","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

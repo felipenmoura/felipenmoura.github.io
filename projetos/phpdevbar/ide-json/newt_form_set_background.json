@@ -1,0 +1,1 @@
+{"name":"newt_form_set_background","purpose":"","manualid":"function.newt-form-set-background","version":"PECL newt >= 0.1","params":[{"name":"from","type":"resource","optional":"false"},{"name":"background","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

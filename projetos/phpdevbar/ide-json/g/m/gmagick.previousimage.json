@@ -1,0 +1,1 @@
+{"name":"Gmagick.previousimage","purpose":"Move to the previous image in the object","manualid":"gmagick.previousimage","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

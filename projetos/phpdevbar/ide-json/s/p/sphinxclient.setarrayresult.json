@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setArrayResult","purpose":"Change the format of result set array","manualid":"sphinxclient.setarrayresult","version":false,"params":[{"name":"array_result","type":"bool","optional":"false","initializer":"false"}],"return":{"type":"bool","description":"Always returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"FilterIterator.getInnerIterator","purpose":"Get the inner iterator","manualid":"filteriterator.getinneriterator","version":false,"params":[],"return":{"type":"Iterator","description":"The inner iterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

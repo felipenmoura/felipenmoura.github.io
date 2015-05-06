@@ -1,0 +1,1 @@
+{"name":"Mongo.selectDB","purpose":"Gets a database","manualid":"mongo.selectdb","version":false,"params":[{"name":"dbname","type":"string","optional":"false"}],"return":{"type":"MongoDB","description":"Returns a new db object."},"errors":"Throws InvalidArgumentException if the database name is invalid.","notes":[],"changelog":[],"seealso":[]}

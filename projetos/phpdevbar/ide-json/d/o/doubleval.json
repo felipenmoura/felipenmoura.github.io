@@ -1,0 +1,1 @@
+{"name":"doubleval","purpose":"Alias of floatval","manualid":"function.doubleval","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[{"version":"4.2.0","change":"doubleval became an alias of \n        floatval. Before this time, only\n        doubleval existed."}],"seealso":[]}

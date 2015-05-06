@@ -1,0 +1,1 @@
+{"name":"newt_wait_for_key","purpose":"Doesn't return until a key has been pressed","manualid":"function.newt-wait-for-key","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_clear_key_buffer"}]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getStats","purpose":"Returns whether or not stats is enabled","manualid":"solrquery.getstats","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

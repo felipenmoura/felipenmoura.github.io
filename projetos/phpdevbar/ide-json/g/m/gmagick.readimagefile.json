@@ -1,0 +1,1 @@
+{"name":"Gmagick.readimagefile","purpose":"The readimagefile purpose","manualid":"gmagick.readimagefile","version":false,"params":[{"name":"fp","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

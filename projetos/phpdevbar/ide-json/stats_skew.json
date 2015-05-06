@@ -1,0 +1,1 @@
+{"name":"stats_skew","purpose":"Computes the skewness of the data in the array","manualid":"function.stats-skew","version":"PECL stats >= 1.0.0","params":[{"name":"a","type":"array","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

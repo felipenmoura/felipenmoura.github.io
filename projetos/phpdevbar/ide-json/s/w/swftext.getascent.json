@@ -1,0 +1,1 @@
+{"name":"SWFText.getAscent","purpose":"Returns the ascent of the current font at its current size, or 0 if not available","manualid":"function.swftext.getascent","version":false,"params":[],"return":{"type":"float","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+
+    	<h3>Look the console of your browser</h3>
+
+    	<div>
+    		The source code:<br/>
+    		<pre id='sc'></pre>
+    		The output is in your console.
+    	</div>
+
+        <script src='../dist/maker.js'></script>
+
+        <script id='sampleCode'>
+        var o= {
+                  a: {
+                    b: { d: [11, 22, 33]},
+                    c: { e: 'algo' }
+                  },
+                  f: { g: { h: { i: { j:{ k: { l:{ m: "felipe" }}}}}}},
+                  n: 'foo',
+                  o: [
+                    { p: 'A longer text comes here', q: 'Something else'},
+                    { r: 'Another text comes', s: 'yeah!'},
+                    { t: 'And here, could be a loren ipsum!', u: "just some bla bla bla"},
+                    { v: "ok, that's it...", x: 'x files'},
+                    { y: 'yah, baby, yeah!', z: "zzzzzzzz..."}
+                  ]
+                };
+                make.indexable(o);
+                console.log( o.find('algo') );
+                console.log( o.find('22') );
+                console.log( o.find('felipe') );
+                console.log( o.find('foo') );
+                console.log( o.findLike('loren') );
+                console.log( o.findLike("that's") );
+                console.log( o.findLike(/bla {0,2}/));
+                console.log( o.locate('p') );
+                console.log( o.locate('k') );
+                console.log( o.locate('x') );
+                console.log( o.locateLike('P') );
+        </script>
+
+        <script>
+        	setTimeout(function(){
+        		document.getElementById('sc').innerHTML= document.getElementById('sampleCode').text;
+        	}, 100);
+        </script>
+
+
+    </body>
+</html>

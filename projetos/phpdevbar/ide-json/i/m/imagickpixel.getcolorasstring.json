@@ -1,0 +1,1 @@
+{"name":"ImagickPixel.getColorAsString","purpose":"Returns the color as a string","manualid":"function.imagickpixel-getcolorasstring","version":false,"params":[],"return":{"type":"string","description":"Returns the color of the ImagickPixel object as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

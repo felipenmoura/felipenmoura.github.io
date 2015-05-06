@@ -1,0 +1,6 @@
+TODO's Athenas
+-----------------------------------------------
+Corrigir, verificador de alteração de formulário.
+Chave primaria do telefone Bugada (acentos)
+Verificar Sttaus de Contatos,Filiais .
+Janelas de Gerenciar perdem o onmouseover quando algum dado é atualizado.

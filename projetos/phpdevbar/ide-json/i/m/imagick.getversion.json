@@ -1,0 +1,1 @@
+{"name":"Imagick.getVersion","purpose":"Returns the ImageMagick API version","manualid":"function.imagick-getversion","version":false,"params":[],"return":{"type":"array","description":"Returns the ImageMagick API version as a string and as a number.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

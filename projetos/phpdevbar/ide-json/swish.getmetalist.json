@@ -1,0 +1,1 @@
+{"name":"Swish.getMetaList","purpose":"Get the list of meta entries for the index","manualid":"function.swish-getmetalist","version":false,"params":[{"name":"index_name","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns an array of meta entries for the given index."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"dbase_pack","purpose":"Packs a database","manualid":"function.dbase-pack","version":"PHP 4, PHP 5","params":[{"name":"dbase_identifier","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"dbase_delete_record"}]}

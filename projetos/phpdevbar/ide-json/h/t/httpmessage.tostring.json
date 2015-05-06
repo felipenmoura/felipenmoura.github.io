@@ -1,0 +1,1 @@
+{"name":"HttpMessage.toString","purpose":"Get string representation","manualid":"function.httpmessage-tostring","version":false,"params":[{"name":"include_parent","type":"bool","optional":"true","initializer":"false"}],"return":{"type":"string","description":"Returns the message as string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

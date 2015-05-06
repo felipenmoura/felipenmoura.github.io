@@ -1,0 +1,1 @@
+{"name":"dba_list","purpose":"List all open database files","manualid":"function.dba-list","version":"PHP 4 >= 4.3.0, PHP 5","params":[],"return":{"type":"array","description":"An associative array, in the form resourceid => filename."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.isProtectionEnabled","purpose":"Returns the length of a MPEG file","manualid":"audioproperties.isProtectionEnabled","version":false,"params":[],"return":{"type":"bool","description":"Returns true if protection mechanism (like DRM) are enabled for this file"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

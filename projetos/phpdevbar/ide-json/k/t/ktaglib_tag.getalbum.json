@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getAlbum","purpose":"Returns the title string from a ID3 tag","manualid":"tag.getAlbum","version":false,"params":[],"return":{"type":"string","description":"Returns the album string"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

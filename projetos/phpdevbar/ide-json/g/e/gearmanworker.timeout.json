@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.timeout","purpose":"Get socket I\/O activity timeout","manualid":"gearmanworker.timeout","version":false,"params":[],"return":{"type":"int","description":"A time period is milliseconds.  A negative value indicates an infinite timeout."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanWorker::setTimeout"}]}

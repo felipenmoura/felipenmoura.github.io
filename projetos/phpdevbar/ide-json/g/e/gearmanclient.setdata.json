@@ -1,0 +1,1 @@
+{"name":"GearmanClient.setData","purpose":"Set application data (deprecated)","manualid":"gearmanclient.setdata","version":false,"params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"bool","description":"Always returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::data"}]}

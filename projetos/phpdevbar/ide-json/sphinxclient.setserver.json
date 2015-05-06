@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setServer","purpose":"Set searchd host and port","manualid":"sphinxclient.setserver","version":false,"params":[{"name":"server","type":"string","optional":"false"},{"name":"port","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

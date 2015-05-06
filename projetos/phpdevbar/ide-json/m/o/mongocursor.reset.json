@@ -1,0 +1,1 @@
+{"name":"MongoCursor.reset","purpose":"Clears the cursor","manualid":"mongocursor.reset","version":false,"params":[],"return":{"type":"void","description":"NULL."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

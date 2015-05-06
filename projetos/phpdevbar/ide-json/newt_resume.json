@@ -1,0 +1,1 @@
+{"name":"newt_resume","purpose":"Resume using the newt interface after calling\n  newt_suspend","manualid":"function.newt-resume","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_suspend"}]}

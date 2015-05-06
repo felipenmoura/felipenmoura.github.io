@@ -1,0 +1,1 @@
+{"name":"HttpQueryString.set","purpose":"Set query string params","manualid":"function.httpquerystring-set","version":false,"params":[{"name":"params","type":"mixed","optional":"false"}],"return":{"type":"string","description":"Returns the current query string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

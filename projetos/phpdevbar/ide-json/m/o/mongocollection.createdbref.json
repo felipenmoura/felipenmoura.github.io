@@ -1,0 +1,1 @@
+{"name":"MongoCollection.createDBRef","purpose":"Creates a database reference","manualid":"mongocollection.createdbref","version":false,"params":[{"name":"a","type":"array","optional":"false"}],"return":{"type":"array","description":"Returns a database reference array."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"MongoCollection::getDBRef"}]}

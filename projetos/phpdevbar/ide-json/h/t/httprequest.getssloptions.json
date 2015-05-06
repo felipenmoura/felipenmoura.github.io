@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getSslOptions","purpose":"Get ssl options","manualid":"function.httprequest-getssloptions","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array containing any previously set SSL options."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

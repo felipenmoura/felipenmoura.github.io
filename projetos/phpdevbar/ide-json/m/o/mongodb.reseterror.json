@@ -1,0 +1,1 @@
+{"name":"MongoDB.resetError","purpose":"Clears any flagged errors on the database","manualid":"mongodb.reseterror","version":false,"params":[],"return":{"type":"array","description":"Returns the database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

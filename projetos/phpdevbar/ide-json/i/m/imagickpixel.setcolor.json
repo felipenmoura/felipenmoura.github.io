@@ -1,0 +1,1 @@
+{"name":"ImagickPixel.setColor","purpose":"Sets the color","manualid":"function.imagickpixel-setcolor","version":false,"params":[{"name":"color","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the specified color was set, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

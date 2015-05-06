@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getMethods","purpose":"Gets a list of methods","manualid":"reflectionclass.getmethods","version":false,"params":[{"name":"filter","type":"string","optional":"true"}],"return":{"type":"array","description":"An array of methods."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getMethod"}]}

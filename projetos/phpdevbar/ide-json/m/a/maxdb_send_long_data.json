@@ -1,0 +1,1 @@
+{"name":"maxdb_send_long_data","purpose":"Alias of maxdb_stmt_send_long_data","manualid":"function.maxdb-send-long-data","version":"PECL maxdb >= 1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

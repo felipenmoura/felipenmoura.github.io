@@ -1,0 +1,1 @@
+{"name":"Gmagick.addnoiseimage","purpose":"Adds random noise to the image","manualid":"gmagick.addnoiseimage","version":false,"params":[{"name":"NOISE","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object with noise added."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

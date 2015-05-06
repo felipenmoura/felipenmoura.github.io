@@ -1,0 +1,1 @@
+{"name":"SWFMorph.getShape1","purpose":"Gets a handle to the starting shape","manualid":"function.swfmorph.getshape1","version":false,"params":[],"return":{"type":"SWFShape","description":"Returns a  object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"memcache_debug","purpose":"Turn debug output on\/off","manualid":"function.memcache-debug","version":"PECL memcache >= 0.2.0","params":[{"name":"on_off","type":"bool","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if PHP was built with --enable-debug option, otherwise\n   returns FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

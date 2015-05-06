@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getResponseMessage","purpose":"Get response message","manualid":"function.httprequest-getresponsemessage","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns an HttpMessage object of the response."},"errors":"Throws HttpException, HttpRuntimeException.","notes":[],"changelog":[],"seealso":[]}

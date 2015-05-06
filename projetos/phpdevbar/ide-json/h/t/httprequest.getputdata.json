@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getPutData","purpose":"Get put data","manualid":"function.httprequest-getputdata","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the currently set PUT data."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

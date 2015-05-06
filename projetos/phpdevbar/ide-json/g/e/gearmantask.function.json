@@ -1,0 +1,1 @@
+{"name":"GearmanTask.function","purpose":"Get associated function name (deprecated)","manualid":"gearmantask.function","version":false,"params":[],"return":{"type":"string","description":"A function name."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

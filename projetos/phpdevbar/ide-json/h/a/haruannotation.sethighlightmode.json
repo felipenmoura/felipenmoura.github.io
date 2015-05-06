@@ -1,0 +1,1 @@
+{"name":"HaruAnnotation.setHighlightMode","purpose":"Set the highlighting mode of the annotation","manualid":"function.haruannotation-sethighlightmode","version":false,"params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

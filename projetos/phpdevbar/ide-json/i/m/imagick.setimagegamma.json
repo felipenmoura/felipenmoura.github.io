@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageGamma","purpose":"Sets the image gamma","manualid":"function.imagick-setimagegamma","version":false,"params":[{"name":"gamma","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ftp_systype","purpose":"Returns the system type identifier of the remote FTP server","manualid":"function.ftp-systype","version":"PHP 4, PHP 5","params":[{"name":"ftp_stream","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns the remote system type, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

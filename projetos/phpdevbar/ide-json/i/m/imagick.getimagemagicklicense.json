@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageMagickLicense","purpose":"Returns a string containing the ImageMagick license","manualid":"function.imagick-getimagemagicklicense","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the ImageMagick license."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

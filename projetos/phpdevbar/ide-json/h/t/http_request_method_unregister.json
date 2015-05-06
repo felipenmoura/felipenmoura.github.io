@@ -1,0 +1,1 @@
+{"name":"http_request_method_unregister","purpose":"Unregister request method","manualid":"function.http-request-method-unregister","version":"PECL pecl_http >= 0.10.0","params":[{"name":"method","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"hw_api.unlock","purpose":"Unlocks a locked object","manualid":"function.hwapi-unlock","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or an object of class HW_API_Error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

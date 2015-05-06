@@ -1,0 +1,1 @@
+{"name":"session_pgsql_get_field","purpose":"Get custom field value","manualid":"function.session-pgsql-get-field","version":"PECL session_pgsql SVN","params":[],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"session_pgsql_set_field"}]}

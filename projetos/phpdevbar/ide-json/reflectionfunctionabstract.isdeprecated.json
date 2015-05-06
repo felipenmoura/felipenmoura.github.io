@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.isDeprecated","purpose":"Checks if deprecated","manualid":"reflectionfunctionabstract.isdeprecated","version":false,"params":[],"return":{"type":"bool","description":"TRUE if it's deprecated, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::getDocComment"}]}

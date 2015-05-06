@@ -1,0 +1,1 @@
+{"name":"msession_destroy","purpose":"Destroy a session","manualid":"function.msession-destroy","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

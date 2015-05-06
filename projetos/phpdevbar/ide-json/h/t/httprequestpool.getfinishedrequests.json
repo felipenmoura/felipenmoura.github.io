@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.getFinishedRequests","purpose":"Get finished requests","manualid":"function.httprequestpool-getfinishedrequests","version":false,"params":[],"return":{"type":"array","description":"Returns an array containing all attached HttpRequest objects that already have finished their work."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

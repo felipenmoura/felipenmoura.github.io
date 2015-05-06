@@ -1,0 +1,1 @@
+{"name":"newt_checkbox_tree_get_multi_selection","purpose":"","manualid":"function.newt-checkbox-tree-get-multi-selection","version":"PECL newt >= 0.1","params":[{"name":"checkboxtree","type":"resource","optional":"false"},{"name":"seqnum","type":"string","optional":"false"}],"return":{"type":"array","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

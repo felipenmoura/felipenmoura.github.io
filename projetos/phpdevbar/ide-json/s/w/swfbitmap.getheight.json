@@ -1,0 +1,1 @@
+{"name":"SWFBitmap.getHeight","purpose":"Returns the bitmap's height","manualid":"function.swfbitmap.getheight","version":false,"params":[],"return":{"type":"float","description":"Returns the bitmap height in pixels."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

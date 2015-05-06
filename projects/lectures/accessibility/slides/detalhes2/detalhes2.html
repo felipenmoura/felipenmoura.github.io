@@ -1,0 +1,84 @@
+<h1>
+	Detalhes...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin-top: 30px;'>
+		<strong id='sempre' class='animate'>Sempre</strong> use alt nas suas imagens<br/>
+		&lt;img src='images/img_64x64-2011byHonorio56CO.png' alt='Imagem de Porto Alegre' />
+	</div>
+	<div id='step2'
+		 style='text-align: center;
+				display: none;
+				margin-top: -20px;'>
+		Some content here<br/>
+		<!-- o alt da imagem foi adicionado para simular um leitor de telas tradicional(o chromevox, por padrão lê somente "image" -->
+		<img src='slides/detalhes2/img_64x64-2011byHonorio56CO.png'
+			 align='center'
+			 alt='img_64x64-2011byHonorio56CO.jpeg'
+			 style='box-shadow: 0px 0px 20px black; border: solid 1px black;'/>
+		<div id='interrog'
+			 style='font-size: 240px;
+					text-align: center;
+					font-weight: bold;
+					font-family: Arial;
+					color: red;
+					display: none;
+					text-shadow: 0px 0px 10px black;
+					position: relative;
+					top: -300px;
+					z-index: 999'>
+			?
+		</div>
+	</div>
+	<div id='step3'
+		 style='text-align: center;
+				display: none;
+				margin-top: -20px;'>
+		Some content here<br/>
+		<img src='slides/detalhes2/img_64x64-2011byHonorio56CO.png'
+			 align='center'
+			 style='box-shadow: 0px 0px 20px black; border: solid 1px black;'
+			 alt=',This is a picture of my city'/>
+	</div>
+	<div id='step4'
+		 style='text-align: center;
+				display: none;
+				margin-top: -20px;'>
+		Some content here<br/>
+		<img src='slides/detalhes2/img_64x64-2011byHonorio56CO.png'
+			 align='center'
+			 alt=''
+			 style='box-shadow: 0px 0px 20px black; border: solid 1px black;'/>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		document.getElementById('sempre').style.fontSize= '70px';
+	});
+	PPW.addAction(function(){
+		$('#step1').fadeOut(function(){
+			$('#step2').fadeIn(function(){
+				PPW.speak(document.getElementById('step2'));
+				setTimeout(function(){
+					$('#interrog').fadeIn('fast');
+				}, 2000);
+			});
+		})
+	});
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3').fadeIn(function(){
+				PPW.speak(document.getElementById('step3'));
+			})
+		});
+	});
+	PPW.addAction(function(){
+		$('#step3').fadeOut(function(){
+			$('#step4').fadeIn(function(){
+				PPW.speak(document.getElementById('step4'));
+			})
+		});
+	});
+</script>

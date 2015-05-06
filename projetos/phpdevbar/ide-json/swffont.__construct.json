@@ -1,0 +1,1 @@
+{"name":"SWFFont.__construct","purpose":"Loads a font definition","manualid":"function.swffont.construct","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"SWFFont","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

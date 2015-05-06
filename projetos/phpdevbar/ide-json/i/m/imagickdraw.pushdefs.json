@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pushDefs","purpose":"Indicates that following commands create named elements for early processing","manualid":"function.imagickdraw-pushdefs","version":false,"params":[],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

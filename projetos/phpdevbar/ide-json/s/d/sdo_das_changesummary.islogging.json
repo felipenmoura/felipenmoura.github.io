@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_ChangeSummary.isLogging","purpose":"Test to see whether change logging is switched on","manualid":"function.sdo-das-changesummary-islogging","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if change logging is on, otherwise returns FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

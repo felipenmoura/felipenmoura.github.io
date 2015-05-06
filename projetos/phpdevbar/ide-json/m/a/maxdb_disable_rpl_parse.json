@@ -1,0 +1,1 @@
+{"name":"maxdb_disable_rpl_parse","purpose":"Disable RPL parse","manualid":"function.maxdb-disable-rpl-parse","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

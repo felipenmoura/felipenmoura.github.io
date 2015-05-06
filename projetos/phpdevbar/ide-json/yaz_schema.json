@@ -1,0 +1,1 @@
+{"name":"yaz_schema","purpose":"Specifies schema for retrieval","manualid":"function.yaz-schema","version":"PHP 4 >= 4.2.0, PECL yaz >= 0.9.0","params":[{"name":"id","type":"resource","optional":"false"},{"name":"schema","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

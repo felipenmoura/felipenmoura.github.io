@@ -1,0 +1,1 @@
+{"name":"SQLite3.lastInsertRowID","purpose":"Returns the row ID of the most recent INSERT into the database","manualid":"sqlite3.lastinsertrowid","version":false,"params":[],"return":{"type":"int","description":"Returns the row ID of the most recent INSERT into the database"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

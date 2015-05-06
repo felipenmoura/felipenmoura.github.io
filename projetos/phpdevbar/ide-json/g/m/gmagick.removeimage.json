@@ -1,0 +1,1 @@
+{"name":"Gmagick.removeimage","purpose":"Removes an image from the image list","manualid":"gmagick.removeimage","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ncurses_baudrate","purpose":"Returns baudrate of terminal","manualid":"function.ncurses-baudrate","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

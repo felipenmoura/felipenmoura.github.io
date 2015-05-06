@@ -1,0 +1,1 @@
+{"name":"ob_clean","purpose":"Clean (erase) the output buffer","manualid":"function.ob-clean","version":"PHP 4 >= 4.2.0, PHP 5","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ob_flush"},{"type":"function","name":"ob_end_flush"},{"type":"function","name":"ob_end_clean"}]}

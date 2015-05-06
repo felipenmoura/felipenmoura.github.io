@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getStart","purpose":"Returns the offset in the complete result set","manualid":"solrquery.getstart","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

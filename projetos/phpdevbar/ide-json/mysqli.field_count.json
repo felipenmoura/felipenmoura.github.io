@@ -1,0 +1,1 @@
+{"name":"mysqli.field_count","purpose":"Returns the number of columns for the most recent query","manualid":"mysqli.field-count","version":false,"params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"int","description":"An integer representing the number of fields in a result set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"imap_utf8","purpose":"Converts MIME-encoded text to UTF-8","manualid":"function.imap-utf8","version":"PHP 4, PHP 5","params":[{"name":"mime_encoded_text","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns an UTF-8 encoded string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"imap_mime_header_decode"}]}

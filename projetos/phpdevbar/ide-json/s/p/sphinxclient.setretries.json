@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setRetries","purpose":"Set retry count and delay","manualid":"sphinxclient.setretries","version":false,"params":[{"name":"count","type":"int","optional":"false"},{"name":"delay","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

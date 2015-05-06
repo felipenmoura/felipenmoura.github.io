@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.socketPerform","purpose":"Perform socket actions","manualid":"function.httprequestpool-socketperform","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE until each request has finished its transaction."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

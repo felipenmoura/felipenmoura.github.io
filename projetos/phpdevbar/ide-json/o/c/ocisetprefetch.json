@@ -1,0 +1,1 @@
+{"name":"ocisetprefetch","purpose":"Alias of oci_set_prefetch","manualid":"function.ocisetprefetch","version":"PHP 4, PHP 5, PECL OCI8 >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

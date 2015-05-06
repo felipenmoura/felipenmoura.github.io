@@ -1,0 +1,1 @@
+{"name":"ArrayObject.getIteratorClass","purpose":"Gets the iterator classname for the ArrayObject.","manualid":"arrayobject.getiteratorclass","version":false,"params":[],"return":{"type":"string","description":"Returns the iterator class name that is used to iterate over this object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

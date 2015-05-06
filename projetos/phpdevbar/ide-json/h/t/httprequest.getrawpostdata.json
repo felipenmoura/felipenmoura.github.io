@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getRawPostData","purpose":"Get raw post data","manualid":"function.httprequest-getrawpostdata","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the currently set raw post data."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

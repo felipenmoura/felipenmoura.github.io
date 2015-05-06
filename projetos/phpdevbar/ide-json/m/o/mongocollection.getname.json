@@ -1,0 +1,1 @@
+{"name":"MongoCollection.getName","purpose":"Returns this collection's name","manualid":"mongocollection.getname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of this collection."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

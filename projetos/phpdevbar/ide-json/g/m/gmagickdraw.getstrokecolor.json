@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getstrokecolor","purpose":"Returns the color used for stroking object outlines","manualid":"gmagickdraw.getstrokecolor","version":false,"params":[],"return":{"type":"void","description":"Returns an GmagickPixel object which describes the color"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"sqrt","purpose":"Square root","manualid":"function.sqrt","version":"PHP 4, PHP 5","params":[{"name":"arg","type":"float","optional":"false"}],"return":{"type":"float","description":"The square root of arg\n   or the special value NAN for negative numbers."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"pow"}]}

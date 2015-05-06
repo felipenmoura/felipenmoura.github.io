@@ -1,0 +1,1 @@
+{"name":"SWFVideoStream.getNumFrames","purpose":"Returns the number of frames in the video","manualid":"function.swfvideostream.getnumframes","version":false,"params":[],"return":{"type":"int","description":"Returns the number of frames, as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

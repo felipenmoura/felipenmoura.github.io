@@ -1,0 +1,1 @@
+{"name":"MongoGridFSFile.getFilename","purpose":"Returns this file's filename","manualid":"mongogridfsfile.getfilename","version":false,"params":[],"return":{"type":"string","description":"Returns the filename."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

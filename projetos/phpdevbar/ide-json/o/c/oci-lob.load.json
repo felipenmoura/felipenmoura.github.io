@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.load","purpose":"Returns large object's contents","manualid":"function.oci-lob-load","version":false,"params":[],"return":{"type":"string","description":"Returns the contents of the object, or FALSE on errors."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

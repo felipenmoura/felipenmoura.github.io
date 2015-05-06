@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageresolution","purpose":"Gets the image X and Y resolution","manualid":"gmagick.getimageresolution","version":false,"params":[],"return":{"type":"void","description":"Returns the resolution as an array."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

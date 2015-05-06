@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_DataFactory.getDataFactory","purpose":"Get a data factory instance","manualid":"function.sdo-das-datafactory-getdatafactory","version":false,"params":[],"return":{"type":"SDO_DAS_DataFactory","description":"Returns an SDO_DAS_DataFactory."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setClipRule","purpose":"Set the polygon fill rule to be used by the clipping path","manualid":"function.imagickdraw-setcliprule","version":false,"params":[{"name":"fill_rule","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

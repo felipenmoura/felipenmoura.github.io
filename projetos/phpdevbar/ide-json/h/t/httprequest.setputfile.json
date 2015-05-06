@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setPutFile","purpose":"Set put file","manualid":"function.httprequest-setputfile","version":false,"params":[{"name":"file","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

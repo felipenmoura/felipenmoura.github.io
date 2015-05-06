@@ -1,0 +1,1 @@
+{"name":"PDF_get_minorversion","purpose":"Get minor version number [deprecated]","manualid":"function.pdf-get-minorversion","version":"PHP 4 >= 4.2.0, PECL pdflib >= 1.0.0","params":[],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

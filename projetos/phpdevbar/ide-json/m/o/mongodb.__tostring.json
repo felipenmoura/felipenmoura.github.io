@@ -1,0 +1,1 @@
+{"name":"MongoDB.__toString","purpose":"The name of this database","manualid":"mongodb.--tostring","version":false,"params":[],"return":{"type":"string","description":"Returns this database's name."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getBody","purpose":"Get message body","manualid":"function.httpmessage-getbody","version":false,"params":[],"return":{"type":"string","description":"Returns the message body as string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

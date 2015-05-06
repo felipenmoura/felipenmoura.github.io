@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.isCopyrighted","purpose":"Returns the length of a MPEG file","manualid":"audioproperties.isCopyrighted","version":false,"params":[],"return":{"type":"bool","description":"Returns true if the MPEG file is copyrighted"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

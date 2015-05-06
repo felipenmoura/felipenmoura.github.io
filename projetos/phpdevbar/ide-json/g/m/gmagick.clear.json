@@ -1,0 +1,1 @@
+{"name":"Gmagick.clear","purpose":"Clears all resources associated to Gmagick object","manualid":"gmagick.clear","version":false,"params":[],"return":{"type":"void","description":"The cleared Gmagick object"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

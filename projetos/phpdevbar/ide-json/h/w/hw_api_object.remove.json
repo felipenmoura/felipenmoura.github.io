@@ -1,0 +1,1 @@
+{"name":"hw_api_object.remove","purpose":"Removes attribute","manualid":"function.hwapi-object-remove","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"enchant_dict_describe","purpose":"Describes an individual dictionary","manualid":"function.enchant-dict-describe","version":"PECL enchant >= 0.1.0 ","params":[{"name":"dict","type":"resource","optional":"false"}],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

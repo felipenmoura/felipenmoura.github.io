@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.current","purpose":"Return current array entry","manualid":"spldoublylinkedlist.current","version":false,"params":[],"return":{"type":"mixed","description":"The current node value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

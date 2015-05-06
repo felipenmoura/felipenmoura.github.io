@@ -1,0 +1,1 @@
+{"name":"readline_redisplay","purpose":"Redraws the display","manualid":"function.readline-redisplay","version":"PHP 5 >= 5.1.0","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

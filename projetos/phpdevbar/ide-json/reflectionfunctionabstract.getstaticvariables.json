@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.getStaticVariables","purpose":"Gets static variables","manualid":"reflectionfunctionabstract.getstaticvariables","version":false,"params":[],"return":{"type":"array","description":"An array of static variables."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::getParameters"}]}

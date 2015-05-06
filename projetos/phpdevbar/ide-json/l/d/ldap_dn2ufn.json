@@ -1,0 +1,1 @@
+{"name":"ldap_dn2ufn","purpose":"Convert DN to User Friendly Naming format","manualid":"function.ldap-dn2ufn","version":"PHP 4, PHP 5","params":[{"name":"dn","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the user friendly name."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

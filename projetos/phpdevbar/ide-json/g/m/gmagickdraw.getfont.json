@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfont","purpose":"Returns the font","manualid":"gmagickdraw.getfont","version":false,"params":[],"return":{"type":"void","description":"Returns a string on success and false if no font is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

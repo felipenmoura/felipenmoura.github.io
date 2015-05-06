@@ -1,0 +1,1 @@
+{"name":"CairoSvgSurface.versionToString","purpose":"The versionToString purpose","manualid":"cairosvgsurface.versiontostring","version":false,"params":[{"name":"version","type":"int","optional":"false"}],"return":{"type":"string","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

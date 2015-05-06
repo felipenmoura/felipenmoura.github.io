@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.getPrefix","purpose":"Get the prefix","manualid":"recursivetreeiterator.getprefix","version":false,"params":[],"return":{"type":"string","description":"Returns the string to place in front of current element"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

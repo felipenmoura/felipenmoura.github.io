@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltMinWordLength","purpose":"Returns the minimum word length below which words will be ignored","manualid":"solrquery.getmltminwordlength","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

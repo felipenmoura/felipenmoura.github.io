@@ -1,0 +1,1 @@
+{"name":"PDF_new","purpose":"Create PDFlib object","manualid":"function.pdf-new","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

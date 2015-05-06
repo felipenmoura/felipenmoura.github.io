@@ -1,0 +1,1 @@
+{"name":"SplObjectStorage.serialize","purpose":"Serializes the storage","manualid":"splobjectstorage.serialize","version":false,"params":[],"return":{"type":"string","description":"A string representing the storage."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplObjectStorage::unserialize"}]}

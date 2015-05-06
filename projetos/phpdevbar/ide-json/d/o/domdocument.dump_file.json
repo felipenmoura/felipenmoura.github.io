@@ -1,0 +1,1 @@
+{"name":"DomDocument.dump_file","purpose":"Dumps the internal XML tree back into a file","manualid":"function.domdocument-dump-file","version":false,"params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

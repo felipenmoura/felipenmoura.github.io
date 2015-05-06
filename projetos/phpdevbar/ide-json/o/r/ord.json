@@ -1,0 +1,1 @@
+{"name":"ord","purpose":"Return ASCII value of character","manualid":"function.ord","version":"PHP 4, PHP 5","params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"int","description":"Returns the ASCII value as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"chr"},{"type":false,"name":false}]}

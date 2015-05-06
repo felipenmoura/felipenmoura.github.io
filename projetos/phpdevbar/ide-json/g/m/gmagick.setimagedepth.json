@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagedepth","purpose":"Sets the image depth","manualid":"gmagick.setimagedepth","version":false,"params":[{"name":"depth","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

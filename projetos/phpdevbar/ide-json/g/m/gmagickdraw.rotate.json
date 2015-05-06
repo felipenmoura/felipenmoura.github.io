@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.rotate","purpose":"Applies the specified rotation to the current coordinate space","manualid":"gmagickdraw.rotate","version":false,"params":[{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

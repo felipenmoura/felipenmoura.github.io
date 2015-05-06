@@ -1,0 +1,1 @@
+{"name":"udm_open_stored","purpose":"Open connection to stored","manualid":"function.udm-open-stored","version":"PHP 4 >= 4.2.0","params":[{"name":"agent","type":"resource","optional":"false"},{"name":"storedaddr","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

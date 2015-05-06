@@ -1,0 +1,1 @@
+{"name":"variant_not","purpose":"Performs bitwise not negation on a variant","manualid":"function.variant-not","version":"PHP 5","params":[{"name":"variant","type":"mixed","optional":"false"}],"return":{"type":"mixed","description":"Returns the bitwise not negation. If variant is\n   NULL, the result will also be NULL."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

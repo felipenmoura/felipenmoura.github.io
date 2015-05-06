@@ -1,0 +1,1 @@
+{"name":"PDF_suspend_page","purpose":"Suspend page","manualid":"function.pdf-suspend-page","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"optlist","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

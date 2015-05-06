@@ -1,0 +1,43 @@
+<style type="text/css">
+    BODY, HTML{
+        width: 100%;
+        height: 100%;
+        overflow: none;
+        background: transparent;
+    }
+</style>
+<script src="../../three/three.min.js"></script>
+<canvas id="threejs-libs-demo" ></canvas>
+<script>
+    
+    var scene = new THREE.Scene(),
+        width= 500,
+        height= 400,
+        canvas= document.getElementById('threejs-libs-demo');
+
+    var camera = new THREE.PerspectiveCamera( 30, width / height, 1, 1000 );
+    camera.position.set(0, 3, 7);
+    camera.lookAt( new THREE.Vector3(0,0,0));
+
+    var scale = 2.0;
+    var geometry = new THREE.CubeGeometry( scale, scale, scale );
+    var material = new THREE.MeshPhongMaterial( { color: 0xdddddd } );
+
+    var mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+
+    var directionalLight = new THREE.DirectionalLight ( 0xffffffff );
+    directionalLight.position.set(0, 3, 7);
+    scene.add( directionalLight );
+    
+    var renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true});
+    renderer.setSize( width, height );
+    
+    function animate() {
+        requestAnimationFrame( animate, canvas );
+        mesh.rotation.y += 0.008;
+        renderer.render( scene, camera );
+    }
+    animate();
+    
+</script>

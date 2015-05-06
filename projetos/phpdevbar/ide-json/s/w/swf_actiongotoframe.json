@@ -1,0 +1,1 @@
+{"name":"swf_actiongotoframe","purpose":"Play a frame and then stop","manualid":"function.swf-actiongotoframe","version":"PHP 4","params":[{"name":"framenumber","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

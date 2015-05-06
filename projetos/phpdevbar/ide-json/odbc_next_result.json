@@ -1,0 +1,1 @@
+{"name":"odbc_next_result","purpose":"Checks if multiple results are available","manualid":"function.odbc-next-result","version":"PHP 4 >= 4.0.5, PHP 5","params":[{"name":"result_id","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if there are more result sets, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

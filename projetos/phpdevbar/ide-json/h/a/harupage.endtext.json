@@ -1,0 +1,1 @@
+{"name":"HaruPage.endText","purpose":"End current text object","manualid":"function.harupage-endtext","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFMovie.addExport","purpose":"","manualid":"function.swfmovie.addexport","version":false,"params":[{"name":"char","type":"SWFCharacter","optional":"false"},{"name":"name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script src='logo.js'></script>
+	</head>
+	<body>
+		<div id='logoHere'></div>
+		<br/>
+		Type here the word to represent the CUP translation<br/>
+		<input type='text'
+				onkeyup="setMozCupLogoAt('logoHere', this.value);">
+	</body>
+	<script>
+		//setMozCupLogoAt('logoHere', '???');
+		setMozCupLogoAt({
+			where: 'logoHere',
+			what: '???',
+			left: '196',
+			top: '190',
+			width: '399',
+			height: '489',
+			fontSize: '56'
+		});
+	</script>
+</html>

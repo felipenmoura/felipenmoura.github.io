@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.__toString","purpose":"To string","manualid":"reflectionproperty.tostring","version":false,"params":[],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::"},{"type":false,"name":false}]}

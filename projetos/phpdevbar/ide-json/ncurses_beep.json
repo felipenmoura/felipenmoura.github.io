@@ -1,0 +1,1 @@
+{"name":"ncurses_beep","purpose":"Let the terminal beep","manualid":"function.ncurses-beep","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ncurses_flash"}]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getStrokeDashArray","purpose":"Returns an array representing the pattern of dashes and gaps used to stroke paths","manualid":"function.imagickdraw-getstrokedasharray","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and empty array if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

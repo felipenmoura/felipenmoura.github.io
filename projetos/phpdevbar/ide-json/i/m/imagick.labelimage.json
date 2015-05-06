@@ -1,0 +1,1 @@
+{"name":"Imagick.labelImage","purpose":"Adds a label to an image","manualid":"function.imagick-labelimage","version":false,"params":[{"name":"label","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"TokyoTyrant.vanish","purpose":"Empties the database","manualid":"tokyotyrant.vanish","version":false,"params":[],"return":{"type":"mixed","description":"This method returns the current object and throws TokyoTyrantException on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrant::out"}]}

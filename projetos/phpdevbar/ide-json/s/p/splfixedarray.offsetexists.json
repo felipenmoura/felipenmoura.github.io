@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.offsetExists","purpose":"Returns whether the requested index exists","manualid":"splfixedarray.offsetexists","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"bool","description":"TRUE if the requested index exists, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

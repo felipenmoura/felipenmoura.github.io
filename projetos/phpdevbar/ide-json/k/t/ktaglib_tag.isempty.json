@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.isEmpty","purpose":"Returns true if the tag is empty","manualid":"tag.isEmpty","version":false,"params":[],"return":{"type":"bool","description":"Returns true if the tag is empty, otherwise false."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

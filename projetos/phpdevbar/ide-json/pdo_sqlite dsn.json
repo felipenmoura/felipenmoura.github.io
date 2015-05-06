@@ -1,0 +1,1 @@
+{"name":"PDO_SQLITE DSN","purpose":"Connecting to SQLite databases","manualid":"ref.pdo-sqlite.connection","version":"PECL PDO_SQLITE >= 0.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

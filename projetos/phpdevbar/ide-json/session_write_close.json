@@ -1,0 +1,1 @@
+{"name":"session_write_close","purpose":"Write session data and end session","manualid":"function.session-write-close","version":"PHP 4 >= 4.0.4, PHP 5","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

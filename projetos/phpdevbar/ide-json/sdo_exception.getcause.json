@@ -1,0 +1,1 @@
+{"name":"SDO_Exception.getCause","purpose":"Get the cause of the exception.","manualid":"function.sdo-exception-getcause","version":false,"params":[],"return":{"type":"mixed","description":"Returns the cause of this exception or NULL if the cause is nonexistent or unknown."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

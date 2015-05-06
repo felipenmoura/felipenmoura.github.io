@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getTextEncoding","purpose":"Returns the code set used for text annotations","manualid":"function.imagickdraw-gettextencoding","version":false,"params":[],"return":{"type":"string","description":"Returns a string specifying the code set\n   or false if text encoding is not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

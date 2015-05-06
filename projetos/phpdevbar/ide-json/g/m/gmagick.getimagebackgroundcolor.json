@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagebackgroundcolor","purpose":"Returns the image background color","manualid":"gmagick.getimagebackgroundcolor","version":false,"params":[],"return":{"type":"void","description":"Returns an GmagickPixel set to the background color of the image."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

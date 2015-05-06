@@ -1,0 +1,1 @@
+{"name":"DateTime.getOffset","purpose":"Returns the timezone offset","manualid":"datetime.getoffset","version":false,"params":[{"name":"object","type":"DateTime","optional":"false"}],"return":{"type":"int","description":"Returns offset in seconds with respect to daylight saving time on success\n    or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

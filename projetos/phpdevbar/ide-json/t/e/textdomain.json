@@ -1,0 +1,1 @@
+{"name":"textdomain","purpose":"Sets the default domain","manualid":"function.textdomain","version":"PHP 4, PHP 5","params":[{"name":"text_domain","type":"string","optional":"false"}],"return":{"type":"string","description":"If successful, this function returns the current message\n   domain, after possibly changing it."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

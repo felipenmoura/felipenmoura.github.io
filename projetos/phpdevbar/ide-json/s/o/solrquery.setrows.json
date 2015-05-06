@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setRows","purpose":"Specifies the maximum number of rows to return in the result","manualid":"solrquery.setrows","version":false,"params":[{"name":"rows","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

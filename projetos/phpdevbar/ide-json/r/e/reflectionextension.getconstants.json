@@ -1,0 +1,1 @@
+{"name":"ReflectionExtension.getConstants","purpose":"Gets constants","manualid":"reflectionextension.getconstants","version":false,"params":[],"return":{"type":"array","description":"An associative array with constant names as keys."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionExtension::getINIEntries"}]}

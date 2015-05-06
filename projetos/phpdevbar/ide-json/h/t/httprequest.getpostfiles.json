@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getPostFiles","purpose":"Get post files","manualid":"function.httprequest-getpostfiles","version":false,"params":[],"return":{"type":"array","description":"Returns an array containing currently set post files."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

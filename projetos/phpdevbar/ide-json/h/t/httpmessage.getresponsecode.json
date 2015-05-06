@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getResponseCode","purpose":"Get response code","manualid":"function.httpmessage-getresponsecode","version":false,"params":[],"return":{"type":"int","description":"Returns the HTTP response code if the message is of type HttpMessage::TYPE_RESPONSE, else FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

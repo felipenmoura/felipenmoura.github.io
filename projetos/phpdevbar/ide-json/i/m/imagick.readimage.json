@@ -1,0 +1,1 @@
+{"name":"Imagick.readImage","purpose":"Reads image from filename","manualid":"function.imagick-readimage","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoDB.lastError","purpose":"Check if there was an error on the most recent db operation performed","manualid":"mongodb.lasterror","version":false,"params":[],"return":{"type":"array","description":"Returns the error, if there was one."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

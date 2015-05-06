@@ -1,0 +1,1 @@
+{"name":"CairoContext.__construct","purpose":"Creates a new CairoContext","manualid":"cairocontext.construct","version":false,"params":[{"name":"surface","type":"CairoSurface","optional":"false"}],"return":{"type":null,"description":"A CairoContext"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Cairo::Method"}]}

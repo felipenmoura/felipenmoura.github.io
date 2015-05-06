@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltBoost","purpose":"Returns whether or not the query will be boosted by the interesting term relevance","manualid":"solrquery.getmltboost","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

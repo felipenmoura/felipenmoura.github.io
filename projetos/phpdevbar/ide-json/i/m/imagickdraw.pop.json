@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.pop","purpose":"Destroys the current ImagickDraw in the stack, and returns to the previously pushed ImagickDraw","manualid":"function.imagickdraw-pop","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success and false on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

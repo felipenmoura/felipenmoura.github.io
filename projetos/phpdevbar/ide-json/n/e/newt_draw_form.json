@@ -1,0 +1,1 @@
+{"name":"newt_draw_form","purpose":"","manualid":"function.newt-draw-form","version":"PECL newt >= 0.1","params":[{"name":"form","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

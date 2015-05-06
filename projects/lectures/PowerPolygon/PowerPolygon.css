@@ -1,0 +1,75 @@
+body, HTML{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #444;
+	background-color: white;
+	overflow: hidden;
+}
+[class*="anim-step"]{
+    /*-webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;*/
+	display: none;
+}
+[class="anim-step1"]{
+	display: block;
+}
+.animate{
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+.anim-speed-slowest{
+	-webkit-animation-duration: 3s !IMPORTANT;
+	   -moz-animation-duration: 3s !IMPORTANT;
+	    -ms-animation-duration: 3s !IMPORTANT;
+	     -o-animation-duration: 3s !IMPORTANT;
+	        animation-duration: 3s !IMPORTANT;
+}
+.anim-speed-slower{
+	-webkit-animation-duration: 2s !IMPORTANT;
+	   -moz-animation-duration: 2s !IMPORTANT;
+	    -ms-animation-duration: 2s !IMPORTANT;
+	     -o-animation-duration: 2s !IMPORTANT;
+	        animation-duration: 2s !IMPORTANT;
+}
+.anim-speed-slow{
+	-webkit-animation-duration: 1.5s !IMPORTANT;
+	   -moz-animation-duration: 1.5s !IMPORTANT;
+	    -ms-animation-duration: 1.5s !IMPORTANT;
+	     -o-animation-duration: 1.5s !IMPORTANT;
+	        animation-duration: 1.5s !IMPORTANT;
+}
+.anim-speed-normal{
+	-webkit-animation-duration: 1s !IMPORTANT;
+	   -moz-animation-duration: 1s !IMPORTANT;
+	    -ms-animation-duration: 1s !IMPORTANT;
+	     -o-animation-duration: 1s !IMPORTANT;
+	        animation-duration: 1s !IMPORTANT;
+}
+.anim-speed-fast{
+	-webkit-animation-duration: 0.75s !IMPORTANT;
+	   -moz-animation-duration: 0.75s !IMPORTANT;
+	    -ms-animation-duration: 0.75s !IMPORTANT;
+	     -o-animation-duration: 0.75s !IMPORTANT;
+	        animation-duration: 0.75s !IMPORTANT;
+}
+.anim-speed-faster{
+	-webkit-animation-duration: 0.5s !IMPORTANT;
+	   -moz-animation-duration: 0.5s !IMPORTANT;
+	    -ms-animation-duration: 0.5s !IMPORTANT;
+	     -o-animation-duration: 0.5s !IMPORTANT;
+	        animation-duration: 0.5s !IMPORTANT;
+}
+.anim-speed-fastest{
+	-webkit-animation-duration: 0.2s !IMPORTANT;
+	   -moz-animation-duration: 0.2s !IMPORTANT;
+	    -ms-animation-duration: 0.2s !IMPORTANT;
+	     -o-animation-duration: 0.2s !IMPORTANT;
+	        animation-duration: 0.2s !IMPORTANT;
+}

@@ -1,0 +1,1 @@
+{"name":"mssql_fetch_batch","purpose":"Returns the next batch of records","manualid":"function.mssql-fetch-batch","version":"PHP 4 >= 4.0.4, PHP 5, PECL odbtp >= 1.1.1","params":[{"name":"result","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the batch number as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

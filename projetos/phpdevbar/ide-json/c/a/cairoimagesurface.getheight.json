@@ -1,0 +1,1 @@
+{"name":"CairoImageSurface.getHeight","purpose":"Retrieves the height of the CairoImageSurface","manualid":"cairoimagesurface.getheight","version":false,"params":[],"return":{"type":"int","description":"CairoImageSurface object height"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"CairoImageSurface::getWidth"}]}

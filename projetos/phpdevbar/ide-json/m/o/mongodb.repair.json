@@ -1,0 +1,1 @@
+{"name":"MongoDB.repair","purpose":"Repairs and compacts this database","manualid":"mongodb.repair","version":false,"params":[{"name":"preserve_cloned_files","type":"bool","optional":"true"},{"name":"backup_original_files","type":"bool","optional":"true"}],"return":{"type":"array","description":"Returns db response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

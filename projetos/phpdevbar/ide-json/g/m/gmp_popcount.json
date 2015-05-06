@@ -1,0 +1,1 @@
+{"name":"gmp_popcount","purpose":"Population count","manualid":"function.gmp-popcount","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"}],"return":{"type":"int","description":"The population count of a, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

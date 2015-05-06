@@ -1,0 +1,1 @@
+{"name":"oauth_urlencode","purpose":"Encode a URI to RFC 3986","manualid":"function.oauth-urlencode","version":"PECL OAuth >=0.99.2","params":[{"name":"uri","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns an RFC 3986 encoded string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

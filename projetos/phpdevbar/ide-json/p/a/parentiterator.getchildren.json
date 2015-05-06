@@ -1,0 +1,1 @@
+{"name":"ParentIterator.getChildren","purpose":"Return the inner iterator's children contained in a ParentIterator","manualid":"parentiterator.getchildren","version":false,"params":[],"return":{"type":"ParentIterator","description":"An object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

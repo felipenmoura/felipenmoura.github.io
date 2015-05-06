@@ -1,0 +1,1 @@
+{"name":"TokyoTyrant.num","purpose":"Number of records in the database","manualid":"tokyotyrant.num","version":false,"params":[],"return":{"type":"int","description":"Returns number of records in the database"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrant::stat"}]}

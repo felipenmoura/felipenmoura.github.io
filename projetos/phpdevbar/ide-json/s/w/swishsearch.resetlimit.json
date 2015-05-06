@@ -1,0 +1,1 @@
+{"name":"SwishSearch.resetLimit","purpose":"Reset the search limits","manualid":"function.swishsearch-resetlimit","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

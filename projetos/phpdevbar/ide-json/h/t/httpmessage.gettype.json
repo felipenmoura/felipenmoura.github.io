@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getType","purpose":"Get message type","manualid":"function.httpmessage-gettype","version":false,"params":[],"return":{"type":"int","description":"Returns the HttpMessage::TYPE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

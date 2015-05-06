@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsUpperBound","purpose":"Returns the term to stop at","manualid":"solrquery.gettermsupperbound","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

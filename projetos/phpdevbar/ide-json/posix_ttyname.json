@@ -1,0 +1,1 @@
+{"name":"posix_ttyname","purpose":"Determine terminal device name","manualid":"function.posix-ttyname","version":"PHP 4, PHP 5","params":[{"name":"fd","type":"int","optional":"false"}],"return":{"type":"string","description":"On success, returns a string of the absolute path of the\n   fd. On failure, returns FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

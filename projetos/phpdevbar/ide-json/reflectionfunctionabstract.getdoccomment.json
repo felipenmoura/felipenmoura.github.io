@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.getDocComment","purpose":"Gets doc comment","manualid":"reflectionfunctionabstract.getdoccomment","version":false,"params":[],"return":{"type":"string","description":"The doc comment if it exists, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::getStartLine"}]}

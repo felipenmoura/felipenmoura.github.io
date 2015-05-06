@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageColors","purpose":"Gets the number of unique colors in the image","manualid":"function.imagick-getimagecolors","version":false,"params":[],"return":{"type":"int","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

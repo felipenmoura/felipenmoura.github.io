@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.getFlags","purpose":"Get flags","manualid":"arrayiterator.getflags","version":false,"params":[],"return":{"type":"void","description":"The current flags."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ArrayIterator::valid"}]}

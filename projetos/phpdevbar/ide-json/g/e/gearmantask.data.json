@@ -1,0 +1,1 @@
+{"name":"GearmanTask.data","purpose":"Get data returned for a task","manualid":"gearmantask.data","version":false,"params":[],"return":{"type":"string","description":"The serialized data, or FALSE if no data is present."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanTask::dataSize"}]}

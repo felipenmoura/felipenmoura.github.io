@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.hint","purpose":"Get the hint string of the query","manualid":"tokyotyrantquery.hint","version":false,"params":[],"return":{"type":"string","description":"This method always returns a string"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

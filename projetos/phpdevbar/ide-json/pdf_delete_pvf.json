@@ -1,0 +1,1 @@
+{"name":"PDF_delete_pvf","purpose":"Delete PDFlib virtual file","manualid":"function.pdf-delete-pvf","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"filename","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

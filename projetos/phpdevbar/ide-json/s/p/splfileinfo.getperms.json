@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getPerms","purpose":"Gets file permissions","manualid":"splfileinfo.getperms","version":false,"params":[],"return":{"type":"int","description":"Returns the file permissions."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

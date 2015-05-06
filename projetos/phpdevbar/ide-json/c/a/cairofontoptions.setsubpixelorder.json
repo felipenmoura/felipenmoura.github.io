@@ -1,0 +1,1 @@
+{"name":"CairoFontOptions.setSubpixelOrder","purpose":"The setSubpixelOrder purpose","manualid":"cairofontoptions.setsubpixelorder","version":false,"params":[{"name":"subpixel_order","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

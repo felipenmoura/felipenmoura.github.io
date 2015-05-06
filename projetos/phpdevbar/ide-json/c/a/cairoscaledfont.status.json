@@ -1,0 +1,1 @@
+{"name":"CairoScaledFont.status","purpose":"The status purpose","manualid":"cairoscaledfont.status","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

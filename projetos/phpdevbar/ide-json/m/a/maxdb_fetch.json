@@ -1,0 +1,1 @@
+{"name":"maxdb_fetch","purpose":"Alias of maxdb_stmt_fetch","manualid":"function.maxdb-fetch","version":"PECL maxdb 1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

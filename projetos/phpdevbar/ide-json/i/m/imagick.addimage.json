@@ -1,0 +1,1 @@
+{"name":"Imagick.addImage","purpose":"Adds new image to Imagick object image list","manualid":"function.imagick-addimage","version":false,"params":[{"name":"source","type":"Imagick","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

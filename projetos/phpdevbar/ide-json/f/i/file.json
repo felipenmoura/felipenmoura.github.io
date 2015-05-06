@@ -1,0 +1,78 @@
+{
+    "name":"file",
+    "purpose":"Reads entire file into an array",
+    "manualid":"function.file",
+    "version":"PHP 4,\n\PHP 5",
+    "params":[
+        {
+            "name":"filename",
+            "type":"string",
+            "optional":"false"
+        },
+        {
+            "name":"flags",
+            "type":"int",
+            "optional":"true"
+        },
+        {
+            "name":"context",
+            "type":"resource",
+            "optional":"true"
+        }
+    ],
+    "return":{
+        "type":"array",
+        "description":"Returns the file in an array. Each element of the array corresponds to a\n   line in the file, with the newline still attached. Upon failure,\n   file returns FALSE.Each line in the resulting array will include the line ending, unless\n    FILE_IGNORE_NEW_LINES is used, so you still need to\n    use rtrim if you do not want the line ending\n    present.If PHP is not properly recognizing\nthe line endings when reading files either on or created by a Macintosh\ncomputer, enabling the\nauto_detect_line_endings\nrun-time configuration option may help resolve the problem."
+    },
+    "errors":null,
+    "notes":[
+        {
+            "type":"warning",
+            "description":"When using SSL, Microsoft IIS\nwill violate the protocol by closing the connection without sending a\nclose_notify indicator. PHP will report this as \"SSL: Fatal\nProtocol Error\" when you reach the end of the data. To work around this, the\nvalue of error_reporting should be\nlowered to a level that does not include warnings.\nPHP 4.3.7 and higher can detect buggy IIS server software when you open\nthe stream using the https:\/\/ wrapper and will suppress the\nwarning. When using fsockopen to create an\nssl:\/\/ socket, the developer is responsible for detecting\nand suppressing this warning."
+        }
+    ],
+    "changelog":[
+        {
+            "version":"5.0.0",
+            "change":"The context parameter was added"
+        },
+        {
+            "version":"5.0.0",
+            "change":"Prior to PHP 5.0.0 the flags parameter only\n        covered include_path and was\n        enabled with 1"
+        },
+        {
+            "version":"4.3.0",
+            "change":"file became binary safe"
+        }
+    ],
+    "seealso":[
+        {
+            "type":"function",
+            "name":"readfile"
+        },
+        {
+            "type":"function",
+            "name":"fopen"
+        },
+        {
+            "type":"function",
+            "name":"fsockopen"
+        },
+        {
+            "type":"function",
+            "name":"popen"
+        },
+        {
+            "type":"function",
+            "name":"file_get_contents"
+        },
+        {
+            "type":"function",
+            "name":"include"
+        },
+        {
+            "type":"function",
+            "name":"stream_context_create"
+        }
+    ]
+}

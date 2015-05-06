@@ -1,0 +1,1 @@
+{"name":"SWFText.addString","purpose":"Draws a string","manualid":"function.swftext.addstring","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

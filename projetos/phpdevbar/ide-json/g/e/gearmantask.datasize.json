@@ -1,0 +1,1 @@
+{"name":"GearmanTask.dataSize","purpose":"Get the size of returned data","manualid":"gearmantask.datasize","version":false,"params":[],"return":{"type":"int","description":"The data size, or FALSE if there is no data."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanTask::data"}]}

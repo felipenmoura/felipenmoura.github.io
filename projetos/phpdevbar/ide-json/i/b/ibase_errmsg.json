@@ -1,0 +1,1 @@
+{"name":"ibase_errmsg","purpose":"Return error messages","manualid":"function.ibase-errmsg","version":"PHP 4, PHP 5","params":[],"return":{"type":"string","description":"Returns the error message as a string, or FALSE if no error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ibase_errcode"}]}

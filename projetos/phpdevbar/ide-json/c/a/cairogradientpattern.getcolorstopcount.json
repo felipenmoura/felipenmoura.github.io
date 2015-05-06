@@ -1,0 +1,1 @@
+{"name":"CairoGradientPattern.getColorStopCount","purpose":"The getColorStopCount purpose","manualid":"cairogradientpattern.getcolorstopcount","version":false,"params":[],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

@@ -1,0 +1,1 @@
+{"name":"gmp_sqrt","purpose":"Calculate square root","manualid":"function.gmp-sqrt","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"}],"return":{"type":"resource","description":"The integer portion of the square root, as a GMP number."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

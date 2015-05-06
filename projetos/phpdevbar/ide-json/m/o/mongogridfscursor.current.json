@@ -1,0 +1,1 @@
+{"name":"MongoGridFSCursor.current","purpose":"Returns the current file","manualid":"mongogridfscursor.current","version":false,"params":[],"return":{"type":"MongoGridFSFile","description":"The current file."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFacetDateFields","purpose":"Returns all the facet.date fields","manualid":"solrquery.getfacetdatefields","version":false,"params":[],"return":{"type":"array","description":"Returns all the facet.date fields as an array or NULL if none was set"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

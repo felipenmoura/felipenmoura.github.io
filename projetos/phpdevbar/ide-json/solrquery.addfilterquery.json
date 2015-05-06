@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addFilterQuery","purpose":"Specifies a filter query","manualid":"solrquery.addfilterquery","version":false,"params":[{"name":"fq","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

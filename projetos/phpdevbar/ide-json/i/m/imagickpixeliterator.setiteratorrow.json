@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.setIteratorRow","purpose":"Set the pixel iterator row","manualid":"function.imagickpixeliterator-setiteratorrow","version":false,"params":[{"name":"row","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

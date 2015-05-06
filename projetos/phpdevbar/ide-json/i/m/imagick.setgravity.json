@@ -1,0 +1,1 @@
+{"name":"Imagick.setGravity","purpose":"Sets the gravity","manualid":"function.imagick-setgravity","version":false,"params":[{"name":"gravity","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

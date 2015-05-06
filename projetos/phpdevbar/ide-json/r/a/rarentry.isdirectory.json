@@ -1,0 +1,1 @@
+{"name":"RarEntry.isDirectory","purpose":"Test whether an entry represents a directory.","manualid":"rarentry.isdirectory","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this entry is a directory and FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

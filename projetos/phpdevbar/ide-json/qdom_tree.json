@@ -1,0 +1,1 @@
+{"name":"qdom_tree","purpose":"Creates a tree of an XML string","manualid":"function.qdom-tree","version":"PHP 4 >= 4.0.4","params":[{"name":"doc","type":"string","optional":"false"}],"return":{"type":"QDomDocument","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

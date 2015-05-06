@@ -1,0 +1,1 @@
+{"name":"Stomp.getReadTimeout","purpose":"Gets read timeout","manualid":"stomp.getreadtimeout","version":false,"params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"array","description":"Returns an array with 2 elements: sec and usec."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

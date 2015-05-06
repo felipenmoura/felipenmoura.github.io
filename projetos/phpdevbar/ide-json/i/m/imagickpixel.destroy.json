@@ -1,0 +1,1 @@
+{"name":"ImagickPixel.destroy","purpose":"Deallocates resources associated with this object","manualid":"function.imagickpixel-destroy","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

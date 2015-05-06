@@ -1,0 +1,1 @@
+{"name":"Imagick.implodeImage","purpose":"Creates a new image as a copy","manualid":"function.imagick-implodeimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

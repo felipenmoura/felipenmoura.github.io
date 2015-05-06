@@ -1,0 +1,1 @@
+{"name":"HaruFont.getFontName","purpose":"Get the name of the font","manualid":"function.harufont-getfontname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the font."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFPrebuiltClip.__construct","purpose":"Returns a SWFPrebuiltClip object","manualid":"function.swfprebuiltclip.construct","version":false,"params":[{"name":"file","type":"mixed","optional":"false"}],"return":{"type":"SWFPrebuiltClip","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

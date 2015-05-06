@@ -1,0 +1,1 @@
+{"name":"SWFDisplayItem.setName","purpose":"Sets the object's name","manualid":"function.swfdisplayitem.setname","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

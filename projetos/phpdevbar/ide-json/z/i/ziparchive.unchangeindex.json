@@ -1,0 +1,1 @@
+{"name":"ZipArchive.unchangeIndex","purpose":"Revert all changes done to an entry at the given index","manualid":"function.ziparchive-unchangeindex","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

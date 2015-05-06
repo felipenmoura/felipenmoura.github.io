@@ -1,0 +1,45 @@
+Cadastro de funcionários
+--------------------------------------------------------
+	Dados Pessoais
+		NOME
+		NACIONALIDADE
+		ESTADO CIVIL > CONJUGE
+		NASCIMENTO
+		SEXO
+		CPF
+		CNPJ
+		RG(orgao emissor,data)
+		CTPS
+		(Numero,Serie,UF,Emissao)
+		
+		dados bancarios
+		(
+			banco
+			agencia
+			conta dig
+			operacao (corrente ou poupança) 
+			Obs
+		)
+		Foto
+		grau de instrução
+		deficiencia fisica (check box) -> se tiver, especificar qual	OK
+
+
+	Dados Contratuais
+		Departamento
+		Cargo
+		dt adimição
+		dt demissao
+		Ferias
+		(
+			dt inicial
+			dt final
+		)
+		dependentes
+		(
+			nome
+			grau de parentesco
+		)
+
+	BENEFICIOS
+		

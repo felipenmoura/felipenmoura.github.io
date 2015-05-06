@@ -1,0 +1,1 @@
+{"name":"RegexIterator.accept","purpose":"Get accept status","manualid":"regexiterator.accept","version":false,"params":[],"return":{"type":"bool","description":"TRUE if a match, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":"methodname","name":"RegexIterator::setFlags"}]}

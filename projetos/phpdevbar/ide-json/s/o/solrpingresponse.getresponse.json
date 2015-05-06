@@ -1,0 +1,1 @@
+{"name":"SolrPingResponse.getResponse","purpose":"Returns the response from the server","manualid":"solrpingresponse.getresponse","version":false,"params":[],"return":{"type":"string","description":"Returns an empty string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

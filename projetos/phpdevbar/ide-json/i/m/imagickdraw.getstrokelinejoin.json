@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getStrokeLineJoin","purpose":"Returns the shape to be used at the corners of paths when they are stroked","manualid":"function.imagickdraw-getstrokelinejoin","version":false,"params":[],"return":{"type":"int","description":"Returns one of the LINEJOIN_ constants or 0 if stroke line join is not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

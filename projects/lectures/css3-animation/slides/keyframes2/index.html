@@ -1,0 +1,137 @@
+<style type='text/css'>
+@-webkit-keyframes anim1{
+    from{
+		background-color: green;
+	}
+    to{
+		background-color: blue;
+    }
+}
+
+.square{
+	width: 90px;
+	height: 90px;
+	margin: auto;
+	background-color: green;
+	border: solid 1px white;
+	
+	-webkit-animation: anim1 2s infinite alternate;
+}
+
+</style>
+<h1>
+	Keyframes
+</h1>
+<div class='content' style='margin-top: 20px;'>
+	<div class='anim-step1'>
+		<br/><br/><br/><br/><br/>
+		Agora que ja criamos uma anima&ccedil;&atilde;o,<br/>
+		Como a usamos?
+	</div>
+	<div class='anim-step2'>
+		<br/>
+		<br/>
+		Especificamos o nome da anima&ccedil;&atilde;o
+		<br/><br/>
+		<div class='source'>-webkit-animation-name: anim1;</div>
+	</div>
+	<div class='anim-step3'>
+		<br/>
+		<br/>
+		Especificamos a dura&ccedil;&atilde;o
+		<br/><br/>
+		<div class='source'>-webkit-animation-duration: 4s;</div>
+		<br/>
+		Usamos <em>s</em> para segundos<br/>
+		ou <em>ms</em> para milesegundos
+	</div>
+	<div class='anim-step4'>
+		<br/>
+		<br/>
+		O n&uacute;mero de vezes a executar
+		<br/><br/>
+		<div class='source'>-webkit-animation-iteration-count: infinite;</div>
+		<br/>
+		Podemos usar um n&uacute;mero, ou <em>infinite</em>
+	</div>
+	<div class='anim-step5'>
+		<br/>
+		<br/>
+		Ent&atilde;o, definimos a dire&ccedil;&atilde;o
+		<br/><br/>
+		<div class='source'>-webkit-animation-direction: alternate;</div>
+		<br/>
+		Os valores s&atilde;o:<br/>
+		&nbsp;&nbsp;alternate: vai, e volta<br/>
+		&nbsp;&nbsp;normal: apenas ida<br/>
+	</div>
+	<div class='anim-step6'>
+		<br/>
+		<br/>
+		Podemos definir um efeito de suaviza&ccedil;&atilde;o
+		<br/><br/>
+		<div class='source'>-webkit-animation-timing-function: ease-out;</div>
+		<br/>
+		Com algum dos valores s&atilde;o:<br/>
+		&nbsp;&nbsp;ease,<br/>
+		&nbsp;&nbsp;ease-out,<br/>
+		&nbsp;&nbsp;ease-in,<br/>
+		&nbsp;&nbsp;ease-in-out,<br/>
+		&nbsp;&nbsp;linear,<br/>
+		&nbsp;&nbsp;cubic-bezier(x1, y1, x2, y2)
+	</div>
+	<div class='anim-step7'>
+		<br/>
+		<br/>
+		Propriedades padr&atilde;o 
+		<br/><br/>
+		<div class='source'>-webkit-animation-fill-mode: forwards;</div>
+		<br/>
+		Deixa o elmento em um formato logo no in&iacute;cio da anima&ccedil;&atilde;o<br/>
+		Aceita: forwards, backwards, both, none
+	</div>
+	<div class='anim-step8'>
+		<br/>
+		<br/>
+		Tempo de delay
+		<br/><br/>
+		<div class='source'>-webkit-animation-delay: 2s;</div>
+		<br/>
+		Um valor em segundos(s) ou milesegundos(ms)
+	</div>
+	<div class='anim-step9'>
+		<br/>
+		<br/>
+		Resumindo...para cada vendor usamos:
+		<br/><br/>
+		<div class='source'>
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 10;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+		</div>
+	</div>
+	<div class='anim-step10'>
+		<br/><br/>
+		Mas n&atilde;o se preocupem, n&atilde;o precisamos usar aquilo tudo!
+		<div style='margin-top: 40px;' class='source'>.animated{
+  -webkit-animation: anim1 2s infinite alternate;
+     -moz-animation: anim1 2s infinite alternate;
+      -ms-animation: anim1 2s infinite alternate;
+       -o-animation: anim1 2s infinite alternate;
+          animation: anim1 2s infinite alternate;
+}</div>
+	</div>
+</div>
+<!--
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: 10;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+-->

@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.returnCode","purpose":"Get last Gearman return code","manualid":"gearmanworker.returncode","version":false,"params":[],"return":{"type":"int","description":"A valid Gearman return code."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanWorker::error"},{"type":"methodname","name":"GearmanWorker::getErrno"}]}

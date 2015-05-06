@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+	<head>
+		<title>T&aacute;, e agora? ... acessibilidade</title>
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<style type='text/css'>
+			@font-face{  
+			  font-family: jokerman;
+			  src: url(slides/detalhes5/jokerman.ttf);
+			}
+			.exemploWebFonte{
+				color: #1F81B6;
+				text-decoration: none;
+				font-family: "jokerman";
+				font-size: 30px;
+			}
+			.exemploWebFonte:hover{
+				text-shadow: 0px 0px 20px #1F81B6;
+			}
+			.decoratedButton{
+				border: solid 1px black;
+				box-shadow: 0px 0px 10px black;
+				width: 110px;
+				border-radius: 4px;
+				
+				margin: auto;
+				margin-top: 4px;
+				margin-bottom: 4px;
+				height: 32px;
+				color: #444;
+				font-size: 25px !IMPORTANT;
+				font-family: Arial, Tahoma !IMPORTANT;
+				font-weight: normal !IMPORTANT;
+				background-image: -webkit-linear-gradient(top, white, gray);
+				background-image:    -moz-linear-gradient(top, white, gray);
+				background-image:     -ms-linear-gradient(top, white, gray);
+				background-image:      -o-linear-gradient(top, white, gray);
+				background-image:         linear-gradient(top, white, gray);
+			}
+			.decoratedButton:hover{
+				background-image: -webkit-linear-gradient(top, white, gray);
+				background-image:    -moz-linear-gradient(top, #eef, #44b);
+				background-image:     -ms-linear-gradient(top, white, gray);
+				background-image:      -o-linear-gradient(top, white, gray);
+				background-image:         linear-gradient(top, white, gray);
+			}
+			.hiddenInput{
+				position: absolute;
+				left: -9000px;
+			}
+			#modalBlocker{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				background-color: white;
+				opacity: 0.7;
+				width: 100%;
+				height: 100%;
+				z-index: 9;
+			}
+			.sourceCode{
+				width: 100%;
+				font-size: 20px;
+				padding: 8px;
+			}
+			.selectedPieceOfCode{
+				max-width: 90%;
+				background-color: #d0d0d0;
+				color: #000;
+				border: solid inset 2px white;
+				border-radius: 8px;
+				box-shadow: 0px 0px 10px black;
+			}
+		</style>
+		<script src="scripts/jquery.js"></script>
+		<script src="../PowerPolygon/PowerPolygon.js"></script>
+	</head>
+	<body class='cssanimations'>
+	</body>
+	<script>
+		PPW.init({
+			fwSrc: '../PowerPolygon/',
+			name: "T&aacute;, e agora? ... acessibilidade",
+			authors: [
+						{
+							name: 'Felipe N. Moura',
+							email: 'felipenmoura@gmail.com'
+						}
+					],
+			links:  [
+						{
+							type: 'website',
+							name: "Felipe's website",
+							url: 'http://felipenmoura.org'
+						}
+					],
+			slides: [
+						{src: 'cover', 			 title: 'Cover of presentation',type: 'title'},
+						{src: 'getting_started', title: "Let's start",			type: 'section'},
+						{src: 'basic_config', 	 title: 'Basic Config', 	    type: 'content'},
+						{src: 'structure', 		 title: 'Structure', 			type: 'content'},
+						{src: 'ending', 		 title: 'thanks',				type: 'ending'}
+					],
+			//stage: 'elementID',
+			theme: 'diagonal',
+			presentationTool: false,
+			themeParameters: {
+				
+			},
+			permalinkBy: PPW.PERM_LINK_TITLE // PERM_LINK_TITLE, PERM_LINK_ID(default), PERM_LINK_SOURCE(src)
+		});
+	</script>
+</html>

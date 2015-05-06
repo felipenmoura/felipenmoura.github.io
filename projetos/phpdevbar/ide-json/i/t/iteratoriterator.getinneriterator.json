@@ -1,0 +1,1 @@
+{"name":"IteratorIterator.getInnerIterator","purpose":"Get the inner iterator","manualid":"iteratoriterator.getinneriterator","version":false,"params":[],"return":{"type":"void","description":"The inner iterator as passed to IteratorIterator::__construct."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

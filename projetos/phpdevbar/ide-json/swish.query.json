@@ -1,0 +1,1 @@
+{"name":"Swish.query","purpose":"Execute a query and return results object","manualid":"function.swish-query","version":false,"params":[{"name":"query","type":"string","optional":"false"}],"return":{"type":"object","description":"Returns SwishResults object."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"notes_nav_create","purpose":"Create a navigator name, in database_name","manualid":"function.notes-nav-create","version":"PHP 4 >= 4.0.5","params":[{"name":"database_name","type":"string","optional":"false"},{"name":"name","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

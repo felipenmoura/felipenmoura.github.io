@@ -1,0 +1,1 @@
+{"name":"Swish.getPropertyList","purpose":"Get the list of properties for the index","manualid":"function.swish-getpropertylist","version":false,"params":[{"name":"index_name","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns an array of properties for the given index."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.valid","purpose":"Check whether the current position is valid","manualid":"recursiveiteratoriterator.valid","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the current position is valid, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

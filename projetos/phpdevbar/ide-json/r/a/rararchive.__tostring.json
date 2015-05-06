@@ -1,0 +1,1 @@
+{"name":"RarArchive.__toString","purpose":"Get text representation.","manualid":"rararchive.tostring","version":false,"params":[],"return":{"type":"RarArchive","description":"A textual representation of this RarArchive object.\n   The content of this representation is unspecified."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

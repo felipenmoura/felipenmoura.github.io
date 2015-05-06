@@ -1,0 +1,1 @@
+{"name":"ncurses_slk_color","purpose":"Sets color for soft label keys","manualid":"function.ncurses-slk-color","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[{"name":"intarg","type":"int","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

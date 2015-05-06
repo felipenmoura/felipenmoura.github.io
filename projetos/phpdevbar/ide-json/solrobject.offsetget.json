@@ -1,0 +1,1 @@
+{"name":"SolrObject.offsetGet","purpose":"Used to retrieve a property","manualid":"solrobject.offsetget","version":false,"params":[{"name":"property_name","type":"string","optional":"false"}],"return":{"type":"mixed","description":"Returns the property value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

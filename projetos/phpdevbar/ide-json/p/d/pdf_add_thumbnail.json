@@ -1,0 +1,1 @@
+{"name":"PDF_add_thumbnail","purpose":"Add thumbnail for current page","manualid":"function.pdf-add-thumbnail","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"image","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

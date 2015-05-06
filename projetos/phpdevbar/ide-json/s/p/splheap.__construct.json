@@ -1,0 +1,1 @@
+{"name":"SplHeap.__construct","purpose":"Constructs a new empty heap","manualid":"splheap.construct","version":false,"params":[],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

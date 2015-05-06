@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFontStretch","purpose":"Sets the font stretch to use when annotating with text","manualid":"function.imagickdraw-setfontstretch","version":false,"params":[{"name":"fontStretch","type":"int","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

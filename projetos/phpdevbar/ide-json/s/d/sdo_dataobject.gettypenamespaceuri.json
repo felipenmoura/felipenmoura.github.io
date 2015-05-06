@@ -1,0 +1,1 @@
+{"name":"SDO_DataObject.getTypeNamespaceURI","purpose":"Return the namespace URI of the type for a data object.","manualid":"function.sdo-dataobject-gettypenamespaceuri","version":false,"params":[],"return":{"type":"string","description":"The namespace URI of the type for the data object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

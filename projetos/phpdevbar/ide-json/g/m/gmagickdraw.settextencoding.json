@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.settextencoding","purpose":"Specifies specifies the text code set","manualid":"gmagickdraw.settextencoding","version":false,"params":[{"name":"encoding","type":"string","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

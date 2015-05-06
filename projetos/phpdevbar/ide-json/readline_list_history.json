@@ -1,0 +1,1 @@
+{"name":"readline_list_history","purpose":"Lists the history","manualid":"function.readline-list-history","version":"PHP 4, PHP 5","params":[],"return":{"type":"array","description":"Returns an array of the entire command line history.  The elements are\n   indexed by integers starting at zero."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

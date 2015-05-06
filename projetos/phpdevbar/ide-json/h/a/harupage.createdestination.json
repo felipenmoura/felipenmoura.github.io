@@ -1,0 +1,1 @@
+{"name":"HaruPage.createDestination","purpose":"Create new HaruDestination instance","manualid":"function.harupage-createdestination","version":false,"params":[],"return":{"type":"object","description":"Returns a new HaruDestination instance."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

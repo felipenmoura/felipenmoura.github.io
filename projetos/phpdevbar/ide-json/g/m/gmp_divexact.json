@@ -1,0 +1,1 @@
+{"name":"gmp_divexact","purpose":"Exact division of numbers","manualid":"function.gmp-divexact","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"n","type":"resource","optional":"false"},{"name":"d","type":"resource","optional":"false"}],"return":{"type":"resource","description":"A GMP number resource."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getTextAlignment","purpose":"Returns the text alignment","manualid":"function.imagickdraw-gettextalignment","version":false,"params":[],"return":{"type":"int","description":"Returns one of the ALIGN_ constants and 0 if no align is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

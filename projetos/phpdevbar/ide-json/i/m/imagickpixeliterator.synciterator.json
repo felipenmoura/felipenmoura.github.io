@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.syncIterator","purpose":"Syncs the pixel iterator","manualid":"function.imagickpixeliterator-synciterator","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

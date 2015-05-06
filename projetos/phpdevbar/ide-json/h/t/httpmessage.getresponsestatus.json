@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getResponseStatus","purpose":"Get response status","manualid":"function.httpmessage-getresponsestatus","version":false,"params":[],"return":{"type":"string","description":"Returns the HTTP response status string if the message is of type \n   HttpMessage::TYPE_RESPONSE, else FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

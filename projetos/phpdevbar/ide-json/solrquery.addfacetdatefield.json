@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addFacetDateField","purpose":"Maps to facet.date","manualid":"solrquery.addfacetdatefield","version":false,"params":[{"name":"dateField","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns a SolrQuery object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

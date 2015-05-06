@@ -1,0 +1,1 @@
+{"name":"ReflectionParameter.isArray","purpose":"Checks if parameter expects an array","manualid":"reflectionparameter.isarray","version":false,"params":[],"return":{"type":"bool","description":"TRUE if an array is expected, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionParameter::isOptional"}]}

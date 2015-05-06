@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFontFamily","purpose":"Returns the font family","manualid":"function.imagickdraw-getfontfamily","version":false,"params":[],"return":{"type":"string","description":"Returns the font family currently selected or false if font family is not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

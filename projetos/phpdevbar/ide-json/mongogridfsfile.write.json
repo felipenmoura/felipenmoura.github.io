@@ -1,0 +1,1 @@
+{"name":"MongoGridFSFile.write","purpose":"Writes this file to the filesystem","manualid":"mongogridfsfile.write","version":false,"params":[{"name":"filename","type":"string","optional":"true"}],"return":{"type":"int","description":"Returns the number of bytes written."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

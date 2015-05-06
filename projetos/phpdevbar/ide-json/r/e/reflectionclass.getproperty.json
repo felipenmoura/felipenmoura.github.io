@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getProperty","purpose":"Gets property","manualid":"reflectionclass.getproperty","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"ReflectionProperty","description":"A ReflectionProperty."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getProperties"}]}

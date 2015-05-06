@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.current","purpose":"Get current element","manualid":"recursivetreeiterator.current","version":false,"params":[],"return":{"type":"string","description":"Returns the current element prefixed and postfixed."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

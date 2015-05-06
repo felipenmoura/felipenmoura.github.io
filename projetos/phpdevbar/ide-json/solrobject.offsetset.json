@@ -1,0 +1,1 @@
+{"name":"SolrObject.offsetSet","purpose":"Sets the value for a property","manualid":"solrobject.offsetset","version":false,"params":[{"name":"property_name","type":"string","optional":"false"},{"name":"property_value","type":"string","optional":"false"}],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

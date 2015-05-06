@@ -1,0 +1,1 @@
+{"name":"iis_get_server_by_comment","purpose":"Return the instance number associated with the Comment","manualid":"function.iis-get-server-by-comment","version":"PECL iisfunc SVN","params":[{"name":"comment","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

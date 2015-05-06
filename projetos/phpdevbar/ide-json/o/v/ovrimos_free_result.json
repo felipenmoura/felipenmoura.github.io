@@ -1,0 +1,1 @@
+{"name":"ovrimos_free_result","purpose":"Frees the specified result_id","manualid":"function.ovrimos-free-result","version":"PHP 4 >= 4.0.3, PHP 5 <= 5.0.5","params":[{"name":"result_id","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

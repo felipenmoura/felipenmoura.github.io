@@ -1,0 +1,1 @@
+{"name":"MongoCode.__construct","purpose":"Creates a new code object","manualid":"mongocode.construct","version":false,"params":[{"name":"code","type":"string","optional":"false"},{"name":"scope","type":"array","optional":"true","initializer":"array()"}],"return":{"type":null,"description":"Returns a new code object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

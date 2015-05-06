@@ -1,0 +1,1 @@
+{"name":"pg_untrace","purpose":"Disable tracing of a PostgreSQL connection","manualid":"function.pg-untrace","version":"PHP 4 >= 4.0.1, PHP 5","params":[{"name":"connection","type":"resource","optional":"true"}],"return":{"type":"bool","description":"Always returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"pg_trace"}]}

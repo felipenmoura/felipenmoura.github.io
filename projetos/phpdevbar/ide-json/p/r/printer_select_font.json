@@ -1,0 +1,1 @@
+{"name":"printer_select_font","purpose":"Select a font","manualid":"function.printer-select-font","version":"PECL printer SVN","params":[{"name":"printer_handle","type":"resource","optional":"false"},{"name":"font_handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

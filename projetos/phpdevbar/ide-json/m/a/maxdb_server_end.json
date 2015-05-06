@@ -1,0 +1,1 @@
+{"name":"maxdb_server_end","purpose":"Shut down the embedded server","manualid":"function.maxdb-server-end","version":"PECL maxdb >= 1.0","params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

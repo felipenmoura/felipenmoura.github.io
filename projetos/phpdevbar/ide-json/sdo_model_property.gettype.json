@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Property.getType","purpose":"Get the SDO_Model_Type of the property","manualid":"function.sdo-model-property-gettype","version":false,"params":[],"return":{"type":"SDO_Model_Type","description":"Returns the SDO_Model_Type describing the property's type information."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

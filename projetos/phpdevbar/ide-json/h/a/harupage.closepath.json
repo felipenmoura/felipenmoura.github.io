@@ -1,0 +1,1 @@
+{"name":"HaruPage.closePath","purpose":"Append a straight line from the current point to the start point of the path","manualid":"function.harupage-closepath","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

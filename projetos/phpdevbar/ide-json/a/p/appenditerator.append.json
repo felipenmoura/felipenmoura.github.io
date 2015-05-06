@@ -1,0 +1,1 @@
+{"name":"AppendIterator.append","purpose":"Appends an iterator","manualid":"appenditerator.append","version":false,"params":[{"name":"iterator","type":"Iterator","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"AppendIterator::__construct"}]}

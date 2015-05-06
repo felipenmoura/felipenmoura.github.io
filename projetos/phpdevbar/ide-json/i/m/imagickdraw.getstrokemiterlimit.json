@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getStrokeMiterLimit","purpose":"Returns the stroke miter limit","manualid":"function.imagickdraw-getstrokemiterlimit","version":false,"params":[],"return":{"type":"int","description":"Returns an int describing the miter limit\n   and 0 if no miter limit is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getConstant","purpose":"Gets defined constants","manualid":"reflectionclass.getconstant","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"mixed","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getConstants"}]}

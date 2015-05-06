@@ -1,0 +1,1 @@
+{"name":"AppendIterator.current","purpose":"Gets the current value","manualid":"appenditerator.current","version":false,"params":[],"return":{"type":"void","description":"The current value if it is valid or NULL otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"AppendIterator::next"}]}

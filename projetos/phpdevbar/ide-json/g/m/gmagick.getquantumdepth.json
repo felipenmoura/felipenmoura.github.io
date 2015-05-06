@@ -1,0 +1,1 @@
+{"name":"Gmagick.getquantumdepth","purpose":"Returns the Gmagick quantum depth as a string.","manualid":"gmagick.getquantumdepth","version":false,"params":[],"return":{"type":"void","description":"Returns the Gmagick quantum depth as a string."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

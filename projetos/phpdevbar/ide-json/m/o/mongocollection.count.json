@@ -1,0 +1,1 @@
+{"name":"MongoCollection.count","purpose":"Counts the number of documents in this collection","manualid":"mongocollection.count","version":false,"params":[{"name":"query","type":"mixed","optional":"true","initializer":"array()"}],"return":{"type":"int","description":"Returns the number of documents matching the query."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

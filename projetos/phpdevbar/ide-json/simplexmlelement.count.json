@@ -1,0 +1,1 @@
+{"name":"SimpleXMLElement.count","purpose":"Counts the children of an element","manualid":"simplexmlelement.count","version":false,"params":[],"return":{"type":"integer","description":"Returns the number of elements of an element."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SimpleXMLElement::children"}]}

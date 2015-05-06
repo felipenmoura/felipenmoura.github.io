@@ -1,0 +1,1 @@
+{"name":"Gmagick.destroy","purpose":"The destroy purpose","manualid":"gmagick.destroy","version":false,"params":[],"return":{"type":"void","description":"Returns TRUE on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

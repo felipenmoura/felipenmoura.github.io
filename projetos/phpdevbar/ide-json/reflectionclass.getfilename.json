@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getFileName","purpose":"Gets a filename","manualid":"reflectionclass.getfilename","version":false,"params":[],"return":{"type":"string","description":"The filename."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getExtensionName"}]}

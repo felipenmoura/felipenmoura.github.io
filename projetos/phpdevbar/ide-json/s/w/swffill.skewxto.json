@@ -1,0 +1,1 @@
+{"name":"SWFFill.skewXTo","purpose":"Sets fill x-skew","manualid":"function.swffill.skewxto","version":false,"params":[{"name":"x","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

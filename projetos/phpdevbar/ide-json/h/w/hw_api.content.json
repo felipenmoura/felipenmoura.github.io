@@ -1,0 +1,1 @@
+{"name":"hw_api.content","purpose":"Returns content of an object","manualid":"function.hwapi-content","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"HW_API_Content","description":"Returns an instance of hw_api_content."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

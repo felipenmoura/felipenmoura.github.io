@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.offsetExists","purpose":"Check if offset exists","manualid":"arrayiterator.offsetexists","version":false,"params":[{"name":"index","type":"string","optional":"false"}],"return":{"type":"void","description":"TRUE if the offset exists, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ArrayIterator::valid"}]}

@@ -1,0 +1,1 @@
+{"name":"PDF_set_text_rendering","purpose":"Determine text rendering [deprecated]","manualid":"function.pdf-set-text-rendering","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"geoip_db_avail","purpose":"Determine if GeoIP Database is available","manualid":"function.geoip-db-avail","version":"PECL geoip >= 1.0.1","params":[{"name":"database","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE is database exists, FALSE if not found, or NULL on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

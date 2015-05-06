@@ -1,0 +1,1 @@
+{"name":"yaz_close","purpose":"Close YAZ connection","manualid":"function.yaz-close","version":"PHP 4 >= 4.0.1, PECL yaz >= 0.9.0","params":[{"name":"id","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"yaz_connect"}]}

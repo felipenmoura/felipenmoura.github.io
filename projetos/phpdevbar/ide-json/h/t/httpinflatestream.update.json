@@ -1,0 +1,1 @@
+{"name":"HttpInflateStream.update","purpose":"Update inflate stream","manualid":"function.httpinflatestream-update","version":false,"params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns inflated data on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

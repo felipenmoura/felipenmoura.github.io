@@ -1,0 +1,1 @@
+{"name":"swf_fonttracking","purpose":"Set the current font tracking","manualid":"function.swf-fonttracking","version":"PHP 4","params":[{"name":"tracking","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

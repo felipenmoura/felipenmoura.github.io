@@ -1,0 +1,1 @@
+{"name":"mysqli_connect","purpose":"Alias of mysqli::__construct","manualid":"function.mysqli-connect","version":"PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

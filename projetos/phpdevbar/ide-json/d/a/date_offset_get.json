@@ -1,0 +1,1 @@
+{"name":"date_offset_get","purpose":"Alias of DateTime::getOffset","manualid":"function.date-offset-get","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

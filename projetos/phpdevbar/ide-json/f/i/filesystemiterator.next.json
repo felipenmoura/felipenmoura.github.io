@@ -1,0 +1,1 @@
+{"name":"FilesystemIterator.next","purpose":"Move to the next file","manualid":"filesystemiterator.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"DirectoryIterator::next"}]}

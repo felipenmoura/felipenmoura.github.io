@@ -1,0 +1,1 @@
+{"name":"variant_set","purpose":"Assigns a new value for a variant object","manualid":"function.variant-set","version":"PHP 5","params":[{"name":"variant","type":"variant","optional":"false"},{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

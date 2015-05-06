@@ -1,0 +1,1 @@
+{"name":"streamWrapper.stream_tell","purpose":"Retrieve the current position of a stream","manualid":"streamwrapper.stream-tell","version":false,"params":[],"return":{"type":"int","description":"Should return the current position of the stream."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ftell"}]}

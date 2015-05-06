@@ -1,0 +1,1 @@
+{"name":"SQLite3.loadExtension","purpose":"Attempts to load an SQLite extension library","manualid":"sqlite3.loadextension","version":false,"params":[{"name":"shared_library","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the extension is successfully loaded, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

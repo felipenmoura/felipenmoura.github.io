@@ -1,0 +1,1 @@
+{"name":"sqlite_fetch_string","purpose":"Alias of sqlite_fetch_single","manualid":"function.sqlite-fetch-string","version":"PHP 5, PECL sqlite >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

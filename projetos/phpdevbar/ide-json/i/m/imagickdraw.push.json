@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.push","purpose":"Clones the current ImagickDraw and pushes it to the stack","manualid":"function.imagickdraw-push","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

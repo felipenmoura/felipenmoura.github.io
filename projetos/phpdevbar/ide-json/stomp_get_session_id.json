@@ -1,0 +1,1 @@
+{"name":"stomp_get_session_id","purpose":"Gets the current stomp session ID","manualid":"stomp.getsessionid","version":false,"params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"string","description":"string session id on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

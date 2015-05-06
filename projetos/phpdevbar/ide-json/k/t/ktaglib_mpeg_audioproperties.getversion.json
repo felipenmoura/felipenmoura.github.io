@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.getVersion","purpose":"Returns the version of a MPEG file","manualid":"audioproperties.getVersion","version":false,"params":[],"return":{"type":"int","description":"Returns the version"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFTextField.align","purpose":"Sets the text field alignment","manualid":"function.swftextfield.align","version":false,"params":[{"name":"alignement","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

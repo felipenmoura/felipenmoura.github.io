@@ -1,0 +1,1 @@
+{"name":"SWFButton.setAction","purpose":"Sets the action","manualid":"function.swfbutton.setaction","version":false,"params":[{"name":"action","type":"SWFAction","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"px_new","purpose":"Create a new paradox object","manualid":"function.px-new","version":"PECL paradox >= 1.0.0","params":[],"return":{"type":"resource","description":"Returns FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"px_delete"},{"type":"function","name":"px_open_fp"}]}

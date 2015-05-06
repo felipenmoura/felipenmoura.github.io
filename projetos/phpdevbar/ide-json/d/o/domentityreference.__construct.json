@@ -1,0 +1,1 @@
+{"name":"DOMEntityReference.__construct","purpose":"Creates a new DOMEntityReference object","manualid":"domentityreference.construct","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"DOMDocument::createEntityReference"}]}

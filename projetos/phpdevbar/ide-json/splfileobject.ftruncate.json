@@ -1,0 +1,1 @@
+{"name":"SplFileObject.ftruncate","purpose":"Truncates the file to a given length","manualid":"splfileobject.ftruncate","version":false,"params":[{"name":"size","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ftruncate"}]}

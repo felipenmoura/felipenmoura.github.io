@@ -1,0 +1,1 @@
+{"name":"HttpResponse.getRequestHeaders","purpose":"Get request headers","manualid":"function.httpresponse-getrequestheaders","version":false,"params":[],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

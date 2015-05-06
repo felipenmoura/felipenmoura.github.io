@@ -1,0 +1,1 @@
+{"name":"SplObserver.update","purpose":"Receive update from subject","manualid":"splobserver.update","version":false,"params":[{"name":"subject","type":"SplSubject","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

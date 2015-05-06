@@ -1,0 +1,1 @@
+{"name":"MongoGridFS.drop","purpose":"Drops the files and chunks collections","manualid":"mongogridfs.drop","version":false,"params":[],"return":{"type":"array","description":"The database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

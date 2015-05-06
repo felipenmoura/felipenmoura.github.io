@@ -1,0 +1,1 @@
+{"name":"gmp_mul","purpose":"Multiply numbers","manualid":"function.gmp-mul","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"},{"name":"b","type":"resource","optional":"false"}],"return":{"type":"resource","description":"A GMP number resource."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

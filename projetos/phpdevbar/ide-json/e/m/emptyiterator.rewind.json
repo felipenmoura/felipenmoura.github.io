@@ -1,0 +1,1 @@
+{"name":"EmptyIterator.rewind","purpose":"The rewind() method","manualid":"emptyiterator.rewind","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

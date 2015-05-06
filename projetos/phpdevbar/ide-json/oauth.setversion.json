@@ -1,0 +1,1 @@
+{"name":"OAuth.setVersion","purpose":"Set the OAuth version","manualid":"oauth.setversion","version":false,"params":[{"name":"version","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

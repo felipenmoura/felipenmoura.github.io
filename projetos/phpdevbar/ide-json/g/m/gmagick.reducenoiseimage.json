@@ -1,0 +1,1 @@
+{"name":"Gmagick.reducenoiseimage","purpose":"Smooths the contours of an image","manualid":"gmagick.reducenoiseimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

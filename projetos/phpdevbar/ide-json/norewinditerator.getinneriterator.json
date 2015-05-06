@@ -1,0 +1,1 @@
+{"name":"NoRewindIterator.getInnerIterator","purpose":"Get the inner iterator","manualid":"norewinditerator.getinneriterator","version":false,"params":[],"return":{"type":"iterator","description":"The inner iterator, as passed to NoRewindIterator::__construct."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"NoRewindIterator::valid"}]}

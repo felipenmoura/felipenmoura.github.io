@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getHistory","purpose":"Get history","manualid":"function.httprequest-gethistory","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns an HttpMessage object representing the complete request\/response history."},"errors":"Throws HttpRuntimeException.","notes":[],"changelog":[],"seealso":[]}

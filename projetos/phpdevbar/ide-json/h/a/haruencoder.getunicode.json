@@ -1,0 +1,1 @@
+{"name":"HaruEncoder.getUnicode","purpose":"Convert the specified character to unicode","manualid":"function.haruencoder-getunicode","version":false,"params":[{"name":"character","type":"int","optional":"false"}],"return":{"type":"int","description":"FIXME"},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

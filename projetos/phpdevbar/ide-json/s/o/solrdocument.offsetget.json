@@ -1,0 +1,1 @@
+{"name":"SolrDocument.offsetGet","purpose":"Retrieves a field","manualid":"solrdocument.offsetget","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"SolrDocumentField","description":"Returns a SolrDocumentField object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

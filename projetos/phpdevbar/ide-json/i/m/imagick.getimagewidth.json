@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageWidth","purpose":"Returns the image width","manualid":"function.imagick-getimagewidth","version":false,"params":[],"return":{"type":"int","description":"Returns the image width.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

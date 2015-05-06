@@ -1,0 +1,1 @@
+{"name":"RegexIterator.getPregFlags","purpose":"Returns the regular expression flags.","manualid":"regexiterator.getpregflags","version":false,"params":[],"return":{"type":"int","description":"Returns a bitmask of the regular expression flags."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RegexIterator::setPregFlags"}]}

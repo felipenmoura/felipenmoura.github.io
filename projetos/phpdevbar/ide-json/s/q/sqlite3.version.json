@@ -1,0 +1,1 @@
+{"name":"SQLite3.version","purpose":"Returns the SQLite3 library version as a string constant and as a number","manualid":"sqlite3.version","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array with the keys \"versionString\" and\n   \"versionNumber\"."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

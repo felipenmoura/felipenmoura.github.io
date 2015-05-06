@@ -1,0 +1,1 @@
+{"name":"hw_api.move","purpose":"Moves object between collections","manualid":"function.hwapi-move","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"hw_objrec2array"}]}

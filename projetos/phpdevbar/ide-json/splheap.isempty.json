@@ -1,0 +1,1 @@
+{"name":"SplHeap.isEmpty","purpose":"Checks whether the heap is empty.","manualid":"splheap.isempty","version":false,"params":[],"return":{"type":"bool","description":"Returns whether the heap is empty."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"CairoSurface.flush","purpose":"The flush purpose","manualid":"cairosurface.flush","version":false,"params":[],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

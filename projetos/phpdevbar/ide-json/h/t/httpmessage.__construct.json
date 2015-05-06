@@ -1,0 +1,1 @@
+{"name":"HttpMessage.__construct","purpose":"HttpMessage constructor","manualid":"function.httpmessage-construct","version":false,"params":[{"name":"message","type":"string","optional":"true"}],"return":{"type":"void","description":null},"errors":"Throws HttpMalformedHeaderException.","notes":[],"changelog":[],"seealso":[]}

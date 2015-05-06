@@ -1,0 +1,1 @@
+{"name":"SolrClient.__construct","purpose":"Constructor for the SolrClient object","manualid":"solrclient.construct","version":false,"params":[{"name":"clientOptions","type":"array","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SolrClient::getOptions"}]}

@@ -1,0 +1,1 @@
+{"name":"CachingIterator.offsetUnset","purpose":"The offsetUnset purpose","manualid":"cachingiterator.offsetunset","version":false,"params":[{"name":"index","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

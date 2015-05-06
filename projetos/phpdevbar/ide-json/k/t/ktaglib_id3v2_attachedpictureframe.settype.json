@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_AttachedPictureFrame.setType","purpose":"Set the type of the image","manualid":"id3v2attachedpictureframe.setType","version":false,"params":[{"name":"type","type":"int","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

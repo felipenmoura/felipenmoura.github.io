@@ -1,0 +1,1 @@
+{"name":"radius_close","purpose":"Frees all ressources","manualid":"function.radius-close","version":"PECL radius >= 1.1.0","params":[{"name":"radius_handle","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

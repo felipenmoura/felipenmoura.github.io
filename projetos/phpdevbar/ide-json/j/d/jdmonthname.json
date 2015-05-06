@@ -1,0 +1,1 @@
+{"name":"JDMonthName","purpose":"Returns a month name","manualid":"function.jdmonthname","version":"PHP 4, PHP 5","params":[{"name":"julianday","type":"int","optional":"false"},{"name":"mode","type":"int","optional":"false"}],"return":{"type":"string","description":"The month name for the given Julian Day and calendar."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

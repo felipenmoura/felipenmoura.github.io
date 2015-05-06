@@ -1,0 +1,1 @@
+{"name":"MongoDB.dropCollection","purpose":"Drops a collection","manualid":"mongodb.dropcollection","version":false,"params":[{"name":"coll","type":"mixed","optional":"false"}],"return":{"type":"array","description":"Returns the database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

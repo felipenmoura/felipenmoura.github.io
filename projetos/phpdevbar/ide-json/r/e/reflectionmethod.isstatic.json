@@ -1,0 +1,1 @@
+{"name":"ReflectionMethod.isStatic","purpose":"Checks if method is static","manualid":"reflectionmethod.isstatic","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the method is static, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionMethod::isFinal"}]}

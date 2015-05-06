@@ -1,0 +1,1 @@
+{"name":"timezone_abbreviations_list","purpose":"Alias of DateTimeZone::listAbbreviations","manualid":"function.timezone-abbreviations-list","version":"PHP 5 >= 5.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

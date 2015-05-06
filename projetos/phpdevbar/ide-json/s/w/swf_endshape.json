@@ -1,0 +1,1 @@
+{"name":"swf_endshape","purpose":"Completes the definition of the current shape","manualid":"function.swf-endshape","version":"PHP 4","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_startshape"}]}

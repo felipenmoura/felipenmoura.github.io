@@ -1,0 +1,1 @@
+{"name":"newt_listitem_get_data","purpose":"","manualid":"function.newt-listitem-get-data","version":"PECL newt >= 0.1","params":[{"name":"item","type":"resource","optional":"false"}],"return":{"type":"mixed","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

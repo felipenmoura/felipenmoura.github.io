@@ -1,0 +1,1 @@
+{"name":"DomProcessingInstruction.target","purpose":"Returns the target of a ProcessingInstruction node","manualid":"function.domprocessinginstruction-target","version":false,"params":[],"return":{"type":"string","description":"Returns the target of the Processing Instruction."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SDO_Model_ReflectionDataObject.getType","purpose":"Get the SDO_Model_Type for the SDO_DataObject","manualid":"function.sdo-model-reflectiondataobject-gettype","version":false,"params":[],"return":{"type":"SDO_Model_Type","description":"Returns the SDO_Model_Type for the SDO_DataObject."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

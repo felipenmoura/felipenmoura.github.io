@@ -1,0 +1,1 @@
+{"name":"SWFBitmap.__construct","purpose":"Loads Bitmap object","manualid":"function.swfbitmap.construct","version":false,"params":[{"name":"file","type":"mixed","optional":"false"},{"name":"alphafile","type":"mixed","optional":"true"}],"return":{"type":"SWFBitmap","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

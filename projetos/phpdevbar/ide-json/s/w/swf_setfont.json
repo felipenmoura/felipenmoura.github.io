@@ -1,0 +1,1 @@
+{"name":"swf_setfont","purpose":"Change the current font","manualid":"function.swf-setfont","version":"PHP 4","params":[{"name":"fontid","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

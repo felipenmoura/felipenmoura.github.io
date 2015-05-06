@@ -1,0 +1,1 @@
+{"name":"stats_rand_gen_exponential","purpose":"Generates a single random deviate from an exponential distribution with mean \"av\"","manualid":"function.stats-rand-gen-exponential","version":"PECL stats >= 1.0.0","params":[{"name":"av","type":"float","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

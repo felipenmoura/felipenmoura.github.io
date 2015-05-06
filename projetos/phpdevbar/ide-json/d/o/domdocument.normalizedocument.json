@@ -1,0 +1,1 @@
+{"name":"DOMDocument.normalizeDocument","purpose":"Normalizes the document","manualid":"domdocument.normalizedocument","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":"methodname","name":"DOMNode::normalize"}]}

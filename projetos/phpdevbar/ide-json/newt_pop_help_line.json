@@ -1,0 +1,1 @@
+{"name":"newt_pop_help_line","purpose":"Replaces the current help line with the one from the stack","manualid":"function.newt-pop-help-line","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_push_help_line"}]}

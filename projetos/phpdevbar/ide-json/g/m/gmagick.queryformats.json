@@ -1,0 +1,1 @@
+{"name":"Gmagick.queryformats","purpose":"Returns formats supported by Gmagick.","manualid":"gmagick.queryformats","version":false,"params":[{"name":"pattern","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

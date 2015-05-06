@@ -1,0 +1,1 @@
+{"name":"socket_set_timeout","purpose":"Alias of stream_set_timeout","manualid":"function.socket-set-timeout","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

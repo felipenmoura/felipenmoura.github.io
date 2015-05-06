@@ -1,0 +1,1 @@
+{"name":"ibase_free_query","purpose":"Free memory allocated by a prepared query","manualid":"function.ibase-free-query","version":"PHP 4, PHP 5","params":[{"name":"query","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

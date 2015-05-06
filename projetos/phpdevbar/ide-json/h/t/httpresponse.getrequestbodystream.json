@@ -1,0 +1,1 @@
+{"name":"HttpResponse.getRequestBodyStream","purpose":"Get request body stream","manualid":"function.httpresponse-getrequestbodystream","version":false,"params":[],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

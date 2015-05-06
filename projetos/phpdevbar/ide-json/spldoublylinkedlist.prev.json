@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.prev","purpose":"Move to previous entry","manualid":"spldoublylinkedlist.prev","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

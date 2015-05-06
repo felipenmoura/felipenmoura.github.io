@@ -1,0 +1,1 @@
+{"name":"tidyNode.getParent","purpose":"Returns the parent node of the current node","manualid":"tidynode.getparent","version":false,"params":[],"return":{"type":"tidyNode","description":"Returns a tidyNode if the node has a parent, or NULL\n   otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

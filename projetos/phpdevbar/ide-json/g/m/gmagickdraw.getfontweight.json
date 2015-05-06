@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfontweight","purpose":"Returns the font weight","manualid":"gmagickdraw.getfontweight","version":false,"params":[],"return":{"type":"void","description":"Returns an int on success and 0 if no weight is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

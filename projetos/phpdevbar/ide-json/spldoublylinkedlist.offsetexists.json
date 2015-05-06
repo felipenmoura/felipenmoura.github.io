@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.offsetExists","purpose":"Returns whether the requested $index exists","manualid":"spldoublylinkedlist.offsetexists","version":false,"params":[{"name":"index","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"TRUE if the requested index exists, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

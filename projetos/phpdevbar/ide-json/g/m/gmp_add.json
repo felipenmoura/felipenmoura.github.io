@@ -1,0 +1,1 @@
+{"name":"gmp_add","purpose":"Add numbers","manualid":"function.gmp-add","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"},{"name":"b","type":"resource","optional":"false"}],"return":{"type":"resource","description":"A GMP number representing the sum of the arguments."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

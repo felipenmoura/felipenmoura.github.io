@@ -1,0 +1,1 @@
+{"name":"RecursiveDirectoryIterator.getChildren","purpose":"Returns an iterator for the current entry if it is a directory","manualid":"recursivedirectoryiterator.getchildren","version":false,"params":[],"return":{"type":"object","description":"An iterator for the current entry, if it is a directory."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

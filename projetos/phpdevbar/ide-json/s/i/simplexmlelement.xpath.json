@@ -1,0 +1,1 @@
+{"name":"SimpleXMLElement.xpath","purpose":"Runs XPath query on XML data","manualid":"simplexmlelement.xpath","version":false,"params":[{"name":"path","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns an array of SimpleXMLElement objects or FALSE in\n   case of an error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

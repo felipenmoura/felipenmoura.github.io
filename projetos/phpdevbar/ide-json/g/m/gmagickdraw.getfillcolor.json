@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfillcolor","purpose":"Returns the fill color","manualid":"gmagickdraw.getfillcolor","version":false,"params":[],"return":{"type":"void","description":"The GmagickPixel fill color used for drawing filled objects."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFontStyle","purpose":"Returns the font style","manualid":"function.imagickdraw-getfontstyle","version":false,"params":[],"return":{"type":"int","description":"Returns the font style constant (STYLE_) associated with the ImagickDraw object \n   or 0 if no style is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

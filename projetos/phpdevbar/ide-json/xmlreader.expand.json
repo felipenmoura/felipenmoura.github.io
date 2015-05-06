@@ -1,0 +1,1 @@
+{"name":"XMLReader.expand","purpose":"Returns a copy of the current node as a DOM object","manualid":"xmlreader.expand","version":false,"params":[],"return":{"type":"DOMNode","description":"The resulting DOMNode or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

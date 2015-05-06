@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.getRootElementName","purpose":"Returns root element's name","manualid":"function.sdo-das-xml-document-getrootelementname","version":false,"params":[],"return":{"type":"string","description":"Returns root element's name."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

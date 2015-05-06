@@ -1,0 +1,1 @@
+{"name":"stats_rand_ranf","purpose":"Returns a random floating point number from a uniform distribution over 0 - 1 (endpoints of this interval are not returned) using the current generator","manualid":"function.stats-rand-ranf","version":"PECL stats >= 1.0.0","params":[],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

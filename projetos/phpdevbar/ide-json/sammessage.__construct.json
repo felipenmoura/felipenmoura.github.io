@@ -1,0 +1,1 @@
+{"name":"SAMMessage.__construct","purpose":"Creates a new Message object","manualid":"function.sammessage-constructor","version":false,"params":[{"name":"body","type":"mixed","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

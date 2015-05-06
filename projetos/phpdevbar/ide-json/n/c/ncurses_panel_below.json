@@ -1,0 +1,1 @@
+{"name":"ncurses_panel_below","purpose":"Returns the panel below panel","manualid":"function.ncurses-panel-below","version":"PHP 4 >= 4.3.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[{"name":"panel","type":"resource","optional":"false"}],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

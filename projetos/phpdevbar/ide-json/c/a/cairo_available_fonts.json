@@ -1,0 +1,1 @@
+{"name":"cairo_available_fonts","purpose":"Retrieves the availables font types","manualid":"cairo.availablefonts","version":false,"params":[],"return":{"type":"array","description":"A list-type array with all available font backends."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Cairo::availableSurfaces"}]}

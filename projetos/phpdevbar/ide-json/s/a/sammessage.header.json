@@ -1,0 +1,1 @@
+{"name":"SAMMessage.header","purpose":"The header properties of the message.","manualid":"function.sammessage-header","version":false,"params":[],"return":{"type":"object","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

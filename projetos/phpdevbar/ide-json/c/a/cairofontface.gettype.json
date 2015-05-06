@@ -1,0 +1,1 @@
+{"name":"CairoFontFace.getType","purpose":"Retrieves the font face type","manualid":"cairofontface.gettype","version":false,"params":[],"return":{"type":"int","description":"A font type that can be any one defined in CairoFontType"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

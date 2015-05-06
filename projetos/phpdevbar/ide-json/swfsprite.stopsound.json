@@ -1,0 +1,1 @@
+{"name":"SWFSprite.stopSound","purpose":"","manualid":"function.swfsprite.stopsound","version":false,"params":[{"name":"sount","type":"SWFSound","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

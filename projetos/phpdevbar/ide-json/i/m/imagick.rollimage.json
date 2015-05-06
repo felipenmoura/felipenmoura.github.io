@@ -1,0 +1,1 @@
+{"name":"Imagick.rollImage","purpose":"Offsets an image","manualid":"function.imagick-rollimage","version":false,"params":[{"name":"x","type":"int","optional":"false"},{"name":"y","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

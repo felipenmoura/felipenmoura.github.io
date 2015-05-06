@@ -1,0 +1,1 @@
+{"name":"spl_autoload_call","purpose":"Try all registered __autoload() function to load the requested class","manualid":"function.spl-autoload-call","version":"PHP 5 >= 5.1.2","params":[{"name":"class_name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

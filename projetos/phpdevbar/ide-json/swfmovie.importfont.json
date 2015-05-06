@@ -1,0 +1,1 @@
+{"name":"SWFMovie.importFont","purpose":"","manualid":"function.swfmovie.importfont","version":false,"params":[{"name":"libswf","type":"string","optional":"false"},{"name":"name","type":"string","optional":"false"}],"return":{"type":"SWFFontChar","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

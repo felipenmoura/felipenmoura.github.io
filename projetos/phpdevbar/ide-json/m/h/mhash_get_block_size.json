@@ -1,0 +1,1 @@
+{"name":"mhash_get_block_size","purpose":"Get the block size of the specified hash","manualid":"function.mhash-get-block-size","version":"PHP 4, PHP 5","params":[{"name":"hash","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns the size in bytes or FALSE, if the hash\n   does not exist."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

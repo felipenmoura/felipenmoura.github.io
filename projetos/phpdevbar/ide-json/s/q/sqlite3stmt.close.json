@@ -1,0 +1,1 @@
+{"name":"SQLite3Stmt.close","purpose":"Closes the prepared statement","manualid":"sqlite3stmt.close","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

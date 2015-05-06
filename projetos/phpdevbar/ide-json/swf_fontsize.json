@@ -1,0 +1,1 @@
+{"name":"swf_fontsize","purpose":"Change the font size","manualid":"function.swf-fontsize","version":"PHP 4","params":[{"name":"size","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

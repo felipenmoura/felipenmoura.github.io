@@ -1,0 +1,1 @@
+{"name":"swf_nextid","purpose":"Returns the next free object id","manualid":"function.swf-nextid","version":"PHP 4","params":[],"return":{"type":"int","description":"Returns the id, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HttpQueryString.toArray","purpose":"Get query string as array","manualid":"function.httpquerystring-toarray","version":false,"params":[],"return":{"type":"array","description":"Returns the array representation of the query string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

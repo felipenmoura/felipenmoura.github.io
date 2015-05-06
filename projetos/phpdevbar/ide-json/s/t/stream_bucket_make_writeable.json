@@ -1,0 +1,1 @@
+{"name":"stream_bucket_make_writeable","purpose":"Return a bucket object from the brigade for operating on","manualid":"function.stream-bucket-make-writeable","version":"PHP 5","params":[{"name":"brigade","type":"resource","optional":"false"}],"return":{"type":"object","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

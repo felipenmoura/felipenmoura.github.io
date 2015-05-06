@@ -1,0 +1,1 @@
+{"name":"SWFDisplayItem.setDepth","purpose":"Sets z-order","manualid":"function.swfdisplayitem.setdepth","version":false,"params":[{"name":"depth","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

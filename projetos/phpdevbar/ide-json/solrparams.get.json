@@ -1,0 +1,1 @@
+{"name":"SolrParams.get","purpose":"This is an alias for SolrParams::getParam","manualid":"solrparams.get","version":false,"params":[{"name":"param_name","type":"string","optional":"false"}],"return":{"type":"mixed","description":"Returns an array or string depending on the type of parameter"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

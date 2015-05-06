@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFontWeight","purpose":"Returns the font weight","manualid":"function.imagickdraw-getfontweight","version":false,"params":[],"return":{"type":"int","description":"Returns an int on success and 0 if no weight is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

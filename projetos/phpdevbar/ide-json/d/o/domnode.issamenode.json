@@ -1,0 +1,1 @@
+{"name":"DOMNode.isSameNode","purpose":"Indicates if two nodes are the same node","manualid":"domnode.issamenode","version":false,"params":[{"name":"node","type":"DOMNode","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

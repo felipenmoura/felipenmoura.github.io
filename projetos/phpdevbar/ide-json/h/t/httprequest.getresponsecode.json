@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getResponseCode","purpose":"Get response code","manualid":"function.httprequest-getresponsecode","version":false,"params":[],"return":{"type":"int","description":"Returns an int representing the response code."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

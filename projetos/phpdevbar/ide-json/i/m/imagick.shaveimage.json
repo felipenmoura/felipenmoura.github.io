@@ -1,0 +1,1 @@
+{"name":"Imagick.shaveImage","purpose":"Shaves pixels from the image edges","manualid":"function.imagick-shaveimage","version":false,"params":[{"name":"columns","type":"int","optional":"false"},{"name":"rows","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

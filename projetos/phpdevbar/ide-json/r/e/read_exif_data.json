@@ -1,0 +1,1 @@
+{"name":"read_exif_data","purpose":"Alias of exif_read_data","manualid":"function.read-exif-data","version":"PHP 4 >= 4.0.1, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

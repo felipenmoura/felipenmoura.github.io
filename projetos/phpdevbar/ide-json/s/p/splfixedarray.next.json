@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.next","purpose":"Move to next entry","manualid":"splfixedarray.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

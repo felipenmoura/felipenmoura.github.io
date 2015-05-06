@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageChannelStatistics","purpose":"Returns statistics for each channel in the image","manualid":"function.imagick-getimagechannelstatistics","version":false,"params":[],"return":{"type":"array","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getATime","purpose":"Gets last access time of the file","manualid":"splfileinfo.getatime","version":false,"params":[],"return":{"type":"int","description":"Returns the time the file was last accessed."},"errors":"Throws RunTimeException on error.","notes":[],"changelog":[],"seealso":[{"type":"function","name":"fileatime"}]}

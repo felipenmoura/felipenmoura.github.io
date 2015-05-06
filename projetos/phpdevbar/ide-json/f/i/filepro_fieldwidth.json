@@ -1,0 +1,1 @@
+{"name":"filepro_fieldwidth","purpose":"Gets the width of a field","manualid":"function.filepro-fieldwidth","version":"PHP 4, PHP 5 <= 5.1.6","params":[{"name":"field_number","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns the width of the field as a integer, or FALSE on errors."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

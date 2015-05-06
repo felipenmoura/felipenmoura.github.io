@@ -1,0 +1,1 @@
+{"name":"Imagick.setCompression","purpose":"Sets the object's default compression type","manualid":"function.imagick-setcompression","version":false,"params":[{"name":"compression","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

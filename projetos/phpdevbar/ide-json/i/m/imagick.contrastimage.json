@@ -1,0 +1,1 @@
+{"name":"Imagick.contrastImage","purpose":"Change the contrast of the image","manualid":"function.imagick-contrastimage","version":false,"params":[{"name":"sharpen","type":"bool","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

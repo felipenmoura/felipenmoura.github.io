@@ -1,0 +1,1 @@
+{"name":"Imagick.__construct","purpose":"The Imagick constructor","manualid":"function.imagick-construct","version":false,"params":[{"name":"files","type":"mixed","optional":"true"}],"return":{"type":"Imagick","description":"Returns a new Imagick object on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

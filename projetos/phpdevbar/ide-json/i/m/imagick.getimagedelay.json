@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageDelay","purpose":"Gets the image delay","manualid":"function.imagick-getimagedelay","version":false,"params":[],"return":{"type":"int","description":"Returns the image delay.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

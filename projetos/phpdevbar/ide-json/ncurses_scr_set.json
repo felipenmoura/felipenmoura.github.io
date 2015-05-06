@@ -1,0 +1,1 @@
+{"name":"ncurses_scr_set","purpose":"Inherit screen from file dump","manualid":"function.ncurses-scr-set","version":"PHP 4 >= 4.2.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

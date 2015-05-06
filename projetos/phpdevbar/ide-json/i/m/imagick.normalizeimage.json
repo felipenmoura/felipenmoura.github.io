@@ -1,0 +1,1 @@
+{"name":"Imagick.normalizeImage","purpose":"Enhances the contrast of a color image","manualid":"function.imagick-normalizeimage","version":false,"params":[{"name":"channel","type":"int","optional":"true","initializer":"Imagick::CHANNEL_ALL"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

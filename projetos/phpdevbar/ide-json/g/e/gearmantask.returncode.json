@@ -1,0 +1,1 @@
+{"name":"GearmanTask.returnCode","purpose":"Get the last return code","manualid":"gearmantask.returncode","version":false,"params":[],"return":{"type":"int","description":"A valid Gearman return code."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::returnCode"}]}

@@ -1,0 +1,1 @@
+{"name":"HttpQueryString.toString","purpose":"Get query string","manualid":"function.httpquerystring-tostring","version":false,"params":[],"return":{"type":"string","description":"Returns the string representation of the query string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

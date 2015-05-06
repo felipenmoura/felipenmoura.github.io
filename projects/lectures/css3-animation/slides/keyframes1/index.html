@@ -1,0 +1,74 @@
+<style type='text/css'>
+@-webkit-keyframes anim1{
+    from{
+		background-color: green;
+	}
+    to{
+		background-color: blue;
+    }
+}
+@-moz-keyframes anim1{
+    from{
+		background-color: green;
+	}
+    to{
+		background-color: blue;
+    }
+}
+
+.square{
+	width: 90px;
+	height: 90px;
+	margin: auto;
+	background-color: green;
+	border: solid 1px white;
+	
+	-webkit-animation: anim1 2s infinite alternate;
+	-moz-animation: anim1 2s infinite alternate;
+}
+
+</style>
+<h1>
+	Keyframes
+</h1>
+<div class='content' style='margin-top: 0px;'>
+	<div class='anim-step1'>
+		<br/><br/><br/>
+		Permitem a cria&ccedil;&atilde;o de anima&ccedil;&otilde;es com muito maior controle
+		<div style='margin-top: 20px;' class='source'>@-vendor-keyframes nome-animacao{
+    0%{
+        propriedade: valor;
+    }
+    50%{
+        propriedade: valor;
+    }
+    100%{
+        propriedade: valor;
+    }
+}</div>
+	</div>
+	<div class='anim-step2'>
+		<!--<div class='square'></div>-->
+		<br/><br/><br/>
+		Por exemplo:
+		<div style='margin-top: 20px;' class='source'>@-webkit-keyframes anim1{
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+    }
+}</div>
+	</div>
+	<div class='anim-step3'>
+		<div class='square'></div>
+		<div style='margin-top: 40px;' class='source'>@-webkit-keyframes anim1{
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+    }
+}</div>
+	</div>
+</div>

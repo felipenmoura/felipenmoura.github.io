@@ -1,0 +1,1 @@
+{"name":"HaruDoc.setCurrentEncoder","purpose":"Set the current encoder for the document","manualid":"function.harudoc-setcurrentencoder","version":false,"params":[{"name":"encoding","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

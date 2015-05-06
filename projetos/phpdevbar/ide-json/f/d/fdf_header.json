@@ -1,0 +1,1 @@
+{"name":"fdf_header","purpose":"Sets FDF-specific output headers","manualid":"function.fdf-header","version":"PHP 4 >= 4.3.0, PHP 5","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

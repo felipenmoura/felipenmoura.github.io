@@ -1,0 +1,1 @@
+{"name":"ParentIterator.hasChildren","purpose":"Check whether the inner iterator's current element has children","manualid":"parentiterator.haschildren","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

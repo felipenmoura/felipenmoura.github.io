@@ -1,0 +1,1 @@
+{"name":"stats_harmonic_mean","purpose":"Returns the harmonic mean of an array of values","manualid":"function.stats-harmonic-mean","version":"PECL stats >= 1.0.0","params":[{"name":"a","type":"array","optional":"false"}],"return":{"type":"number","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

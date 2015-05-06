@@ -1,0 +1,1 @@
+{"name":"stats_variance","purpose":"Returns the population variance","manualid":"function.stats-variance","version":"PECL stats >= 1.0.0","params":[{"name":"a","type":"array","optional":"false"},{"name":"sample","type":"bool","optional":"true","initializer":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

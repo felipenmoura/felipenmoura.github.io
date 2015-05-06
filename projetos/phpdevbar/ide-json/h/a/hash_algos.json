@@ -1,0 +1,1 @@
+{"name":"hash_algos","purpose":"Return a list of registered hashing algorithms","manualid":"function.hash-algos","version":"PHP 5 >= 5.1.2, PECL hash >= 1.1","params":[],"return":{"type":"array","description":"Returns a numerically indexed array containing the list of supported\n   hashing algorithms."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

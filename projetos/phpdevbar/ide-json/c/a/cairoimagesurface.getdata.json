@@ -1,0 +1,1 @@
+{"name":"CairoImageSurface.getData","purpose":"Gets the image data as string","manualid":"cairoimagesurface.getdata","version":false,"params":[],"return":{"type":"string","description":"The image data as string"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"CairoImageSurface::getStride"}]}

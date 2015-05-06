@@ -1,0 +1,1 @@
+{"name":"RarArchive.getEntries","purpose":"Get full list of entries from the RAR archive.","manualid":"rararchive.getentries","version":false,"params":[{"name":"rarfile","type":"RarArchive","optional":"false"}],"return":{"type":"array","description":"rar_list returns array of RarEntry objects\n    or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

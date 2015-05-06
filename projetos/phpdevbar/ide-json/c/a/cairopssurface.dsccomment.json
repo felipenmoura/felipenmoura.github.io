@@ -1,0 +1,1 @@
+{"name":"CairoPsSurface.dscComment","purpose":"The dscComment purpose","manualid":"cairopssurface.dsccomment","version":false,"params":[{"name":"comment","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

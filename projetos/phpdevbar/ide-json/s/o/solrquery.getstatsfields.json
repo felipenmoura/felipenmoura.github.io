@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getStatsFields","purpose":"Returns all the statistics fields","manualid":"solrquery.getstatsfields","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

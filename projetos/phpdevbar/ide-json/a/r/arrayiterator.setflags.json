@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.setFlags","purpose":"Set behaviour flags","manualid":"arrayiterator.setflags","version":false,"params":[{"name":"flags","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ArrayIterator::getFlags"}]}

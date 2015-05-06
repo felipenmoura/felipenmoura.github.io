@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.__construct","purpose":"Construct a new SplFileInfo object","manualid":"splfileinfo.construct","version":false,"params":[{"name":"file_name","type":"string","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

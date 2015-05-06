@@ -1,0 +1,1 @@
+{"name":"SAMConnection.disconnect","purpose":"Disconnects from a Messaging Server","manualid":"function.samconnection-disconnect","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

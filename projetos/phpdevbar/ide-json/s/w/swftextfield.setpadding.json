@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setPadding","purpose":"Sets the padding of this textfield","manualid":"function.swftextfield.setpadding","version":false,"params":[{"name":"padding","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

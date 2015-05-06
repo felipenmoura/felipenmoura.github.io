@@ -1,0 +1,1 @@
+{"name":"CairoSurfacePattern.setExtend","purpose":"The setExtend purpose","manualid":"cairosurfacepattern.setextend","version":false,"params":[{"name":"extend","type":"int","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

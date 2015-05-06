@@ -1,0 +1,1 @@
+{"name":"PDF_end_font","purpose":"Terminate Type 3 font definition","manualid":"function.pdf-end-font","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

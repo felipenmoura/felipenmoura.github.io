@@ -1,0 +1,1 @@
+{"name":"mailparse_msg_get_structure","purpose":"Returns an array of mime section names in the supplied message","manualid":"function.mailparse-msg-get-structure","version":"PECL mailparse >= 0.9.0","params":[{"name":"mimemail","type":"resource","optional":"false"}],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

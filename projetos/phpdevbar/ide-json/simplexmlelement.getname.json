@@ -1,0 +1,1 @@
+{"name":"SimpleXMLElement.getName","purpose":"Gets the name of the XML element","manualid":"simplexmlelement.getName","version":false,"params":[],"return":{"type":"string","description":"The getName method returns as a string the \n   name of the XML tag referenced by the SimpleXMLElement object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

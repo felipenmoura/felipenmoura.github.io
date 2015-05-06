@@ -1,0 +1,1 @@
+{"name":"SWFVideoStream.__construct","purpose":"Returns a SWFVideoStream object","manualid":"function.swfvideostream.construct","version":false,"params":[{"name":"file","type":"string","optional":"true"}],"return":{"type":"SWFVideoStream","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

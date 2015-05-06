@@ -1,0 +1,1 @@
+{"name":"GearmanClient.setContext","purpose":"Set application context","manualid":"gearmanclient.setcontext","version":false,"params":[{"name":"context","type":"string","optional":"false"}],"return":{"type":"bool","description":"Always returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::context"}]}

@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setfontsize","purpose":"Sets the font pointsize to use when annotating with text.","manualid":"gmagickdraw.setfontsize","version":false,"params":[{"name":"pointsize","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

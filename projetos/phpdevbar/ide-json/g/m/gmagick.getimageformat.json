@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageformat","purpose":"Returns the format of a particular image in a sequence","manualid":"gmagick.getimageformat","version":false,"params":[],"return":{"type":"void","description":"Returns a string containing the image format on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

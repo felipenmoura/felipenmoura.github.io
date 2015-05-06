@@ -1,0 +1,1 @@
+{"name":"maxdb_client_encoding","purpose":"Alias of maxdb_character_set_name","manualid":"function.maxdb-client-encoding","version":"PECL maxdb 1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

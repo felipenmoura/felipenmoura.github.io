@@ -1,0 +1,1 @@
+{"name":"Gmagick.addimage","purpose":"Adds new image to Gmagick object image list","manualid":"gmagick.addimage","version":false,"params":[{"name":"Gmagick","type":"Gmagick","optional":"false"}],"return":{"type":"void","description":"The Gmagick object with image added"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

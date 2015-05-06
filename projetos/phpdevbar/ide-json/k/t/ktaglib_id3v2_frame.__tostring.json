@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_Frame.__toString","purpose":"Returns a string representation of the frame","manualid":"id3v2frame.toString","version":false,"params":[],"return":{"type":"string","description":"Returns a string representation of the frame."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_Tag.getFrameList","purpose":"Returns an array of ID3v2 frames, associated with the ID3v2 tag","manualid":"id3v2tag.getFrameList","version":false,"params":[],"return":{"type":"array","description":"Return an array of KTaglib_ID3v2_Frame objects"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

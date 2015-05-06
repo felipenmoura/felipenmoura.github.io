@@ -1,0 +1,1 @@
+{"name":"mysqli_enable_reads_from_master","purpose":"Enable reads from master","manualid":"function.mysqli-enable-reads-from-master","version":"PHP 5","params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

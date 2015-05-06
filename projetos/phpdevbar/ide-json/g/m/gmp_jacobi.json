@@ -1,0 +1,1 @@
+{"name":"gmp_jacobi","purpose":"Jacobi symbol","manualid":"function.gmp-jacobi","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"},{"name":"p","type":"resource","optional":"false"}],"return":{"type":"int","description":"A GMP number resource."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

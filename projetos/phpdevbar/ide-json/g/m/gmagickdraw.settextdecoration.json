@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.settextdecoration","purpose":"Specifies a decoration","manualid":"gmagickdraw.settextdecoration","version":false,"params":[{"name":"decoration","type":"int","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

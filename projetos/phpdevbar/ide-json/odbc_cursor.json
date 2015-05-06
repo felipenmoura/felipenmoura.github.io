@@ -1,0 +1,1 @@
+{"name":"odbc_cursor","purpose":"Get cursorname","manualid":"function.odbc-cursor","version":"PHP 4, PHP 5","params":[{"name":"result_id","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns the cursor name, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

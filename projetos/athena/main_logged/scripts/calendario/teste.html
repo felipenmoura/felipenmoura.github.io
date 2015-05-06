@@ -1,0 +1,129 @@
+<link href="calendar-system.css" type=text/css rel=stylesheet>
+<script type="text/javascript" src="calendar.js"></script>
+<script type="text/javascript" src="lang/calendar-br.js"></script>
+<script type="text/javascript" src="calendar-setup.js"></script>
+<script>
+function remove_char(sStr, sChar){
+	while((cx=sStr.indexOf(sChar))!=-1){
+		sStr = sStr.substring(0,cx)+sStr.substring(cx+1);
+	}
+	return(sStr);
+}
+
+
+function limpa_str(sStr){
+	sStr = remove_char(sStr, "-");
+	sStr = remove_char(sStr, "/");
+	sStr = remove_char(sStr, ",");
+	sStr = remove_char(sStr, ".");
+	sStr = remove_char(sStr, "(");
+	sStr = remove_char(sStr, ")");
+	sStr = remove_char(sStr, " ");
+	if((parseFloat(sStr) / sStr != 1))  {
+		if(parseFloat(sStr) * sStr == 0){
+			return(sStr);
+		} else {
+			return(0);
+		}
+	} else {
+		return(sStr);
+	}
+	return(sStr);
+}
+
+function mascaraData(campo,evento){
+	var flag, selecao = true;
+    var resultStr = "";
+	conteudo_atual = campo.value;
+
+	if(document.all){
+		tecla = window.event.keyCode;
+	}else{
+		tecla = evento.which;
+	}
+
+	if (tecla == 8 || tecla == 0){
+		return true;
+	}
+
+	resultStr = limpa_str(conteudo_atual);
+
+	if (!resultStr == 0){
+		conteudo_atual = resultStr;
+	}
+
+	if((tecla > 47) && (tecla < 58)){
+		if(conteudo_atual.length < 8){
+			if(conteudo_atual.length == 2){
+				resultStr = conteudo_atual+String.fromCharCode(tecla);
+				campo.value = resultStr.substring(0,2)+"/"+resultStr.substring(3,3);
+			}else if(conteudo_atual.length == 4){
+				resultStr = conteudo_atual+String.fromCharCode(tecla);
+				campo.value = resultStr.substring(0,2)+"/"+resultStr.substring(2,4)+"/";
+			}
+		}else {
+   			flag = false;
+		}
+	}else{
+		flag = false;
+	}
+
+	return flag;
+}
+
+function data_onblur(objeto)
+{
+    if(objeto.value != "")
+    {
+        if(!data_check(objeto))
+        {
+            objeto.focus();
+        }
+    }
+}
+
+function data_check(objeto)
+{
+	var DataString	= objeto.value;
+	var DataArray	= DataString.split("/");
+	var Flag=true;
+
+	if (DataArray.length != 3)
+		Flag=false;
+	else
+		{
+			if (DataArray.length==3)
+			{
+				var dia = DataArray[0], mes = DataArray[1], ano = DataArray[2];
+
+				if (((Flag) && (ano<1000) || ano.length>4))
+					Flag=false;
+
+				if (Flag)
+				{
+					verifica_mes = new Date(mes+"/"+dia+"/"+ano);
+					if (verifica_mes.getMonth() != (mes - 1))
+						Flag=false;
+				}
+			}
+			else
+				Flag=false;
+		}
+  return Flag;
+}
+</script>
+<input type="text"
+       id="data"
+       name="data"
+       maxlength="10"
+       onKeyPress="return mascaraData(this,event);"
+       onFocus="this.select();"
+       onBlur="data_onblur(this);"
+	   onmousedown="Calendar.setup({ inputField : 
+'data', ifFormat : '%d/%m/%Y', daFormat : '%d/%m/%Y', button : this.id });"
+>
+<img src="img.gif" alt="Calendario" border="0" onmousedown="Calendar.setup({ inputField : 
+'data', ifFormat : '%d/%m/%Y', daFormat : '%d/%m/%Y', button : this.id });" id="trigger">
+<script type="text/javascript">
+
+</script>

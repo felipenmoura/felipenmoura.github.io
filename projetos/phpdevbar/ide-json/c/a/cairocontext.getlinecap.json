@@ -1,0 +1,1 @@
+{"name":"CairoContext.getLineCap","purpose":"The getLineCap purpose","manualid":"cairocontext.getlinecap","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

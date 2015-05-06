@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.getSize","purpose":"Gets the size of the array","manualid":"splfixedarray.getsize","version":false,"params":[],"return":{"type":"int","description":"Returns the size of the array, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

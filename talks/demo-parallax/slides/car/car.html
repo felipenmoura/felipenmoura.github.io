@@ -1,0 +1,93 @@
+<div class="parallax-set">
+    <img src="slides/car/drafting-bg.png" class="far fulfill"/>
+    <div id="car-car" class="far mv-right mv-closer"><img src="slides/car/drafting-car.png" /></div>
+    <div id="car-stones" class="close mv-right"><img src="slides/car/drafting-stones.png" /></div>
+    <div class="close mv-closer" id="car-content">
+        <h2>Parallax effects</h2>
+    </div>
+</div>
+<div id="car-content-messages">
+    <div id="car-content-messages-1" style="left: 100px; top: 140px">Action</div>
+    <div id="car-content-messages-2" style="left: 550px; top: 70px">Effects</div>
+    <div id="car-content-messages-3" style="left: 450px; top: 340px">Surprise</div>
+    <div id="car-content-messages-4" style="left: 270px; top: 240px">Motion</div>
+    <div id="car-content-messages-5" style="margin-top: 180px; text-shadow: red 0px 0px 21px, white 0px 0px 42px; font-style: italic; width: 100%; font-size: 90px; bottom: 10px; left: 10px;">Parallax</div>
+</div>
+
+<script>
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            
+            $('#car-content-messages-1').fadeIn('fast', function(){
+                $(this).css('color', '#fff');
+            });
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            $('#car-content-messages-2').fadeIn('fast', function(){
+                $(this).css('color', '#fff');
+            });
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            
+            $('#car-content-messages-1').fadeOut();
+            
+            $('#car-content-messages-3').fadeIn('fast', function(){
+                $(this).css('color', '#fff');
+            });
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            
+            $('#car-content-messages-2').fadeOut();
+            
+            $('#car-content-messages-4').fadeIn('fast', function(){
+                $(this).css('color', '#fff');
+            });
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            
+            $('#car-content-messages-3').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            
+            $('#car-content-messages-4').fadeOut();
+        }
+    });
+    
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            PPW.animate('#car-content-messages-5', 'lightSpeedIn');
+            //PPW.unlock();
+            //$('#car-content-messages-5').fadeIn();
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            PPW.goNextSlide();
+        }
+    });
+</script>

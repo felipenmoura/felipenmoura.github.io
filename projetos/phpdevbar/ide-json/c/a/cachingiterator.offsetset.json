@@ -1,0 +1,1 @@
+{"name":"CachingIterator.offsetSet","purpose":"The offsetSet purpose","manualid":"cachingiterator.offsetset","version":false,"params":[{"name":"index","type":"string","optional":"false"},{"name":"newval","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

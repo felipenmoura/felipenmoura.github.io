@@ -1,0 +1,1 @@
+{"name":"Gmagick.swirlimage","purpose":"Swirls the pixels about the center of the image","manualid":"gmagick.swirlimage","version":false,"params":[{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

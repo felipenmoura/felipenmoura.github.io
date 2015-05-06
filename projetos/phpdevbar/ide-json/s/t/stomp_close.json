@@ -1,0 +1,1 @@
+{"name":"stomp_close","purpose":"Closes stomp connection","manualid":"stomp.destruct","version":false,"params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

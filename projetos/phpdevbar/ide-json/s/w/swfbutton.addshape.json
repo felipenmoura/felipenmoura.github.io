@@ -1,0 +1,1 @@
+{"name":"SWFButton.addShape","purpose":"Adds a shape to a button","manualid":"function.swfbutton.addshape","version":false,"params":[{"name":"shape","type":"SWFShape","optional":"false"},{"name":"flags","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

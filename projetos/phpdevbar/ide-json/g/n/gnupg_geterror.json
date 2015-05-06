@@ -1,0 +1,1 @@
+{"name":"gnupg_geterror","purpose":"Returns the errortext, if a function fails","manualid":"function.gnupg-geterror","version":"PECL gnupg >= 0.1","params":[{"name":"identifier","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns an errortext, if an error has occurred, otherwise FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.coalesceImages","purpose":"Composites a set of images","manualid":"function.imagick-coalesceimages","version":false,"params":[],"return":{"type":"Imagick","description":"Returns a new Imagick object on success.\n   Throw an\nImagickException on error."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

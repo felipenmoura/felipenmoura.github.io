@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getInterfaceNames","purpose":"Gets the interface names","manualid":"reflectionclass.getinterfacenames","version":false,"params":[],"return":{"type":"array","description":"A numerical array with interface names as the values."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getInterfaces"}]}

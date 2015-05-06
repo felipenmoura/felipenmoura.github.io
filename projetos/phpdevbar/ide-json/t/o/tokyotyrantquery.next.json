@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.next","purpose":"Moves the iterator to next entry","manualid":"tokyotyrantquery.next","version":false,"params":[],"return":{"type":"array","description":"Returns the next row and throws TokyoTyrantException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

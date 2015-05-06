@@ -1,0 +1,1 @@
+{"name":"HaruImage.getWidth","purpose":"Get the width of the image","manualid":"function.haruimage-getwidth","version":false,"params":[],"return":{"type":"int","description":"Returns the width of the image."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

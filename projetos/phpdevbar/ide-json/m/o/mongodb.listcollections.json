@@ -1,0 +1,1 @@
+{"name":"MongoDB.listCollections","purpose":"Get a list of collections in this database","manualid":"mongodb.listcollections","version":false,"params":[],"return":{"type":"array","description":"Returns a list of MongoCollections."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

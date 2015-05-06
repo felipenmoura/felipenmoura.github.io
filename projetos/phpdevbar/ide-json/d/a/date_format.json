@@ -1,0 +1,1 @@
+{"name":"date_format","purpose":"Alias of DateTime::format","manualid":"function.date-format","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

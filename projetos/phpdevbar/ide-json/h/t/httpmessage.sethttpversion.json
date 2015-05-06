@@ -1,0 +1,1 @@
+{"name":"HttpMessage.setHttpVersion","purpose":"Set HTTP version","manualid":"function.httpmessage-sethttpversion","version":false,"params":[{"name":"version","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success, or FALSE if supplied version is out of range (1.0\/1.1)."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

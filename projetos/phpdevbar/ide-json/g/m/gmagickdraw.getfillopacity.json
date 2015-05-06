@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfillopacity","purpose":"Returns the opacity used when drawing","manualid":"gmagickdraw.getfillopacity","version":false,"params":[],"return":{"type":"void","description":"Returns the opacity used when drawing using the fill color or fill texture. Fully opaque is 1.0."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

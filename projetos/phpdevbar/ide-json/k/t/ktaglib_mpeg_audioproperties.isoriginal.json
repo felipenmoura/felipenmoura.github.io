@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.isOriginal","purpose":"Returns the length of a MPEG file","manualid":"audioproperties.isOriginal","version":false,"params":[],"return":{"type":"bool","description":"Returns true if the file is marked as the original file"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

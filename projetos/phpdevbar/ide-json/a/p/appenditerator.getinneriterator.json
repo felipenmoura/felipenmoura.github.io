@@ -1,0 +1,1 @@
+{"name":"AppendIterator.getInnerIterator","purpose":"Gets an inner iterator","manualid":"appenditerator.getinneriterator","version":false,"params":[],"return":{"type":"void","description":"The current inner Iterator."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"AppendIterator::getArrayIterator"}]}

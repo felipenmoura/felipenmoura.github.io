@@ -1,0 +1,1 @@
+{"name":"SolrDocument.__destruct","purpose":"Destructor","manualid":"solrdocument.destruct","version":false,"params":[],"return":{"type":"void","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addHighlightField","purpose":"Maps to hl.fl","manualid":"solrquery.addhighlightfield","version":false,"params":[{"name":"field","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

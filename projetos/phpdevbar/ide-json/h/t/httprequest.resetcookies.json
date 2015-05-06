@@ -1,0 +1,1 @@
+{"name":"HttpRequest.resetCookies","purpose":"Reset cookies","manualid":"function.httprequest-resetcookies","version":false,"params":[{"name":"session_only","type":"bool","optional":"true","initializer":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

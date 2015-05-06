@@ -1,0 +1,1 @@
+{"name":"PDF_makespotcolor","purpose":"Make spot color","manualid":"function.pdf-makespotcolor","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"},{"name":"spotname","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

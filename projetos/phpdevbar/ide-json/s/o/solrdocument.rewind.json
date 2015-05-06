@@ -1,0 +1,1 @@
+{"name":"SolrDocument.rewind","purpose":"Resets the internal pointer to the beginning","manualid":"solrdocument.rewind","version":false,"params":[],"return":{"type":"void","description":"This method has no return value."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

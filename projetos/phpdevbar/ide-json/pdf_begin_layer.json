@@ -1,0 +1,1 @@
+{"name":"PDF_begin_layer","purpose":"Start layer","manualid":"function.pdf-begin-layer","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"layer","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

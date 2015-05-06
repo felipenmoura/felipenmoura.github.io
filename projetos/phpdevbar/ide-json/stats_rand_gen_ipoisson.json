@@ -1,0 +1,1 @@
+{"name":"stats_rand_gen_ipoisson","purpose":"Generates a single random deviate from a Poisson distribution with mean \"mu\" (mu >= 0.0).","manualid":"function.stats-rand-gen-ipoisson","version":"PECL stats >= 1.0.0","params":[{"name":"mu","type":"float","optional":"false"}],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

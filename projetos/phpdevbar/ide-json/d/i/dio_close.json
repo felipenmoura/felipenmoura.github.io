@@ -1,0 +1,1 @@
+{"name":"dio_close","purpose":"Closes the file descriptor given by fd","manualid":"function.dio-close","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.0.5","params":[{"name":"fd","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"dio_open"}]}

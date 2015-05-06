@@ -1,0 +1,1 @@
+{"name":"pg_dbname","purpose":"Get the database name","manualid":"function.pg-dbname","version":"PHP 4, PHP 5","params":[{"name":"connection","type":"resource","optional":"true"}],"return":{"type":"string","description":"A string containing the name of the database the \n   connection is to, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

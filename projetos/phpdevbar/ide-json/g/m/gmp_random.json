@@ -1,0 +1,1 @@
+{"name":"gmp_random","purpose":"Random number","manualid":"function.gmp-random","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"limiter","type":"int","optional":"true","initializer":"20"}],"return":{"type":"resource","description":"A random GMP number."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

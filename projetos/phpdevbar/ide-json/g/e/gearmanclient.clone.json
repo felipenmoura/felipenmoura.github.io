@@ -1,0 +1,1 @@
+{"name":"GearmanClient.clone","purpose":"Create a copy of a GearmanClient object","manualid":"gearmanclient.clone","version":false,"params":[],"return":{"type":"GearmanClient","description":"A GearmanClient on success, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

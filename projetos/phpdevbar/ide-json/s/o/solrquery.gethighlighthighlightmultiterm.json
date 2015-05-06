@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightHighlightMultiTerm","purpose":"Returns whether or not to enable highlighting for range\/wildcard\/fuzzy\/prefix queries","manualid":"solrquery.gethighlighthighlightmultiterm","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

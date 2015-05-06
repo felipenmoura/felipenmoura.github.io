@@ -1,0 +1,38 @@
+<h2 class="LANG-PT">Sempre diga o óbvio!</h2>
+<h2 class="LANG-EN">Always say what is obvious!</h2>
+
+<div class="LANG-PT">
+    <span class="obvious-label">"Ah, o usuário tem que ser um imbecil pra não ver este botão!"</span>
+    <div class="fulfill obvious-surprise">
+        <img src="slides/obvious/note.jpg" style="box-shadow: 6px 6px 20px black; height: 90%;">
+        <div class="did-you-notice">Você, evidentemente, notou o Godzilla na foto!</div>
+    </div>
+</div>
+<div class="LANG-EN">
+    <span class="obvious-label">"Ok, the user has to be an imbecil not to see this button!"</span>
+    <div class="fulfill obvious-surprise">
+        <img src="slides/obvious/note.jpg" style="box-shadow: 6px 6px 20px black; height: 90%;">
+        <div class="did-you-notice">You, of course, noticed the Godzilla on the picture!</div>
+    </div>
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('.obvious-label').fadeOut();
+            $('.obvious-surprise').fadeIn();
+        },
+        undo: function(){
+            $('.obvious-label').fadeIn();
+            $('.obvious-surprise').fadeOut();
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('.did-you-notice').show();
+        },
+        undo: function(){
+            $('.did-you-notice').show();
+        }
+    });
+</script>

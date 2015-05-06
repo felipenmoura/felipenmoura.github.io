@@ -1,0 +1,1 @@
+{"name":"domxml_new_doc","purpose":"Creates new empty XML document","manualid":"function.domxml-new-doc","version":"PHP 4 >= 4.2.0","params":[{"name":"version","type":"string","optional":"false"}],"return":{"type":"DomDocument","description":"Returns a new DomDocument instance."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

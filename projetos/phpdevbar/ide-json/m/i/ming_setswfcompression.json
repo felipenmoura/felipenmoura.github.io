@@ -1,0 +1,1 @@
+{"name":"ming_setswfcompression","purpose":"Sets the SWF output compression","manualid":"function.ming-setswfcompression","version":"PHP 5.2.1-5.3.0, PECL ming SVN","params":[{"name":"level","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

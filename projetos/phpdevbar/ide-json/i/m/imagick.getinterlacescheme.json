@@ -1,0 +1,1 @@
+{"name":"Imagick.getInterlaceScheme","purpose":"Gets the object interlace scheme","manualid":"function.imagick-getinterlacescheme","version":false,"params":[],"return":{"type":"int","description":"Gets the wand interlace\n   scheme.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

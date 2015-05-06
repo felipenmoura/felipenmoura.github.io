@@ -1,0 +1,1 @@
+{"name":"readline","purpose":"Reads a line","manualid":"function.readline","version":"PHP 4, PHP 5","params":[{"name":"prompt","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns a single string from the user. The line returned has the ending\n   newline removed."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

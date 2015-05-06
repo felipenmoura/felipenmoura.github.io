@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setPostFiles","purpose":"Set post files","manualid":"function.httprequest-setpostfiles","version":false,"params":[{"name":"post_files","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

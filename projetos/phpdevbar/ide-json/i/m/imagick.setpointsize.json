@@ -1,0 +1,1 @@
+{"name":"Imagick.setPointSize","purpose":"Sets point size","manualid":"function.imagick-setpointsize","version":false,"params":[{"name":"point_size","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"Imagick::getPointSize"}]}

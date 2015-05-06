@@ -1,0 +1,1 @@
+{"name":"RarEntry.isEncrypted","purpose":"Test whether an entry is encrypted.","manualid":"rarentry.isencrypted","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the current entry is encrypted and FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,32 @@
+<h1>
+	Detalhes...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin: auto;
+				margin-top: 0px;
+				width: 550px;'>
+		Use <em>[element].focus()</em> para for&ccedil;ar o foco em um elemento importante.<br/>
+		<div style='width: 310px; border: solid 1px grey; margin: auto; margin-top: 20px; margin-bottom: 20px;'>
+			<label style='' for='focusIt'>Login</label> <input type='text' id='focusIt' title='Type your user name' tabindex='1' /><br/>
+			<label for='pwd'>Password</label> <input type='password' id='pwd' title='What is your password?' tabindex='2' /><br/>
+			<input type='button' title='Click here to login' value='Ok' tabindex='4'/><br/>
+			<a href='#'
+			   title='Click here if you forgot your password'
+			   tabindex='3'
+			   style='font-size: 14px;'>Forgot my password</a>
+		</div>
+		Conhe&ccedil;a o <em>tabindex='-1'</em>
+	</div>
+	<div id='step2'
+		 style='text-align: center;
+				margin-top: -30px;
+				display: none;'>
+	</div>
+</div>
+<script>
+	setTimeout(function(){
+		document.getElementById('focusIt').focus();
+	}, 1500);
+</script>

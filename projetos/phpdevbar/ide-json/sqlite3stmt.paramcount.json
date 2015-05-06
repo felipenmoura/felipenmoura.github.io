@@ -1,0 +1,1 @@
+{"name":"SQLite3Stmt.paramCount","purpose":"Returns the number of parameters within the prepared statement","manualid":"sqlite3stmt.paramcount","version":false,"params":[],"return":{"type":"int","description":"Returns the number of parameters within the prepared statement."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

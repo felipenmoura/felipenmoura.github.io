@@ -1,0 +1,1 @@
+{"name":"HaruPage.getCMYKFill","purpose":"Get the current filling color","manualid":"function.harupage-getcmykfill","version":false,"params":[],"return":{"type":"array","description":"Returns the current filling color as an array with 4 elements (\"c\", \"m\",\n   \"y\" and \"k\")."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

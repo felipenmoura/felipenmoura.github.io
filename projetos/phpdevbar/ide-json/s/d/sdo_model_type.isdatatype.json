@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.isDataType","purpose":"Test to see if this SDO_Model_Type is a primitive data type","manualid":"function.sdo-model-type-isdatatype","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this type is a primitive data type, otherwise returns \n   FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

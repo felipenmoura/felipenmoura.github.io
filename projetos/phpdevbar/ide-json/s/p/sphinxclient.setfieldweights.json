@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setFieldWeights","purpose":"Set field weights","manualid":"sphinxclient.setfieldweights","version":false,"params":[{"name":"weights","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

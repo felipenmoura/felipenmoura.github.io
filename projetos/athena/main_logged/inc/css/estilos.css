@@ -1,0 +1,215 @@
+body {
+	margin: 0px;
+	background-image: url(../../img/bg.jpg);
+	background-repeat: repeat-y;
+	background-color: #EEECFB;
+}
+.topo {
+	height: 70px;
+	width: 779px;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	background-image: url(../../img/bg_topo.jpg);
+}
+.menu1 {
+	float: left;
+	width: 170px;
+}
+.menu1 A {
+	font-family: Tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #221171;
+	background-color: #F5F5F5;
+	xheight: 28px;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-left-width: 7px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #211265;
+	border-left-color: #291C64;
+	text-decoration: none;
+	float: left;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #291C64;
+}
+.combo {
+	font-family: Tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	color: #34257A;
+	text-decoration: none;
+	background-color: #F7F7F7;
+}
+.tabela_lista {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	border: 1px solid #999999;
+	padding: 4px;
+}
+
+.tabela_lista A{
+	text-decoration:none;
+	color:#333333
+}
+.tabela_lista A:hover{
+	text-decoration: underline;
+	color:#D92723;
+}
+
+
+.menu1 A:hover {
+	background-color: #D92A25;
+	color: #F6F6F6;
+}
+.topo_data {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #333333;
+	text-align: right;
+	width: 250px;
+	position: absolute;
+	clip: rect(auto,auto,auto,auto);
+	top: 54px;
+	left: 526px;
+}
+.conteudo {
+	width: 592px;
+	left: 183px;
+	float: left;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 110px;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+}
+
+.titulo {
+	width: 592px;
+	left: 182px;
+	float: left;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 75px;
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #DF2727;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:link {
+	color: #333333;
+	text-decoration:none;
+}
+a:active {
+	color: #333333;
+	text-decoration:none;
+}
+a:visited {
+	color: #333333;
+	text-decoration:none;
+}
+a:hover {
+	color: #D92A25;
+	text-decoration:underline;
+}
+.home2Txt {
+	background-color: #FFFFFF;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+}
+.home2 {
+
+
+	width: 592px;
+	left: 183px;
+	float: left;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 200px;
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #333333;
+	text-decoration: none;
+}
+#home_box {
+	height: 130px;
+	width: 100%;
+	border: 1px solid #302176;
+	background-color: #F3F3F3;
+	overflow: auto;
+}
+
+.home_tabela_lista {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	padding: 4px;
+}
+
+.home_tabela_lista A{
+	text-decoration:none;
+	color:#333333
+}
+.home_tabela_lista A:hover{
+	text-decoration: underline;
+	color:#D92723;
+}
+
+.gridCell
+{
+	font-family: Arial;
+	text-align: center;
+	cursor: default;
+	border: outset 1px;
+	color: #666666;
+	font-size: 12px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.gridTitle
+{
+	font-family: Arial;
+	text-align: center;
+	border: outset 1px;
+	cursor: default;
+	font-weight: bold;
+	font-size: 12px;
+	background-color: #333366;
+	color: #ffffff;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.discret_input
+{
+	font-family: Arial;
+	width: 200px;
+	border-bottom: solid 1px #666666;
+	border-left: solid 1px #666666;
+	border-top: none;
+	border-right: none;
+	font-style: italic;
+	color: #666666;
+}
+
+.botao
+{
+	width: 95px;
+	height: 28px;
+	background-image: url(../../img/botao.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #ffffff; /*EEECFB*/
+	border: none;
+}

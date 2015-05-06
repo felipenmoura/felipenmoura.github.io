@@ -1,0 +1,1 @@
+{"name":"mysqli_stmt_field_count","purpose":"Returns the number of field in the given statement","manualid":"mysqli-stmt.field-count","version":false,"params":[{"name":"stmt","type":"mysqli_stmt","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

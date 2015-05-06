@@ -1,0 +1,1 @@
+{"name":"geoip_db_get_all_info","purpose":"Returns detailed information about all GeoIP database types","manualid":"function.geoip-db-get-all-info","version":"PECL geoip >= 1.0.1","params":[],"return":{"type":"array","description":"Returns the associative array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

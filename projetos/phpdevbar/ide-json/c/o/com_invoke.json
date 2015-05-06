@@ -1,0 +1,1 @@
+{"name":"com_invoke","purpose":"Calls a COM component's method [deprecated]","manualid":"function.com-invoke","version":"PHP 4","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"dba_close","purpose":"Close a DBA database","manualid":"function.dba-close","version":"PHP 4, PHP 5","params":[{"name":"handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"dba_open"},{"type":"function","name":"dba_popen"}]}

@@ -1,0 +1,29 @@
+<img src="slides/about-es/brendan-eich.png" class="fulfill" />
+
+<div id="about-es-1" class="fulfill">
+    <img src="slides/about-es/es-history-1.png" class="fulfill" />
+</div>
+<div id="about-es-2" class="fulfill">
+    <img src="slides/about-es/es-history-2.png" class="fulfill" />
+</div>
+
+<script>
+    PPW.addAction({
+        does: function() {
+            document.getElementById('about-es-1').style.opacity = 1;
+        },
+        undo: function() {
+            document.getElementById('about-es-1').style.opacity = 0;
+        }
+    });
+    PPW.addAction({
+        does: function() {
+            document.getElementById('about-es-1').style.opacity = 0;
+            document.getElementById('about-es-2').style.opacity = 1;
+        },
+        undo: function() {
+            document.getElementById('about-es-1').style.opacity = 1;
+            document.getElementById('about-es-2').style.opacity = 0;
+        }
+    });
+</script>

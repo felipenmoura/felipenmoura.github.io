@@ -1,0 +1,1 @@
+{"name":"Imagick.transverseImage","purpose":"Creates a horizontal mirror image","manualid":"function.imagick-transverseimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"Imagick::transposeImage"}]}

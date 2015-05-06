@@ -1,0 +1,1 @@
+{"name":"overload","purpose":"Enable property and method call overloading for a class","manualid":"function.overload","version":"PHP 4 >= 4.3.0","params":[{"name":"class_name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

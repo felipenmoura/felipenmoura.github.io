@@ -1,0 +1,1 @@
+{"name":"Gmagick.magnifyimage","purpose":"Scales an image proportionally 2x","manualid":"gmagick.magnifyimage","version":false,"params":[],"return":{"type":"void","description":"Magnified Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

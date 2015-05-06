@@ -1,0 +1,1 @@
+{"name":"swf_posround","purpose":"Enables or Disables the rounding of the translation when objects are placed or moved","manualid":"function.swf-posround","version":"PHP 4","params":[{"name":"round","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

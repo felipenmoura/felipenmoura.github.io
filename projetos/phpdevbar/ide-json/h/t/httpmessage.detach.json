@@ -1,0 +1,1 @@
+{"name":"HttpMessage.detach","purpose":"Detach HttpMessage","manualid":"function.httpmessage-detach","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns detached HttpMessage object copy."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

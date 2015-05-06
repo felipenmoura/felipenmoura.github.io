@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getMethod","purpose":"Get method","manualid":"function.httprequest-getmethod","version":false,"params":[],"return":{"type":"int","description":"Returns the currently set request method."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

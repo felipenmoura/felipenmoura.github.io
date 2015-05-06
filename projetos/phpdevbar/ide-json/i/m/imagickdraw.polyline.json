@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.polyline","purpose":"Draws a polyline","manualid":"function.imagickdraw-polyline","version":false,"params":[{"name":"coordinates","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

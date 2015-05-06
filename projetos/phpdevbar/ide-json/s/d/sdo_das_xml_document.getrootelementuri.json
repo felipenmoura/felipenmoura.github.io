@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.getRootElementURI","purpose":"Returns root element's URI string","manualid":"function.sdo-das-xml-document-getrootelementuri","version":false,"params":[],"return":{"type":"string","description":"Returns root element's URI string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

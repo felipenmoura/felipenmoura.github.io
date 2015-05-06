@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantTable.genUid","purpose":"Generate unique id","manualid":"tokyotyranttable.genuid","version":false,"params":[],"return":{"type":"int","description":"Returns an unique id or throws TokyoTyrantException on error"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantTable::put"}]}

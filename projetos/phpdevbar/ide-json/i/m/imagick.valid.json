@@ -1,0 +1,1 @@
+{"name":"Imagick.valid","purpose":"Checks if the current item is valid","manualid":"function.imagick-valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

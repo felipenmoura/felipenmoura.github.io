@@ -1,0 +1,1 @@
+{"name":"px_delete","purpose":"Deletes resource of paradox database","manualid":"function.px-delete","version":"PECL paradox >= 1.0.0","params":[{"name":"pxdoc","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

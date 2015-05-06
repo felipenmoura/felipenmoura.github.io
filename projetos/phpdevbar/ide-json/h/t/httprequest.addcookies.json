@@ -1,0 +1,1 @@
+{"name":"HttpRequest.addCookies","purpose":"Add cookies","manualid":"function.httprequest-addcookies","version":false,"params":[{"name":"cookies","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"HttpRequest::setCookies"}]}

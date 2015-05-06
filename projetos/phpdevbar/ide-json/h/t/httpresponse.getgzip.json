@@ -1,0 +1,1 @@
+{"name":"HttpResponse.getGzip","purpose":"Get gzip","manualid":"function.httpresponse-getgzip","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if GZip compression is enabled, else FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HttpResponse::setGzip"}]}

@@ -1,0 +1,1 @@
+{"name":"SWFTextField.addString","purpose":"Concatenates the given string to the text field","manualid":"function.swftextfield.addstring","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

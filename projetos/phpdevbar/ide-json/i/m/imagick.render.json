@@ -1,0 +1,1 @@
+{"name":"Imagick.render","purpose":"Renders all preceding drawing commands","manualid":"function.imagick-render","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Memcached.getServerByKey","purpose":"Map a key to a server","manualid":"memcached.getserverbykey","version":false,"params":[{"name":"server_key","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns TRUE on success or FALSE on failure.\n   Use Memcached::getResultCode if necessary."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

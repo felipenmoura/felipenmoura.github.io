@@ -1,0 +1,1 @@
+{"name":"GearmanTask.create","purpose":"Create a task (deprecated)","manualid":"gearmantask.create","version":false,"params":[],"return":{"type":"GearmanTask","description":"A GearmanTask oject or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

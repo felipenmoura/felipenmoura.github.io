@@ -1,0 +1,1 @@
+{"name":"tidyNode.isPhp","purpose":"Checks if a node is PHP","manualid":"tidynode.isphp","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the current node is PHP code, FALSE otherwise."},"errors":null,"notes":[{"type":"note","description":"This function was named tidy_node::is_php in\n    PHP 4\/Tidy 1."}],"changelog":[],"seealso":[]}

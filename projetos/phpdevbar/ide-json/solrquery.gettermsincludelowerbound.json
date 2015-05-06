@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsIncludeLowerBound","purpose":"Returns whether or not to include the lower bound in the result set","manualid":"solrquery.gettermsincludelowerbound","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFFill.scaleTo","purpose":"Sets fill's scale","manualid":"function.swffill.scaleto","version":false,"params":[{"name":"x","type":"float","optional":"false"},{"name":"y","type":"float","optional":"true"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

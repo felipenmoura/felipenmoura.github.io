@@ -1,0 +1,1 @@
+{"name":"Imagick.setFirstIterator","purpose":"Sets the Imagick iterator to the first image","manualid":"function.imagick-setfirstiterator","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"AppendIterator.getIteratorIndex","purpose":"Gets an index of iterators","manualid":"appenditerator.getiteratorindex","version":false,"params":[],"return":{"type":"void","description":"The index of iterators."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"AppendIterator::getInnerIterator"}]}

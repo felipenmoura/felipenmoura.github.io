@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMlt","purpose":"Returns whether or not MoreLikeThis results should be enabled","manualid":"solrquery.getmlt","version":false,"params":[],"return":{"type":"bool","description":"Returns a boolean on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

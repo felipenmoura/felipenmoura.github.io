@@ -1,0 +1,1 @@
+{"name":"swf_actiongeturl","purpose":"Get a URL from a Shockwave Flash movie","manualid":"function.swf-actiongeturl","version":"PHP 4","params":[{"name":"url","type":"string","optional":"false"},{"name":"target","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

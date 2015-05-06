@@ -1,0 +1,1 @@
+{"name":"HttpRequest.addPostFields","purpose":"Add post fields","manualid":"function.httprequest-addpostfields","version":false,"params":[{"name":"post_data","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

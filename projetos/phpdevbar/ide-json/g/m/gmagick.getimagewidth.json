@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagewidth","purpose":"Returns the width of the image","manualid":"gmagick.getimagewidth","version":false,"params":[],"return":{"type":"void","description":"Returns the image width."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

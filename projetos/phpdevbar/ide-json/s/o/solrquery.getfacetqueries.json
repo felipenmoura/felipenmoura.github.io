@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFacetQueries","purpose":"Returns all the facet queries","manualid":"solrquery.getfacetqueries","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

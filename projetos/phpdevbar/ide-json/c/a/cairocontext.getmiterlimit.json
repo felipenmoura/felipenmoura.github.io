@@ -1,0 +1,1 @@
+{"name":"CairoContext.getMiterLimit","purpose":"The getMiterLimit purpose","manualid":"cairocontext.getmiterlimit","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"float","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

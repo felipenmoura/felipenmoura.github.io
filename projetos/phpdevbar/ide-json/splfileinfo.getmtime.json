@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getMTime","purpose":"Gets the last modified time","manualid":"splfileinfo.getmtime","version":false,"params":[],"return":{"type":"int","description":"Returns the last modified time for the file, in a Unix timestamp."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"filemtime"}]}

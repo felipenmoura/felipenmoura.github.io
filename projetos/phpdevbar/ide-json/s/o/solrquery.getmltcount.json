@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltCount","purpose":"Returns the number of similar documents to return for each result","manualid":"solrquery.getmltcount","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

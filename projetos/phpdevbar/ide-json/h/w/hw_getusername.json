@@ -1,0 +1,1 @@
+{"name":"hw_getusername","purpose":"Name of currently logged in user","manualid":"function.hw-getusername","version":"PHP 4","params":[{"name":"connection","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns the username as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

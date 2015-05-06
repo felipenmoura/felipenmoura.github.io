@@ -1,0 +1,1 @@
+{"name":"ZipArchive.deleteIndex","purpose":"delete an entry in the archive using its index","manualid":"function.ziparchive-deleteindex","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

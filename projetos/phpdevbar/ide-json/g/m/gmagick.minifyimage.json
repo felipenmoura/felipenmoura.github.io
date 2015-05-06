@@ -1,0 +1,1 @@
+{"name":"Gmagick.minifyimage","purpose":"Scales an image proportionally to half its size","manualid":"gmagick.minifyimage","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

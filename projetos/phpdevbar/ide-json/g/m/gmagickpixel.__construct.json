@@ -1,0 +1,1 @@
+{"name":"GmagickPixel.__construct","purpose":"The GmagickPixel constructor","manualid":"gmagickpixel.construct","version":false,"params":[{"name":"color","type":"string","optional":"true"}],"return":{"type":null,"description":"The GmagickPixel object on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

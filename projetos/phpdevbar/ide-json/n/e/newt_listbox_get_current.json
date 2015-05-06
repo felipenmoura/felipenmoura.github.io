@@ -1,0 +1,1 @@
+{"name":"newt_listbox_get_current","purpose":"","manualid":"function.newt-listbox-get-current","version":"PECL newt >= 0.1","params":[{"name":"listbox","type":"resource","optional":"false"}],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

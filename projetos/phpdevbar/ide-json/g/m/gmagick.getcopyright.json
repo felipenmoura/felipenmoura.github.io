@@ -1,0 +1,1 @@
+{"name":"Gmagick.getcopyright","purpose":"Returns the GraphicsMagick API copyright as a string","manualid":"gmagick.getcopyright","version":false,"params":[],"return":{"type":"void","description":"Returns a string containing the copyright notice of GraphicsMagick and\n   Magickwand C API."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"GearmanJob.handle","purpose":"Get the job handle","manualid":"gearmanjob.handle","version":false,"params":[],"return":{"type":"string","description":"An opaque job handle."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanTask::jobHandle"}]}

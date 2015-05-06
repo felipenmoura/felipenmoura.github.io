@@ -1,0 +1,1 @@
+{"name":"exp","purpose":"Calculates the exponent of e","manualid":"function.exp","version":"PHP 4, PHP 5","params":[{"name":"arg","type":"float","optional":"false"}],"return":{"type":"float","description":"'e' raised to the power of arg"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"log"},{"type":"function","name":"pow"}]}

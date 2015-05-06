@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFillOpacity","purpose":"Returns the opacity used when drawing","manualid":"function.imagickdraw-getfillopacity","version":false,"params":[],"return":{"type":"float","description":"The opacity."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

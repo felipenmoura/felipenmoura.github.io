@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+
+    	<h3>Look the console of your browser</h3>
+
+        <div>
+            Debounce will simply ignore repeated calls for given methods, in case they are too fast.<br/>
+            Interesting implementation for cases like input auto-completes, window resize or mousemove.
+    		The source code:<br/>
+    		<pre id='sc'></pre>
+    		The output is in your console.
+    	</div>
+
+        <script src='../dist/maker.js'></script>
+
+        <script id='sampleCode'>
+            /*
+            o= {
+                mm: function(e){
+                    console.log('Mouse stoped moving at ', e.clientX + '/' + e.clientY);
+                }
+            };
+            make.debounce(o);
+            document.body.onmousemove= o.mm;
+            */
+            // OR
+            document.body.onmousemove= make.debounce(function(e){
+                console.log('Mouse stoped moving at ', e.clientX + '/' + e.clientY);
+            });
+
+        </script>
+
+        <script>
+            setTimeout(function(){
+                document.getElementById('sc').innerHTML= document.getElementById('sampleCode').text;
+            }, 100);
+        </script>
+
+    </body>
+</html>

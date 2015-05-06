@@ -1,0 +1,1 @@
+{"name":"PharFileInfo.getPharFlags","purpose":"Returns the Phar file entry flags","manualid":"pharfileinfo.getpharflags","version":false,"params":[],"return":{"type":"int","description":"The Phar flags (always 0 in the current implementation)"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

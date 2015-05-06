@@ -1,0 +1,1 @@
+{"name":"DOMNode.hasChildNodes","purpose":"Checks if node has children","manualid":"domnode.haschildnodes","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"DOMNode::hasAttributes"}]}

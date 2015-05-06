@@ -1,0 +1,1 @@
+{"name":"Gmagick.getversion","purpose":"Returns the GraphicsMagick API version","manualid":"gmagick.getversion","version":false,"params":[],"return":{"type":"void","description":"Returns the GraphicsMagick API version as a string and as a number."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

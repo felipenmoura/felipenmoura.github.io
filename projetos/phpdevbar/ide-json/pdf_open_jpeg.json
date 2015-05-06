@@ -1,0 +1,1 @@
+{"name":"PDF_open_jpeg","purpose":"Open JPEG image [deprecated]","manualid":"function.pdf-open-jpeg","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

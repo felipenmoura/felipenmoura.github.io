@@ -1,0 +1,1 @@
+{"name":"hw_connection_info","purpose":"Prints information about the connection to Hyperwave server","manualid":"function.hw-connection-info","version":"PHP 4","params":[{"name":"link","type":"int","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

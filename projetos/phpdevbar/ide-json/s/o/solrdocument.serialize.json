@@ -1,0 +1,1 @@
+{"name":"SolrDocument.serialize","purpose":"Used for custom serialization","manualid":"solrdocument.serialize","version":false,"params":[],"return":{"type":"string","description":"Returns a string representing the serialized Solr document."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

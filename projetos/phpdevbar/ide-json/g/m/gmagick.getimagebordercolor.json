@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagebordercolor","purpose":"Returns the image border color","manualid":"gmagick.getimagebordercolor","version":false,"params":[],"return":{"type":"void","description":"GmagickPixel object representing the color of the border"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

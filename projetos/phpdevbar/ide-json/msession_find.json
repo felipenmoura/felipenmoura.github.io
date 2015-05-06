@@ -1,0 +1,1 @@
+{"name":"msession_find","purpose":"Find all sessions with name and value","manualid":"function.msession-find","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"name","type":"string","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"array","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

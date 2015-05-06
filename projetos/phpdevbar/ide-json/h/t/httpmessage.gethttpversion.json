@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getHttpVersion","purpose":"Get HTTP version","manualid":"function.httpmessage-gethttpversion","version":false,"params":[],"return":{"type":"string","description":"Returns the HTTP protocol version as string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

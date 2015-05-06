@@ -1,0 +1,1 @@
+{"name":"Imagick.setOption","purpose":"Set an option","manualid":"function.imagick-setoption","version":false,"params":[{"name":"key","type":"string","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

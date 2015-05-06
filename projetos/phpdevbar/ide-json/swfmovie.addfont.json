@@ -1,0 +1,1 @@
+{"name":"SWFMovie.addFont","purpose":"","manualid":"function.swfmovie.addfont","version":false,"params":[{"name":"font","type":"SWFFont","optional":"false"}],"return":{"type":"mixed","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

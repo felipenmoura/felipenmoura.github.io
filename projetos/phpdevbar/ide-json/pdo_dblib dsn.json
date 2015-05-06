@@ -1,0 +1,1 @@
+{"name":"PDO_DBLIB DSN","purpose":"Connecting to Microsoft SQL Server and Sybase databases","manualid":"ref.pdo-dblib.connection","version":"PECL PDO_DBLIB >= 0.9.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"posix_getlogin","purpose":"Return login name","manualid":"function.posix-getlogin","version":"PHP 4, PHP 5","params":[],"return":{"type":"string","description":"Returns the login name of the user, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"posix_getpwnam"},{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getType","purpose":"Gets file type","manualid":"splfileinfo.gettype","version":false,"params":[],"return":{"type":"string","description":"A string representing the type of the entry.\n   May be one of file, link,\n   or dir"},"errors":"Throws a RuntimeException on error.","notes":[],"changelog":[],"seealso":[]}

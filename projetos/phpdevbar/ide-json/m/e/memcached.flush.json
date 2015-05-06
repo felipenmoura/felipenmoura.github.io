@@ -1,0 +1,1 @@
+{"name":"Memcached.flush","purpose":"Invalidate all items in the cache","manualid":"memcached.flush","version":false,"params":[{"name":"delay","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure.\n   Use Memcached::getResultCode if necessary."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.bezier","purpose":"Draws a bezier curve","manualid":"function.imagickdraw-bezier","version":false,"params":[{"name":"coordinates","type":"array","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

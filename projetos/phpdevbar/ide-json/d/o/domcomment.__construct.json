@@ -1,0 +1,1 @@
+{"name":"DOMComment.__construct","purpose":"Creates a new DOMComment object","manualid":"domcomment.construct","version":false,"params":[{"name":"value","type":"string","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"DOMDocument::createComment"}]}

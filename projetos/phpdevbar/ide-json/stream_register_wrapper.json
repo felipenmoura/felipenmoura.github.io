@@ -1,0 +1,1 @@
+{"name":"stream_register_wrapper","purpose":"Alias of stream_wrapper_register","manualid":"function.stream-register-wrapper","version":"PHP 4 >= 4.3.0, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

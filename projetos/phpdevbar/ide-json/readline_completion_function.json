@@ -1,0 +1,1 @@
+{"name":"readline_completion_function","purpose":"Registers a completion function","manualid":"function.readline-completion-function","version":"PHP 4, PHP 5","params":[{"name":"function","type":"callback","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

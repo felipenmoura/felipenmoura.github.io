@@ -1,0 +1,1 @@
+{"name":"DomElement.get_elements_by_tagname","purpose":"Gets elements by tagname","manualid":"function.domelement-get-elements-by-tagname","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"array","description":"Returns an array of DomElement objects."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

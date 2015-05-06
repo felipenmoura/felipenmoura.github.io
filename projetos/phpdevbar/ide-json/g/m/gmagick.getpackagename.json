@@ -1,0 +1,1 @@
+{"name":"Gmagick.getpackagename","purpose":"Returns the GraphicsMagick package name.","manualid":"gmagick.getpackagename","version":false,"params":[],"return":{"type":"void","description":"Returns the GraphicsMagick package name as a string."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

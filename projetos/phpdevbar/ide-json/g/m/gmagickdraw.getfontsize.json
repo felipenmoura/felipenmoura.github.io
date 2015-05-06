@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getfontsize","purpose":"Returns the font pointsize","manualid":"gmagickdraw.getfontsize","version":false,"params":[],"return":{"type":"void","description":"Returns the font size associated with the current GmagickDraw object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

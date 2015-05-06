@@ -1,0 +1,1 @@
+{"name":"SwishSearch.setPhraseDelimiter","purpose":"Set the phrase delimiter","manualid":"function.swishsearch-setphrasedelimiter","version":false,"params":[{"name":"delimiter","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

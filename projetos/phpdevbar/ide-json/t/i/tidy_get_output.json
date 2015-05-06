@@ -1,0 +1,1 @@
+{"name":"tidy_get_output","purpose":"Return a string representing the parsed tidy markup","manualid":"function.tidy-get-output","version":"PHP 5, PECL tidy >= 0.5.2","params":[{"name":"object","type":"tidy","optional":"false"}],"return":{"type":"string","description":"Returns the parsed tidy markup."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

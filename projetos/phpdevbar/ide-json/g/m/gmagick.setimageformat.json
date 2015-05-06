@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimageformat","purpose":"Sets the format of a particular image","manualid":"gmagick.setimageformat","version":false,"params":[{"name":"imageFormat","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

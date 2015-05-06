@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageHistogram","purpose":"Gets the image histogram","manualid":"function.imagick-getimagehistogram","version":false,"params":[],"return":{"type":"array","description":"Returns the image histogram as an array of ImagickPixel objects.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

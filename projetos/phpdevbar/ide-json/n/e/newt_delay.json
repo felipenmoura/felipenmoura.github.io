@@ -1,0 +1,1 @@
+{"name":"newt_delay","purpose":"","manualid":"function.newt-delay","version":"PECL newt >= 0.1","params":[{"name":"microseconds","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

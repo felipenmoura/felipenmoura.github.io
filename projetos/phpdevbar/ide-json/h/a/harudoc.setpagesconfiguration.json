@@ -1,0 +1,1 @@
+{"name":"HaruDoc.setPagesConfiguration","purpose":"Set the number of pages per set of pages","manualid":"function.harudoc-setpagesconfiguration","version":false,"params":[{"name":"page_per_pages","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

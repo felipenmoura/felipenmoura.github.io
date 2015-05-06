@@ -1,0 +1,1 @@
+{"name":"xptr_new_context","purpose":"Create new XPath Context","manualid":"function.xptr-new-context","version":"PHP 4","params":[],"return":{"type":"XPathContext","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

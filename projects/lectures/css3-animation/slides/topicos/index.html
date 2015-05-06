@@ -1,0 +1,35 @@
+<div class='content'>
+	<h1 id='title1'>
+		1<sup style='font-size: 26px;'><u>o</u>s</sup> T&oacute;picos:
+	</h1>
+	<div id='extra-content' style='display: none;'>
+		Aprenderemos utilizando um pouco de Matem&aacute;tica, Hist&oacute;ria, Portugu&ecirc;s,<br/>ci&ecirc;ncias, entre outras...
+		<ul id='list1' type='disc'>
+			<li>Por que usar anima&ccedil;&otilde;es em CSS3?</li>
+			<li>Um pouco de Hist&oacute;ria</li>
+			<li>Performance</li>
+			<li>Browser vendors</li>
+		</ul>
+		<ul id='list2' type='disc' style='display: none'>
+			<li>Efeitos do CSS3</li>
+			<li>T&eacute;cnicas</li>
+			<li>Ferramentas</li>
+			<li>Animando, de fato</li>
+			<li>Exemplos bacanas</li>
+		</ul>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#title1').animate({
+			marginTop: '40px'
+		}, function(){
+			$('#extra-content').fadeIn();
+		});
+	});
+	PPW.addAction(function(){
+		$('#list1').fadeOut(function(){
+			$('#list2').fadeIn();
+		});
+	});
+</script>

@@ -1,0 +1,1 @@
+{"name":"HaruDoc.resetError","purpose":"Reset error state of the document handle","manualid":"function.harudoc-reseterror","version":false,"params":[],"return":{"type":"bool","description":"Always succeeds and returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

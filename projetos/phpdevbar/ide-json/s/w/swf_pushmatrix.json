@@ -1,0 +1,1 @@
+{"name":"swf_pushmatrix","purpose":"Push the current transformation matrix back unto the stack","manualid":"function.swf-pushmatrix","version":"PHP 4","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_popmatrix"}]}

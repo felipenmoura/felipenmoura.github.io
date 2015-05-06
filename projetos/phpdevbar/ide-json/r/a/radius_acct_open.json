@@ -1,0 +1,1 @@
+{"name":"radius_acct_open","purpose":"Creates a Radius handle for accounting","manualid":"function.radius-acct-open","version":"PECL radius >= 1.1.0","params":[],"return":{"type":"resource","description":"Returns a handle on success, FALSE on error. This function only fails if\n   insufficient memory is available."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

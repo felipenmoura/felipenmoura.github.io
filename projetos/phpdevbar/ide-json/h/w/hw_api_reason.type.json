@@ -1,0 +1,1 @@
+{"name":"hw_api_reason.type","purpose":"Returns type of reason","manualid":"function.hwapi-reason-type","version":false,"params":[],"return":{"type":"HW_API_Reason","description":"Returns an instance of HW_API_Reason."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

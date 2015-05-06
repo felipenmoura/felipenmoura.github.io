@@ -1,0 +1,1 @@
+{"name":"newt_pop_window","purpose":"Removes the top window from the display","manualid":"function.newt-pop-window","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_open_window"},{"type":"function","name":"newt_centered_window"}]}

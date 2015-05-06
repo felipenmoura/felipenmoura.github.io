@@ -1,0 +1,1 @@
+{"name":"newt_form_add_hot_key","purpose":"","manualid":"function.newt-form-add-hot-key","version":"PECL newt >= 0.1","params":[{"name":"form","type":"resource","optional":"false"},{"name":"key","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

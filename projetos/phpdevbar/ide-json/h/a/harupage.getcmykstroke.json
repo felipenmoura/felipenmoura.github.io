@@ -1,0 +1,1 @@
+{"name":"HaruPage.getCMYKStroke","purpose":"Get the current stroking color","manualid":"function.harupage-getcmykstroke","version":false,"params":[],"return":{"type":"array","description":"Returns the current stroking color as an array with 4 elements (\"c\", \"m\",\n   \"y\" and \"k\")."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

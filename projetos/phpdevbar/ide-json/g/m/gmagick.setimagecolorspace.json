@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagecolorspace","purpose":"Sets the image colorspace","manualid":"gmagick.setimagecolorspace","version":false,"params":[{"name":"colorspace","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

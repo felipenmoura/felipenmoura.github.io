@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightFormatter","purpose":"Returns the formatter for the highlighted output","manualid":"solrquery.gethighlightformatter","version":false,"params":[{"name":"field_override","type":"string","optional":"true"}],"return":{"type":"string","description":"Returns a string on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

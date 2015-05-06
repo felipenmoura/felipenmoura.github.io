@@ -1,0 +1,1 @@
+{"name":"mb_list_encodings","purpose":"Returns an array of all supported encodings","manualid":"function.mb-list-encodings","version":"PHP 5","params":[],"return":{"type":"array","description":"Returns a numerically indexed array."},"errors":"This function does not emit any errors.","notes":[],"changelog":[],"seealso":[]}

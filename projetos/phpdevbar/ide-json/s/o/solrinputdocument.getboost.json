@@ -1,0 +1,1 @@
+{"name":"SolrInputDocument.getBoost","purpose":"Retrieves the current boost value for the document","manualid":"solrinputdocument.getboost","version":false,"params":[],"return":{"type":"float","description":"Returns the boost value on success and FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

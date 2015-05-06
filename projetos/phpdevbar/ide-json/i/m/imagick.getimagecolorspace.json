@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageColorspace","purpose":"Gets the image colorspace","manualid":"function.imagick-getimagecolorspace","version":false,"params":[],"return":{"type":"int","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

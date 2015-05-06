@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeDashArray","purpose":"Specifies the pattern of dashes and gaps used to stroke paths","manualid":"function.imagickdraw-setstrokedasharray","version":false,"params":[{"name":"dashArray","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

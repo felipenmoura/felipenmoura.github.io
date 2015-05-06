@@ -1,0 +1,1 @@
+{"name":"openssl_pkey_free","purpose":"Frees a private key","manualid":"function.openssl-pkey-free","version":"PHP 4 >= 4.2.0, PHP 5","params":[{"name":"key","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

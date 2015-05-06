@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.getAttachedRequests","purpose":"Get attached requests","manualid":"function.httprequestpool-getattachedrequests","version":false,"params":[],"return":{"type":"array","description":"Returns an array containing all currently attached HttpRequest objects."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

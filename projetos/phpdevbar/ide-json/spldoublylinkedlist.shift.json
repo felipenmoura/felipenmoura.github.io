@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.shift","purpose":"Shifts a node from the beginning of the doubly linked list","manualid":"spldoublylinkedlist.shift","version":false,"params":[],"return":{"type":"mixed","description":"The value of the shifted node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ldap_close","purpose":"Alias of ldap_unbind","manualid":"function.ldap-close","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

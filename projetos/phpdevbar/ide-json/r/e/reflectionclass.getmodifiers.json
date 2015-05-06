@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getModifiers","purpose":"Gets modifiers","manualid":"reflectionclass.getmodifiers","version":false,"params":[],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getProperties"}]}

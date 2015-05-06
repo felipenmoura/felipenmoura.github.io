@@ -1,0 +1,1 @@
+{"name":"Imagick.removeImage","purpose":"Removes an image from the image list","manualid":"function.imagick-removeimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

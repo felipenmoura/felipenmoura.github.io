@@ -1,0 +1,19 @@
+[08-Oct-2009 01:53:38] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: FATAL:  no pg_hba.conf entry for host &quot;127.0.0.1&quot;, user &quot;root&quot;, database &quot;athena&quot;, SSL off in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 01:53:48] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: FATAL:  no pg_hba.conf entry for host &quot;127.0.0.1&quot;, user &quot;root&quot;, database &quot;athena&quot;, SSL off in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 01:57:14] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+	Is the server running on host &quot;200.160.253.144&quot; and accepting
+	TCP/IP connections on port 5432? in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:04:13] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+	Is the server running on host &quot;200.160.253.144&quot; and accepting
+	TCP/IP connections on port 5432? in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:04:18] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+	Is the server running on host &quot;200.160.253.144&quot; and accepting
+	TCP/IP connections on port 5432? in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:04:51] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+	Is the server running on host &quot;200.160.253.144&quot; and accepting
+	TCP/IP connections on port 5432? in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:05:36] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: could not connect to server: No route to host
+	Is the server running on host &quot;200.160.253.144&quot; and accepting
+	TCP/IP connections on port 5432? in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:05:59] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: FATAL:  password authentication failed for user &quot;f2jweb_athena&quot; in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5
+[08-Oct-2009 02:06:27] PHP Warning:  pg_connect() [<a href='function.pg-connect'>function.pg-connect</a>]: Unable to connect to PostgreSQL server: FATAL:  no pg_hba.conf entry for host &quot;127.0.0.1&quot;, user &quot;f2jweb&quot;, database &quot;f2jweb_athena&quot;, SSL off in /home/f2jweb/public_html/felipenascimento.org/projetos/athena/connections/flp_db_connection.php on line 5

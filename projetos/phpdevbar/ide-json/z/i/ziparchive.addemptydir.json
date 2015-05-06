@@ -1,0 +1,1 @@
+{"name":"ZipArchive.addEmptyDir","purpose":"Add a new directory","manualid":"function.ziparchive-addemptydir","version":false,"params":[{"name":"dirname","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

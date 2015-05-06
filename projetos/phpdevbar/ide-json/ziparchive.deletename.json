@@ -1,0 +1,1 @@
+{"name":"ZipArchive.deleteName","purpose":"delete an entry in the archive using its name","manualid":"function.ziparchive-deletename","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

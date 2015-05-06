@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.clone","purpose":"Create a copy of the worker","manualid":"gearmanworker.clone","version":false,"params":[],"return":{"type":"void","description":"A GearmanWorker object"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

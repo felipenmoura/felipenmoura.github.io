@@ -1,0 +1,1 @@
+{"name":"http_date","purpose":"Compose HTTP RFC compliant date","manualid":"function.http-date","version":"PECL pecl_http >= 0.1.0","params":[{"name":"timestamp","type":"int","optional":"true"}],"return":{"type":"string","description":"Returns the HTTP date as string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"date"}]}

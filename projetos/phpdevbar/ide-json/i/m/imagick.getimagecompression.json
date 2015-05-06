@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageCompression","purpose":"Gets the current image's compression type","manualid":"function.imagick-getimagecompression","version":false,"params":[],"return":{"type":"int","description":"Returns the compression constant"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

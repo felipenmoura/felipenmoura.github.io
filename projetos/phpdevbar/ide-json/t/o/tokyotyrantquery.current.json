@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.current","purpose":"Returns the current element","manualid":"tokyotyrantquery.current","version":false,"params":[],"return":{"type":"array","description":"Returns the current row"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

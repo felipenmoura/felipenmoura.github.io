@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.callHasChildren","purpose":"Has children","manualid":"recursiveiteratoriterator.callhaschildren","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the element has children, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

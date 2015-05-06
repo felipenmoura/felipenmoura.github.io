@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.getDepth","purpose":"Get the current depth of the recursive iteration","manualid":"recursiveiteratoriterator.getdepth","version":false,"params":[],"return":{"type":"int","description":"The current depth of the recursive iteration."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"DOMDocumentFragment.appendXML","purpose":"Append raw XML data","manualid":"domdocumentfragment.appendxml","version":false,"params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"cairo_push_group","purpose":"The pushGroup purpose","manualid":"cairocontext.pushgroup","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

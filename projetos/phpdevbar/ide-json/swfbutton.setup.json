@@ -1,0 +1,1 @@
+{"name":"SWFButton.setUp","purpose":"Alias for addShape(shape, SWFBUTTON_UP)","manualid":"function.swfbutton.setup","version":false,"params":[{"name":"shape","type":"SWFShape","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false}]}

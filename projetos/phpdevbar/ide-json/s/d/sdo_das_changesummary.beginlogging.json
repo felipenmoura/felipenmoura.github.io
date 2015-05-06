@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_ChangeSummary.beginLogging","purpose":"Begin change logging","manualid":"function.sdo-das-changesummary-beginlogging","version":false,"params":[],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

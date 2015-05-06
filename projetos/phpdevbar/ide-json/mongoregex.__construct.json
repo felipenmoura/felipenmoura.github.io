@@ -1,0 +1,1 @@
+{"name":"MongoRegex.__construct","purpose":"Creates a new regular expression","manualid":"mongoregex.construct","version":false,"params":[{"name":"regex","type":"string","optional":"false"}],"return":{"type":null,"description":"Returns a new regular expression."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"MongoRegex::__toString"}]}

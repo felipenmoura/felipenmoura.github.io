@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.setIteratorFirstRow","purpose":"Sets the pixel iterator to the first pixel row","manualid":"function.imagickpixeliterator-setiteratorfirstrow","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"udm_errno","purpose":"Get mnoGoSearch error number","manualid":"function.udm-errno","version":"PHP 4 >= 4.0.5, PHP 5 <= 5.0.5, PECL mnogosearch >= 1.0.0","params":[{"name":"agent","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the mnoGoSearch error number, zero if no error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

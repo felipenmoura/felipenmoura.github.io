@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagefilename","purpose":"Sets the filename of a particular image in a sequence","manualid":"gmagick.setimagefilename","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

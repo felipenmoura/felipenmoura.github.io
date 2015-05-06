@@ -1,0 +1,1 @@
+{"name":"GearmanClient.runTasks","purpose":"Run a list of tasks in parallel","manualid":"gearmanclient.runtasks","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::addTask"}]}

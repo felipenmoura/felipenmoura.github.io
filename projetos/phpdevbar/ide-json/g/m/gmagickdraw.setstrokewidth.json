@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setstrokewidth","purpose":"Sets the width of the stroke used to draw object outlines.","manualid":"gmagickdraw.setstrokewidth","version":false,"params":[{"name":"width","type":"float","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

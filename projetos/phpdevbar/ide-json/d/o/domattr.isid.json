@@ -1,0 +1,1 @@
+{"name":"DOMAttr.isId","purpose":"Checks if attribute is a defined ID","manualid":"domattr.isid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

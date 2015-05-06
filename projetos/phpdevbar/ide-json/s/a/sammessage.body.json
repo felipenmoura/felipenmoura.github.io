@@ -1,0 +1,1 @@
+{"name":"SAMMessage.body","purpose":"The body of the message.","manualid":"function.sammessage-body","version":false,"params":[],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

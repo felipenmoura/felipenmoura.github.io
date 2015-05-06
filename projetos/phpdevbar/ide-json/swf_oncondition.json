@@ -1,0 +1,1 @@
+{"name":"swf_oncondition","purpose":"Describe a transition used to trigger an action list","manualid":"function.swf-oncondition","version":"PHP 4","params":[{"name":"transition","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

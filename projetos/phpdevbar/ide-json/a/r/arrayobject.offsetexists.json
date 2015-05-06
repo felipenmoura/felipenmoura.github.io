@@ -1,0 +1,1 @@
+{"name":"ArrayObject.offsetExists","purpose":"Returns whether the requested index exists","manualid":"arrayobject.offsetexists","version":false,"params":[{"name":"index","type":"mixed","optional":"false"}],"return":{"type":"bool","description":"TRUE if the requested index exists, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

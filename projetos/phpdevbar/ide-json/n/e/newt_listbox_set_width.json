@@ -1,0 +1,1 @@
+{"name":"newt_listbox_set_width","purpose":"","manualid":"function.newt-listbox-set-width","version":"PECL newt >= 0.1","params":[{"name":"listbox","type":"resource","optional":"false"},{"name":"width","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

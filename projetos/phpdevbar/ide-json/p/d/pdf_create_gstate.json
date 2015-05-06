@@ -1,0 +1,1 @@
+{"name":"PDF_create_gstate","purpose":"Create graphics state object","manualid":"function.pdf-create-gstate","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"optlist","type":"string","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

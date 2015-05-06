@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getHeader","purpose":"Get header","manualid":"function.httpmessage-getheader","version":false,"params":[{"name":"header","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the header value on success or NULL if the header does not exist."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

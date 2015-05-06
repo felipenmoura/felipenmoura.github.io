@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getQueryData","purpose":"Get query data","manualid":"function.httprequest-getquerydata","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the urlencoded query."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

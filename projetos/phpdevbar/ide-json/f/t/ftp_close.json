@@ -1,0 +1,1 @@
+{"name":"ftp_close","purpose":"Closes an FTP connection","manualid":"function.ftp-close","version":"PHP 4 >= 4.2.0, PHP 5","params":[{"name":"ftp_stream","type":"resource","optional":"false"}],"return":{"type":"resource","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ftp_connect"}]}

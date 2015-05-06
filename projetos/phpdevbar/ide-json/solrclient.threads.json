@@ -1,0 +1,1 @@
+{"name":"SolrClient.threads","purpose":"Checks the threads status","manualid":"solrclient.threads","version":false,"params":[],"return":{"type":"void","description":"Returns a SolrGenericResponse object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"IteratorIterator.__construct","purpose":"Create an iterator from anything that is traversable","manualid":"iteratoriterator.construct","version":false,"params":[{"name":"iterator","type":"Traversable","optional":"false"}],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

@@ -1,0 +1,1 @@
+{"name":"odbc_fetch_row","purpose":"Fetch a row","manualid":"function.odbc-fetch-row","version":"PHP 4, PHP 5","params":[{"name":"result_id","type":"resource","optional":"false"},{"name":"row_number","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE if there was a row, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

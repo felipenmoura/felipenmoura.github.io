@@ -1,0 +1,1 @@
+{"name":"HaruDoc.__construct","purpose":"Construct new HaruDoc instance","manualid":"function.harudoc-construct","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

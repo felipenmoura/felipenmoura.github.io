@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getVectorGraphics","purpose":"Returns a string containing vector graphics","manualid":"function.imagickdraw-getvectorgraphics","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the vector graphics."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

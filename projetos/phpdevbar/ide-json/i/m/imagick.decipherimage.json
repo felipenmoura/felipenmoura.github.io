@@ -1,0 +1,1 @@
+{"name":"Imagick.decipherImage","purpose":"Deciphers an image","manualid":"function.imagick-decipherimage","version":false,"params":[{"name":"passphrase","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"Imagick::encipherImage"}]}

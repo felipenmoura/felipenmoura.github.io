@@ -1,0 +1,1 @@
+{"name":"SoapParam.__construct","purpose":"SoapParam constructor","manualid":"soapparam.construct","version":false,"params":[{"name":"data","type":"mixed","optional":"false"},{"name":"name","type":"string","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

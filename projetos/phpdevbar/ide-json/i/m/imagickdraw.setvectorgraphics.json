@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setVectorGraphics","purpose":"Sets the vector graphics","manualid":"function.imagickdraw-setvectorgraphics","version":false,"params":[{"name":"xml","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

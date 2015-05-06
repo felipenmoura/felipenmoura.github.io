@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagerenderingintent","purpose":"Gets the image rendering intent","manualid":"gmagick.getimagerenderingintent","version":false,"params":[],"return":{"type":"void","description":"Extracts a region of the image and returns it as a a new wand"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"GearmanClient.setOptions","purpose":"Set client options","manualid":"gearmanclient.setoptions","version":false,"params":[{"name":"options","type":"int","optional":"false"}],"return":{"type":"bool","description":"Always returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_Frame.getSize","purpose":"Returns the size of the frame in bytes","manualid":"id3v2frame.getSize","version":false,"params":[],"return":{"type":"int","description":"Returns the size of the frame in bytes"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

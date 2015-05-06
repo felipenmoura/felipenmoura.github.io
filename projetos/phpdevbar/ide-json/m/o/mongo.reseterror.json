@@ -1,0 +1,1 @@
+{"name":"Mongo.resetError","purpose":"Clears any flagged errors on the connection [deprecated]","manualid":"mongo.reseterror","version":false,"params":[],"return":{"type":"array","description":"Returns the database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

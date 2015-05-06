@@ -1,0 +1,1 @@
+{"name":"SplFileObject.hasChildren","purpose":"SplFileObject does not have children","manualid":"splfileobject.haschildren","version":false,"params":[],"return":{"type":"bool","description":"Returns FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RecursiveIterator::hasChildren"}]}

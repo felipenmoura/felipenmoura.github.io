@@ -1,0 +1,1 @@
+{"name":"SphinxClient.getLastWarning","purpose":"Get the last warning","manualid":"sphinxclient.getlastwarning","version":false,"params":[],"return":{"type":"string","description":"Returns the last warning message or an empty string if there were no warnings."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

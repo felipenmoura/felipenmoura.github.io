@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.setXMLVersion","purpose":"Sets the given string as xml version","manualid":"function.sdo-das-xml-document-setxmlversion","version":false,"params":[{"name":"xmlVersion","type":"string","optional":"false"}],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

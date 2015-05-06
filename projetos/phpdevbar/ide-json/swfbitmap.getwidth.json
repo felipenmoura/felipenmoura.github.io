@@ -1,0 +1,1 @@
+{"name":"SWFBitmap.getWidth","purpose":"Returns the bitmap's width","manualid":"function.swfbitmap.getwidth","version":false,"params":[],"return":{"type":"float","description":"Returns the bitmap width in pixels."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

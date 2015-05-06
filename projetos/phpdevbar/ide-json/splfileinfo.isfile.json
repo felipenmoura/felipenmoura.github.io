@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.isFile","purpose":"Tells if the object references a regular file","manualid":"splfileinfo.isfile","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the file exists and is a regular file (not a link), FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

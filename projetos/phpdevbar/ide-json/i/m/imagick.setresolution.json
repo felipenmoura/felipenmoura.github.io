@@ -1,0 +1,1 @@
+{"name":"Imagick.setResolution","purpose":"Sets the image resolution","manualid":"function.imagick-setresolution","version":false,"params":[{"name":"x_resolution","type":"float","optional":"false"},{"name":"y_resolution","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

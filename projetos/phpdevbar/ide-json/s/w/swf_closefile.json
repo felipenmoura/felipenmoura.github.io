@@ -1,0 +1,1 @@
+{"name":"swf_closefile","purpose":"Close the current Shockwave Flash file","manualid":"function.swf-closefile","version":"PHP 4","params":[{"name":"return_file","type":"int","optional":"true"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_openfile"}]}

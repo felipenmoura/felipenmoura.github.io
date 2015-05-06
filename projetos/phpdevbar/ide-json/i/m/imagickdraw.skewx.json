@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.skewX","purpose":"Skews the current coordinate system in the horizontal direction","manualid":"function.imagickdraw-skewx","version":false,"params":[{"name":"degrees","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

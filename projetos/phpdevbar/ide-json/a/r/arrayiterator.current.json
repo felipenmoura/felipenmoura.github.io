@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.current","purpose":"Return current array entry","manualid":"arrayiterator.current","version":false,"params":[],"return":{"type":"array","description":"The current array entry."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.clone","purpose":"Makes an exact copy of the specified ImagickDraw object","manualid":"function.imagickdraw-clone","version":false,"params":[],"return":{"type":"ImagickDraw","description":"What the function returns, first on success, then on failure. See\n   also the &return.success; entity"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

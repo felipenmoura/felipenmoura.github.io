@@ -1,0 +1,1 @@
+{"name":"DOMNode.cloneNode","purpose":"Clones a node","manualid":"domnode.clonenode","version":false,"params":[{"name":"deep","type":"bool","optional":"true"}],"return":{"type":"DOMNode","description":"The cloned node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

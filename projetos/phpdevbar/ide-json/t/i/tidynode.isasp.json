@@ -1,0 +1,1 @@
+{"name":"tidyNode.isAsp","purpose":"Checks if this node is ASP","manualid":"tidynode.isasp","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the node is ASP, FALSE otherwise."},"errors":null,"notes":[{"type":"note","description":"This function was named tidy_node::is_asp in\n    PHP 4\/Tidy 1."}],"changelog":[],"seealso":[]}

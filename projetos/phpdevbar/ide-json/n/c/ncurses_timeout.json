@@ -1,0 +1,1 @@
+{"name":"ncurses_timeout","purpose":"Set timeout for special key sequences","manualid":"function.ncurses-timeout","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[{"name":"millisec","type":"int","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

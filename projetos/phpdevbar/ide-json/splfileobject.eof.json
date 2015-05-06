@@ -1,0 +1,1 @@
+{"name":"SplFileObject.eof","purpose":"Reached end of file","manualid":"splfileobject.eof","version":false,"params":[],"return":{"type":"boolean","description":"Returns TRUE if file is at EOF, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplFileObject::valid"},{"type":"function","name":"feof"}]}

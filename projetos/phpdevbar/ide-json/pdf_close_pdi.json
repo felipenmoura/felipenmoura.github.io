@@ -1,0 +1,1 @@
+{"name":"PDF_close_pdi","purpose":"Close the input PDF document [deprecated]","manualid":"function.pdf-close-pdi","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"},{"name":"doc","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

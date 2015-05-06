@@ -1,0 +1,1 @@
+{"name":"RarEntry.getVersion","purpose":"Get minimum version of RAR program required to unpack the entry.","manualid":"rarentry.getversion","version":false,"params":[],"return":{"type":"int","description":"Returns the version or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ReflectionMethod.getDeclaringClass","purpose":"Gets declaring class","manualid":"reflectionmethod.getdeclaringclass","version":false,"params":[],"return":{"type":"ReflectionClass","description":"A ReflectionClass."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionMethod::isAbstract"}]}

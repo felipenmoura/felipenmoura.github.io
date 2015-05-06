@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageInterlaceScheme","purpose":"Gets the image interlace scheme","manualid":"function.imagick-getimageinterlacescheme","version":false,"params":[],"return":{"type":"int","description":"Returns the interlace scheme as an integer on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

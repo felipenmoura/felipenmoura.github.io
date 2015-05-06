@@ -1,0 +1,1 @@
+{"name":"enchant_broker_describe","purpose":"Enumerates the Enchant providers","manualid":"function.enchant-broker-describe","version":"PECL enchant >= 0.1.0","params":[{"name":"broker","type":"resource","optional":"false"}],"return":{"type":"array","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

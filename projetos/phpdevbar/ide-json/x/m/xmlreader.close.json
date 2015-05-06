@@ -1,0 +1,1 @@
+{"name":"XMLReader.close","purpose":"Close the XMLReader input","manualid":"xmlreader.close","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"XMLReader::open"},{"type":"methodname","name":"XMLReader::xml"}]}

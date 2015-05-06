@@ -1,0 +1,66 @@
+<img src="slides/f1/bg.png" class="far fulfill"/>
+<div id="f1-car">
+    <img src="slides/f1/wheel-1.png" />
+    <img src="slides/f1/wheel-2.png" />
+</div>
+<div class="close mv-closer white-content">
+    <h2>Design</h2>
+</div>
+
+<script>
+    
+    PPW.addAction({
+        timing: 'auto',
+        does: function(){
+            PPW.lock();
+        }
+    });
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            var el= document.getElementById('f1-car'),
+                l= document.body.clientWidth /2 - el.offsetWidth/2 + 'px';
+                
+            $(el).css('left', l).addClass('active');
+            setTimeout(function(){
+                $(el).removeClass('active');
+            }, 2000);
+        },
+        undo: function(){
+            var el= document.getElementById('f1-car'),
+                l= -(el.offsetWidth) + 'px';
+            
+            $(el).css('left', l).removeClass('active');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 2000,
+        does: function(){
+            var el= document.getElementById('f1-car'),
+                l= document.body.clientWidth + 'px';
+            
+            $(el).css('left', l).addClass('active-out');
+            setTimeout(function(){
+                $(el).removeClass('active-out');
+                PPW.goNextSlide();
+            }, 2000);
+        },
+        undo: function(){
+            var el= document.getElementById('f1-car'),
+                l= document.body.clientWidth /2 - el.offsetWidth/2 + 'px';
+            
+            $(el).css('left', l).removeClass('active-out');
+            
+        }
+    });
+    
+    /*PPW.addAction({
+        timing: 2000,
+        does: function(){
+            PPW.goNextSlide();
+        }
+    });*/
+
+</script>

@@ -1,0 +1,1 @@
+{"name":"MongoGridFS.findOne","purpose":"Returns a single file matching the criteria","manualid":"mongogridfs.findone","version":false,"params":[{"name":"query","type":"mixed","optional":"true","initializer":"array()"}],"return":{"type":"MongoGridFSFile","description":"Returns a MongoGridFSFile or NULL."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

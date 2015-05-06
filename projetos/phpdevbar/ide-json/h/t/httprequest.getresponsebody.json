@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getResponseBody","purpose":"Get response body","manualid":"function.httprequest-getresponsebody","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the response body."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

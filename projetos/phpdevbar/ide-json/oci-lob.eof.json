@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.eof","purpose":"Tests for end-of-file on a large object's descriptor","manualid":"function.oci-lob-eof","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if internal pointer of large object is at the end of LOB.\n   Otherwise returns FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

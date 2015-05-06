@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setFont","purpose":"Sets the fully-specified font to use when annotating with text","manualid":"function.imagickdraw-setfont","version":false,"params":[{"name":"font_name","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

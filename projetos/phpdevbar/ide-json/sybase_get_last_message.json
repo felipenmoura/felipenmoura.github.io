@@ -1,0 +1,1 @@
+{"name":"sybase_get_last_message","purpose":"Returns the last message from the server","manualid":"function.sybase-get-last-message","version":"PHP 4, PHP 5","params":[],"return":{"type":"string","description":"Returns the message as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"sybase_min_message_severity"}]}

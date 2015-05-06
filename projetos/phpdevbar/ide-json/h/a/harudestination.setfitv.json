@@ -1,0 +1,1 @@
+{"name":"HaruDestination.setFitV","purpose":"Set the appearance of the page to fit the window height","manualid":"function.harudestination-setfitv","version":false,"params":[{"name":"left","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"newt_checkbox_tree_set_current","purpose":"","manualid":"function.newt-checkbox-tree-set-current","version":"PECL newt >= 0.1","params":[{"name":"checkboxtree","type":"resource","optional":"false"},{"name":"data","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

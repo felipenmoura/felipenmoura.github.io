@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getOptions","purpose":"Get options","manualid":"function.httprequest-getoptions","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array containing currently set options."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"event_base_free","purpose":"Destroy event base","manualid":"function.event-base-free","version":"PECL libevent >= 0.0.1","params":[{"name":"event_base","type":"resource","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

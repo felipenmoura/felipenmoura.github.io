@@ -1,0 +1,1 @@
+{"name":"ReflectionProperty.getName","purpose":"Gets property name","manualid":"reflectionproperty.getname","version":false,"params":[],"return":{"type":"string","description":"The name of the reflected property."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionProperty::getValue"}]}

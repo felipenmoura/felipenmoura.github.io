@@ -1,0 +1,1 @@
+{"name":"hw_api_object.title","purpose":"Returns the title attribute","manualid":"function.hwapi-object-title","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"string","description":"Returns the title as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.setfont","purpose":"Sets the fully-specified font to use when annotating with text.","manualid":"gmagickdraw.setfont","version":false,"params":[{"name":"font","type":"string","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

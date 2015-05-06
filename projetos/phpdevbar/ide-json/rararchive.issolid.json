@@ -1,0 +1,1 @@
+{"name":"RarArchive.isSolid","purpose":"Check whether the RAR archive is solid.","manualid":"rararchive.issolid","version":false,"params":[{"name":"rarfile","type":"RarArchive","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE if the archive is solid, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

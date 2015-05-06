@@ -1,0 +1,1 @@
+{"name":"PDF_setpolydash","purpose":"Set complicated dash pattern [deprecated]","manualid":"function.pdf-setpolydash","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

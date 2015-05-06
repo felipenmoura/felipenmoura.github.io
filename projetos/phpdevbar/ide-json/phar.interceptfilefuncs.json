@@ -1,0 +1,1 @@
+{"name":"Phar.interceptFileFuncs","purpose":"instructs phar to intercept fopen, file_get_contents, opendir, and all of the stat-related functions","manualid":"phar.interceptfilefuncs","version":false,"params":[],"return":{"type":"void","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

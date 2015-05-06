@@ -1,0 +1,1 @@
+{"name":"RarEntry.getName","purpose":"Get name of the entry.","manualid":"rarentry.getname","version":false,"params":[],"return":{"type":"string","description":"Returns the entry name as a string, or FALSE on error."},"errors":null,"notes":[],"changelog":[{"version":"2.0.0","change":"As of version 2.0.0, the returned string is encoded in Unicode\/UTF-8."}],"seealso":[]}

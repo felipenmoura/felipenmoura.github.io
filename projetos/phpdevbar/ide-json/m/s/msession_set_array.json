@@ -1,0 +1,1 @@
+{"name":"msession_set_array","purpose":"Set msession variables from an array","manualid":"function.msession-set-array","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"session","type":"string","optional":"false"},{"name":"tuples","type":"array","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

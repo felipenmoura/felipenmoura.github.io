@@ -1,0 +1,1 @@
+{"name":"PDF_end_document","purpose":"Close PDF file","manualid":"function.pdf-end-document","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"optlist","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

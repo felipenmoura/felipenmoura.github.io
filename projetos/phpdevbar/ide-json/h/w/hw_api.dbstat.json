@@ -1,0 +1,1 @@
+{"name":"hw_api.dbstat","purpose":"Returns statistics about database server","manualid":"function.hwapi-dbstat","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"hw_api_object","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false},{"type":false,"name":false},{"type":false,"name":false}]}

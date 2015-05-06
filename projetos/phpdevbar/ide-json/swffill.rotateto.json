@@ -1,0 +1,1 @@
+{"name":"SWFFill.rotateTo","purpose":"Sets fill's rotation","manualid":"function.swffill.rotateto","version":false,"params":[{"name":"angle","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

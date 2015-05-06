@@ -1,0 +1,1 @@
+{"name":"HttpMessage.setBody","purpose":"Set message body","manualid":"function.httpmessage-setbody","version":false,"params":[{"name":"body","type":"string","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"PDF_end_template","purpose":"Finish template","manualid":"function.pdf-end-template","version":"PHP 4 >= 4.0.5, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

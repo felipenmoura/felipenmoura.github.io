@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageCompose","purpose":"Returns the composite operator associated with the image","manualid":"function.imagick-getimagecompose","version":false,"params":[],"return":{"type":"int","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

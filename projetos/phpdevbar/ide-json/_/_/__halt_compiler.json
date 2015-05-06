@@ -1,0 +1,1 @@
+{"name":"__halt_compiler","purpose":"Halts the compiler execution","manualid":"function.halt-compiler","version":"PHP 5 >= 5.1.0","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[{"type":"note","description":"__halt_compiler can only be used from the outermost\n    scope."}],"changelog":[],"seealso":[]}

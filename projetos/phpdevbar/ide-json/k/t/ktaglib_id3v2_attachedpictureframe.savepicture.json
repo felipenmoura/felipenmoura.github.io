@@ -1,0 +1,1 @@
+{"name":"KTaglib_ID3v2_AttachedPictureFrame.savePicture","purpose":"Saves the picture to a file","manualid":"id3v2attachedpictureframe.savePicture","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns true on success, otherwise false"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

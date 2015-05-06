@@ -1,0 +1,1 @@
+{"name":"geoip_id_by_name","purpose":"Get the Internet connection speed","manualid":"function.geoip-id-by-name","version":"PECL geoip >= 0.2.0","params":[{"name":"hostname","type":"string","optional":"false"}],"return":{"type":"int","description":"Returns the net speed."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

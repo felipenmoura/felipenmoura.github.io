@@ -1,0 +1,1 @@
+{"name":"fbsql_rows_fetched","purpose":"Get the number of rows affected by the last statement","manualid":"function.fbsql-rows-fetched","version":"PHP 5 >= 5.1.0","params":[{"name":"result","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the number of rows, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

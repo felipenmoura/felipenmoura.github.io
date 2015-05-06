@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsMaxCount","purpose":"Returns the maximum document frequency","manualid":"solrquery.gettermsmaxcount","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

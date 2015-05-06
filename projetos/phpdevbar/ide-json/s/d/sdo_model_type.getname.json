@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.getName","purpose":"Get the name of the type","manualid":"function.sdo-model-type-getname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the type."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

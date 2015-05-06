@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagecolors","purpose":"Returns the color of the specified colormap index","manualid":"gmagick.getimagecolors","version":false,"params":[],"return":{"type":"void","description":"The number of colors in image."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

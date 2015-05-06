@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.destroy","purpose":"Frees all associated resources","manualid":"function.imagickdraw-destroy","version":false,"params":[],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

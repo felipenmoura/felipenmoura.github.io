@@ -1,0 +1,1 @@
+{"name":"SQLite3Result.finalize","purpose":"Closes the result set","manualid":"sqlite3result.finalize","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

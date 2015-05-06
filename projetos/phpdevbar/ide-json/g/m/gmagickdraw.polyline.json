@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.polyline","purpose":"Draws a polyline","manualid":"gmagickdraw.polyline","version":false,"params":[{"name":"coordinate_array","type":"array","optional":"false"}],"return":{"type":"void","description":"The GmagickDraw object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

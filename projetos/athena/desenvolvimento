@@ -1,0 +1,20 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="12">
+            <File firstVisibleLine="603" xOffset="0" scrollWidth="1360" startPos="22724" endPos="22724" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\index.php" />
+            <File firstVisibleLine="158" xOffset="716" scrollWidth="2169" startPos="6074" endPos="6298" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\processo\processo_view_data.php" />
+            <File firstVisibleLine="304" xOffset="0" scrollWidth="384" startPos="5996" endPos="5996" selMode="0" lang="CSS" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\styles\estilos.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="808" startPos="888" endPos="888" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\processo\processos_viewer.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="568" startPos="805" endPos="805" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\processo\ger_processo.php" />
+            <File firstVisibleLine="1797" xOffset="0" scrollWidth="3856" startPos="57759" endPos="57759" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\components.php" />
+            <File firstVisibleLine="204" xOffset="0" scrollWidth="992" startPos="5585" endPos="5585" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\processo\processo_add.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1857" startPos="639" endPos="639" selMode="0" lang="Javascript" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\scripts\processo.js" />
+            <File firstVisibleLine="56" xOffset="0" scrollWidth="640" startPos="2441" endPos="2441" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\explorer_tool.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="800" startPos="721" endPos="752" selMode="0" lang="PHP" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\ger_clientes_list.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1240" startPos="708" endPos="708" selMode="0" lang="Javascript" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\scripts\clientes.js" />
+            <File firstVisibleLine="172" xOffset="0" scrollWidth="2088" startPos="6910" endPos="6910" selMode="0" lang="Javascript" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\scripts\explorer.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="960" startPos="21" endPos="21" selMode="0" lang="Javascript" filename="D:\server\apache\htdocs\FlpNM\athenas\dev\main_logged\scripts\flp_tree.js" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

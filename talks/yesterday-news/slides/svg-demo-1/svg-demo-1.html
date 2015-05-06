@@ -1,0 +1,15 @@
+<h2>SVG Demo</h2>
+<iframe id="svg-eg-1"
+        style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%;"
+        src="javascript:void(0);">
+</iframe>
+<div class="fulfill"></div>
+
+<script>
+    PPW.onSlideEnter(function(){
+        $('#svg-eg-1').attr('src', 'https://developer.cdn.mozilla.net/media/uploads/demos/d/m/dmatthams/91ff736681b397cdb58667fa1c0e9e6e/leica_1334757882_demo_package/index.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#svg-eg-1').attr('src', 'javascript:void(0);');
+    });
+</script>

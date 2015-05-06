@@ -1,0 +1,1 @@
+{"name":"Imagick.stereoImage","purpose":"Composites two images","manualid":"function.imagick-stereoimage","version":false,"params":[{"name":"offset_wand","type":"Imagick","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

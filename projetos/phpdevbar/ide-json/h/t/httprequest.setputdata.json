@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setPutData","purpose":"Set put data","manualid":"function.httprequest-setputdata","version":false,"params":[{"name":"put_data","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

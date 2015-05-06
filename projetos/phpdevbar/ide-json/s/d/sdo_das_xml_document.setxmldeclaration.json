@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_XML_Document.setXMLDeclaration","purpose":"Sets the xml declaration","manualid":"function.sdo-das-xml-document-setxmldeclaration","version":false,"params":[{"name":"xmlDeclatation","type":"bool","optional":"false"}],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

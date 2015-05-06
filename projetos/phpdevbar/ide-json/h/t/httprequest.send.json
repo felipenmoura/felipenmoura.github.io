@@ -1,0 +1,1 @@
+{"name":"HttpRequest.send","purpose":"Send request","manualid":"function.httprequest-send","version":false,"params":[],"return":{"type":"HttpMessage","description":"Returns the received response as HttpMessage object."},"errors":"Throws HttpRuntimeException, HttpRequestException, HttpMalformedHeaderException, HttpEncodingException.","notes":[],"changelog":[],"seealso":[]}

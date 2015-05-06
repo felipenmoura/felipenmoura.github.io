@@ -1,0 +1,1 @@
+{"name":"SQLite3Result.numColumns","purpose":"Returns the number of columns in the result set","manualid":"sqlite3result.numcolumns","version":false,"params":[],"return":{"type":"int","description":"Returns the number of columns in the result set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ibase_errcode","purpose":"Return an error code","manualid":"function.ibase-errcode","version":"PHP 5","params":[],"return":{"type":"int","description":"Returns the error code as an integer, or FALSE if no error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ibase_errmsg"}]}

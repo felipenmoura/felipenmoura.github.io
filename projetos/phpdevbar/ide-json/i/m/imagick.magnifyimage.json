@@ -1,0 +1,1 @@
+{"name":"Imagick.magnifyImage","purpose":"Scales an image proportionally 2x","manualid":"function.imagick-magnifyimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

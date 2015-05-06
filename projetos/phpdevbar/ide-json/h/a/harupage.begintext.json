@@ -1,0 +1,1 @@
+{"name":"HaruPage.beginText","purpose":"Begin a text object and set the current text position to (0,0)","manualid":"function.harupage-begintext","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

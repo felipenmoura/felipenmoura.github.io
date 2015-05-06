@@ -1,0 +1,1 @@
+{"name":"Imagick.minifyImage","purpose":"Scales an image proportionally to half its size","manualid":"function.imagick-minifyimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

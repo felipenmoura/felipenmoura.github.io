@@ -1,0 +1,1 @@
+{"name":"ldap_next_reference","purpose":"Get next reference","manualid":"function.ldap-next-reference","version":"PHP 4 >= 4.0.5, PHP 5","params":[{"name":"link","type":"resource","optional":"false"},{"name":"entry","type":"resource","optional":"false"}],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

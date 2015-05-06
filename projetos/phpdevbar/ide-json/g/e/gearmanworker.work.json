@@ -1,0 +1,1 @@
+{"name":"GearmanWorker.work","purpose":"Wait for and perform jobs","manualid":"gearmanworker.work","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanWorker::addFunction"}]}

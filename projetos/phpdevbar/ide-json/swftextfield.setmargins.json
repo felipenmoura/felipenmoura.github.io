@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setMargins","purpose":"Sets the margins width of the text field","manualid":"function.swftextfield.setmargins","version":false,"params":[{"name":"left","type":"float","optional":"false"},{"name":"right","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

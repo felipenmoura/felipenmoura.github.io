@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTermsSort","purpose":"Returns an integer indicating how terms are sorted","manualid":"solrquery.gettermssort","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

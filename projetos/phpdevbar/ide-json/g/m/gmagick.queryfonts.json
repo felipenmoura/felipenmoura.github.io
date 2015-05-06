@@ -1,0 +1,1 @@
+{"name":"Gmagick.queryfonts","purpose":"Returns the configured fonts","manualid":"gmagick.queryfonts","version":false,"params":[],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

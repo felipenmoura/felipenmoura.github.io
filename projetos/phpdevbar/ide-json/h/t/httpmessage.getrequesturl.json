@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getRequestUrl","purpose":"Get request URL","manualid":"function.httpmessage-getrequesturl","version":false,"params":[],"return":{"type":"string","description":"Returns the request URL as string on success, or FALSE if the message\n   is not of type HttpMessage::TYPE_REQUEST."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"printer_delete_pen","purpose":"Delete a pen","manualid":"function.printer-delete-pen","version":"PECL printer SVN","params":[{"name":"pen_handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

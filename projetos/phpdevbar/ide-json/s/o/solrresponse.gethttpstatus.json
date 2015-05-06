@@ -1,0 +1,1 @@
+{"name":"SolrResponse.getHttpStatus","purpose":"Returns the HTTP status of the response","manualid":"solrresponse.gethttpstatus","version":false,"params":[],"return":{"type":"int","description":"Returns the HTTP status of the response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

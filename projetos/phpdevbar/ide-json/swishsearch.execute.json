@@ -1,0 +1,1 @@
+{"name":"SwishSearch.execute","purpose":"Execute the search and get the results","manualid":"function.swishsearch-execute","version":false,"params":[{"name":"query","type":"string","optional":"true"}],"return":{"type":"object","description":"Returns SwishResults object."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

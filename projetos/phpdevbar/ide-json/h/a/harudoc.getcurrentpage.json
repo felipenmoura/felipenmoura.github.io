@@ -1,0 +1,1 @@
+{"name":"HaruDoc.getCurrentPage","purpose":"Return current page of the document","manualid":"function.harudoc-getcurrentpage","version":false,"params":[],"return":{"type":"object","description":"Returns HaruPage instance on success or FALSE \n   if there is no current page at the moment."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

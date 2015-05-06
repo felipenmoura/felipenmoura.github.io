@@ -1,0 +1,1 @@
+{"name":"pspell_new_config","purpose":"Load a new dictionary with settings based on a given config","manualid":"function.pspell-new-config","version":"PHP 4 >= 4.0.2, PHP 5","params":[{"name":"config","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns a dictionary link identifier on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

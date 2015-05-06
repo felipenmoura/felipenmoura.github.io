@@ -1,0 +1,1 @@
+{"name":"HaruPage.getRGBStroke","purpose":"Get the current stroking color","manualid":"function.harupage-getrgbstroke","version":false,"params":[],"return":{"type":"array","description":"Returns the current stroking color."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setRGBStroke"}]}

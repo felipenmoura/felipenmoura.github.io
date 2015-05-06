@@ -1,0 +1,1 @@
+{"name":"LimitIterator.getPosition","purpose":"Return the current position","manualid":"limititerator.getposition","version":false,"params":[],"return":{"type":"int","description":"The current position."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"FilterIterator::key"}]}

@@ -1,0 +1,1 @@
+{"name":"ldap_t61_to_8859","purpose":"Translate t61 characters to 8859 characters","manualid":"function.ldap-t61-to-8859","version":"PHP 4 >= 4.0.2, PHP 5","params":[{"name":"value","type":"string","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"PDF_delete_textflow","purpose":"Delete textflow object","manualid":"function.pdf-delete-textflow","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"textflow","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

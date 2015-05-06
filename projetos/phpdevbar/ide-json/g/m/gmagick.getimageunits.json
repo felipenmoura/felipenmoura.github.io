@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageunits","purpose":"Gets the image units of resolution","manualid":"gmagick.getimageunits","version":false,"params":[],"return":{"type":"void","description":"Returns the image units of resolution."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

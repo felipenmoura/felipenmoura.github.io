@@ -1,0 +1,1 @@
+{"name":"maxdb_enable_reads_from_master","purpose":"Enable reads from master","manualid":"function.maxdb-enable-reads-from-master","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplSubject.detach","purpose":"Detach an observer","manualid":"splsubject.detach","version":false,"params":[{"name":"observer","type":"SplObserver","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

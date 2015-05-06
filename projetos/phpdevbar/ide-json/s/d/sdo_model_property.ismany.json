@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Property.isMany","purpose":"Test to see if the property is many-valued","manualid":"function.sdo-model-property-ismany","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this is a many-valued property, otherwise returns \n   FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

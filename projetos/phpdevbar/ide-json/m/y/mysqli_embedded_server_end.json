@@ -1,0 +1,1 @@
+{"name":"mysqli_embedded_server_end","purpose":"Stop embedded server","manualid":"mysqli-driver.embedded-server-end","version":false,"params":[],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

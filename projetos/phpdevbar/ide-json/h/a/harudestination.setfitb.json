@@ -1,0 +1,1 @@
+{"name":"HaruDestination.setFitB","purpose":"Set the appearance of the page to fit the bounding box of the page within the window","manualid":"function.harudestination-setfitb","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

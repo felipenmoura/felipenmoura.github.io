@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getRows","purpose":"Returns the maximum number of documents","manualid":"solrquery.getrows","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

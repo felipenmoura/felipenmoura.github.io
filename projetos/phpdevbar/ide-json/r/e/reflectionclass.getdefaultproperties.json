@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getDefaultProperties","purpose":"Gets default properties","manualid":"reflectionclass.getdefaultproperties","version":false,"params":[],"return":{"type":"array","description":"An array of default properties."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getProperties"}]}

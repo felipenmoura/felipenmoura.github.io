@@ -1,0 +1,1 @@
+{"name":"MongoDB.getDBRef","purpose":"Fetches the document pointed to by a database reference","manualid":"mongodb.getdbref","version":false,"params":[{"name":"ref","type":"array","optional":"false"}],"return":{"type":"array","description":"Returns the document pointed to by the reference."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

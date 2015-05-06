@@ -1,0 +1,1 @@
+{"name":"ArrayObject.ksort","purpose":"Sort the entries by key","manualid":"arrayobject.ksort","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

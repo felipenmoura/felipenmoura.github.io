@@ -1,0 +1,1 @@
+{"name":"HttpRequest.getHeaders","purpose":"Get headers","manualid":"function.httprequest-getheaders","version":false,"params":[],"return":{"type":"array","description":"Returns an associative array containing all currently set headers."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

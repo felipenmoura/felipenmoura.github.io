@@ -1,0 +1,1 @@
+{"name":"SolrResponse.setParseMode","purpose":"Sets the parse mode","manualid":"solrresponse.setparsemode","version":false,"params":[{"name":"parser_mode","type":"int","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

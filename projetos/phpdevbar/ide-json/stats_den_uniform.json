@@ -1,0 +1,1 @@
+{"name":"stats_den_uniform","purpose":"Not documented","manualid":"function.stats-den-uniform","version":"PECL stats >= 1.0.0","params":[{"name":"x","type":"float","optional":"false"},{"name":"a","type":"float","optional":"false"},{"name":"b","type":"float","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

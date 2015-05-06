@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeAlpha","purpose":"Specifies the opacity of stroked object outlines","manualid":"function.imagickdraw-setstrokealpha","version":false,"params":[{"name":"opacity","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

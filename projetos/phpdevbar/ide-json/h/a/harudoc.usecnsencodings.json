@@ -1,0 +1,1 @@
+{"name":"HaruDoc.useCNSEncodings","purpose":"Enable Chinese simplified encodings","manualid":"function.harudoc-usecnsencodings","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruDoc::useCNSFonts"}]}

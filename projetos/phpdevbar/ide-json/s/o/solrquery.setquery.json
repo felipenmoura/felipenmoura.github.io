@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setQuery","purpose":"Sets the search query","manualid":"solrquery.setquery","version":false,"params":[{"name":"query","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

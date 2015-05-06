@@ -1,0 +1,1 @@
+{"name":"cairo_version_string","purpose":"Retrieves cairo version as string","manualid":"cairo.versionstring","version":false,"params":[],"return":{"type":"string","description":"Current Cairo library version string"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Cairo::version"}]}

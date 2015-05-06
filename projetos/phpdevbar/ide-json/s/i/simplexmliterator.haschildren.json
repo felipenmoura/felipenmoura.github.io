@@ -1,0 +1,1 @@
+{"name":"SimpleXMLIterator.hasChildren","purpose":"Checks whether the current element has sub elements.","manualid":"simplexmliterator.haschildren","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the current element has sub-elements, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"bbcode_create","purpose":"Create a BBCode Resource","manualid":"function.bbcode-create","version":"PECL bbcode >= 0.9.0","params":[{"name":"bbcode_initial_tags","type":"array","optional":"true"}],"return":{"type":"resource","description":"Returns a BBCode_Container"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

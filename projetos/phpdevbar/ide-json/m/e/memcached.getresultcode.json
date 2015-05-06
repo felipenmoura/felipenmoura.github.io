@@ -1,0 +1,1 @@
+{"name":"Memcached.getResultCode","purpose":"Return the result code of the last operation","manualid":"memcached.getresultcode","version":false,"params":[],"return":{"type":"int","description":"Result code of the last Memcached operation."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

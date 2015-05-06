@@ -1,0 +1,1 @@
+{"name":"lcg_value","purpose":"Combined linear congruential generator","manualid":"function.lcg-value","version":"PHP 4, PHP 5","params":[],"return":{"type":"float","description":"A pseudo random float value in the range of (0, 1)"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"rand"},{"type":"function","name":"mt_rand"}]}

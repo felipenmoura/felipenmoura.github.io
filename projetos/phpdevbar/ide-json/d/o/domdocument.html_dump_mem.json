@@ -1,0 +1,1 @@
+{"name":"DomDocument.html_dump_mem","purpose":"Dumps the internal XML tree back into a string as HTML","manualid":"function.domdocument-html-dump-mem","version":false,"params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

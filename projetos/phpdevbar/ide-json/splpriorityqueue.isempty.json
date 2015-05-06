@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.isEmpty","purpose":"Checks whether the queue is empty.","manualid":"splpriorityqueue.isempty","version":false,"params":[],"return":{"type":"bool","description":"Returns whether the queue is empty."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

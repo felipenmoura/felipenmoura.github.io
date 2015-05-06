@@ -1,0 +1,1 @@
+{"name":"shmop_delete","purpose":"Delete shared memory block","manualid":"function.shmop-delete","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"shmid","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

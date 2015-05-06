@@ -1,0 +1,1 @@
+{"name":"SAMConnection.rollback","purpose":"Cancels (rolls back) an in-flight unit of work.","manualid":"function.samconnection-rollback","version":false,"params":[],"return":{"type":"bool","description":"This method returns FALSE if an error occurs."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

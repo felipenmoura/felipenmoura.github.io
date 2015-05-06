@@ -1,0 +1,1 @@
+{"name":"xslt_errno","purpose":"Returns an error number","manualid":"function.xslt-errno","version":"PHP 4 >= 4.0.3","params":[{"name":"xh","type":"resource","optional":"false"}],"return":{"type":"int","description":"Returns the error code, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"xslt_error"}]}

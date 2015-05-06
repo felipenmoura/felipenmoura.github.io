@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getTextDecoration","purpose":"Returns the text decoration","manualid":"function.imagickdraw-gettextdecoration","version":false,"params":[],"return":{"type":"int","description":"Returns one of the DECORATION_ constants\n   and 0 if no decoration is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

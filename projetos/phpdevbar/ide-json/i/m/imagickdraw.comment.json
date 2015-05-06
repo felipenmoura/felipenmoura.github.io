@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.comment","purpose":"Adds a comment","manualid":"function.imagickdraw-comment","version":false,"params":[{"name":"comment","type":"string","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.isSequencedType","purpose":"Test to see if this is a sequenced type","manualid":"function.sdo-model-type-issequencedtype","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this type is sequence, otherwise return FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

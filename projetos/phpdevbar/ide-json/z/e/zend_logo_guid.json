@@ -1,0 +1,1 @@
+{"name":"zend_logo_guid","purpose":"Gets the Zend guid","manualid":"function.zend-logo-guid","version":"PHP 4, PHP 5","params":[],"return":{"type":"string","description":"Returns PHPE9568F35-D428-11d2-A769-00AA001ACF42."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"php_logo_guid"}]}

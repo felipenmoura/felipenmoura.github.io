@@ -1,0 +1,1 @@
+{"name":"date_modify","purpose":"Alias of DateTime::modify","manualid":"function.date-modify","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

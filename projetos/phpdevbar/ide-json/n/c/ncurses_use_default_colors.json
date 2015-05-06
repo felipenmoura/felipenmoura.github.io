@@ -1,0 +1,1 @@
+{"name":"ncurses_use_default_colors","purpose":"Assign terminal default colors to color id -1","manualid":"function.ncurses-use-default-colors","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

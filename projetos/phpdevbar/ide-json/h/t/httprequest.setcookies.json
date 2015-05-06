@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setCookies","purpose":"Set cookies","manualid":"function.httprequest-setcookies","version":false,"params":[{"name":"cookies","type":"array","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setStart","purpose":"Specifies the number of rows to skip","manualid":"solrquery.setstart","version":false,"params":[{"name":"start","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

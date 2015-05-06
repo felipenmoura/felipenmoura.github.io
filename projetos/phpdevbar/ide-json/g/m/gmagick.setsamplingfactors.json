@@ -1,0 +1,1 @@
+{"name":"Gmagick.setsamplingfactors","purpose":"Sets the image sampling factors.","manualid":"gmagick.setsamplingfactors","version":false,"params":[{"name":"factors","type":"array","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

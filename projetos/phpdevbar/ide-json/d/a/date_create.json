@@ -1,0 +1,1 @@
+{"name":"date_create","purpose":"Alias of DateTime::__construct","manualid":"function.date-create","version":"PHP 5 >= 5.2.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

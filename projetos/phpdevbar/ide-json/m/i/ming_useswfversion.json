@@ -1,0 +1,1 @@
+{"name":"ming_useswfversion","purpose":"Sets the SWF version","manualid":"function.ming-useswfversion","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.3.0, PECL ming SVN","params":[{"name":"version","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

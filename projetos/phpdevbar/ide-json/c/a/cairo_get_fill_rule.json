@@ -1,0 +1,1 @@
+{"name":"cairo_get_fill_rule","purpose":"The getFillRule purpose","manualid":"cairocontext.getfillrule","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

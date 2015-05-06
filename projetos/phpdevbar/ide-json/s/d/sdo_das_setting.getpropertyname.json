@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_Setting.getPropertyName","purpose":"Get the property name for a changed property","manualid":"function.sdo-das-setting-getpropertyname","version":false,"params":[],"return":{"type":"string","description":"The property name for a changed property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoBinData.__toString","purpose":"The string representation of this binary data object.","manualid":"mongobindata.tostring","version":false,"params":[],"return":{"type":"string","description":"Returns the string \"<Mongo Binary Data>\".  To access the contents of a \n   MongoBinData, use the bin field."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

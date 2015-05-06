@@ -1,0 +1,1 @@
+{"name":"Imagick.medianFilterImage","purpose":"Applies a digital filter","manualid":"function.imagick-medianfilterimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

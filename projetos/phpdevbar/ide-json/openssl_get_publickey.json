@@ -1,0 +1,1 @@
+{"name":"openssl_get_publickey","purpose":"Alias of openssl_pkey_get_public","manualid":"function.openssl-get-publickey","version":"PHP 4 >= 4.0.4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HaruOutline.setDestination","purpose":"Set the destination for the outline","manualid":"function.haruoutline-setdestination","version":false,"params":[{"name":"destination","type":"object","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

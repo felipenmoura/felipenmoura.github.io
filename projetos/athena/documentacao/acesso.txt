@@ -1,0 +1,94 @@
+http://painel.plugin.com.br/
+Usuário: pcFELIPEDk0
+Senha: dylx350
+
+Banco de dados Postgre SQL:
+Servidor: pgsql-srv03.plugin.com.br
+Banco: f2jweb
+Usuário: f2jweb
+Senha: xeke531
+
+
+» DNS
+Domínio:
+	f2jweb.com
+
+Master:
+	ns1.plugin.com.br
+
+Slave1:
+	ns2.plugin.com.br
+ 
+» FTP*
+Host ou Servidor:
+	plughost05.plugin.com.br
+
+Usuário:
+	hpf2jweb
+
+Senha:
+	xeme369
+	
+	
+####################################
+		ftp.f2jweb.com
+		user: hpf2jweb
+		senha: f2jw3b
+/**********************************/
+	
+	
+
+*Na atualização via FTP os arquivos deverão ser colocados sob o folder "html" e a página de entrada deverá chamar-se "index.html"
+*Estas instruções são validas a partir da conclusão do registro ou transferência de domínio.
+ 
+» E-mails*
+
+Servidor POP3::
+	correio.f2jweb.com
+
+Servidor SMTP:
+	smtp.f2jweb.com
+
+Antes de configurar as contas em seu software de e-mails você deve criá-las no Painel de Controle
+Para sua facilidade, utilize o configurador automático de e-mail http://www.plugin.com.br/?pag=central-config-outlook
+Você poderá acessar suas contas de e-mail pelo webmail Plug In http://webmail.plugin.com.br/
+ 
+» Contato no Cliente
+Nome:
+	FELIPE DO NASCIMENTO DE MOURA
+
+Telefone
+	051 84255530
+
+E-mail:
+	felipenmoura@gmail.com
+ 
+» Dados de Cobrança
+Forma de Pagamento:
+	Boleto bancário
+
+E-mail de Cobrança
+	
+
+Endereço de Cobrança
+	Avai,, 22/apto. 26
+
+Pagamento:
+	Mensal
+ 
+» Pacote Contratado
+Plano:
+	PLUG HOSTING STANDARDPLUSLINUX
+
+Lista de Serviços:
+	
+Serviço 	
+Franquia
+	
+Valor de Franquia
+hosp. standard plus linux 	1000 MB 	R$ 36,10
+contas pop3 1gb 	25 	R$ 0,00
+redirecionamento e-mails 	10 	R$ 0,00
+auto resposta 	10 	R$ 0,00
+streaming on demand 	1 	R$ 0,00
+volume transferencia 	100 GB 	R$ 0,00

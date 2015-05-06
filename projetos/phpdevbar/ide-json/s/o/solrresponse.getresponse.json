@@ -1,0 +1,1 @@
+{"name":"SolrResponse.getResponse","purpose":"Returns a SolrObject representing the XML response from the server","manualid":"solrresponse.getresponse","version":false,"params":[],"return":{"type":"SolrObject","description":"Returns a SolrObject representing the XML response from the server"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

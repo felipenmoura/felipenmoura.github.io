@@ -1,0 +1,1 @@
+{"name":"SolrDocument.getFieldCount","purpose":"Returns the number of fields in this document","manualid":"solrdocument.getfieldcount","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

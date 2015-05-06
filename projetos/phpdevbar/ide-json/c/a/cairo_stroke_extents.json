@@ -1,0 +1,1 @@
+{"name":"cairo_stroke_extents","purpose":"The strokeExtents purpose","manualid":"cairocontext.strokeextents","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"array","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

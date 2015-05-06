@@ -1,0 +1,1 @@
+{"name":"CairoSurface.getDeviceOffset","purpose":"The getDeviceOffset purpose","manualid":"cairosurface.getdeviceoffset","version":false,"params":[],"return":{"type":"array","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

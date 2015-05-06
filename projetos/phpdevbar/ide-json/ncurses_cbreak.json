@@ -1,0 +1,1 @@
+{"name":"ncurses_cbreak","purpose":"Switch of input buffering","manualid":"function.ncurses-cbreak","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"bool","description":"Returns TRUE or NCURSES_ERR if any error occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ncurses_nocbreak"}]}

@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.setSize","purpose":"Change the size of an array","manualid":"splfixedarray.setsize","version":false,"params":[{"name":"size","type":"int","optional":"false"}],"return":{"type":"int","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

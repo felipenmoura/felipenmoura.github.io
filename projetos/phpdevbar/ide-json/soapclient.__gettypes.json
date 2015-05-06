@@ -1,0 +1,1 @@
+{"name":"SoapClient.__getTypes","purpose":"Returns a list of SOAP types","manualid":"soapclient.gettypes","version":false,"params":[],"return":{"type":"array","description":"An array of SOAP types."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SoapClient::SoapClient"}]}

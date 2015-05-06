@@ -1,0 +1,1 @@
+{"name":"hw_InsColl","purpose":"Insert collection","manualid":"function.hw-inscoll","version":"PHP 4","params":[{"name":"connection","type":"int","optional":"false"},{"name":"objectID","type":"int","optional":"false"},{"name":"object_array","type":"array","optional":"false"}],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

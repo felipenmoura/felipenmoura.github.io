@@ -1,0 +1,1 @@
+{"name":"gmp_abs","purpose":"Absolute value","manualid":"function.gmp-abs","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"a","type":"resource","optional":"false"}],"return":{"type":"resource","description":"Returns the absolute value of a, as a GMP number."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SWFTextField.setHeight","purpose":"Sets the font height of this text field font","manualid":"function.swftextfield.setheight","version":false,"params":[{"name":"height","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

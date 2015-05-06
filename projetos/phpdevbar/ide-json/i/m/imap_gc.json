@@ -1,0 +1,1 @@
+{"name":"imap_gc","purpose":"Clears IMAP cache","manualid":"function.imap-gc","version":"PHP 5 >= 5.3.0","params":[{"name":"imap_stream","type":"resource","optional":"false"},{"name":"caches","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns TRUE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

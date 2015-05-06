@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getInode","purpose":"Gets the inode for the file","manualid":"splfileinfo.getinode","version":false,"params":[],"return":{"type":"int","description":"Returns the inode number for the filesystem object."},"errors":"Throws RuntimeException on error.","notes":[],"changelog":[],"seealso":[{"type":"function","name":"fileinode"}]}

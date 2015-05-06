@@ -1,0 +1,1 @@
+{"name":"CachingIterator.__construct","purpose":"Construct a new CachingIterator object for the iterator.","manualid":"cachingiterator.construct","version":false,"params":[{"name":"iterator","type":"Iterator","optional":"false"},{"name":"flags","type":"string","optional":"true"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

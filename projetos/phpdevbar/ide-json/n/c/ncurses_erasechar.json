@@ -1,0 +1,1 @@
+{"name":"ncurses_erasechar","purpose":"Returns current erase character","manualid":"function.ncurses-erasechar","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"string","description":"The current erase char, as a string."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ncurses_killchar"}]}

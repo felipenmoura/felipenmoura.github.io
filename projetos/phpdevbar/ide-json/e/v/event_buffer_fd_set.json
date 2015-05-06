@@ -1,0 +1,1 @@
+{"name":"event_buffer_fd_set","purpose":"Change a buffered event file descriptor","manualid":"function.event-buffer-fd-set","version":"PECL libevent >= 0.0.1","params":[{"name":"bevent","type":"resource","optional":"false"},{"name":"fd","type":"resource","optional":"false"}],"return":{"type":"void","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

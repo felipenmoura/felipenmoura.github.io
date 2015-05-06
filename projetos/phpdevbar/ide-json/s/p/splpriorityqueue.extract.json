@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.extract","purpose":"Extracts a node from top of the heap and sift up.","manualid":"splpriorityqueue.extract","version":false,"params":[],"return":{"type":"mixed","description":"The value or priority (or both) of the extracted node, depending on the extract flag."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

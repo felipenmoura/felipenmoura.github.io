@@ -1,0 +1,1 @@
+{"name":"newt_finished","purpose":"Uninitializes newt interface","manualid":"function.newt-finished","version":"PECL newt >= 0.1","params":[],"return":{"type":"int","description":"Returns 1 on success, 0 on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"newt_init"}]}

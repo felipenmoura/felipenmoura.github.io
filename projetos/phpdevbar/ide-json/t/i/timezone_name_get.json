@@ -1,0 +1,1 @@
+{"name":"timezone_name_get","purpose":"Alias of DateTimeZone::getName","manualid":"function.timezone-name-get","version":"PHP 5 >= 5.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

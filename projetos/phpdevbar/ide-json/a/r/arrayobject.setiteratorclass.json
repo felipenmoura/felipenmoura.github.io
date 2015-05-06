@@ -1,0 +1,1 @@
+{"name":"ArrayObject.setIteratorClass","purpose":"Sets the iterator classname for the ArrayObject.","manualid":"arrayobject.setiteratorclass","version":false,"params":[{"name":"iterator_class","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

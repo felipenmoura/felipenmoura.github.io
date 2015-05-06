@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagemattecolor","purpose":"Returns the image matte color","manualid":"gmagick.getimagemattecolor","version":false,"params":[],"return":{"type":"void","description":"Returns GmagickPixel object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.unserialize","purpose":"Unserialize","manualid":"arrayiterator.unserialize","version":false,"params":[{"name":"serialized","type":"string","optional":"false"}],"return":{"type":"string","description":"The ArrayIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ArrayIterator::serialize"}]}

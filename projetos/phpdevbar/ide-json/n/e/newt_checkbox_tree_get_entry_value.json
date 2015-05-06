@@ -1,0 +1,1 @@
+{"name":"newt_checkbox_tree_get_entry_value","purpose":"","manualid":"function.newt-checkbox-tree-get-entry-value","version":"PECL newt >= 0.1","params":[{"name":"checkboxtree","type":"resource","optional":"false"},{"name":"data","type":"mixed","optional":"false"}],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

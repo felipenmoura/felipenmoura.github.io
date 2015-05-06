@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.rewind","purpose":"Rewinds the iterator","manualid":"tokyotyrantquery.rewind","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

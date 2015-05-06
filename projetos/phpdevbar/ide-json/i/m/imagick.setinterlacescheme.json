@@ -1,0 +1,1 @@
+{"name":"Imagick.setInterlaceScheme","purpose":"Sets the image compression","manualid":"function.imagick-setinterlacescheme","version":false,"params":[{"name":"interlace_scheme","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

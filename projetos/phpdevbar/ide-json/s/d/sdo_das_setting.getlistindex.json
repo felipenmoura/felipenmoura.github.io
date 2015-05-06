@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_Setting.getListIndex","purpose":"Get the list index for a changed many-valued property","manualid":"function.sdo-das-setting-getlistindex","version":false,"params":[],"return":{"type":"int","description":"The list index for the element of the many-valued property which \n   has been changed."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

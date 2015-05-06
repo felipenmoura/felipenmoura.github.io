@@ -1,0 +1,1 @@
+{"name":"FilterIterator.accept","purpose":"Check whether the current element of the iterator is acceptable","manualid":"filteriterator.accept","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the current element is acceptable, otherwise FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

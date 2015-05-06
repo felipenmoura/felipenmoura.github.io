@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagescene","purpose":"Sets the image scene","manualid":"gmagick.setimagescene","version":false,"params":[{"name":"scene","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setTermsSort","purpose":"Specifies how to sort the returned terms","manualid":"solrquery.settermssort","version":false,"params":[{"name":"sortType","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

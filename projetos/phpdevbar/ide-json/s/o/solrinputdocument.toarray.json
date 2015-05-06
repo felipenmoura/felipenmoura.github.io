@@ -1,0 +1,1 @@
+{"name":"SolrInputDocument.toArray","purpose":"Returns an array representation of the input document","manualid":"solrinputdocument.toarray","version":false,"params":[],"return":{"type":"array","description":"Returns an array containing the fields. It returns FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

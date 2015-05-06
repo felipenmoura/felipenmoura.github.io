@@ -1,0 +1,1 @@
+{"name":"Phar.getModified","purpose":"Return whether phar was modified","manualid":"phar.getmodified","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the phar has been modified since opened, FALSE if not."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

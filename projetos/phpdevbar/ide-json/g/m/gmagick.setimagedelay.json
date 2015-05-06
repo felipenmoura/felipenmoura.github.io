@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagedelay","purpose":"Sets the image delay","manualid":"gmagick.setimagedelay","version":false,"params":[{"name":"delay","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

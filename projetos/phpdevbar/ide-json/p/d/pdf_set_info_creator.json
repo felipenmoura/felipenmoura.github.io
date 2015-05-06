@@ -1,0 +1,1 @@
+{"name":"PDF_set_info_creator","purpose":"Fill the creator document info field [deprecated]","manualid":"function.pdf-set-info-creator","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

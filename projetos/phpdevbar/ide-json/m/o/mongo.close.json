@@ -1,0 +1,1 @@
+{"name":"Mongo.close","purpose":"Closes this database connection","manualid":"mongo.close","version":false,"params":[],"return":{"type":"boolean","description":"Returns if the connection was successfully closed."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"MongoTimestamp.__toString","purpose":"Returns a string representation of this timestamp","manualid":"mongotimestamp.tostring","version":false,"params":[],"return":{"type":"string","description":"The seconds since epoch represented by this timestamp."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

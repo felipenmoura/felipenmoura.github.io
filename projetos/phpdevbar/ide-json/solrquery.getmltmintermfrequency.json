@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltMinTermFrequency","purpose":"Returns the frequency below which terms will be ignored in the source document","manualid":"solrquery.getmltmintermfrequency","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

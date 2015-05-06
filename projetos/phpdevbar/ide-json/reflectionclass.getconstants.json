@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getConstants","purpose":"Gets constants","manualid":"reflectionclass.getconstants","version":false,"params":[],"return":{"type":"array","description":"An array of constants."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getConstant"}]}

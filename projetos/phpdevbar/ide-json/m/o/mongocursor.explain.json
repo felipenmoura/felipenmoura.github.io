@@ -1,0 +1,1 @@
+{"name":"MongoCursor.explain","purpose":"Return an explanation of the query, often useful for optimization and debugging","manualid":"mongocursor.explain","version":false,"params":[],"return":{"type":"array","description":"Returns an explanation of the query."},"errors":"Throws MongoConnectionException if it cannot reach the \n   database.","notes":[],"changelog":[],"seealso":[]}

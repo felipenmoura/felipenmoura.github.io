@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getClipUnits","purpose":"Returns the interpretation of clip path units","manualid":"function.imagickdraw-getclipunits","version":false,"params":[],"return":{"type":"int","description":"Returns an int on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

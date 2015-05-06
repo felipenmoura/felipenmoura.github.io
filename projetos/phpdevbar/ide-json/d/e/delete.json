@@ -1,0 +1,1 @@
+{"name":"delete","purpose":"See unlink or unset","manualid":"function.delete","version":"None","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"unlink"},{"type":"function","name":"unset"}]}

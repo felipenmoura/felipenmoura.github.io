@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.isIterateable","purpose":"Checks if iterateable","manualid":"reflectionclass.isiterateable","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::__construct"}]}

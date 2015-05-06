@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>BrazilJS 2012</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+            <script src="../../ppw/_scripts/jquery-1.8.2.min.js"></script>
+            <script src="../../ppw/ppw.js"></script>
+
+            <script src="../../ppw/_addons/remote-control/ppw-remote-control.js"></script>
+            
+            <link type="text/css" rel="stylesheet" href="styles/context.css" />
+        
+        </head>
+        <body>
+
+            
+            <script>
+                PPW.init({
+                    title: 'BrazilJS 2012 Report',
+                    transition: 'trans-parallax-1',
+                    theme: 'thm-braziljs',
+                    languages: ['EN', 'PT', 'ES'],
+                    useSplashScreen: false,
+                    useArrows: true,
+                    //useToolBar: false,
+                    slides: [
+                        {
+                            id: 'cover',
+                            type: 'opening'
+                        },
+                        {id: 'curators'},
+                        {id: 'venue'},
+                        {id: 'visibility-tt', type: 'section'},
+                        {id: 'visibility'},
+                        {id: 'numbers-tt', type: 'section'},
+                        {id: 'numbers'},
+                        {id: 'speakers-tt', type: 'section'},
+                        {id: 'speakers'},
+                        {id: 'ending', type: 'closing'},
+                    ]
+                });
+            </script>
+
+        </body>
+    </html>

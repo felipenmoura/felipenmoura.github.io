@@ -1,0 +1,1 @@
+{"name":"MongoRegex.__toString","purpose":"A string representation of this regular expression","manualid":"mongoregex.tostring","version":false,"params":[],"return":{"type":"string","description":"This regular expression in the form \"\/expr\/flags\"."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

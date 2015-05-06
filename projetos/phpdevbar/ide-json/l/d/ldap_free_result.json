@@ -1,0 +1,1 @@
+{"name":"ldap_free_result","purpose":"Free result memory","manualid":"function.ldap-free-result","version":"PHP 4, PHP 5","params":[{"name":"result_identifier","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

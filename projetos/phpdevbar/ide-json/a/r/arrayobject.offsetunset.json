@@ -1,0 +1,1 @@
+{"name":"ArrayObject.offsetUnset","purpose":"Unsets the value at the specified index","manualid":"arrayobject.offsetunset","version":false,"params":[{"name":"index","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

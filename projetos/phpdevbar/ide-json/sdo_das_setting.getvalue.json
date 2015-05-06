@@ -1,0 +1,1 @@
+{"name":"SDO_DAS_Setting.getValue","purpose":"Get the old value for the changed property","manualid":"function.sdo-das-setting-getvalue","version":false,"params":[],"return":{"type":"mixed","description":"Returns the old value of the changed property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

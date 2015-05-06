@@ -1,0 +1,1 @@
+{"name":"SWFDisplayItem.setMaskLevel","purpose":"Defines a MASK layer at level","manualid":"function.swfdisplayitem.setmasklevel","version":false,"params":[{"name":"level","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

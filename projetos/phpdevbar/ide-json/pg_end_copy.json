@@ -1,0 +1,1 @@
+{"name":"pg_end_copy","purpose":"Sync with PostgreSQL backend","manualid":"function.pg-end-copy","version":"PHP 4 >= 4.0.3, PHP 5","params":[{"name":"connection","type":"resource","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"pg_put_line"}]}

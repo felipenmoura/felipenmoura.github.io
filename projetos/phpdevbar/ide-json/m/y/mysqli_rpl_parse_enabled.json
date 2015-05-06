@@ -1,0 +1,1 @@
+{"name":"mysqli_rpl_parse_enabled","purpose":"Check if RPL parse is enabled","manualid":"function.mysqli-rpl-parse-enabled","version":"PHP 5","params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

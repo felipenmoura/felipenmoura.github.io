@@ -1,0 +1,1 @@
+{"name":"wddx_packet_end","purpose":"Ends a WDDX packet with the specified ID","manualid":"function.wddx-packet-end","version":"PHP 4, PHP 5","params":[{"name":"packet_id","type":"resource","optional":"false"}],"return":{"type":"string","description":"Returns the string containing the WDDX packet."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

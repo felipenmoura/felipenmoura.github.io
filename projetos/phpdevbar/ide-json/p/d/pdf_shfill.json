@@ -1,0 +1,1 @@
+{"name":"PDF_shfill","purpose":"Fill area with shading","manualid":"function.pdf-shfill","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"},{"name":"shading","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

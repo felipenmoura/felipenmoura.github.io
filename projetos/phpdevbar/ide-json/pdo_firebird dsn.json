@@ -1,0 +1,1 @@
+{"name":"PDO_FIREBIRD DSN","purpose":"Connecting to Firebird and Interbase databases","manualid":"ref.pdo-firebird.connection","version":"PECL PDO_FIREBIRD >= 0.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

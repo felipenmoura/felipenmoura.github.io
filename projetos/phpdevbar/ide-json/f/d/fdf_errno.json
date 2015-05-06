@@ -1,0 +1,1 @@
+{"name":"fdf_errno","purpose":"Return error code for last fdf operation","manualid":"function.fdf-errno","version":"PHP 4 >= 4.3.0, PHP 5","params":[],"return":{"type":"int","description":"Returns the error code as an integer, or zero if there was no errors."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"fdf_error"}]}

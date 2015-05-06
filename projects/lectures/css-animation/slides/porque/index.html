@@ -1,0 +1,219 @@
+<style type='text/css'>
+	#car{
+		position: relative;
+		left: -1000px;
+		margin-top: 30px;
+		width:199px;
+		height: 53px;
+		background-image: url('slides/porque/carro.png');
+		-webkit-transition: all 2s linear;
+		-moz-transition: all 2s linear;
+	}
+	.roda1, .roda2{
+		width: 29px;
+		height: 28px;
+		background-image: url('slides/porque/roda.png');
+		position: relative;
+	}
+	.roda1{
+		top: 22px;
+		left: 12px;
+	}
+	
+	.roda2{
+		top: -6px;
+		left: 140px;
+	}
+	.moving{
+		left: 0px;
+	}
+	
+	@-webkit-keyframes roda{
+		0%{
+			-webkit-transform: rotate(0deg);
+		}
+		100%{
+			-webkit-transform: rotate(360deg);
+		}
+	}
+	@-moz-keyframes roda{
+		0%{
+			-moz-transform: rotate(0deg);
+		}
+		100%{
+			-moz-transform: rotate(360deg);
+		}
+	}
+	
+	#step1{
+		width: 700px;
+		margin: auto;
+	}
+	
+	.moving .roda1, .moving .roda2{
+		-webkit-animation: roda 0.5s 4 linear;
+		-moz-animation: roda 0.5s 4 linear;
+	}
+	#engine{
+		position: absolute;
+		margin: 0px
+		-webkit-transition: all 1s linear;
+		-moz-transition: all 1s linear;
+		
+		-moz-transform: scale(2);
+	}
+	#control{
+		position: absolute;
+		margin-top: 140px;
+		-moz-transform: rotate(-15deg);
+		-webkit-transform: rotate(-15deg);
+	}
+	#dry{
+		font-family: Tahoma, Arial;
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
+		margin-top: 70px;
+		font-size: 140px;
+		font-weight: bold;
+		text-shadow: 0px 0px 20px black;
+	}
+	#step3Content{
+		margin-top: 50px;
+		text-align: center;
+		display: none;
+		background-color: white;
+		position: absolute;
+		float: both;
+		margin: auto;
+		text-align: center;
+		padding: 10px;
+		border-radius: 10px;
+	}
+	@-moz-keyframes pulsar{
+		30%{
+			-moz-transform: scale(2);
+		}
+		60%{
+			-moz-transform: scale(0.7);
+		}
+		100%{
+			-moz-transform: scale(1);
+		}
+	}
+	@-webkit-keyframes pulsar{
+		30%{
+			-webkit-transform: scale(2);
+		}
+		60%{
+			-webkit-transform: scale(0.7);
+		}
+		100%{
+			-webkit-transform: scale(1);
+		}
+	}
+	.anim{
+		-webkit-animation: pulsar 2s 1 linear;
+		-moz-animation: pulsar 2s 1 linear;
+	}
+	#por-que{
+		font-family: Tahoma, Arial;
+		position: absolute;
+		left: 50%;
+		margin-left: -200px;
+		margin-top: 40px;
+		font-size: 140px;
+		font-weight: bold;
+		text-shadow: 0px 0px 20px black;
+	}
+</style>
+<h1>Por que, por qu&ecirc; e porque?</h1>
+<div class='content'>
+	<div id='step1' style='text-align: center;'>
+		Por que inventamos as anima&ccedil;&otilde;es no CSS3?!
+		<table width='100%'>
+			<tr>
+				<td style='vertical-align: top; width: 200px;'>
+					<div id='car'>
+						<div class='roda1'></div>
+						<div class='roda2'></div>
+					</div>
+					<img id='engine' src='slides/porque/engine.png' style='display: none;'/>
+					<img id='control' src='slides/porque/control.png' style='display: none;' align='right'/>
+				</td>
+				<td style='text-align: left;'>
+					<ul style='margin-top: 50px;' id='listItems'>
+						<li style='display: none;'>Porque &eacute; mais r&aacute;pido<br/><br/><br/></li>
+						<li style='display: none;'>Porque tem uma engine mais focada e preparada para isto<br/><br/><br/></li>
+						<li style='display: none;'>Porque oferece um melhor controle<br/><br/></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id='step2' style='text-align: center; display: none;'>
+		<div id='dry'>
+			DRY
+		</div>
+	</div>
+	<div id='step3' style='display: none;'>
+		N&atilde;o funciona nos "browsers":
+		<div id='step3Content'>
+			<img src='slides/porque/ie6.png' align='left' />
+			<img src='slides/porque/ie7.png' align='left' style='display: none;'/>
+			<img src='slides/porque/ie8.png' align='left' style='display: none;'/>
+			<img src='slides/porque/ie7.png' align='left' style='display: none;'/>
+			<img src='slides/porque/ie10.png' align='left' style='display: none;'/>
+		</div>
+		<div id='por-que' style='display:none;'>POR QU&Ecirc;?!</div>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#listItems li').eq(0).fadeIn();
+		$('#car').addClass('moving').css('left', '0px');
+	});
+	PPW.addAction(function(){
+	
+		$('#listItems li').eq(1).fadeIn();
+		$('#engine').fadeIn();
+		$('#engine').css({
+			'MozTransform': 'scale(0.75)',
+			'WebkitTransform': 'scale(0.75)'
+		});
+	});
+	PPW.addAction(function(){
+	
+		$('#listItems li').eq(2).fadeIn();
+		setTimeout(function(){
+			$('#control').fadeIn();
+		}, 600);
+	});
+	
+	PPW.addAction(function(){
+		$('#step1').fadeOut(function(){
+			$('#step2').fadeIn();
+		});
+	});
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3, #step3Content').fadeIn();
+		});
+	});
+	PPW.addAction(function(){
+		$('#step3Content img').eq(1).fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#step3Content img').eq(2).fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#step3Content img').eq(3).fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#step3Content img').eq(4).fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#por-que').fadeIn();
+		$('#por-que').addClass('anim');
+	});
+</script>

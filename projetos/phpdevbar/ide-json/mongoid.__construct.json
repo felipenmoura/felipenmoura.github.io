@@ -1,0 +1,1 @@
+{"name":"MongoId.__construct","purpose":"Creates a new id","manualid":"mongoid.construct","version":false,"params":[{"name":"id","type":"string","optional":"true","initializer":"NULL"}],"return":{"type":null,"description":"Returns a new id."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"MongoId::__toString"}]}

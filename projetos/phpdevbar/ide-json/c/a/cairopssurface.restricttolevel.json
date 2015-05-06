@@ -1,0 +1,1 @@
+{"name":"CairoPsSurface.restrictToLevel","purpose":"The restrictToLevel purpose","manualid":"cairopssurface.restricttolevel","version":false,"params":[{"name":"level","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

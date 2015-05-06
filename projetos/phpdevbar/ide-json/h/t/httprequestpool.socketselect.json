@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.socketSelect","purpose":"Perform socket select","manualid":"function.httprequestpool-socketselect","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

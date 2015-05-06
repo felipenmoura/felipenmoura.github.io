@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageFormat","purpose":"Returns the format of a particular image in a sequence","manualid":"function.imagick-getimageformat","version":false,"params":[],"return":{"type":"string","description":"Returns a string containing the image format on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

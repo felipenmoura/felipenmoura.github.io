@@ -1,0 +1,14 @@
+<h2>Web Sockets</h2>
+<iframe id="sockets-demo-iframe"
+        style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%;"
+        src="javascript:void(0);">
+</iframe>
+
+<script>
+    PPW.onSlideEnter(function(){
+        $('#sockets-demo-iframe').attr('src', 'http://browserquest.mozilla.org/');
+    });
+    PPW.onSlideExit(function(){
+        $('#sockets-demo-iframe').attr('src', 'javascript:void(0);');
+    })
+</script>

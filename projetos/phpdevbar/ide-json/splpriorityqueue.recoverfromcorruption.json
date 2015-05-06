@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.recoverFromCorruption","purpose":"Recover from the corrupted state and allow further actions on the queue.","manualid":"splpriorityqueue.recoverfromcorruption","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

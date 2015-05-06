@@ -1,0 +1,1 @@
+{"name":"EmptyIterator.current","purpose":"The current() method","manualid":"emptyiterator.current","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":"Throws an Exception if called.","notes":[],"changelog":[],"seealso":[]}

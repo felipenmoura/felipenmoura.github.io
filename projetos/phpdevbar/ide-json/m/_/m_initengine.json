@@ -1,0 +1,1 @@
+{"name":"m_initengine","purpose":"Ready the client for IP\/SSL Communication","manualid":"function.m-initengine","version":"PHP 4 >= 4.3.9, PHP 5 <= 5.0.5, PECL mcve >= 1.0.0","params":[{"name":"location","type":"string","optional":"false"}],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.getGravity","purpose":"Gets the gravity","manualid":"function.imagick-getgravity","version":false,"params":[],"return":{"type":"bool","description":"Returns the gravity property. Refer to the list of \n   gravity constants."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

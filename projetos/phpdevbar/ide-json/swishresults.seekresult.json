@@ -1,0 +1,1 @@
+{"name":"SwishResults.seekResult","purpose":"Set current seek pointer to the given position","manualid":"function.swishresults-seekresult","version":false,"params":[{"name":"position","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns new position value on success."},"errors":"Throws SwishException on error.","notes":[],"changelog":[],"seealso":[]}

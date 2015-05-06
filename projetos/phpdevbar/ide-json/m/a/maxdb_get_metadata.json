@@ -1,0 +1,1 @@
+{"name":"maxdb_get_metadata","purpose":"Alias of maxdb_stmt_result_metadata","manualid":"function.maxdb-get-metadata","version":"PECL maxdb 1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

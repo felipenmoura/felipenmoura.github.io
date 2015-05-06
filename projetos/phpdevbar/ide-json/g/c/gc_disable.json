@@ -1,0 +1,1 @@
+{"name":"gc_disable","purpose":"Deactivates the circular reference collector","manualid":"function.gc-disable","version":"PHP 5 >= 5.3.0","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

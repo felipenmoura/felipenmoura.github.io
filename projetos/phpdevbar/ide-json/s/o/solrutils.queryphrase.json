@@ -1,0 +1,1 @@
+{"name":"SolrUtils.queryPhrase","purpose":"Prepares a phrase from an unescaped lucene string","manualid":"solrutils.queryphrase","version":false,"params":[{"name":"str","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the phrase contained in double quotes."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

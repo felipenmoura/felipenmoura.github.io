@@ -1,0 +1,1 @@
+{"name":"PDF_end_page","purpose":"Finish page","manualid":"function.pdf-end-page","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

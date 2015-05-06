@@ -1,0 +1,1 @@
+{"name":"pi","purpose":"Get value of pi","manualid":"function.pi","version":"PHP 4, PHP 5","params":[],"return":{"type":"float","description":"The value of pi as float."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

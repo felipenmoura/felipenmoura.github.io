@@ -1,0 +1,1 @@
+{"name":"SplHeap.extract","purpose":"Extracts a node from top of the heap and sift up.","manualid":"splheap.extract","version":false,"params":[],"return":{"type":"mixed","description":"The value of the extracted node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

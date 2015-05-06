@@ -1,0 +1,1 @@
+{"name":"DOMXPath.__construct","purpose":"Creates a new DOMXPath object","manualid":"domxpath.construct","version":false,"params":[{"name":"doc","type":"DOMDocument","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrClient.__destruct","purpose":"Destructor for SolrClient","manualid":"solrclient.destruct","version":false,"params":[],"return":{"type":"void","description":"Destructor for SolrClient"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SolrClient::__construct"}]}

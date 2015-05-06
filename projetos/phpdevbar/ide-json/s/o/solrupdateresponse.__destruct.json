@@ -1,0 +1,1 @@
+{"name":"SolrUpdateResponse.__destruct","purpose":"Destructor","manualid":"solrupdateresponse.destruct","version":false,"params":[],"return":{"type":"void","description":"None"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

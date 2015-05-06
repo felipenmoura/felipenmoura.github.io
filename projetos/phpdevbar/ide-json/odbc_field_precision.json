@@ -1,0 +1,1 @@
+{"name":"odbc_field_precision","purpose":"Alias of odbc_field_len","manualid":"function.odbc-field-precision","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"odbc_field_scale"}]}

@@ -1,0 +1,1 @@
+{"name":"HaruPage.getGrayFill","purpose":"Get the current filling color","manualid":"function.harupage-getgrayfill","version":false,"params":[],"return":{"type":"float","description":"Returns the current filling color."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setGrayFill"}]}

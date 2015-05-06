@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageClipMask","purpose":"Gets image clip mask","manualid":"function.imagick-getimageclipmask","version":false,"params":[],"return":{"type":"Imagick","description":"Returns an Imagick object containing the clip mask.\n   Throw an\nImagickException on error."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

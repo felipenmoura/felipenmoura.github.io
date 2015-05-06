@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.getLength","purpose":"Returns the length of a MPEG file","manualid":"audioproperties.getLength","version":false,"params":[],"return":{"type":"int","description":"Returns the length as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

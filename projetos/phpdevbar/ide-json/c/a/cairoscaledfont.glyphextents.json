@@ -1,0 +1,1 @@
+{"name":"CairoScaledFont.glyphExtents","purpose":"The glyphExtents purpose","manualid":"cairoscaledfont.glyphextents","version":false,"params":[{"name":"glyphs","type":"string","optional":"false"}],"return":{"type":"array","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

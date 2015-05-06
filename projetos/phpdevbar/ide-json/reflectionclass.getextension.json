@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getExtension","purpose":"Gets extension info","manualid":"reflectionclass.getextension","version":false,"params":[],"return":{"type":"ReflectionExtension","description":"A ReflectionExtension object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getExtensionName"}]}

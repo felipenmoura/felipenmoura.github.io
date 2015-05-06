@@ -1,0 +1,1 @@
+{"name":"swf_definebitmap","purpose":"Define a bitmap","manualid":"function.swf-definebitmap","version":"PHP 4","params":[{"name":"objid","type":"int","optional":"false"},{"name":"image_name","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

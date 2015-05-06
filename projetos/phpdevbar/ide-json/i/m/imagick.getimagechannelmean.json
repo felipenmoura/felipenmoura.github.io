@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageChannelMean","purpose":"Gets the mean and standard deviation","manualid":"function.imagick-getimagechannelmean","version":false,"params":[{"name":"channel","type":"int","optional":"false"}],"return":{"type":"array","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

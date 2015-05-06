@@ -1,0 +1,1 @@
+{"name":"Phar.apiVersion","purpose":"Returns the api version","manualid":"phar.apiversion","version":false,"params":[],"return":{"type":"string","description":"The API version string as in \"1.0.0\"."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ldap_start_tls","purpose":"Start TLS","manualid":"function.ldap-start-tls","version":"PHP 4 >= 4.2.0, PHP 5","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

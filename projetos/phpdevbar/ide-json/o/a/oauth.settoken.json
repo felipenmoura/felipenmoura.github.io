@@ -1,0 +1,1 @@
+{"name":"OAuth.setToken","purpose":"Sets the token and secret","manualid":"oauth.settoken","version":false,"params":[{"name":"token","type":"string","optional":"false"},{"name":"token_secret","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

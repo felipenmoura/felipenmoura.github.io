@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getStrokeOpacity","purpose":"Returns the opacity of stroked object outlines","manualid":"function.imagickdraw-getstrokeopacity","version":false,"params":[],"return":{"type":"float","description":"Returns a double describing the opacity."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

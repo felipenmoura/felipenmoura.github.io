@@ -1,0 +1,1 @@
+{"name":"SDO_DataObject.getTypeName","purpose":"Return the name of the type for a data object.","manualid":"function.sdo-dataobject-gettypename","version":false,"params":[],"return":{"type":"string","description":"The name of the type for the data object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

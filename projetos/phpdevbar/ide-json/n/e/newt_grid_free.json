@@ -1,0 +1,1 @@
+{"name":"newt_grid_free","purpose":"","manualid":"function.newt-grid-free","version":"PECL newt >= 0.1","params":[{"name":"grid","type":"resource","optional":"false"},{"name":"recurse","type":"bool","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

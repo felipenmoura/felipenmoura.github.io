@@ -1,0 +1,1 @@
+{"name":"maxdb_report","purpose":"Enables or disables internal report functions","manualid":"function.maxdb-report","version":"PECL maxdb 1.0","params":[{"name":"flags","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

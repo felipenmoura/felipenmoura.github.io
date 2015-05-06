@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setTermsLowerBound","purpose":"Specifies the Term to start from","manualid":"solrquery.settermslowerbound","version":false,"params":[{"name":"lowerBound","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

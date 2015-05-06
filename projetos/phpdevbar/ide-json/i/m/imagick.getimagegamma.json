@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageGamma","purpose":"Gets the image gamma","manualid":"function.imagick-getimagegamma","version":false,"params":[],"return":{"type":"float","description":"Returns the image gamma on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

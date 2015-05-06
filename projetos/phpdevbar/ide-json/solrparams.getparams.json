@@ -1,0 +1,1 @@
+{"name":"SolrParams.getParams","purpose":"Returns an array of non URL-encoded parameters","manualid":"solrparams.getparams","version":false,"params":[],"return":{"type":"array","description":"Returns an array of non URL-encoded parameters"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrQuery.removeFacetQuery","purpose":"Removes one of the facet.query parameters","manualid":"solrquery.removefacetquery","version":false,"params":[{"name":"value","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

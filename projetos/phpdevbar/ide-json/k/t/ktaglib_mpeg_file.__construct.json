@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_File.__construct","purpose":"Opens a new file","manualid":"mpegfile.construct","version":false,"params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

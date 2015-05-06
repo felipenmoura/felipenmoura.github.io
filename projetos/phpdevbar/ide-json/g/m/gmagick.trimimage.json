@@ -1,0 +1,1 @@
+{"name":"Gmagick.trimimage","purpose":"Remove edges from the image","manualid":"gmagick.trimimage","version":false,"params":[{"name":"fuzz","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

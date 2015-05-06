@@ -1,0 +1,1 @@
+{"name":"HttpMessage.getRequestMethod","purpose":"Get request method","manualid":"function.httpmessage-getrequestmethod","version":false,"params":[],"return":{"type":"string","description":"Returns the request method name on success, or FALSE if the message is\n   not of type HttpMessage::TYPE_REQUEST."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Imagick.deskewImage","purpose":"Removes skew from the image","manualid":"imagick.deskewimage","version":false,"params":[{"name":"threshold","type":"float","optional":"false"}],"return":{"type":"void","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

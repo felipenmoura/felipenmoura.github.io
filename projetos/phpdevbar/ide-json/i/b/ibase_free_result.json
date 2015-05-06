@@ -1,0 +1,1 @@
+{"name":"ibase_free_result","purpose":"Free a result set","manualid":"function.ibase-free-result","version":"PHP 4, PHP 5","params":[{"name":"result_identifier","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

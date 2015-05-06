@@ -1,0 +1,1 @@
+{"name":"lzf_optimized_for","purpose":"Determines what LZF extension was optimized for","manualid":"function.lzf-optimized-for","version":"PECL lzf >= 1.0.0","params":[],"return":{"type":"int","description":"Returns 1 if LZF was optimized for speed, 0 for compression."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

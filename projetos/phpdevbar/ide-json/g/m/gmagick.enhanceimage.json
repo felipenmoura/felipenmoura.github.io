@@ -1,0 +1,1 @@
+{"name":"Gmagick.enhanceimage","purpose":"Improves the quality of a noisy image","manualid":"gmagick.enhanceimage","version":false,"params":[],"return":{"type":"void","description":"The enhanced Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

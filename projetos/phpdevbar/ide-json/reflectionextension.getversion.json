@@ -1,0 +1,1 @@
+{"name":"ReflectionExtension.getVersion","purpose":"Gets extension version","manualid":"reflectionextension.getversion","version":false,"params":[],"return":{"type":"string","description":"The version of the extension."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionExtension::info"}]}

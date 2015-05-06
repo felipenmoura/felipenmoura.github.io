@@ -1,0 +1,1 @@
+{"name":"gc_collect_cycles","purpose":"Forces collection of any existing garbage cycles","manualid":"function.gc-collect-cycles","version":"PHP 5 >= 5.3.0","params":[],"return":{"type":"int","description":"Returns number of collected cycles."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"GearmanClient.context","purpose":"Get the application context","manualid":"gearmanclient.context","version":false,"params":[],"return":{"type":"string","description":"The same context data structure set with GearmanClient::setContext"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::setContext"}]}

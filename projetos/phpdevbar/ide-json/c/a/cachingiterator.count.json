@@ -1,0 +1,1 @@
+{"name":"CachingIterator.count","purpose":"The number of elements in the iterator","manualid":"cachingiterator.count","version":false,"params":[],"return":{"type":"void","description":"The count of the elements iterated over."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

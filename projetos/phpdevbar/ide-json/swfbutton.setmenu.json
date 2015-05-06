@@ -1,0 +1,1 @@
+{"name":"SWFButton.setMenu","purpose":"enable track as menu button behaviour","manualid":"function.swfbutton.setmenu","version":false,"params":[{"name":"flag","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SolrParams.add","purpose":"This is an alias for SolrParams::addParam","manualid":"solrparams.add","version":false,"params":[{"name":"name","type":"string","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"SolrParams","description":"Returns a SolrParams instance on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

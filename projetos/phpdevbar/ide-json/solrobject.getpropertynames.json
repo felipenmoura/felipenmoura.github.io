@@ -1,0 +1,1 @@
+{"name":"SolrObject.getPropertyNames","purpose":"Returns an array of all the names of the properties","manualid":"solrobject.getpropertynames","version":false,"params":[],"return":{"type":"array","description":"Returns an array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

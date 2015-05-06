@@ -1,0 +1,1 @@
+{"name":"mssql_min_error_severity","purpose":"Sets the minimum error severity","manualid":"function.mssql-min-error-severity","version":"PHP 4, PHP 5, PECL odbtp >= 1.1.1","params":[{"name":"severity","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

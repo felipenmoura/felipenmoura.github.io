@@ -1,0 +1,1 @@
+{"name":"MongoBinData.__construct","purpose":"Creates a new binary data object.","manualid":"mongobindata.construct","version":false,"params":[{"name":"data","type":"string","optional":"false"},{"name":"type","type":"int","optional":"true"}],"return":{"type":null,"description":"Returns a new binary data object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

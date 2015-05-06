@@ -1,0 +1,1 @@
+{"name":"SolrUtils.getSolrVersion","purpose":"Returns the current version of the Solr extension","manualid":"solrutils.getsolrversion","version":false,"params":[],"return":{"type":"string","description":"The current version of the Apache Solr extension."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

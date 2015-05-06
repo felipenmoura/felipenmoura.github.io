@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getTimeAllowed","purpose":"Returns the time in milliseconds allowed for the query to finish","manualid":"solrquery.gettimeallowed","version":false,"params":[],"return":{"type":"int","description":"Returns and integer on success and NULL if it is not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

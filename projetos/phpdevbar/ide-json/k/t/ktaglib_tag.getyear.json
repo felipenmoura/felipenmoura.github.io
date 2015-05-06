@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getYear","purpose":"Returns the year from a ID3 tag","manualid":"tag.getYear","version":false,"params":[],"return":{"type":"int","description":"Returns the year as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

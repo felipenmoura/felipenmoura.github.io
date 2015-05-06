@@ -1,0 +1,1 @@
+{"name":"MongoCursor.doQuery","purpose":"Execute the query.","manualid":"mongocursor.doquery","version":false,"params":[],"return":{"type":"void","description":"NULL."},"errors":"Throws MongoConnectionException if it cannot reach the \n   database.","notes":[],"changelog":[],"seealso":[]}

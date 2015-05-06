@@ -1,0 +1,1 @@
+{"name":"HaruFont.getDescent","purpose":"Get the vertical descent of the font","manualid":"function.harufont-getdescent","version":false,"params":[],"return":{"type":"int","description":"Return the vertical descent of the font."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

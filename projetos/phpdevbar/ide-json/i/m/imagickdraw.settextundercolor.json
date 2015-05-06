@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setTextUnderColor","purpose":"Specifies the color of a background rectangle","manualid":"function.imagickdraw-settextundercolor","version":false,"params":[{"name":"under_color","type":"ImagickPixel","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

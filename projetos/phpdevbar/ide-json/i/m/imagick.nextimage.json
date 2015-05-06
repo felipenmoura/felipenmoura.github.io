@@ -1,0 +1,1 @@
+{"name":"Imagick.nextImage","purpose":"Moves to the next image","manualid":"function.imagick-nextimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

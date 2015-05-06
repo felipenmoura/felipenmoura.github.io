@@ -1,0 +1,1 @@
+{"name":"maxdb_embedded_connect","purpose":"Open a connection to an embedded MaxDB server","manualid":"function.maxdb-embedded-connect","version":"PECL maxdb >= 1.0","params":[{"name":"dbname","type":"string","optional":"true"}],"return":{"type":"resource","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

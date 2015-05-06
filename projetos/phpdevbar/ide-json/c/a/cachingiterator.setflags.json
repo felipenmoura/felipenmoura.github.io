@@ -1,0 +1,1 @@
+{"name":"CachingIterator.setFlags","purpose":"The setFlags purpose","manualid":"cachingiterator.setflags","version":false,"params":[{"name":"flags","type":"bitmask","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

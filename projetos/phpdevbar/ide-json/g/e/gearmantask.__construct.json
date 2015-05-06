@@ -1,0 +1,1 @@
+{"name":"GearmanTask.__construct","purpose":"Create a GearmanTask instance","manualid":"gearmantask.construct","version":false,"params":[],"return":{"type":null,"description":"A GearmanTask object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

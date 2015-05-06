@@ -1,0 +1,1 @@
+{"name":"openssl_x509_free","purpose":"Free certificate resource","manualid":"function.openssl-x509-free","version":"PHP 4 >= 4.0.6, PHP 5","params":[{"name":"x509cert","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

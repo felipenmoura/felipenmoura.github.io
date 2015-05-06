@@ -1,0 +1,1 @@
+{"name":"shmop_close","purpose":"Close shared memory block","manualid":"function.shmop-close","version":"PHP 4 >= 4.0.4, PHP 5","params":[{"name":"shmid","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"shmop_open"}]}

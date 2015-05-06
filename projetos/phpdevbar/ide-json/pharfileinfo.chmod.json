@@ -1,0 +1,1 @@
+{"name":"PharFileInfo.chmod","purpose":"Sets file-specific permission bits","manualid":"pharfileinfo.chmod","version":false,"params":[{"name":"permissions","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

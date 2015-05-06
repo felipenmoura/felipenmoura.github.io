@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagetype","purpose":"Gets the potential image type.","manualid":"gmagick.getimagetype","version":false,"params":[],"return":{"type":"void","description":"Returns the potential image type."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

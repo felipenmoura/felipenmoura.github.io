@@ -1,0 +1,1 @@
+{"name":"RegexIterator.setMode","purpose":"Sets the operation mode.","manualid":"regexiterator.setmode","version":false,"params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RegexIterator::getMode"}]}

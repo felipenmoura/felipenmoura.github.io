@@ -1,0 +1,1 @@
+{"name":"CairoScaledFont.getScaleMatrix","purpose":"The getScaleMatrix purpose","manualid":"cairoscaledfont.getscalematrix","version":false,"params":[],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

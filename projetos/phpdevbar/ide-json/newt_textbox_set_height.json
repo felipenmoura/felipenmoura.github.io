@@ -1,0 +1,1 @@
+{"name":"newt_textbox_set_height","purpose":"","manualid":"function.newt-textbox-set-height","version":"PECL newt >= 0.1","params":[{"name":"textbox","type":"resource","optional":"false"},{"name":"height","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

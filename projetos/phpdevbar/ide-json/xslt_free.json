@@ -1,0 +1,1 @@
+{"name":"xslt_free","purpose":"Free XSLT processor","manualid":"function.xslt-free","version":"PHP 4 >= 4.0.3","params":[{"name":"xh","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"xslt_create"}]}

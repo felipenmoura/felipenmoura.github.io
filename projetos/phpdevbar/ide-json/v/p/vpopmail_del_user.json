@@ -1,0 +1,1 @@
+{"name":"vpopmail_del_user","purpose":"Delete a user from a virtual domain","manualid":"function.vpopmail-del-user","version":"PHP 4 >= 4.0.5, PECL vpopmail >= 0.2","params":[{"name":"user","type":"string","optional":"false"},{"name":"domain","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

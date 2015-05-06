@@ -1,0 +1,1 @@
+{"name":"SWFMovie.setDimension","purpose":"Sets the movie's width and height","manualid":"function.swfmovie.setdimension","version":false,"params":[{"name":"width","type":"float","optional":"false"},{"name":"height","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

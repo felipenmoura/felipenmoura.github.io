@@ -1,0 +1,1 @@
+{"name":"session_decode","purpose":"Decodes session data from a string","manualid":"function.session-decode","version":"PHP 4, PHP 5","params":[{"name":"data","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"session_encode"}]}

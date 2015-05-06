@@ -1,0 +1,1 @@
+{"name":"CairoPsSurface.getEps","purpose":"The getEps purpose","manualid":"cairopssurface.geteps","version":false,"params":[],"return":{"type":"bool","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

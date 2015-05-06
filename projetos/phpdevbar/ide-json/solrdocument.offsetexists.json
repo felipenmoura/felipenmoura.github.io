@@ -1,0 +1,1 @@
+{"name":"SolrDocument.offsetExists","purpose":"Checks if a particular field exists","manualid":"solrdocument.offsetexists","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

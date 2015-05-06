@@ -1,0 +1,1 @@
+{"name":"snmp_read_mib","purpose":"Reads and parses a MIB file into the active MIB tree","manualid":"function.snmp-read-mib","version":"PHP 5","params":[{"name":"filename","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

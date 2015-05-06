@@ -1,0 +1,1 @@
+{"name":"ifx_create_char","purpose":"Creates an char object","manualid":"function.ifx-create-char","version":"PHP 4, PHP <=5.2.0","params":[{"name":"param","type":"string","optional":"false"}],"return":{"type":"int","description":"Returns the new char object id, or FALSE on errors."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ifx_free_char"}]}

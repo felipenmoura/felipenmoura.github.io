@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.__construct","purpose":"The ImagickPixelIterator constructor","manualid":"function.imagickpixeliterator-construct","version":false,"params":[{"name":"wand","type":"Imagick","optional":"false"}],"return":{"type":"ImagickPixelIterator","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getFilename","purpose":"Gets the filename","manualid":"splfileinfo.getfilename","version":false,"params":[],"return":{"type":"string","description":"The filename."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplFileInfo::getBasename"}]}

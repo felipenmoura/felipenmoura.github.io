@@ -1,0 +1,1 @@
+{"name":"SwishResult.getMetaList","purpose":"Get a list of meta entries","manualid":"function.swishresult-getmetalist","version":false,"params":[],"return":{"type":"array","description":"Returns the same array as swish->getmetalist,\n   but uses the index file from the result handle."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

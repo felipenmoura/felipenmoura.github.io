@@ -1,0 +1,1 @@
+{"name":"HttpRequest.addHeaders","purpose":"Add headers","manualid":"function.httprequest-addheaders","version":false,"params":[{"name":"headers","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

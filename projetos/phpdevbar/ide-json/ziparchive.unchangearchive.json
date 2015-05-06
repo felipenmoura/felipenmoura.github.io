@@ -1,0 +1,1 @@
+{"name":"ZipArchive.unchangeArchive","purpose":"Revert all global changes done in the archive.","manualid":"function.ziparchive-unchangearchive","version":false,"params":[],"return":{"type":"mixed","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

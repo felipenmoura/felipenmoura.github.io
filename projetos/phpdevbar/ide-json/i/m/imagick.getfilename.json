@@ -1,0 +1,1 @@
+{"name":"Imagick.getFilename","purpose":"The filename associated with an image sequence","manualid":"function.imagick-getfilename","version":false,"params":[],"return":{"type":"string","description":"Returns a string on success.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

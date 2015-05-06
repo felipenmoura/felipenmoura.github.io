@@ -1,0 +1,1 @@
+{"name":"HttpQueryString.mod","purpose":"Modifiy query string copy","manualid":"function.httpquerystring-mod","version":false,"params":[{"name":"params","type":"mixed","optional":"false"}],"return":{"type":"HttpQueryString","description":"Returns a new HttpQueryString object"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

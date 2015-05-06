@@ -1,0 +1,1 @@
+{"name":"ReflectionParameter.isOptional","purpose":"Checks if optional","manualid":"reflectionparameter.isoptional","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the parameter is optional, otherwise FALSE"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionParameter::getName"}]}

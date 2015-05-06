@@ -1,0 +1,1 @@
+{"name":"hw_Output_Document","purpose":"Prints hw_document","manualid":"function.hw-output-document","version":"PHP 4","params":[{"name":"hw_document","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

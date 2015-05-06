@@ -1,0 +1,1 @@
+{"name":"SolrQuery.setTimeAllowed","purpose":"The time allowed for search to finish","manualid":"solrquery.settimeallowed","version":false,"params":[{"name":"timeAllowed","type":"int","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Memcached.__construct","purpose":"Create a Memcached instance","manualid":"memcached.construct","version":false,"params":[{"name":"persistent_id","type":"string","optional":"true"}],"return":{"type":null,"description":"A Memcached object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

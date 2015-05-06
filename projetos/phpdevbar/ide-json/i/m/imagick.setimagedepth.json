@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageDepth","purpose":"Sets the image depth","manualid":"function.imagick-setimagedepth","version":false,"params":[{"name":"depth","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

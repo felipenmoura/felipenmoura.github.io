@@ -1,0 +1,1 @@
+{"name":"stats_stat_binomial_coef","purpose":"Not documented","manualid":"function.stats-stat-binomial-coef","version":"PECL stats >= 1.0.0","params":[{"name":"x","type":"int","optional":"false"},{"name":"n","type":"int","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

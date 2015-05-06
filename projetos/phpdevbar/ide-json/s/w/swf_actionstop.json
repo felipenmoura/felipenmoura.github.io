@@ -1,0 +1,1 @@
+{"name":"swf_actionstop","purpose":"Stop playing the flash movie at the current frame","manualid":"function.swf-actionstop","version":"PHP 4","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"swf_actionplay"}]}

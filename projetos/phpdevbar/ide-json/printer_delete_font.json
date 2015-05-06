@@ -1,0 +1,1 @@
+{"name":"printer_delete_font","purpose":"Delete a font","manualid":"function.printer-delete-font","version":"PECL printer SVN","params":[{"name":"font_handle","type":"resource","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

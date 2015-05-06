@@ -1,0 +1,1 @@
+{"name":"SolrDocument.__clone","purpose":"Creates a copy of a SolrDocument object","manualid":"solrdocument.clone","version":false,"params":[],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

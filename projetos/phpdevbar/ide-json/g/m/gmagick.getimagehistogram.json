@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagehistogram","purpose":"Gets the image histogram","manualid":"gmagick.getimagehistogram","version":false,"params":[],"return":{"type":"void","description":"Returns the image histogram as an array of GmagickPixel objects."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

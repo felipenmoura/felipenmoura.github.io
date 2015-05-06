@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getGroup","purpose":"Gets the file group","manualid":"splfileinfo.getgroup","version":false,"params":[],"return":{"type":"int","description":"The group id in numerical format."},"errors":"Throws RuntimeException on error.","notes":[],"changelog":[],"seealso":[{"type":"function","name":"posix_getgrgid"}]}

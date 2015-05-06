@@ -1,0 +1,1 @@
+{"name":"SQLite3Result.reset","purpose":"Resets the result set back to the first row","manualid":"sqlite3Result.reset","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the result set is successfully reset\n   back to the first row, FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

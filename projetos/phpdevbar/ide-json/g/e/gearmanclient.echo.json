@@ -1,0 +1,1 @@
+{"name":"GearmanClient.echo","purpose":"Send data to all job servers to see if they echo it back","manualid":"gearmanclient.echo","version":false,"params":[{"name":"workload","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

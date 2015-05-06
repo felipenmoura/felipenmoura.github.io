@@ -1,0 +1,9 @@
+Duvidas Sistema - 03/02/2008
+____________________________
+
+1) Parte Contrária deve ser um contato ? Sim, mas devemos criar algum metodo de separar.
+2) Advogado da Parte contraria deve ser tratado como ? Como parte contraria, apenas dados como
+   nome,OAB,Fone,Endereço.
+
+
+

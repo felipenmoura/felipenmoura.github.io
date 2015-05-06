@@ -1,0 +1,1 @@
+{"name":"Gmagick.gammaimage","purpose":"Gamma-corrects an image","manualid":"gmagick.gammaimage","version":false,"params":[{"name":"gamma","type":"float","optional":"false"}],"return":{"type":"void","description":"The gamma corrected Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

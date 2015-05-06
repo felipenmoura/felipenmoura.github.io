@@ -1,0 +1,1 @@
+{"name":"MongoCursor.limit","purpose":"Limits the number of results returned","manualid":"mongocursor.limit","version":false,"params":[{"name":"num","type":"int","optional":"false"}],"return":{"type":"MongoCursor","description":"Returns this cursor."},"errors":"Throws MongoCursorException if this cursor has started iterating.","notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HaruPage.getMiterLimit","purpose":"Get the value of miter limit","manualid":"function.harupage-getmiterlimit","version":false,"params":[],"return":{"type":"float","description":"Returns the value of the miter limit."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setMiterLimit"}]}

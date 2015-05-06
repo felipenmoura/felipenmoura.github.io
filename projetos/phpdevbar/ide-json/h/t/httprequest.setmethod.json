@@ -1,0 +1,1 @@
+{"name":"HttpRequest.setMethod","purpose":"Set method","manualid":"function.httprequest-setmethod","version":false,"params":[{"name":"request_method","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

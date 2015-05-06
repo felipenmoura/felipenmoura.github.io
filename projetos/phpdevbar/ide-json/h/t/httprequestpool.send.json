@@ -1,0 +1,1 @@
+{"name":"HttpRequestPool.send","purpose":"Send all requests","manualid":"function.httprequestpool-send","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":"Throws HttpRequestPoolException (HttpSocketException, HttpRequestException, HttpMalformedHeaderException).","notes":[],"changelog":[],"seealso":[]}

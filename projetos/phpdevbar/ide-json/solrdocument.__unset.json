@@ -1,0 +1,1 @@
+{"name":"SolrDocument.__unset","purpose":"Removes a field from the document","manualid":"solrdocument.unset","version":false,"params":[{"name":"fieldName","type":"string","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

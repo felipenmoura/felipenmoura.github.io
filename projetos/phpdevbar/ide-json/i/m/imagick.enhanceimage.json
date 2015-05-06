@@ -1,0 +1,1 @@
+{"name":"Imagick.enhanceImage","purpose":"Improves the quality of a noisy image","manualid":"function.imagick-enhanceimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

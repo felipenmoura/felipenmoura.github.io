@@ -1,0 +1,1 @@
+{"name":"strrev","purpose":"Reverse a string","manualid":"function.strrev","version":"PHP 4, PHP 5","params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"string","description":"Returns the reversed string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

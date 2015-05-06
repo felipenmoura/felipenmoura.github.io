@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+
+    	<h3>Look the console of your browser</h3>
+
+    	<div>
+    		The source code:<br/>
+    		<pre id='sc'></pre>
+    		The output is in your console.
+    	</div>
+
+        <script src='../dist/maker.min.js'></script>
+
+        <script id='sampleCode'>
+            /*
+                var o= {
+                    calc: function(arg1, arg2){
+                        var i= 0, ret= 0, l= Math.ceil(Math.random() * 1000000000);
+                        for(i= 0; i < l; i++){
+                            ret++;
+                        }
+                        return 'a loop was executed ' + ret + ' times inside a worker with arguments ' + arg1 + ' and ' + arg2;
+                    }
+                };
+                // every method in o will be a worker
+                make.worker(o);
+                // only the passed methods will be workers
+                //make.worker(o, ['calc']);
+                o.calc('A', 'B', function(result){ console.log(result); });
+                o.calc('C', 'D', function(result){ console.log(result); });
+                o.calc('E', 'F', function(result){ console.log(result); });
+                o.calc('G', 'H', function(result){ console.log(result); });
+                o.calc('I', 'J', function(result){ console.log(result); });
+                o.calc('K', 'L', function(result){ console.log(result); });
+                o.calc('M', 'N', function(result){ console.log(result); });
+                o.calc('O', 'P', function(result){ console.log(result); });
+                console.log('started workers, calculating now...');
+            */
+
+            var calc= make.worker(function(arg1, arg2){
+                var i= 0, ret= 0, l= Math.ceil(Math.random() * 1000000000);
+                for(i= 0; i < l; i++){
+                    ret++;
+                }
+                return 'a loop was executed ' + ret + ' times inside a worker with arguments ' + arg1 + ' and ' + arg2;
+            });
+            calc('A', 'B', function(result){ console.log(result); });
+            calc('C', 'D', function(result){ console.log(result); });
+            calc('E', 'F', function(result){ console.log(result); });
+            calc('G', 'H', function(result){ console.log(result); });
+            calc('I', 'J', function(result){ console.log(result); });
+            calc('K', 'L', function(result){ console.log(result); });
+            calc('M', 'N', function(result){ console.log(result); });
+            calc('O', 'P', function(result){ console.log(result); });
+
+
+        </script>
+
+        <script>
+            setTimeout(function(){
+                document.getElementById('sc').innerHTML= document.getElementById('sampleCode').text;
+            }, 100);
+        </script>
+
+    </body>
+</html>

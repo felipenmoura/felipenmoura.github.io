@@ -1,0 +1,1 @@
+{"name":"HaruDoc.setCompressionMode","purpose":"Set compression mode for the document","manualid":"function.harudoc-setcompressionmode","version":false,"params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

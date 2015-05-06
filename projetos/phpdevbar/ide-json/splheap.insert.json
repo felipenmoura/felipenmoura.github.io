@@ -1,0 +1,1 @@
+{"name":"SplHeap.insert","purpose":"Inserts an element in the heap by sifting it up.","manualid":"splheap.insert","version":false,"params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

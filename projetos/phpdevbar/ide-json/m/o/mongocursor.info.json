@@ -1,0 +1,1 @@
+{"name":"MongoCursor.info","purpose":"Gets the query, fields, limit, and skip for this cursor","manualid":"mongocursor.info","version":false,"params":[],"return":{"type":"array","description":"The query, fields, limit, and skip for this cursor as an associative array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule felipenmoura.org/projects felipenmoura.org/ [L]
+RewriteRule ^(.*)$ ../?$1 [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ ../ [L]
+</IfModule>

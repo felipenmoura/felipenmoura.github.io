@@ -1,0 +1,1 @@
+{"name":"newt_entry_get_value","purpose":"","manualid":"function.newt-entry-get-value","version":"PECL newt >= 0.1","params":[{"name":"entry","type":"resource","optional":"false"}],"return":{"type":"string","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

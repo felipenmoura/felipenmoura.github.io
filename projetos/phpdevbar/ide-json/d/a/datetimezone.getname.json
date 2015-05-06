@@ -1,0 +1,1 @@
+{"name":"DateTimeZone.getName","purpose":"Returns the name of the timezone","manualid":"datetimezone.getname","version":false,"params":[],"return":{"type":"string","description":"One of timezones."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

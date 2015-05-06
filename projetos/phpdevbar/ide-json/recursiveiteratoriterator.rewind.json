@@ -1,0 +1,1 @@
+{"name":"RecursiveIteratorIterator.rewind","purpose":"Rewind the iterator to the first element of the top level inner iterator","manualid":"recursiveiteratoriterator.rewind","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

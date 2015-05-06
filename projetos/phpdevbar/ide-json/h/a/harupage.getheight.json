@@ -1,0 +1,1 @@
+{"name":"HaruPage.getHeight","purpose":"Get the height of the page","manualid":"function.harupage-getheight","version":false,"params":[],"return":{"type":"float","description":"Returns the height of the page."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setHeight"}]}

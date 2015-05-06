@@ -1,0 +1,1 @@
+{"name":"ReflectionClass.getMethod","purpose":"Gets a ReflectionMethod","manualid":"reflectionclass.getmethod","version":false,"params":[{"name":"name","type":"string","optional":"false"}],"return":{"type":"object","description":"A ReflectionMethod."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionClass::getMethod"}]}

@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Property.getDefault","purpose":"Get the default value for the property","manualid":"function.sdo-model-property-getdefault","version":false,"params":[],"return":{"type":"mixed","description":"Returns the default value for the property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

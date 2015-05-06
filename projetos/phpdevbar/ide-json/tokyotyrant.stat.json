@@ -1,0 +1,1 @@
+{"name":"TokyoTyrant.stat","purpose":"Get statistics","manualid":"tokyotyrant.stat","version":false,"params":[],"return":{"type":"array","description":"Returns an array of key value pairs describing the statistics"},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

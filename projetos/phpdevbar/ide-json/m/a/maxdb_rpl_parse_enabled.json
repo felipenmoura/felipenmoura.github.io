@@ -1,0 +1,1 @@
+{"name":"maxdb_rpl_parse_enabled","purpose":"Check if RPL parse is enabled","manualid":"function.maxdb-rpl-parse-enabled","version":"PECL maxdb >= 1.0","params":[{"name":"link","type":"resource","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

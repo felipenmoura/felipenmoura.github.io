@@ -1,0 +1,1 @@
+{"name":"hw_api_object.insert","purpose":"Inserts new attribute","manualid":"function.hwapi-object-insert","version":false,"params":[{"name":"attribute","type":"HW_API_Attribute","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

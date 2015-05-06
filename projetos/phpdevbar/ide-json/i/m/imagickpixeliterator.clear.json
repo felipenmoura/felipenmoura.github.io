@@ -1,0 +1,1 @@
+{"name":"ImagickPixelIterator.clear","purpose":"Clear resources associated with a PixelIterator","manualid":"function.imagickpixeliterator-clear","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

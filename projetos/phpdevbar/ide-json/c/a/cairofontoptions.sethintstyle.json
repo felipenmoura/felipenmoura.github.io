@@ -1,0 +1,1 @@
+{"name":"CairoFontOptions.setHintStyle","purpose":"The setHintStyle purpose","manualid":"cairofontoptions.sethintstyle","version":false,"params":[{"name":"hint_style","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

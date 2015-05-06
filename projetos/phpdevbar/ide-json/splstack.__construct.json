@@ -1,0 +1,1 @@
+{"name":"SplStack.__construct","purpose":"Constructs a new stack implemented using a doubly linked list","manualid":"splstack.construct","version":false,"params":[],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

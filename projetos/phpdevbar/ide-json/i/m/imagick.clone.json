@@ -1,0 +1,1 @@
+{"name":"Imagick.clone","purpose":"Makes an exact copy of the Imagick object","manualid":"function.imagick-clone","version":false,"params":[],"return":{"type":"Imagick","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

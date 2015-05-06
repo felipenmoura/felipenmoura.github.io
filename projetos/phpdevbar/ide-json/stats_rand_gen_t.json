@@ -1,0 +1,1 @@
+{"name":"stats_rand_gen_t","purpose":"Generates a single random deviate from a T distribution","manualid":"function.stats-rand-gen-t","version":"PECL stats >= 1.0.0","params":[{"name":"df","type":"float","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

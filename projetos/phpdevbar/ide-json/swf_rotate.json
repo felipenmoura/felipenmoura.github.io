@@ -1,0 +1,1 @@
+{"name":"swf_rotate","purpose":"Rotate the current transformation","manualid":"function.swf-rotate","version":"PHP 4","params":[{"name":"angle","type":"float","optional":"false"},{"name":"axis","type":"string","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

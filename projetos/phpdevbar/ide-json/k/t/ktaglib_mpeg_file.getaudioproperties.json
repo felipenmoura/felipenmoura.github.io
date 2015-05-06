@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_File.getAudioProperties","purpose":"Returns an object that provides access to the audio properties","manualid":"mpegfile.getAudioProperties","version":false,"params":[],"return":{"type":"KTaglib_MPEG_File:","description":"Returns an KTaglib_MPEG_AudioProperties object or false."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

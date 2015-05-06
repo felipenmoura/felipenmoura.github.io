@@ -1,0 +1,1 @@
+{"name":"ovrimos_cursor","purpose":"Returns the name of the cursor","manualid":"function.ovrimos-cursor","version":"PHP 4 >= 4.0.3, PHP 5 <= 5.0.5","params":[{"name":"result_id","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns the name as a string, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

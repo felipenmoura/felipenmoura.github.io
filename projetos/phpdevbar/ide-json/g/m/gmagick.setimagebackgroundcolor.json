@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagebackgroundcolor","purpose":"Sets the image background color.","manualid":"gmagick.setimagebackgroundcolor","version":false,"params":[{"name":"color","type":"GmagickPixel","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

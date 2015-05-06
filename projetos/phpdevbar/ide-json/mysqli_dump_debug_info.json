@@ -1,0 +1,1 @@
+{"name":"mysqli_dump_debug_info","purpose":"Dump debugging information into the log","manualid":"mysqli.dump-debug-info","version":false,"params":[{"name":"link","type":"mysqli","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"mysqli_debug"}]}

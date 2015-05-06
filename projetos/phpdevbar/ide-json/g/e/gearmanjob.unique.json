@@ -1,0 +1,1 @@
+{"name":"GearmanJob.unique","purpose":"Get the unique identifier","manualid":"gearmanjob.unique","version":false,"params":[],"return":{"type":"string","description":"An opaque unique identifier."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanClient::do"},{"type":"methodname","name":"GearmanTask::uuid"}]}

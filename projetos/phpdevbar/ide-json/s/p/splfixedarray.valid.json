@@ -1,0 +1,1 @@
+{"name":"SplFixedArray.valid","purpose":"Check whether the array contains more elements","manualid":"splfixedarray.valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the array contains any more elements, FALSE otherwise."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

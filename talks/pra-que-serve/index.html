@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script src="../../ppw/_scripts/jquery-1.8.2.min.js"></script>
+        <script src="../../ppw/ppw.js"></script>
+
+        <script src="../../ppw/_addons/syntaxhighlighter/sh.js"></script>
+        <script src="../../ppw/_addons/chartjs/chart.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="styles/context.css" />
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1270869-17']);
+            _gaq.push(['_setDomainName', 'felipenmoura.org']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <div id="boneco">
+            <div class="cabeca">
+                <div class="olhos"></div>
+                <div class="olhos"></div>
+                <div class="nariz"></div>
+                <div class="boca"></div>
+            </div>
+            <div class="corpo">
+                <div class="manga"></div>
+                <div class="braco"></div>
+            </div>
+            <div class="bermuda">
+                <div class="bolso"></div>
+                <div class="pernaEsq pernaBermuda">
+                    <div class="perna"></div>
+                </div>
+                <div class="pernaDir pernaBermuda">
+                    <div class="perna"></div>
+                </div>
+            </div>
+            <div class="sapato esquerdo"></div>
+            <div class="sapato direito"></div>
+            <div class="sombra"></div>
+        </div>
+
+        <section id="ppw-install">
+            <h2>Installing Power Polygon</h2>
+            <span class="LANG-EN">
+            First thing, clone or download Power Polygon:
+            </span>
+            <span class="LANG-PT">
+            Primeiramente, clone ou faça o download do Power Polygon:
+            </span>
+
+            <pre class="sh_sh">
+$ git clone https://github.com/braziljs/power-polygon.git</pre>
+
+
+
+            <pre class="sh_sh">
+$ cd power-polygon
+$ npm install
+# You will be asked to create a token
+#(your token is a keyword you will use later)
+$ sudo node run.js
+# this starts the server, listening to port 8081</pre>
+
+            <span class="LANG-PT"><strong>PRONTO: </strong>já pode sair usando!<br/></span>
+            <span class="LANG-EN"><strong>DONE: </strong>You are good to go!<br/></span>
+
+            <span class="LANG-EN">Access </span>
+            <span class="LANG-PT">Acesse </span><a href="http://localhost:8081/">http://localhost:8081/</a>
+        </section>
+
+
+        <section id="slide-actions">
+            <h2>
+                Slide Actions
+            </h2>
+
+            <span class="LANG-EN">Inside each slide</span>
+            <span class="LANG-PT">DENTRO de cada slide, use</span>
+            <div id="slide-actions-content-1">
+                <pre class="sh_javascript">
+PPW.addAction( function (){ alert(0); } );</pre>
+                <span class="LANG-EN">But you can have a <strong>does</strong>, and <strong>undo</strong> functions for your action:</span>
+                <span class="LANG-PT">Mas você pode usar <strong>does</strong>, e <strong>undo</strong> para suas actions:</span>
+
+                <pre class="sh_javascript">
+PPW.addAction({
+    does: function(){ alert("doing something"); },
+    undo: function(){ alert("undo that!"); },
+});</pre>
+
+            </div>
+            <div id="slide-actions-content-2" style="display: none;">
+                <br/>
+                <span class="LANG-EN">You can also add a <strong>timing</strong> property(in milliseconds).<br/>
+                It will make your action run on schedule, instead of on click/next event.</span>
+                <span class="LANG-PT">Você também pode usar a propriedade <strong>timing</strong> para executar automaticamente</span>
+
+                <pre class="sh_javascript">
+PPW.addAction({
+    // will execute the 'does' function automatically, after 1 second
+    timing: 1000, // you can use the word 'auto', as equivalent to 0
+    does: function(){ alert("doing something"); },
+    undo: function(){ alert("undo that!"); },
+});</pre>
+
+
+            </div>
+
+            <script>
+                PPW.addAction({
+                    does: function(){
+                        PPW.lock();
+                        PPW.animate("#slide-actions-content-1", 'fadeOutLeftBig', {
+                            duration: '300ms',
+                            onend: function(){
+                                PPW.animate("#slide-actions-content-2", 'fadeInRightBig');
+                                PPW.unlock();
+                            }
+                        });
+                    },
+                    undo: function(){
+                        PPW.lock();
+                        PPW.animate("#slide-actions-content-2", 'fadeOutRightBig', {
+                            duration: '300ms',
+                            onend: function(){
+                                PPW.animate("#slide-actions-content-1", 'fadeInLeftBig');
+                                PPW.unlock();
+                            }
+                        });
+                    }
+                });
+            </script>
+
+        </section>
+
+        <section id="slide-animations-2">
+            <h2>
+                Slide Animations
+            </h2>
+            Example:
+            <pre class="sh_javascript">
+PPW.addAction({
+    timing: auto,
+    does: function(){
+              PPW.animate("#slide-animations-eg",
+                  "pulse",
+                  {
+                      count: 'infinite',
+                      duration: '500ms',
+                      delay: '2s',
+                      onstart: function(){ console.log(0); },
+                      onend: function(){ console.log(1); }
+                  }
+              );
+          }
+});</pre>
+
+            <div id="slide-animations-eg"
+                 style="width: 90px;
+                        height: 90px;
+                        background: red;
+                        border: solid 1px black;
+                        position: absolute;
+                        right: 40px;
+                        top: 40px;
+                        z-index: 99999;"></div>
+
+            <script>
+                PPW.addAction({
+                    timing: auto,
+                    does: function(){
+
+                              PPW.animate("#slide-animations-eg",
+                                  "pulse",
+                                  {
+                                      count: 'infinite',
+                                      duration: '500ms',
+                                      delay: '2s',
+                                      onstart: function(){ console.log(0); },
+                                      onend: function(){ console.log(1); }
+                                  }
+                              );
+                          }
+                });
+            </script>
+
+        </section>
+
+        <section id="slide-languages">
+            <h2 class="LANG-EN">Languages</h2>
+            <h2 class="LANG-PT">Idioimas</h2>
+
+            <span class="LANG-EN">You can create your talks with as many languages as you need.</span>
+            <span class="LANG-PT">Você pode criar suas palestras com quantos idiomas precisar.</span><br/>
+
+            <pre class="sh_html">
+&lt;span class="LANG-EN">Text in English.&lt;/span>
+&lt;span class="LANG-PT">Texto em Português.&lt;/span></pre>
+
+            <span class="LANG-EN">Go to the top-left corner of the screen, open the settings and change the language selectbox.</span>
+            <span class="LANG-PT">Vá para o canto superior esquerdo da janela, selecione o icone "settings" na barra de opções, e altere a linguagem</span>
+
+
+        </section>
+
+
+        <section id="slide-profiles">
+            <h2 class="LANG-EN">Profiling your talk</h2>
+            <h2 class="LANG-PT">Perfis de apresentação</h2>
+
+            <div class="LANG-EN">You can profile your talk by setting the default profile in the <strong>init</strong> method, and defining the slides their profile.<br/></div>
+            <div class="LANG-PT">Você pode aplicar profiles para suas apresentações</div>
+
+            <pre class="sh_javascript">
+PPW.init({
+  profile: 'defaultProfile', // you name it
+  // other settings you may want to use
+  slides: [
+    { id: 'slide-1' }, // default profile
+    { id: 'slide-2', profile: 'other' },
+    { id: 'slide-3' }, // default profile
+  ]
+});</pre>
+        </section>
+
+        <section id="slide-profiles-2">
+            <div class="LANG-EN">
+                <h2>Extra slide</h2>
+                This is the only slide in this presentation with a profile set.<br/>
+                It will be visible only if you have NOT specified a profile, or if you set the profile to 'extra-slide'.
+            </div>
+            <div class="LANG-PT">
+                <h2>Slide Extra</h2>
+                Este slide somente é visivel quando o profile está marcado como "extra" ou nenhum profile está definido(none).
+            </div>
+        </section>
+
+
+        <script>
+            PPW.init({
+                PPWSrc: '../../ppw/',
+                theme: ['thm-red-n-black', 'thm-parallax-1'],
+                useSplashScreen: false,
+                transition: 'trans-zooming',
+                useArrows: false,
+                languages: ['EN', 'PT'],
+                defaultLanguage: 'PT',
+                profile: 'shorter',
+                defaultProfile: 'shorter',
+                slides: [
+/*OK*/               { id: 'cover',                      type: 'opening' }
+/*OK*/              ,{ id: 'about',                      type: 'content' }
+/*OK*/              ,{ id: 'historia',                      type: 'content' }
+/*OK*/              ,{ id: 'historia-2',                      type: 'content' }
+                    // a historia é cheia de coisas legais, que as pessoas não sabiam bem o que fazer com elas
+                    // stone age, bomba nuclear
+                    // sera q fazemos so por que PODEMOS?!
+/*OK*/              ,{ id: 'historia-3',                      type: 'content' }
+/*OK*/              ,{ id: 'internet',                      type: 'content' }
+                    // MUITA informacao,
+/*OK*/              ,{ id: 'google',                      type: 'content' }
+                    // google arrumou a casa
+/*OK*/              ,{ id: 'poderes',                      type: 'content' }
+                    // nao precisa ser super heroi pra mudar o mundo
+/*OK*/              ,{ id: 'html5',                      type: 'content' }
+/*OK*/            ,{ id: 'video-1',                      type: 'content',                    notes: ["Um video interativo"] }
+/*OK*/            ,{ id: 'video-2',                      type: 'content',                    notes: ["Um video interativo"] }
+/*OK*/              ,{ id: 'svg-demo-1',                 type: 'content' }
+/*OK*/              ,{ id: 'svg-demo-2',                 type: 'content' }
+/*OK*/              ,{ id: 'svg-demo-3',                 type: 'content' }
+/*OK*/              ,{ id: 'canvas',              type: 'content' }
+/*OK*/              ,{ id: 'como-funciona-o-canvas',     type: 'content',                    notes: ["Frames completos", "requestAnimationFrame"] }
+/*OK*/              ,{ id: 'canvas-demo-3',              type: 'content' }
+/*OK*/              ,{ id: 'video-3',          type: 'content' }
+/*OK*/              ,{ id: 'chroma-key-code',          type: 'content' }
+/*OK*/              ,{ id: 'canvas-3d-ctx',              type: 'content' }
+/*OK*/              ,{ id: 'canvas-demo-2',              type: 'content' }
+/*OK*/              ,{ id: 'webgl',                      type: 'content' }
+/*OK*/              ,{ id: 'webgl-space',                type: 'content' }
+/*OK*/              ,{ id: 'webgl-space-2',                type: 'content' }
+/*OK*/              ,{ id: 'webgl-libs',              type: 'content' }
+/*OK*/              ,{ id: 'webgl-demo-2',                type: 'content' }
+
+                    // um MONTE de coisas legais
+/*OK*/              ,{ id: 'css3',                        type: 'content' }
+/*OK*/              ,{ id: 'css3',                        type: 'content' }
+/*OK*/              ,{ id: 'formas-em-css3',          type: 'content' }
+/*OK*/              ,{ id: 'formas-em-css3-2',          type: 'content' }
+/*OK*/                ,{ id: 'css3-3d',          type: 'content' }
+/*OK*/              ,{ id: 'css3-animation-demo-1',      type: 'content' }
+/*OK*/              ,{ id: 'css3-animation-demo-2',      type: 'content' }
+/*OK*/              ,{ id: 'parallax',                   type: 'content' }
+/*OK*/              ,{ id: 'parallax-demo-1',            type: 'content' }
+/*OK*/              ,{ id: 'parallax-demo-2',            type: 'content' }
+                    // animacoes e 3D
+/*OK*/              ,{ id: 'sockets',                    type: 'content',                    notes: ["Uso de sockets para interagir com a apresentação"] }
+/**/              ,{ id: 'socket-io',                    type: 'content',                    notes: ["Uso de sockets para interagir com a apresentação"] }
+/*OK*/              ,{ id: 'sockets-demo',               type: 'content' }
+
+                    ,{ id: 'power-polygon',        type: 'content' }
+                    ,{ id: 'ppw-install',        type: 'content' }
+                    ,{ id: 'ppw-config',        type: 'content' }
+                    ,{ id: 'slide-actions',        type: 'content' }
+                    ,{ id: 'slide-animations-2',        type: 'content' }
+                    ,{ id: 'slide-languages',        type: 'content' }
+                    ,{ id: 'slide-profiles' }
+                    ,{ id: 'slide-profiles-2', profile: 'extra-slide' }
+                    ,{ id: 'plugins-charts' }
+                    ,{ id: 'sh' }
+                    ,{ id: 'remote-control-2' }
+                    ,{ id: 'ppw-on-github' }
+                    ,{ id: 'ppw-future' }
+                    // video normal
+//**/              ,{ id: 'video-2',                      type: 'content',                    notes: ["Um video interativo"] }
+                    // chroma-key-video
+
+              // css3 transforma tudo em matrix no final
+/*OK*/              ,{ id: 'isso-e-tudo-pessoal',        type: 'content' }
+                ],
+                themeSettings: {
+                    shTheme: 'sh_bright'
+                },
+                zoomOnScroll: false
+            });
+
+            /*PPW.addListener('onslidechange', function(data){
+                switch(data.current.id){
+                    case 'formas-em-css3-2':
+                        $('#boneco').show();
+                        break;
+                    default:
+                        $('#boneco').hide();
+                        break;
+                }
+            });*/
+
+        </script>
+
+    </body>
+</html>

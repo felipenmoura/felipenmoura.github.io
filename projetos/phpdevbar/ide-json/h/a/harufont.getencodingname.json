@@ -1,0 +1,1 @@
+{"name":"HaruFont.getEncodingName","purpose":"Get the name of the encoding","manualid":"function.harufont-getencodingname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the font encoding."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

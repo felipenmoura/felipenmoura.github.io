@@ -1,0 +1,1 @@
+{"name":"vpopmail_alias_del","purpose":"Deletes all virtual aliases of a user","manualid":"function.vpopmail-alias-del","version":"PHP 4 >= 4.0.7, PECL vpopmail >= 0.2","params":[{"name":"user","type":"string","optional":"false"},{"name":"domain","type":"string","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

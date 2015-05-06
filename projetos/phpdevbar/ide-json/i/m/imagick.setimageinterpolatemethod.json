@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageInterpolateMethod","purpose":"Sets the image interpolate pixel method","manualid":"function.imagick-setimageinterpolatemethod","version":false,"params":[{"name":"method","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

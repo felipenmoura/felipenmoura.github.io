@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFacetFields","purpose":"Returns all the facet fields","manualid":"solrquery.getfacetfields","version":false,"params":[],"return":{"type":"array","description":"Returns an array of all the fields and NULL if none was set"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

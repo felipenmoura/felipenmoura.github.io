@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style type='text/css'>
+			@-webkit-keyframes secondAnim {
+				from{}
+				to{-webkit-transform: rotate(360deg);}
+			}
+			@-webkit-keyframes minutesAnim {
+				from{}
+				to{-webkit-transform: rotate(360deg);}
+			}
+			@-webkit-keyframes hoursAnim {
+				from{}
+				to{-webkit-transform: rotate(360deg);}
+			}
+			#clock{
+				border-radius: 50%;
+				width: 500px;
+				height: 500px;
+				margin: auto;
+				border: solid 8px #444;
+				box-shadow: 0px 0px 40px black, 60px 60px 300px gray inset;
+				position: relative;
+				background-color: white;
+			}
+			#secondsParent{ /* move */
+				position: relative;
+				width: 500px;
+				height: 500px;
+				left: 0px;
+				-webkit-animation: secondAnim 60s linear infinite;
+			}
+			#minutesParent{ /* move */
+				position: relative;
+				width: 500px;
+				height: 500px;
+				left: 0px;
+				-webkit-animation: minutesAnim 3600s linear infinite;
+			}
+			#hoursParent{ /* move */
+				position: relative;
+				width: 500px;
+				height: 500px;
+				left: 0px;
+				-webkit-animation: hoursAnim 216000s linear infinite;
+				-webkit-transform: rotate(-90deg);
+			}
+			#clock div{
+				position: absolute;
+				color: black;
+				font-weight: bold;
+				font-size: 60px;
+				font-family: Tahoma;
+				font-style: italic;
+				text-align: center;
+			}
+			#clock div:nth-child(1){
+				left: 50%;
+				width: 90px;
+				margin-left: -45px;
+			}
+			#clock div:nth-child(2){
+				right: 10px;
+				top: 50%;
+				margin-top: -30px;
+			}
+			#clock div:nth-child(3){
+				bottom: 0px;
+				left: 50%;
+				width: 90px;
+				margin-left: -55px;
+			}
+			#clock div:nth-child(4){
+				top: 50%;
+				margin-top: -30px;
+			}
+			
+			#seconds{
+				position: absolute;
+				top: 245px;
+				border: solid;
+				border-color: transparent transparent transparent red;
+				border-width: 6px 0px 6px 250px;
+				width: 2px;
+				height: 2px;
+				left: 289px !IMPORTANT;
+			}
+			#minutes{
+				position: absolute;
+				top: 245px;
+				border: solid;
+				border-color: transparent transparent transparent black;
+				border-width: 6px 0px 6px 250px;
+				width: 2px;
+				height: 2px;
+				left: 289px !IMPORTANT;
+			}
+			#hours{
+				position: absolute;
+				top: 245px;
+				border: solid;
+				border-color: transparent transparent transparent black;
+				border-width: 6px 0px 6px 140px;
+				width: 2px;
+				height: 2px;
+				left: 289px !IMPORTANT;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='clock'>
+			<div>12</div>
+			<div>3</div>
+			<div>6</div>
+			<div>9</div>
+			
+			<div id='secondsParent'><div id='seconds'></div></div>
+			<div id='minutesParent'><div id='minutes'></div></div>
+			<div id='hoursParent'><div id='hours'></div></div>
+		</div>
+	</body>
+	<script>
+		
+	</script>
+</html>

@@ -1,0 +1,1 @@
+{"name":"CairoSurface.getType","purpose":"The getType purpose","manualid":"cairosurface.gettype","version":false,"params":[],"return":{"type":"int","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

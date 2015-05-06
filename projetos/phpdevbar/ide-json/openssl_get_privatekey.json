@@ -1,0 +1,1 @@
+{"name":"openssl_get_privatekey","purpose":"Alias of openssl_pkey_get_private","manualid":"function.openssl-get-privatekey","version":"PHP 4 >= 4.0.4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

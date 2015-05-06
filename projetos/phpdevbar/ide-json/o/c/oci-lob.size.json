@@ -1,0 +1,1 @@
+{"name":"OCI-Lob.size","purpose":"Returns size of large object","manualid":"function.oci-lob-size","version":false,"params":[],"return":{"type":"int","description":"Returns length of large object value  or FALSE on failure.\n   Empty objects have zero length."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

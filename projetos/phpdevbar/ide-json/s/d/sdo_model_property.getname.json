@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Property.getName","purpose":"Get the name of the SDO_Model_Property","manualid":"function.sdo-model-property-getname","version":false,"params":[],"return":{"type":"string","description":"Returns the name of the SDO_Model_Property."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

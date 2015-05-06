@@ -1,0 +1,1 @@
+{"name":"swf_shapelineto","purpose":"Draw a line","manualid":"function.swf-shapelineto","version":"PHP 4","params":[{"name":"x","type":"float","optional":"false"},{"name":"y","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"newt_listbox_set_current_by_key","purpose":"","manualid":"function.newt-listbox-set-current-by-key","version":"PECL newt >= 0.1","params":[{"name":"listbox","type":"resource","optional":"false"},{"name":"key","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

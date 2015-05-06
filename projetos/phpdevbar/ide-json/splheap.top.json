@@ -1,0 +1,1 @@
+{"name":"SplHeap.top","purpose":"Peaks at the node from the top of the heap","manualid":"splheap.top","version":false,"params":[],"return":{"type":"mixed","description":"The value of the node on the top."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

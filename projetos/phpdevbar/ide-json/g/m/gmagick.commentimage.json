@@ -1,0 +1,1 @@
+{"name":"Gmagick.commentimage","purpose":"Adds a comment to your image","manualid":"gmagick.commentimage","version":false,"params":[{"name":"comment","type":"string","optional":"false"}],"return":{"type":"void","description":"The Gmagick object with comment added."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

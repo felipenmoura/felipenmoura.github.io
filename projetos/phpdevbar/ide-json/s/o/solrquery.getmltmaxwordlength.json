@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getMltMaxWordLength","purpose":"Returns the maximum word length above which words will be ignored","manualid":"solrquery.getmltmaxwordlength","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

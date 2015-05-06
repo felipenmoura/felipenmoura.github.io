@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getFilterQueries","purpose":"Returns an array of filter queries","manualid":"solrquery.getfilterqueries","version":false,"params":[],"return":{"type":"array","description":"Returns an array on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ncurses_slk_attr","purpose":"Returns current soft label key attribute","manualid":"function.ncurses-slk-attr","version":"PHP 4 >= 4.0.7, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"int","description":"The attribute, as an integer."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

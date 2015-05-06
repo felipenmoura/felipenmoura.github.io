@@ -1,0 +1,17 @@
+<div class='animated'>
+	<div id='a'>AAA</div>
+	<div id='b'>BBB</div>
+	<div id='c' style='margin: auto;text-align:center; width: 250px;'>CCC</div>
+	<div id='d'>DDD</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		PPW.animIn('#a', 'fadeIn', 'fast');
+		PPW.animOut('#b', 'fadeOut', 'slowest', function(){
+		});
+	});
+	PPW.addAction(function(){
+		PPW.animEmphasis('#c', 'bounce', 'normal', function(){
+		});
+	});
+</script>

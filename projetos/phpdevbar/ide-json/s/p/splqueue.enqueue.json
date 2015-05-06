@@ -1,0 +1,1 @@
+{"name":"SplQueue.enqueue","purpose":"Adds an element to the queue.","manualid":"splqueue.enqueue","version":false,"params":[{"name":"value","type":"mixed","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

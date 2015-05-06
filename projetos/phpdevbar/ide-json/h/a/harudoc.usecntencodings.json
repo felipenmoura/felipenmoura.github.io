@@ -1,0 +1,1 @@
+{"name":"HaruDoc.useCNTEncodings","purpose":"Enable Chinese traditional encodings","manualid":"function.harudoc-usecntencodings","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruDoc::useCNTFonts"}]}

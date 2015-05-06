@@ -1,0 +1,1 @@
+{"name":"ncurses_reset_shell_mode","purpose":"Resets the shell mode saved by def_shell_mode","manualid":"function.ncurses-reset-shell-mode","version":"PHP 4 >= 4.3.0, PHP 5 < 5.3.0, PECL ncurses >= 1.0.0","params":[],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

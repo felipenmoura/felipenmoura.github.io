@@ -1,0 +1,1 @@
+{"name":"Imagick.remapImage","purpose":"Remaps image colors","manualid":"imagick.remapimage","version":false,"params":[{"name":"replacement","type":"Imagick","optional":"false"},{"name":"DITHER","type":"int","optional":"false"}],"return":{"type":"void","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

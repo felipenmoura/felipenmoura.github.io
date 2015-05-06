@@ -1,0 +1,1 @@
+{"name":"cairo_get_group_target","purpose":"The getGroupTarget purpose","manualid":"cairocontext.getgrouptarget","version":false,"params":[{"name":"context","type":"CairoContext","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

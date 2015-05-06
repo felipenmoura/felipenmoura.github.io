@@ -1,0 +1,1 @@
+{"name":"Imagick.writeImagesFile","purpose":"Writes frames to a filehandle","manualid":"function.imagick-writeimagesfile","version":false,"params":[{"name":"filehandle","type":"resource","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

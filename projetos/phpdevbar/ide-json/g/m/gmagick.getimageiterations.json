@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimageiterations","purpose":"Gets the image iterations","manualid":"gmagick.getimageiterations","version":false,"params":[],"return":{"type":"void","description":"Returns the image iterations as an integer."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

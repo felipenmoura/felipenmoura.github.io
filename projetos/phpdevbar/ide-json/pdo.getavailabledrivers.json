@@ -1,0 +1,1 @@
+{"name":"PDO.getAvailableDrivers","purpose":"Return an array of available PDO drivers","manualid":"pdo.getavailabledrivers","version":false,"params":[],"return":{"type":"array","description":"PDO::getAvailableDrivers returns an array of PDO driver names. If\n   no drivers are available, it returns an empty array."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

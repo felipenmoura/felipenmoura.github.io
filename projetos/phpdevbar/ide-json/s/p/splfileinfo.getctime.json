@@ -1,0 +1,1 @@
+{"name":"SplFileInfo.getCTime","purpose":"Gets the inode change time","manualid":"splfileinfo.getctime","version":false,"params":[],"return":{"type":"int","description":"The last change time, in a Unix timestamp."},"errors":"Throws RunTimeException on error.","notes":[],"changelog":[],"seealso":[{"type":"function","name":"filectime"}]}

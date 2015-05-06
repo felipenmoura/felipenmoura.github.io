@@ -1,0 +1,1 @@
+{"name":"HaruImage.getHeight","purpose":"Get the height of the image","manualid":"function.haruimage-getheight","version":false,"params":[],"return":{"type":"int","description":"Returns the height of the image."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

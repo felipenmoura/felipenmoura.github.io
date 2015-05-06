@@ -1,0 +1,1 @@
+{"name":"Imagick.getQuantumRange","purpose":"Returns the Imagick quantum range","manualid":"function.imagick-getquantumrange","version":false,"params":[],"return":{"type":"array","description":"Returns the Imagick quantum range as a string.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

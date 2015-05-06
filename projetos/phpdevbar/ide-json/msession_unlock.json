@@ -1,0 +1,1 @@
+{"name":"msession_unlock","purpose":"Unlock a session","manualid":"function.msession-unlock","version":"PHP 4 >= 4.2.0, PHP 5 <= 5.1.2","params":[{"name":"session","type":"string","optional":"false"},{"name":"key","type":"int","optional":"false"}],"return":{"type":"int","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

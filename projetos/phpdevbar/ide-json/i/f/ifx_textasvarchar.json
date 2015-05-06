@@ -1,0 +1,1 @@
+{"name":"ifx_textasvarchar","purpose":"Set the default text mode","manualid":"function.ifx-textasvarchar","version":"PHP 4, PHP <=5.2.0","params":[{"name":"mode","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"ifx_byteasvarchar"}]}

@@ -1,0 +1,1 @@
+{"name":"SplFileObject.setFlags","purpose":"Sets flags for the SplFileObject","manualid":"splfileobject.setflags","version":false,"params":[{"name":"flags","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"SplFileObject::getFlags"}]}

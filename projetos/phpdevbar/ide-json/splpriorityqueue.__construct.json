@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.__construct","purpose":"Constructs a new empty queue","manualid":"splpriorityqueue.construct","version":false,"params":[],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

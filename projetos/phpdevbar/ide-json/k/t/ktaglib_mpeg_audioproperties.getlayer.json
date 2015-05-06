@@ -1,0 +1,1 @@
+{"name":"KTaglib_MPEG_AudioProperties.getLayer","purpose":"Returns the layer of a MPEG file","manualid":"audioproperties.getLayer","version":false,"params":[],"return":{"type":"int","description":"Returns the layer as an integer"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

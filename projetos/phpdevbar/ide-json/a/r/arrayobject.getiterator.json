@@ -1,0 +1,1 @@
+{"name":"ArrayObject.getIterator","purpose":"Create a new iterator from an ArrayObject instance","manualid":"arrayobject.getiterator","version":false,"params":[],"return":{"type":"ArrayIterator","description":"An iterator from an ArrayObject."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

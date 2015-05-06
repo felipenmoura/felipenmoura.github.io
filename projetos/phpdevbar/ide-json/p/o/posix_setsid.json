@@ -1,0 +1,1 @@
+{"name":"posix_setsid","purpose":"Make the current process a session leader","manualid":"function.posix-setsid","version":"PHP 4, PHP 5","params":[],"return":{"type":"int","description":"Returns the session id, or -1 on errors."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

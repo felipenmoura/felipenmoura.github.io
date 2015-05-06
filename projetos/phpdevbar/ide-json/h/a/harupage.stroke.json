@@ -1,0 +1,1 @@
+{"name":"HaruPage.stroke","purpose":"Paint current path","manualid":"function.harupage-stroke","version":false,"params":[{"name":"close_path","type":"bool","optional":"true","initializer":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

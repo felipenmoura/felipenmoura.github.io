@@ -1,0 +1,1 @@
+{"name":"SolrQuery.getHighlightRegexMaxAnalyzedChars","purpose":"Returns the maximum number of characters from a field when using the regex fragmenter","manualid":"solrquery.gethighlightregexmaxanalyzedchars","version":false,"params":[],"return":{"type":"int","description":"Returns an integer on success and NULL if not set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

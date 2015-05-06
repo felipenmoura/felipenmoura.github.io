@@ -1,0 +1,1 @@
+{"name":"ReflectionFunctionAbstract.getStartLine","purpose":"Gets starting line number","manualid":"reflectionfunctionabstract.getstartline","version":false,"params":[],"return":{"type":"int","description":"The starting line number."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ReflectionFunctionAbstract::getEndLine"}]}

@@ -1,0 +1,1 @@
+{"name":"SoapServer.addSoapHeader","purpose":"Add a SOAP header to the response","manualid":"soapserver.addsoapheader","version":false,"params":[{"name":"object","type":"SoapHeader","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

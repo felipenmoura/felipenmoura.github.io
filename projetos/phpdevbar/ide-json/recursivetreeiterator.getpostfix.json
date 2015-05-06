@@ -1,0 +1,1 @@
+{"name":"RecursiveTreeIterator.getPostfix","purpose":"Get the postfix","manualid":"recursivetreeiterator.getpostfix","version":false,"params":[],"return":{"type":"void","description":"Returns the string to place after the current element."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

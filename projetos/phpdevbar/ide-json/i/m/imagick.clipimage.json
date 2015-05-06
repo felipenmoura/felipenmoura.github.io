@@ -1,0 +1,1 @@
+{"name":"Imagick.clipImage","purpose":"Clips along the first path from the 8BIM profile","manualid":"function.imagick-clipimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

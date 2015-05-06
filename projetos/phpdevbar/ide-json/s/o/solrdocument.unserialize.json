@@ -1,0 +1,1 @@
+{"name":"SolrDocument.unserialize","purpose":"Custom serialization of SolrDocument objects","manualid":"solrdocument.unserialize","version":false,"params":[{"name":"serialized","type":"string","optional":"false"}],"return":{"type":"void","description":"None."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

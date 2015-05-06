@@ -1,0 +1,1 @@
+{"name":"DomDocumentType.public_id","purpose":"Returns public id of document type","manualid":"function.domdocumenttype-public-id","version":false,"params":[],"return":{"type":"string","description":"Returns the public id of the DomDocumentType, as a\n   string."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

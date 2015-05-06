@@ -1,0 +1,1 @@
+{"name":"GearmanJob.workloadSize","purpose":"Get size of work load","manualid":"gearmanjob.workloadsize","version":false,"params":[],"return":{"type":"int","description":"The size in bytes."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"GearmanJob::workload"}]}

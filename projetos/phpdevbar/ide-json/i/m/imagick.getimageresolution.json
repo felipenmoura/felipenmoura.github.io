@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageResolution","purpose":"Gets the image X and Y resolution","manualid":"function.imagick-getimageresolution","version":false,"params":[],"return":{"type":"array","description":"Returns the resolution as an array.\n   Throw an\nImagickException on error."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

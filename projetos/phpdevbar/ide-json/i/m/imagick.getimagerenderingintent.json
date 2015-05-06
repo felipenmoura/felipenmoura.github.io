@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageRenderingIntent","purpose":"Gets the image rendering intent","manualid":"function.imagick-getimagerenderingintent","version":false,"params":[],"return":{"type":"int","description":"Returns the image rendering intent.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

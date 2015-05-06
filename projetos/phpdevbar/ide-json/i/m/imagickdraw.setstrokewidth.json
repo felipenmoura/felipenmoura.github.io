@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeWidth","purpose":"Sets the width of the stroke used to draw object outlines","manualid":"function.imagickdraw-setstrokewidth","version":false,"params":[{"name":"stroke_width","type":"float","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

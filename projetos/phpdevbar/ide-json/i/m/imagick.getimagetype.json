@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageType","purpose":"Gets the potential image type","manualid":"function.imagick-getimagetype","version":false,"params":[],"return":{"type":"int","description":"Returns the potential image type.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

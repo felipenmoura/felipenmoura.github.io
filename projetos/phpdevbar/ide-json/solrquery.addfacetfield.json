@@ -1,0 +1,1 @@
+{"name":"SolrQuery.addFacetField","purpose":"Adds another field to the facet","manualid":"solrquery.addfacetfield","version":false,"params":[{"name":"field","type":"string","optional":"false"}],"return":{"type":"SolrQuery","description":"Returns the current SolrQuery object, if the return value is used."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

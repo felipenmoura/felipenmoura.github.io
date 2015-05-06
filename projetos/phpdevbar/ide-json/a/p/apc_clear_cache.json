@@ -1,0 +1,1 @@
+{"name":"apc_clear_cache","purpose":"Clears the APC cache","manualid":"function.apc-clear-cache","version":"PECL apc >= 2.0.0","params":[{"name":"cache_type","type":"string","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"apc_cache_info"}]}

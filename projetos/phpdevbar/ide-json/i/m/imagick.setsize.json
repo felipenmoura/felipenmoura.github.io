@@ -1,0 +1,1 @@
+{"name":"Imagick.setSize","purpose":"Sets the size of the Imagick object","manualid":"function.imagick-setsize","version":false,"params":[{"name":"columns","type":"int","optional":"false"},{"name":"rows","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

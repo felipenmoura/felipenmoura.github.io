@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageMatte","purpose":"Sets the image matte channel","manualid":"function.imagick-setimagematte","version":false,"params":[{"name":"matte","type":"bool","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

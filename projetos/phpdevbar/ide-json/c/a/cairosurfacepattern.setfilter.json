@@ -1,0 +1,1 @@
+{"name":"CairoSurfacePattern.setFilter","purpose":"The setFilter purpose","manualid":"cairosurfacepattern.setfilter","version":false,"params":[{"name":"filter","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

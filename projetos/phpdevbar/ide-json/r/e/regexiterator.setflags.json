@@ -1,0 +1,1 @@
+{"name":"RegexIterator.setFlags","purpose":"Sets the flags.","manualid":"regexiterator.setflags","version":false,"params":[{"name":"flags","type":"int","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RegexIterator::getFlags"}]}

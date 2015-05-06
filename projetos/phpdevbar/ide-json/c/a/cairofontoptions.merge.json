@@ -1,0 +1,1 @@
+{"name":"CairoFontOptions.merge","purpose":"The merge purpose","manualid":"cairofontoptions.merge","version":false,"params":[{"name":"other","type":"string","optional":"false"}],"return":{"type":"void","description":"Description..."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Classname::Method"}]}

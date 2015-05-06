@@ -1,0 +1,1 @@
+{"name":"Gmagick.getimagegamma","purpose":"Gets the image gamma","manualid":"gmagick.getimagegamma","version":false,"params":[],"return":{"type":"void","description":"Returns the image gamma on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

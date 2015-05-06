@@ -1,0 +1,1 @@
+{"name":"PDF_get_apiname","purpose":"Get name of unsuccessfull API function","manualid":"function.pdf-get-apiname","version":"PECL pdflib >= 2.0.0","params":[{"name":"pdfdoc","type":"resource","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

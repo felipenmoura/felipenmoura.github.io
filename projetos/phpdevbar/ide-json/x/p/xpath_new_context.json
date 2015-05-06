@@ -1,0 +1,1 @@
+{"name":"xpath_new_context","purpose":"Creates new xpath context","manualid":"function.xpath-new-context","version":"PHP 4","params":[{"name":"dom_document","type":"domdocument","optional":"false"}],"return":{"type":"XPathContext","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"xpath_eval"}]}

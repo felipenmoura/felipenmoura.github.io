@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageScene","purpose":"Gets the image scene","manualid":"function.imagick-getimagescene","version":false,"params":[],"return":{"type":"int","description":"Returns the image scene.\n   Throw an\nImagickException on error."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

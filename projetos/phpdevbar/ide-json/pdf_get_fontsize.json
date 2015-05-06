@@ -1,0 +1,1 @@
+{"name":"PDF_get_fontsize","purpose":"Font handling [deprecated]","manualid":"function.pdf-get-fontsize","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

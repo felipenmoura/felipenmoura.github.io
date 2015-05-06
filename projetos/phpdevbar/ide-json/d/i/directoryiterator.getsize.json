@@ -1,0 +1,1 @@
+{"name":"DirectoryIterator.getSize","purpose":"Get size of current DirectoryIterator item","manualid":"directoryiterator.getsize","version":false,"params":[],"return":{"type":"int","description":"Returns the size of the file, in bytes."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"filesize"}]}

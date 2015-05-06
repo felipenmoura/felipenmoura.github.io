@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getComment","purpose":"Returns the comment from a ID3 tag","manualid":"tag.getComment","version":false,"params":[],"return":{"type":"string","description":"Returns the comment string"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

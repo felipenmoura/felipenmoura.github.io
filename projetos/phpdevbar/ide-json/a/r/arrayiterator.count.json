@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.count","purpose":"Count elements","manualid":"arrayiterator.count","version":false,"params":[],"return":{"type":"object","description":"The number."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"ArrayIterator::getFlags"}]}

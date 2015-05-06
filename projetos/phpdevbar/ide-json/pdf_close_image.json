@@ -1,0 +1,1 @@
+{"name":"PDF_close_image","purpose":"Close image","manualid":"function.pdf-close-image","version":"PHP 4, PECL pdflib >= 1.0.0","params":[{"name":"p","type":"resource","optional":"false"},{"name":"image","type":"int","optional":"false"}],"return":{"type":"bool","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

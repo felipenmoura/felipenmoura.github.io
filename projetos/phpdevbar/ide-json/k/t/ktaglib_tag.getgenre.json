@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getGenre","purpose":"Returns the genre from a ID3 tag","manualid":"tag.getGenre","version":false,"params":[],"return":{"type":"string","description":"Returns the genre string"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

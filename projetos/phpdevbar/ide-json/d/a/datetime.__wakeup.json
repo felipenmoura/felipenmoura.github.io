@@ -1,0 +1,1 @@
+{"name":"DateTime.__wakeup","purpose":"The __wakeup handler","manualid":"datetime.wakeup","version":false,"params":[],"return":{"type":"DateTime","description":"Initializes a DateTime object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

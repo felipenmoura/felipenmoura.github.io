@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagebordercolor","purpose":"Sets the image border color.","manualid":"gmagick.setimagebordercolor","version":false,"params":[{"name":"color","type":"GmagickPixel","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

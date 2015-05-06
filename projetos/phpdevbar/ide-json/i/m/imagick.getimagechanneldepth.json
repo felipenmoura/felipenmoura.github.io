@@ -1,0 +1,1 @@
+{"name":"Imagick.getImageChannelDepth","purpose":"Gets the depth for a particular image channel","manualid":"function.imagick-getimagechanneldepth","version":false,"params":[{"name":"channel","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"session_encode","purpose":"Encodes the current session data as a string","manualid":"function.session-encode","version":"PHP 4, PHP 5","params":[],"return":{"type":"string","description":"Returns the contents of the current session encoded."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"function","name":"session_decode"}]}

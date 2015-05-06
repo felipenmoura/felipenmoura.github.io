@@ -1,0 +1,1 @@
+{"name":"SplPriorityQueue.next","purpose":"Move to the next node","manualid":"splpriorityqueue.next","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

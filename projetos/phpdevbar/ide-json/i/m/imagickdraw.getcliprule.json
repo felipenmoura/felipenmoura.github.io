@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getClipRule","purpose":"Returns the current polygon fill rule","manualid":"function.imagickdraw-getcliprule","version":false,"params":[],"return":{"type":"int","description":"Returns one of the FILLRULE_ constants."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

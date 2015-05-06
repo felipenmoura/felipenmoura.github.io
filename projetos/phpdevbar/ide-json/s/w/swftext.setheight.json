@@ -1,0 +1,1 @@
+{"name":"SWFText.setHeight","purpose":"Sets the current font height","manualid":"function.swftext.setheight","version":false,"params":[{"name":"height","type":"float","optional":"false"}],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

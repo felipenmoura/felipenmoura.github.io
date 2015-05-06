@@ -1,0 +1,1 @@
+{"name":"SWFMorph.getShape2","purpose":"Gets a handle to the ending shape","manualid":"function.swfmorph.getshape2","version":false,"params":[],"return":{"type":"SWFShape","description":"Returns a  object."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

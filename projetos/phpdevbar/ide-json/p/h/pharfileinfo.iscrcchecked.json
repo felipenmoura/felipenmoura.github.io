@@ -1,0 +1,1 @@
+{"name":"PharFileInfo.isCRCChecked","purpose":"Returns whether file entry has had its CRC verified","manualid":"pharfileinfo.iscrcchecked","version":false,"params":[],"return":{"type":"bool","description":"TRUE if the file has had its CRC verified, FALSE if not."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

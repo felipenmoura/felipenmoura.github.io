@@ -1,0 +1,1 @@
+{"name":"KTaglib_Tag.getTitle","purpose":"Returns the title string from a ID3 tag","manualid":"tag.getTitle","version":false,"params":[],"return":{"type":"string","description":"Returns the title string"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

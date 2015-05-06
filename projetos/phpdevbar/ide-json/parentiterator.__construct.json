@@ -1,0 +1,1 @@
+{"name":"ParentIterator.__construct","purpose":"Constructs a ParentIterator","manualid":"parentiterator.construct","version":false,"params":[{"name":"iterator","type":"RecursiveIterator","optional":"false"}],"return":{"type":null,"description":"The ParentIterator."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

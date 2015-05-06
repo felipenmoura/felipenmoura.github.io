@@ -1,0 +1,1 @@
+{"name":"SDO_Model_Type.isAbstractType","purpose":"Test to see if this SDO_Model_Type is an abstract data type","manualid":"function.sdo-model-type-isabstracttype","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if this type is an abstract data type, otherwise returns \n   FALSE."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

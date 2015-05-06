@@ -1,0 +1,1 @@
+{"name":"SWFMovie.nextFrame","purpose":"Moves to the next frame of the animation","manualid":"function.swfmovie.nextframe","version":false,"params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

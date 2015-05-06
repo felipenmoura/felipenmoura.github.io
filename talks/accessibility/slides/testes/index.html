@@ -1,0 +1,33 @@
+<h2>1, 2, 3, testando...</h2>
+
+<div class="content">
+    <div id="step1" style="height: 180px;">
+        <em>Personas</em><br/>
+        Crie personagens que lhe ajudarão a compreender os seus possíveis usuários.<br/>
+    </div>
+    <div id="step2" style="display: none; height: 180px;">
+        <em>Cenários</em><br/>
+        Cenários lhe ajudarão a simular e perceber novas situações.<br/>
+    </div>
+    <div id="step3" style="display: none;">
+        <em>Voluntários</em><br/>
+        Formulários/pesquisa de feedback<br/>
+        Acompanhando o uso<br/>
+        Deixando-os utilizar o sistema, e entrevistando-os posteriormente<br/>
+        Uso de logs<br/>
+        [insira suas ideias aqui]</div>
+    <div style="text-align: center;" id="step1-2">
+        <img src="slides/testes/personas.png" style="width: 300px; box-shadow: 0px 0px 10px black; border: solid 1px black;" />
+    </div>
+</div>
+
+<script>
+    PPW.addAction(function(){
+        $('#step1').fadeOut(function(){ $('#step2').fadeIn(); });
+    });
+    
+    PPW.addAction(function(){
+        $('#step1-2').fadeOut();
+        $('#step2').fadeOut(function(){ $('#step3').fadeIn(); });
+    });
+</script>

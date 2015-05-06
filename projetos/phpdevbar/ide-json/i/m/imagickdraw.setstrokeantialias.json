@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.setStrokeAntialias","purpose":"Controls whether stroked outlines are antialiased","manualid":"function.imagickdraw-setstrokeantialias","version":false,"params":[{"name":"stroke_antialias","type":"bool","optional":"false"}],"return":{"type":"bool","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"SphinxClient.setIndexWeights","purpose":"Set per-index weights","manualid":"sphinxclient.setindexweights","version":false,"params":[{"name":"weights","type":"array","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"hw_Close","purpose":"Closes the Hyperwave connection","manualid":"function.hw-close","version":"PHP 4","params":[{"name":"connection","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

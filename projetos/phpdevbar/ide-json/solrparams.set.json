@@ -1,0 +1,1 @@
+{"name":"SolrParams.set","purpose":"An alias of SolrParams::setParam","manualid":"solrparams.set","version":false,"params":[{"name":"name","type":"string","optional":"false"},{"name":"value","type":"string","optional":"false"}],"return":{"type":"void","description":"Returns an instance of the SolrParams object on success"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"ArrayIterator.valid","purpose":"Check whether array contains more entries","manualid":"arrayiterator.valid","version":false,"params":[],"return":{"type":"array","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

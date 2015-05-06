@@ -1,0 +1,1 @@
+{"name":"SolrResponse.success","purpose":"Was the request a success","manualid":"solrresponse.success","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if it was successful and FALSE if it was not."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

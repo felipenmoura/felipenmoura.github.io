@@ -1,0 +1,1 @@
+{"name":"Imagick.sampleImage","purpose":"Scales an image with pixel sampling","manualid":"function.imagick-sampleimage","version":false,"params":[{"name":"columns","type":"int","optional":"false"},{"name":"rows","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

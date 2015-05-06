@@ -1,0 +1,1 @@
+{"name":"SWFFont.getUTF8Width","purpose":"Calculates the width of the given string in this font at full height","manualid":"function.swffont.getutf8width","version":false,"params":[{"name":"string","type":"string","optional":"false"}],"return":{"type":"float","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":false,"name":false}]}

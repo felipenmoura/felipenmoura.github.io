@@ -1,0 +1,1 @@
+{"name":"SolrQuery.__construct","purpose":"Constructor","manualid":"solrquery.construct","version":false,"params":[{"name":"q","type":"string","optional":"true"}],"return":{"type":null,"description":"None"},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"HaruPage.getLineWidth","purpose":"Get the current line width","manualid":"function.harupage-getlinewidth","version":false,"params":[],"return":{"type":"float","description":"Returns the current line width."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::setLineWidth"}]}

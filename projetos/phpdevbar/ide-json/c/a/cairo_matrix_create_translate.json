@@ -1,0 +1,1 @@
+{"name":"cairo_matrix_create_translate","purpose":"Alias of CairoMatrix::initTranslate","manualid":"function.cairo-matrix-create-translate","version":"PECL cairo >= 0.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

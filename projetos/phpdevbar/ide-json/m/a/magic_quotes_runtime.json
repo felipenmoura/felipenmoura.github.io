@@ -1,0 +1,1 @@
+{"name":"magic_quotes_runtime","purpose":"Alias of set_magic_quotes_runtime","manualid":"function.magic-quotes-runtime","version":"PHP 4, PHP 5","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.flipimage","purpose":"Creates a vertical mirror image","manualid":"gmagick.flipimage","version":false,"params":[],"return":{"type":"void","description":"The flipped Gmagick object."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

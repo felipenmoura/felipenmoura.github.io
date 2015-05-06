@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.valid","purpose":"Checks the validity of current item","manualid":"tokyotyrantquery.valid","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE if the current item is valid and FALSE if not."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

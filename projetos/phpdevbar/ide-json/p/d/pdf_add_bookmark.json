@@ -1,0 +1,1 @@
+{"name":"PDF_add_bookmark","purpose":"Add bookmark for current page [deprecated]","manualid":"function.pdf-add-bookmark","version":"PHP 4 >= 4.0.1, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

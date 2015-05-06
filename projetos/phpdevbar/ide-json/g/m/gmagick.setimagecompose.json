@@ -1,0 +1,1 @@
+{"name":"Gmagick.setimagecompose","purpose":"Sets the image composite operator","manualid":"gmagick.setimagecompose","version":false,"params":[{"name":"composite","type":"int","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

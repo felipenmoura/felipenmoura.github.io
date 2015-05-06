@@ -1,0 +1,1 @@
+{"name":"ibase_server_info","purpose":"Request information about a database server","manualid":"function.ibase-server-info","version":"PHP 5","params":[{"name":"service_handle","type":"resource","optional":"false"},{"name":"action","type":"int","optional":"false"}],"return":{"type":"string","description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

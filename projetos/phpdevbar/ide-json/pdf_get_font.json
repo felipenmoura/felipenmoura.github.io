@@ -1,0 +1,1 @@
+{"name":"PDF_get_font","purpose":"Get font [deprecated]","manualid":"function.pdf-get-font","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

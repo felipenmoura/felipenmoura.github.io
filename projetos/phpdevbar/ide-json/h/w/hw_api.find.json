@@ -1,0 +1,1 @@
+{"name":"hw_api.find","purpose":"Search for objects","manualid":"function.hwapi-find","version":false,"params":[{"name":"parameter","type":"array","optional":"false"}],"return":{"type":"array","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

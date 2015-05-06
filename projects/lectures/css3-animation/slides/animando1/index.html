@@ -1,0 +1,79 @@
+<style type='text/css'>
+	.div-animado{
+		width: 90px;
+		height: 90px;
+		margin: auto;
+		margin-top: 20px;
+		border: solid 1px white;
+		background-color: green;
+		-webkit-transition: background 600ms ease-in-out;
+		   -moz-transition: background 600ms ease-in-out;
+			-ms-transition: background 600ms ease-in-out;
+			 -o-transition: background 600ms ease-in-out;
+				transition: background 600ms ease-in-out;
+	}
+	.div-animado:hover{
+		background-color: red;
+	}
+</style>
+<h1>
+	Animando
+</h1>
+<div class='content' style='margin-top: 0px;'>
+	<div id='step1'
+		 class='anim-step1'
+		 style='text-align:center;'>
+		Transitions<br/>
+		<br/>
+		<div class='source' id='source1'>
+-vendor-transition: [prop] tempo [ease]
+
+propriedade = pode ser qualquer propriedade
+              anim&aacute;vel do css ou all
+tempo       = valor em segundos(s) ou
+              milesegundos(ms)
+ease        = efeito de amortiza&ccedil;&atilde;o
+              pode ser: ease-in, ease-out,
+                        ease-in-out, linear
+                        ou cubic-bezier</div><br/>
+	</div>
+	<div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		Transitions<br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source'>
+-webkit-transition: background 600ms ease-in;
+		</div><br/>
+	</div>
+	<div id='step3'
+		 class='anim-step3'
+		 style='text-align:center;'>
+		Transitions<br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>background-color: green;
+-webkit-transition: background 600ms ease-in;
+   -moz-transition: background 600ms ease-in;
+    -ms-transition: background 600ms ease-in;
+     -o-transition: background 600ms ease-in;
+        transition: background 600ms ease-in;</div><br/>
+	</div>
+
+	<div id='step4'
+		 class='anim-step4'
+		 style='text-align:center;'>
+		Transitions<br/>
+		<br/>
+		<div class='div-animado'></div>
+		<br/>
+		<div class='source' id='source1'>.div-animado:hover{
+    background-color: red;
+}</div><br/>
+	</div>
+</div>
+<script>
+</script>

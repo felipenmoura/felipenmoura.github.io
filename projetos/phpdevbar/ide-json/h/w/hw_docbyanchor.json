@@ -1,0 +1,1 @@
+{"name":"hw_DocByAnchor","purpose":"Object id object belonging to anchor","manualid":"function.hw-docbyanchor","version":"PHP 4","params":[{"name":"connection","type":"int","optional":"false"},{"name":"anchorID","type":"int","optional":"false"}],"return":{"type":"int","description":"Returns the document object id."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

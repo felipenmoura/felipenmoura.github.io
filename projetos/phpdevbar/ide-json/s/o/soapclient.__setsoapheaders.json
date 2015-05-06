@@ -1,0 +1,1 @@
+{"name":"SoapClient.__setSoapHeaders","purpose":"Sets SOAP headers for subsequent calls","manualid":"soapclient.setsoapheaders","version":false,"params":[{"name":"soapheaders","type":"mixed","optional":"true"}],"return":{"type":"bool","description":"Returns TRUE on success or FALSE on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"tidy.getStatus","purpose":"Get status of specified document","manualid":"tidy.getstatus","version":false,"params":[{"name":"object","type":"tidy","optional":"false"}],"return":{"type":"int","description":"Returns 0 if no error\/warning was raised, 1 for warnings or accessibility\n   errors, or 2 for errors."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

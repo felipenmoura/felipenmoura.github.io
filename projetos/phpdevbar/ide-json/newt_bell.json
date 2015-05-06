@@ -1,0 +1,1 @@
+{"name":"newt_bell","purpose":"Send a beep to the terminal","manualid":"function.newt-bell","version":"PECL newt >= 0.1","params":[],"return":{"type":"void","description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

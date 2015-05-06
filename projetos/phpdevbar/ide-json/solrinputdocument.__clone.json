@@ -1,0 +1,1 @@
+{"name":"SolrInputDocument.__clone","purpose":"Creates a copy of a SolrDocument","manualid":"solrinputdocument.clone","version":false,"params":[],"return":{"type":"void","description":"Creates a new SolrInputDocument instance."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

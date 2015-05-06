@@ -1,0 +1,1 @@
+{"name":"SplString.__construct","purpose":"Constructs a string object type","manualid":"splstring.construct","version":false,"params":[{"name":"input","type":"string","optional":"false"}],"return":{"type":null,"description":"No value is returned."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

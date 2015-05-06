@@ -1,0 +1,1 @@
+{"name":"stats_rand_gen_int","purpose":"Generates random integer between 1 and 2147483562","manualid":"function.stats-rand-gen-int","version":"PECL stats >= 1.0.0","params":[],"return":{"type":"int","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

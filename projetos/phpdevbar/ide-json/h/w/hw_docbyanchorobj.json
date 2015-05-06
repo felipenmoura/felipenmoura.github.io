@@ -1,0 +1,1 @@
+{"name":"hw_DocByAnchorObj","purpose":"Object record object belonging to anchor","manualid":"function.hw-docbyanchorobj","version":"PHP 4","params":[{"name":"connection","type":"int","optional":"false"},{"name":"anchorID","type":"int","optional":"false"}],"return":{"type":"string","description":"Returns an object record."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.deconstructimages","purpose":"Returns certain pixel differences between images","manualid":"gmagick.deconstructimages","version":false,"params":[],"return":{"type":"void","description":"Returns self on success."},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

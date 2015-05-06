@@ -1,0 +1,1 @@
+{"name":"Imagick.setImageDelay","purpose":"Sets the image delay","manualid":"function.imagick-setimagedelay","version":false,"params":[{"name":"delay","type":"int","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

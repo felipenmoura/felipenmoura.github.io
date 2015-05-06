@@ -1,0 +1,1 @@
+{"name":"RarEntry.getHostOs","purpose":"Get entry host OS.","manualid":"rarentry.gethostos","version":false,"params":[],"return":{"type":"int","description":"Returns the code of the host OS, or FALSE on error."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"RarEntry::extract"}]}

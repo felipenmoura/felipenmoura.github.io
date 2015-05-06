@@ -1,0 +1,1 @@
+{"name":"HaruPage.moveToNextLine","purpose":"Move text position to the start of the next line","manualid":"function.harupage-movetonextline","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"HaruPage::moveTextPos"}]}

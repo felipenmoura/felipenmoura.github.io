@@ -1,0 +1,1 @@
+{"name":"SplDoublyLinkedList.top","purpose":"Peeks at the node from the end of the doubly linked list","manualid":"spldoublylinkedlist.top","version":false,"params":[],"return":{"type":"mixed","description":"The value of the last node."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

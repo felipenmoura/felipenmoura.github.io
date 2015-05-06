@@ -1,0 +1,1 @@
+{"name":"Mongo.prevError","purpose":"Checks for the last error thrown during a database operation [deprecated]","manualid":"mongo.preverror","version":false,"params":[],"return":{"type":"array","description":"Returns the error and the number of operations ago it occurred."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

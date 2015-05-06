@@ -1,0 +1,1 @@
+{"name":"ReflectionMethod.getModifiers","purpose":"Gets modifiers","manualid":"reflectionmethod.getmodifiers","version":false,"params":[],"return":{"type":"int","description":"A numeric representation of the modifiers."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"Reflection::getModifierNames"}]}

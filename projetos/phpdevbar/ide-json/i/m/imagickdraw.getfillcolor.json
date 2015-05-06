@@ -1,0 +1,1 @@
+{"name":"ImagickDraw.getFillColor","purpose":"Returns the fill color","manualid":"function.imagickdraw-getfillcolor","version":false,"params":[],"return":{"type":"ImagickPixel","description":"Returns an ImagickPixel object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

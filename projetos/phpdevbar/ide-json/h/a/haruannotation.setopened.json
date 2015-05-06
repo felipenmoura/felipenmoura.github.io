@@ -1,0 +1,1 @@
+{"name":"HaruAnnotation.setOpened","purpose":"Set the initial state of the annotation","manualid":"function.haruannotation-setopened","version":false,"params":[{"name":"opened","type":"bool","optional":"false"}],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws a HaruException on error.","notes":[],"changelog":[],"seealso":[]}

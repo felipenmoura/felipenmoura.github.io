@@ -1,0 +1,1 @@
+{"name":"MongoCollection.deleteIndexes","purpose":"Delete all indices for this collection","manualid":"mongocollection.deleteindexes","version":false,"params":[],"return":{"type":"array","description":"Returns the database response."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

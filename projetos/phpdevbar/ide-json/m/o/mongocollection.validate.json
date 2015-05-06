@@ -1,0 +1,1 @@
+{"name":"MongoCollection.validate","purpose":"Validates this collection","manualid":"mongocollection.validate","version":false,"params":[{"name":"scan_data","type":"bool","optional":"true"}],"return":{"type":"array","description":"Returns the database's evaluation of this object."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

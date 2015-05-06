@@ -1,0 +1,1 @@
+{"name":"DomDocument.create_element_ns","purpose":"Create new element node with an associated namespace","manualid":"function.domdocument-create-element-ns","version":false,"params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

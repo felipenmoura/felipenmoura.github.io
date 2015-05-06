@@ -1,0 +1,1 @@
+{"name":"Imagick.flopImage","purpose":"Creates a horizontal mirror image","manualid":"function.imagick-flopimage","version":false,"params":[],"return":{"type":"bool","description":"Returns TRUE on success."},"errors":"Throws ImagickException on error.","notes":[],"changelog":[],"seealso":[]}

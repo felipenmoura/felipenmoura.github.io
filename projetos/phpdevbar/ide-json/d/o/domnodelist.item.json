@@ -1,0 +1,1 @@
+{"name":"DOMNodelist.item","purpose":"Retrieves a node specified by index","manualid":"domnodelist.item","version":false,"params":[{"name":"index","type":"int","optional":"false"}],"return":{"type":"DOMNode","description":"The node at the indexth position in the \n   DOMNodeList, or NULL if that is not a valid\n   index."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

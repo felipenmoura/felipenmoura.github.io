@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.getstrokeopacity","purpose":"Returns the opacity of stroked object outlines","manualid":"gmagickdraw.getstrokeopacity","version":false,"params":[],"return":{"type":"void","description":"Returns a double describing the opacity."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

@@ -1,0 +1,1 @@
+{"name":"Gmagick.spreadimage","purpose":"Randomly displaces each pixel in a block","manualid":"gmagick.spreadimage","version":false,"params":[{"name":"radius","type":"float","optional":"false"}],"return":{"type":"void","description":"The Gmagick object on success"},"errors":"Throws an\nGmagickException on error.","notes":[],"changelog":[],"seealso":[]}

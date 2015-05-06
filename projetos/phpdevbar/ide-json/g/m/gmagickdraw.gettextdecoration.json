@@ -1,0 +1,1 @@
+{"name":"GmagickDraw.gettextdecoration","purpose":"Returns the text decoration","manualid":"gmagickdraw.gettextdecoration","version":false,"params":[],"return":{"type":"void","description":"Returns one of the DECORATION_ constants and 0 if no decoration is set."},"errors":null,"notes":[],"changelog":[],"seealso":[]}

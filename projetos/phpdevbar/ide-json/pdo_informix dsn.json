@@ -1,0 +1,1 @@
+{"name":"PDO_INFORMIX DSN","purpose":"Connecting to Informix databases","manualid":"ref.pdo-informix.connection","version":"PECL PDO_INFORMIX >= 0.1.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}

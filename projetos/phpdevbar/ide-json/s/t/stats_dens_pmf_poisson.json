@@ -1,0 +1,1 @@
+{"name":"stats_dens_pmf_poisson","purpose":"Not documented","manualid":"function.stats-dens-pmf-poisson","version":"PECL stats >= 1.0.0","params":[{"name":"x","type":"float","optional":"false"},{"name":"lb","type":"float","optional":"false"}],"return":{"type":"float","description":""},"errors":null,"notes":[],"changelog":[],"seealso":[]}

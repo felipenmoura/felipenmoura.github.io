@@ -1,0 +1,1 @@
+{"name":"TokyoTyrantQuery.out","purpose":"Removes records based on query","manualid":"tokyotyrantquery.out","version":false,"params":[],"return":{"type":"TokyoTyrantQuery","description":"This method returns the current object and throws TokyoTyrantException on failure."},"errors":null,"notes":[],"changelog":[],"seealso":[{"type":"methodname","name":"TokyoTyrantQuery::addCond"}]}

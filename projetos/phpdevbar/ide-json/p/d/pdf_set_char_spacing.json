@@ -1,0 +1,1 @@
+{"name":"PDF_set_char_spacing","purpose":"Set character spacing [deprecated]","manualid":"function.pdf-set-char-spacing","version":"PHP 4, PECL pdflib >= 1.0.0","params":[],"return":{"type":null,"description":null},"errors":null,"notes":[],"changelog":[],"seealso":[]}
