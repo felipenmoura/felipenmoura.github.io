@@ -936,18 +936,38 @@ body[data-page="utils"] #utils-container .decorator {
 }
 #utils-container .decorator .icon:nth-child(1) {
   -webkit-animation-delay: 3.2s;
+  -moz-animation-delay: 3.2s;
+  -ms-animation-delay: 3.2s;
+  -o-animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 #utils-container .decorator .icon:nth-child(2) {
   -webkit-animation-delay: 3.1s;
+  -moz-animation-delay: 3.1s;
+  -ms-animation-delay: 3.1s;
+  -o-animation-delay: 3.1s;
+  animation-delay: 3.1s;
 }
 #utils-container .decorator .icon:nth-child(3) {
   -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
 }
 #utils-container .decorator .icon:nth-child(4) {
   -webkit-animation-delay: 3.1s;
+  -moz-animation-delay: 3.1s;
+  -ms-animation-delay: 3.1s;
+  -o-animation-delay: 3.1s;
+  animation-delay: 3.1s;
 }
 #utils-container .decorator .icon:nth-child(5) {
   -webkit-animation-delay: 3.2s;
+  -moz-animation-delay: 3.2s;
+  -ms-animation-delay: 3.2s;
+  -o-animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 #utils-container .decorator .icon.talks {
   background-position: -96px 2px;
