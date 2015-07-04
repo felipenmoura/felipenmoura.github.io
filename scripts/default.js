@@ -1,5 +1,5 @@
 (function () {
-
+    debugger;
     var _b= document.body,
         currentlyShowing= false,
         hashData = {};

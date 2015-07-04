@@ -1,0 +1,12 @@
+{
+    "name": "thm-default",
+    "type": "theme",
+    "dependencies": {
+        "css": [
+            "styles/default.css"
+        ],
+        "js": [
+            "scripts/default.js"
+        ]
+    }
+}

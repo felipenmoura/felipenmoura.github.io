@@ -23,15 +23,15 @@ module.exports = function(grunt) {
             "Dec"
         ],
         pageTitle = 'felipenmoura';
-    
+
     function stripTags (str, count) {
         return str && str.replace? str.replace(/(<([^>]+)>)/ig, ''): str;
     }
-    
+
     nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''));
     //nunEnv = new NunJucks.FileSystemLoader(['templates']);
     nunEnv.addFilter('striptags', stripTags);
-    
+
     function formatDate(date){
         var tmpDt = new Date(date);
         var day = tmpDt.getDate();
@@ -51,11 +51,11 @@ module.exports = function(grunt) {
         }
         return months[tmpDt.getMonth()] + ' '+ day +', '+tmpDt.getFullYear();
     }
-    
+
     function applyURL(val){
         return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\">$1</a>")
     }
-    
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        
+
         uglify : {
             all: {
                 files: {
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
             },
             options: {}
         },
-        
+
         cssmin: {
             target: {
                 files: [{
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        
+
         scsslint: {
             allFiles: [
                 'scss/**/*',
@@ -122,11 +122,11 @@ module.exports = function(grunt) {
                 colorizeOutput: true
             },
         },
-        
+
         jslint: {
             all: ['gruntfile.js', 'scripts/**.js']
         },
-        
+
         compileTemplates: {
             en: {
                 talks: JSON.parse(fs.readFileSync('_bindings/talks.json', 'utf8')),
@@ -136,7 +136,7 @@ module.exports = function(grunt) {
             }//,
             //pt: "def"
         },
-        
+
         compileArticles: {
             en: {},
             //pt: {}
@@ -156,29 +156,32 @@ module.exports = function(grunt) {
 
     //grunt.loadNpmTasks('grunt-scss-lint');
     //grunt.loadNpmTasks('grunt-jslint');
-    
+
     grunt.registerMultiTask('compileArticles', 'generates the articles files.', function() {
-        
+
         var done = this.async();
         done();
     });
-    
+
     grunt.registerMultiTask('compileTemplates', 'Saves the files to be statified.', function() {
-        
+
         var idxFile = 'index.html';
         var data = this.data;
         var done = this.async();
         var videosList = "";
         data.lang= this.target;
-        
+
         if(this.target != defaultLang){
             if(!fs.existsSync(this.target)){
                 fs.mkdirSync(this.target);
             }
             idxFile = this.target + '/index.html';
         }
-        
-        //http://gdata.youtube.com/feeds/api/playlists/PL2LsDS820I8Qg8xXkgXTty5BGiqAOJcVB?v=2&alt=json&callback=foo
+
+        //https://www.youtube.com/playlist?list=PL2LsDS820I8Qg8xXkgXTty5BGiqAOJcVB
+        //https://gdata.youtube.com/feeds/api/users/userId/playlists?v=2
+        //https://gdata.youtube.com/feeds/api/users/PL2LsDS820I8Qg8xXkgXTty5BGiqAOJcVB/playlists?v=2
+        //https://gdata.youtube.com/feeds/api/playlists/PL2LsDS820I8Qg8xXkgXTty5BGiqAOJcVB?v=2&alt=json&callback=foo
         var options = {
             hostname: 'gdata.youtube.com',
             port: 80,
@@ -186,7 +189,7 @@ module.exports = function(grunt) {
             method: 'GET',
             headers: { 'Content-Type': 'text/javascript' }
         };
-        
+
         function applyURLsTo(data, target, prop){
             if(data[target]){
                 data[target] = data[target].map(function(val){
@@ -195,7 +198,7 @@ module.exports = function(grunt) {
                 });
             }
         }
-        
+
         function createIndexesForArticles(data, cb){
             var artPath = 'articles/',
                 metaData,
@@ -205,7 +208,7 @@ module.exports = function(grunt) {
                 renderedArticle,
                 articlesList= [],
                 tmpDt;
-            
+
             fs.readdir(artPath, function(err, files){
                 if(err){
                     console.error("Failed reading articles");
@@ -216,6 +219,7 @@ module.exports = function(grunt) {
                     if(cur[0] == '.' || !fs.lstatSync(artPath + cur).isDirectory()){
                         return;
                     }
+
                     metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
                     metaData.name= cur;
                     metaData.oCreationDate = metaData.creationDate;
@@ -226,21 +230,21 @@ module.exports = function(grunt) {
                         validArticles.push(metaData);
                     }
                 });
-                
+
                 // sort them out
                 validArticles.sort(function(left, right){
                     return left.creationDate >= right.creationDate;
                 });
-                
+
                 // set the previous and next links
                 validArticles.forEach(function(cur, i){
-                    
+
                     articlesList.push({
                         title: cur.title,
                         tags: cur.tags,
                         name: cur.name
                     });
-                    
+
                     if(validArticles[i-1]){
                         validArticles[i].previous = validArticles[i-1];
                     }else{
@@ -251,20 +255,20 @@ module.exports = function(grunt) {
                     }else{
                         validArticles[i].next = false;
                     }
-                    
+
                     validArticles[i].url = '/'+artPath + cur.name;
                     validArticles[i].fullURL = DOMAIN + artPath + cur.name;
-                    
+
                 });
-                
+
                 articlesList.reverse();
-                
+
                 data.articlesList = articlesList;
-                
+
                 // create the index files for each one
                 validArticles.forEach(function(cur){
                     metaData = cur;
-                    
+
                     // create index-ajax for each article
                     metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
                     //metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
@@ -278,13 +282,13 @@ module.exports = function(grunt) {
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     metaData.pageType = 'articles';
-                    
+
                     data.ogImage = DOMAIN + (metaData.headerImg || DEFAULT_ART_IMG).replace(/^\//, '');
-                    
+
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
                     data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + stripTags(metaData.title);
                     data.socialDesc = addslashes(metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
-                    
+
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
                     fs.writeFileSync(artPath + cur.name + '/index-ajax.html',
@@ -299,25 +303,25 @@ module.exports = function(grunt) {
                                      'utf8');
                     data.currentArticleMetaData = metaData;
                 });
-                
+
                 // return the last article
                 cb(data, validArticles);
             });
         }
-        
+
         function copyIndexTo (where, data) {
             if(!fs.existsSync(where)){
                 fs.mkdirSync(where);
             }
-            
+
             //var idxOrig = fs.readFileSync('./index.html', 'utf-8');
             //fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
             fs.writeFileSync(where + '/index.html',
                              nunEnv.render('_templates/index.html', data), 'utf8');
-            
+
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
-        
+
         function addslashes(str) {
             return str.replace(/"/g, '&quote;');
             return str.replace(/'/g, "&#39;");
@@ -325,100 +329,100 @@ module.exports = function(grunt) {
 //                .replace(/[\\"']/g, '\\$&')
 //                .replace(/\u0000/g, '\\0');
         }
-        
+
         function render () {
-            
+
             applyURLsTo(data, 'talks', 'description');
             applyURLsTo(data, 'labs', 'description');
-            
+
             createIndexesForArticles(data, function then (data, list){
-                
+
                 data.ogImage = DOMAIN + OGIMAGE;
-                
+
                 data.socialDesc = addslashes(data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
                 data.pageTitle = 'felipenmoura:page:home';
                 data.fullURL = DOMAIN;
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 copyIndexTo("home", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:about';
                 data.socialDesc = 'Know more about Felipe, his past, experiences and find his personal contacts and social connections.';
                 data.fullURL = DOMAIN + 'about/';
                 data.ogImage = DOMAIN + 'resources/og/fb-about.jpg';
                 copyIndexTo("about", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:sobre';
                 data.socialDesc = 'Saiba mais sobre Felipe, seu passado, experiências e encontre seus contatos pessoais e sociais.';
                 copyIndexTo("sobre", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:utils';
                 data.socialDesc = 'Useful tools, talk materials, demos and lab experiments, videos and photos and articles from Felipe';
                 data.fullURL = DOMAIN + 'utils/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils.jpg';
                 copyIndexTo("utils", data);
-                
+
                 data.socialDesc = 'Ferramentas úteis, materiais de palestras, demos e experimentos, videos, fotos e artigos de Felipe';
                 copyIndexTo("uteis", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:talks';
                 data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
                 data.fullURL = DOMAIN + 'utils/talks/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-talks.jpg';
                 copyIndexTo("utils/talks", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:palestras/';
                 data.socialDesc = "Tenha acesso ao material das palestras de Felipe, slides, links e videos.";
                 copyIndexTo("uteis/palestras", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:videos';
                 data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
                 data.fullURL = DOMAIN + 'utils/videos/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-videos.jpg';
                 copyIndexTo("utils/videos", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:labs';
                 data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
                 data.fullURL = DOMAIN + 'utils/labs/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-labs.jpg';
                 copyIndexTo("utils/labs", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:photos';
                 data.socialDesc = "Some of the prefered photos of Felipe";
                 data.fullURL = DOMAIN + 'utils/photos/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-photos.jpg';
                 copyIndexTo("utils/photos", data);
-                
+
                 data.socialDesc = "Algumas das fotos preferidas de Felipe";
                 copyIndexTo("utils/fotos", data);
-                
+
                 if(data.currentArticleMetaData.headerImg){
                     data.ogImage = DOMAIN + data.currentArticleMetaData.headerImg.replace(/^\//, '');
                 }else{
                     data.ogImage = DOMAIN + DEFAULT_ART_IMG;
                 }
-                
+
                 data.socialDesc = addslashes(data.currentArticleMetaData.resume || DEFAULT_ART_DESC);
-                
+
                 data.pageTitle = 'felipenmoura:page:articles | ' + stripTags(data.currentArticleMetaData.title);
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
-                
+
                 data.pageTitle = 'felipenmoura:page:artigos | ' + stripTags(data.currentArticleMetaData.title);
                 //data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("artigos", data);
-                
+
                 var dt = (new Date()).toISOString().split('T')[0],
                     renderedRSS = nunEnv.render('_templates/rss.html', {
                     updateDate: (new Date()).toString(),
                     list: list
                 });
                 fs.writeFileSync('./feed.xml', renderedRSS, 'utf-8');
-                
+
                 list.forEach(function(cur, idx){
                     cur.oCreationDate = dt;
                     list[idx] = cur;
                 });
-                
+
                 var renderedSiteMap = nunEnv.render('_templates/sitemap.html', {
                         updateDate: dt,
                         list: list,
@@ -435,7 +439,7 @@ module.exports = function(grunt) {
                         ]
                     });
                 fs.writeFileSync('./sitemap.xml', renderedSiteMap, 'utf-8');
-                
+
                 done();
             });
         }
@@ -451,24 +455,35 @@ module.exports = function(grunt) {
                     buffer+= data;
                 });
                 res.on('end', function () {
-                    videosList = buffer.replace(/^\/\/.*|^foo\(|\);$/gm, '');
-                    videosList = JSON.parse(videosList);
-                    data.videosList = videosList.feed.entry;
-                    
-                    if(data.videosList && data.videosList.length){
-                        data.videosList = data.videosList.map( function(val) {
-                            val['media$group']
-                               ['media$description']
-                               ['$t'] = applyURL(val['media$group']['media$description']['$t']);
-                            return val;
-                        });
+                    try{
+                        videosList = buffer.replace(/^\/\/.*|^foo\(|\);$/gm, '');
+
+                        videosList = JSON.parse(videosList);
+
+                        data.videosList = videosList.feed.entry;
+
+                        if(data.videosList && data.videosList.length){
+                            data.videosList = data.videosList.map( function(val) {
+                                val['media$group']
+                                   ['media$description']
+                                   ['$t'] = applyURL(val['media$group']['media$description']['$t']);
+                                return val;
+                            });
+                        }
+
+                        fs.writeFileSync(cachePath, JSON.stringify(data.videosList), 'utf-8');
+                        render();
+                    }catch(e){
+                        treatVideoErrors(e);
                     }
-                    
-                    fs.writeFileSync(cachePath, JSON.stringify(data.videosList), 'utf-8');
-                    render();
                 });
             });
             req.on('error', function(e) {
+                treatVideoErrors(e);
+            });
+            req.end();
+
+            function treatVideoErrors (e) {
                 console.log('problem with request: ' + e.message);
                 if(fs.existsSync(cachePath)){
                     console.log('using youtube feed from cache');
@@ -483,13 +498,12 @@ module.exports = function(grunt) {
                     data.videosList = {};
                 }
                 render();
-            });
-            req.end();
+            }
         }else{
             render();
         }
     });
-    
+
     grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates', 'uglify', 'cssmin']);
 
     grunt.registerTask('default', ['build']);
