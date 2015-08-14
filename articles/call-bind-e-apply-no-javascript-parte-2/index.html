@@ -12,9 +12,9 @@
         <link rel="stylesheet" type="text/css" href="/sh/prism.min.css" />
 
         <!-- Info -->
-        <title>felipenmoura:articles: call, bind e apply no JavaScript - parte 2</title>
+        <title>felipenmoura articles: call, bind e apply no JavaScript - parte 2</title>
         <link rel="shortcut icon" type="image/png" href="/felipenmoura-felipe-nascimento-moura-favico.png"/>
-        <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles.">
+        <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles. Este post, é uma continuação de outro post, mais focado em funções.Neste, focaremos realmente nos três métodos do título deste artigo, .call, .bind e .apply.Agora que você já leu sobre hoisting, escopos, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.Estes três métodos estão presentes no prototype de Function, ou seja, toda função terá estes métodos, nativamente.Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
         <meta name="author" content="Felipe Nascimento de Moura">
 
@@ -23,7 +23,7 @@
         <meta property="og:site_name" content="FelipeNMoura.com"/>
         <meta property="og:image" content="http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg"/>
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="felipenmoura:articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura"/>
+        <meta property="og:title" content="felipenmoura articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura"/>
         <meta property="og:description" content="Este post, é uma continuação de outro post, mais focado em funções.Neste, focaremos realmente nos três métodos do título deste artigo, .call, .bind e .apply.Agora que você já leu sobre hoisting, escopos, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.Estes três métodos estão presentes no prototype de Function, ou seja, toda função terá estes métodos, nativamente.Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)">
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:locale:alternate" content="en_US" />
@@ -31,7 +31,7 @@
         <!-- TWITTER -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@felipenmoura">
-        <meta name="twitter:title" content="felipenmoura:articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura">
+        <meta name="twitter:title" content="felipenmoura articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura">
         <meta name="twitter:description" content="Este post, é uma continuação de outro post, mais focado em funções.Neste, focaremos realmente nos três métodos do título deste artigo, .call, .bind e .apply.Agora que você já leu sobre hoisting, escopos, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.Estes três métodos estão presentes no prototype de Function, ou seja, toda função terá estes métodos, nativamente.Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)">
         <meta name="twitter:creator" content="@felipenmoura">
         <meta name="twitter:image:src" content="http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg">
@@ -40,7 +40,7 @@
         <!-- GOOGLE -->
         <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/"/>
         <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
-        <meta itemprop="name" content="felipenmoura:articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura">
+        <meta itemprop="name" content="felipenmoura articles: call, bind e apply no JavaScript - parte 2 | Felipe N Moura">
         <meta itemprop="description" content="Este post, é uma continuação de outro post, mais focado em funções.Neste, focaremos realmente nos três métodos do título deste artigo, .call, .bind e .apply.Agora que você já leu sobre hoisting, escopos, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.Estes três métodos estão presentes no prototype de Function, ou seja, toda função terá estes métodos, nativamente.Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)">
         <meta itemprop="image" content="http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg">
 
@@ -48,7 +48,7 @@
         <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="http://felipenmoura.com/feed.xml">
 
     </head>
-    <body data-page="home">
+    <body data-page="articles" hash-bang-detail=>
 
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -946,7 +946,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-1
+                    colour-2
                     ">
             <h2><a href="/articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
             <div class="wrapper">

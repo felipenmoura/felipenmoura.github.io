@@ -281,12 +281,12 @@ module.exports = function(grunt) {
                     metaData.content = metaData.content.replace(/\<pre lang\=["']([0-9a-z_\-]+)["']\>/ig, '<pre class="line-numbers"><code class="language-$1">');
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
-                    metaData.pageType = 'articles';
+                    data.pageType = metaData.pageType = 'articles';
 
                     data.ogImage = DOMAIN + (metaData.headerImg || DEFAULT_ART_IMG).replace(/^\//, '');
 
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
-                    data.pageTitle = 'felipenmoura:' + metaData.pageType + ': ' + stripTags(metaData.title);
+                    data.pageTitle = 'felipenmoura ' + metaData.pageType + ': ' + stripTags(metaData.title);
                     data.socialDesc = addslashes(metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
 
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
@@ -342,12 +342,14 @@ module.exports = function(grunt) {
                 data.socialDesc = addslashes(data.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
                 data.pageTitle = 'felipenmoura:page:home';
                 data.fullURL = DOMAIN;
+                data.pageType = "home";
                 fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
                 copyIndexTo("home", data);
 
                 data.pageTitle = 'felipenmoura:page:about';
                 data.socialDesc = 'Know more about Felipe, his past, experiences and find his personal contacts and social connections.';
                 data.fullURL = DOMAIN + 'about/';
+                data.pageType = "about";
                 data.ogImage = DOMAIN + 'resources/og/fb-about.jpg';
                 copyIndexTo("about", data);
 
@@ -358,6 +360,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:utils';
                 data.socialDesc = 'Useful tools, talk materials, demos and lab experiments, videos and photos and articles from Felipe';
                 data.fullURL = DOMAIN + 'utils/';
+                data.pageType = "utils";
                 data.ogImage = DOMAIN + 'resources/og/fb-utils.jpg';
                 copyIndexTo("utils", data);
 
@@ -367,6 +370,8 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:talks';
                 data.socialDesc = "Check out some of Felipe's talks material, slides, links and videos.";
                 data.fullURL = DOMAIN + 'utils/talks/';
+                data.pageType = "utils";
+                data.pageTypeDetail = "talks";
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-talks.jpg';
                 copyIndexTo("utils/talks", data);
 
@@ -378,18 +383,24 @@ module.exports = function(grunt) {
                 data.socialDesc = "Watch some of Felipe's videos about technology, experiments, interviews, etc.";
                 data.fullURL = DOMAIN + 'utils/videos/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-videos.jpg';
+                data.pageType = "utils";
+                data.pageTypeDetail = "videos";
                 copyIndexTo("utils/videos", data);
 
                 data.pageTitle = 'felipenmoura:page:labs';
                 data.socialDesc = "Felipe's experimental lab, with demos, tests, examples and tools.";
                 data.fullURL = DOMAIN + 'utils/labs/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-labs.jpg';
+                data.pageType = "utils";
+                data.pageTypeDetail = "labs";
                 copyIndexTo("utils/labs", data);
 
                 data.pageTitle = 'felipenmoura:page:photos';
                 data.socialDesc = "Some of the prefered photos of Felipe";
                 data.fullURL = DOMAIN + 'utils/photos/';
                 data.ogImage = DOMAIN + 'resources/og/fb-utils-photos.jpg';
+                data.pageType = "utils";
+                data.pageTypeDetail = "photos";
                 copyIndexTo("utils/photos", data);
 
                 data.socialDesc = "Algumas das fotos preferidas de Felipe";
@@ -403,6 +414,8 @@ module.exports = function(grunt) {
 
                 data.socialDesc = addslashes(data.currentArticleMetaData.resume || DEFAULT_ART_DESC);
 
+                data.pageType = "articles";
+                data.pageTypeDetail = data.currentArticleMetaData.name;
                 data.pageTitle = 'felipenmoura:page:articles | ' + stripTags(data.currentArticleMetaData.title);
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
