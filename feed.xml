@@ -11,11 +11,223 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat Jul 04 2015 00:45:18 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Fri Aug 14 2015 18:55:12 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
+  
+  <item>
+    <title>Hoisting no JavaScript</title>
+    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
+
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
+<pre class="line-numbers"><code class="language-javascript">
+var x= 1;
+
+if(x === 3){
+    var y= 1;
+}
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+</code></pre>
+
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
+
+Ainda duvida?
+Façamos assim, então:
+
+<pre class="line-numbers"><code class="language-javascript">
+var x= 1;
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+
+if(x === 3){
+    var y= 1;
+}
+
+</code></pre>
+
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
+
+Da mesma forma, funções podem ser declaradas ou atribuídas.
+
+<pre class="line-numbers"><code class="language-javascript">
+// chamando a funcão 1
+func1(); // joga 1 no console
+
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
+}
+
+// chamando a função 2
+func2(); // ERROR
+
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
+}
+
+// a partir de agora, func2 poderia ser evocada
+</code></pre>
+
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
+
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Where is this web going to?</title>
+    <link>http://felipenmoura.com/articles/where-is-this-web-going-to/</link>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ future ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Este ano, uma de minhas submissões foi aprovada para este grande, interessante e útil evento.
+Por anos, o Fisl tem trazido para Porto Alegre uma grande quantidade de pessoas especializadas nas mais diversas e desafiadoras áreas, para falar de seu conhecimento, experiências e planos.
+Este evento é sempre uma oporunidade e tanto para aumentar suas ideias, conhecer pessoas <s>loucas</s> inteligentes e muitas vezes, pessoas que literalmente escreveram a história.
+Costumo brincar dizendo que no Fisl, vemos o recorde de nerds por metro quadrado.
+
+Este ano, falarei sobre a revolução do desenvolvimento web, suas novas tecnologias e técnicas, além do modo como vemos a web, e também, como os usuários teem visto a web hoje em dia. Falarei sobre HTML5, CSS3, JavaScript2, mercado, entre outros tópicos interessantes. Acredito que todos podemos ter uma boa discussão sobre tais assuntos e os convido a assistir à minha palestra no sábado, as 10 horas da manhã, entitulada "Até onde vai essa teia?", e também, para que possamos conversar durante o evento, pelos corredores da PUC, para falarmos desta fantástica e revolucionária fase que viemos vivendo.
+
+Links do evento: 
+<a href="http://fisl.org.br/" target='_blank'>http://fisl.org.br/</a>
+<a href="http://softwarelivre.org/fisl11/" target='_blank'>http://softwarelivre.org/fisl11/</a>
+<a href="http://fisl.softwarelivre.org/" target='_blank'>http://fisl.softwarelivre.org/</a>
+<a href="http://verdi.softwarelivre.org/" target='_blank'>http://verdi.softwarelivre.org/</a>
+]]></description>
+  </item>
+  
+  <item>
+    <title>Starting with Canvas in javascript</title>
+    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
+First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre class="line-numbers"><code class="language-javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+You probably know how to load an image  from js, right?
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre class="line-numbers"><code class="language-javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</code></pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre class="line-numbers"><code class="language-javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
+]]></description>
+  </item>
   
   <item>
     <title>Iniciando com o Canvas javascript</title>
@@ -114,358 +326,6 @@ Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage 
 Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
 
 Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
-]]></description>
-  </item>
-  
-  <item>
-    <title>Animations with CSS3</title>
-    <link>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</link>
-    
-    <category>
-    <![CDATA[ css3 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ animações ]]>
-    </category>
-    
-    <description><![CDATA[
-Hey folks. Tonight's talk will be about <strong>CSS3 animations</strong>...yes, animations.<br/>
-Well, one of the most interesting effects is the <em>transition</em> property.
-With this, you can specify how the elements will behave when changing from or to a specific state.
-For example, let's say we have the following structure:
-<pre class="line-numbers"><code class="language-markup">
-&lt;div class='toBeAnimated'>content&lt;/div>
-</code></pre>
-Then, with CSS3 we can:
-<pre class="line-numbers"><code class="language-css">
-.toBeAnimated
-{
-   background-color:red;
-   color:white;
-   text-align:center;
-   transition: background 1s linear;
-}
-.toBeAnimated:hover
-{
-   background-color:white;
-   color:red;
-}
-</code></pre>
-
-In case we want to apply more than one transaction, we can use
-<pre class="line-numbers"><code class="language-css">
-   transition: background-color 1s linear, color 1s linear;
-</code></pre>
-
-Here is an example(hover it with your mouse):
-
-<div class='toBeAnimated'>content</div>
-<style type='text/css'>
-.toBeAnimated
-{
-   background-color:red;
-   color:white;
-   height: 30px;
-   padding-top: 8px;
-   border:solid 1px black;
-   text-align:center;
-   transition: background-color 1s ease-in, color 1s linear;
-}
-.toBeAnimated:hover
-{
-   background-color:white;
-   color:red;
-}
-
-</style>
-
-These transition properties accept the property to suffer the animation as it changes, the time to elapse it and the easing of it, working with linear, ease, ease-in, ease-out, ease-in-out or cubic-bezier(n,n,n,n)
-
-Now, let's get deeper :)
-The first thing you'll have to do is to create the animation itself, like this:
-<pre class="line-numbers"><code class="language-css">
-@-webkit-keyframes yourAnimationName
-{
-  from
-  {
-      background-color:red;
-      font-size: 30px;
-      color: black;
-  }
-  to
-  {
-      background-color:white;
-      font-size: 10px;
-      color: red;
-  }
-}
-</code></pre>
-Now that we created out animation called <em>yourAnimationName</em>, it's time to use it by declaring the elements that will adopt it, this way:
-<pre class="line-numbers"><code class="language-css">
-div.animatedDiv
-{
-    -webkit-animation-name: <strong>yourAnimationName</strong>;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-direction: alternate;
-    ...
-}
-</code></pre>
-
-And then, all the divs that have the class "animatedDiv" will look like this:
-<style type='text/css'>
-.divToAnimate
-{
-    -webkit-animation-name: yourAnimationName;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-direction: alternate;
-    height: 50px;
-    width: 140px;
-    margin: auto;
-    padding-top: 1rem;
-    text-align:center;
-}
-@-webkit-keyframes yourAnimationName /*Safari and Chrome */
-{
-  from
-  {
-      background-color:red;
-      font-size: 30px;
-      color: black;
-  }
-  to
-  {
-      background-color:white;
-      font-size: 10px;
-      color: red;
-  }
-}
-</style>
-<div class='divToAnimate' >SPAM</div>
-
-I hope this have helped/inspired you to use and create new things :)
-Cheers...
-]]></description>
-  </item>
-  
-  <item>
-    <title>Três maneiras de recarregar a página usando JavaScript</title>
-    <link>http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page/</link>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ html ]]>
-    </category>
-    
-    <description><![CDATA[
-Hey, olá pessoal.<br/>Bom, esta é uma pergunta que vejo muita gente fazendo, então, decidi postar aqui sobre isto.<br/>
-Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
-Por tanto, podemos fazer desta maneira:
-<pre class="line-numbers"><code class="language-javascript">
- 
-history.go(0);
- 
-</code></pre>
-Isto irá simplesmente recarregar a página. Claro que você pode usar iframes, adotando parent, top, self ou name para trabalhar com suas relações.
-
-Outra alternativa seria usar o método reload, oferecido pelo <em>location</em>, assim:
-<pre class="line-numbers"><code class="language-javascript">
-
-self.location.reload();
-
-</code></pre>
-
-Agora, uma outra alternativa que também servirá para mover-mos para uma nova página, usando a propriedade <em>href</em>, também do <em>location</em>.
-<pre class="line-numbers"><code class="language-javascript">
-
-self.location.href= self.location.href;
-
-</code></pre>
-Este código recarregará a página, ms poderia ser qualquer outro endereço alí, a ser carregado.
-]]></description>
-  </item>
-  
-  <item>
-    <title>PHP ZCE - A prova de certificação PHP</title>
-    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
-    
-    <category>
-    <![CDATA[ php ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ zce ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ certificacao ]]>
-    </category>
-    
-    <description><![CDATA[
-Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
-<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
-<br/>
-<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
-<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
-<br/>
-<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
-<br/>Quando notei, a prova já era no dia seguinte!
-<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
-<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
-<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
-O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
-<br/>Mas enfim...
-<br/>
-<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
-<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
-<br/>
-<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
-<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
-<br/>
-<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
-<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
-<br/>
-<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
-<br/>
-<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
-<br/>
-<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
-
-]]></description>
-  </item>
-  
-  <item>
-    <title>Bug on IE - Elements with name/submitName</title>
-    <link>http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ bug ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ie ]]>
-    </category>
-    
-    <description><![CDATA[
-<br/>
-Hi, yesterday I had to fight against this problem, which is not very touched out there.
-In the beginning, people from <em>jQuery</em> thought it was a jQuery bug, but searching a bit more I could find out the root of this problem.
-
-<b>What is it?</b>
-When running your javascript in Internet Explorer 6, or 7 or 8 in compatible mode, if you create dynamically an iframe, for example, and set it a <strong>name</strong> attribute, Internet Explorer will reaplace it by an <strong>submitName</strong> attribute. This attribute cannot be found with .getAttribute('submitName'), but that is the problem, neither can be with .getAttribute('name')!
-
-<b>How to see it happening? Try this:</b>
-<pre class="line-numbers"><code class="language-javascript">
-var ifr= document.createElement('iframe');
-ifr.setAttribute('name', 'iFrameOne');
-document.body.appendChild(ifr);
-alert(ifr.getAttribute('name'));
-// you can also see it through the &quot;developer tool&quot; in the IE tools menu
-</code></pre>
-
-The main problem is that ... when you have something like a link or a form targeting this iframe, you loose it! The same happens with inputs with name, which are dynamically created.
-
-<b>How to fix it without ask your users to migrate to a real browser? I did this and it worked:</b>
-<pre class="line-numbers"><code class="language-javascript">
-var ifrDiv= document.createElement('div');
-ifrDiv.innerHTML= &quot;&lt;iframe name='iFrameOne' &gt;&lt;/iframe&gt;&quot;;
-document.body.appendChild(ifrDiv);
-</code></pre>
-
-<b>Now, why does it happen?!</b>
-I had the chance to search for this and found in the Microsoft's webpage something about this old, known bug in <em>Internet Explorer</em>, with names on dynamic elements. Due to "fix" this, instead of fixing, then "provided" this workarounded attribute. When you try to deal with the name attribute, it applies like an alias, redirecting it to the Microsoft's Internet Explorer imaginary <strong>submitName</strong> attribute. But with this, you cant access a form that has a name, like this:
-<pre class="line-numbers"><code class="language-javascript">
-document.forms['dynamicFormName'];
-</code></pre>
-because the DOM hasn't rendered that form with the name you asked for.
-
-I hope it can help you, if you get stuck with this some day.
-]]></description>
-  </item>
-  
-  <item>
-    <title>Mozilla Summit 2013</title>
-    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
-    
-    <category>
-    <![CDATA[ events ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ mozilla ]]>
-    </category>
-    
-    <description><![CDATA[
-One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!<br/>
-<strong>About the conference</strong>
-This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
-
-<strong>About the sessions</strong>
-One other interesting thing I noticed in the conference was that I could attend some talks related to <em>social psycology</em>, <em>laws/politics</em>, <em>market/stocks</em>, <em>story</em>, <em>motivation</em> and of course, <em>technology</em>...this is pretty interesting to see in such a conference!
-Also, the sessions were way different than what we are used to! With some social interactions, games, group dynamics, meetings, and others.
-This means that each and every room had creative people, interested on discussing and participating, and also, giving something useful back to Mozilla, results, ideas, feedback, etc! Epic win!
-<blockquote>In a conference in an hotel, one guy said:
-<em>You want what, a microchip in each doorknob?</em>
-Ten years later, in the same hotel, they gave him a card instead of a key...there was a microchip on each doorknob in the hotel.</blockquote>
-<strong>About the attendees</strong>
-What about it? Mozilla Summit 2013 happened simultaneously in 3 different countries, summing 1800 attendees!
-In Toronto, there were about 600 people.
-
-<strong>New MDN</strong>
-So, we can now test the new MDN interfaces, and guys, it's really cool!
-The new MDN manager now is based on an useful API, which allows us to use it to list our demos or articles anywhere we want, for example!
-
-<strong>About Toronto, the trip, the Hotel and the parties</strong>
-Toronto is a fantastic city! It's really impressive to see how good is the traffic, and the details of the city!
-The architecture is beautiful and you can see that even the old buildings are quite in good condition! They pay good attention to the details! The street asphalt is perfectly smooth, you see absolutely no dogs on the streets and I could count on my fingers the number of homeless I could see!
-By the way, the "street hot dogs" are really good and cheap there!
-People in Toronto are very, VERY polite! The world I most heard was, for sure, "sorry"!
-
-The bars and pubs were really cool too, their beer is strong and the food very spicy, I think it's because of their winter.
-The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
-
-It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
-Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
-]]></description>
-  </item>
-  
-  <item>
-    <title>Where is this web going to?</title>
-    <link>http://felipenmoura.com/articles/where-is-this-web-going-to/</link>
-    
-    <category>
-    <![CDATA[ web ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ future ]]>
-    </category>
-    
-    <description><![CDATA[
-<br/>
-Este ano, uma de minhas submissões foi aprovada para este grande, interessante e útil evento.
-Por anos, o Fisl tem trazido para Porto Alegre uma grande quantidade de pessoas especializadas nas mais diversas e desafiadoras áreas, para falar de seu conhecimento, experiências e planos.
-Este evento é sempre uma oporunidade e tanto para aumentar suas ideias, conhecer pessoas <s>loucas</s> inteligentes e muitas vezes, pessoas que literalmente escreveram a história.
-Costumo brincar dizendo que no Fisl, vemos o recorde de nerds por metro quadrado.
-
-Este ano, falarei sobre a revolução do desenvolvimento web, suas novas tecnologias e técnicas, além do modo como vemos a web, e também, como os usuários teem visto a web hoje em dia. Falarei sobre HTML5, CSS3, JavaScript2, mercado, entre outros tópicos interessantes. Acredito que todos podemos ter uma boa discussão sobre tais assuntos e os convido a assistir à minha palestra no sábado, as 10 horas da manhã, entitulada "Até onde vai essa teia?", e também, para que possamos conversar durante o evento, pelos corredores da PUC, para falarmos desta fantástica e revolucionária fase que viemos vivendo.
-
-Links do evento: 
-<a href="http://fisl.org.br/" target='_blank'>http://fisl.org.br/</a>
-<a href="http://softwarelivre.org/fisl11/" target='_blank'>http://softwarelivre.org/fisl11/</a>
-<a href="http://fisl.softwarelivre.org/" target='_blank'>http://fisl.softwarelivre.org/</a>
-<a href="http://verdi.softwarelivre.org/" target='_blank'>http://verdi.softwarelivre.org/</a>
 ]]></description>
   </item>
   
@@ -727,6 +587,271 @@ Hope this can help you!
 
 By the way, every time you finish the game(in arcade mode) and earn something, go to the crypt to claim for it choosing the character you used to finish the game at last.
 To choose an alternative costume, when you earn a new cloth, use the START button when selecting the character, instead of any other button ;)
+]]></description>
+  </item>
+  
+  <item>
+    <title>Animations with CSS3</title>
+    <link>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</link>
+    
+    <category>
+    <![CDATA[ css3 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ animações ]]>
+    </category>
+    
+    <description><![CDATA[
+Hey folks. Tonight's talk will be about <strong>CSS3 animations</strong>...yes, animations.<br/>
+Well, one of the most interesting effects is the <em>transition</em> property.
+With this, you can specify how the elements will behave when changing from or to a specific state.
+For example, let's say we have the following structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class='toBeAnimated'>content&lt;/div>
+</code></pre>
+Then, with CSS3 we can:
+<pre class="line-numbers"><code class="language-css">
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   text-align:center;
+   transition: background 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+</code></pre>
+
+In case we want to apply more than one transaction, we can use
+<pre class="line-numbers"><code class="language-css">
+   transition: background-color 1s linear, color 1s linear;
+</code></pre>
+
+Here is an example(hover it with your mouse):
+
+<div class='toBeAnimated'>content</div>
+<style type='text/css'>
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   height: 30px;
+   padding-top: 8px;
+   border:solid 1px black;
+   text-align:center;
+   transition: background-color 1s ease-in, color 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+
+</style>
+
+These transition properties accept the property to suffer the animation as it changes, the time to elapse it and the easing of it, working with linear, ease, ease-in, ease-out, ease-in-out or cubic-bezier(n,n,n,n)
+
+Now, let's get deeper :)
+The first thing you'll have to do is to create the animation itself, like this:
+<pre class="line-numbers"><code class="language-css">
+@-webkit-keyframes yourAnimationName
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</code></pre>
+Now that we created out animation called <em>yourAnimationName</em>, it's time to use it by declaring the elements that will adopt it, this way:
+<pre class="line-numbers"><code class="language-css">
+div.animatedDiv
+{
+    -webkit-animation-name: <strong>yourAnimationName</strong>;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    ...
+}
+</code></pre>
+
+And then, all the divs that have the class "animatedDiv" will look like this:
+<style type='text/css'>
+.divToAnimate
+{
+    -webkit-animation-name: yourAnimationName;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    height: 50px;
+    width: 140px;
+    margin: auto;
+    padding-top: 1rem;
+    text-align:center;
+}
+@-webkit-keyframes yourAnimationName /*Safari and Chrome */
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</style>
+<div class='divToAnimate' >SPAM</div>
+
+I hope this have helped/inspired you to use and create new things :)
+Cheers...
+]]></description>
+  </item>
+  
+  <item>
+    <title>Três maneiras de recarregar a página usando JavaScript</title>
+    <link>http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ html ]]>
+    </category>
+    
+    <description><![CDATA[
+Hey, olá pessoal.<br/>Bom, esta é uma pergunta que vejo muita gente fazendo, então, decidi postar aqui sobre isto.<br/>
+Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
+Por tanto, podemos fazer desta maneira:
+<pre class="line-numbers"><code class="language-javascript">
+ 
+history.go(0);
+ 
+</code></pre>
+Isto irá simplesmente recarregar a página. Claro que você pode usar iframes, adotando parent, top, self ou name para trabalhar com suas relações.
+
+Outra alternativa seria usar o método reload, oferecido pelo <em>location</em>, assim:
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.reload();
+
+</code></pre>
+
+Agora, uma outra alternativa que também servirá para mover-mos para uma nova página, usando a propriedade <em>href</em>, também do <em>location</em>.
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.href= self.location.href;
+
+</code></pre>
+Este código recarregará a página, ms poderia ser qualquer outro endereço alí, a ser carregado.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Bug on IE - Elements with name/submitName</title>
+    <link>http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ bug ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ie ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Hi, yesterday I had to fight against this problem, which is not very touched out there.
+In the beginning, people from <em>jQuery</em> thought it was a jQuery bug, but searching a bit more I could find out the root of this problem.
+
+<b>What is it?</b>
+When running your javascript in Internet Explorer 6, or 7 or 8 in compatible mode, if you create dynamically an iframe, for example, and set it a <strong>name</strong> attribute, Internet Explorer will reaplace it by an <strong>submitName</strong> attribute. This attribute cannot be found with .getAttribute('submitName'), but that is the problem, neither can be with .getAttribute('name')!
+
+<b>How to see it happening? Try this:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifr= document.createElement('iframe');
+ifr.setAttribute('name', 'iFrameOne');
+document.body.appendChild(ifr);
+alert(ifr.getAttribute('name'));
+// you can also see it through the &quot;developer tool&quot; in the IE tools menu
+</code></pre>
+
+The main problem is that ... when you have something like a link or a form targeting this iframe, you loose it! The same happens with inputs with name, which are dynamically created.
+
+<b>How to fix it without ask your users to migrate to a real browser? I did this and it worked:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifrDiv= document.createElement('div');
+ifrDiv.innerHTML= &quot;&lt;iframe name='iFrameOne' &gt;&lt;/iframe&gt;&quot;;
+document.body.appendChild(ifrDiv);
+</code></pre>
+
+<b>Now, why does it happen?!</b>
+I had the chance to search for this and found in the Microsoft's webpage something about this old, known bug in <em>Internet Explorer</em>, with names on dynamic elements. Due to "fix" this, instead of fixing, then "provided" this workarounded attribute. When you try to deal with the name attribute, it applies like an alias, redirecting it to the Microsoft's Internet Explorer imaginary <strong>submitName</strong> attribute. But with this, you cant access a form that has a name, like this:
+<pre class="line-numbers"><code class="language-javascript">
+document.forms['dynamicFormName'];
+</code></pre>
+because the DOM hasn't rendered that form with the name you asked for.
+
+I hope it can help you, if you get stuck with this some day.
+]]></description>
+  </item>
+  
+  <item>
+    <title>O Brasil e suas decisões...</title>
+    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
+    
+    <category>
+    <![CDATA[ politica ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ brasil ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ opinião ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
+
+O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
+
+Poh, não poderiam ter posto <strong>5</strong> bilhoezinhos de <strong>REAIS</strong> em investimentos para exploração espacial brasileira? que fossemos até a Lua, "apenas"!
+e podiam ter posto mais uns <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em educação e mudar a historia deste país? E quem sabe, mais <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em saúde e segurança, e sabe o que aconteceria?
+
+Teríamos gasto em torno de <strong>32 bi</strong>lhões de <strong>dollares</strong> na copa...o que é equivalente a <strong>SOMA DO QUE FOI GASTO NAS 3 ULTIMAS COPAS</strong>, e ainda assim, seria a <strong>COPA MAIS CARA DA HISTÓRIA</strong>!
+Bom...acho que a dilminha não tem muita desculpa pra dar sobre por que o país não vai pra frente, né? É só má vontade mesmo, pura, e simples má vontade!
+
+O que realmente me entristece é saber que este país tinha tanto potencial!
+Acabamos de passar por uma oportunidade ÚNICA para este país! Não, não estou falando da copa! Estou falando do andamento financeiro, acesso a informações, à situação financeira de outros países, o interesse que eles despertaram sobre o Brasil, a valorização da terra e da moeda(ok, sabemos que há uma bolha), etc...
+Poderíamos, atrevo-me a dizer, ter nos tornado quase um país de primeiro mundo! Poderíamos ter passado de um "país granjeiro e agropecuário" a um país que oferece produtos de fato, tecnologia, etc...fora isso, a copa está aí para dar o maior destaque internacional ao país e seu povo e...não estamos preparados!
+Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocionalmente, culturalmente...o país não está pronto!
+
+O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
 ]]></description>
   </item>
   
@@ -1122,134 +1247,97 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   </item>
   
   <item>
-    <title>Starting with Canvas in javascript</title>
-    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
+    <title>PHP ZCE - A prova de certificação PHP</title>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
     
     <category>
-    <![CDATA[ javascript ]]>
+    <![CDATA[ php ]]>
     </category>
     
     <category>
-    <![CDATA[ canvas ]]>
+    <![CDATA[ zce ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ certificacao ]]>
     </category>
     
     <description><![CDATA[
-Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
-First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
+<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
+<br/>
+<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
+<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
+<br/>
+<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
+<br/>Quando notei, a prova já era no dia seguinte!
+<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
+<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
+<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
+O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
+<br/>Mas enfim...
+<br/>
+<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
+<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
+<br/>
+<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
+<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
+<br/>
+<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
+<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
+<br/>
+<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
+<br/>
+<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
+<br/>
+<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
 
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
-            whatever you write in here, will be shown ONLY
-            when your canvas cannot be rendered.
-            Of course, it accepts HTML tags
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
-
-Ok, now, using event handlers we will treat it in our  javascript
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // yes, addEventListener does not work on IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
-<pre class="line-numbers"><code class="language-javascript">
-// let's create some global variables.
-// You can use it better with namespaces
-var canvas= null;
-var ctx= null;
-canvasHandler= function(){
-    // first of all, we simply get the canvas element itself
-    canvas= document.getElementById('theCanvasElement');
-    // now, we need to have the CONTEXT to work with
-    ctx= canvas.getContext('2d');
-}
-</code></pre>
-
-Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
-No, unfortunately it does not offer any other context besides 2D.
-Our canvas still has no properties. It has no with and height, we can set it then.
-From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
-<pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
-</code></pre>
-
-You probably know how to load an image  from js, right?
-<pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
-</code></pre>
-Ok, you can use it to insert images inside your canvas. Just like this.
-<pre class="line-numbers"><code class="language-javascript">
-    // instantiate an image
-    var img= new Image();
-    // we need to use the image when it has finished to load
-    img.addEventListener('load', function(){
-        // after downloading the image, we can draw it into the canvas
-        ctx.drawImage(this);
-        // where this= the image just downloaded
-    });
-    // then, we say the image's url, to it start loading
-    img.src= 'url.png';
-</code></pre>
-
-Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
-<pre class="line-numbers"><code class="language-javascript">
-    // draws the image in the position left=30, top=30
-    ctx.drawImage(this, 30, 30);
-    // draws the image in the 0/0 position, changing its size
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // more complex, draws the image croping it
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
-</code></pre>
-
-When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
-
-Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
 ]]></description>
   </item>
   
   <item>
-    <title>O Brasil e suas decisões...</title>
-    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
+    <title>Mozilla Summit 2013</title>
+    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
     <category>
-    <![CDATA[ politica ]]>
+    <![CDATA[ events ]]>
     </category>
     
     <category>
-    <![CDATA[ brasil ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ opinião ]]>
+    <![CDATA[ mozilla ]]>
     </category>
     
     <description><![CDATA[
-<br/>
-Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
+One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!<br/>
+<strong>About the conference</strong>
+This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
 
-O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
+<strong>About the sessions</strong>
+One other interesting thing I noticed in the conference was that I could attend some talks related to <em>social psycology</em>, <em>laws/politics</em>, <em>market/stocks</em>, <em>story</em>, <em>motivation</em> and of course, <em>technology</em>...this is pretty interesting to see in such a conference!
+Also, the sessions were way different than what we are used to! With some social interactions, games, group dynamics, meetings, and others.
+This means that each and every room had creative people, interested on discussing and participating, and also, giving something useful back to Mozilla, results, ideas, feedback, etc! Epic win!
+<blockquote>In a conference in an hotel, one guy said:
+<em>You want what, a microchip in each doorknob?</em>
+Ten years later, in the same hotel, they gave him a card instead of a key...there was a microchip on each doorknob in the hotel.</blockquote>
+<strong>About the attendees</strong>
+What about it? Mozilla Summit 2013 happened simultaneously in 3 different countries, summing 1800 attendees!
+In Toronto, there were about 600 people.
 
-Poh, não poderiam ter posto <strong>5</strong> bilhoezinhos de <strong>REAIS</strong> em investimentos para exploração espacial brasileira? que fossemos até a Lua, "apenas"!
-e podiam ter posto mais uns <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em educação e mudar a historia deste país? E quem sabe, mais <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em saúde e segurança, e sabe o que aconteceria?
+<strong>New MDN</strong>
+So, we can now test the new MDN interfaces, and guys, it's really cool!
+The new MDN manager now is based on an useful API, which allows us to use it to list our demos or articles anywhere we want, for example!
 
-Teríamos gasto em torno de <strong>32 bi</strong>lhões de <strong>dollares</strong> na copa...o que é equivalente a <strong>SOMA DO QUE FOI GASTO NAS 3 ULTIMAS COPAS</strong>, e ainda assim, seria a <strong>COPA MAIS CARA DA HISTÓRIA</strong>!
-Bom...acho que a dilminha não tem muita desculpa pra dar sobre por que o país não vai pra frente, né? É só má vontade mesmo, pura, e simples má vontade!
+<strong>About Toronto, the trip, the Hotel and the parties</strong>
+Toronto is a fantastic city! It's really impressive to see how good is the traffic, and the details of the city!
+The architecture is beautiful and you can see that even the old buildings are quite in good condition! They pay good attention to the details! The street asphalt is perfectly smooth, you see absolutely no dogs on the streets and I could count on my fingers the number of homeless I could see!
+By the way, the "street hot dogs" are really good and cheap there!
+People in Toronto are very, VERY polite! The world I most heard was, for sure, "sorry"!
 
-O que realmente me entristece é saber que este país tinha tanto potencial!
-Acabamos de passar por uma oportunidade ÚNICA para este país! Não, não estou falando da copa! Estou falando do andamento financeiro, acesso a informações, à situação financeira de outros países, o interesse que eles despertaram sobre o Brasil, a valorização da terra e da moeda(ok, sabemos que há uma bolha), etc...
-Poderíamos, atrevo-me a dizer, ter nos tornado quase um país de primeiro mundo! Poderíamos ter passado de um "país granjeiro e agropecuário" a um país que oferece produtos de fato, tecnologia, etc...fora isso, a copa está aí para dar o maior destaque internacional ao país e seu povo e...não estamos preparados!
-Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocionalmente, culturalmente...o país não está pronto!
+The bars and pubs were really cool too, their beer is strong and the food very spicy, I think it's because of their winter.
+The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
 
-O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
+It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
+Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
 ]]></description>
   </item>
   
@@ -1407,6 +1495,179 @@ e é dada a largada!
   </item>
   
   <item>
+    <title>Escopo, this e that</title>
+    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ scope ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma ]]>
+    </category>
+    
+    <description><![CDATA[
+Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
+<strong>Escopo</strong>
+
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+}
+
+someFunc();
+
+</code></pre>
+
+Funções que cumprem o papel de construtores também.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
+}
+
+var instance= new SomeConstructor();
+
+</code></pre>
+
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
+</code></pre>
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
+</code></pre>
+
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
+<pre class="line-numbers"><code class="language-javascript">
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
+</code></pre>
+
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
+
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+
+]]></description>
+  </item>
+  
+  <item>
     <title>Duas maneiras para centralizar verticalmente com CSS</title>
     <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
@@ -1484,94 +1745,6 @@ Este é um método pouco conhecido, mas que pode atender bem a demanda caso voc�
 </code></pre>
 
 Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.
-]]></description>
-  </item>
-  
-  <item>
-    <title>Hoisting no JavaScript</title>
-    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ es2015 ]]>
-    </category>
-    
-    <description><![CDATA[
-Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
-O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
-Todavia, o valor apenas será atribuído no momento correto.
-
-Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-if(x === 3){
-    var y= 1;
-}
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
-</code></pre>
-
-Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
-A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
-
-Ainda duvida?
-Façamos assim, então:
-
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
-
-if(x === 3){
-    var y= 1;
-}
-
-</code></pre>
-
-O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
-
-Da mesma forma, funções podem ser declaradas ou atribuídas.
-
-<pre class="line-numbers"><code class="language-javascript">
-// chamando a funcão 1
-func1(); // joga 1 no console
-
-// a declaração desta função foi puxada para o topo
-// pelo JavaScript
-function func1(){
-    console.log(1);
-}
-
-// chamando a função 2
-func2(); // ERROR
-
-// a variável func2 foi criada antes, com o valor "undefined"
-// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
-var func2= function(){
-    console.log(2);
-}
-
-// a partir de agora, func2 poderia ser evocada
-</code></pre>
-
-Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
-
-Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
-
-Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
-
 ]]></description>
   </item>
   
@@ -1918,174 +2091,40 @@ Não deixem de divulgar o post, e dar sua opinião.
   </item>
   
   <item>
-    <title>Escopo, this e that</title>
-    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    <title>E é dada a largada!!</title>
+    <link>http://felipenmoura.com/articles/e-dada-largada/</link>
     
     <category>
-    <![CDATA[ javascript ]]>
+    <![CDATA[ empresa ]]>
     </category>
     
     <category>
-    <![CDATA[ scope ]]>
+    <![CDATA[ carreira ]]>
     </category>
     
     <category>
-    <![CDATA[ ecma ]]>
+    <![CDATA[ nasc ]]>
     </category>
     
     <description><![CDATA[
-Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
-<strong>Escopo</strong>
+Há momentos na nossa vida que nós não sabemos o que fazer!<br/>Mas há momentos em que <strong>sabemos</strong> exatamente qual <strong>direção</strong> devemos seguir!<br/>
+Há algum tempo que tanto <a href="http://twitter.com/jaydson" target="_blank">Jaydson Gomes</a> quanto eu vínhamos sentindo "um chamado" para focar no mercado!
+Nós já vínhamos discutindo isto há algum tempo, e era algo inevitável!
 
-O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
-Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
-Uma maneira de criar um escopo, é utilizando uma função.
+Quem me conhece sabe que estou sempre "mirando alto", almejando o maior objetivo possível, e gosto de fazer isto focando bastante em ajudar os outros, a comunidade, inventar coisas novas, e por que não, me divertir!
 
-<pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
+<h2>&lt;/terra></h2>
+Pois é, é fechado um ciclo de 4 anos! Trabalhando com uma equipe muito boa e divertida, conseguimos superar enormes desafios, aprender muito juntos e amadurecer em diversos sentidos!
+Foi um prazer <em>ininarrável</em>, e <em>parabéns aos envolvidos</em> (piadas internas).
 
-function someFunc () {
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-}
+<h2>Nasce a NASC</h2>
+Agora é hora de apostar firme nesta nova etapa!
+E vocês nos conhecem, não vai ser "qualquer coizinha"!!
 
-someFunc();
-
-</code></pre>
-
-Funções que cumprem o papel de construtores também.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
-
-function SomeConstructor () {
-
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-
-    function internalFunc () {
-        var secondLevelVariable= 789;
-
-        console.log(localVariable);
-        console.log(secondLevelVariable);
-        console.log(globalVariable);
-    }
-  
-    internalFunc();
-}
-
-var instance= new SomeConstructor();
-
-</code></pre>
-
-Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
-Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
-
-<pre class="line-numbers"><code class="language-javascript">
-"use strict";
-
-var global1= 1;
-
-function someFunc () {
-    var localVar= 123;
-    global2= 456; // isto, criará uma variável global, por acidente.
-
-    console.log( window.global1 );
-}
-
-</code></pre>
-
-<strong>this</strong>
-
-Escopos, normalmente setam um valor para <em>this</em>.
-Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
-
-Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-"use strict";
-function blah(){
-    console.log(this); // imprime Window
-}
-blah();
-</code></pre>
-
-Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
-
-- Dentro de objetos
-<pre class="line-numbers"><code class="language-javascript">
-var o= {
-    doSomething: function () {
-        console.log(this); // imprime Object(o)
-    }
-}
-o.doSomething();
-</code></pre>
-
-- Em funções construtoras
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    console.log(this); // imprime Klass {foo: "bar"} 
-}
-
-var instance= new Klass();
-</code></pre>
-
-- Usando call, bind e apply
-Será discutido em outro post, com maiores detalhes.
-
-<strong>that</strong>
-
-A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
-O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
-
-Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(this);
-    }
-}
-
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"} 
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
-</code></pre>
-
-Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    var that= this; // guarda a referência ao this
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(that);
-    }
-}
-
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"}
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
-</code></pre>
-
-Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
-Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
-
-Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
-
-Espero que tenha sido útil! :)
-
+A Nasc é a empresa que abrimos há alguns anos para cuidar burocratica e fiscalmente de diversos detalhes na organização de eventos, e agora será nosso foco!
+Bom, na verdade, um de nossos focos(spoiler alert)!
+Vamos manter o trabalho e contato com as comunidades, buscando sempre o melhor!
+Mais novidades a caminho!
 
 ]]></description>
   </item>

@@ -1625,6 +1625,9 @@ body[data-page="articles"] #articles-container .articles-content {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
+body[data-page="articles"] #articles-container .articles-content article {
+  white-space: pre-line;
+}
 body[data-page="articles"] .articles-nav {
   -moz-transform: translateY(0);
   -o-transform: translateY(0);

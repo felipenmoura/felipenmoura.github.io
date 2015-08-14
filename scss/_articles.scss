@@ -31,6 +31,10 @@ body[data-page="articles"] {
         .articles-content {
             opacity: 1;
             @include transform(translateY(0));
+            
+            article {
+                white-space: pre-line;
+            }
         }
     }
     

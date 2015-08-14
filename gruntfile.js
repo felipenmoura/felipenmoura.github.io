@@ -233,7 +233,7 @@ module.exports = function(grunt) {
 
                 // sort them out
                 validArticles.sort(function(left, right){
-                    return left.creationDate >= right.creationDate;
+                    return new Date(left.oCreationDate) >= new Date(right.oCreationDate);
                 });
 
                 // set the previous and next links
