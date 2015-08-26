@@ -1,5 +1,5 @@
 <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="{{ articleLang }}">
+<section id="articles-container" class="sect-content" lang="pt-BR">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -12,26 +12,19 @@
                 </span>
             </li>
             <li class="btn left">
-                {% if previous %}
-                <a href="/articles/{{ previous.name }}"
+                
+                <a href="/articles/braziljs-2015"
                    class="local art-nav-tbn"
-                   title="previous: {{ previous.title | striptags }}">&lt;&lt; Prev
-                {% else %}
-                <a class="local art-nav-tbn inactive"
-                   title="">&lt;&lt; Prev
-                {% endif %}
+                   title="previous: BrazilJS 2015">&lt;&lt; Prev
+                
                    </a>
             </li>
             <li class="btn right">
-                {% if next %}
-                <a href="/articles/{{ next.name }}"
-                   class="local art-nav-tbn"
-                   title="Next: {{ next.title }}">Next &gt;&gt;
-                {% else %}
+                
                 <a href=""
                    class="local art-nav-tbn inactive"
                    title="">Next &gt;&gt;
-                {% endif %}
+                
                    </a>
             </li>
         </ul>
@@ -45,29 +38,44 @@
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-{{ colourId }}
-                    {% if not resume and not headerImg %}
-                    resumeless
-                    {% endif %}">
-            <h2><a href="{{ url }}">{{ title }}</a></h2>
+                    colour-1
+                    ">
+            <h2><a href="/articles/teste">teste <em></em></a></h2>
             <div class="wrapper">
-                {% if headerImg %}
-                    <img src="{{ headerImg }}" alt="{{ title | striptags }}" title="" />
-                {% endif %}
+                
+                    <img src="/articles/teste/teste.jpg" alt="teste " title="" />
+                
             </div>
             <span id="article-meta-data">
-                {{ creationDate }} : {{ tags }}
+                Aug 26th, 2015 : article
             </span>
-            {% if resume %}
-            <abs>
-                {{ resume }}
-            </abs>
-            {% endif %}
+            
         </div>
 
         <div class="wrapper articles-content">
-            {% include "./social-buttons.html" %}
-            <article>{{ content }}</article>
+            <div class='social-buttons-container'>
+    <!-- FB LIKE BUTTON -->
+    <div class="fb-like" data-href="http://felipenmoura.com/articles/teste" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    <!-- Tweitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://felipenmoura.com/articles/teste" data-text="teste " data-via="felipenmoura" data-count="none">Tweet</a>
+    <!-- GOOGLE PLUS -->
+    <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/teste"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+</div>
+            <article><section class="multi-lang" lang="en-US">
+    <h2>test</h2>
+    Content goes here
+</section>
+<section class="multi-lang" lang="pt-BR">
+    <h2>teste</h2>
+    Conteúdo vai aqui
+</section>
+
+<div class="picture"
+     style="float: left;">
+     <img src="" alt="" />
+</div>
+</article>
 
             <aside>
                 <div id="disqus_thread"></div>

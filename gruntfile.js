@@ -56,24 +56,10 @@ module.exports = function(grunt) {
         return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\">$1</a>")
     }
 
+    require('./scripts/create.js')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-//        nunjucks: {
-//            options: {
-//            },
-//            precompile : {
-//                baseDir: 'views/',
-//                src: 'views/*',
-//                dest: 'static/js/templates.js',
-//                options: {
-//                    env: require('./nunjucks-environment'),
-//                    name: function(filename) {
-//                        return 'foo/' + filename;
-//                    }
-//                }
-//            },
-//        },
 
         sass: {
             dist: {
@@ -125,6 +111,12 @@ module.exports = function(grunt) {
 
         jslint: {
             all: ['gruntfile.js', 'scripts/**.js']
+        },
+
+        create: {
+            all: {
+                //
+            }
         },
 
         compileTemplates: {

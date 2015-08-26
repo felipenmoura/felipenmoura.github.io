@@ -1922,6 +1922,14 @@ body[data-page="articles"] .articles-nav {
   color: black;
 }
 
+html[lang="en-US"] .multi-lang[lang="pt-BR"] {
+  display: none;
+}
+
+html[lang="pt-BR"] .multi-lang[lang="en-US"] {
+  display: none;
+}
+
 #articles-container {
   position: absolute;
   background: transparent;

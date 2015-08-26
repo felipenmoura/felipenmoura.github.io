@@ -354,6 +354,19 @@ body[data-page="articles"] {
 //    font-size: 2rem;
 //}
 
+html[lang="en-US"] {
+
+    .multi-lang[lang="pt-BR"] {
+        display: none;
+    }
+}
+
+html[lang="pt-BR"] {
+    .multi-lang[lang="en-US"] {
+        display: none;
+    }
+}
+
 #articles-container {
     position: absolute;
     background: rgba(0, 0, 0, 0);

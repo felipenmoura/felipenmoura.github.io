@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-US">
+    <script>
+        if(navigator.language == 'pt-BR'){
+            document.write('<' + 'html lang="pt-BR">');
+        }else{
+            document.write('<' + 'html lang="en-US">');
+        }
+    </script>
     <head>
 
         <!-- Meta -->
@@ -64,7 +70,7 @@
         <div class="background-video videobg">
             <img id="background-video" class="background-video" src="/images/relax.jpg">
             <!--video id="background-video" class="background-video" autoplay loop poster="/images/relax.jpg" >
-                <!--source src="/assets/relax-bg.webm" type="video/webm" /-- >
+                <!--source src="/assets/relax-bg.webm" type="video/webm" /- ->
                 <source src="/assets/relax-bg.mp4" type="video/mp4" />
             </video-->
         </div>
@@ -952,7 +958,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
             <h2><a href="/articles/bug-on-ie-when-creating-elements-with-name-submitname">Bug on IE <em>- Elements with name/submitName</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/bug-on-ie-when-creating-elements-with-name-submitname/bug-on-ie.jpg" alt="Bug on IE <em>- Elements with name/submitName</em>" title="" />
+                    <img src="/articles/bug-on-ie-when-creating-elements-with-name-submitname/bug-on-ie.jpg" alt="Bug on IE - Elements with name/submitName" title="" />
                 
             </div>
             <span id="article-meta-data">
