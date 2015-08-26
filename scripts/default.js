@@ -1,5 +1,5 @@
 (function () {
-    debugger;
+
     var _b= document.body,
         currentlyShowing= false,
         hashData = {};
@@ -222,20 +222,31 @@
 
     UTILS.applyComments = function(){
 
+        var dsqsEl = document.getElementById('disqus_thread'),
+            //identifier = dsqsEl.getAttribute('data-article-url'),
+            url = dsqsEl.getAttribute('data-article-url');
+
+        window.disqus_url = "http://felipenmoura.com" + url + "/";
+        window.disqus_identifier = window.disqus_url;
+
         if(UTILS.disqusApplied){
+
             DISQUS.reset({
                 reload: true,
-//                config: function () {
-//                    this.page.identifier = '/'+hashData.page+'/'+hashData.detail+'/';
-//                    this.page.url = location.href;
-//                }
+                config: function () {
+                    this.page.identifier = window.disqus_identifier;
+                    this.page.url = window.disqus_url;
+                }
             });
         }else{
             UTILS.disqusApplied = true;
             var disqus_shortname = 'felipenmoura';
 
             (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                var dsq = document.createElement('script');
+
+                dsq.type = 'text/javascript';
+                dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();

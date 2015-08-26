@@ -1,5 +1,9 @@
 <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -40,17 +44,21 @@
         <div class="decorator
                     colour-3
                     ">
-            <h2><a href="/articles/creating-geometric-forms-using-divs-and-css3">Criando formas geométricas usando <em>DIVs e CSS3</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/creating-geometric-forms-using-divs-and-css3">Criando formas geométricas usando <em>DIVs e CSS3</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/creating-geometric-forms-using-divs-and-css3/geo-shapes.jpg" alt="Criando formas geométricas usando DIVs e CSS3" title="" />
+                    <img src="/articles/creating-geometric-forms-using-divs-and-css3/geo-shapes.jpg"
+                         alt="Criando formas geométricas usando DIVs e CSS3"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2012-02-09T06:32:46.000Z"/>
                 Feb 9th, 2012 : CSS3, html, formas, geometric
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Abracei este "desafio", de fazer o maior número de formas geométricas em um div, utilizando apenas <strong>CSS3</strong> e <strong>divs</strong>.<br/>Não encare o "um div" como limitação, para alguma forma mais complexa, poderemos utilizar mais de um div.
             </abs>
             
@@ -66,7 +74,7 @@
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/creating-geometric-forms-using-divs-and-css3"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>A ideia, basicamente, é criar um grande número de formas geométricas básicas para construção de outras formas mais complexas, apoiando-se puramente em CSS3 e HTML5. Posteriormente, poderemos desenvolver uma interface gráfica que poderá ajudar a construir elementos utilizando estas formas de forma parametrizável.
+            <article itemprop="articleBody">A ideia, basicamente, é criar um grande número de formas geométricas básicas para construção de outras formas mais complexas, apoiando-se puramente em CSS3 e HTML5. Posteriormente, poderemos desenvolver uma interface gráfica que poderá ajudar a construir elementos utilizando estas formas de forma parametrizável.
 Se você pensar em alguma forma otimizada de fazer certos elementos, sinta-se livre para me informar, e adiciono à lista aqui com os devidos créditos ;)
 
 Vamos a algumas destas formas!
@@ -434,7 +442,7 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
 * Sim, este último utiliza apenas UM div.</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/creating-geometric-forms-using-divs-and-css3"></div>
             </aside>
         </div>
     </div>

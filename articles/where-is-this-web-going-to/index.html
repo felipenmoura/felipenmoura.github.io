@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -955,13 +959,17 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
         <div class="decorator
                     colour-5
                     ">
-            <h2><a href="/articles/where-is-this-web-going-to">Where is this web <em>going to?</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/where-is-this-web-going-to">Where is this web <em>going to?</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/where-is-this-web-going-to/future-web.jpg" alt="Where is this web going to?" title="" />
+                    <img src="/articles/where-is-this-web-going-to/future-web.jpg"
+                         alt="Where is this web going to?"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2010-07-18T20:58:59.000Z"/>
                 Jul 18th, 2010 : web, future
             </span>
             
@@ -977,7 +985,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/where-is-this-web-going-to"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>Este ano, uma de minhas submissões foi aprovada para este grande, interessante e útil evento.
+            <article itemprop="articleBody">Este ano, uma de minhas submissões foi aprovada para este grande, interessante e útil evento.
 Por anos, o Fisl tem trazido para Porto Alegre uma grande quantidade de pessoas especializadas nas mais diversas e desafiadoras áreas, para falar de seu conhecimento, experiências e planos.
 Este evento é sempre uma oporunidade e tanto para aumentar suas ideias, conhecer pessoas <s>loucas</s> inteligentes e muitas vezes, pessoas que literalmente escreveram a história.
 Costumo brincar dizendo que no Fisl, vemos o recorde de nerds por metro quadrado.
@@ -991,7 +999,7 @@ Links do evento:
 <a href="http://verdi.softwarelivre.org/" target='_blank'>http://verdi.softwarelivre.org/</a></article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/where-is-this-web-going-to"></div>
             </aside>
         </div>
     </div>

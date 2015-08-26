@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,15 +957,16 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-6
                     
                     resumeless
                     ">
-            <h2><a href="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css">Creating notes, <em>alerts</em> and <em>block quotes</em> for citations using <em>CSS</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css">Creating notes, <em>alerts</em> and <em>block quotes</em> for citations using <em>CSS</em></a></h2>
             <div class="wrapper">
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2013-10-22T04:33:16.000Z"/>
                 Oct 22nd, 2013 : css, pseudo-element
             </span>
             
@@ -977,7 +982,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+            <article itemprop="articleBody">Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
 You can create a cool style for them using CSS, like this:
 
 <iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
@@ -1083,7 +1088,7 @@ Cool thing, right?
 Now go ahead and customize yours!</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css"></div>
             </aside>
         </div>
     </div>

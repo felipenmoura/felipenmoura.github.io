@@ -215,6 +215,7 @@ module.exports = function(grunt) {
                     metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
                     metaData.name= cur;
                     metaData.oCreationDate = metaData.creationDate;
+                    metaData.ISOCreationDate = (new Date(metaData.creationDate)).toISOString();
                     metaData.creationDate = formatDate(metaData.creationDate);
                     metaData.oTags = metaData.tags || [];
                     metaData.tags = metaData.tags? metaData.tags.join(', '): 'no tags';

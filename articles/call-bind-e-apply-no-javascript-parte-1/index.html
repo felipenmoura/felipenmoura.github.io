@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-2
+                    colour-5
                     ">
-            <h2><a href="/articles/call-bind-e-apply-no-javascript-parte-1">Call, bind e apply no JavaScript<em> - parte 1</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/call-bind-e-apply-no-javascript-parte-1">Call, bind e apply no JavaScript<em> - parte 1</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/call-bind-e-apply-no-javascript-parte-1/bind-call-apply.jpg" alt="Call, bind e apply no JavaScript - parte 1" title="" />
+                    <img src="/articles/call-bind-e-apply-no-javascript-parte-1/bind-call-apply.jpg"
+                         alt="Call, bind e apply no JavaScript - parte 1"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2014-09-17T13:25:10.000Z"/>
                 Sept 17th, 2014 : JavaScript, ECMA, ES6, ES5
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
+            <article itemprop="articleBody">Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
 
 <pre class="line-numbers"><code class="language-javascript">
 // declarando uma função no escopo atual
@@ -1094,7 +1102,7 @@ Esta foi a primeira parte deste assunto.
 Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/call-bind-e-apply-no-javascript-parte-1"></div>
             </aside>
         </div>
     </div>

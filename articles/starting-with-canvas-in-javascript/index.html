@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-6
+                    colour-5
                     ">
-            <h2><a href="/articles/starting-with-canvas-in-javascript">Starting with Canvas in <em>javascript</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/starting-with-canvas-in-javascript">Starting with Canvas in <em>javascript</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/starting-with-canvas-in-javascript/canvas.jpg" alt="Starting with Canvas in javascript" title="" />
+                    <img src="/articles/starting-with-canvas-in-javascript/canvas.jpg"
+                         alt="Starting with Canvas in javascript"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2010-06-18T00:20:10.000Z"/>
                 Jun 17th, 2010 : javascript, canvas
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/starting-with-canvas-in-javascript"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+            <article itemprop="articleBody">First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
 
 <pre class="line-numbers"><code class="language-markup">
     &lt;body&gt;
@@ -1061,7 +1069,7 @@ When cropping, you specify the image (this), the position to start showing it (0
 Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/starting-with-canvas-in-javascript"></div>
             </aside>
         </div>
     </div>

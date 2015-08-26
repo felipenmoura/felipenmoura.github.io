@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-2
+                    colour-1
                     ">
-            <h2><a href="/articles/mortal-kombat-9-list-of-fatalities">Mortal Kombat 9 <em>- list of fatalities</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/mortal-kombat-9-list-of-fatalities">Mortal Kombat 9 <em>- list of fatalities</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/mortal-kombat-9-list-of-fatalities/mk.jpg" alt="Mortal Kombat 9 - list of fatalities" title="" />
+                    <img src="/articles/mortal-kombat-9-list-of-fatalities/mk.jpg"
+                         alt="Mortal Kombat 9 - list of fatalities"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2012-02-11T13:19:08.000Z"/>
                 Feb 11st, 2012 : MK, Mortal Kombat, games
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 This is just a list of the Fatalities you may use in the Mortal Kombat 9(2011).<br/>Once you do the fatality the first time, it will be enabled for you. So, just perform each fatality the fist time, to have it in the list of movements.
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>This is just a list of the Fatalities you may use in the Mortal Kombat 9(2011).
+            <article itemprop="articleBody">This is just a list of the Fatalities you may use in the Mortal Kombat 9(2011).
 Once you do the fatality the first time, it will be enabled for you. So, just perform each fatality the fist time, to have it in the list of movements.
 
 The Stage Fatalities can only be excecuted on these stages:
@@ -1223,7 +1231,7 @@ By the way, every time you finish the game(in arcade mode) and earn something, g
 To choose an alternative costume, when you earn a new cloth, use the START button when selecting the character, instead of any other button ;)</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/mortal-kombat-9-list-of-fatalities"></div>
             </aside>
         </div>
     </div>

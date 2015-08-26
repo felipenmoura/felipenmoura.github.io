@@ -1,5 +1,9 @@
 <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -37,19 +41,23 @@
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-4
+                    colour-1
                     ">
-            <h2><a href="/articles/hoisting-no-javascript">Hoisting no <em>JavaScript</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/hoisting-no-javascript">Hoisting no <em>JavaScript</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/hoisting-no-javascript/images/hoisting-schematics-bg.jpg" alt="Hoisting no JavaScript" title="" />
+                    <img src="/articles/hoisting-no-javascript/images/hoisting-schematics-bg.jpg"
+                         alt="Hoisting no JavaScript"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2014-09-15T22:06:58.000Z"/>
                 Sept 15th, 2014 : es6, javascript, es2015
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.
             </abs>
             
@@ -65,7 +73,7 @@
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/hoisting-no-javascript"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+            <article itemprop="articleBody">O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
 Todavia, o valor apenas será atribuído no momento correto.
 
 Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
@@ -134,7 +142,7 @@ Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
 </article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/hoisting-no-javascript"></div>
             </aside>
         </div>
     </div>

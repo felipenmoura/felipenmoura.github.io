@@ -1,5 +1,9 @@
 <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -38,15 +42,19 @@
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-4
                     ">
-            <h2><a href="/articles/o-brasil-e-suas-decisoes">O <em>Brasil</em> e suas decisões...</a></h2>
+            <h2 itemprop="headline"><a href="/articles/o-brasil-e-suas-decisoes">O <em>Brasil</em> e suas decisões...</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/o-brasil-e-suas-decisoes/circus.jpg" alt="O Brasil e suas decisões..." title="" />
+                    <img src="/articles/o-brasil-e-suas-decisoes/circus.jpg"
+                         alt="O Brasil e suas decisões..."
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2014-06-06T23:59:02.000Z"/>
                 Jun 6th, 2014 : politica, brasil, opinião
             </span>
             
@@ -62,7 +70,7 @@
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/o-brasil-e-suas-decisoes"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
+            <article itemprop="articleBody">Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
 
 O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
 
@@ -80,7 +88,7 @@ Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocio
 O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/o-brasil-e-suas-decisoes"></div>
             </aside>
         </div>
     </div>

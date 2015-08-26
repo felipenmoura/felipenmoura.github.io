@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-4
+                    colour-3
                     ">
-            <h2><a href="/articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
+            <h2 itemprop="headline"><a href="/articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg" alt="call, bind e apply no JavaScript - parte 2" title="" />
+                    <img src="/articles/call-bind-e-apply-no-javascript-parte-2/tied-binded.jpg"
+                         alt="call, bind e apply no JavaScript - parte 2"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2014-09-22T13:20:29.000Z"/>
                 Sept 22nd, 2014 : es6, javascript, ecma6, es2015
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/>
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>
+            <article itemprop="articleBody">
 <strong>.call()</strong>
 
 O método <em>.call</em>, literalmente, "chama" a sua função.
@@ -1164,7 +1172,7 @@ Não deixem de divulgar o post, e dar sua opinião.
 </article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/call-bind-e-apply-no-javascript-parte-2"></div>
             </aside>
         </div>
     </div>

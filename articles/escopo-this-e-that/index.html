@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="pt-BR">
+<section id="articles-container"
+         class="sect-content"
+         lang="pt-BR"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-1
+                    colour-3
                     ">
-            <h2><a href="/articles/escopo-this-e-that">Escopo, this e that</a></h2>
+            <h2 itemprop="headline"><a href="/articles/escopo-this-e-that">Escopo, this e that</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/escopo-this-e-that/scopes-javascript-closure.jpg" alt="Escopo, this e that" title="" />
+                    <img src="/articles/escopo-this-e-that/scopes-javascript-closure.jpg"
+                         alt="Escopo, this e that"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2014-09-03T21:53:31.000Z"/>
                 Sept 3rd, 2014 : javascript, scope, ecma
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/escopo-this-e-that"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article><strong>Escopo</strong>
+            <article itemprop="articleBody"><strong>Escopo</strong>
 
 O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
 Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
@@ -1135,7 +1143,7 @@ Espero que tenha sido útil! :)
 </article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/escopo-this-e-that"></div>
             </aside>
         </div>
     </div>

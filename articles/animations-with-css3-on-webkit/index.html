@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-4
+                    colour-1
                     ">
-            <h2><a href="/articles/animations-with-css3-on-webkit"><em>Animations with</em> CSS3</a></h2>
+            <h2 itemprop="headline"><a href="/articles/animations-with-css3-on-webkit"><em>Animations with</em> CSS3</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/animations-with-css3-on-webkit/animations.jpg" alt="Animations with CSS3" title="" />
+                    <img src="/articles/animations-with-css3-on-webkit/animations.jpg"
+                         alt="Animations with CSS3"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2010-12-28T03:05:14.000Z"/>
                 Dec 28th, 2010 : css3, animações
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 Hey folks. Tonight's talk will be about <strong>CSS3 animations</strong>...yes, animations.
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/animations-with-css3-on-webkit"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article>Well, one of the most interesting effects is the <em>transition</em> property.
+            <article itemprop="articleBody">Well, one of the most interesting effects is the <em>transition</em> property.
 With this, you can specify how the elements will behave when changing from or to a specific state.
 For example, let's say we have the following structure:
 <pre class="line-numbers"><code class="language-markup">
@@ -1101,7 +1109,7 @@ I hope this have helped/inspired you to use and create new things :)
 Cheers...</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/animations-with-css3-on-webkit"></div>
             </aside>
         </div>
     </div>

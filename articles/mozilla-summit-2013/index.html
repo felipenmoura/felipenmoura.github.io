@@ -914,7 +914,11 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 </div>
 
             <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="en-US">
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -953,19 +957,23 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-2
                     ">
-            <h2><a href="/articles/mozilla-summit-2013"><em>Mozilla</em> Summit 2013</a></h2>
+            <h2 itemprop="headline"><a href="/articles/mozilla-summit-2013"><em>Mozilla</em> Summit 2013</a></h2>
             <div class="wrapper">
                 
-                    <img src="/articles/mozilla-summit-2013/mozsummit.jpg" alt="Mozilla Summit 2013" title="" />
+                    <img src="/articles/mozilla-summit-2013/mozsummit.jpg"
+                         alt="Mozilla Summit 2013"
+                         title=""
+                         itemprop="image" />
                 
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2013-10-10T04:53:20.000Z"/>
                 Oct 10th, 2013 : events, mozilla
             </span>
             
-            <abs>
+            <abs itemprop="description">
                 One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!
             </abs>
             
@@ -981,7 +989,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
     <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/mozilla-summit-2013"></div>
     <!-- Place this tag after the last +1 button tag. -->
 </div>
-            <article><strong>About the conference</strong>
+            <article itemprop="articleBody"><strong>About the conference</strong>
 This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
 
 <strong>About the sessions</strong>
@@ -1012,7 +1020,7 @@ It was a pleasure to re-meet with people I haven't seen for a while, meet new pe
 Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a></article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="/articles/mozilla-summit-2013"></div>
             </aside>
         </div>
     </div>

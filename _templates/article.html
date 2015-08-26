@@ -1,5 +1,9 @@
 <div id="articleTmpElement"></div>
-<section id="articles-container" class="sect-content" lang="{{ articleLang }}">
+<section id="articles-container"
+         class="sect-content"
+         lang="{{ articleLang }}"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
     <nav id="articles-nav" class="articles-nav">
         <div id="loading-bar"></div>
         <ul>
@@ -49,17 +53,21 @@
                     {% if not resume and not headerImg %}
                     resumeless
                     {% endif %}">
-            <h2><a href="{{ url }}">{{ title }}</a></h2>
+            <h2 itemprop="headline"><a href="{{ url }}">{{ title }}</a></h2>
             <div class="wrapper">
                 {% if headerImg %}
-                    <img src="{{ headerImg }}" alt="{{ title | striptags }}" title="" />
+                    <img src="{{ headerImg }}"
+                         alt="{{ title | striptags }}"
+                         title=""
+                         itemprop="image" />
                 {% endif %}
             </div>
             <span id="article-meta-data">
+                <meta itemprop="datePublished" content="{{ ISOCreationDate }}"/>
                 {{ creationDate }} : {{ tags }}
             </span>
             {% if resume %}
-            <abs>
+            <abs itemprop="description">
                 {{ resume }}
             </abs>
             {% endif %}
@@ -67,10 +75,10 @@
 
         <div class="wrapper articles-content">
             {% include "./social-buttons.html" %}
-            <article>{{ content }}</article>
+            <article itemprop="articleBody">{{ content }}</article>
 
             <aside>
-                <div id="disqus_thread"></div>
+                <div id="disqus_thread" data-article-url="{{ url }}"></div>
             </aside>
         </div>
     </div>
