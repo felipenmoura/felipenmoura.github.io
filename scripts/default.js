@@ -229,6 +229,8 @@
         window.disqus_url = "http://felipenmoura.com" + url + "/";
         window.disqus_identifier = window.disqus_url;
 
+        console.warn(window.disqus_identifier);
+
         if(UTILS.disqusApplied){
 
             DISQUS.reset({
