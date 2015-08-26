@@ -2093,6 +2093,7 @@ body[data-page="articles"] .articles-nav {
   position: relative;
   margin: 2px;
   margin-bottom: -1px;
+  max-width: 100%;
 }
 #articles-container .articles-content .left {
   float: left;

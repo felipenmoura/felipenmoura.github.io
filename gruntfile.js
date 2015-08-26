@@ -143,7 +143,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-          files: ["_templates/**.html", "_bindings/**", "scss/**.scss", "scripts/**.js"],
+          files: ["_templates/**.html", "_bindings/**", "scss/**.scss", "scripts/**.js", "./articles/**/_content.html", "./articles/**/_meta.json"],
           tasks: ['build']
         }
     });

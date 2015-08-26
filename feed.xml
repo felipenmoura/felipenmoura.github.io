@@ -11,7 +11,7 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri Aug 14 2015 19:24:30 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Tue Aug 25 2015 22:52:00 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
@@ -856,6 +856,469 @@ O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
   </item>
   
   <item>
+    <title>call, bind e apply no JavaScript - parte 2</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
+
+<strong>.call()</strong>
+
+O método <em>.call</em>, literalmente, "chama" a sua função.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    return 1;
+}
+
+var func2= function(){
+    return 2;
+}
+
+func1.call(); // 1
+func2.call(); // 2
+
+</code></pre>
+
+A diferença, está nos argumentos(parâmetros) passados a esta função.
+Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// criando uma variável global apenas para demonstração
+window.blah= 1;
+
+// uma função que utiliza o this
+function func1 () {
+    console.log(this.blah);
+}
+
+// um objeto a ser usado como exemplo
+var obj= {
+    blah: 2
+};
+
+func1(); // 1 (vindo do objeto window), escopo atual
+func1.call(obj); // 2 (vindo do objecto obj)
+
+</code></pre>
+
+Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+<pre class="line-numbers"><code class="language-javascript">
+
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+func1.call(obj, "a", 3); // "x", "a", 3
+
+</code></pre>
+
+Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
+Daí, podemos resolver isto usando:
+
+<pre class="line-numbers"><code class="language-javascript">
+function (){
+    var args= Array.prototype.slice.call(arguments);
+    args.forEach(...);
+}
+</code></pre>
+
+Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
+Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+
+<strong>.apply()</strong>
+
+O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// apply está enviando uma Array, com a lista de parâmetros
+func1.apply(obj, ["a", 3]); // "x", "a", 3
+</code></pre>
+
+A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+}
+</code></pre>
+
+<strong>.bind()</strong>
+
+O bind, funciona um pouco diferente.
+Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// a variável theFunction se tornará a função func1
+// amarrada ao obj.
+var theFunction= func1.bind(obj);
+
+// ao chamar theFunction, o "this" dela já é o obj
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
+Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
+Eis uma alternativa que o pessoal faz:
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// theFunction recebe, literalmente, uma função, a qual usará
+// o .apply, quando chamada
+var theFunction= function(){
+    func1.apply(obj, Array.prototype.slice.call(arguments));
+};
+
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+
+<strong>Finalizando</strong>
+
+Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
+
+<pre class="line-numbers"><code class="language-javascript">
+function func3() {
+    console.log(this);
+}
+
+func3(); // window
+func3.call({ some: "prop" }); // object { some: "prop" }
+func3.call("just a string"); // string "just a string"
+func3.call(123); // number 123
+func3.call(document.body); // object HTMLBodyElement
+
+</code></pre>
+
+O que pode acabar sendo usado em situações como esta:
+
+<pre class="line-numbers"><code class="language-javascript">
+function calc(val1, val2){
+    console.log(this.max(val1, val2));
+    console.log(this.cos(val2));
+    console.log(this.min(val1, val2));
+    console.log(this.pow(val1, val2));
+}
+
+calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
+
+</code></pre>
+
+Espero que tenha sido um post útil e bem explicativo! :)
+
+Não deixem de divulgar o post, e dar sua opinião.
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Creating notes, alerts and block quotes for citations using CSS</title>
+    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    
+    <category>
+    <![CDATA[ css ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pseudo-element ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
+
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+    &lt;div class="citation-content">The quote message.&lt;/div>
+    &lt;cite class="citation-author">
+        &lt;a href="link" target="_blank">author&lt;/a>
+    &lt;/cite>
+&lt;/blockquote>
+</code></pre>
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
+}
+
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
+}
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
+}
+</code></pre>
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+</code></pre>
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
+}
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
+}
+</code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
+}
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
+
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Cool thing, right?
+Now go ahead and customize yours!
+]]></description>
+  </item>
+  
+  <item>
+    <title>Call, bind e apply no JavaScript - parte 1</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
+    
+    <category>
+    <![CDATA[ JavaScript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ECMA ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES5 ]]>
+    </category>
+    
+    <description><![CDATA[
+Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
+Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+// declarando uma função no escopo atual
+function funcName () {};
+
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
+</code></pre>
+
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
+
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
+};
+
+myFunc(); // 123
+funcName(); // ERROR
+</code></pre>
+
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+
+console.log(func1); // function
+console.log(func2); // undefined
+
+// ou seja:
+func1(); // 1
+func2(); // ERROR
+
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
+
+</code></pre>
+
+Agora, pense no seguinte exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+var d= new Date().getTime();
+</code></pre>
+
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
+
+Da mesma forma, podemos evocar automáticamente uma função: 
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ return 123; }();
+console.log(x); // 123
+</code></pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
+
+Uma curiosidade aqui, é que:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
+</code></pre>
+
+E também:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
+</code></pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
+
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
+<pre class="line-numbers"><code class="language-javascript">
+(function (){
+    ...
+    console.log( "algo" );
+}());
+</code></pre>
+
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
+
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
+<pre class="line-numbers"><code class="language-javascript">
+-function (){
+    ...
+    console.log( "algo" );
+}();
+
+// ou
+
+!function (){
+    ...
+    console.log( "algo" );
+}();
+</code></pre>
+
+Esta foi a primeira parte deste assunto.
+
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
+]]></description>
+  </item>
+  
+  <item>
     <title>Criando formas geométricas usando DIVs e CSS3</title>
     <link>http://felipenmoura.com/articles/creating-geometric-forms-using-divs-and-css3/</link>
     
@@ -1247,55 +1710,6 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   </item>
   
   <item>
-    <title>PHP ZCE - A prova de certificação PHP</title>
-    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
-    
-    <category>
-    <![CDATA[ php ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ zce ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ certificacao ]]>
-    </category>
-    
-    <description><![CDATA[
-Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
-<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
-<br/>
-<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
-<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
-<br/>
-<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
-<br/>Quando notei, a prova já era no dia seguinte!
-<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
-<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
-<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
-O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
-<br/>Mas enfim...
-<br/>
-<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
-<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
-<br/>
-<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
-<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
-<br/>
-<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
-<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
-<br/>
-<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
-<br/>
-<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
-<br/>
-<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
-
-]]></description>
-  </item>
-  
-  <item>
     <title>Mozilla Summit 2013</title>
     <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
@@ -1338,159 +1752,6 @@ The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long
 
 It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
 Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
-]]></description>
-  </item>
-  
-  <item>
-    <title>Creating notes, alerts and block quotes for citations using CSS</title>
-    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
-    
-    <category>
-    <![CDATA[ css ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ pseudo-element ]]>
-    </category>
-    
-    <description><![CDATA[
-<br/>
-Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
-You can create a cool style for them using CSS, like this:
-
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-How to to this?
-First of all, let's build the HTML structure:
-<pre class="line-numbers"><code class="language-markup">
-&lt;blockquote class="citation-container">
-    &lt;div class="citation-content">The quote message.&lt;/div>
-    &lt;cite class="citation-author">
-        &lt;a href="link" target="_blank">author&lt;/a>
-    &lt;/cite>
-&lt;/blockquote>
-</code></pre>
-Now, let's take care of the CSS:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container{
-    border-left: 0.5em solid #DDD;
-    margin: 1.5em 0 1.5em 1.5em;
-    padding: .75em .5em .75em 1em;
-    background: #fff;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    margin-right: 40px;
-    font-family: Arial, Tahome, sans-serif;
-}
-
-blockquote.citation-container cite{
-    display: block;
-    font-size: 0.8em;
-}
-blockquote.citation-container cite a{
-    text-decoration: none !important;
-    color: #0090D2;
-}
-</code></pre>
-And now, we can add the decoration element:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container:before{
-    display: block;
-    height: 0;
-    content: "“";
-    margin-left: -.95em;
-    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-    color: #999;
-}
-</code></pre>
-But...we can go further!
-Why not customize it a little bit more? What about colors and icons?
-Just by adding a class "red" to the blockquote element, we can use this:
-<pre class="line-numbers"><code class="language-css">
-.citation-container.red{
-    border-color: rgb(245, 113, 113);
-    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
-    background-color: rgb(255, 210, 210);
-}
-.citation-container.red:before{
-    content: "!";
-    color: rgb(245, 113, 113);
-    line-height: 50px;
-    margin-left: -56px;
-}
-</code></pre>
-And the result would be
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-<pre class="line-numbers"><code class="language-css">
-.citation-container.yellow{
-    border-color: rgb(243, 243, 62);
-    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
-    background-color: rgb(255, 255, 207);
-}
-.citation-container.yellow:before{
-    content: "»";
-    color: rgb(243, 243, 62);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 30px;
-    font-size: 4em;
-    margin-left: -50px;
-}
-</code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-<pre class="line-numbers"><code class="language-css">
-.citation-container.green{
-    border-color: rgb(155, 255, 171);
-    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
-    background-color: rgb(236, 253, 238);
-}
-.citation-container.green:before{
-    content: "✓";
-    color: rgb(155, 255, 171);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 40px;
-    font-size: 2.2em;
-    margin-left: -58px;
-
-}
-</code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-Cool thing, right?
-Now go ahead and customize yours!
-]]></description>
-  </item>
-  
-  <item>
-    <title>Participação na WebBR 2013</title>
-    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
-    
-    <category>
-    <![CDATA[ events ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ web ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ w3c ]]>
-    </category>
-    
-    <description><![CDATA[
-WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
-<strong>WebBR 2013</strong>
-Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
-
-Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
-Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
-
-E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
-Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
-O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
-
-e é dada a largada!
 ]]></description>
   </item>
   
@@ -1668,6 +1929,87 @@ Espero que tenha sido útil! :)
   </item>
   
   <item>
+    <title>Participação na WebBR 2013</title>
+    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ w3c ]]>
+    </category>
+    
+    <description><![CDATA[
+WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
+<strong>WebBR 2013</strong>
+Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
+
+Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
+Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
+
+E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
+Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
+O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
+
+e é dada a largada!
+]]></description>
+  </item>
+  
+  <item>
+    <title>PHP ZCE - A prova de certificação PHP</title>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
+    
+    <category>
+    <![CDATA[ php ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ zce ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ certificacao ]]>
+    </category>
+    
+    <description><![CDATA[
+Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
+<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
+<br/>
+<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
+<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
+<br/>
+<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
+<br/>Quando notei, a prova já era no dia seguinte!
+<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
+<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
+<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
+O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
+<br/>Mas enfim...
+<br/>
+<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
+<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
+<br/>
+<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
+<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
+<br/>
+<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
+<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
+<br/>
+<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
+<br/>
+<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
+<br/>
+<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
+
+]]></description>
+  </item>
+  
+  <item>
     <title>Duas maneiras para centralizar verticalmente com CSS</title>
     <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
@@ -1749,348 +2091,6 @@ Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizan
   </item>
   
   <item>
-    <title>Call, bind e apply no JavaScript - parte 1</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
-    
-    <category>
-    <![CDATA[ JavaScript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ECMA ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES5 ]]>
-    </category>
-    
-    <description><![CDATA[
-Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
-Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-// declarando uma função no escopo atual
-function funcName () {};
-
-// uma instrução, setando uma função à uma variável
-// no escopo atual
-var funcName = function () {};
-</code></pre>
-
-Mas que diferença isto faz?
-Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
-Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
-
-Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-// atribuímos uma função com nome, a uma variável
-var myFunc= function funcName(){
-    return 123;
-};
-
-myFunc(); // 123
-funcName(); // ERROR
-</code></pre>
-
-Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
-
-<strong>Funções Imediatamente Evocadas</strong>
-
-Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
-Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
-
-Por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-
-console.log(func1); // function
-console.log(func2); // undefined
-
-// ou seja:
-func1(); // 1
-func2(); // ERROR
-
-// estamos declarando uma função, que será içada
-function func1(){ return 1; }
-
-// a variável func2 foi içada(com valor de "undefined"),
-// mas a função somente foi criada agora, e atribuída a ela
-var func2= function(){ return 2; };
-
-</code></pre>
-
-Agora, pense no seguinte exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-var d= new Date().getTime();
-</code></pre>
-
-Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
-
-Da mesma forma, podemos evocar automáticamente uma função: 
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ return 123; }();
-console.log(x); // 123
-</code></pre>
-Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
-
-Uma curiosidade aqui, é que:
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ /* faz algo, mas não retorna nada*/ }();
-console.log(x); // undefined
-</code></pre>
-
-E também:
-<pre class="line-numbers"><code class="language-javascript">
-var x= function doSomething(arg){ return arg; }(123);
-console.log(x); // 123
-doSomething(); // ERROR
-</code></pre>
-Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
-O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
-Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
-
-Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
-<pre class="line-numbers"><code class="language-javascript">
-(function (){
-    ...
-    console.log( "algo" );
-}());
-</code></pre>
-
-Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
-Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
-
-Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
-<pre class="line-numbers"><code class="language-javascript">
--function (){
-    ...
-    console.log( "algo" );
-}();
-
-// ou
-
-!function (){
-    ...
-    console.log( "algo" );
-}();
-</code></pre>
-
-Esta foi a primeira parte deste assunto.
-
-Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
-]]></description>
-  </item>
-  
-  <item>
-    <title>call, bind e apply no JavaScript - parte 2</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ecma6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ es2015 ]]>
-    </category>
-    
-    <description><![CDATA[
-Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
-
-<strong>.call()</strong>
-
-O método <em>.call</em>, literalmente, "chama" a sua função.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
-
-var func2= function(){
-    return 2;
-}
-
-func1.call(); // 1
-func2.call(); // 2
-
-</code></pre>
-
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
-
-<pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
-
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
-}
-
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
-};
-
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
-
-</code></pre>
-
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
-<pre class="line-numbers"><code class="language-javascript">
-
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-func1.call(obj, "a", 3); // "x", "a", 3
-
-</code></pre>
-
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
-
-<pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
-}
-</code></pre>
-
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
-
-<strong>.apply()</strong>
-
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
-</code></pre>
-
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
-}
-</code></pre>
-
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
-
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
-<pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
-}
-
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
-
-</code></pre>
-
-O que pode acabar sendo usado em situações como esta:
-
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
-}
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
-</code></pre>
-
-Espero que tenha sido um post útil e bem explicativo! :)
-
-Não deixem de divulgar o post, e dar sua opinião.
-
-]]></description>
-  </item>
-  
-  <item>
     <title>E é dada a largada!!</title>
     <link>http://felipenmoura.com/articles/e-dada-largada/</link>
     
@@ -2125,6 +2125,162 @@ A Nasc é a empresa que abrimos há alguns anos para cuidar burocratica e fiscal
 Bom, na verdade, um de nossos focos(spoiler alert)!
 Vamos manter o trabalho e contato com as comunidades, buscando sempre o melhor!
 Mais novidades a caminho!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>BrazilJS 2015</title>
+    <link>http://felipenmoura.com/articles/braziljs-2015/</link>
+    
+    <category>
+    <![CDATA[ braziljs ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <description><![CDATA[
+A BrazilJS 2015 foi um novo desafio para nós! Afinal, foram muitas mudanças, inovações, experimentos e, um aumento de público!<br/>Além de mais palestras, também teve uma mídia que repercutiu muito mais que o ano passado, tivemos um público ainda mais ativo!<br/>
+Eis que aconteceu a BrazilJS 2015!
+Depois de cerca de 14 meses de organização, centenas de horas de reauniões, horas de ligações, milhares de e-mails, centenas de notas fiscais, contratos, correspondências, etc...
+Finalmente chegou a hora!
+
+<h2>BrazilJS 2015</h2>
+Foi nos dias 21 e 22 de agosto, no Barra Shopping Sul, em Porto Alegre, que a BrazilJS bateu seu próprio record, com um <strong>público de 1300 pessoas</strong>!
+Junto com estes participantes, ajudaram a fazer o evento acontecer:
+
+- <strong>22 palestrantes</strong> top
+- <strong>9 patrocinadores</strong> incríveis
+- <strong>5 apoiadores</strong> muito dedicados
+- <strong>11 assistentes</strong> esforçadíssimas
+- <strong>+20</strong> envolvidos no coffee
+- <strong>14</strong> envolvidos no audio-vídeo e internet
+
+Fora, é claro, tradutores, assessoria de imprensa, carregadores, limpesa, bombeiros, segunrança...
+
+Bom, dá pra dizer que deu bastante trabalho, mas como sempre, foi um prazer enorme trabalhar na BrazilJS e ver isto tudo acontecendo!
+Ver a comunidade se manifestando, se dedicando, participando...enfim, <b>presente</b>!
+
+Durante a organização, <a href="http://jaydson.org/" target="blank">Jaydson</a> e <a href="http://felipenmoura.com/" target="blank">eu</a> tivemos uma grande ajuda do nosso amigo <a href="http://dnl.pw/" target="blank">Daniel Filho</a>, que também fez um trabalho fantástico como apresentador do evento!
+Gostou de nosso site? Banners, lonas, etc...? Então mande um parabéns para <a href="https://twitter.com/italowaxman" target="blank">Italo Waxman</a>, o cara por trás de todo esse design!
+
+E não é possível falar da <a href="http://braziljs.com.br/" target="blank"> BrazilJS 2015</a> sem falar da Ju!
+A <a href="http://about.me/jumacedo" target="blank">Juliana Macedo</a> trabalhou com a gente os últimos meses e nos impressionou! Trabalho fantástico, profissionalismo extremo e, como sempre fazemos, demos liberdade total a ela para interagir e contribuir com ideias e sugestões. Ela fez diversas contribuições fantásticas e certamente contaremos com o trabalho dela para próximos eventos!
+
+<div class="picture" class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/trio-braziljs-2015.jpg" alt="Felipe N Moura, Juliana Gonçalves e Jaydson Gomes" /></div>
+
+<h2>Os desafios</h2>
+Fizemos muitas experiências este ano!
+Todas expunham um pouco de risco, mas também uma grande chance de inovar e crescer. Entre esas mudanças, algumas das maiores foram:
+
+- local (pela primeira vez no Barra Shopping Sul)
+- formato (primeira vez em um abiente único)
+- datas (primeira vez em uma sexta e sábado)
+- banda (primeira vez, uma banda no encerramento)
+- área BrazilJS (pela primeira vez tivemos uma área própria do evento)
+- abertura (finalmente, uma apresentação na abertura)
+
+Estes experimentos foram importantes para já identificarmos problemas e dificuldades, e testarmos inclusive, soluções para o próximo ano!
+Agradecemos a paciência e a compreensão de todos por qualquer dificuldade enfrentada e esperamos usar todo o feedback para promover a melhor experiência possível na próxima edição.
+
+<h2>A temática</h2>
+O JavaScript fez 20 anos em 2015, e por isso, decidimos adotar uma temática nostálgica. Muitos desenvolvedores JS cresceram (ou até nasceram) nos anos 90!
+Esta década foi muito rica! Muitos filmes, muitas músicas, bandas, desenhos, games! Foi um prato cheio!
+
+<h2>O local</h2>
+Um dos experimentos: troca de local!
+Pudemos assim ter mais participantes, e manter tudo acontecendo no mesmo lugar! Coffee break, estandes, área do evento(outra novidade), palestras...tudo.
+Como em toda conferência, houveram contra tempos! Nossa missão era minimiza-los ao máximo, de forma rápida, e afetando o mínimo possível a experiência dos participantes!
+O barulho foi um dos problemas, que no segundo dia foi resolvido! Algumas parentes para separar um pouco a platéia da área dos estandes foi o suficiente!
+Tivemos alguma dificuldade com a internet também. As empresas ainda menosprezam um pouco o poder de uso de banda de 1300 nerds equipados com celulares, tablets e notebooks conectados o tempo todo! :p
+
+<div class="picture" style="text-align: center; float: right;"><img src="/articles/braziljs-2015/venue.jpg" alt="Local da BrazilJS 2015 - Barra Shopping Sul" style="margin: auto" /></div>
+A área BrazilJS foi outra inovação! Resolvemos criar um ambiente para o pessoal se sentir em casa, descontraír, fazer um network diferente! E isto fluiu muito bem!
+Nesta área havia uma máquina do tempo(sim, pergunte para quem foi, que vão te descrever!), fliperamas, sofás e video games (um nintendo e um mega driver).
+
+<h2>Os números</h2>
+Foram quase <strong>9 mil acessos</strong> ao site durante os dois dias de evento, <strong>20 mil</strong> acessos ao longo do mês!
+Estes acessos vieram, impressionantemente, de <strong>81 países diferentes</strong>!
+
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/countries.png" alt="Acessos ao site(países)" /></div>
+Bastante? Bem, também houve a transmissão ao vivo no <a href="http://terra.com.br/" target="blank">Terra</a>!
+Na metade do segundo dia, soubemos que já havíamos tido <strong>395 MIL unique visitors</strong> no live streaming!!!
+
+Além disso, fomos <strong>trending toppics Brasil</strong> nos dois dias de evento.
+
+<h2>As campanhas</h2>
+Nossa <a href="http://vivacomunicacaors.com.br" target="blank">assessoria de imprensa </a> conseguiu uma bela divulgação em grandes jornais impressos, portais da internet e uma entrevista ao vivo em um programa de televisão e também na rádio.
+
+<div style="text-align: center;"><iframe width="420" height="315" src="https://www.youtube.com/embed/fVlkmc_nCEI" frameborder="0" allowfullscreen></iframe></div>
+
+Tivemos também bastante repercução nas mídias sociais e com publicações em mailing lists de apoiadores e parceiros.
+
+<h2>O respeito</h2>
+Focamos forte, este ano, no respeito, diversidade e acessibilidade!
+Fizemos diversas campanhas em grupos de desenvolvedores que representavam certas minorias, além de incentivar ou oferecer cortesias para professores de comunidades carentes ou membros de programas sociais.
+
+A <a href="http://bocoup.com/pt-br" target="blank">Bocoup</a> fez também uma campanha fantástica conosco! Uma campanha de <strong>diversidade</strong>!
+Houve muito respeito entre palestrantes e participantes, o que nos deixou bastante felizes! Infelizmente, tivemos algumas situações muito pontuais que tomamos conhecimento.
+Apesar disso, sabemos que tratou-se de algumas situações muito específicas e que faremos com que não se repitam!
+Na platéia, bastante diversidade de gênero, orientação sexual, religião, raça...tudo isto, de forma respeitosa e pacífica.
+
+<h2>A abertura</h2>
+Apagam-se as luzes...e inicia o vídeo de abertura!
+TODO: video de abertura
+
+Depois disto...contratamos alguns artistas para encenar uma luta entre o bem e o mau na abertura do evento, tudo, é claro, no estilo mais <strong>anos 90</strong> possível!
+Sim, Power Rangers!
+
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/ao-vivo.png" alt="Transmitido ao vivo" style="margin: auto; width: 100%" /></div>
+E sim, Jaydson e eu nos vestimos de alienígena e power ranger, respectivamente, para fazermos a apresentação de abertura! Só uma pitada de vergonha alheia logo de cara! hehe
+
+<h2>As palestras</h2>
+Pelo que acompanhamos, as palestras foram de alta qualidade, e o pessoal proveu um feedback fantástico!
+Nossa equipe de assessoria de imprensa cobriu o evento respondendo tweets e comentários nas mais diversas redes sociais, além de ajudar na divulgação e manter o pessoal informado.
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/palestra-julian-braziljs-2015.jpg" alt="Palestra de Julián Duque na BrazilJS 2015" style="margin: auto" /></div>
+
+<h2>O pedido</h2>
+Nesta hora, eu, pessoalmente, fiquei apavorado!
+Isto por que eu tinha um "plano secreto"! Estava planejando(e muito poucas pessoas sabiam disto) pedir a <a href="https://www.facebook.com/francielen.cunha.9" target="blank">Franciélen</a> em casamento!!!
+Planejei isto por meses e na hora de executar, eu estava apavorado! Imagina só, essa mulher resolve dizer "não" na frente de todo mundo! Normalmente eu não fico nervoso no palco, mas desta vez...minha nossa!
+
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/pedido-casament-braziljs-felipe-fran.jpg" alt="Pedido de casamento feito no final da BrazilJS 2015 - Felipe e Franciélen" style="margin: auto" /></div>
+
+Nota, o pedido também foi transmitido ao vivo! E filmado e fotografado em HD! Quantos tem a oportunidade de ter seu pedido assim, né? Eu não pude deixar de aproveitar o momento!
+E ela disse sim! Na verdade...ela disse "É CLARO"! hehe :)
+
+Um dia eu farei um artigo só sobre as dificuldades que tive sobre pra manter isto um segredo! hehe
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/aliancas.jpg" alt="Alianças - Felipe e Franciélen" style="margin: auto; width: 100%;" /></div>
+
+
+<h2>A festa</h2>
+Logo após os agradecimentos e os pedidos, o <strong>maior bolo de JavaScript do mundo</strong>!
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/bolo-always-bet-on-javascript.jpg" alt="Bolo de JavaScript na BrazilJS 2015" style="margin: auto" /></div>
+
+Depois do evento, nada como uma festa com muito rock e cerveja com a <a href="https://www.facebook.com/crimescenepoa" target="blank">banda Crime Scene</a>.
+Teve direito até a mosh pit e roda punk! Isso tudo num evento de JavaScript, quem diria! \,,/
+
+<div class="picture" style="text-align: center;"><img src="/articles/braziljs-2015/banda-crime-scene-braziljs-2015.jpg" alt="Banda Crime Scene, que fechou a BrazilJS 2015 na festa com cerveja liberada" style="margin: auto" /></div>
+
+<h2>O Pós-evento</h2>
+Agora ainda temos contas a pagar, contratos para enviar, notas fiscais para gerar, etc...mas também, preparar os álbums de fotografia e publicar os vídeos!
+Tudo foi filmado e será disponibilizado em breve!
+
+Vimos muitas caras novas no evento, e a todos estes que vieram pela primeira vez à BrazilJS, espero que tenha sido uma experiência inesquecível para vocês, tanto quanto foi para nós!
+E para aqueles que já conheciam, espero que tenham saído do evento com o sentimento de superação!
+A todos, quero que o evento tenha sido compensador, inesquecível e útil!
+
+E...
+<a href="http://braziljs.com.br/2016" target="blank"><div style="text-align: center;"><img src="/articles/braziljs-2015/braziljs-2016-teaser.png" alt="Teaser da BrazilJS 2016 - ingressos a venda" style="margin: auto" /></div></a>
+Nos vemos na <a href="http://braziljs.com.br/2016" target="blank">BrazilJS 2016</a>!
+Os ingressos já estão a venda, e se tu acredita no evento, SABE que os palestrantes e patrocinadores serão os melhores que pudermos trazer! :)
+
 
 ]]></description>
   </item>
