@@ -452,6 +452,8 @@ module.exports = function(grunt) {
             });
         }
 
+        //console.log(videosList);
+
         if(!videosList){
             var http = require('http');
             var cachePath = 'resources/yt-feed-cache.json';

@@ -1,5 +1,5 @@
 <section id="utils-container" class="sect-content">
-            
+
             <div class="utils-content talks">
                 {% for talk in talks %}
                 <section class="utils-item">
@@ -20,21 +20,26 @@
                 </section>
                 {% endfor %}
             </div>
-    
-            <div class="utils-content videos">
+
+            <div class="utils-content videos" itemscope itemtype="http://schema.org/VideoObject">
                 {% for video in videosList %}
                 <section class="utils-item">
                     <div class="utils-thumb youtube"
                          data-yt-ref="{{ video.media$group.yt$videoid.$t }}">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v={{ video.media$group.yt$videoid.$t }}" />
+                        <meta itemprop="uploadDate" content="{{ video.published.$t }}"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/{{ video.media$group.yt$videoid.$t }}" />
+
                         <img src="{{ video.media$group.media$thumbnail[1].url }}"
                              title="Watch: {{ video.title.$t }}"
                              alt="{{ video.title.$t }}"
                              width="320"
-                             height="180" />
+                             height="180"
+                             itemprop="thumbnailUrl" />
                     </div>
                     <div class="utils-description">
-                        <h3 data-title="{{ video.title.$t }}">{{ video.title.$t }}</h3>
-                        <span class="desc">
+                        <h3 data-title="{{ video.title.$t }}" itemprop="name" >{{ video.title.$t }}</h3>
+                        <span class="desc" itemprop="description">
                             {{ video.media$group.media$description.$t }}
                         </span>
                     </div>
@@ -42,7 +47,7 @@
                 </section>
                 {% endfor %}
             </div>
-    
+
             <div class="utils-content labs">
                 {% for lab in labs %}
                 <section class="utils-item">
@@ -82,8 +87,8 @@
                 </section>
                 {% endfor %}
             </div>
-    
-    
+
+
             <div class="utils-content photos">
                 {% for photo in photos %}
                 <section class="utils-item">
@@ -109,9 +114,9 @@
                 </section>
                 {% endfor %}
             </div>
-            
+
             <div class="clear"></div>
-    
+
             <div class="decorator">
                 <a class="icon local talks" href="/utils/talks">Talks<span class="tooltip">Slides from Talks</span></a>
                 <a class="icon local videos" href="/utils/videos">Videos<span class="tooltip">My youtube channels</span></a>
@@ -119,7 +124,7 @@
                 <a class="icon local articles local" href="/articles">Articles<span class="tooltip">Articles</span></a>
                 <a class="icon local photos" href="/utils/photos">Photos<span class="tooltip">Pictures and Albums</span></a>
             </div>
-            
+
         </section>
 
 <div id="playerLayer">
