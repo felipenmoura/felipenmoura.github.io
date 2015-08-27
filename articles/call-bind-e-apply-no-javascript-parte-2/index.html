@@ -86,11 +86,12 @@
                 <li class="menu-articles-btn"><a href="/articles" class='local' role="menu-item">articles</a></li>
             </ul>
         </nav>
-            <section id="about-container" class="sect-content">
+            <section id="about-container" class="sect-content" itemscope itemtype="http://schema.org/NewsArticle">
+      <meta itemprop="datePublished" content="2015-01-22T00:29:52.000Z"/>
             <div class="decorator">
                 <div class="wrapper">
                     <div class="col-2">
-                        <span class="lang-en">
+                        <span class="lang-en" itemprop="description">
                             Working with web development for about a decade, also giving talks and trainings.<br/>
                             Works nowadays at Terra as a Senior Development Analyst.
                             He is a founder/organiser of <a href="http://braziljs.com.br/" target="_blank">BrazilJS</a>, FrontInPoa and RSJS conferences.
@@ -108,7 +109,8 @@
                             <div class="picture-content">
                                 <img src="/images/felipe-moura-felipenmoura-square.jpg"
                                      alt='Foto de Felipe Nascimento de Moura - felipenmoura'
-                                     title='' />
+                                     title=''
+                                     itemprop="image" />
                                 <span>Me, on stage at BrazilJS 2013</span>
                             </div>
                         </div>
@@ -129,8 +131,8 @@
 
             <div class="about-full-content">
                 <div class="wrapper">
-                    <div class="col-2">
-                        <h2>JavaScript and Front End developer and enthusiast.</h2>
+                    <div class="col-2" itemprop="articleBody">
+                        <h2 itemprop="headline">JavaScript and Front End developer and enthusiast.</h2>
 
                         Open Source projects taught me a lot, and inspired me to start projects from my own.<br/>
                         <br/>
@@ -160,6 +162,7 @@
             </div>
             <div class="clear"></div>
         </section>
+
             <section id="utils-container" class="sect-content">
 
             <div class="utils-content talks">
@@ -997,7 +1000,7 @@ Check this out on github: <a href="https://github.com/felipenmoura/html5-imager"
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-5
                     ">
             <h2 itemprop="headline"><a href="/articles/call-bind-e-apply-no-javascript-parte-2">call, bind e apply no JavaScript<em> - parte 2</em></a></h2>
             <div class="wrapper">
