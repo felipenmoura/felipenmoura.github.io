@@ -21,9 +21,9 @@
                 {% endfor %}
             </div>
 
-            <div class="utils-content videos" itemscope itemtype="http://schema.org/VideoObject">
+            <div class="utils-content videos">
                 {% for video in videosList %}
-                <section class="utils-item">
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
                     <div class="utils-thumb youtube"
                          data-yt-ref="{{ video.media$group.yt$videoid.$t }}">
                         <link itemprop="contentUrl" href="https://www.youtube.com/watch?v={{ video.media$group.yt$videoid.$t }}" />
