@@ -549,6 +549,14 @@ html[lang="pt-BR"] {
             max-width: 100%;
         }
 
+        h2,
+        h3 {
+            &:before {
+                content: "# ";
+                font-style: italic;
+            }
+        }
+
         .left {
             float: left;
         }

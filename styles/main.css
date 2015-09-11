@@ -2103,6 +2103,11 @@ html[lang="pt-BR"] .multi-lang[lang="en-US"] {
   margin-bottom: -1px;
   max-width: 100%;
 }
+#articles-container .articles-content h2:before,
+#articles-container .articles-content h3:before {
+  content: "# ";
+  font-style: italic;
+}
 #articles-container .articles-content .left {
   float: left;
 }

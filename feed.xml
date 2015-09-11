@@ -11,7 +11,7 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu Aug 27 2015 00:45:37 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Fri Sep 11 2015 14:46:03 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
@@ -1929,87 +1929,6 @@ Espero que tenha sido útil! :)
   </item>
   
   <item>
-    <title>Participação na WebBR 2013</title>
-    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
-    
-    <category>
-    <![CDATA[ events ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ web ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ w3c ]]>
-    </category>
-    
-    <description><![CDATA[
-WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
-<strong>WebBR 2013</strong>
-Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
-
-Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
-Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
-
-E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
-Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
-O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
-
-e é dada a largada!
-]]></description>
-  </item>
-  
-  <item>
-    <title>PHP ZCE - A prova de certificação PHP</title>
-    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
-    
-    <category>
-    <![CDATA[ php ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ zce ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ certificacao ]]>
-    </category>
-    
-    <description><![CDATA[
-Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
-<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
-<br/>
-<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
-<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
-<br/>
-<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
-<br/>Quando notei, a prova já era no dia seguinte!
-<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
-<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
-<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
-O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
-<br/>Mas enfim...
-<br/>
-<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
-<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
-<br/>
-<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
-<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
-<br/>
-<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
-<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
-<br/>
-<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
-<br/>
-<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
-<br/>
-<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
-
-]]></description>
-  </item>
-  
-  <item>
     <title>Duas maneiras para centralizar verticalmente com CSS</title>
     <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
@@ -2087,6 +2006,87 @@ Este é um método pouco conhecido, mas que pode atender bem a demanda caso voc�
 </code></pre>
 
 Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Participação na WebBR 2013</title>
+    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ w3c ]]>
+    </category>
+    
+    <description><![CDATA[
+WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
+<strong>WebBR 2013</strong>
+Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
+
+Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
+Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
+
+E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
+Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
+O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
+
+e é dada a largada!
+]]></description>
+  </item>
+  
+  <item>
+    <title>PHP ZCE - A prova de certificação PHP</title>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
+    
+    <category>
+    <![CDATA[ php ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ zce ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ certificacao ]]>
+    </category>
+    
+    <description><![CDATA[
+Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
+<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
+<br/>
+<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
+<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
+<br/>
+<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
+<br/>Quando notei, a prova já era no dia seguinte!
+<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
+<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
+<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
+O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
+<br/>Mas enfim...
+<br/>
+<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
+<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
+<br/>
+<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
+<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
+<br/>
+<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
+<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
+<br/>
+<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
+<br/>
+<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
+<br/>
+<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
+
 ]]></description>
   </item>
   
@@ -2421,6 +2421,114 @@ And...
 We will see each other at <a href="http://braziljs.com.br/2016" target="blank">BrazilJS 2016</a>!
 Tickets are already for sale, and if you believe in the conference, you DO KNOW our sponsors and speakers will be the best we can bring! :)
 </div>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Otimizando seu site</title>
+    <link>http://felipenmoura.com/articles/otimizando-seu-site/</link>
+    
+    <category>
+    <![CDATA[ otimização ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ acessibilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ performance ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ usabilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ mobile ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ferramentas ]]>
+    </category>
+    
+    <description><![CDATA[
+Neste artigo, discuto sobre ferramentas que uso para saber da <strong>acessibilidade</strong> e <strong>performance</strong> de meu site, além de garantir que é <strong>mobile friendly</strong> e bem <strong>indexado</strong> pelo google, SEO, e redes sociais também.<br/>
+<!--section class="multi-lang" lang="en-US">
+    <h2>test</h2>
+    Content goes here
+</section>
+<section class="multi-lang" lang="pt-BR">
+    <h2>teste</h2>
+    Conteúdo vai aqui
+</section>
+
+<div class="picture"
+     style="float: left;">
+     <img itemprop="image" src="" alt="" />
+</div -->
+
+Pretendo discutir aqui, sobre ferramentas que uso para saber da <strong>acessibilidade</strong> e <strong>performance</strong> de meu site, além de garantir que é <strong>mobile friendly</strong> e bem <strong>indexado</strong> pelo google, SEO, e redes sociais também.
+
+
+<h2>Build e plataforma</h2>
+Esta nova versão do meu site pessoal, eu fiz do zero, e construí uma ferramenta com grunt para gerar todas as páginas estáticas e linkadas, dinamicamente, durante uma task de build.
+Mais ou menos como o <a href="https://github.com/JSRocksHQ/harmonic" target="blank">Harmonic</a> faz.
+
+E desta vez, tive que fazer manualmente diversos ajustes, que me levaram a diversas descobertas, também! A versão anterior de meu site(ainda disponível em <a href="http://felipenmoura.org/" target="blank">felipenmoura.org/</a>) era gerenciada por um wordpress.
+O wordpress é uma ferramenta fantástica, mas eu estava querendo migrar para arquivos estáticos, e hoje hospedo meu site todo no próprio <a href="http://github.com/" target="blank"></a>Github</a>.
+
+<blockquote>Para tudo, há um "asterísco"!</blockquote>
+Quero dizer que há mudanças acontecendo o tempo todo, e por isso, essas ferramentas podem dar resultados diferentes com o tempo.
+Além disso, itens externos, como Videos embedados, facebook, twitter, google plus, ou no meu caso, o Disqus também, podem influenciar gerando erros, ou problemas de acessibilidade ou performance.
+
+Além disso, no caso de estar hospedando seu site no Github, como eu, não é possível configurar o cache nos headers HTTP, e algumas das ferramentas vão reclamar sobre isto!
+
+
+<h2>Testando a Acessibilidade</h2>
+Para acessibilidade, há diversas dicas e artigos na internet, enfatizando alguns dos mesmos itens, mas é sempre bom manter aquecido na mente!
+
+Use tags para o que elas servem! Não crie um <em>div</em> com estilo de botão...crie um <em>botão</em> e estilize ele!
+
+Use o atributo <em>ALT</em> em TODAS as imagens! E se preciso, use o <em>title</em> também.
+
+Faça bom uso dos Headers (<em>H1, H2, H3, H4, H5 e H6</em>).
+
+Coloque <em>tabindex</em> nos elementos que julgar necessários.
+
+Um detalhe que é importante lembrar também, é o contraste! É legal lembrar de conferir bem as cores de fundo e dos textos, por exemplo. Ou também, o <strong>tamanho da fonte</strong>!
+Justamente por isso, decidi colocar algumas ferramentas na página de artigos, onde é possível <em>inverter as cores de contraste</em> ou aumentar e diminuir o tamanho da fonte.
+
+Para testar a acessibilidade da página, eu uso algumas técnicas como <em>navegação por tabs</em> e setas para rolar páginas longas.
+Mas conto também com o <strong>bookmarklet</strong> da Squiz, o <a href="http://squizlabs.github.io/HTML_CodeSniffer/" target="blank">HTML Code Sniffer</a>.
+
+Caso queria usar um leitor de telas, eu aconselho o <a href="http://www.chromevox.com/" target="blank">ChromeVox</a>. Trata-se de uma extensão para o Chrome.
+Assim, o leitor não lerá TUDO o que está na tela(incluindo menus e botões do próprio sistema operacional), mas sim, apenas o que estiver no browser. Além disso, é bastante fácil de liga-lo ou desliga-lo a qualquer momento.
+
+
+<h2>Detalhes de Usabilidade</h2>
+Alguns detalhes de usabilidade que coloquei, e que ainda pretendo acrescentar.
+
+Acho que a interface deve saber "se comunicar" com o usuário, e ser muito, MUITO intuitiva, por isso, por exemplo...
+Ao entrar na página de <a href="/utils" class="local">útils</a>, caso o usuário fique parado, possivelmente sem entender que as opções estão na barra azul, os <em>ícones das opções se movem</em>.
+Uma animação simples, mas que para o usuário que ainda não os identificou, faz toda diferença.
+Outro ponto positivo disto é que foi feito totalmente com CSS, não é preciso JavaScript sequer para controlar quando animar ou não(conteúdo para outro artigo, quem sabe?).
+Nesta mesma página, caso a janela seja muito pequena(como no caso de mobile, por exemplo), a barra azul e os icones se mudam para o topo(usando <em>media queries</em> do <em>design responsivo</em>).
+Isto por que, uma janela no formato paisagem(landscape) tem mais espaço horizontal, e a barra na lateral não atrapalha o espaço que há para o conteúdo.
+Já uma janela mais estreita provavelmente é mais alta do que larga, e por isso, a barra atrapalhará menos estando no topo.
+
+Os menus, por enquanto sempre visíveis, também mutam de tamanho e posição de acordo com o tamanho da janela, mas ainda pretendo fazer mais alterações para que atrapalhem menos a leitura, sem deixar de ser percebidos.
+
+Na página de <a href="/articles" class="local">artigos</a> também, o formato do header muda responsivamente de acordo com o tamanho da janela,
+
+
+<h2>To be continued...</h2>
+No meu próximo artigo, falaremos sobre <strong>SEO</strong> e <strong>Performance</strong>.
+Dois assuntos muito importantes, e até mesmo, interligados.
+
+Note que, obviamente, se você tem alguma dica ou sugestão, inclusive para melhorar meu site, deixe nos comentários!
+Deixe também sua opinião sobre o assunto, e relate situações que enfrentou e como resolveu!
 
 ]]></description>
   </item>
