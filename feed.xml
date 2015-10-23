@@ -11,109 +11,97 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu Sep 24 2015 21:19:02 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Fri Oct 23 2015 16:34:03 GMT-0200 (BRST)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
   
   <item>
-    <title>Iniciando com o Canvas javascript</title>
-    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
+    <title>Hoisting no JavaScript</title>
+    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
     
     <category>
     <![CDATA[ javascript ]]>
     </category>
     
     <category>
-    <![CDATA[ canvas ]]>
+    <![CDATA[ es2015 ]]>
     </category>
     
     <description><![CDATA[
-Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de "mecher nisto". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.<br/>
-Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
+Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
 
-Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
-            O que for escrito aqui, aparecerá SOMENTE
-            quando o navegador não puder renderizar o canvas
-            Claro que tags HTML são aceitas.
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
-
-Certo, agora, especificaremos uma função para manusear o canvas via javaScript
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // sim, addEventListener não funciona em IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
-
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
 <pre class="line-numbers"><code class="language-javascript">
-// Vamos criar umas variáveis globais para facilitar
-// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
-var canvas= null;
-var ctx= null;
-// aqui, a nossa função a ser chamada assim que a página carregar
-canvasHandler= function(){
-    // antes de tudo, simplesmente pegamos o elemento canvas
-    canvas= document.getElementById('theCanvasElement');
-    // agora nós precisaremos acessar o CONTEXT para trabalhar
-    ctx= canvas.getContext('2d');
+var x= 1;
+
+if(x === 3){
+    var y= 1;
 }
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
 </code></pre>
 
-Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
-Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
 
-Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
-
-OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
-<pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
-</code></pre>
-
-Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
+Ainda duvida?
+Façamos assim, então:
 
 <pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
+var x= 1;
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+
+if(x === 3){
+    var y= 1;
+}
+
 </code></pre>
-Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
+
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
+
+Da mesma forma, funções podem ser declaradas ou atribuídas.
+
 <pre class="line-numbers"><code class="language-javascript">
-    // instancia uma nova imagem
-    var img= new Image();
-    // usaremos a imagem após ela ser carregada
-    img.addEventListener('load', function(){
-        // após baixar a imagem, podemos desenha-la no canvas
-        ctx.drawImage(this);
-        // onde this representa a imagem recém carregada
-    });
-    // então especificamos a url a iniciar o carregamento
-    img.src= 'url.png';
+// chamando a funcão 1
+func1(); // joga 1 no console
+
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
+}
+
+// chamando a função 2
+func2(); // ERROR
+
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
+}
+
+// a partir de agora, func2 poderia ser evocada
 </code></pre>
 
-Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
-<pre class="line-numbers"><code class="language-javascript">
-    // desenha a imagem na posição left=30 e top=30
-    ctx.drawImage(this, 30, 30);
-    // desenhará a imagem na posição 0/0, alterando seu tamanho
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // mais complexo, desenha e recorta a imagem (crop)
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
-</code></pre>
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
 
-Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
 
-Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
+
 ]]></description>
   </item>
   
@@ -238,6 +226,106 @@ Ok, now you can see an image inside your canvas. The drawImage method supports s
 When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
 
 Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Iniciando com o Canvas javascript</title>
+    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de "mecher nisto". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.<br/>
+Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
+
+Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
+            O que for escrito aqui, aparecerá SOMENTE
+            quando o navegador não puder renderizar o canvas
+            Claro que tags HTML são aceitas.
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Certo, agora, especificaremos uma função para manusear o canvas via javaScript
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // sim, addEventListener não funciona em IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
+
+<pre class="line-numbers"><code class="language-javascript">
+// Vamos criar umas variáveis globais para facilitar
+// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
+var canvas= null;
+var ctx= null;
+// aqui, a nossa função a ser chamada assim que a página carregar
+canvasHandler= function(){
+    // antes de tudo, simplesmente pegamos o elemento canvas
+    canvas= document.getElementById('theCanvasElement');
+    // agora nós precisaremos acessar o CONTEXT para trabalhar
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
+Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
+
+Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
+
+OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
+
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
+<pre class="line-numbers"><code class="language-javascript">
+    // instancia uma nova imagem
+    var img= new Image();
+    // usaremos a imagem após ela ser carregada
+    img.addEventListener('load', function(){
+        // após baixar a imagem, podemos desenha-la no canvas
+        ctx.drawImage(this);
+        // onde this representa a imagem recém carregada
+    });
+    // então especificamos a url a iniciar o carregamento
+    img.src= 'url.png';
+</code></pre>
+
+Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
+<pre class="line-numbers"><code class="language-javascript">
+    // desenha a imagem na posição left=30 e top=30
+    ctx.drawImage(this, 30, 30);
+    // desenhará a imagem na posição 0/0, alterando seu tamanho
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // mais complexo, desenha e recorta a imagem (crop)
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
+
+Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
 ]]></description>
   </item>
   
@@ -768,6 +856,333 @@ O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
   </item>
   
   <item>
+    <title>call, bind e apply no JavaScript - parte 2</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
+
+<strong>.call()</strong>
+
+O método <em>.call</em>, literalmente, "chama" a sua função.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    return 1;
+}
+
+var func2= function(){
+    return 2;
+}
+
+func1.call(); // 1
+func2.call(); // 2
+
+</code></pre>
+
+A diferença, está nos argumentos(parâmetros) passados a esta função.
+Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// criando uma variável global apenas para demonstração
+window.blah= 1;
+
+// uma função que utiliza o this
+function func1 () {
+    console.log(this.blah);
+}
+
+// um objeto a ser usado como exemplo
+var obj= {
+    blah: 2
+};
+
+func1(); // 1 (vindo do objeto window), escopo atual
+func1.call(obj); // 2 (vindo do objecto obj)
+
+</code></pre>
+
+Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+<pre class="line-numbers"><code class="language-javascript">
+
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+func1.call(obj, "a", 3); // "x", "a", 3
+
+</code></pre>
+
+Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
+Daí, podemos resolver isto usando:
+
+<pre class="line-numbers"><code class="language-javascript">
+function (){
+    var args= Array.prototype.slice.call(arguments);
+    args.forEach(...);
+}
+</code></pre>
+
+Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
+Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+
+<strong>.apply()</strong>
+
+O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// apply está enviando uma Array, com a lista de parâmetros
+func1.apply(obj, ["a", 3]); // "x", "a", 3
+</code></pre>
+
+A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+}
+</code></pre>
+
+<strong>.bind()</strong>
+
+O bind, funciona um pouco diferente.
+Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// a variável theFunction se tornará a função func1
+// amarrada ao obj.
+var theFunction= func1.bind(obj);
+
+// ao chamar theFunction, o "this" dela já é o obj
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
+Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
+Eis uma alternativa que o pessoal faz:
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// theFunction recebe, literalmente, uma função, a qual usará
+// o .apply, quando chamada
+var theFunction= function(){
+    func1.apply(obj, Array.prototype.slice.call(arguments));
+};
+
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+
+<strong>Finalizando</strong>
+
+Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
+
+<pre class="line-numbers"><code class="language-javascript">
+function func3() {
+    console.log(this);
+}
+
+func3(); // window
+func3.call({ some: "prop" }); // object { some: "prop" }
+func3.call("just a string"); // string "just a string"
+func3.call(123); // number 123
+func3.call(document.body); // object HTMLBodyElement
+
+</code></pre>
+
+O que pode acabar sendo usado em situações como esta:
+
+<pre class="line-numbers"><code class="language-javascript">
+function calc(val1, val2){
+    console.log(this.max(val1, val2));
+    console.log(this.cos(val2));
+    console.log(this.min(val1, val2));
+    console.log(this.pow(val1, val2));
+}
+
+calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
+
+</code></pre>
+
+Espero que tenha sido um post útil e bem explicativo! :)
+
+Não deixem de divulgar o post, e dar sua opinião.
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Creating notes, alerts and block quotes for citations using CSS</title>
+    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    
+    <category>
+    <![CDATA[ css ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pseudo-element ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
+
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+    &lt;div class="citation-content">The quote message.&lt;/div>
+    &lt;cite class="citation-author">
+        &lt;a href="link" target="_blank">author&lt;/a>
+    &lt;/cite>
+&lt;/blockquote>
+</code></pre>
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
+}
+
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
+}
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
+}
+</code></pre>
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+</code></pre>
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
+}
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
+}
+</code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
+}
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
+
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Cool thing, right?
+Now go ahead and customize yours!
+]]></description>
+  </item>
+  
+  <item>
     <title>Duas maneiras para centralizar verticalmente com CSS</title>
     <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
     
@@ -849,175 +1264,138 @@ Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizan
   </item>
   
   <item>
-    <title>Escopo, this e that</title>
-    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    <title>Call, bind e apply no JavaScript - parte 1</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
     
     <category>
-    <![CDATA[ javascript ]]>
+    <![CDATA[ JavaScript ]]>
     </category>
     
     <category>
-    <![CDATA[ scope ]]>
+    <![CDATA[ ECMA ]]>
     </category>
     
     <category>
-    <![CDATA[ ecma ]]>
+    <![CDATA[ ES6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES5 ]]>
     </category>
     
     <description><![CDATA[
-Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
-<strong>Escopo</strong>
-
-O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
-Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
-Uma maneira de criar um escopo, é utilizando uma função.
+Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
+Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
 
 <pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
+// declarando uma função no escopo atual
+function funcName () {};
 
-function someFunc () {
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-}
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
+</code></pre>
 
-someFunc();
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
+
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
+};
+
+myFunc(); // 123
+funcName(); // ERROR
+</code></pre>
+
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+
+console.log(func1); // function
+console.log(func2); // undefined
+
+// ou seja:
+func1(); // 1
+func2(); // ERROR
+
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
 
 </code></pre>
 
-Funções que cumprem o papel de construtores também.
-
-
+Agora, pense no seguinte exemplo:
 <pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
-
-function SomeConstructor () {
-
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-
-    function internalFunc () {
-        var secondLevelVariable= 789;
-
-        console.log(localVariable);
-        console.log(secondLevelVariable);
-        console.log(globalVariable);
-    }
-  
-    internalFunc();
-}
-
-var instance= new SomeConstructor();
-
+var d= new Date().getTime();
 </code></pre>
 
-Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
-Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
 
+Da mesma forma, podemos evocar automáticamente uma função: 
 <pre class="line-numbers"><code class="language-javascript">
-"use strict";
+var x= function(){ return 123; }();
+console.log(x); // 123
+</code></pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
 
-var global1= 1;
-
-function someFunc () {
-    var localVar= 123;
-    global2= 456; // isto, criará uma variável global, por acidente.
-
-    console.log( window.global1 );
-}
-
+Uma curiosidade aqui, é que:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
 </code></pre>
 
-<strong>this</strong>
-
-Escopos, normalmente setam um valor para <em>this</em>.
-Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
-
-Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
-
+E também:
 <pre class="line-numbers"><code class="language-javascript">
-"use strict";
-function blah(){
-    console.log(this); // imprime Window
-}
-blah();
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
+</code></pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
+
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
+<pre class="line-numbers"><code class="language-javascript">
+(function (){
+    ...
+    console.log( "algo" );
+}());
 </code></pre>
 
-Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
 
-- Dentro de objetos
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
 <pre class="line-numbers"><code class="language-javascript">
-var o= {
-    doSomething: function () {
-        console.log(this); // imprime Object(o)
-    }
-}
-o.doSomething();
+-function (){
+    ...
+    console.log( "algo" );
+}();
+
+// ou
+
+!function (){
+    ...
+    console.log( "algo" );
+}();
 </code></pre>
 
-- Em funções construtoras
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    console.log(this); // imprime Klass {foo: "bar"} 
-}
+Esta foi a primeira parte deste assunto.
 
-var instance= new Klass();
-</code></pre>
-
-- Usando call, bind e apply
-Será discutido em outro post, com maiores detalhes.
-
-<strong>that</strong>
-
-A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
-O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
-
-Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(this);
-    }
-}
-
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"} 
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
-</code></pre>
-
-Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    var that= this; // guarda a referência ao this
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(that);
-    }
-}
-
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"}
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
-</code></pre>
-
-Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
-Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
-
-Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
-
-Espero que tenha sido útil! :)
-
-
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
 ]]></description>
   </item>
   
@@ -1413,123 +1791,221 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   </item>
   
   <item>
-    <title>Creating notes, alerts and block quotes for citations using CSS</title>
-    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    <title>Mozilla Summit 2013</title>
+    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
     <category>
-    <![CDATA[ css ]]>
+    <![CDATA[ events ]]>
     </category>
     
     <category>
-    <![CDATA[ pseudo-element ]]>
+    <![CDATA[ mozilla ]]>
     </category>
     
     <description><![CDATA[
-<br/>
-Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
-You can create a cool style for them using CSS, like this:
+One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!<br/>
+<strong>About the conference</strong>
+This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
 
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<strong>About the sessions</strong>
+One other interesting thing I noticed in the conference was that I could attend some talks related to <em>social psycology</em>, <em>laws/politics</em>, <em>market/stocks</em>, <em>story</em>, <em>motivation</em> and of course, <em>technology</em>...this is pretty interesting to see in such a conference!
+Also, the sessions were way different than what we are used to! With some social interactions, games, group dynamics, meetings, and others.
+This means that each and every room had creative people, interested on discussing and participating, and also, giving something useful back to Mozilla, results, ideas, feedback, etc! Epic win!
+<blockquote>In a conference in an hotel, one guy said:
+<em>You want what, a microchip in each doorknob?</em>
+Ten years later, in the same hotel, they gave him a card instead of a key...there was a microchip on each doorknob in the hotel.</blockquote>
+<strong>About the attendees</strong>
+What about it? Mozilla Summit 2013 happened simultaneously in 3 different countries, summing 1800 attendees!
+In Toronto, there were about 600 people.
 
-This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-How to to this?
-First of all, let's build the HTML structure:
-<pre class="line-numbers"><code class="language-markup">
-&lt;blockquote class="citation-container">
-    &lt;div class="citation-content">The quote message.&lt;/div>
-    &lt;cite class="citation-author">
-        &lt;a href="link" target="_blank">author&lt;/a>
-    &lt;/cite>
-&lt;/blockquote>
-</code></pre>
-Now, let's take care of the CSS:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container{
-    border-left: 0.5em solid #DDD;
-    margin: 1.5em 0 1.5em 1.5em;
-    padding: .75em .5em .75em 1em;
-    background: #fff;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    margin-right: 40px;
-    font-family: Arial, Tahome, sans-serif;
+<strong>New MDN</strong>
+So, we can now test the new MDN interfaces, and guys, it's really cool!
+The new MDN manager now is based on an useful API, which allows us to use it to list our demos or articles anywhere we want, for example!
+
+<strong>About Toronto, the trip, the Hotel and the parties</strong>
+Toronto is a fantastic city! It's really impressive to see how good is the traffic, and the details of the city!
+The architecture is beautiful and you can see that even the old buildings are quite in good condition! They pay good attention to the details! The street asphalt is perfectly smooth, you see absolutely no dogs on the streets and I could count on my fingers the number of homeless I could see!
+By the way, the "street hot dogs" are really good and cheap there!
+People in Toronto are very, VERY polite! The world I most heard was, for sure, "sorry"!
+
+The bars and pubs were really cool too, their beer is strong and the food very spicy, I think it's because of their winter.
+The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
+
+It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
+Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
+]]></description>
+  </item>
+  
+  <item>
+    <title>Escopo, this e that</title>
+    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ scope ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma ]]>
+    </category>
+    
+    <description><![CDATA[
+Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
+<strong>Escopo</strong>
+
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
 }
 
-blockquote.citation-container cite{
-    display: block;
-    font-size: 0.8em;
-}
-blockquote.citation-container cite a{
-    text-decoration: none !important;
-    color: #0090D2;
-}
-</code></pre>
-And now, we can add the decoration element:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container:before{
-    display: block;
-    height: 0;
-    content: "“";
-    margin-left: -.95em;
-    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-    color: #999;
-}
-</code></pre>
-But...we can go further!
-Why not customize it a little bit more? What about colors and icons?
-Just by adding a class "red" to the blockquote element, we can use this:
-<pre class="line-numbers"><code class="language-css">
-.citation-container.red{
-    border-color: rgb(245, 113, 113);
-    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
-    background-color: rgb(255, 210, 210);
-}
-.citation-container.red:before{
-    content: "!";
-    color: rgb(245, 113, 113);
-    line-height: 50px;
-    margin-left: -56px;
-}
-</code></pre>
-And the result would be
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+someFunc();
 
-<pre class="line-numbers"><code class="language-css">
-.citation-container.yellow{
-    border-color: rgb(243, 243, 62);
-    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
-    background-color: rgb(255, 255, 207);
-}
-.citation-container.yellow:before{
-    content: "»";
-    color: rgb(243, 243, 62);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 30px;
-    font-size: 4em;
-    margin-left: -50px;
-}
 </code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-<pre class="line-numbers"><code class="language-css">
-.citation-container.green{
-    border-color: rgb(155, 255, 171);
-    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
-    background-color: rgb(236, 253, 238);
-}
-.citation-container.green:before{
-    content: "✓";
-    color: rgb(155, 255, 171);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 40px;
-    font-size: 2.2em;
-    margin-left: -58px;
 
+Funções que cumprem o papel de construtores também.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
 }
+
+var instance= new SomeConstructor();
+
 </code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Cool thing, right?
-Now go ahead and customize yours!
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
+</code></pre>
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
+</code></pre>
+
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
+<pre class="line-numbers"><code class="language-javascript">
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
+</code></pre>
+
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
+
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+
 ]]></description>
   </item>
   
@@ -1583,52 +2059,6 @@ O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu m
   </item>
   
   <item>
-    <title>Mozilla Summit 2013</title>
-    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
-    
-    <category>
-    <![CDATA[ events ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ mozilla ]]>
-    </category>
-    
-    <description><![CDATA[
-One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!<br/>
-<strong>About the conference</strong>
-This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
-
-<strong>About the sessions</strong>
-One other interesting thing I noticed in the conference was that I could attend some talks related to <em>social psycology</em>, <em>laws/politics</em>, <em>market/stocks</em>, <em>story</em>, <em>motivation</em> and of course, <em>technology</em>...this is pretty interesting to see in such a conference!
-Also, the sessions were way different than what we are used to! With some social interactions, games, group dynamics, meetings, and others.
-This means that each and every room had creative people, interested on discussing and participating, and also, giving something useful back to Mozilla, results, ideas, feedback, etc! Epic win!
-<blockquote>In a conference in an hotel, one guy said:
-<em>You want what, a microchip in each doorknob?</em>
-Ten years later, in the same hotel, they gave him a card instead of a key...there was a microchip on each doorknob in the hotel.</blockquote>
-<strong>About the attendees</strong>
-What about it? Mozilla Summit 2013 happened simultaneously in 3 different countries, summing 1800 attendees!
-In Toronto, there were about 600 people.
-
-<strong>New MDN</strong>
-So, we can now test the new MDN interfaces, and guys, it's really cool!
-The new MDN manager now is based on an useful API, which allows us to use it to list our demos or articles anywhere we want, for example!
-
-<strong>About Toronto, the trip, the Hotel and the parties</strong>
-Toronto is a fantastic city! It's really impressive to see how good is the traffic, and the details of the city!
-The architecture is beautiful and you can see that even the old buildings are quite in good condition! They pay good attention to the details! The street asphalt is perfectly smooth, you see absolutely no dogs on the streets and I could count on my fingers the number of homeless I could see!
-By the way, the "street hot dogs" are really good and cheap there!
-People in Toronto are very, VERY polite! The world I most heard was, for sure, "sorry"!
-
-The bars and pubs were really cool too, their beer is strong and the food very spicy, I think it's because of their winter.
-The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
-
-It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
-Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
-]]></description>
-  </item>
-  
-  <item>
     <title>Participação na WebBR 2013</title>
     <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
     
@@ -1657,436 +2087,6 @@ Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
 O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
 
 e é dada a largada!
-]]></description>
-  </item>
-  
-  <item>
-    <title>Hoisting no JavaScript</title>
-    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ es2015 ]]>
-    </category>
-    
-    <description><![CDATA[
-Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
-O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
-Todavia, o valor apenas será atribuído no momento correto.
-
-Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-if(x === 3){
-    var y= 1;
-}
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
-</code></pre>
-
-Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
-A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
-
-Ainda duvida?
-Façamos assim, então:
-
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
-
-if(x === 3){
-    var y= 1;
-}
-
-</code></pre>
-
-O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
-
-Da mesma forma, funções podem ser declaradas ou atribuídas.
-
-<pre class="line-numbers"><code class="language-javascript">
-// chamando a funcão 1
-func1(); // joga 1 no console
-
-// a declaração desta função foi puxada para o topo
-// pelo JavaScript
-function func1(){
-    console.log(1);
-}
-
-// chamando a função 2
-func2(); // ERROR
-
-// a variável func2 foi criada antes, com o valor "undefined"
-// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
-var func2= function(){
-    console.log(2);
-}
-
-// a partir de agora, func2 poderia ser evocada
-</code></pre>
-
-Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
-
-Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
-
-Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
-
-]]></description>
-  </item>
-  
-  <item>
-    <title>Call, bind e apply no JavaScript - parte 1</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
-    
-    <category>
-    <![CDATA[ JavaScript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ECMA ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES5 ]]>
-    </category>
-    
-    <description><![CDATA[
-Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
-Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-// declarando uma função no escopo atual
-function funcName () {};
-
-// uma instrução, setando uma função à uma variável
-// no escopo atual
-var funcName = function () {};
-</code></pre>
-
-Mas que diferença isto faz?
-Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
-Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
-
-Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-// atribuímos uma função com nome, a uma variável
-var myFunc= function funcName(){
-    return 123;
-};
-
-myFunc(); // 123
-funcName(); // ERROR
-</code></pre>
-
-Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
-
-<strong>Funções Imediatamente Evocadas</strong>
-
-Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
-Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
-
-Por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-
-console.log(func1); // function
-console.log(func2); // undefined
-
-// ou seja:
-func1(); // 1
-func2(); // ERROR
-
-// estamos declarando uma função, que será içada
-function func1(){ return 1; }
-
-// a variável func2 foi içada(com valor de "undefined"),
-// mas a função somente foi criada agora, e atribuída a ela
-var func2= function(){ return 2; };
-
-</code></pre>
-
-Agora, pense no seguinte exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-var d= new Date().getTime();
-</code></pre>
-
-Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
-
-Da mesma forma, podemos evocar automáticamente uma função: 
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ return 123; }();
-console.log(x); // 123
-</code></pre>
-Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
-
-Uma curiosidade aqui, é que:
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ /* faz algo, mas não retorna nada*/ }();
-console.log(x); // undefined
-</code></pre>
-
-E também:
-<pre class="line-numbers"><code class="language-javascript">
-var x= function doSomething(arg){ return arg; }(123);
-console.log(x); // 123
-doSomething(); // ERROR
-</code></pre>
-Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
-O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
-Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
-
-Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
-<pre class="line-numbers"><code class="language-javascript">
-(function (){
-    ...
-    console.log( "algo" );
-}());
-</code></pre>
-
-Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
-Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
-
-Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
-<pre class="line-numbers"><code class="language-javascript">
--function (){
-    ...
-    console.log( "algo" );
-}();
-
-// ou
-
-!function (){
-    ...
-    console.log( "algo" );
-}();
-</code></pre>
-
-Esta foi a primeira parte deste assunto.
-
-Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
-]]></description>
-  </item>
-  
-  <item>
-    <title>call, bind e apply no JavaScript - parte 2</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ecma6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ es2015 ]]>
-    </category>
-    
-    <description><![CDATA[
-Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
-
-<strong>.call()</strong>
-
-O método <em>.call</em>, literalmente, "chama" a sua função.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
-
-var func2= function(){
-    return 2;
-}
-
-func1.call(); // 1
-func2.call(); // 2
-
-</code></pre>
-
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
-
-<pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
-
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
-}
-
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
-};
-
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
-
-</code></pre>
-
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
-<pre class="line-numbers"><code class="language-javascript">
-
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-func1.call(obj, "a", 3); // "x", "a", 3
-
-</code></pre>
-
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
-
-<pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
-}
-</code></pre>
-
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
-
-<strong>.apply()</strong>
-
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
-</code></pre>
-
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
-}
-</code></pre>
-
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
-
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
-<pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
-}
-
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
-
-</code></pre>
-
-O que pode acabar sendo usado em situações como esta:
-
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
-}
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
-</code></pre>
-
-Espero que tenha sido um post útil e bem explicativo! :)
-
-Não deixem de divulgar o post, e dar sua opinião.
-
 ]]></description>
   </item>
   
@@ -2629,6 +2629,62 @@ Serve também para indicar o caminho que estou tomando, se há ferramentas obsol
 
 <hr/>Espero que estes dois artigos tenham sido úteis!
 Não deixem de comentar sobre dificuldades ou enviar ideias e contar experiências!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>FWorld: Quem está realmente sozinho</title>
+    <link>http://felipenmoura.com/articles/fworld-sozinhos/</link>
+    
+    <category>
+    <![CDATA[ video ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ fworld ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ciência ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ curiosidades ]]>
+    </category>
+    
+    <description><![CDATA[
+<strong>FWorld<strong>, novo canal no youtube sobre ciência, tecnologia e curiosidades!<br/><br/>Episódio piloto: <em>Sozinhos!</em><br/><br/>Sabe aquele sentimento de solidão? Que estamos sozinhos no mundo?<br/>Mas hoje em dia, não fazemos NADA sozinhos...sério!<br/><br/>Descubra algumas pessoas ou coisas que estiveram mais isolados, que se tenha notícia, e também, uma forma de nunca mais se sentir realmente sozinho neste mundo!<br/>
+<section lang="pt-BR">
+    <h2>FWorld</h2>Lancei um novo canal no youtube, o <a href="https://goo.gl/fd5rMn" target="blank">fworld</a>!
+
+    Neste canal, pretendo falar sobre coisas variadas, como ciência, história, filosofia...curiosisades em geral! Pensamentos.
+    Desde criança eu penso em fazer algo assim, e agora resolvi me dedicar um pouco a tentar!
+
+    Se ficou curioso, aproveita e te inscreve lá: <a href="https://goo.gl/NynWdX">FWorld</a>
+
+    Deu bastante trabalho, e envolveu muita pesquisa e muita edição de vídeo, outra coisa que estou aprendendo...tive algumas dificuldades com o áudio, em especial, mas espero que consigam apreciar!
+
+    A ideia é ter conteúdo que chame a atenção e atraia as pessoas para se interessarem em ciência, de crianças a adultos!
+    Penso em escolher um tema, e discutir sobre ele, inclusive, mundo amplamente de assunto ao longo do vídeo, como foi o caso neste primeiro piloto!
+
+    <h2>Sozinhos!</h2>Neste primeiro vídeo publicado no canal, pensei em abordar como tema, o sentimento de solidão que algumas pessoas tem, e pesquisei sobre as pessoas ou comunidades que mais estiveram ou estão isoladas neste mundo...ou fora dele!
+
+    <div class="picture"
+     style="text-align: center; padding: 10px 0 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/FgTzmMKzB8c" frameborder="0" allowfullscreen></iframe></div>
+
+    <h2>Feedback</h2>É claro que todo o feedback é muito bem vindo, estou aprendendo e isto vai me ajudar a fazer algo criativo, cada vez melhor!
+
+    Se encontrou algum problema, pode me enviar pelo twitter, e-mail ou deixar um comentário no vídeo!
+    Se curtiu, e quer me incentivar a continuar produzindo conteúdos do tipo, não deixe de curtir o vídeo, assim eu vou saber, em números, se está dando resultado todo este trabalho!
+
+    E caso queira ver os próximos assim que saírem, aproveita e seja um dos primeiros a se inscrever no canal :)
+
+
+
+
+</section>
+
 
 ]]></description>
   </item>
