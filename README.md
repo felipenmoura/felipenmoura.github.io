@@ -1,17 +1,11 @@
-# mcLang
-[![npm version](http://img.shields.io/npm/v/mcLang.svg)](https://npmjs.org/package/mcLang)
-[![Build Status](http://img.shields.io/travis/felipenmoura/mcLang.svg)](https://travis-ci.org/felipenmoura/mcLang)
-[![Dependency Status](http://img.shields.io/david/felipenmoura/mcLang.svg)](https://david-dm.org/felipenmoura/mcLang)
-[![devDependency Status](http://img.shields.io/david/dev/felipenmoura/mcLang.svg)](https://david-dm.org/felipenmoura/mcLang#info=devDependencies)
+Para montar:
 
-Natural to machine language, node modules
+`grunt build`
 
-# Install
+Para subir ao bitbucket:
 
-```
-npm install --save mcLang
-```
+`git add -A; git commit -am 'message' && git push origin master`
 
-# Changelog
+Para colocar no ar (gh é o remoto que aponta para o github):
 
-- **1.0.0**: initial release.
+`git push gh master`
