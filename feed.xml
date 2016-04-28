@@ -11,97 +11,109 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri Jan 08 2016 10:40:07 GMT-0200 (BRST)</lastBuildDate>
+  <lastBuildDate>Wed Apr 27 2016 21:33:40 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
   
   <item>
-    <title>Hoisting no JavaScript</title>
-    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
+    <title>Iniciando com o Canvas javascript</title>
+    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
     
     <category>
     <![CDATA[ javascript ]]>
     </category>
     
     <category>
-    <![CDATA[ es2015 ]]>
+    <![CDATA[ canvas ]]>
     </category>
     
     <description><![CDATA[
-Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
-O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
-Todavia, o valor apenas será atribuído no momento correto.
+Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de "mecher nisto". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.<br/>
+Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
 
-Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-if(x === 3){
-    var y= 1;
-}
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
+Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
+            O que for escrito aqui, aparecerá SOMENTE
+            quando o navegador não puder renderizar o canvas
+            Claro que tags HTML são aceitas.
+        &lt;/canvas&gt;
+    &lt;/body&gt;
 </code></pre>
 
-Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
-A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
-
-Ainda duvida?
-Façamos assim, então:
-
-<pre class="line-numbers"><code class="language-javascript">
-var x= 1;
-
-console.log(x); // 1
-console.log(y); // undefined
-console.log(z); // ERROR
-
-if(x === 3){
-    var y= 1;
-}
-
+Certo, agora, especificaremos uma função para manusear o canvas via javaScript
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // sim, addEventListener não funciona em IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
 </code></pre>
 
-O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
-
-Da mesma forma, funções podem ser declaradas ou atribuídas.
+Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
 
 <pre class="line-numbers"><code class="language-javascript">
-// chamando a funcão 1
-func1(); // joga 1 no console
-
-// a declaração desta função foi puxada para o topo
-// pelo JavaScript
-function func1(){
-    console.log(1);
+// Vamos criar umas variáveis globais para facilitar
+// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
+var canvas= null;
+var ctx= null;
+// aqui, a nossa função a ser chamada assim que a página carregar
+canvasHandler= function(){
+    // antes de tudo, simplesmente pegamos o elemento canvas
+    canvas= document.getElementById('theCanvasElement');
+    // agora nós precisaremos acessar o CONTEXT para trabalhar
+    ctx= canvas.getContext('2d');
 }
-
-// chamando a função 2
-func2(); // ERROR
-
-// a variável func2 foi criada antes, com o valor "undefined"
-// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
-var func2= function(){
-    console.log(2);
-}
-
-// a partir de agora, func2 poderia ser evocada
 </code></pre>
 
-Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
+Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
+Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
 
-Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
 
-Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
+OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
 
+Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
+
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
+<pre class="line-numbers"><code class="language-javascript">
+    // instancia uma nova imagem
+    var img= new Image();
+    // usaremos a imagem após ela ser carregada
+    img.addEventListener('load', function(){
+        // após baixar a imagem, podemos desenha-la no canvas
+        ctx.drawImage(this);
+        // onde this representa a imagem recém carregada
+    });
+    // então especificamos a url a iniciar o carregamento
+    img.src= 'url.png';
+</code></pre>
+
+Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
+<pre class="line-numbers"><code class="language-javascript">
+    // desenha a imagem na posição left=30 e top=30
+    ctx.drawImage(this, 30, 30);
+    // desenhará a imagem na posição 0/0, alterando seu tamanho
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // mais complexo, desenha e recorta a imagem (crop)
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
+
+Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
 ]]></description>
   </item>
   
@@ -226,106 +238,6 @@ Ok, now you can see an image inside your canvas. The drawImage method supports s
 When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
 
 Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
-]]></description>
-  </item>
-  
-  <item>
-    <title>Iniciando com o Canvas javascript</title>
-    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ canvas ]]>
-    </category>
-    
-    <description><![CDATA[
-Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de "mecher nisto". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.<br/>
-Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
-
-Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
-            O que for escrito aqui, aparecerá SOMENTE
-            quando o navegador não puder renderizar o canvas
-            Claro que tags HTML são aceitas.
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
-
-Certo, agora, especificaremos uma função para manusear o canvas via javaScript
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // sim, addEventListener não funciona em IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
-
-<pre class="line-numbers"><code class="language-javascript">
-// Vamos criar umas variáveis globais para facilitar
-// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
-var canvas= null;
-var ctx= null;
-// aqui, a nossa função a ser chamada assim que a página carregar
-canvasHandler= function(){
-    // antes de tudo, simplesmente pegamos o elemento canvas
-    canvas= document.getElementById('theCanvasElement');
-    // agora nós precisaremos acessar o CONTEXT para trabalhar
-    ctx= canvas.getContext('2d');
-}
-</code></pre>
-
-Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
-Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
-
-Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
-
-OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
-<pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
-</code></pre>
-
-Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
-
-<pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
-</code></pre>
-Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
-<pre class="line-numbers"><code class="language-javascript">
-    // instancia uma nova imagem
-    var img= new Image();
-    // usaremos a imagem após ela ser carregada
-    img.addEventListener('load', function(){
-        // após baixar a imagem, podemos desenha-la no canvas
-        ctx.drawImage(this);
-        // onde this representa a imagem recém carregada
-    });
-    // então especificamos a url a iniciar o carregamento
-    img.src= 'url.png';
-</code></pre>
-
-Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
-<pre class="line-numbers"><code class="language-javascript">
-    // desenha a imagem na posição left=30 e top=30
-    ctx.drawImage(this, 30, 30);
-    // desenhará a imagem na posição 0/0, alterando seu tamanho
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // mais complexo, desenha e recorta a imagem (crop)
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
-</code></pre>
-
-Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
-
-Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
 ]]></description>
   </item>
   
@@ -819,366 +731,143 @@ I hope it can help you, if you get stuck with this some day.
   </item>
   
   <item>
-    <title>O Brasil e suas decisões...</title>
-    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
+    <title>O editor que escolhi</title>
+    <link>http://felipenmoura.com/articles/my-editor/</link>
     
     <category>
-    <![CDATA[ politica ]]>
+    <![CDATA[ editors ]]>
     </category>
     
     <category>
-    <![CDATA[ brasil ]]>
+    <![CDATA[ IDE ]]>
     </category>
     
     <category>
-    <![CDATA[ opinião ]]>
-    </category>
-    
-    <description><![CDATA[
-<br/>
-Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
-
-O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
-
-Poh, não poderiam ter posto <strong>5</strong> bilhoezinhos de <strong>REAIS</strong> em investimentos para exploração espacial brasileira? que fossemos até a Lua, "apenas"!
-e podiam ter posto mais uns <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em educação e mudar a historia deste país? E quem sabe, mais <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em saúde e segurança, e sabe o que aconteceria?
-
-Teríamos gasto em torno de <strong>32 bi</strong>lhões de <strong>dollares</strong> na copa...o que é equivalente a <strong>SOMA DO QUE FOI GASTO NAS 3 ULTIMAS COPAS</strong>, e ainda assim, seria a <strong>COPA MAIS CARA DA HISTÓRIA</strong>!
-Bom...acho que a dilminha não tem muita desculpa pra dar sobre por que o país não vai pra frente, né? É só má vontade mesmo, pura, e simples má vontade!
-
-O que realmente me entristece é saber que este país tinha tanto potencial!
-Acabamos de passar por uma oportunidade ÚNICA para este país! Não, não estou falando da copa! Estou falando do andamento financeiro, acesso a informações, à situação financeira de outros países, o interesse que eles despertaram sobre o Brasil, a valorização da terra e da moeda(ok, sabemos que há uma bolha), etc...
-Poderíamos, atrevo-me a dizer, ter nos tornado quase um país de primeiro mundo! Poderíamos ter passado de um "país granjeiro e agropecuário" a um país que oferece produtos de fato, tecnologia, etc...fora isso, a copa está aí para dar o maior destaque internacional ao país e seu povo e...não estamos preparados!
-Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocionalmente, culturalmente...o país não está pronto!
-
-O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
-]]></description>
-  </item>
-  
-  <item>
-    <title>call, bind e apply no JavaScript - parte 2</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
-    
-    <category>
-    <![CDATA[ es6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ecma6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ es2015 ]]>
+    <![CDATA[ JavaScript ]]>
     </category>
     
     <description><![CDATA[
-Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
+Algumas pessoas me perguntam sobre o editor que uso, se o aconselho, quais plugins utilizo, etc.<br/>Resolvi escrever este artigo para falar a respeito.<br/>
+<section class="multi-lang" lang="pt-BR">
 
-<strong>.call()</strong>
+    Na minha opinião, o editor é apenas uma ferramenta, assim como um teclado de computador.<br/>
+    Dito isto...quero lembrar que para comprar meu último teclado, passei quase uma hora na loja, tirando todos os teclados disponíveis de suas caixas e digitando alguma coisa neles, até encontrar "o teclado perfeito".<br/>
+    <br/>
+    Não é errado procurar a melhor ferramenta, nem é pecado adotar uma para a maior parte do seu trabalho, mas cuidado para não ficar "bitolado" em usar penas uma ferramenta.<br/>
+    Esta dica é válida para frameworks, bibliotecas...etc.
 
-O método <em>.call</em>, literalmente, "chama" a sua função.
+    <br/>
+    Eu sou um "viciado em abas". Quem me conhece sabe que estou sempre com mais de 60 abas abertas no(s) meu(s) navegador(es). Eventualmente, duas janelas, cada um com diversas abas.<br/>
+    <br/>
+    Evidentemente, não seria diferente com código!<br/>
+    Acabo utilizando mais de um editores ao mesmo tempo, para não misturar as abas de projetos diferentes, por exemplo.
 
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    return 1;
-}
+    <h2>Teste</h2>
+    Eu aconselho a testar as ferramentas e identificar as que melhor te atendem a demanda, para a maior parte do tempo.<br/>
+    Felizmente, com ferramentas como <em>editorconfig</em>, o editor hoje em dia não influencia mais tanto, no resultado final do teu código, o que nos dá muito mais liberdade.<br/>
+    <br/>
+    Para testar realmente uma ferramenta, acho que precisamos de pelo menos duas semanas de uso. Assim, teremos passado por diversas situações que a ferramenta...ou nos impediu/atrapalhou, ou ajudou a resolver.<br/>
+    <br/>
+    Antes de escolher meu editor favorito, testei diversos. Da uma olhada na lista e quem sabe o teu futuro editor do coração não está ali?
 
-var func2= function(){
-    return 2;
-}
+    <ul>
+        <li>Atom</li>
+        <li>Visual Studio Code</li>
+        <li>Brackets</li>
+        <li>VI(M)</li>
+        <li>Notepad++(só para Windows)</li>
+        <li>Edit Plus(só para Windows</li>
+        <li>Coda (só para MAC)</li>
+        <li>Sublime Text</li>
+        <li>TextMate (só para MAC)</li>
+    </ul>
 
-func1.call(); // 1
-func2.call(); // 2
+    <h2>Minha escolha</h2>
 
-</code></pre>
+    Devo dizer que acabei optando pelo Brackets, e pelo Atom, como minhas duas escolhas!<br/>
+    O Brackets é meu editor primário, e caso tenha que abrir algum outro projeto, posso optar por abrir outra janela dele, ou usar o Atom(assim, fica bem claro qual projeto estou trabalhando naquele momento).<br/>
+    <br/>
+    Algumas das coisas que me baseei foram:
 
-A diferença, está nos argumentos(parâmetros) passados a esta função.
-Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+    <ul>
+        <li>Open source: Precisa ser open source, pra garantir privacidade, segurança e rapidez na correção de bugs e falhas de segurança.</li>
+        <li>Themes: Precisa ter boas escolhas de tema.</li>
+        <li>Linguagens: Precisa ter um bom suporte a linguagens, e inclusive suportar algumas outras syntaxes como stylus, sass ou less, e compreender a syntaxe do ES6/ES2015</li>
+        <li>Plugins: Deve ter mais que um bom suporte a plugins, mas também uma ampla variedade deles disponíveis para download...ah, e devem ser fáceis de instalar e avaliar.</li>
+        <li>Edição múltipla: Permitir múltiplos cursores e painéis</li>
+    </ul>
 
-<pre class="line-numbers"><code class="language-javascript">
-// criando uma variável global apenas para demonstração
-window.blah= 1;
+    Dentre os motivos que destaco para o Brackets, estão o <em>quick edit</em>.
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-quick-edit.gif" alt="" />
+    </div>
 
-// uma função que utiliza o this
-function func1 () {
-    console.log(this.blah);
-}
+    Ele tem uma ferramenta própria para live-reloading também (ele mesmo inicia um server pra ti), que funciona muito bem, e claro, pode-se editar várias partes do código ao mesmo tempo:
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-multiple-editor.gif" alt="" />
+    </div>
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-multiple-editor-2.gif" alt="" />
+    </div>
 
-// um objeto a ser usado como exemplo
-var obj= {
-    blah: 2
-};
+    Ele também auto-completa urls diretamente no código:
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-url-auto-completition.png" alt="" />
+    </div>
 
-func1(); // 1 (vindo do objeto window), escopo atual
-func1.call(obj); // 2 (vindo do objecto obj)
+    Trabalhar com cores no Brackets é um docinho, tanto no CSS quanto no HTML:
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-color-1.png" alt="" />
+    </div>
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-color-2.png" alt="" />
+    </div>
 
-</code></pre>
+    O supporte e a personalização para snippets é enorme:
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-snippets.gif" alt="" />
+    </div>
 
-Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
-<pre class="line-numbers"><code class="language-javascript">
+    A Adobe (mantenedora do Brackets) trata como a "cereja do bolo", a capacidade do Brackets de lidar com as layers diretamente de arquivos <strong>.psd</strong>.
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-psd-layers.png" alt="" />
+    </div>
 
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
+    Além disto, é muito fácil de instalar plugins nele, basta pesquisar uma temática, como "todo", ou "terminal", e escolher um da lista.
+    <div class="picture"
+         style="float: left;">
+         <img itemprop="image" src="/articles/my-editor/brackets-plugins.png" alt="" />
+    </div>
 
-var obj= {
-    blah: "x"
-};
+    <h2>Plugins</h2>
 
-func1.call(obj, "a", 3); // "x", "a", 3
+    Dentre os plugins que utilizo, atualmente os mais relevantes são:
 
-</code></pre>
+    <ul>
+        <li>TODOs: Ele busca por comentários dipo <em>// todo:</em> e lista todos como uma lista de "a fazer".</li>
+        <li>Terminal: Permite executar comandos do terminal (inclusive watch) diretamente no editor</li>
+        <li>Linters e Hinters: Vão ajudando em tempo real</li>
+        <li>Git: Marcam as linhas como novas, alteradas ou deletadas. Há também um plugin para analisar o Diff.</li>
+        <li>Tabs: por padrão, o Brackets não tem abas, apenas a lista do projeto na lateral</li>
+        <li>Outline: Analista e exibe a árvore do código (funções, classes, tags...)</li>
+        <li>Emmet e snippets: Digitar menos coisas repetitivas</li>
+    </ul>
 
-Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
-Daí, podemos resolver isto usando:
+    <h2>Concluindo</h2>
+    Para finalizar...sim, o editor é de tua inteira escolha, só quis descrever aqui algumas das motivações que tive, para adotar o Brackets como meu editor primário.<br/>
+    <br/>
+    E aí, qual o teu editor preferido? Coloca nos comentários e avisa a gente quais os motivos :)
 
-<pre class="line-numbers"><code class="language-javascript">
-function (){
-    var args= Array.prototype.slice.call(arguments);
-    args.forEach(...);
-}
-</code></pre>
+</section>
 
-Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
-Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
-
-<strong>.apply()</strong>
-
-O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// apply está enviando uma Array, com a lista de parâmetros
-func1.apply(obj, ["a", 3]); // "x", "a", 3
-</code></pre>
-
-A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
-
-<pre class="line-numbers"><code class="language-javascript">
-function func1(){
-    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
-}
-</code></pre>
-
-<strong>.bind()</strong>
-
-O bind, funciona um pouco diferente.
-Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
-
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// a variável theFunction se tornará a função func1
-// amarrada ao obj.
-var theFunction= func1.bind(obj);
-
-// ao chamar theFunction, o "this" dela já é o obj
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
-Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
-Eis uma alternativa que o pessoal faz:
-
-<pre class="line-numbers"><code class="language-javascript">
-// igual exemplo anterior
-function func1 (arg1, arg2) {
-    console.log(this.blah, arg1, arg2);
-}
-
-var obj= {
-    blah: "x"
-};
-
-// theFunction recebe, literalmente, uma função, a qual usará
-// o .apply, quando chamada
-var theFunction= function(){
-    func1.apply(obj, Array.prototype.slice.call(arguments));
-};
-
-theFunction("a", 123); // "x", "a", 123
-
-</code></pre>
-
-O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
-
-<strong>Finalizando</strong>
-
-Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
-
-<pre class="line-numbers"><code class="language-javascript">
-function func3() {
-    console.log(this);
-}
-
-func3(); // window
-func3.call({ some: "prop" }); // object { some: "prop" }
-func3.call("just a string"); // string "just a string"
-func3.call(123); // number 123
-func3.call(document.body); // object HTMLBodyElement
-
-</code></pre>
-
-O que pode acabar sendo usado em situações como esta:
-
-<pre class="line-numbers"><code class="language-javascript">
-function calc(val1, val2){
-    console.log(this.max(val1, val2));
-    console.log(this.cos(val2));
-    console.log(this.min(val1, val2));
-    console.log(this.pow(val1, val2));
-}
-
-calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
-
-</code></pre>
-
-Espero que tenha sido um post útil e bem explicativo! :)
-
-Não deixem de divulgar o post, e dar sua opinião.
-
-]]></description>
-  </item>
-  
-  <item>
-    <title>Creating notes, alerts and block quotes for citations using CSS</title>
-    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
-    
-    <category>
-    <![CDATA[ css ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ pseudo-element ]]>
-    </category>
-    
-    <description><![CDATA[
-<br/>
-Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
-You can create a cool style for them using CSS, like this:
-
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-How to to this?
-First of all, let's build the HTML structure:
-<pre class="line-numbers"><code class="language-markup">
-&lt;blockquote class="citation-container">
-    &lt;div class="citation-content">The quote message.&lt;/div>
-    &lt;cite class="citation-author">
-        &lt;a href="link" target="_blank">author&lt;/a>
-    &lt;/cite>
-&lt;/blockquote>
-</code></pre>
-Now, let's take care of the CSS:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container{
-    border-left: 0.5em solid #DDD;
-    margin: 1.5em 0 1.5em 1.5em;
-    padding: .75em .5em .75em 1em;
-    background: #fff;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    margin-right: 40px;
-    font-family: Arial, Tahome, sans-serif;
-}
-
-blockquote.citation-container cite{
-    display: block;
-    font-size: 0.8em;
-}
-blockquote.citation-container cite a{
-    text-decoration: none !important;
-    color: #0090D2;
-}
-</code></pre>
-And now, we can add the decoration element:
-<pre class="line-numbers"><code class="language-css">
-blockquote.citation-container:before{
-    display: block;
-    height: 0;
-    content: "“";
-    margin-left: -.95em;
-    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-    color: #999;
-}
-</code></pre>
-But...we can go further!
-Why not customize it a little bit more? What about colors and icons?
-Just by adding a class "red" to the blockquote element, we can use this:
-<pre class="line-numbers"><code class="language-css">
-.citation-container.red{
-    border-color: rgb(245, 113, 113);
-    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
-    background-color: rgb(255, 210, 210);
-}
-.citation-container.red:before{
-    content: "!";
-    color: rgb(245, 113, 113);
-    line-height: 50px;
-    margin-left: -56px;
-}
-</code></pre>
-And the result would be
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-<pre class="line-numbers"><code class="language-css">
-.citation-container.yellow{
-    border-color: rgb(243, 243, 62);
-    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
-    background-color: rgb(255, 255, 207);
-}
-.citation-container.yellow:before{
-    content: "»";
-    color: rgb(243, 243, 62);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 30px;
-    font-size: 4em;
-    margin-left: -50px;
-}
-</code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-<pre class="line-numbers"><code class="language-css">
-.citation-container.green{
-    border-color: rgb(155, 255, 171);
-    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
-    background-color: rgb(236, 253, 238);
-}
-.citation-container.green:before{
-    content: "✓";
-    color: rgb(155, 255, 171);
-    text-shadow: 0px 0px 3px #444;
-    line-height: 40px;
-    font-size: 2.2em;
-    margin-left: -58px;
-
-}
-</code></pre>
-<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-Cool thing, right?
-Now go ahead and customize yours!
 ]]></description>
   </item>
   
@@ -1264,187 +953,175 @@ Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizan
   </item>
   
   <item>
-    <title>PHP ZCE - A prova de certificação PHP</title>
-    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
+    <title>Escopo, this e that</title>
+    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
     
     <category>
-    <![CDATA[ php ]]>
+    <![CDATA[ javascript ]]>
     </category>
     
     <category>
-    <![CDATA[ zce ]]>
+    <![CDATA[ scope ]]>
     </category>
     
     <category>
-    <![CDATA[ certificacao ]]>
+    <![CDATA[ ecma ]]>
     </category>
     
     <description><![CDATA[
-Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
-<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
-<br/>
-<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
-<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
-<br/>
-<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
-<br/>Quando notei, a prova já era no dia seguinte!
-<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
-<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
-<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
-O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
-<br/>Mas enfim...
-<br/>
-<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
-<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
-<br/>
-<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
-<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
-<br/>
-<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
-<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
-<br/>
-<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
-<br/>
-<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
-<br/>
-<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
+Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
+<strong>Escopo</strong>
 
-]]></description>
-  </item>
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+}
+
+someFunc();
+
+</code></pre>
+
+Funções que cumprem o papel de construtores também.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
   
-  <item>
-    <title>Call, bind e apply no JavaScript - parte 1</title>
-    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
-    
-    <category>
-    <![CDATA[ JavaScript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ECMA ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES6 ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ES5 ]]>
-    </category>
-    
-    <description><![CDATA[
-Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
-Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
+    internalFunc();
+}
 
-<pre class="line-numbers"><code class="language-javascript">
-// declarando uma função no escopo atual
-function funcName () {};
-
-// uma instrução, setando uma função à uma variável
-// no escopo atual
-var funcName = function () {};
-</code></pre>
-
-Mas que diferença isto faz?
-Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
-Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
-
-Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-// atribuímos uma função com nome, a uma variável
-var myFunc= function funcName(){
-    return 123;
-};
-
-myFunc(); // 123
-funcName(); // ERROR
-</code></pre>
-
-Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
-
-<strong>Funções Imediatamente Evocadas</strong>
-
-Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
-Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
-
-Por exemplo:
-<pre class="line-numbers"><code class="language-javascript">
-
-console.log(func1); // function
-console.log(func2); // undefined
-
-// ou seja:
-func1(); // 1
-func2(); // ERROR
-
-// estamos declarando uma função, que será içada
-function func1(){ return 1; }
-
-// a variável func2 foi içada(com valor de "undefined"),
-// mas a função somente foi criada agora, e atribuída a ela
-var func2= function(){ return 2; };
+var instance= new SomeConstructor();
 
 </code></pre>
 
-Agora, pense no seguinte exemplo:
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
 <pre class="line-numbers"><code class="language-javascript">
-var d= new Date().getTime();
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
 </code></pre>
 
-Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
+<strong>this</strong>
 
-Da mesma forma, podemos evocar automáticamente uma função: 
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ return 123; }();
-console.log(x); // 123
-</code></pre>
-Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
 
-Uma curiosidade aqui, é que:
-<pre class="line-numbers"><code class="language-javascript">
-var x= function(){ /* faz algo, mas não retorna nada*/ }();
-console.log(x); // undefined
-</code></pre>
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
 
-E também:
 <pre class="line-numbers"><code class="language-javascript">
-var x= function doSomething(arg){ return arg; }(123);
-console.log(x); // 123
-doSomething(); // ERROR
-</code></pre>
-Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
-O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
-Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
-
-Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
-<pre class="line-numbers"><code class="language-javascript">
-(function (){
-    ...
-    console.log( "algo" );
-}());
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
 </code></pre>
 
-Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
-Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
 
-Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
+- Dentro de objetos
 <pre class="line-numbers"><code class="language-javascript">
--function (){
-    ...
-    console.log( "algo" );
-}();
-
-// ou
-
-!function (){
-    ...
-    console.log( "algo" );
-}();
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
 </code></pre>
 
-Esta foi a primeira parte deste assunto.
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
 
-Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+
 ]]></description>
   </item>
   
@@ -1840,6 +1517,245 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
   </item>
   
   <item>
+    <title>Creating notes, alerts and block quotes for citations using CSS</title>
+    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    
+    <category>
+    <![CDATA[ css ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pseudo-element ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
+
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+    &lt;div class="citation-content">The quote message.&lt;/div>
+    &lt;cite class="citation-author">
+        &lt;a href="link" target="_blank">author&lt;/a>
+    &lt;/cite>
+&lt;/blockquote>
+</code></pre>
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
+}
+
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
+}
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
+}
+</code></pre>
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+</code></pre>
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
+}
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
+}
+</code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
+}
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
+
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Cool thing, right?
+Now go ahead and customize yours!
+]]></description>
+  </item>
+  
+  <item>
+    <title>PHP ZCE - A prova de certificação PHP</title>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
+    
+    <category>
+    <![CDATA[ php ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ zce ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ certificacao ]]>
+    </category>
+    
+    <description><![CDATA[
+Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
+<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
+<br/>
+<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
+<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
+<br/>
+<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
+<br/>Quando notei, a prova já era no dia seguinte!
+<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
+<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
+<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
+O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
+<br/>Mas enfim...
+<br/>
+<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
+<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
+<br/>
+<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
+<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
+<br/>
+<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
+<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
+<br/>
+<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
+<br/>
+<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
+<br/>
+<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Participação na WebBR 2013</title>
+    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ w3c ]]>
+    </category>
+    
+    <description><![CDATA[
+WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
+<strong>WebBR 2013</strong>
+Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
+
+Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
+Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
+
+E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
+Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
+O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
+
+e é dada a largada!
+]]></description>
+  </item>
+  
+  <item>
+    <title>O Brasil e suas decisões...</title>
+    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
+    
+    <category>
+    <![CDATA[ politica ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ brasil ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ opinião ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
+
+O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
+
+Poh, não poderiam ter posto <strong>5</strong> bilhoezinhos de <strong>REAIS</strong> em investimentos para exploração espacial brasileira? que fossemos até a Lua, "apenas"!
+e podiam ter posto mais uns <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em educação e mudar a historia deste país? E quem sabe, mais <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em saúde e segurança, e sabe o que aconteceria?
+
+Teríamos gasto em torno de <strong>32 bi</strong>lhões de <strong>dollares</strong> na copa...o que é equivalente a <strong>SOMA DO QUE FOI GASTO NAS 3 ULTIMAS COPAS</strong>, e ainda assim, seria a <strong>COPA MAIS CARA DA HISTÓRIA</strong>!
+Bom...acho que a dilminha não tem muita desculpa pra dar sobre por que o país não vai pra frente, né? É só má vontade mesmo, pura, e simples má vontade!
+
+O que realmente me entristece é saber que este país tinha tanto potencial!
+Acabamos de passar por uma oportunidade ÚNICA para este país! Não, não estou falando da copa! Estou falando do andamento financeiro, acesso a informações, à situação financeira de outros países, o interesse que eles despertaram sobre o Brasil, a valorização da terra e da moeda(ok, sabemos que há uma bolha), etc...
+Poderíamos, atrevo-me a dizer, ter nos tornado quase um país de primeiro mundo! Poderíamos ter passado de um "país granjeiro e agropecuário" a um país que oferece produtos de fato, tecnologia, etc...fora isso, a copa está aí para dar o maior destaque internacional ao país e seu povo e...não estamos preparados!
+Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocionalmente, culturalmente...o país não está pronto!
+
+O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
+]]></description>
+  </item>
+  
+  <item>
     <title>Mozilla Summit 2013</title>
     <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
     
@@ -1886,207 +1802,432 @@ Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https:
   </item>
   
   <item>
-    <title>Escopo, this e that</title>
-    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    <title>Hoisting no JavaScript</title>
+    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
     
     <category>
     <![CDATA[ javascript ]]>
     </category>
     
     <category>
-    <![CDATA[ scope ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ ecma ]]>
+    <![CDATA[ es2015 ]]>
     </category>
     
     <description><![CDATA[
-Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
-<strong>Escopo</strong>
+Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
 
-O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
-Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
-Uma maneira de criar um escopo, é utilizando uma função.
-
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
 <pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
+var x= 1;
 
-function someFunc () {
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
+if(x === 3){
+    var y= 1;
 }
 
-someFunc();
-
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
 </code></pre>
 
-Funções que cumprem o papel de construtores também.
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
 
-
-<pre class="line-numbers"><code class="language-javascript">
-// escopo global
-var globalVariable= 123;
-
-function SomeConstructor () {
-
-    var localVariable= 456;
-    
-    // tem acesso ao escopo superior
-    console.log(globalVariable);
-
-    function internalFunc () {
-        var secondLevelVariable= 789;
-
-        console.log(localVariable);
-        console.log(secondLevelVariable);
-        console.log(globalVariable);
-    }
-  
-    internalFunc();
-}
-
-var instance= new SomeConstructor();
-
-</code></pre>
-
-Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
-Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+Ainda duvida?
+Façamos assim, então:
 
 <pre class="line-numbers"><code class="language-javascript">
-"use strict";
+var x= 1;
 
-var global1= 1;
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
 
-function someFunc () {
-    var localVar= 123;
-    global2= 456; // isto, criará uma variável global, por acidente.
-
-    console.log( window.global1 );
+if(x === 3){
+    var y= 1;
 }
 
 </code></pre>
 
-<strong>this</strong>
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
 
-Escopos, normalmente setam um valor para <em>this</em>.
-Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
-
-Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+Da mesma forma, funções podem ser declaradas ou atribuídas.
 
 <pre class="line-numbers"><code class="language-javascript">
-"use strict";
-function blah(){
-    console.log(this); // imprime Window
-}
-blah();
-</code></pre>
+// chamando a funcão 1
+func1(); // joga 1 no console
 
-Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
-
-- Dentro de objetos
-<pre class="line-numbers"><code class="language-javascript">
-var o= {
-    doSomething: function () {
-        console.log(this); // imprime Object(o)
-    }
-}
-o.doSomething();
-</code></pre>
-
-- Em funções construtoras
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    console.log(this); // imprime Klass {foo: "bar"} 
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
 }
 
-var instance= new Klass();
-</code></pre>
+// chamando a função 2
+func2(); // ERROR
 
-- Usando call, bind e apply
-Será discutido em outro post, com maiores detalhes.
-
-<strong>that</strong>
-
-A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
-O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
-
-Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
-
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(this);
-    }
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
 }
 
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"} 
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+// a partir de agora, func2 poderia ser evocada
 </code></pre>
 
-Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
 
-<pre class="line-numbers"><code class="language-javascript">
-function Klass () {
-    var that= this; // guarda a referência ao this
-    this.foo= 'bar';
-    this.logIt= function () {
-        console.log(that);
-    }
-}
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
 
-var k= new Klass();
-k.logIt(); // imprime Klass {foo: "bar"}
-setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
-</code></pre>
-
-Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
-Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
-
-Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
-
-Espero que tenha sido útil! :)
-
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
 
 ]]></description>
   </item>
   
   <item>
-    <title>Participação na WebBR 2013</title>
-    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
+    <title>Call, bind e apply no JavaScript - parte 1</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
     
     <category>
-    <![CDATA[ events ]]>
+    <![CDATA[ JavaScript ]]>
     </category>
     
     <category>
-    <![CDATA[ web ]]>
+    <![CDATA[ ECMA ]]>
     </category>
     
     <category>
-    <![CDATA[ w3c ]]>
+    <![CDATA[ ES6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES5 ]]>
     </category>
     
     <description><![CDATA[
-WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
-<strong>WebBR 2013</strong>
-Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
+Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
+Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
 
-Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
-Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
+<pre class="line-numbers"><code class="language-javascript">
+// declarando uma função no escopo atual
+function funcName () {};
 
-E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
-Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
-O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
+</code></pre>
 
-e é dada a largada!
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
+
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
+};
+
+myFunc(); // 123
+funcName(); // ERROR
+</code></pre>
+
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+
+console.log(func1); // function
+console.log(func2); // undefined
+
+// ou seja:
+func1(); // 1
+func2(); // ERROR
+
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
+
+</code></pre>
+
+Agora, pense no seguinte exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+var d= new Date().getTime();
+</code></pre>
+
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
+
+Da mesma forma, podemos evocar automáticamente uma função: 
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ return 123; }();
+console.log(x); // 123
+</code></pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
+
+Uma curiosidade aqui, é que:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
+</code></pre>
+
+E também:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
+</code></pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
+
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
+<pre class="line-numbers"><code class="language-javascript">
+(function (){
+    ...
+    console.log( "algo" );
+}());
+</code></pre>
+
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
+
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
+<pre class="line-numbers"><code class="language-javascript">
+-function (){
+    ...
+    console.log( "algo" );
+}();
+
+// ou
+
+!function (){
+    ...
+    console.log( "algo" );
+}();
+</code></pre>
+
+Esta foi a primeira parte deste assunto.
+
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
+]]></description>
+  </item>
+  
+  <item>
+    <title>call, bind e apply no JavaScript - parte 2</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
+
+<strong>.call()</strong>
+
+O método <em>.call</em>, literalmente, "chama" a sua função.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    return 1;
+}
+
+var func2= function(){
+    return 2;
+}
+
+func1.call(); // 1
+func2.call(); // 2
+
+</code></pre>
+
+A diferença, está nos argumentos(parâmetros) passados a esta função.
+Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// criando uma variável global apenas para demonstração
+window.blah= 1;
+
+// uma função que utiliza o this
+function func1 () {
+    console.log(this.blah);
+}
+
+// um objeto a ser usado como exemplo
+var obj= {
+    blah: 2
+};
+
+func1(); // 1 (vindo do objeto window), escopo atual
+func1.call(obj); // 2 (vindo do objecto obj)
+
+</code></pre>
+
+Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+<pre class="line-numbers"><code class="language-javascript">
+
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+func1.call(obj, "a", 3); // "x", "a", 3
+
+</code></pre>
+
+Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
+Daí, podemos resolver isto usando:
+
+<pre class="line-numbers"><code class="language-javascript">
+function (){
+    var args= Array.prototype.slice.call(arguments);
+    args.forEach(...);
+}
+</code></pre>
+
+Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
+Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+
+<strong>.apply()</strong>
+
+O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// apply está enviando uma Array, com a lista de parâmetros
+func1.apply(obj, ["a", 3]); // "x", "a", 3
+</code></pre>
+
+A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+}
+</code></pre>
+
+<strong>.bind()</strong>
+
+O bind, funciona um pouco diferente.
+Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// a variável theFunction se tornará a função func1
+// amarrada ao obj.
+var theFunction= func1.bind(obj);
+
+// ao chamar theFunction, o "this" dela já é o obj
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
+Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
+Eis uma alternativa que o pessoal faz:
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// theFunction recebe, literalmente, uma função, a qual usará
+// o .apply, quando chamada
+var theFunction= function(){
+    func1.apply(obj, Array.prototype.slice.call(arguments));
+};
+
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+
+<strong>Finalizando</strong>
+
+Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
+
+<pre class="line-numbers"><code class="language-javascript">
+function func3() {
+    console.log(this);
+}
+
+func3(); // window
+func3.call({ some: "prop" }); // object { some: "prop" }
+func3.call("just a string"); // string "just a string"
+func3.call(123); // number 123
+func3.call(document.body); // object HTMLBodyElement
+
+</code></pre>
+
+O que pode acabar sendo usado em situações como esta:
+
+<pre class="line-numbers"><code class="language-javascript">
+function calc(val1, val2){
+    console.log(this.max(val1, val2));
+    console.log(this.cos(val2));
+    console.log(this.min(val1, val2));
+    console.log(this.pow(val1, val2));
+}
+
+calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
+
+</code></pre>
+
+Espero que tenha sido um post útil e bem explicativo! :)
+
+Não deixem de divulgar o post, e dar sua opinião.
+
 ]]></description>
   </item>
   
