@@ -79,13 +79,6 @@
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/where-is-this-web-going-to/</loc>
-      <lastmod>2016-04-28</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
       <loc>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
@@ -93,14 +86,7 @@
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities/</loc>
-      <lastmod>2016-04-28</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</loc>
+      <loc>http://felipenmoura.com/articles/where-is-this-web-going-to/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
@@ -121,21 +107,14 @@
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/my-editor/</loc>
+      <loc>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</loc>
-      <lastmod>2016-04-28</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>http://felipenmoura.com/articles/escopo-this-e-that/</loc>
+      <loc>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
@@ -149,14 +128,21 @@
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</loc>
+      <loc>http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</loc>
+      <loc>http://felipenmoura.com/articles/mozilla-summit-2013/</loc>
+      <lastmod>2016-04-28</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
@@ -177,7 +163,14 @@
    </url>
 
    <url>
-      <loc>http://felipenmoura.com/articles/mozilla-summit-2013/</loc>
+      <loc>http://felipenmoura.com/articles/escopo-this-e-that/</loc>
+      <lastmod>2016-04-28</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
@@ -248,6 +241,13 @@
 
    <url>
       <loc>http://felipenmoura.com/articles/fworld-quem-eh-voce/</loc>
+      <lastmod>2016-04-28</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>http://felipenmoura.com/articles/my-editor/</loc>
       <lastmod>2016-04-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>

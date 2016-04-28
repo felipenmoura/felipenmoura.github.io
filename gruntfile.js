@@ -226,12 +226,13 @@ module.exports = function(grunt) {
 
                 // sort them out
                 validArticles.sort(function(left, right){
-                    return new Date(left.oCreationDate) >= new Date(right.oCreationDate);
+                    //console.log(new Date(left.oCreationDate), new Date(right.oCreationDate), new Date(left.oCreationDate) >= new Date(right.oCreationDate));
+                    return new Date(left.oCreationDate) - new Date(right.oCreationDate);
                 });
 
                 // set the previous and next links
                 validArticles.forEach(function(cur, i){
-
+                    console.log(cur.title, cur.oCreationDate);
                     articlesList.push({
                         title: cur.title,
                         tags: cur.tags,
