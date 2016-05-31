@@ -11,11 +11,106 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu Apr 28 2016 11:38:01 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Tue May 31 2016 15:43:18 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
+  
+  <item>
+    <title>Starting with Canvas in javascript</title>
+    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
+First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre class="line-numbers"><code class="language-javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+You probably know how to load an image  from js, right?
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre class="line-numbers"><code class="language-javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</code></pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre class="line-numbers"><code class="language-javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
+]]></description>
+  </item>
   
   <item>
     <title>Iniciando com o Canvas javascript</title>
@@ -114,101 +209,6 @@ Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage 
 Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
 
 Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
-]]></description>
-  </item>
-  
-  <item>
-    <title>Starting with Canvas in javascript</title>
-    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ canvas ]]>
-    </category>
-    
-    <description><![CDATA[
-Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
-First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
-            whatever you write in here, will be shown ONLY
-            when your canvas cannot be rendered.
-            Of course, it accepts HTML tags
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
-
-Ok, now, using event handlers we will treat it in our  javascript
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // yes, addEventListener does not work on IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
-<pre class="line-numbers"><code class="language-javascript">
-// let's create some global variables.
-// You can use it better with namespaces
-var canvas= null;
-var ctx= null;
-canvasHandler= function(){
-    // first of all, we simply get the canvas element itself
-    canvas= document.getElementById('theCanvasElement');
-    // now, we need to have the CONTEXT to work with
-    ctx= canvas.getContext('2d');
-}
-</code></pre>
-
-Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
-No, unfortunately it does not offer any other context besides 2D.
-Our canvas still has no properties. It has no with and height, we can set it then.
-From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
-<pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
-</code></pre>
-
-You probably know how to load an image  from js, right?
-<pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
-</code></pre>
-Ok, you can use it to insert images inside your canvas. Just like this.
-<pre class="line-numbers"><code class="language-javascript">
-    // instantiate an image
-    var img= new Image();
-    // we need to use the image when it has finished to load
-    img.addEventListener('load', function(){
-        // after downloading the image, we can draw it into the canvas
-        ctx.drawImage(this);
-        // where this= the image just downloaded
-    });
-    // then, we say the image's url, to it start loading
-    img.src= 'url.png';
-</code></pre>
-
-Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
-<pre class="line-numbers"><code class="language-javascript">
-    // draws the image in the position left=30, top=30
-    ctx.drawImage(this, 30, 30);
-    // draws the image in the 0/0 position, changing its size
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // more complex, draws the image croping it
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
-</code></pre>
-
-When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
-
-Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
 ]]></description>
   </item>
   
@@ -2906,11 +2906,123 @@ Algumas pessoas me perguntam sobre o editor que uso, se o aconselho, quais plugi
     <h2>Plugins</h2>
     Dentre os plugins que utilizo, atualmente os mais relevantes são:
     <ul style="list-style: initial;"><li>TODOs: Ele busca por comentários dipo <em>// todo:</em> e lista todos como uma lista de "a fazer".</li><li>Terminal: Permite executar comandos do terminal (inclusive watch) diretamente no editor</li><li>Linters e Hinters: Vão ajudando em tempo real</li><li>Git: Marcam as linhas como novas, alteradas ou deletadas. Há também um plugin para analisar o Diff.</li><li>Tabs: por padrão, o Brackets não tem abas, apenas a lista do projeto na lateral</li><li>Outline: Analista e exibe a árvore do código (funções, classes, tags...)</li><li>Emmet e snippets: Digitar menos coisas repetitivas</li></ul>
-
     <h2>Concluindo</h2>
     Para finalizar...sim, o editor é de tua inteira escolha, só quis descrever aqui algumas das motivações que tive, para adotar o Brackets como meu editor primário.
 
     E aí, qual o teu editor preferido? Coloca nos comentários e avisa a gente quais os motivos :)
+
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Google I/O 2016</title>
+    <link>http://felipenmoura.com/articles/google-io-2016/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ conference ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ google ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ I/O ]]>
+    </category>
+    
+    <description><![CDATA[
+Este ano tive o prazer de me tornar um Google Expert, e fui participar do <strong>Google I/O</strong>, um encontro anual promovido pelo Google para divulgar algumas de suas novidades, e aproveitar para unir uma quantidade enorme de <s>nerds</s>gente da tecnologia!<br/>
+<section>
+    <h2>Google I/O 2016</h2>
+    Achei o evento fantástico e com uma estrutura impressionante! Mas a organização do evento certamente tem algumas pequenas coisas para ajustar.
+O evento começou com um keynote no palco principal, e seguiu com diversas palestras segmentadas.
+Todas as palestras estão online agora! Assista aos vídeos delas no site do Google IO 2016.
+
+Vou fazer um resumo aqui do que foi mostrado, comentado ou anunciado nos três dias de evento.
+
+<h3>Firebase</h3>
+Normalmente não colocaria o Firebase aqui, mas a Google está, realmente, dando bastante ênfase no Firebase!
+Não acredita? Foi anunciado a liberação para envio de mensagens (post notifications) ilimitadas, gratuitas! Assim como uso de custom-domains (acredito que a intenção seja pegar uma fatia do mercado do Github, neste quesito), havia uma tenda só para quem quisesse tirar dúvidas com o Firebase, aconteceram diversas palestras sobre o tema e ainda deram $500,00 em serviços no Firebase pra todos lá!<br/>
+Parece que o Google está mesmo, interessado em fazer valer esta sua aquisição!
+
+<h3>VR (Realidade Virtual ou Realidade Aumentada)</h3>
+Alguns anúncios e projetos muito interessantes!
+Entre elas, o <em>Daydream</em>, uma plataforma mobile para a realidade virtual!
+Desta forma, empresas conseguirão desenvolver games ou interações e simulações seguindo alguns certos padrões.
+Além disto, empresas que produzem materiais(hardware) para realidades virtuais, como óculos ou controllers por exemplo, teriam também um padrão pra seguir!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/UGlcsJOt-ng?list=PLOU2XLYxmsILe6_eGvDN3GyiodoV3qNSC" frameborder="0" allowfullscreen></iframe>
+Outra novidade no mundo da Realidade virtual, ou mais para o lado da Realidade Aumentada, é o <strong>Project Tango</strong>. Um projeto muito massa, que testei lá e que realmente, é impressionante, preciso e muito rápido!
+Me lembrou um pouco o que promete fazer o HoloLens da Microsoft.
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/5ZKhxmqhpmM" frameborder="0" allowfullscreen></iframe>
+Além disto, o Youtube já anunciou suporte à plataforma de VR (a própria DayDream) e suporte a live streaming em 360!
+
+<h3>Machine Learning (Inteligência Artificial)</h3>
+
+Google anunciou grandes novidades na área de Machine Learning, com exemplos bastante impressionantes!
+Percebi que há um grande foco na contextualização! Saber exatamente qual o contexto em que o usuário se encontra, local, data, com quem, fazendo o que, etc...
+
+A compreensão de imagens também está ótima! O algoritmo deles consegue até mesmo identificar a raça de um cachorro, em uma foto!
+
+<h3>Home (casa inteligente) e Assistent</h3>
+O Google Home é um projeto bem massa também!
+Não é tão <em>novidade</em> assim, mas tem muito potencial!
+A grande vantagem, é que ele conta com a internet e todo o conhecimento do Google para buscar respostas e também, com uma API que permitirá conecta-lo a outras coisas, como lâmpadas, geladeiras e TVs que sejam smart!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/5bYSX2C4aWc" frameborder="0" allowfullscreen></iframe>
+Google Assistent é uma combinação de machine learning com seu contexto, compreendendo áudio e frases mais complexas, muito melhor.
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/google-io-2016/google-home-product.jpg" alt="Product Google Home" /></div>
+
+<h3>Android</h3>
+Já para o Android, estão prestes a lançar uma nova versão e querem que os desenvolvedores sugiram o novo nome!
+Há o lançamento da versão Developer Preview 2.0 do Android Wear e também a versão 2.2 do Android Studio.
+
+Mas o que realmente achei interessante (e se funcionar, promissor) são as tais <em>Android Instant Apps</em>!
+Eles mostraram alguns exemplos e pareceu "interessante" a abordagem.
+Achei meio polêmico por que vai meio de encontro com a evolução da web e das <em>Progressive Web Apps</em>...veremos onde isto vai dar!
+
+<h3>Allo e Duo</h3>
+Dois novos projetos lançados.
+<em>Allo</em> é basicamente um novo "chat", mas bem mais poderoso.
+Ele tenta tratar a forma como expressamos sentimentos ao escrever, lida melhor com imagens, com suporte offline e integra uma cacetada de coisas legais com a plataforma de machine learning do google! Isto quer dizer que eles oferecem dicas enquanto tu está escrevendo, relacionadas ao teu contexto atual.
+Aqui vai um exemplo onde ao planejar um jantar fora em um chat, Google já exibe uma lista de possibilidades, diretamente no chat (alguém lembrou do Wave, aqui?)
+<div class="picture" style="text-align: center;"><img itemprop="image" src="https://3.bp.blogspot.com/-ROYrLax6ggg/Vzx3fKq_mjI/AAAAAAAASUo/M5hptuwxzqYuhcyB1jcYcbwSA0nHiiN0wCLcB/s1600/3-Gbot_animation_v4-GIF_abbrev%2B%25281%2529.gif" alt="Google Allo" /></div>
+
+Já o <em>Duo</em> é uma app para conversas por vídeo.
+Mas entre suas principais diferenças, esta o fato de você ter um preview da camera da pessoa que está te ligando, antes de atender. Novamente, contextualização.
+Admito que ainda não decidi se gostei ou não desta feature :p
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/CIeMysX76pM" frameborder="0" allowfullscreen></iframe>
+<h3>Web Development</h3>
+Ah, finalmente o que mais interessa!
+Achei que o Google I/O poderia ter tido mais apresentações ou foco no desenvolvimento (o foco pareceu realmente ser o Firebase!).
+
+O foco total, no desenvolvimento web, é sem dúvida o <em>Mobile First</em> e <em>Offline First</em>!
+Muita coisa sobre AMP (Accelerated Mobile Pages) e PWA (Progressive Web Apps).
+Além disto, as atualizações no Devtools são bem legais (já disponíveis no Chrome Canary).
+
+A palestra de Jake Archibald foi, na minha opinião, a melhor do evento dentre as que consegui assistir! Vale lembrar que ele estará na <a href="https://braziljs.com.br/conf" target="blank">BrazilJS 2016</a> e ele comentou comigo que está bem empolgado!
+
+<h3>Extras</h3>
+Foi um evento ótimo e a experiência de estar aqui(lá) foi maravilhosa!
+Aconteceram outras coisas incríveis no evento, entre elas a abertura que contou com dois músicos "tocando o auditório"! Ou mais ou menos isto! Eles usaram cordas amarradas à tenda principal do palco como instrumento musical!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/b2Y1GXQk0-I" frameborder="0" allowfullscreen></iframe>
+Além disso, aconteceram as festas também!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/Xneml1S78_8" frameborder="0" allowfullscreen></iframe>
+Quer ver o <strong>keynote do Google I/O 2016 em 360º</strong>?
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/lFm4s50PnmY" frameborder="0" allowfullscreen></iframe>
+
+Tenho muitas fotos postadas e pretendo finalizar vídeos e materiais que preparei sobre meus passeios e visitas ao longo das próximas semanas.
+
+Dê uma olhada nas fotos em meus álbuns no Facebook:
+<a href="https://www.facebook.com/media/set/?set=a.10208503915091438.1073741891.1114477480&type=3" target="blank">Primeiro dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208509128061759.1073741893.1114477480&type=3" target="blank">Segundo dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208516224959177.1073741894.1114477480&type=3" target="blank">Terceiro dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208521483410635.1073741895.1114477480&type=3" target="blank">Museu da História do Computador</a>
 
 </section>
 
