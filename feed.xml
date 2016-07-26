@@ -11,106 +11,11 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue May 31 2016 15:43:18 GMT-0300 (BRT)</lastBuildDate>
+  <lastBuildDate>Tue Jul 26 2016 00:48:40 GMT-0300 (BRT)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
   <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
-  
-  <item>
-    <title>Starting with Canvas in javascript</title>
-    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
-    
-    <category>
-    <![CDATA[ javascript ]]>
-    </category>
-    
-    <category>
-    <![CDATA[ canvas ]]>
-    </category>
-    
-    <description><![CDATA[
-Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
-First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;body&gt;
-        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
-            whatever you write in here, will be shown ONLY
-            when your canvas cannot be rendered.
-            Of course, it accepts HTML tags
-        &lt;/canvas&gt;
-    &lt;/body&gt;
-</code></pre>
-
-Ok, now, using event handlers we will treat it in our  javascript
-
-<pre class="line-numbers"><code class="language-markup">
-    &lt;/body&gt;
-    &lt;script&gt;
-          // yes, addEventListener does not work on IE
-          document.addEventListener('load', canvasHandler, false);
-    &lt;script&gt;
-&lt;/html&gt;
-</code></pre>
-
-Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
-<pre class="line-numbers"><code class="language-javascript">
-// let's create some global variables.
-// You can use it better with namespaces
-var canvas= null;
-var ctx= null;
-canvasHandler= function(){
-    // first of all, we simply get the canvas element itself
-    canvas= document.getElementById('theCanvasElement');
-    // now, we need to have the CONTEXT to work with
-    ctx= canvas.getContext('2d');
-}
-</code></pre>
-
-Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
-No, unfortunately it does not offer any other context besides 2D.
-Our canvas still has no properties. It has no with and height, we can set it then.
-From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
-<pre class="line-numbers"><code class="language-javascript">
-    canvas.width= 480;
-    canvas.height= 340;
-</code></pre>
-
-You probably know how to load an image  from js, right?
-<pre class="line-numbers"><code class="language-javascript">
-    var img= new Image();
-    img.src= 'url.png';
-</code></pre>
-Ok, you can use it to insert images inside your canvas. Just like this.
-<pre class="line-numbers"><code class="language-javascript">
-    // instantiate an image
-    var img= new Image();
-    // we need to use the image when it has finished to load
-    img.addEventListener('load', function(){
-        // after downloading the image, we can draw it into the canvas
-        ctx.drawImage(this);
-        // where this= the image just downloaded
-    });
-    // then, we say the image's url, to it start loading
-    img.src= 'url.png';
-</code></pre>
-
-Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
-<pre class="line-numbers"><code class="language-javascript">
-    // draws the image in the position left=30, top=30
-    ctx.drawImage(this, 30, 30);
-    // draws the image in the 0/0 position, changing its size
-    ctx.drawImage(this, 0, 0, 45, 75);
-    // more complex, draws the image croping it
-    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
-</code></pre>
-
-When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
-
-Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
-]]></description>
-  </item>
   
   <item>
     <title>Iniciando com o Canvas javascript</title>
@@ -209,6 +114,101 @@ Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage 
 Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
 
 Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Starting with Canvas in javascript</title>
+    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
+First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre class="line-numbers"><code class="language-javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+You probably know how to load an image  from js, right?
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre class="line-numbers"><code class="language-javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</code></pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre class="line-numbers"><code class="language-javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
 ]]></description>
   </item>
   
@@ -3025,6 +3025,46 @@ Dê uma olhada nas fotos em meus álbuns no Facebook:
 <a href="https://www.facebook.com/media/set/?set=a.10208521483410635.1073741895.1114477480&type=3" target="blank">Museu da História do Computador</a>
 
 </section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Palestra: Progressive Web App</title>
+    <link>http://felipenmoura.com/articles/talk-pwa/</link>
+    
+    <category>
+    <![CDATA[ talk ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ progressive web app ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pwa ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ service worker ]]>
+    </category>
+    
+    <description><![CDATA[
+Minha palestra em português sobre PWAs (Progressive Web Apps) focada em Service Workers, abordando Cache API, IndexedDB, Web Notifications, entre outras tecnologias.<br/>
+<section class="multi-lang" lang="en-US">
+<h2>Palestra: Progressive Web App</h2>
+Tive o prazer de palestrar no Google Lauchpad em São Paulo, lá na sede do Google Brasil.
+O evento foi muito legal, e a estrutura, como sempre, era excelente.
+
+Uma coisa que achei muito legal, foi justamente o público! O pessoal é muito dedicado e interessado, muito engajado! Conversei com muita gente muito legal.
+
+Farei alguns artigos focados em PWAs (Progressive Web App) e pretendo publica-los no portal da <a href="https://braziljs.org/" target="blank">BrazilJS</a>.
+
+Nesta talk, apresentei vários conceitos relacionados à PWAs, incluindo Web Notifications, Push Notifications, Cache API, IndexedDB e, é claro, Service Workers.
+
+Publiquei minha palestra no SpeakerDeck, veja abaixo:
+<a href="https://speakerdeck.com/felipenmoura/pwas-mais-que-apps-progressive-web-apps" target="blank">Speakerdeck</a>.<br/>
+<script async class="speakerdeck-embed" data-id="7172ebcd70f74c6f87b54e21f50d31c7" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 ]]></description>
   </item>
