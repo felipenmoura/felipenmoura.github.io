@@ -1,9 +1,27 @@
 [
     {
+        "title": "Chrome Summit 2016",
+        "description": "Took this picture during the Chrome Summit 2016, in San Francisco.",
+        "fullSize": "/images/photos/photo-felipe-n-moura-chrome-summit-2016.jpg",
+        "thumb": "/images/photos/photo-felipe-n-moura-chrome-summit-2016-thumb.jpg"
+    },
+    {
+        "title": "Google São Paulo - 2016",
+        "description": "After my talk at Goole São Paulo, in 2016",
+        "fullSize": "/images/photos/photo-felipe-n-moura-google-sp-2016.jpg",
+        "thumb": "/images/photos/photo-felipe-n-moura-google-sp-2016-thumb.jpg"
+    },
+    {
         "title": "BrazilJS 2015",
         "description": "Final picture of BrazilJS 2015, in Porto Alegre",
         "fullSize": "/images/photos/photo-felipe-n-moura-braziljs-2015.jpg",
         "thumb": "/images/photos/photo-felipe-n-moura-braziljs-2015-thumb.jpg"
+    },
+    {
+        "title": "Watching a talk",
+        "description": "This is me, sitting on stage behind the courtains, watching a talk in BrazilJS 2013.",
+        "fullSize": "/images/photos/photo-felipe-n-moura-braziljs-stage-2013.jpg",
+        "thumb": "/images/photos/photo-felipe-n-moura-braziljs-stage-2013-thumb.jpg"
     },
     {
         "title": "Fisl 2012",
@@ -12,28 +30,10 @@
         "thumb": "/images/photos/photo-felipe-n-moura-fisl-2012-speaking-talk-thumb.jpg"
     },
     {
-        "title": "Talk at W3c's WebBR 2013",
-        "description": "During a talk, at the W3c's WebBR conference, in 2013.",
-        "fullSize": "/images/photos/photo-felipe-n-moura-talk-speaking-webbr-2013.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-talk-speaking-webbr-2013-thumb.jpg"
-    },
-    {
-        "title": "Speaking at FrontInSampa",
-        "description": "In 2013, I spoke at FrontInSampa about many different web technologies.",
-        "fullSize": "/images/photos/photo-felipe-n-moura-speaking-talk-frontinsampa-2013.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-speaking-talk-frontinsampa-2013-thumb.jpg"
-    },
-    {
         "title": "Presenting at BrazilJS 2012",
         "description": "On stage, presenting at BrazilJS, in 2012",
         "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2012.jpg",
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2012-thumb.jpg"
-    },
-    {
-        "title": "Watching a talk",
-        "description": "This is me, sitting on stage behind the courtains, watching a talk in BrazilJS 2013.",
-        "fullSize": "/images/photos/photo-felipe-n-moura-braziljs-stage-2013.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-braziljs-stage-2013-thumb.jpg"
     },
     {
         "title": "Me, Jaydson and Brendan Eich at BrazilJS 2012",
@@ -48,19 +48,13 @@
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-5-thumb.jpg"
     },
     {
-        "title": "Jaydson and me on stage",
-        "description": "Jaydson and me on stage during BrazilJS 2014. We were running some raffles.",
-        "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-1.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-1-thumb.jpg"
-    },
-    {
         "title": "On stage, at BrazilJS 2013",
         "description": "",
         "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2.jpg",
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2-thumb.jpg"
     },
     {
-        "title": "Jaydson and me on stage at BrazilJS 2013",
+        "title": "Jaydson and I on stage at BrazilJS 2013",
         "description": "",
         "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3.jpg",
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3-thumb.jpg"
@@ -72,27 +66,9 @@
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-4-thumb.jpg"
     },
     {
-        "title": "Making announcementes at BrazilJS 2013",
-        "description": "Me, making announcementes before the end of BrazilJS 2013",
-        "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-6.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-6-thumb.jpg"
-    },
-    {
-        "title": "Zeke, Renato and Me",
-        "description": "Zeke Sikelianos, Renato Mangini and me, during the closing event at BrazilJS 2013",
-        "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-7.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-7-thumb.jpg"
-    },
-    {
         "title": "Jaydson and I, at BrazilJS 2013",
         "description": "Picture taken on BrazilJS 2013, alongside with Jaydson.",
         "fullSize": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage.jpg",
         "thumb": "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage-thumb.jpg"
-    },
-    {
-        "title": "Talk at TerraTechTalks",
-        "description": "This is me, giving a talk at TerraTechTalks, in 2012.",
-        "fullSize": "/images/photos/photo-felipe-n-moura-talk-speaking-terra-tech-talks-2012.jpg",
-        "thumb": "/images/photos/photo-felipe-n-moura-talk-speaking-terra-tech-talks-2012-thumb.jpg"
     }
 ]

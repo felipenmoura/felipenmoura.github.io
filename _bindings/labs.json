@@ -1,5 +1,13 @@
 [
     {
+        "title": "Vibe.js",
+        "description": "Create and test vibrate patterns in a visual tool generating code to use with the JavaScript's vibrate API.",
+        "link": "https://naschq.github.io/vibe.js/index.html",
+        "github": "https://github.com/NascHQ/vibe.js",
+        "image": "/resources/vibe.js.png",
+        "videoID": false
+    },
+    {
         "title": "Tool: HTML5 Image Editor",
         "description": "This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also remove all the pixels in the image based on a color.",
         "link": "http://felipenmoura.com/labs/html5-imager/",
@@ -8,11 +16,12 @@
         "videoID": "VDBSv8cBSy8"
     },
     {
-        "title": "Experiment: Stereoscopic 3D using JS, HTML and CSS",
-        "description": "A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.",
-        "link": "http://felipenmoura.com/projects/tv3d/index.html",
-        "image": "/resources/lab-tv-3d-stereoscopic-html.png",
-        "videoID": "e2JdJKEz_xE"
+        "title": "Game: Test your markup",
+        "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.",
+        "link": "http://felipenmoura.com/projects/test-your-markup/index.html",
+        "github": "https://github.com/felipenmoura/test-your-markup",
+        "image": "/resources/exp-test-your-might.png",
+        "videoID": false
     },
     {
         "title": "Experiment: ChromaKey in JavaScript",
@@ -23,19 +32,19 @@
         "videoID": "RonpitSO-u4"
     },
     {
+        "title": "Experiment: Stereoscopic 3D using JS, HTML and CSS",
+        "description": "A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.",
+        "link": "http://felipenmoura.com/projects/tv3d/index.html",
+        "image": "/resources/lab-tv-3d-stereoscopic-html.png",
+        "videoID": "e2JdJKEz_xE"
+    },
+    {
         "title": "Experiment: CSS3 3D environment tool ",
         "description": "This is the Root3D, a CSS3, 3D environment, for you to build some cool 3D groups",
         "link": "http://felipenmoura.com/projects/root3d",
         "github": "https://github.com/felipenmoura/Root3D",
         "image": "/resources/lab-3d-builder-tool-environment.png",
         "videoID": "0ZxFwNgc0e0"
-    },
-    {
-        "title": "Game: Test your markup",
-        "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.",
-        "link": "http://felipenmoura.com/projects/test-your-markup/index.html",
-        "github": "https://github.com/felipenmoura/test-your-markup",
-        "image": "/resources/exp-test-your-might.png",
-        "videoID": false
     }
+
 ]
