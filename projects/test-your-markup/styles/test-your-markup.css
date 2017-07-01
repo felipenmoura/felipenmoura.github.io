@@ -21,7 +21,6 @@ html, body{
 body{
 	font-size: 14px;
 	font-family: Tahoma, Sans-Serif;
-
 	/*background-image: url(../images/the-wall-of-dragon.jpg);*/
 	background-image: url(../images/bg-3.jpg);
 	background-attachment: fixed;
@@ -121,7 +120,6 @@ select, option{
 	font-weight: bold;
 	color: #f00;
 	background-color: #fdd;
-
 /*
 	-webkit-appearance: initial;
 	-moz-appearance: initial;

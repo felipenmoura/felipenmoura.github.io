@@ -18,7 +18,7 @@
     {
         "title": "Game: Test your markup",
         "description": "An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.",
-        "link": "http://felipenmoura.com/projects/test-your-markup/index.html",
+        "link": "http://felipenmoura.com/test-your-markup/",
         "github": "https://github.com/felipenmoura/test-your-markup",
         "image": "/resources/exp-test-your-might.png",
         "videoID": false
