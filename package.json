@@ -6,6 +6,11 @@
     "grunt-contrib-sass": ">=0.4.0",
     "grunt-contrib-watch": "*"
   },
+  "scripts": {
+    "start": "http-server -p 8080",
+    "build": "grunt build",
+    "publish": "git push gh master"
+  },
   "engine": "node 0.4.1",
   "devDependencies": {
     "grunt-contrib-cssmin": "^0.12.2",

@@ -1,5 +1,11 @@
 [
     {
+        "title": "PWA - Progressive Web Apps",
+        "description": "Talk presented in Russia during the DeveFest Voronezh 2017. We talked mostly about Service Workers and how they will help us reshape the web, but also about web app manifest and related web technologies.",
+        "link": "https://speakerdeck.com/felipenmoura/pwa-progressive-web-apps-en",
+        "image": "/resources/talk-pwa-voronezh.jpg"
+    },
+    {
         "title": "Accessibility!",
         "description": "In this talk, we discuss about accessibility on the web, and how to make the best use of web technologies to make it better.",
         "link": "http://felipenmoura.com/talks/accessibility/",

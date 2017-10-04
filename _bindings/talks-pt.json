@@ -1,5 +1,11 @@
 [
     {
+        "title": "PWA - Progressive Web Apps",
+        "description": "Palestra focada em Progressive Web Apps (ou PWAs), discutindo bastante sobre Service Workers e outras tecnologias relacionadas, como manifest, cacheAPI, etc.",
+        "link": "https://speakerdeck.com/felipenmoura/pwas-progressive-web-apps-devfest-cerrado#",
+        "image": "/resources/talk-pwa-voronezh.jpg"
+    },
+    {
         "title": "Ta, e agora? Acessibilidade!",
         "description": "Nesta apresentação, discutimos sobre acessibilidade na web, e como fazer o melhor uso das tecnologias web atuais.",
         "link": "http://felipenmoura.com/talks/accessibility/",
