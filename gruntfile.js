@@ -1,7 +1,10 @@
+const cpy = require('cpy')
+
 module.exports = function(grunt) {
 
+    const fs = require('fs-extra')
     var NunJucks = require('nunjucks'),
-        fs = require('fs'),
+        // fs = require('fs'),
         //nunEnv = new NunJucks.FileSystemLoader(['templates']),
         defaultLang = 'en',
         DOMAIN = 'http://felipenmoura.com/',
@@ -56,7 +59,7 @@ module.exports = function(grunt) {
         return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\">$1</a>")
     }
 
-    require('./scripts/create.js')(grunt);
+    require('./src/scripts/create.js')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -68,9 +71,9 @@ module.exports = function(grunt) {
                 },
                 files:  [{
                     expand: true,
-                    cwd: 'scss',
+                    cwd: 'src/scss',
                     src: ['*.scss'],
-                    dest: 'styles',
+                    dest: 'public/styles',
                     ext: '.css'
                 }]
             }
@@ -79,7 +82,7 @@ module.exports = function(grunt) {
         uglify : {
             all: {
                 files: {
-                    'scripts/default.min.js': ['scripts/default.js']
+                    'public/scripts/default.min.js': ['src/scripts/default.js']
                 }
             },
             options: {}
@@ -89,9 +92,9 @@ module.exports = function(grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'styles/',
+                    cwd: 'public/styles/',
                     src: ['*.css', '!*.min.css'],
-                    dest: 'styles/',
+                    dest: 'public/styles/',
                     ext: '.min.css'
                 }]
             }
@@ -99,7 +102,7 @@ module.exports = function(grunt) {
 
         scsslint: {
             allFiles: [
-                'scss/**/*',
+                'src/scss/**/*',
             ],
             options: {
                 //bundleExec: true,
@@ -110,7 +113,7 @@ module.exports = function(grunt) {
         },
 
         jslint: {
-            all: ['gruntfile.js', 'scripts/**.js']
+            all: ['gruntfile.js', 'src/scripts/**.js']
         },
 
         create: {
@@ -150,14 +153,12 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-jslint');
 
     grunt.registerMultiTask('compileArticles', 'generates the articles files.', function() {
-
         var done = this.async();
         done();
     });
 
     grunt.registerMultiTask('compileTemplates', 'Saves the files to be statified.', function() {
-
-        var idxFile = 'index.html';
+        var idxFile = 'public/index.html';
         var data = this.data;
         var done = this.async();
         var videosList = "";
@@ -167,7 +168,7 @@ module.exports = function(grunt) {
             if(!fs.existsSync(this.target)){
                 fs.mkdirSync(this.target);
             }
-            idxFile = this.target + '/index.html';
+            idxFile = 'public/' + this.target + '/index.html';
         }
 
         //https://www.youtube.com/playlist?list=PL2LsDS820I8Qg8xXkgXTty5BGiqAOJcVB
@@ -201,18 +202,18 @@ module.exports = function(grunt) {
                 articlesList= [],
                 tmpDt;
 
-            fs.readdir(artPath, function(err, files){
+            fs.readdir('src/' + artPath, function(err, files){
                 if(err){
                     console.error("Failed reading articles");
                 }
 
                 // get all the meta datas
                 files.forEach(function(cur){
-                    if(cur[0] == '.' || !fs.lstatSync(artPath + cur).isDirectory()){
+                    if(cur[0] == '.' || !fs.lstatSync('src/' + artPath + cur).isDirectory()){
                         return;
                     }
 
-                    metaData = JSON.parse( fs.readFileSync(artPath + cur + '/_meta.json') );
+                    metaData = JSON.parse( fs.readFileSync('src/' + artPath + cur + '/_meta.json') );
                     metaData.name= cur;
                     metaData.oCreationDate = metaData.creationDate;
                     metaData.ISOCreationDate = (new Date(metaData.creationDate)).toISOString();
@@ -264,7 +265,7 @@ module.exports = function(grunt) {
                     metaData = cur;
 
                     // create index-ajax for each article
-                    metaData.content = fs.readFileSync( artPath + cur.name + '/_content.html', 'utf-8');
+                    metaData.content = fs.readFileSync( 'src/' + artPath + cur.name + '/_content.html', 'utf-8');
                     //metaData.content = metaData.content.replace(/\n/g, '<br/>\n');
                     metaData.content = metaData.content.replace(/\<pre class\="lang:javascript decode\:1 " >/ig, '<pre class="line-numbers"><code class="language-javascript">');
                     metaData.content = metaData.content.replace(/\<pre class\="lang:css decode\:1 " >/ig, '<pre class="line-numbers"><code class="language-css">');
@@ -287,32 +288,56 @@ module.exports = function(grunt) {
 
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
-                    fs.writeFileSync(artPath + cur.name + '/index-ajax.html',
+                    try {
+                        fs.mkdirSync('public/' + artPath + cur.name)
+                    } catch (error) {
+                        // nothing, thanks
+                    }
+                    fs.writeFileSync('src/' + artPath + cur.name + '/index-ajax.html',
                                      renderedArticle,
                                      'utf-8');
                     // index inside the article itself
                     metaData.oContent = metaData.content;
-                    metaData.content = fs.readFileSync( artPath + cur.name + '/index-ajax.html', 'utf-8');
+                    metaData.content = fs.readFileSync( 'src/' + artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
-                    fs.writeFileSync(artPath + cur.name + '/index.html',
+                    fs.writeFileSync('src/' + artPath + cur.name + '/index.html',
                                      nunEnv.render(tplPath, data),
                                      'utf8');
                     data.currentArticleMetaData = metaData;
                 });
 
-                // return the last article
-                cb(data, validArticles);
+                // now we coppy the resources
+                Promise.all([
+                    copyDir('src/resources', 'public/resources'),
+                    copyDir('./images', 'public/images'),
+                    copyDir('./sh', 'public/sh'),
+                    copyDir('./src/articles', 'public/articles')
+                ]).then(function () {
+                    // return the last article
+                    cb(data, validArticles);
+                })
             });
         }
 
+        function copyDir (from, to, cb) {
+            return new Promise(function (resolve, reject) {
+                fs.copy(from, to, function (err) {
+                    if (err) {
+                        return console.error('Failed coppying files!', err);
+                    }
+                    resolve()
+                });
+            })
+        }
+
         function copyIndexTo (where, data) {
-            if(!fs.existsSync(where)){
-                fs.mkdirSync(where);
+            if(!fs.existsSync('public/' + where)){
+                fs.mkdirSync('public/' + where);
             }
 
             //var idxOrig = fs.readFileSync('./index.html', 'utf-8');
             //fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
-            fs.writeFileSync(where + '/index.html',
+            fs.writeFileSync('public/' + where + '/index.html',
                              nunEnv.render('_templates/index.html', data), 'utf8');
 
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
@@ -457,7 +482,7 @@ module.exports = function(grunt) {
 
         if(!videosList){
             var http = require('http');
-            var cachePath = 'resources/yt-feed-cache.json';
+            var cachePath = 'src/resources/yt-feed-cache.json';
             var req = http.request(options, function(res) {
                 var buffer= "";
                 res.setEncoding('utf8');

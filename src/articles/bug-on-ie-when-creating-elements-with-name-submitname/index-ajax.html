@@ -1,0 +1,111 @@
+<div id="articleTmpElement"></div>
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
+    <nav id="articles-nav" class="articles-nav">
+        <div id="loading-bar"></div>
+        <ul>
+            <li class="btn center">
+                <span class="art-nav-tbn art-see-list" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    <!--&nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a href="/articles/three-ways-to-reload-or-move-the-page"
+                   class="local art-nav-tbn"
+                   title="previous: Três maneiras de recarregar a página usando JavaScript">&lt;&lt; Prev
+                
+                   </a>
+            </li>
+            <li class="btn right">
+                
+                <a href="/articles/animations-with-css3-on-webkit"
+                   class="local art-nav-tbn"
+                   title="Next: <em>Animations with</em> CSS3">Next &gt;&gt;
+                
+                   </a>
+            </li>
+        </ul>
+
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-3
+                    ">
+            <h2 itemprop="headline"><a href="/articles/bug-on-ie-when-creating-elements-with-name-submitname">Bug on IE <em>- Elements with name/submitName</em></a></h2>
+            <div class="wrapper">
+                
+                    <img src="/articles/bug-on-ie-when-creating-elements-with-name-submitname/bug-on-ie.jpg"
+                         alt="Bug on IE - Elements with name/submitName"
+                         title=""
+                         itemprop="image" />
+                
+            </div>
+            <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2010-08-20T04:40:48.000Z"/>
+                Aug 20th, 2010 : javascript, bug, ie
+            </span>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            <div class='social-buttons-container'>
+    <!-- FB LIKE BUTTON -->
+    <div class="fb-like" data-href="http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    <!-- Tweitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname" data-text="Bug on IE - Elements with name/submitName" data-via="felipenmoura" data-count="none">Tweet</a>
+    <!-- GOOGLE PLUS -->
+    <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+</div>
+            <article itemprop="articleBody">Hi, yesterday I had to fight against this problem, which is not very touched out there.
+In the beginning, people from <em>jQuery</em> thought it was a jQuery bug, but searching a bit more I could find out the root of this problem.
+
+<b>What is it?</b>
+When running your javascript in Internet Explorer 6, or 7 or 8 in compatible mode, if you create dynamically an iframe, for example, and set it a <strong>name</strong> attribute, Internet Explorer will reaplace it by an <strong>submitName</strong> attribute. This attribute cannot be found with .getAttribute('submitName'), but that is the problem, neither can be with .getAttribute('name')!
+
+<b>How to see it happening? Try this:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifr= document.createElement('iframe');
+ifr.setAttribute('name', 'iFrameOne');
+document.body.appendChild(ifr);
+alert(ifr.getAttribute('name'));
+// you can also see it through the &quot;developer tool&quot; in the IE tools menu
+</code></pre>
+
+The main problem is that ... when you have something like a link or a form targeting this iframe, you loose it! The same happens with inputs with name, which are dynamically created.
+
+<b>How to fix it without ask your users to migrate to a real browser? I did this and it worked:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifrDiv= document.createElement('div');
+ifrDiv.innerHTML= &quot;&lt;iframe name='iFrameOne' &gt;&lt;/iframe&gt;&quot;;
+document.body.appendChild(ifrDiv);
+</code></pre>
+
+<b>Now, why does it happen?!</b>
+I had the chance to search for this and found in the Microsoft's webpage something about this old, known bug in <em>Internet Explorer</em>, with names on dynamic elements. Due to "fix" this, instead of fixing, then "provided" this workarounded attribute. When you try to deal with the name attribute, it applies like an alias, redirecting it to the Microsoft's Internet Explorer imaginary <strong>submitName</strong> attribute. But with this, you cant access a form that has a name, like this:
+<pre class="line-numbers"><code class="language-javascript">
+document.forms['dynamicFormName'];
+</code></pre>
+because the DOM hasn't rendered that form with the name you asked for.
+
+I hope it can help you, if you get stuck with this some day.</article>
+
+            <aside>
+                <div id="disqus_thread" data-article-url="/articles/bug-on-ie-when-creating-elements-with-name-submitname"></div>
+            </aside>
+        </div>
+    </div>
+</section>
