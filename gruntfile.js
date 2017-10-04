@@ -311,7 +311,25 @@ module.exports = function(grunt) {
                     copyDir('src/resources', 'public/resources'),
                     copyDir('./images', 'public/images'),
                     copyDir('./sh', 'public/sh'),
-                    copyDir('./src/articles', 'public/articles')
+                    copyDir('./src/articles', 'public/articles'),
+                    copyDir('./src/labs', 'public/labs'),
+                    copyDir('./sitemap.xml', 'public/'),
+                    copyDir('./robots.txt', 'public/'),
+                    copyDir('./safari-pinned-tab.svg', 'public/'),
+                    copyDir('./mstile-150x150.png', 'public/'),
+                    copyDir('./manifest.json', 'public/'),
+                    copyDir('./felipenmoura-felipe-nascimento-moura-favico.png', 'public/'),
+                    copyDir('./feed.xml', 'public/'),
+                    copyDir('./favicon-16x16.png', 'public/'),
+                    copyDir('./favicon-32x32.png', 'public/'),
+                    copyDir('./favicon.ico', 'public/'),
+                    copyDir('./BingSiteAuth.xml', 'public/'),
+                    copyDir('./browserconfig.xml', 'public/'),
+                    copyDir('./apple-touch-icon.png', 'public/'),
+                    copyDir('./android-chrome-192x192.png', 'public/'),
+                    copyDir('./android-chrome-256x256.png', 'public/'),
+                    copyDir('./404.html', 'public/'),
+                    copyDir('./CNAME', 'public/')
                 ]).then(function () {
                     // return the last article
                     cb(data, validArticles);
