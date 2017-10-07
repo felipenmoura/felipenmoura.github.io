@@ -313,7 +313,7 @@ module.exports = function(grunt) {
                     copyDir('./sh', 'public/sh'),
                     copyDir('./src/articles', 'public/articles'),
                     copyDir('./src/labs', 'public/labs'),
-                    copyDir('./sitemap.xml', 'public/'),
+                    copyDir('./sitemap.xml', 'public/sitemap.xml'),
                     copyDir('./robots.txt', 'public/'),
                     copyDir('./safari-pinned-tab.svg', 'public/'),
                     copyDir('./mstile-150x150.png', 'public/'),
@@ -329,6 +329,7 @@ module.exports = function(grunt) {
                     copyDir('./android-chrome-192x192.png', 'public/'),
                     copyDir('./android-chrome-256x256.png', 'public/'),
                     copyDir('./404.html', 'public/'),
+                    copyDir('./talks', 'public/talks'),
                     copyDir('./CNAME', 'public/')
                 ]).then(function () {
                     // return the last article
@@ -339,10 +340,14 @@ module.exports = function(grunt) {
 
         function copyDir (from, to, cb) {
             return new Promise(function (resolve, reject) {
+                if (to.substr(-1) === '/') {
+                    to += from.split('/').pop()
+                }
                 fs.copy(from, to, function (err) {
                     if (err) {
                         return console.error('Failed coppying files!', err);
                     }
+                    console.log('>>> copied ', from)
                     resolve()
                 });
             })
