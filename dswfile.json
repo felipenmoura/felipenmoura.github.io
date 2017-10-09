@@ -1,5 +1,5 @@
 {
-    "version": 1.1,
+    "version": 1.2,
     "applyImmediately": true,
     "appShell": [
         "/",
@@ -17,6 +17,7 @@
         "/sh/prism.min.css",
         "/sh/prism.js",
         "/images/relax.jpg",
+        "/images/icons.png",
         "/images/felipe-moura-felipenmoura-square.jpg",
         "/resources/vibe.js.png",
         "/resources/lab-canvas-image-editor-gama.png",
