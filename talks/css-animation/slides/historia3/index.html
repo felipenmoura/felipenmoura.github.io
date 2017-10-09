@@ -1,0 +1,72 @@
+<style type='text/css'>
+	
+	@-moz-keyframes balloonUP{
+		0%{
+			top: 100%;
+		}
+		100%{
+			top: -100%;
+		}
+	}
+	@-webkit-keyframes balloonUP{
+		0%{
+			top: 100%;
+		}
+		100%{
+			top: -100%;
+		}
+	}
+	
+	#priestBalloon{
+		position: absolute;
+		right: 40px;
+		top: 100%;
+		z-index: 1;
+		
+		-webkit-animation: balloonUP 12s 1 linear;
+		-moz-animation: balloonUP 12s 1 linear;
+		-moz-animation-delay: 2s;
+		-webkit-animation-delay: 2s;
+	}
+	#gradientOne{
+		width: 300px;
+		height: 100px;
+		border: solid 1px white;
+		margin: auto;
+		background-image: -moz-radial-gradient(center, circle, #44d, #000);
+		background-image: -webkit-gradient(radial, 500 0, 50, 300 0, 300, from(#44d), to(#000));
+	}
+</style>
+<h1>
+	Nem tudo que sobe...
+</h1>
+<div class='content' style='width: 100%; padding-top: 50px;'>
+	<div id='step1'
+		 class='anim-step1'
+		 style='text-align:center;position: relative; z-index: 2;'>
+		Todavia, existem alguns itens que n&atilde;o podem ser animados...<br/>
+		<span style='font-size: 120px;'>:(</span>
+	</div>
+	<div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		Gradientes e Font-family n&atilde;o podem ser animados<br/>
+		<div id='gradientOne'></div><br/>
+		Consequentemente, efeitos de reflexo tamb&eacute;m n&atilde;o...<br/>
+		<br/>
+	</div>
+	<div id='step3'
+		 class='anim-step3'
+		 style='text-align:center;'>
+		Propriedades de valores pre-definidos, como:<br/>
+		position, overflow, background-size, etc...
+		<br/>
+	</div>
+</div>
+
+<img id='priestBalloon' src='slides/historia3/priest.png' />
+
+<script>
+	/*PPW.addAction(function(){
+	});*/
+</script>

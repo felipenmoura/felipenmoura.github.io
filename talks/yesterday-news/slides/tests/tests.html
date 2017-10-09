@@ -1,0 +1,27 @@
+<img class="fulfill" src="slides/tests/just-try-it.jpg" />
+<img id="test-it" class="fulfill" src="slides/tests/just-jump.jpg" style="display: none;"/>
+
+<div class="fulfill LANG-PT">
+    <span class="test-1">Não precisa testar!<br/> Vai lá e mostra pros clientes como está funcionando!</span>
+    <span class="test-2" style="display: none;">Tu usaria sem testar antes?!</span>
+</div>
+
+<div class="fulfill LANG-EN">
+    <span class="test-1">Don't need to test!<br/> Go ahead and show it to the clients!</span>
+    <span class="test-2" style="display: none;">Woud you use it, without tests?!</span>
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('#test-it').fadeIn();
+            $('.test-1').fadeOut();
+            $('.test-2').fadeIn();
+        },
+        undo: function(){
+            $('#test-it').fadeOut();
+            $('.test-2').fadeOut();
+            $('.test-1').fadeIn();
+        }
+    })
+</script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Acessibility</title>
+        
+        <!-- REQUIRED -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../ppw/_scripts/jquery-1.8.2.min.js"><\/script>')</script>
+        
+        <script src="../../ppw/ppw.js"></script>
+        <!-- ADDONS -->
+        <script src="../../ppw/_addons/remote-slide/ppw-remote-slide.js"></script>
+        <script src="../../ppw/_addons/syntaxhighlighter/sh.js"></script>
+        <script src="../../ppw/_addons/social/social.js"></script>
+        <script src="../../ppw/_addons/caniuse/caniuse.js"></script>
+        <script src="../../ppw/_addons/forkme/forkme.js"></script>
+        <script src="../../ppw/_addons/cvox/cvox.js"></script>
+        <!-- -->
+        
+        <style type="text/css">
+            .slideFull{
+                padding: 0px !IMPORTANT;
+            }
+            
+            
+            .decoratedButton{
+                border: solid 1px black;
+                box-shadow: 0px 0px 10px black;
+                width: 110px;
+                border-radius: 4px;
+
+                float: left;
+                
+                margin: 4px;
+                height: 32px;
+                color: #444;
+                font-size: 25px !IMPORTANT;
+                font-family: Arial, Tahoma !IMPORTANT;
+                font-weight: normal !IMPORTANT;
+                background-image: -webkit-linear-gradient(top, white, gray);
+                background-image:    -moz-linear-gradient(top, white, gray);
+                background-image:     -ms-linear-gradient(top, white, gray);
+                background-image:      -o-linear-gradient(top, white, gray);
+                background-image:         linear-gradient(top, white, gray);
+            }
+            .decoratedButton:hover{
+                background-image: -webkit-linear-gradient(top, white, gray);
+                background-image:    -moz-linear-gradient(top, #eef, #44b);
+                background-image:     -ms-linear-gradient(top, white, gray);
+                background-image:      -o-linear-gradient(top, white, gray);
+                background-image:         linear-gradient(top, white, gray);
+            }
+            
+        </style>
+        
+        <script type="text/javascript">        var _gaq = _gaq || [];        _gaq.push(['_setAccount', 'UA-1270869-17']);        _gaq.push(['_setDomainName', '.felipenmoura.org']);        _gaq.push(['_trackPageview']);        (function() {        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);        })();    </script>
+        
+    </head>
+    <body>
+        <script>
+            
+            window.PPW.init({
+                
+                title: "Accessibility",
+                authors: [
+                    {
+                        name: "Felipe N. Moura",
+                        email: "felipenmoura@gmail.com",
+                        twitter: "@felipenmoura",
+                        picture: "https://twimg0-a.akamaihd.net/profile_images/1182045890/me.jpg"
+                    }
+                ],
+                PPWSrc: '../../ppw/',
+                /**
+                 * Defines the pattern to be used to load external slides.
+                 * The default is SLIDE_ID_DIR, found in cons.fs.
+                 * Also can be a string defining the pattern, where:
+                 *    %id    = slide identifier
+                 *    %num   = slide number
+                 *  
+                 * For example, if your slides a and b are in a directory called
+                 * slides, and the slide file is always index.html, the pattern
+                 * is as follows:
+                 *    fsPattern: 'slides/%id/index.html' // this is the default pattern
+                 */
+                fsPattern: PPW.cons.fs.SLIDE_ID_DIR_ID,
+                
+                /**
+                 *
+                 */
+                languages: ['PT', 'EN'],
+                defaultLanguage: 'EN',
+                
+                /**************************************************
+                *  PRESENTATION DATA                              *
+                **************************************************/
+               
+                // optional...you can simply say what is the transition you want
+                // using the theme property of this settings
+                //transition: 'trans-slider',
+                ////transition: 'trans-fall',
+                transition: 'trans-cut',
+                //transition: 'trans-fall-n-roll',
+                //transition: 'trans-cut',
+                //transition: 'trans-fade',
+                
+                // the theme to be used (default: default)
+                // this can be an array of a list of themes separated by comma, although,
+                // be careful loading more than one theme, once they may be concurring
+                // on some rules!
+                theme: "thm-default",
+                //theme: "default",
+                
+                useSplashScreen: false,
+                
+                // special settings for a theme(changes according to the choosen theme and is not required)
+                themeSettings: {
+                    shTheme: 'sh_bright'
+                },
+                
+                // only for the social addon
+                social: {
+                    //alertTime: 4000,
+                    sodialSearch: '@felipenmoura'
+
+                },
+                // the expected duration in minutes in minutes (default 50)
+                duration: 50,
+                // When in minutes, the speaker should be alerted(default: 30, 40)
+                alertAt: [10, 30, 40, 50],
+                // the list of slides
+                slides: [
+                        {id: 'capa',            type: 'opening'}, // ok
+                        {id: 'about',           type: 'content'}, // ok
+                        {id: 'braziljs',        type: 'content', className: "slideFull"}, // ok
+                        {id: 'interfaceTitle',  type: 'section', notes: ["precisamos compreender as interfaces!", "mostrar como NOS tambem necessitamos de uma certa acessibilidade"]}, // ok
+                        {id: 'interface1',      type: 'content', notes: ["Falar da maçaneta das portas e a sua evolução"]}, // ok
+                        {id: 'interface2',      type: 'content', notes: ["Usar exemplo do FOGAO"]}, // ok
+                        {id: 'interface3',      type: 'content', notes: ["Formularios e login atual, com integração do google ou facebook"]}, // ok
+                        {id: 'numeros',         type: 'section', notes: ["57mi deficientes visuais", "23% deficientes motores"]}, // ok
+                        {id: 'situacoes',       type: 'section'}, // ok
+                        {id: 'situacoes1',      type: 'content', notes: ["cores", "costumes (historia dos CHINESES)"]}, // ok
+                        {id: 'situacoes2',      type: 'content', notes: ["pilhas no teclado!", "Pau no monitor!"]}, // ok
+                        {id: 'situacoes3',      type: 'content', notes: ["browsers diferentes....SOs diferentes", "noscript, mobile", "flash, java: longdesc"]}, // ok
+                        {id: 'armas',           type: 'section'}, // ok
+                        {id: 'armas1',          type: 'content', notes: ["Teclados", "screenreaders", "Shaders"]}, // ok
+                        {id: 'detalhes',        type: 'section'}, // ok
+                        {id: 'detalhes1',       type: 'content', notes: ["Tecnologias existentes, simples", "link no topo", "labels e TIPOS de inputs(neste momento, mostrar o chromeVox)"]}, // ok
+                        {id: 'detalhes2',       type: 'content', notes: ["alt", "deixar alt em branco para imagens decorativas"]}, // ok
+                        {id: 'detalhes3',       type: 'content', notes: ["buttons ao inves de divs estilizados"]}, // OK
+                        {id: 'detalhes4',       type: 'content', notes: ["estrutura HTML deve ser concisa e semantica", "NAO PODEM haver erros no html"]}, // ok
+                        {id: 'detalhes5',       type: 'content', notes: ["use title em links", "fonts...permita q aumente o tamanho", "use web-fonts ao inves de imagens"]}, // ok
+                        {id: 'detalhes6',       type: 'content', notes: ["tabindex"]}, // ok
+                        {id: 'avancado',        type: 'section'}, // ok
+                        {id: 'avancado1',       type: 'content', notes: ["JS vs Accessibilidade"]}, // ok
+                        {id: 'avancado2',       type: 'content', notes: ["Criando um modal"]}, // ok
+                        {id: 'aria',            type: 'section'}, // ok
+                        {id: 'aria1',           type: 'content', notes: ["o que sao", "Elas tambem precisarao do seu js"]},
+                        {id: 'aria2',           type: 'content', notes: ["roles", "aria-states"]},
+                        {id: 'aria3',           type: 'content', notes: ["roles", "aria-states"]},
+                        {id: 'obrigado',        type: 'closing'}// ok
+                ],
+                
+                
+                
+                // KEYBOARD SHORTCUTS(optional)
+                shortcuts: {
+                    'F6': function(){
+                    },
+                    'F7': function(){
+                        alert(cvox.Api.isChromeVoxActive())
+                        if(!cvox.Api.isChromeVoxActive())
+                            cvox.Api.internalDisable();
+                        else
+                            cvox.Api.internalEnable();
+                    },
+                    'F8': function(){
+                    },
+                    'F9': function(){
+                    },
+                    'F10': function(){
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

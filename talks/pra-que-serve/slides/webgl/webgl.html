@@ -1,0 +1,13 @@
+<h2><img src="slides/webgl/webgl-logo.png" /></h2>
+<iframe id="webgl-eg-0"
+        style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%;"
+        src="javascript:void(0);"></iframe>
+
+<script>
+    PPW.onSlideEnter(function(){
+        $('#webgl-eg-0').attr('src', 'slides/webgl/face-threejs.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#webgl-eg-0').attr('src', 'javascript:void(0);');
+    })
+</script>

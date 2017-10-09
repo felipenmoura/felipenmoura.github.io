@@ -1,0 +1,141 @@
+<div class="fulfill" id="video-2-video-container"
+     style="background: black;
+            -webkit-transition: opacity 0.3s linear;
+            -moz-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;">
+    <video id="theVideo-2"
+           preload="auto"
+           style="height: 100%;
+                  position: absolute;
+                  opacity: 0;
+                  right: 0px;
+                  -webkit-transition: opacity 3s linear;
+                  -moz-transition: opacity 3s linear;
+                  transition: opacity 3s linear;
+                  -webkit-transition-delay: 5s;
+                  -moz-transition-delay: 5s;
+                  transition-delay: 5s;">
+        <source src="slides/video-2/Red-Bull-Drift.ogv" type='video/ogg; codecs="theora, vorbis"' />
+        <source src="slides/video-2/Red-Bull-Drift.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+    </video>
+</div>
+<div class="fulfill">
+    <pre id="video-2-sh-1" class="sh_javascript no-numbers no-lines" style="width: 80%;">
+var video= document.getElementById('videoId);
+
+video.addEventListener('timeupdate', function(){
+    ...
+});
+
+video.pause();
+video.play();</pre>
+
+
+    <div id="video-2-sh-2" >
+        <span class="LANG-PT">Por que não usar o que já se sabe, para fazer algo diferente, inusitado?</span>
+        <span class="LANG-EN">Why not to use what you already know to do something different?!</span>
+    </div>
+</div>
+
+
+<script>
+    (function(){
+
+        PPW.addListener('onstart', function(){
+            var el= document.getElementById('theVideo-2');
+            el.addEventListener('loadedmetadata', function() {
+                this.volume= 0;
+                this.play();
+                this.currentTime = 6.3;
+                this.pause();
+            }, false);
+
+            el.addEventListener('timeupdate', function(evt) {
+                var cT= this.currentTime.toPrecision(4),
+                    el= null;
+                if(cT >= 9.2 && !window.video2Action){
+                   this.pause();
+
+                   el= document.getElementById('video-2-sh-1');
+                   el.style.height= '500px';
+                   el.style.opacity= 1;
+                   return;
+                }
+                if(window.video2Action<2 && cT > 11){
+                    this.pause();
+                    el= document.getElementById('video-2-sh-2');
+                    el.style.height= '500px';
+                    el.style.opacity= 1;
+                    return;
+                }
+                if(window.video2Action==2 && cT > 12.3){
+                    el= this;
+                    this.style.opacity= 0;
+                    window.video2Action++;
+                    setTimeout(function(){
+                        el.pause();
+                        PPW.goNext();
+                    }, 500);
+                }
+            });
+        });
+    })();
+</script>
+<script>
+
+    window.video2Action= 0;
+
+    PPW.addAction({
+        does: function(){
+            var el= document.getElementById('video-2-sh-1');
+            el.style.height= '0px';
+            el.style.opacity= 0;
+
+            el= document.getElementById('theVideo-2');
+            el.play();
+            window.video2Action++;
+        },
+        undo: function(){
+            window.video2Action= 0;
+            PPW.goPrev();
+        }
+    });
+    PPW.addAction({
+        does: function(){
+
+            var el= document.getElementById('video-2-sh-2');
+            el.style.height= '0px';
+            el.style.opacity= 0;
+
+            el= document.getElementById('theVideo-2');
+            el.play();
+            window.video2Action++;
+
+        },
+        undo: function(){
+            window.video2Action= 0;
+            PPW.goPrev();
+        }
+    });
+
+    PPW.onSlideEnter(function(){
+        var el= document.getElementById('theVideo-2');
+        el.style.opacity= 1;
+        el.play();
+    });
+    PPW.onSlideExit(function(){
+        var el= document.getElementById('theVideo-2');
+        el.pause();
+        el.style.opacity= 0;
+        el.currentTime= 6.3;
+        window.video2Action= 0;
+        document.getElementById('video-2-video-container').style.opacity= 1;
+
+        el= document.getElementById('video-2-sh-1');
+        el.style.height= '0px';
+        el.style.opacity= 0;
+        el= document.getElementById('video-2-sh-2');
+        el.style.height= '0px';
+        el.style.opacity= 0;
+    });
+</script>

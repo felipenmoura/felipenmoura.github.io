@@ -1,0 +1,21 @@
+<h1 class="LANG-EN">Web as Interface</h1>
+<h1 class="LANG-PT">A Interface WEB</h1>
+
+<iframe id="cover-iframe"
+        style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 100%;"
+        src="javascript:void(0);"></iframe>
+<div class="">
+    <author>
+        by Felipe N. Moura -- felipenmoura.org<br/>
+        twitter.com/<em>felipenmoura</em> -- fb.com/<em>felipenmoura</em>
+    </author>
+</div>
+<script>
+    PPW.onSlideEnter(function(){
+        //$('#cover-iframe').attr('src', 'http://oos.moxiecode.com/js_webgl/water_noise/');
+        $('#cover-iframe').attr('src', 'slides/cover/Water-Ocean.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#cover-iframe').attr('src', 'javascript:void(0);');
+    })
+</script>

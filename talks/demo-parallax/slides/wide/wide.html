@@ -1,0 +1,106 @@
+<div class="fulfill" id="wide-bg">
+    <div id="wide-viewport">
+        <div id="wide-title">
+            <h2>Power Polygon</h2>
+            <h3><span style="float: left;">The definitive HTML5 presentation tool, by </span> <a href="http://braziljs.org/projetos/" target="_blank"></a></h3>
+        </div>
+        <div id="who-started">
+            
+            Check the next animations to see a different way of using parallax effects!<br/><br/>
+            "This presentation was created using <a href="http://github.com/braziljs/power-polygon/" target="_blank">Power Polygon</a>, started by <a href="http://felipenmoura.org/" target="_blank">Felipe N. Moura</a> at <a href="http://braziljs.org/projetos/" target="_blank">BrazilJS</a>." 
+            <a href="http://twitter.com/felipenmoura" target="_blank" style="font-size: 14px">...get in touch!</a>
+            
+        </div>
+        <img id="who-pic" src="slides/wide/felipe-nascimento-moura.png" alt="Felipe N. Moura" />
+        
+        <img id="adam" src="slides/wide/adam.png" alt="Mankind" />
+        <img id="god" src="slides/wide/god.png" alt="Creativity" />
+        
+        <img id="missiles" src="slides/wide/missiles.png" alt="Random picture" />
+        <img id="ideas-in-mind" src="slides/wide/ideas-in-mind.png" alt="ideas-in-mind" />
+        <img id="power-polygon-final" src="slides/wide/power-polygon.png" alt="Power Polygon" />
+        
+        
+        
+    </div>
+    
+    <img id="document" src="slides/wide/document.png" alt="Document" />
+    <img id="cave" src="slides/wide/cave.png" alt="Cave" />
+    <img id="hand-writing" src="slides/wide/hand-writing.png" alt="hand-writing" />
+    <img id="homem" src="slides/wide/homem-vitruviano.png" alt="homem-vitruviano" />
+    
+</div>
+
+<script>
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            PPW.unlock();
+            PPW.showMessage("Use your keyboard arrays or mouse to go forward!");
+            $('#who-pic, #who-started').addClass('active');
+        },
+        undo: function(){
+            $('#who-pic, #who-started').removeClass('active');
+            PPW.goNextSlide();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#who-pic, #who-started').removeClass('active');
+            $('#adam, #god').addClass('active');
+        },
+        undo: function(){
+            $('#who-pic, #who-started').addClass('active');
+            $('#adam, #god').removeClass('active');
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#adam, #god').removeClass('active');
+            setTimeout(function(){$('#document, #cave, #hand-writing, #homem').addClass('active');}, 600);
+        },
+        undo: function(){
+            setTimeout(function(){$('#adam, #god').addClass('active');}, 600);
+            $('#document, #cave, #hand-writing, #homem').removeClass('active');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#document, #cave, #hand-writing, #homem').removeClass('active').addClass('postActive');
+            setTimeout(function(){$('#missiles').fadeIn();});
+        },
+        undo: function(){
+            $('#document, #cave, #hand-writing, #homem').addClass('active').removeClass('postActive');
+            $('#missiles').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#missiles').fadeOut();
+            $('#ideas-in-mind').fadeIn();
+        },
+        undo: function(){
+            $('#ideas-in-mind').fadeOut();
+            $('#missiles').fadeIn();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#ideas-in-mind').fadeOut();
+            $('#power-polygon-final').fadeIn(function(){
+                $('#wide-title').addClass('active');
+                $('#wide-title h3').fadeIn();
+            });
+        },
+        undo: function(){
+            $('#ideas-in-mind').fadeIn();
+            $('#power-polygon-final').fadeOut();
+            $('#wide-title').removeClass('active');
+            $('#wide-title h3').fadeOut();
+        }
+    });
+</script>

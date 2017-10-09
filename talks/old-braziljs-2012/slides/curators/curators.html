@@ -1,0 +1,44 @@
+<div class="parallax-set">
+    <div class="far mv-right"><img src="slides/audience.jpg" class="fulfill"/></div>
+    <div class="medium mv-left">
+        <img src="slides/curators/felipe-n-moura.png" style="height: 100%; float: right; margin-right: 14%;" alt="" />
+        <img src="slides/curators/jaydson.png" style="height: 100%; float: right;" alt="" />
+    </div>
+    
+    <img id="curators-crew" src="slides/curators/crew.jpg" class="fulfill" style="display: none; z-index: 2;" alt="" />
+    
+    <div id="cur-tt" class="close mv-closer content white-content" style="width: 50%;">
+        <h2 class="LANG-EN">Curators</h2>
+        <h2 class="LANG-PT">Organizadores</h2>
+        <h2 class="LANG-ES">Organizacion</h2>
+        <div class="LANG-EN">
+            BrazilJS 2012 was organized by <br/><a href="http://felipenmoura.org/" target="_blank">Felipe N. Moura</a>(right) and<br/> <a href="http://jaydson.org/" target="_blank">Jaydson Gomes</a>(left).
+        </div>
+        <div class="LANG-PT">
+            BrazilJS 2012 foi organizado por <br/><a href="http://felipenmoura.org/" target="_blank">Felipe N. Moura</a>(right) e<br/> <a href="http://jaydson.org/" target="_blank">Jaydson Gomes</a>(left).
+        </div>
+        <div class="LANG-ES">
+            BrazilJS 2012 fue organizado por <br/><a href="http://felipenmoura.org/" target="_blank">Felipe N. Moura</a>(right) y<br/> <a href="http://jaydson.org/" target="_blank">Jaydson Gomes</a>(left).
+        </div>
+        
+        <div id="curator-saltoseventos" style="display: none;">
+            <br/>
+            <span class="LANG-EN">And executed along with the <br/><a href="http://altoseventos.com.br/" target="_blank"><img src="slides/curators/altos-eventos.png" alt="" /></a> crew</span>
+            <span class="LANG-PT">E executado juntamente com a equipe da <br/><a href="http://altoseventos.com.br/" target="_blank"><img src="slides/curators/altos-eventos.png" alt="" /></a></span>
+            <span class="LANG-ES">Y ejecutado con el equipo de <br/><a href="http://altoseventos.com.br/" target="_blank"><img src="slides/curators/altos-eventos.png" alt="" /></a></span>
+            
+        </div>
+    </div>
+</div>
+<script>
+    PPW.addAction({
+        does: function(){
+            $('#curators-crew').stop().fadeIn();
+            PPW.animate('#curator-saltoseventos', 'fadeInLeft');
+        },
+        undo: function(){
+            $('#curators-crew').stop().fadeOut();
+            PPW.animate('#curator-saltoseventos', 'fadeOutLeft');
+        }
+    });
+</script>

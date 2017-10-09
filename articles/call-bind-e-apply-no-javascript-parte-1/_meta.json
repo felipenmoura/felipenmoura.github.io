@@ -1,0 +1,9 @@
+{
+    "title": "Call, bind e apply no JavaScript<em> - parte 1</em>",
+    "creationDate": "Wed, 17 Sep 2014 13:25:10 +0000",
+    "tags": ["JavaScript", "ECMA", "ES6", "ES5"],
+    "resume": "Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.",
+    "headerImg": "/articles/call-bind-e-apply-no-javascript-parte-1/bind-call-apply.jpg",
+    "status": "published",
+    "articleLang": "pt-BR"
+}

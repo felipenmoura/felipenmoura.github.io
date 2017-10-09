@@ -1,0 +1,22 @@
+<h2 class="LANG-EN">Don't make me think!</h2>
+<h2 class="LANG-PT">Não me faça pensar!</h2>
+
+<div style="width: 100%; text-align: center;">
+    <img id="game-interface-1" src="slides/nao-me-faca-pensar/game-1.png" style="width: 90%;" />
+    <img id="game-interface-2" src="slides/nao-me-faca-pensar/game-2.png" style="width: 90%; height: 80%; display: none;" />
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('#game-interface-1').fadeOut(function(){
+                $('#game-interface-2').fadeIn();
+            });
+        },
+        undo: function(){
+            $('#game-interface-2').fadeOut(function(){
+                $('#game-interface-1').fadeIn();
+            });
+        }
+    });
+</script>

@@ -1,0 +1,38 @@
+<h1>
+	Situa&ccedil;&otilde;es reais...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; '>
+	<div id='mouse'
+		 style='text-align: center;
+				background-image: url(slides/situacoes2/mouse.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				width: 250px;
+				height: 350px;
+				margin-left: 40%;
+				margin-right: -100px;
+				float: left;'>
+	</div>
+	<div id='slideContent'
+		 style='display: none;'>
+		<br/>
+		&nbsp;No gmail:<br/>
+		&nbsp;&nbsp;&nbsp;<em>127</em> tabs para chegar ao primeiro e-mail
+		<div style='text-align: center; margin: 40px; font-size: 140%; display: none;' id='complement'>
+			E enter <strong>N&Atilde;O</strong><br/>abre o e-mail!
+		</div>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#mouse').animate({
+			width: '170px',
+			marginLeft: '10px'
+		}, function(){
+			$('#slideContent').fadeIn();
+		})
+	});
+	PPW.addAction(function(){
+		$('#complement').fadeIn();
+	});
+</script>

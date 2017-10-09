@@ -1,0 +1,116 @@
+<h2>wait...what?!</h2>
+<div id="webgl-easier" style="text-align: center;">
+    <div id="webgl-easier-0" style="text-align: left;">
+        <span class="LANG-EN">Mesh Modeling</span>
+        <span class="LANG-PT">Modelo Mesh</span>
+        <br/>
+        <img src="slides/webgl-space-2/mesh.png" />
+    </div>
+    <div id="webgl-easier-1">
+        <span class="LANG-EN">Vertexes</span>
+        <span class="LANG-PT">Vértices</span>
+        <br/>
+        <img id="v0" src="slides/webgl-space-2/vertex.png" />
+        <img id="v1" src="slides/webgl-space-2/vertex-0.png" style="display: none;" />
+        <img id="v2" src="slides/webgl-space-2/vertex-1.png" style="display: none;" />
+    </div>
+    <div id="webgl-easier-2">
+        <span class="LANG-EN">Linear Algebra</span>
+        <span class="LANG-PT">Algebra linear</span>
+        <br/>
+        <img id="matrix-0" src="slides/webgl-space-2/matrix-formula.png" />
+        <img id="matrix-1" src="slides/webgl-space-2/algebra-1.png" style="display: none;" /><br/>
+        <img id="matrix-2" src="slides/webgl-space-2/matrix.png" style="display: none;" />
+        <div id="matrix-3" style="display: none;">
+            <img src="slides/webgl-space-2/algebra-2.png" />
+        </div>
+    </div>
+    
+    <div id="webgl-easier-3">
+        <div class="demo-container">
+            <div class="demo">
+                <a href="http://peterned.home.xs4all.nl/matrices/">CSS3 matrix transform<br/><img src="slides/webgl-space-2/matrix-css3.png" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    PPW.addAction({
+        timing: 500,
+        does: function(){
+            PPW.animate('#webgl-easier-0', 'fadeInLeftBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-easier-0', 'fadeOutLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-easier-0', 'fadeOutLeftBig');
+            PPW.animate('#webgl-easier-1', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-easier-1', 'fadeOutRightBig');
+            PPW.animate('#webgl-easier-0', 'fadeInLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#v1').fadeIn();
+        },
+        undo: function(){
+            $('#v1').fadeOut();
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#v2').fadeIn();
+        },
+        undo: function(){
+            $('#v2').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-easier-1', 'fadeOutLeftBig');
+            PPW.animate('#webgl-easier-2', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-easier-2', 'fadeOutRightBig');
+            PPW.animate('#webgl-easier-1', 'fadeInLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#matrix-0').fadeOut(function(){$('#matrix-1, #matrix-2').fadeIn();});
+        },
+        undo: function(){
+            $('#matrix-1, #matrix-2').fadeOut(function(){$('#matrix-0').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#matrix-1, #matrix-2').fadeOut(function(){$('#matrix-3').fadeIn();});
+        },
+        undo: function(){
+            $('#matrix-3').fadeOut(function(){$('#matrix-1, #matrix-2').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-easier-2', 'fadeOutLeftBig');
+            PPW.animate('#webgl-easier-3', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-easier-3', 'fadeOutRightBig');
+            PPW.animate('#webgl-easier-2', 'fadeInLeftBig');
+        }
+    });
+</script>

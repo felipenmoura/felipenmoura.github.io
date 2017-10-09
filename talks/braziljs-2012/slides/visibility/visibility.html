@@ -1,0 +1,144 @@
+
+<!--<h2 class="LANG-EN">Visibility</h2>
+<h2 class="LANG-PT">Visibilidade</h2>
+<h2 class="LANG-ES">Visibilidad</h2>-->
+
+<div id="vis-container" >
+    <div class="parallax-set">
+
+        <div class="far mv-left"><img src="slides/visibility/visibility-bg.jpg" alt="" style="width: 100%; height:100%;" /></div>
+
+        <div id="vis-news" class="close">
+            <div class="LANG-EN">News in many<br/><span>important portals</span></div>
+            <div class="LANG-PT">Notícias em diversos<br/><span>portais importantes</span></div>
+            <div class="LANG-ES">Notícias en diversos<br/><span>importantes portales</span></div>
+        </div>
+
+        <div id="vis-zh"><img src="slides/visibility/zero-hora.jpg" alt="" /></div>
+        <div id="vis-zh-content" class="close content">
+            <span class="LANG-EN"><strong>- Zero Hora -</strong><br/>A full page in one of the most<br/>important newspapers in Brazil</span>
+            <span class="LANG-PT"><strong>- Zero Hora -</strong><br/>Uma página inteira em um dos jornais<br/>mais importantes do país</span>
+            <span class="LANG-ES"><strong>- Zero Hora -</strong><br/>Una pagina completa en un de los mas<br/>importantes jornales del Brazil</span>
+        </div>
+        
+        <div id="vis-trr"><img src="slides/visibility/terra-news.png" alt="" /></div>
+        <div id="vis-trr-2"><img src="slides/visibility/terra.jpg" alt="" /></div>
+        <div id="vis-trr-content" class="close content">
+            <strong>- Terra -</strong>
+            <div id="vis-trr-text-1">
+                <span class="LANG-EN">Three articles posted about the conference<br/>in the biggest Portal of Latin America</span>
+                <span class="LANG-PT">Três artigos publicados sobre a conferência<br/>no maior portal da América Latina</span>
+                <span class="LANG-ES">Tres artigos postados sobre la conferencia<br/>en major portal de Latin America</span>
+            </div>
+            <div id="vis-trr-text-2" style="display: none;">
+                <span class="LANG-EN">Live streaming of the whole conference<br/><br/></span>
+                <span class="LANG-PT">Transmissão ao vivo de toda a conferência<br/><br/></span>
+                <span class="LANG-ES">Transmission en vivo de toda la conferencia<br/><br/></span>
+            </div>
+        </div>
+
+        <div id="vis-twt" class="far content">
+            <img src="slides/visibility/twitter.jpg" alt="" />
+            <div class="close">
+                <span class="LANG-EN"><strong>- Twitter -</strong><br/>Trending Topics Brazil in both days</span>
+                <span class="LANG-PT"><strong>- Twitter -</strong><br/>Trending Topics Brasil nos dois dias</span>
+                <span class="LANG-ES"><strong>- Twitter -</strong><br/>Trending Topics Brazil en ambos los dias de conferencia</span>
+            </div>
+        </div>
+        
+        <div id="vis-tv">
+            
+            <video controls
+                   poster="slides/visibility/interview-img.jpg">
+                <source src="slides/visibility/interview-braziljs-tvcom.mp4" type="video/mp4" >
+                <iframe width="420" height="315" src="http://www.youtube.com/embed/TuwH-oo_UpQ?rel=0" frameborder="0" allowfullscreen></iframe>
+            </video>
+            
+            <div>
+                <span class="LANG-EN"><strong>- TV Interview -</strong><br/>Live interview in a News TV show</span>
+                <span class="LANG-PT"><strong>- Entrevista na TV -</strong><br/>Entrevista ao vivo em programa de notícias</span>
+                <span class="LANG-ES"><strong>- Entrevista Televisiva -</strong><br/>Entrevista en vivo en programa de noticias</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    PPW.onSlideEnter(function(slide){
+        if(slide.actionIdx === 0){
+            PPW.lock();
+            PPW.startAnimationSet();
+            $('#vis-news').addClass('mv-spin-right');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 3000,
+        does: function(){
+            $('#vis-zh').addClass('mv-fade-in-top');
+            $('#vis-zh-content').fadeIn(function(){
+                $('#vis-news').fadeOut('slow');
+            }).addClass('mv-closer');
+        },
+        undo: function(){
+            
+        }
+    });
+    
+    PPW.addAction({
+        timing: 9000,
+        does: function(){
+            $('#vis-news').removeClass('mv-spin-right');
+            $('#vis-zh-content').stop().fadeOut(function(){
+                $('#vis-zh-content').removeClass('mv-closer');
+                $('#vis-zh').removeClass('mv-fade-in-top');
+            });
+        }
+    });
+    
+    PPW.addAction({
+        timing: 'auto',
+        does: function(){
+            $('#vis-trr-content').stop().fadeIn().addClass('mv-closer');
+            $('#vis-trr').addClass('mv-fade-in-left');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 9000,
+        does: function(){
+            $('#vis-trr-text-1').fadeOut(function(){
+                $('#vis-trr-text-2').fadeIn();
+            });
+            $('#vis-trr').removeClass('mv-fade-in-left');
+            $('#vis-trr-2').addClass('mv-fade-in-right');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 9000,
+        does: function(){
+            $('#vis-trr-2').removeClass('mv-fade-in-right');
+            $('#vis-trr-content').stop().fadeOut();
+            $('#vis-twt').animate({opacity: 1})
+                         .addClass('mv-right')
+                         .find('div').eq(0).addClass('mv-closer');
+        }
+    });
+    
+    PPW.addAction({
+        timing: 9000,
+        does: function(){
+            $('#vis-twt').stop().fadeOut().removeClass('mv-right');
+            $('#vis-tv').fadeIn(function(){
+                PPW.unlock();
+                PPW.stopAnimationSet();
+            });
+        },
+        undo: function(){
+            PPW.goToSlide(PPW.getPrevSlide());
+        }
+    });
+    
+</script>

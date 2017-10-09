@@ -1,0 +1,75 @@
+...redirecting
+<script>
+    
+    var l = location,
+        rooURL =  l.protocol + '//' +
+                  l.hostname + ':' +
+                  l.port + '/',
+        redirectFrom404 = rooURL;
+        path = l.pathname.split('/'),
+        notTreated = false;
+    
+    path = path.filter(Boolean);
+    
+    switch(path[0]){
+        case 'contact':
+        case 'contato':
+        case 'about':
+        case 'sobre':{
+            redirectFrom404+= 'about/'
+            break;
+        }
+        case 'projects':
+        case 'project':
+        case 'projetos':
+        case 'demos':
+        case 'demo':
+        case 'labs':
+        case 'projects':{
+            redirectFrom404+= 'utils/labs/';
+            break;
+        }
+        case 'talk':
+        case 'palestras':
+        case 'palestra':
+        case 'presentations':
+        case 'presentation':
+        case 'slides':
+        case 'talks':{
+            redirectFrom404+= 'utils/talks/';
+            break;
+        }
+        case 'photos':
+        case 'pictures': {
+            redirectFrom404+= 'utils/photos/';
+            break;
+        }
+        case 'videos': {
+            redirectFrom404+= 'utils/videos/';
+            break;
+        }
+        case 'articles': {
+            redirectFrom404+= 'articles/';
+            break;
+        }
+        default:{
+            redirectFrom404+= 'home/';
+            notTreated = true;
+            break;
+        }
+    }
+    
+    if(path[0] == 'articles' && path[1] == 'article') {
+        redirectFrom404+= path[2];
+    }else{
+        if(path[1] || notTreated){
+            redirectFrom404 = rooURL + '?r404=' + path.pop(); //l.pathname.replace(/^\//, '')
+                           //+ '&q=' + encodeURIComponent(l.search.replace(/^\?/, ''));
+        }
+    }
+    
+    location.href = redirectFrom404;
+</script>
+
+
+

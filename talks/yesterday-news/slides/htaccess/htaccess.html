@@ -1,0 +1,19 @@
+<div class="htaccess-content">
+    <h2>HTAccess</h2>
+    <ul type="disc" class="LANG-PT">
+        <li>Um arquivo chamado <em>.htaccess</em> na raíz do seu projeto</li>
+        <li>Entre outras coisas, permite redirecionamentos e validacoes</li>
+        <li>Ótimo para incrementar a segurança</li>
+    </ul>
+    <ul type="disc" class="LANG-EN">
+        <li>A file called <em>.htaccess</em> in your project's root</li>
+        <li>Among other things, allows you to redirect and validate</li>
+        <li>Great to increase the security of your application</li>
+    </ul>
+    
+    <pre class="sh_log" style="width: 720px;">
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_METHOD} !^(POST|GET|OPTIONS|PUT)$
+RewriteRule .* - [F,L]</pre>
+</div>

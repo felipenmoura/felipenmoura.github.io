@@ -1,0 +1,317 @@
+.white-content{
+    color: white !IMPORTANT;
+}
+
+#gym-girl{
+    text-align: center;
+}
+#gym-girl img{
+    height: 100%;
+}
+
+
+#gym-content, #car-content{
+    padding-left: 20px;
+    text-shadow: 0px 0px 4px black;
+    -webkit-transform-origin: 0px 0px;
+    -moz-transform-origin: 0px 0px;
+    -ms-transform-origin: 0px 0px;
+    -o-transform-origin: 0px 0px;
+    transform-origin: 0px 0px;
+}
+
+#car-car{
+    -webkit-animation-timing-function: cubic-bezier(0.065, 0.450, 0.915, 0.410);
+    -moz-animation-timing-function: cubic-bezier(0.065, 0.450, 0.915, 0.410);
+    -ms-animation-timing-function: cubic-bezier(0.065, 0.450, 0.915, 0.410);
+    -o-animation-timing-function: cubic-bezier(0.065, 0.450, 0.915, 0.410);
+    animation-timing-function: cubic-bezier(0.065, 0.450, 0.915, 0.410);
+}
+
+#car-car, #car-stones{
+    text-align: right;
+}
+#car-car img, #car-stones img{
+    height: 100%;
+    float: right;
+}
+#car-content-messages{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+}
+#car-content-messages div{
+    position: absolute;
+    color: #000;
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px black;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    display: none;
+    
+    -webkit-transition: color 300ms linear;
+}
+
+#f1-car{
+    background: url(../slides/f1/car.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    width: 580px;
+    height: 130px;
+    position: absolute;
+    left: -100%;
+    bottom: 150px;
+    -webkit-transition: left 2s ease-out;
+}
+
+#f1-car.active{
+    -webkit-transition: left 2s ease-out;
+}
+#f1-car.active-out{
+    -webkit-transition: left 2s ease-in;
+}
+
+#f1-car img{
+    width: 15%;
+    position: absolute;
+}
+#f1-car.active img{
+    -webkit-animation: wheel 2000ms ease-out 1;
+}
+#f1-car.active-out img{
+    -webkit-animation: wheel 2000ms ease-in 1;
+}
+
+#f1-car img:nth-child(1){
+    left: 5%;
+    bottom: 8%;
+}
+#f1-car img:nth-child(2){
+    right: 15%;
+    bottom: 8%;
+}
+
+@media screen and (max-width: 800px){
+    #f1-car{
+        width: 580px;
+    }
+}
+@media screen and (min-width: 961px){
+    #f1-car{
+        width: 680px;
+        height: 168px;
+    }
+}
+@media screen and (min-width: 1024px){
+    #f1-car{
+        width: 800px;
+        height: 268px;
+    }
+}
+@media screen and (max-height: 400px){
+    #f1-car{
+        bottom: 30px;
+    }
+}
+@media screen and (max-height: 600px) and (min-height: 401px){
+    #f1-car{
+        bottom: 60px;
+    }
+}
+
+@-webkit-keyframes wheel{
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+#wide-bg{
+    background-image: -webkit-linear-gradient(top, gray 30%, white);
+    background-image: -moz-linear-gradient(top, gray 30%, white);
+    background-image: -ms-linear-gradient(top, gray 30%, white);
+    background-image: -o-linear-gradient(top, gray 30%, white);
+    background-image: linear-gradient(top, gray 30%, white);
+}
+
+#wide-viewport{
+    width: 780px;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    background: url(../slides/wide/horizon.png);
+    border: solid 1px white;
+    position: absolute;
+    left: 50%;
+    margin-left: -370px;
+    top: 50%;
+    margin-top: -200px;
+    z-index: 5;
+    
+    color: #444;
+    overflow: hidden;
+}
+#wide-viewport:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: url(../slides/wide/flair.png);
+    height: 100%;
+    width: 300px;
+}
+
+#who-started, #who-pic, #adam, #god, #wide-title h2, #wide-title h3{
+    -webkit-transition: all 600ms linear;
+}
+
+#homem, #hand-writing, #cave, #document{
+    -webkit-transition: all 1000ms ease-out;
+}
+
+#wide-title h2{
+    margin: 20px;
+}
+#wide-title h3{
+    font-size: 14px;
+    display: none;
+}
+#wide-title h3 a{
+    float: left;
+    width: 64px;
+    height: 20px;
+    background: url(../slides/wide/braziljs-logo.png);
+    background-size: 100%;
+}
+
+#wide-title.active h2{
+    margin-top: 160px;
+    margin-left: 172px;
+    font-size: 60px;
+}
+#wide-title.active h3{
+    margin-left: 200px;
+}
+
+#wide-viewport a{
+    color: #444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#who-started{
+    font-size: 20px;
+    width: 50%;
+    position: absolute;
+    left: -100%;
+    top: 180px;
+    z-index: 999;
+    
+}
+#who-started.active{
+    left: 40px;
+}
+#who-pic{
+    position: absolute;
+    right: -400px;
+    bottom: 0px;
+    
+}
+#who-pic.active{
+    right: 0px;
+}
+
+#adam{
+    position: absolute;
+    bottom: -400px;
+    left: 0px;
+}
+#god{
+    position: absolute;
+    right: -450px;
+    top: 0px;
+}
+#adam.active{
+    bottom: 0px;
+}
+#god.active{
+    right: 0px;
+}
+
+#document{
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    z-index: 2;
+    top: 50%;
+    box-shadow: -10px 10px 20px #444;
+}
+
+#cave{
+    position: absolute;
+    left: 50%;
+    margin-left: -300px;
+    z-index: 9;
+    top: 50%;
+}
+
+#hand-writing{
+    position: absolute;
+    left: 50%;
+    margin-left: 0px;
+    z-index: 9;
+    top: 50%;
+}
+
+#homem{
+    position: absolute;
+    left: 50%;
+    margin-left: 170px;
+    z-index: 12;
+    top: 50%;
+    
+    box-shadow: -10px 10px 20px #444;
+}
+
+#homem, #hand-writing, #cave, #document{
+    margin-top: 100%;
+}
+
+#homem.active{margin-top: -170px;}
+#hand-writing.active{margin-top: -60px;}
+#cave.active{margin-top: 0px;}
+#document.active{margin-top: -250px;}
+#homem.postActive{margin-top: -200%;}
+#hand-writing.postActive{margin-top: -200%;}
+#cave.postActive{margin-top: -200%;}
+#document.postActive{margin-top: -200%;}
+
+#missiles{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+#ideas-in-mind{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+#power-polygon-final{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+.opening-title{
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-size: 4em !IMPORTANT;
+}

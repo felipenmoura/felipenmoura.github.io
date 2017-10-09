@@ -1,0 +1,16 @@
+<h1>
+	Interface
+</h1>
+<div class='content' style='width: 100%;margin-left:0px;'>
+	<div style='text-align: center;'>
+		<img id="img-form1" src='slides/interface-3/form1.jpg' height='350' style='margin-top: 0px; box-shadow: 0px 0px 20px black; border: solid 1px clack;'>
+		<img id="img-form2" src='slides/interface-3/form2.png' style='margin-top: 50px; display: none;'>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+            $('#img-form1').fadeOut(function(){
+                $('#img-form2').fadeIn();
+            })
+	});
+</script>

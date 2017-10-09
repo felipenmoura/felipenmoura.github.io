@@ -1,0 +1,203 @@
+<h2>WebGL</h2>
+
+
+<div id="webgl-space-stage" class="stage0">
+    <div class="blue"></div>
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="camera"></div>
+    <div id="webgl-space-stage-label" class="label">Object space</div>
+</div>
+
+
+
+<div id="webgl-spc" style="text-align: center;">
+    <div id="webgl-spc-0" style="text-align: left;">
+        <div class="LANG-EN">
+            * OpenGL ES2.0, adopted to be built into HTML5 Canvas element<br/>
+            * Processed on the GPU.<br/>
+            * Experimental, yet.
+        </div>
+        <div class="LANG-PT">
+            * OpenGL ES2.0, adaptada para rodar dentro do elemento Canvas, do HTML5<br/>
+            * Processado na GPU.<br/>
+            * Ainda experimental.
+        </div>
+    </div>
+    <div id="webgl-spc-1">
+        <span class="LANG-EN">3D Universe</span>
+        <span class="LANG-PT">Universo 3D</span>
+        <br/>
+        <img src="slides/webgl-space/3d-universe.png" />
+    </div>
+    <div id="webgl-spc-2">
+        <span class="LANG-EN">Object - world</span>
+        <span class="LANG-PT">Objeto - Universo</span>
+        <br/>
+        <img src="slides/webgl-space/obj-world.png" />
+    </div>
+    <div id="webgl-spc-3">
+        <span>Camera</span>
+        <br/>
+        <img src="slides/webgl-space/camera.png" />
+    </div>
+    <div id="webgl-spc-4">
+        <span>Clipping</span>
+        <br/>
+        <img src="slides/webgl-space/clipping.png" />
+    </div>
+    <div id="webgl-spc-5">
+        <span class="LANG-EN">Result</span>
+        <span class="LANG-PT">Resultado</span>
+        <br/>
+        <img src="slides/webgl-space/result.png" />
+    </div>
+    <div id="webgl-spc-6">
+        <br/>
+        <img src="slides/webgl-space/code.png" />
+    </div>
+    <div id="webgl-spc-7">
+        <br/>
+        <img src="slides/webgl-space/mask.png" />
+    </div>
+</div>
+
+<script>
+    PPW.addAction({
+        timing: 500,
+        does: function(){
+            PPW.animate('#webgl-spc-0', 'fadeInLeftBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-0', 'fadeOutLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-0', 'fadeOut');
+            $('#webgl-space-stage').fadeIn();
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-0', 'fadeIn');
+            $('#webgl-space-stage').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#webgl-space-stage')[0].className= 'stage1';
+            $('#webgl-space-stage-label').text("World space");
+        },
+        undo: function(){
+            $('#webgl-space-stage')[0].className= 'stage0';
+            $('#webgl-space-stage-label').text("Object space");
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#webgl-space-stage')[0].className= 'stage2';
+            $('#webgl-space-stage-label').text("Camera/View space");
+        },
+        undo: function(){
+            $('#webgl-space-stage')[0].className= 'stage1';
+            $('#webgl-space-stage-label').text("World space");
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#webgl-space-stage')[0].className= 'stage3';
+        },
+        undo: function(){
+            $('#webgl-space-stage')[0].className= 'stage2';
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#webgl-space-stage')[0].className= 'stage4';
+            $('#webgl-space-stage-label').text("Projection/Clipping space");
+        },
+        undo: function(){
+            $('#webgl-space-stage')[0].className= 'stage3';
+            $('#webgl-space-stage-label').text("Camera/View space");
+        }
+    });
+    
+    /*
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-0', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-1', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-1', 'fadeOutRightBig');
+            PPW.animate('#webgl-spc-0', 'fadeInLeftBig');
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-1', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-2', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-2', 'fadeOutRightBig');
+            PPW.animate('#webgl-spc-1', 'fadeInLeftBig');
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-2', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-3', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-3', 'fadeOutRightBig');
+            PPW.animate('#webgl-spc-2', 'fadeInLeftBig');
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-3', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-4', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-4', 'fadeOutRightBig');
+            PPW.animate('#webgl-spc-3', 'fadeInLeftBig');
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-4', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-5', 'fadeInRightBig');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-5', 'fadeOutRightBig');
+            PPW.animate('#webgl-spc-4', 'fadeInLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-5', 'fadeOutLeftBig');
+            PPW.animate('#webgl-spc-6', 'fadeIn');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-6', 'fadeOut');
+            PPW.animate('#webgl-spc-5', 'fadeInLeftBig');
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.animate('#webgl-spc-6', 'fadeOut');
+            PPW.animate('#webgl-spc-7', 'fadeIn');
+        },
+        undo: function(){
+            PPW.animate('#webgl-spc-7', 'fadeOut');
+            PPW.animate('#webgl-spc-6', 'fadeIn');
+        }
+    });
+    
+    */
+   
+</script>

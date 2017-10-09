@@ -1,0 +1,53 @@
+<h1>
+	Detalhes...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin-top: 30px'
+		 class='animate'>
+		<a href='#' title="Go to content">Clique aqui para ir para o conte&uacute;do</a>
+	</div>
+	<div id='step2'
+		 style='text-align: center;
+				margin-top: -30px;
+				display: none;'>
+		Use <em>label for</em> nos seus elementos<br/>
+		(e <em>title</em> para links/bot&otilde;es)<br/>
+		&lt;label for="campoNome">Nome&lt;/label><br/>
+		&lt;input type='text' id='campoNome' />
+	</div>
+	<div id='step3'
+		 style='text-align: center;
+				margin-top: 30px;
+				display: none;'>
+		Use tipos inteligentes em seus campos<br/>
+		&lt;label for="cEMail">E-mail&lt;/label><br/>
+		&lt;input type='<em>email</em>' id='cEMail' />
+		<div id='liveExample'
+			 style='border: solid 1px gray;
+					margin: auto;
+					margin-top: 20px;
+					width: 500px;'>
+			<label for="cEMail1">Ordinary E-mail </label><input type='text' id='cEMail1' /><br/>
+			<label for="cEMail2">Smarter E-mail </label><input type='email' id='cEMail2' /><br/>
+		</div>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#step1').css({
+			marginLeft: '-3000px'
+		})
+	});
+	PPW.addAction(function(){
+		document.getElementById('step1').style.display= 'none';
+		$('#step2').fadeIn();
+	});
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3').fadeIn();
+		});
+		//PPW.speak(document.getElementById('liveExample'));
+	});
+</script>

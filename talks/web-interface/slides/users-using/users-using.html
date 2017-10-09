@@ -1,0 +1,52 @@
+<div class="fulfill superman-1">
+    <img src="slides/users-using/superman-product.jpg" class="fulfill" />
+    <h2 class="LANG-PT">Como o produto é vendido</h2>
+    <h2 class="LANG-EN">How they sell the product</h2>
+</div>
+
+<div class="fulfill superman-2">
+    
+    <h2 class="LANG-PT">Como o desenvolvedor o vê</h2>
+    <h2 class="LANG-EN">How the developer sees it</h2>
+</div>
+
+<div class="fulfill superman-3">
+    
+    <h2 class="LANG-PT">Como o testador o verá</h2>
+    <h2 class="LANG-EN">How the tester sees it</h2>
+</div>
+
+<div class="fulfill superman-4">
+    
+    <h2 class="LANG-PT">O que o usuário encontrará</h2>
+    <h2 class="LANG-EN">and what the user finds</h2>
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('.superman-2').fadeIn();
+        },
+        undo: function(){
+            $('.superman-2').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('.superman-3').fadeIn();
+        },
+        undo: function(){
+            $('.superman-3').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('.superman-4').fadeIn();
+        },
+        undo: function(){
+            $('.superman-4').fadeOut();
+        }
+    });
+</script>

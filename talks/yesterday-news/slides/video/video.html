@@ -1,0 +1,64 @@
+<h2>Video</h2>
+
+<pre id="video-src-code" class="sh_html">
+&lt;video poster="images.png" controls autoplay>
+  <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+  Video tag not supported. Download the video <a href="movie.webm">here</a>.
+&lt;/video></pre>
+
+<div id="chromakey-eg" style="text-align: center; display: none;">
+    <iframe id="video-chrk-eg-1"
+            style="position: relative; margin: auto; height: 380px; width: 400px;"
+            src="javascript:void(0);">
+    </iframe><br/>
+    <a href="http://felipenmoura.org/articles/javascript/create-a-chromakey-with-javascript-webbr-2012-w3c/">felipenmoura.org</a>
+</div>
+
+
+<script>
+    
+    PPW.onSlideEnter(function(){
+        $('#video-chrk-eg-1').attr('src', 'slides/video/chromakey.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#video-chrk-eg-1').attr('src', 'javascript:void(0);');
+    })
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [1, 6]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', false);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [2, 3, 4]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', [1, 6]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#video-src-code', [5]);
+        },
+        undo: function(){
+            PPW.sh.focus('#video-src-code', [2, 3, 4]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#video-src-code').fadeOut(function(){$('#chromakey-eg').fadeIn();});
+        },
+        undo: function(){
+            $('#chromakey-eg').fadeOut(function(){$('#video-src-code').fadeIn();});
+        }
+    });
+</script>

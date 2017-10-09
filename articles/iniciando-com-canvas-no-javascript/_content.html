@@ -1,0 +1,83 @@
+Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
+
+Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
+<pre lang="html">
+    &lt;body&gt;
+        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
+            O que for escrito aqui, aparecerá SOMENTE
+            quando o navegador não puder renderizar o canvas
+            Claro que tags HTML são aceitas.
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</pre>
+
+Certo, agora, especificaremos uma função para manusear o canvas via javaScript
+<pre lang="html">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // sim, addEventListener não funciona em IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</pre>
+
+Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
+
+<pre lang="javascript">
+// Vamos criar umas variáveis globais para facilitar
+// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
+var canvas= null;
+var ctx= null;
+// aqui, a nossa função a ser chamada assim que a página carregar
+canvasHandler= function(){
+    // antes de tudo, simplesmente pegamos o elemento canvas
+    canvas= document.getElementById('theCanvasElement');
+    // agora nós precisaremos acessar o CONTEXT para trabalhar
+    ctx= canvas.getContext('2d');
+}
+</pre>
+
+Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
+Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
+
+Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
+
+OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
+<pre lang="javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</pre>
+
+Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
+
+<pre lang="javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</pre>
+Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
+<pre lang="javascript">
+    // instancia uma nova imagem
+    var img= new Image();
+    // usaremos a imagem após ela ser carregada
+    img.addEventListener('load', function(){
+        // após baixar a imagem, podemos desenha-la no canvas
+        ctx.drawImage(this);
+        // onde this representa a imagem recém carregada
+    });
+    // então especificamos a url a iniciar o carregamento
+    img.src= 'url.png';
+</pre>
+
+Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
+<pre lang="javascript">
+    // desenha a imagem na posição left=30 e top=30
+    ctx.drawImage(this, 30, 30);
+    // desenhará a imagem na posição 0/0, alterando seu tamanho
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // mais complexo, desenha e recorta a imagem (crop)
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</pre>
+
+Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
+
+Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.

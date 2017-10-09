@@ -1,0 +1,26 @@
+<h2 class="LANG-PT">Formas em CSS3</h2>
+<h2 class="LANG-EN">Geometry with CSS3</h2>
+
+<div id="css3-1-demo"></div>
+
+<style class="sh_css ppw-sh-editable no-numbers">
+#css3-1-demo{
+  --border-radius: 50%;
+  --transform: rotate(45deg);
+}
+</style>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('#boneco').show();
+        },
+        undo: function(){
+            $('#boneco').hide();
+        }
+    });
+    PPW.onSlideExit(function(){
+        $('#boneco').hide();
+    })
+
+</script>

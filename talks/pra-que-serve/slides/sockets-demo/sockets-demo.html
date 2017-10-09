@@ -1,0 +1,14 @@
+<iframe class="fulfill"
+        id="sockets-demo-iframe"
+        src="javascript:void(0);"></iframe>
+<div style="position: absolute; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.5); color: white; width: 100%; height: 30px; z-index: 999999; padding: 3px;">
+    WebSockets Demo
+</div>
+<script>
+    PPW.onSlideEnter(function(){
+        document.getElementById('sockets-demo-iframe').setAttribute('src', "https://developer.cdn.mozilla.net/media/uploads/demos/v/i/viliusl/07f948b9638c01cec40270c4f1ad522d/moon-wars_1378491054_demo_package/index.html");
+    });
+    PPW.onSlideExit(function(){
+        document.getElementById('sockets-demo-iframe').setAttribute('src', "javascript:void(0);");
+    });
+</script>

@@ -1,0 +1,9 @@
+{
+    "title": "Criando formas geométricas usando <em>DIVs e CSS3</em>",
+    "creationDate": "Thu, 09 Feb 2012 06:32:46 +0000",
+    "tags": ["CSS3", "html", "formas", "geometric"],
+    "resume": "Abracei este \"desafio\", de fazer o maior número de formas geométricas em um div, utilizando apenas <strong>CSS3</strong> e <strong>divs</strong>.<br/>Não encare o \"um div\" como limitação, para alguma forma mais complexa, poderemos utilizar mais de um div.",
+    "headerImg": "/articles/creating-geometric-forms-using-divs-and-css3/geo-shapes.jpg",
+    "status": "published",
+    "articleLang": "pt-BR"
+}

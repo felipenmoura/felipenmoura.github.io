@@ -1,0 +1,55 @@
+<div class="fulfill jason"></div>
+<div class="json">
+    
+<pre class="sh_javascript json-code">
+{
+    "property": "property value",
+    "anotherProp": 10,
+    "subObject": {
+        "prop": "value",
+        "another": true
+    },
+    "anArray": [1, 5, false, "string"]
+}</pre>
+    
+</div>
+
+<div class="fulfill">
+    <div class="json-content">
+        <span class="LANG-PT">Você conhece o JSon?</span>
+        <span class="LANG-EN">Have you met JSon?</span>
+    </div>
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){PPW.animate('.json', 'bounceIn', {duration: '400ms'})},
+        undo: function(){PPW.animate('.json', 'bounceOut')}
+    });
+    
+    PPW.addAction({
+        does: function(){PPW.sh.focus('.json-code', [1, 9])},
+        undo: function(){PPW.sh.focus('.json-code', false)}
+    });
+    
+    PPW.addAction({
+        does: function(){PPW.sh.focus('.json-code', [2])},
+        undo: function(){PPW.sh.focus('.json-code', [1, 9])}
+    });
+    
+    PPW.addAction({
+        does: function(){PPW.sh.focus('.json-code', [3])},
+        undo: function(){PPW.sh.focus('.json-code', [2])}
+    });
+    
+    PPW.addAction({
+        does: function(){PPW.sh.focus('.json-code', [4, 5, 6, 7])},
+        undo: function(){PPW.sh.focus('.json-code', [3])}
+    });
+    
+    PPW.addAction({
+        does: function(){PPW.sh.focus('.json-code', [8])},
+        undo: function(){PPW.sh.focus('.json-code', [4, 5, 6, 7])}
+    });
+    
+</script>

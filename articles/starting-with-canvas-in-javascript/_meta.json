@@ -1,0 +1,9 @@
+{
+    "title": "Starting with Canvas in <em>javascript</em>",
+    "creationDate": "Fri, 18 Jun 2010 00:20:10 +0000",
+    "tags": ["javascript", "canvas"],
+    "resume": "Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will \"learn\" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.",
+    "headerImg": "/articles/starting-with-canvas-in-javascript/canvas.jpg",
+    "status": "published",
+    "articleLang": "en-US"
+}

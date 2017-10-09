@@ -1,0 +1,146 @@
+<h2 class="LANG-EN">CSS3 Forms</h2>
+<h2 class="LANG-PT">Formas em CSS3</h2>
+
+<div id='css3-forms-2'>
+
+	<div id='step21'
+		 class='anim-step21'
+		 style='text-align:center;'>
+		Tri&acirc;ngulos
+		<div class='spinner'></div>
+		
+		<br/><br/>
+		<pre class="sh_css">border: solid 80px;
+border-color: transparent
+              transparent
+              #0f0
+              transparent;</pre>
+	</div>
+	
+	<div id='step22'
+		 class='anim-step22'
+		 style='text-align:center;'>
+		Meia-luas
+		<div class='halfMoon'></div>
+		<br/><br/><br/>
+		<pre class="sh_css">border-radius: 150px 0 0 150px;
+height: 150px;
+width: 75px;</pre>
+	</div>
+	
+	<div id='step23'
+		 class='anim-step23'
+		 style='text-align:center;'>
+		Um quarto de c&iacute;rculo
+		<div class='quarterMoon'></div>
+		<br/><br/><br/>
+		<pre class="sh_css">background-color: pink;
+height: 150px;
+border-radius: 150px 0 0 0;
+width: 150px;</pre>
+	</div>
+	<div id='step24'
+		 class='anim-step24'
+		 style='text-align:center;'>
+		Elipses
+		<div class='elipse'></div>
+		<br/><br/><br/>
+		<pre class="sh_css">height: 150px;
+width: 250px;
+border-radius: 100%;</pre>
+	</div>
+	<div id='step25'
+		 class='anim-step25'
+		 style='text-align:center;'>
+		Invers&atilde;o
+		<div class='flipped'>Conte&uacute;do</div>
+		<br/><br/>
+		<pre class="sh_css">-webkit-transform: scale(-1, 1);
+   -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+     -o-transform: scale(-1, 1);
+        transform: scale(-1, 1);</pre>
+	</div>
+	
+	<div id='step26'
+		 class='anim-step26'
+		 style='text-align:center;'>
+		Linhas Tracejadas
+		<div class='dashed'></div>
+		<br/><br/>
+		<pre class="sh_css">width: 360px;
+height: 0px;
+border-bottom: dashed 8px #0f0;</pre>
+	</div>
+	
+	<div id='step27'
+		 class='anim-step27'
+		 style='text-align:center;'>
+		Pol&iacute;gonos
+		<div class='poly'></div>
+		<br/><br/>
+		<pre class="sh_css">width: 60px;
+height: 0px;
+border: solid;
+border-color: transparent pink pink transparent ;
+border-width: 60px;</pre>
+	</div>
+</div>
+
+<script>
+    
+    PPW.addAction({
+        does: function(){
+            $('#step21').fadeOut(function(){$('#step22').fadeIn();});
+        },
+        undo: function(){
+            $('#step22').fadeOut(function(){$('#step21').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step22').fadeOut(function(){$('#step23').fadeIn();});
+        },
+        undo: function(){
+            $('#step23').fadeOut(function(){$('#step22').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step23').fadeOut(function(){$('#step24').fadeIn();});
+        },
+        undo: function(){
+            $('#step24').fadeOut(function(){$('#step23').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step24').fadeOut(function(){$('#step25').fadeIn();});
+        },
+        undo: function(){
+            $('#step25').fadeOut(function(){$('#step24').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step25').fadeOut(function(){$('#step26').fadeIn();});
+        },
+        undo: function(){
+            $('#step26').fadeOut(function(){$('#step25').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step26').fadeOut(function(){$('#step27').fadeIn();});
+        },
+        undo: function(){
+            $('#step27').fadeOut(function(){$('#step26').fadeIn();});
+        }
+    });
+    
+</script>

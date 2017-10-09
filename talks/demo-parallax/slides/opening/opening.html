@@ -1,0 +1,41 @@
+<div style="opacity:0.3;">
+    <img src="slides/opening/parallax.png" align="center" class="fulfill"/>
+</div>
+<h1 class="opening-title">Parallax Demo</h1>
+<script>
+    PPW.addAction({
+        //timing: 'auto',
+        does: function(){
+            /*
+            PPW.showMessage("MSG A",
+                            function(){
+                                console.log('---- callback da MSG A');
+                            });
+                            
+            PPW.showMessage("MSG B",
+                            function(){
+                                console.log('---- callback da MSG B');
+                            });
+                            
+            PPW.showWarn("MSG C",
+                            function(){
+                                console.log('---- callback da MSG C');
+                            });
+                            
+            PPW.showMessage("MSG D",
+                            function(){
+                                console.log('---- callback da MSG D');
+                            });
+                              
+            PPW.showError("MSG E",
+                            function(){
+                                console.log('---- callback da MSG E');
+                            });
+            */
+            PPW.showMessage("Click on the 'close' button to start the presentation!<br/>It will show you an opening animation, and then let you controll the rest.",
+                            function(){
+                                PPW.goNextSlide();
+                            });
+        }
+    });
+</script>

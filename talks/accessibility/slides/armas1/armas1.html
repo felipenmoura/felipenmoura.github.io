@@ -1,0 +1,34 @@
+<h1>
+	Ferramentas
+</h1>
+<div class='content'>
+	<div id='equipments' style='text-align: center;'>
+		<img src='slides/armas1/tec2.jpg' />
+		<img src='slides/armas1/track1.jpg' /><br/>
+		<img src='slides/armas1/tec1.png' />
+	</div>
+	<div id='screenReaders'
+		 style='display: none;'>
+		<br/>
+		<br/>
+		Screen Readers:
+		<ul style="margin-top: 0px;">
+			<li>VoiceOver</li>
+			<li>NVDA</li>
+			<li>SAToGo</li>
+			<li>Window-Eyes</li>
+		</ul>
+		Oferecem suporte &agrave; acessibilidade:
+		<ul style="margin-top: 0px;">
+			<li>Dojo Toolkit</li>
+			<li>JQuery</li>
+		</ul>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#equipments').fadeOut(function(){
+			$('#screenReaders').fadeIn();
+		})
+	});
+</script>

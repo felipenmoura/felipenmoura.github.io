@@ -1,0 +1,180 @@
+<div id="articleTmpElement"></div>
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
+    <nav id="articles-nav" class="articles-nav">
+        <div id="loading-bar"></div>
+        <ul>
+            <li class="btn center">
+                <span class="art-nav-tbn art-see-list" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    <!--&nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a href="/articles/mozilla-summit-2013"
+                   class="local art-nav-tbn"
+                   title="previous: Mozilla Summit 2013">&lt;&lt; Prev
+                
+                   </a>
+            </li>
+            <li class="btn right">
+                
+                <a href="/articles/participacao-na-webbr-2013"
+                   class="local art-nav-tbn"
+                   title="Next: Participação na <em>WebBR 2013</em>">Next &gt;&gt;
+                
+                   </a>
+            </li>
+        </ul>
+
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-6
+                    
+                    resumeless
+                    ">
+            <h2 itemprop="headline"><a href="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css">Creating notes, <em>alerts</em> and <em>block quotes</em> for citations using <em>CSS</em></a></h2>
+            <div class="wrapper">
+                
+            </div>
+            <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2013-10-22T04:33:16.000Z"/>
+                Oct 22nd, 2013 : css, pseudo-element
+            </span>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            <div class='social-buttons-container'>
+    <!-- FB LIKE BUTTON -->
+    <div class="fb-like" data-href="http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    <!-- Tweitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css" data-text="Creating notes, alerts and block quotes for citations using CSS" data-via="felipenmoura" data-count="none">Tweet</a>
+    <!-- GOOGLE PLUS -->
+    <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+</div>
+            <article itemprop="articleBody">Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
+
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+    &lt;div class="citation-content">The quote message.&lt;/div>
+    &lt;cite class="citation-author">
+        &lt;a href="link" target="_blank">author&lt;/a>
+    &lt;/cite>
+&lt;/blockquote>
+</code></pre>
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
+}
+
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
+}
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
+}
+</code></pre>
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+</code></pre>
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
+}
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
+}
+</code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
+}
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
+
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Cool thing, right?
+Now go ahead and customize yours!</article>
+
+            <aside>
+                <div id="disqus_thread" data-article-url="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css"></div>
+            </aside>
+        </div>
+    </div>
+</section>

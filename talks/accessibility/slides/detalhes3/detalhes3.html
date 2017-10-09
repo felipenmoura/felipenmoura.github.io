@@ -1,0 +1,74 @@
+<h1>
+	Detalhes...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin: auto;
+				margin-top: 30px;
+				border: solid 1px white;
+				width: 400px;
+				height: 90px;
+				padding: 4px;'>
+		<label for='botao'>Do you accept this?</label>
+		<div style='width: 250px; margin: auto;'>
+			<div class='decoratedButton' style='float: left;margin-right: 4px;'>
+				OK
+			</div>
+			<div class='decoratedButton' style='float: left;'>
+				No
+			</div>
+		</div>
+	</div>
+	<div id='step2'
+		 style='text-align: center;
+				margin: auto;
+				display: none;
+				margin-top: 30px;
+				border: solid 1px white;
+				width: 350px;
+				height: 70px;
+				padding: 4px;'>
+		<label for='botao'>Do you accept this?</label>
+		<input type='button' class='decoratedButton' value='OK' />
+		<input type='button' class='decoratedButton' value='No' />
+	</div>
+	
+	<div id='step3'
+		 style='text-align: center;
+				margin: auto;
+				display: none;
+				margin-top: 30px;'>
+		<div id='speakIt'
+			 style='border: solid 1px white;
+					margin: auto;
+					width: 350px;
+					height: 70px;
+					padding: 4px;'>
+			<span title="If you accept it, hit the Ok button, otherwise, click the No button">Do you accept this?</span>
+			<input type='button' class='decoratedButton' value='OK' />
+			<input type='button' class='decoratedButton' value='No' />
+		</div>
+		<br/>
+		Simplesmente adicionando o <em>title</em> &agrave; tag span
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		PPW.speak(document.getElementById('step1'));
+	});
+	PPW.addAction(function(){
+		$('#step1').fadeOut(function(){
+			$('#step2').fadeIn(function(){
+				PPW.speak(document.getElementById('step2'));
+			})
+		});
+	});
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3').fadeIn(function(){
+				PPW.speak(document.getElementById('speakIt'));
+			})
+		});
+	});
+</script>

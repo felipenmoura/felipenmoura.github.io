@@ -1,0 +1,87 @@
+<h2 class="LANG-EN">Accessibility</h2>
+<h2 class="LANG-PT">Acessibilidade</h2>
+
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	
+    <div id="colors-eg" style="text-align: center;">
+        <span class="LANG-EN">Colors</span>
+        <span class="LANG-PT">Cores</span>
+        <br/><br/>
+        <div id='square1'
+		 style='width: 50px;
+				height: 50px;
+				margin: auto;
+				background-color: #8f8;
+				border: solid 4px white;
+				box-shadow: 0px 0px 20px black;'></div>
+	<div id='square2'
+		 style='width: 50px;
+				height: 50px;
+				margin: auto;
+				margin-top: 25px;
+				background-color: #f88;
+				border: solid 4px white;
+				box-shadow: 0px 0px 20px black;'></div>
+        <br/>
+        <span class="LANG-EN">Details</span>
+        <span class="LANG-PT">Detalhes</span>
+    </div>
+                                
+                                
+                                
+                                
+    <div id="mouse-eg" style="display: none;">
+        <div id='mouse'
+             style='text-align: center;
+                    background-image: url(slides/acessibilidade/mouse.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    width: 250px;
+                    height: 350px;
+                    margin-left: 40%;
+                    margin-right: -100px;
+                    float: left;'>
+        </div>
+        <div id='mouse-eg-content'
+             style='display: none; margin-left: 180px;'>
+            <br/><br/>
+            &nbsp;No gmail:<br/>
+            &nbsp;&nbsp;&nbsp;<em>127</em> tabs para chegar ao primeiro e-mail
+            <div style='text-align: center; margin: 40px; font-size: 140%; display: none;' id='complement'>
+                   E enter <strong>N&Atilde;O</strong><br/>abre o e-mail!
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#square1').css({
+			backgroundImage: "url(slides/acessibilidade/check.png)",
+			backgroundRepeat: 'no-repeat',
+			backgroundPosition: 'center'
+		});
+		$('#square2').css({
+			backgroundImage: "url(slides/acessibilidade/fail.png)",
+			backgroundRepeat: 'no-repeat',
+			backgroundPosition: 'center'
+		});
+	});
+        
+	PPW.addAction(function(){
+            $('#colors-eg').fadeOut(function(){
+                $('#mouse-eg').fadeIn();
+            });
+	});
+        
+	PPW.addAction(function(){
+		$('#mouse').animate({
+			width: '170px',
+			marginLeft: '10px'
+		}, function(){
+			$('#mouse-eg-content').fadeIn();
+		})
+	});
+	PPW.addAction(function(){
+		$('#complement').fadeIn();
+	});
+</script>

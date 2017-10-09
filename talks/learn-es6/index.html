@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Power Polygon - Tutorial</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script src="../../ppw/_scripts/jquery-1.8.2.min.js"></script>
+        <script src="../../ppw/ppw.js"></script>
+
+        <!-- ADDONS -->
+        <script src="../../ppw/_addons/syntaxhighlighter/sh.js"></script>
+        <script src="../../ppw/_addons/chartjs/chart.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="styles/default.css" />
+
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-1270869-17']);
+            _gaq.push(['_setDomainName', 'felipenmoura.org']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+        <section id="slide-cover">
+
+            <img src="img/learning.jpg" class="fulfill" />
+
+            <div class="fulfill">
+                <h1>Learning ES6!</h1>
+                <h2>A walk through the ES6 valey</h2>
+
+                <div>
+                    <a href="https://github.com/felipenmoura" rel="author"><b>github.com/</b>felipenmoura</a><br/>
+                    <a href="https://felipenmoura.org/home" rel="author">felipenmoura.org/<b>home</b></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="prototypes">
+            <h2>Prototypes</h2>
+            <h3>Changes added to prototypes</h3>
+            <img src="img/protos.png" class="fulfill" />
+        </section>
+
+        <section id="syntax">
+            <h2>Syntax</h2>
+            <h3>Changes on ES6 syntax and new tokens</h3>
+            <img src="img/syntax.png" class="fulfill" />
+        </section>
+
+        <section id="let">
+            <h2>Let vs Var</h2>
+            <span class="LANG_EN">Block-Scoped variables</span>
+            <span class="LANG_PT"></span>
+            <pre class="sh_javascript">
+
+function () {
+    var x = 1;
+
+    if (x) {
+        let y= x;
+        let x= "X";
+        y++;
+    }
+    console.log(x); // 1
+    console.log(y); // Error: y is not defined
+}
+
+// there is no hoist
+function () {
+    console.log(foo); // ReferenceError
+    let foo = 2;
+}
+
+// very good to use in loops
+var i=0;
+for ( let i=i ; i < 10 ; i++ ) {
+    console.log(i);
+}
+// here, i is gone
+
+// not very good to use with switch
+switch (x) {
+  case 0:
+    let y= 'was 0';
+    break;
+
+  case 1:
+    let y= 'was 1'; // TypeError for redeclaration.
+    break;
+}
+
+// do not use this yet(let-block)
+var x = 5;
+var y = 0;
+
+let (x = x * 2, y = 5) {
+    console.log( x + y ); // 15
+}
+console.log(x, y); // 5, 0
+
+            </pre>
+        </section>
+
+        <section id="template-string">
+            <iframe src="exec.html?learn=templatestring&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">
+                Template String
+            </h2>
+        </section>
+
+        <section id="for-of">
+            <iframe src="exec.html?learn=for-of&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">for...of</h2>
+        </section>
+
+        <section id="shorthand-notation">
+            <iframe src="exec.html?learn=shorthand-notation&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Shorthand object notation</h2>
+        </section>
+
+        <section id="arguments">
+            <iframe src="exec.html?learn=shorthand-notation&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Arguments</h2>
+        </section>
+
+        <section id="arrow-function">
+            <iframe src="exec.html?learn=arrow-function&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Arrow Functions</h2>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <h3>New features added to ES6</h3>
+            <img src="img/features.png" class="fulfill" />
+        </section>
+
+        <section id="generators">
+            <iframe src="exec.html?learn=generators&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Generators</h2>
+        </section>
+
+        <section id="promises">
+            <iframe src="exec.html?learn=promises&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Promises</h2>
+        </section>
+
+        <section id="classes">
+            <iframe src="exec.html?learn=classes&hideDescription=1" class="fulfill" ></iframe>
+            <h2 class="on-top-of-iframe">Classes</h2>
+        </section>
+
+        <section id="links">
+
+            <h2>Links</h2>
+
+            <div>
+                <ul>
+                    <li>Compat Table: <a href="http://kangax.github.io/compat-table/es6/" about="_blank">http://kangax.github.io/compat-table/es6/</a></li>
+                    <li>MDN: <a href="http://goo.gl/O7IsnY" about="_blank">http://goo.gl/O7IsnY</a></li>
+                    <li>ES Discuss: <a href="http://goo.gl/O7IsnY" about="_blank">https://esdiscuss.org/</a></li>
+                    <li>Traceur: <a href="https://github.com/google/traceur-compiler" about="_blank">https://github.com/google/traceur-compiler</a></li>
+                    <li>ES Next: <a href="https://github.com/esnext" about="_blank">https://github.com/esnext</a></li>
+                    <li>ES6 Transpiler: <a href="https://github.com/termi/es6-transpiler" about="_blank">https://github.com/termi/es6-transpiler</a></li>
+                    <li>6to5: <a href="https://github.com/6to5/6to5" about="_blank">https://github.com/6to5/6to5</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="have-fun">
+            <img src="img/have-fun-with-es6.png" class="fulfill" />
+            <div class="my-contacts">
+                <a href="http://felipenmoura.org/home">felipenmoura.org</a><br/>
+                <a href="http://twitter.com/felipenmoura">@felipenmoura</a><br/>
+                <a href="http://fb.com/felipenmoura">fb.com/<b>felipenmoura</b></a><br/>
+            </div>
+        </section>
+
+        <script>
+            PPW.init({
+                title: "Learning ES6",
+                description: "Start learning and practicing ES6",
+                authors: [
+                    {
+                        name: "Felipe N. Moura",
+                        email: "felipenmoura@gmail.com",
+                        link: "http://felipenmoura.org/home"
+                    }
+                ],
+                theme: 'thm-simple',
+                transition: 'trans-zooming',
+                languages: ['EN', 'PT'],
+                defaultLanguage: 'PT',
+                useSplashScreen: true,
+                //profile: 'complete',
+                /*themeSettings: {
+                    shTheme: 'sh_bright'
+                },*/
+                slides: [
+/* ok */            { id: 'slide-cover', type: 'opening' },
+/* ok */            { id: 'about-me' },
+/* ok */            { id: 'about-es' },
+/* ok */            { id: 'prototypes', type: 'section' },
+/* ok */            { id: 'arrays' },
+/* ok */            { id: 'math' },
+/* ok */            { id: 'number' },
+                    ////{ id: 'regexp' },
+/* ok */            { id: 'string' },
+                    ////{ id: 'symbol' },
+/* ok */            { id: 'typed-arrays' },
+/* ok */            { id: 'syntax', type: 'section' },
+/* ok */            { id: 'let' },
+/* ok */            { id: 'template-string' },
+/* ok */            { id: 'for-of' },
+/* ok */            { id: 'shorthand-notation' },
+/* ok */            { id: 'arguments' },
+/* ok */            { id: 'arrow-function' },
+/* ok */            { id: 'features', type: 'section' },
+/* ok */            { id: 'about-generators' },
+/* ok */            { id: 'generators' },
+                    ////{ id: 'proxy' },
+/* ok */            { id: 'promises' },
+/* ok */            { id: 'classes' },
+/* ok */            { id: 'about-modules' },
+                    //{ id: 'modules' },
+                    //// { id: 'observers' },
+                    { id: 'links' },
+                    { id: 'have-fun' }
+                ]
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<h2 class="LANG-PT">Semântica do HTML5</h2>
+<h2 class="LANG-EB">HTML5 semantics</h2>
+
+<div class="cells-images">
+    <img src="slides/semantics/cell-1.png" id="cells-1" />
+    <img src="slides/semantics/cell-2.png" id="cells-2" />
+    <img src="slides/semantics/cell-3.png" id="cells-3" />
+</div>
+
+<div class="semantic-types">
+    <strong>Input types:</strong><br/>
+    date, email, color,<br/>
+    tel, url
+</div>
+
+<div class="semantic-tags">
+    <strong>Tags:</strong><br/>
+    article, aside, command,<br/>details, summary
+    figure,<br/>figcaption, footer, header,<br/>hgroup
+    mark, meter,<br/>nav, progress, ruby<br/>
+    rt, rp, section, time, wbr
+</div>
+
+<script>
+    
+    PPW.addAction({
+        does: function(){
+            
+            $('.semantic-types').fadeOut(function(){
+                $('.semantic-tags').fadeIn();
+            });
+            
+            $('#cells-1').show().animate({
+                marginLeft: '-87px',
+                width: '175px'
+            });
+        },
+        undo: function(){
+            $('.semantic-tags').fadeOut(function(){
+                $('.semantic-types').fadeIn();
+            });
+            
+            $('#cells-1').show().animate({
+                marginLeft: '0px',
+                width: '0px'
+            });
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#cells-1').animate({
+                width: '1px',
+                marginLeft: '0px'
+            },
+            function(){
+                var nImg= document.getElementById('cells-2');
+                this.style.display= 'none';
+                nImg.style.display= 'block';
+                $(nImg).animate({
+                    marginLeft: '-87px',
+                    width: '175px'
+                })
+            });
+        },
+        undo: function(){
+            $('#cells-2').animate({
+                width: '1px',
+                marginLeft: '0px'
+            },
+            function(){
+                var nImg= document.getElementById('cells-1');
+                this.style.display= 'none';
+                nImg.style.display= 'block';
+                $(nImg).animate({
+                    marginLeft: '-87px',
+                    width: '175px'
+                })
+            });
+        }
+    });
+    
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('#cells-2').animate({
+                width: '1px',
+                marginLeft: '0px'
+            },
+            function(){
+                var nImg= document.getElementById('cells-3');
+                this.style.display= 'none';
+                nImg.style.display= 'block';
+                $(nImg).animate({
+                    marginLeft: '-87px',
+                    width: '175px'
+                })
+            });
+        },
+        undo: function(){
+            $('#cells-3').animate({
+                width: '1px',
+                marginLeft: '0px'
+            },
+            function(){
+                var nImg= document.getElementById('cells-2');
+                this.style.display= 'none';
+                nImg.style.display= 'block';
+                $(nImg).animate({
+                    marginLeft: '-87px',
+                    width: '175px'
+                })
+            });
+        }
+    });
+</script>

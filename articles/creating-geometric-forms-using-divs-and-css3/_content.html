@@ -1,0 +1,366 @@
+A ideia, basicamente, é criar um grande número de formas geométricas básicas para construção de outras formas mais complexas, apoiando-se puramente em CSS3 e HTML5. Posteriormente, poderemos desenvolver uma interface gráfica que poderá ajudar a construir elementos utilizando estas formas de forma parametrizável.
+Se você pensar em alguma forma otimizada de fazer certos elementos, sinta-se livre para me informar, e adiciono à lista aqui com os devidos créditos ;)
+
+Vamos a algumas destas formas!
+<strong>Losango</strong>:
+<style type='text/css'>
+.square{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #99f;
+    border: solid 2px black;
+}
+.losango{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 30px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
+<div class='losango square'></div>
+<pre class="lang:CSS decode:1 " >
+.losango{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</pre>
+
+<strong>Triângulo(sem borda)</strong>:
+<style type='text/css'>
+.triangulo-sem-borda{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='triangulo-sem-borda square'></div>
+<pre class="lang:CSS decode:1 " >
+.triangulo-sem-borda{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+</pre>
+Caso deseje alterar algum dos ângulos do triângulo para produzir um equilátero, um isósceles ou um escaleno, basta alterar as bordas laterais do div:
+<style type='text/css'>
+.triangulo-escaleno{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-right-width: 30px !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='triangulo-escaleno square'></div>
+<pre class="lang:CSS decode:1 " >
+.triangulo-escaleno{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-right-width: 30px;
+    border-top: none;
+}
+</pre>
+
+Para um triângulo obtuso(ou o obtusângulo), utilize-se do skew no transform do CSS:
+<style type='text/css'>
+.triangulo-obtuso{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-right-width: 30px !IMPORTANT;
+    border-top: none !IMPORTANT;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+</style>
+<div class='triangulo-obtuso square'></div>
+<pre class="lang:CSS decode:1 " >
+.triangulo-obtuso{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-right-width: 30px;
+    border-top: none;
+
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+</pre>
+<strong>Triângulo(com borda)</strong>:
+<style type='text/css'>
+.triangulo{
+    width: 1px;
+    height: 1px;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+.triangulo-borda{
+    position: relative;
+    z-index: 1;
+    top: -136px;
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 100px transparent !IMPORTANT;
+    border-bottom: solid 100px #000 !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div>
+    <div class='triangulo'></div>
+    <div class='triangulo-borda square'></div>
+</div>
+O HTML para este caso é um pouco diferente:
+<pre class="lang:html decode:1 " >
+&lt;div>
+    &lt;div class='triangulo'>&lt;/div>
+    &lt;div class='triangulo-borda'>&lt;/div>
+&lt;/div>
+</pre>
+E aqui, o CSS para estilizar um triângulo com bordas:
+<pre class="lang:CSS decode:1 " >
+.triangulo{
+    width: 1px;
+    height: 1px;
+    position: relative;
+    z-index: 2;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+.triangulo-borda{
+    position: relative;
+    z-index: 1;
+    top: -136px;
+    width: 1px;
+    height: 1px;
+    border: solid 100px transparent;
+    border-bottom: solid 100px #000;
+    border-top: none;
+}
+</pre>
+
+<strong>Trapésio</strong>:
+<style type='text/css'>
+.trapesio{
+    width: 300px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='trapesio square'></div>
+<pre class="lang:CSS decode:1 " >
+.trapesio{
+    width: 300px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+</pre>
+Se você quer um trapésio com borda, basta seguir o padrão adotado para o triângulo.
+Para alterarmos o ângulo, utilize o transform skew:
+<style type='text/css'>
+.trapesio-reto{
+    width: 300px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    -o-transform: skew(35deg);
+    transform: skew(35deg);
+}
+</style>
+<div class='trapesio-reto square'></div>
+<pre class="lang:CSS decode:1 " >
+.trapesio-reto{
+    width: 300px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    -o-transform: skew(35deg);
+    transform: skew(35deg);
+}
+</pre>
+Para alterar a largura da parte de cima, basta alterar a propriedade width no css da classe.
+
+<strong>Paralelogramo</strong>:
+<style type='text/css'>
+.paralelogramo{
+    width: 180px;
+    height: 90px;
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+    transform: skew(45deg);
+}
+</style>
+<div class='paralelogramo square'></div>
+<pre class="lang:CSS decode:1 " >.paralelogramo{
+    width: 180px;
+    height: 90px;
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+    transform: skew(45deg);
+}
+</pre>
+
+<strong>Quadrado de pontas arredondadas</strong>:
+<style type='text/css'>
+.bola-quadrada{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 25%;
+    border: solid 2px black;
+}
+</style>
+<div class='bola-quadrada square'></div>
+<pre class="lang:CSS decode:1 " >
+.bola-quadrada{
+    border-radius: 25%;
+    border: solid 2px black;
+}
+</pre>
+
+<strong>Círculo</strong>:
+<style type='text/css'>
+.circulo{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+</style>
+<div class='circulo square'></div>
+<pre class="lang:CSS decode:1 " >
+.circulo{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+</pre>
+
+<strong>Elípse</strong>:
+<style type='text/css'>
+.elipse{
+    border-radius: 100%;
+    width: 140px;
+    height: 80px;
+    margin: auto;
+}
+</style>
+<div class='elipse square'></div>
+<pre class="lang:CSS decode:1 " >
+.elipse{
+    border-radius: 100%;
+    width: 140px;
+    height: 80px;
+    margin: auto;
+}
+</pre>
+
+<strong>Meia-Lua</strong>:
+<style type='text/css'>
+.meia-lua{
+    width: 150px;
+    height: 75px;
+    border-radius: 150px 150px 0px 0px;
+}
+</style>
+<div class='meia-lua square'></div>
+<pre class="lang:CSS decode:1 " >
+.meia-lua{
+    width: 150px;
+    height: 75px;
+    border-radius: 150px 150px 0px 0px;
+}
+</pre>
+
+<strong>Quarto de Lua</strong>:
+<style type='text/css'>
+.quarto-de-lua{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px 0px 0px 0px;
+}
+</style>
+<div class='quarto-de-lua square'></div>
+<pre class="lang:CSS decode:1 " >
+.quarto-de-lua{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px 0px 0px 0px;
+}
+</pre>
+
+<strong>Polígonos complexos(utilizando uma combinação do que vimos até aqui)</strong>:
+<style type='text/css'>
+.poly{
+    background-color: transparent !IMPORTANT;
+    width: 60px;
+    height: 60px;
+    border-color: transparent #99f #99f transparent !IMPORTANT;
+    border-width: 60px !IMPORTANT;
+}
+</style>
+<div class='poly square'></div>
+<pre class="lang:CSS decode:1 " >
+    width: 60px;
+    height: 60px;
+    border-color: transparent #99f #99f transparent;
+    border-width: 60px;
+</pre>
+* Sim, este último utiliza apenas UM div.

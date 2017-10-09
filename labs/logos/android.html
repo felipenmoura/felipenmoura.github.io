@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--
+			This example was created by Felipe Nascimento Moura<http://felipenmoura.org>
+			Feel free to replicate it, study it and send your feedback, but if you will use
+			this very same code in your blog or website, or what ever, just be nice and keep
+			a reference about me :)
+		-->
+		<style type='text/css'>
+			body, html{
+				background-color: white;
+				margin: 0px;
+			}
+			#container{
+				background-repeat: no-repeat;
+				background-position: center top;
+				width: 700px;
+				height: 700px;
+				margin: auto;
+				position: relative;
+				top: 50px;
+			}
+			div:not(#container){
+				background-color: #A5CA39;
+				position: relative;
+			}
+			#head{
+				border-radius: 165px 165px 0px 0px;
+				height: 165px;
+				width: 360px;
+				margin: auto;
+				top: 38px;
+			}
+			#antena1, #antena2{
+				width: 11px;
+				height: 80px;
+				border-radius: 10px;
+			}
+			#antena1{
+				left: 62px;
+				top: -34px;
+				-webkit-transform-origin: 0px 0px;
+				-webkit-transform: rotate(-30deg);
+				-moz-transform-origin: 0px 0px;
+				-moz-transform: rotate(-30deg);
+				-ms-transform-origin: 0px 0px;
+				-ms-transform: rotate(-30deg);
+				-o-transform-origin: 0px 0px;
+				-o-transform: rotate(-30deg);
+				transform-origin: 0px 0px;
+				transform: rotate(-30deg);
+			}
+			#antena2{
+				left: 290px;
+				top: -120px;
+				-webkit-transform-origin: 0px 0px;
+				-webkit-transform: rotate(30deg);
+				-moz-transform-origin: 0px 0px;
+				-moz-transform: rotate(30deg);
+				-ms-transform-origin: 0px 0px;
+				-ms-transform: rotate(30deg);
+				-o-transform-origin: 0px 0px;
+				-o-transform: rotate(30deg);
+				transform-origin: 0px 0px;
+				transform: rotate(30deg);
+			}
+			
+			#eye1, #eye2{
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				background-color: white !IMPORTANT;
+				position: absolute !IMPORTANT;
+				z-index: 8;
+			}
+			#eye1{
+				left: 85px;
+				top: 70px;
+			}
+			#eye2{
+				left: 250px;
+				top: 70px;
+			}
+			#leftArm, #rightArm, #leftLeg, #rightLeg{
+				width: 84px;
+				height: 245px;
+				border-radius: 42px;
+			}
+			#leftArm{
+				top: 45px;
+				left: 75px;
+			}
+			#body{
+				left: 170px;
+				top: -195px;
+				height: 305px;
+				width: 360px;
+				border-radius: 0px 0px 50px 50px;
+			}
+			#rightArm{
+				left: 544px;
+				top: -505px;
+			}
+			#leftLeg, #rightLeg{
+				position: absolute !IMPORTANT;
+				top: 400px;
+			}
+			#leftLeg{
+				left: 240px;
+			}
+			#rightLeg{
+				left: 375px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='container'>
+			<div id='head'>
+				<div id='antena1'></div>
+				<div id='antena2'></div>
+				<div id='eye1'></div>
+				<div id='eye2'></div>
+			</div>
+			<div id='leftArm'></div>
+			<div id='body'></div>
+			<div id='rightArm'></div>
+			<div id='leftLeg'></div>
+			<div id='rightLeg'></div>
+		</div>
+	</body>
+</html>

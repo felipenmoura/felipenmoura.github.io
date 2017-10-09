@@ -1,0 +1,48 @@
+<h2 class="LANG-EN">What is the web?</h2>
+<h2 class="LANG-PT">O que é a web?</h2>
+
+<div class="LANG-EN">
+    * Made for people<br/>
+    * Contains information people put in there<br/>
+    * Made by people<br/><br/>
+    
+    * Better to create layouts(HTML)<br/>
+    * Better to search and distribute<br/>
+    * Offers semantics and accessibility<br/>
+    * Multiple devices<br/>
+    * Good performance<br/>
+</div>
+<div class="LANG-PT">
+    * Feita para pessoas<br/>
+    * Contém informações que pessoas colocaram lá<br/>
+    * Feita por pessoas<br/><br/>
+    
+    * Melhor para criar layouts(HTML)<br/>
+    * Melhor pesquisa e distribuição das informações<br/>
+    * Suporte à semântica e acessibilidade<br/>
+    * Diferentes devices<br/>
+    * Boa performance<br/>
+</div>
+<img class="people" src="slides/o-que-e-web/faces.png" />
+
+<img src="slides/o-que-e-web/map.jpg" id="web-map" class="fulfill" />
+<img id="dont-hurt-the-web" src="slides/o-que-e-web/dont-hurt-the-web.jpg" class="fulfill">
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('#web-map').fadeOut();
+        },
+        undo: function(){
+            $('#web-map').fadeIn();
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            $('#dont-hurt-the-web').fadeIn();
+        },
+        undo: function(){
+            $('#dont-hurt-the-web').fadeOut();
+        }
+    });
+</script>

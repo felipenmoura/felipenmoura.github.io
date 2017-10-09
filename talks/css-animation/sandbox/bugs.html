@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style type='text/css'>
+			div{
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				background-color: gray;
+				border: solid 1px black;
+			}
+		</style>
+		<script src='../scripts/jquery.js'></script>
+	</head>
+	<body>
+		<div style='left: 40px; top: 100px;' topVal='40'></div>
+		<div style='left: 70px; top: 100px;' topVal='40'></div>
+		<div style='left: 100px; top: 90px;' topVal='100'></div>
+		<div style='left: 130px; top: 90px;' topVal='100'></div>
+		<div style='left: 160px; top: 110px;' topVal='110'></div>
+		<div style='left: 180px; top: 110px;' topVal='110'></div>
+		<div style='left: 200px; top: 110px;' topVal='110'></div>
+		<div style='left: 220px; top: 80px;' topVal='80'></div>
+		<div style='left: 250px; top: 80px;' topVal='80'></div>
+		<div style='left: 270px; top: 80px;' topVal='80'></div>
+		<div style='left: 290px; top: 80px;' topVal='80'></div>
+		<div style='left: 310px; top: 90px;' topVal='90'></div>
+		<div style='left: 340px; top: 90px;' topVal='90'></div>
+		<div style='left: 370px; top: 90px;' topVal='90'></div>
+		<div style='left: 400px; top: 100px;' topVal='100'></div>
+		<div style='left: 430px; top: 100px;' topVal='100'></div>
+		<div style='left: 460px; top: 100px;' topVal='100'></div>
+		<div style='left: 500px; top: 40px;' topVal='40'></div>
+		<div style='left: 520px; top: 40px;' topVal='40'></div>
+		<div style='left: 540px; top: 40px;' topVal='40'></div>
+		<div style='left: 560px; top: 40px;' topVal='40'></div>
+		<div style='left: 580px; top: 40px;' topVal='40'></div>
+		<div style='left: 600px; top: 90px;' topVal='90'></div>
+		<div style='left: 630px; top: 90px;' topVal='90'></div>
+		<div style='left: 650px; top: 90px;' topVal='90'></div>
+	</body>
+	<script>
+		var $= jQuery;
+		
+		function goUp(el){
+			$(el).animate({
+				top: el.getAttribute('topVal')+'px'
+			}, function(){
+				goDown(el)
+			});
+		}
+		function goDown(el){
+			$(el).animate({
+				top: '400px'
+			}, function(){goUp(el)});
+		}
+		$('div').each(function(){
+			goDown(this);
+		});
+		goDown();
+	</script>
+</html>
