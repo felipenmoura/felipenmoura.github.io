@@ -192,6 +192,10 @@ module.exports = function(grunt) {
             }
         }
 
+        function applyLinks (str) {
+            return str.replace(/target\=([\"\'])_blank([\"\'])/ig, 'target=$1_blank$1 rel=$1noopener$1')
+        }
+
         function createIndexesForArticles(data, cb){
             var artPath = 'articles/',
                 metaData,
@@ -303,7 +307,7 @@ module.exports = function(grunt) {
                     metaData.content = fs.readFileSync( 'src/' + artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
                     fs.writeFileSync('src/' + artPath + cur.name + '/index.html',
-                                     nunEnv.render(tplPath, data),
+                                     applyLinks(nunEnv.render(tplPath, data)),
                                      'utf8');
                     data.currentArticleMetaData = metaData;
                 });
@@ -366,7 +370,7 @@ module.exports = function(grunt) {
             //var idxOrig = fs.readFileSync('./index.html', 'utf-8');
             //fs.writeFileSync(where + '/index.html', idxOrig, 'utf-8');
             fs.writeFileSync('public/' + where + '/index.html',
-                             nunEnv.render('_templates/index.html', data), 'utf8');
+                applyLinks(applyLinks(nunEnv.render('_templates/index.html', data))), 'utf8');
 
             //fs.createReadStream('./index.html').pipe(fs.createWriteStream(where + '/index.html'));
         }
@@ -392,7 +396,7 @@ module.exports = function(grunt) {
                 data.pageTitle = 'felipenmoura:page:home';
                 data.fullURL = DOMAIN;
                 data.pageType = "home";
-                fs.writeFileSync(idxFile, nunEnv.render('_templates/index.html', data), 'utf8');
+                fs.writeFileSync(idxFile, applyLinks(nunEnv.render('_templates/index.html', data)), 'utf8');
                 copyIndexTo("home", data);
 
                 data.pageTitle = 'felipenmoura:page:about';
