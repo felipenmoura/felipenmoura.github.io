@@ -1,5 +1,5 @@
 const PWASettings = {
-    "version": 1.1,
+    "version": 1.2,
     "applyImmediately": true,
     "appShell": [
         "/",
@@ -17,6 +17,7 @@ const PWASettings = {
         "/sh/prism.min.css",
         "/sh/prism.js",
         "/images/relax.jpg",
+        "/images/icons.png",
         "/images/felipe-moura-felipenmoura-square.jpg",
         "/resources/vibe.js.png",
         "/resources/lab-canvas-image-editor-gama.png",
@@ -1171,7 +1172,7 @@ var preCache;
 var failedAppShellFiles = [];
 var ROOT_SW_SCOPE = null;
 
-var DSW = { version: '1.12.2', build: '1507561055360', ready: null };
+var DSW = { version: '1.12.2', build: '1507561830056', ready: null };
 var REQUEST_TIME_LIMIT = 5000;
 var REGISTRATION_TIMEOUT = 12000;
 var DEFAULT_NOTIF_DURATION = 6000;
