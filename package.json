@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "http-server -p 8080 ./public",
-    "build": "grunt build && dsw && mv dsw.js public/dsw.js",
+    "build": "grunt build && dsw && uglifyjs dsw.js -o public/dsw.js",
     "publish": "git push gh `git subtree split --prefix public src`:master --force",
     "watch": "grunt watch"
   },
