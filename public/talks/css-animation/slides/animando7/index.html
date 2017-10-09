@@ -1,0 +1,47 @@
+<style type='text/css'>
+.square{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  background-color: blue;
+  border: solid 1px black;
+  -webkit-transition-property: left, top, background, -webkit-transform;
+  -webkit-transition-duration: 2s, 2s, 1s, 1s;
+  -webkit-transition-timing-function: ease-out, ease-in, linear, ease-in-out;
+  -webkit-transition-delay: 0, 0, 0, 1s;
+}
+
+#squareStage{
+	width: 192px;
+	height: 192px;
+	border: dashed 1px white;
+	margin: auto;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+#squareStage:hover .square{
+  left: 100px;
+  top: 100px;
+  background: red;
+  -webkit-transform: rotate(360deg);
+}
+</style>
+<h1>
+	Animando
+</h1>
+<div class='content' style='margin-top: 20px; text-align: center;'>
+	Anima&ccedil;&otilde;es m&uacute;ltiplas<br/>
+	<div id='squareStage'>
+		<div class='square'></div>
+	</div>
+	<div class='source'>.square{
+  -webkit-transition-property: left, top,
+                               background,
+                               -webkit-transform;
+  -webkit-transition-duration: 2s, 2s, 1s, 1s;
+  -webkit-transition-timing-function: ease-out,
+                  ease-in, linear, ease-in-out;
+  -webkit-transition-delay: 0, 0, 0, 1s;
+}</div>
+</div>

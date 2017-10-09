@@ -1,0 +1,66 @@
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
+
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
+<pre lang='javascript'>
+var x= 1;
+
+if(x === 3){
+    var y= 1;
+}
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+</pre>
+
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
+
+Ainda duvida?
+Façamos assim, então:
+
+<pre lang='javascript'>
+var x= 1;
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+
+if(x === 3){
+    var y= 1;
+}
+
+</pre>
+
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
+
+Da mesma forma, funções podem ser declaradas ou atribuídas.
+
+<pre lang='javascript'>
+// chamando a funcão 1
+func1(); // joga 1 no console
+
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
+}
+
+// chamando a função 2
+func2(); // ERROR
+
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
+}
+
+// a partir de agora, func2 poderia ser evocada
+</pre>
+
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
+
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!

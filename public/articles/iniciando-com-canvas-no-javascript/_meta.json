@@ -1,0 +1,9 @@
+{
+    "title": "<em>Iniciando com o Canvas</em> javascript",
+    "creationDate": "Fri, 18 Jun 2010 00:20:10 +0000",
+    "tags": ["javascript", "canvas"],
+    "resume": "Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de \"mecher nisto\". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.",
+    "headerImg": "/articles/starting-with-canvas-in-javascript/canvas.jpg",
+    "status": "published",
+    "articleLang": "pt-BR"
+}

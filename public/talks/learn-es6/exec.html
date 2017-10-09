@@ -1,0 +1,860 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Run es6 commands</title>
+        <script src="vendors/6to5/browser-polyfill.js"></script>
+        <script src="vendors/6to5/browser.js"></script>
+
+        <script src="vendors/codemirror/codemirror.js"></script>
+        <link rel="stylesheet" href="vendors/codemirror/codemirror.css">
+        <script src="vendors/codemirror/javascript/javascript.js"></script>
+
+        <style type="text/css">
+
+            html, body{
+                height: 100%;
+                font-size: 16px;
+                margin: 0;
+            }
+
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+
+            body, nav, li, a {
+                font-family: Tahoma;
+            }
+
+            .codeContainer {
+                width: 80%;
+                min-width: 500px;
+                margin: auto;
+                overflow: auto;
+            }
+
+            textarea, .CodeMirror {
+                width: 100%;
+                margin: auto;
+                clean: both;
+                display: block;
+                height: auto;
+                float: left;
+                transition: width linear .2s;
+            }
+
+            textarea, .CodeMirror, .evaluates {
+                border: solid 1px gray;
+                border-radius: 6px;
+            }
+
+            .evaluates {
+                background: #fed;
+                width: 100%;
+                text-align: left;
+                padding: 1rem;
+                white-space: pre;
+                font-family: monospace;
+            }
+
+            .CodeMirror {
+                font-size: 1.5rem;
+                overflow-x: auto;
+                overflow-y: hidden;
+                height: auto;
+                position: relative;
+            }
+
+            .btns {
+                width: 80%;
+                min-width: 500px;
+                text-align: center;
+                margin: auto;
+                margin-bottom: 200px;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: -200px;
+                z-index: 999;
+                width: 210px;
+                background-color: #444;
+                color: #fff;
+                transition: left linear .2s;
+            }
+
+            nav:hover {
+                left: 0;
+            }
+
+            nav ol {
+                margin: 0;
+                padding: 0 0 0 1.5rem;
+                line-height: 1.5rem;
+                cursor: pointer;
+            }
+
+            nav li:hover {
+                background-color: #4747be;
+            }
+
+            .codeContainer {
+                position: relative;
+                padding-top: 30px;
+                min-height: 275px;
+            }
+
+            .CodeMirror:nth-child(2) {
+                width: 0;
+                float: right;
+                position: absolute;
+                right: 1px;
+                z-index: 999999999;
+                border-radius: 6px 0 0 6px;
+                border: solid 1px transparent;
+            }
+
+            .CodeMirror:nth-child(1) {
+                margin-top: 10px;
+            }
+
+            .showingTranspiler .CodeMirror:nth-child(1){
+                opacity: .2;
+                position: absolute;
+            }
+
+            .showingTranspiler .CodeMirror:nth-child(2){
+                width: 90%;
+                display: block;
+                position: relative;
+                box-shadow: -5px -5px 50px 0 #bbb;
+                border: solid 1px gray;
+                border-right: none;
+            }
+
+            #workingOn {
+                width: 80%;
+                min-width: 500px;
+                margin: auto;
+                display: block;
+            }
+
+            .steps {
+                display: none;
+            }
+
+            .hasSteps .steps {
+                display: inline;
+            }
+
+            #samples {
+                display: none;
+            }
+
+            #workingOnDesc {
+                white-space: pre;
+            }
+
+            #workingOnDesc h2{
+                margin: 0;
+                padding: 0;
+            }
+
+            .hideDescription #workingOnDesc {
+                display: none;
+            }
+
+            .error-message {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+            <span id="workingOn">
+                <span id="workingOnDesc">free style</span>
+                 <span class="steps">
+                    <input type="button" id="prevStep" value=" < " />
+                    <label id="stepsLabel">0/0</label>
+                    <input type="button" id="nextStep" value=" > " />
+                </span>
+            </span>
+        <div class="codeContainer">
+            <textarea id="originalCode">// insert your code here
+
+
+
+
+
+
+
+</textarea>
+            <div id="transpiledToEl"></div>
+        </div>
+        <div class="btns">
+            <div class="evaluates">Evaluates: <span id="returnedValue"></span></div>
+            <input id="showBtn" type="button" value="Show in ES5" />
+            <input id="runBtn" type="button" value="Run" />
+        </div>
+
+
+        <nav id="theNav">
+            <ol type="1">
+                <li data-id="templatestring" data-type="preLoad">Template String</li>
+                <li data-id="shorthand-notation" data-type="preLoad">Shorthand Notation</li>
+                <li data-id="arguments" data-type="preLoad">Arguments</li>
+                <li data-id="arrow-function" data-type="preLoad">Arrow Functions</li>
+                <li data-id="promises" data-type="preLoad">Promises</li>
+                <li data-id="generators" data-type="preLoad">Generators</li>
+                <li data-id="classes" data-type="preLoad">Classes</li>
+            </ol>
+        </nav>
+
+        <div id="samples">
+            <section id="templatestring">
+                <label>
+                    <h2>Template String</h2>
+/**
+ * Template strings allow you to use
+ * multiple lines in strings, as well
+ * as binding variables into them.
+ *
+ * @name templatestring
+ * @docs <a href="http://google.com/">here</a>
+ */
+                </label>
+                <template>
+var str = `first line
+second line
+third line`;
+log(str);
+                </template>
+                <template>
+var name = prompt("who you think you are?");
+log(`Oh, nice to meet you, ${name}!`);
+                </template>
+                <template>
+var apples = 3;
+var oranges = 4;
+log(`I have ${apples + oranges} fruits.`);
+                </template>
+            </section>
+
+            <section id="for-of">
+                <template>
+var arr = [ "a", "b", "c" ];
+arr.lastOne = "z";
+
+//for (let i in arr) {
+//   console.log(i);
+//}
+
+for (let i of arr) {
+   console.log(i);
+}
+                </template>
+                <template>
+var domList= document.querySelectorAll("li");
+
+for(let domEl of domList) {
+    log(domEl.innerHTML);
+}
+                </template>
+            </section>
+
+            <section id="shorthand-notation">
+                <template>
+var x = 123,
+    y = 456;
+
+var obj = {
+        x,
+        y,
+        z: 789
+    }
+
+log(obj);
+                </template>
+                <template>
+var x = 2,
+    y = 4;
+
+var obj = {
+        x,
+        y,
+        addXtoY(){
+            return this.x + this.y;
+        }
+    }
+
+log(obj.addXtoY());
+                </template>
+                <template>
+var obj = {
+    localName: "",
+    set name(val){
+        this.localName= val.toUpperCase();
+    },
+    get name(){
+        return this.localName;
+    }
+}
+
+obj.name = "felipe";
+log(obj.name);
+                </template>
+                <template>
+var obj = {
+    ageVal: 0,
+    set age(val){
+        if(val < 0){
+            throw new Error("It's impossible!");
+        }
+        this.ageVal= parseInt(val, 10);
+    },
+    get age(){
+        return this.ageVal + " yers old";
+    }
+}
+
+obj.age = 15;
+log(obj.age);
+obj.age = -2;
+                </template>
+            </section>
+
+            <section id="arguments">
+                <template>
+function who (name="anonymous", age= 13) {
+    return `${name} is ${age} years old`;
+}
+
+log( who('some child') );
+log( who('Felipe', 29) );
+log( who(void(0), 18) );
+                </template>
+                <template>
+function sayMyName (...names) {
+    log(names.join(' '));
+}
+
+sayMyName('Felipe',
+          'Nascimento',
+          'de',
+          'Moura');
+                </template>
+                <template>
+var basket = {
+    fruits: [],
+    vegetables: [],
+    greens: []
+}
+
+function add (type, ...items) {
+    basket[type]= basket[type]?
+        basket[type].concat(items) :
+        items;
+}
+
+add('fruits', 'apple', 'banana');
+add('vegetables', 'carrot', 'potato');
+add('greens', 'letuce');
+add('fruits', 'lime');
+add('meat', 'chicken', 'pork');
+
+log(basket);
+                </template>
+                <template>
+function avrgOf3 (a, b, c) {
+    return (a + b + c) / 3;
+}
+
+log( avrgOf3(5, 2, 2) );
+
+var arr = [5, 4, 3];
+log( avrgOf3(...arr) );
+                </template>
+            </section>
+
+            <section id="arrow-function">
+                <template>
+var func = param => param.split(" ");
+
+func("Felipe Moura");
+                </template>
+                <template>
+var func = () => {
+    log('first line');
+    log('I received no arguments');
+}
+
+func();
+                </template>
+                <template>
+let arr = ['a', 'e', 'i', 'o', 'u'];
+
+arr.sort( (a, b)=> a < b? 1: -1 );
+                </template>
+                <template>
+( x => x * 2 )( 3 );
+                </template>
+                <template>
+var Person = function (name) {
+    this.id = name;
+
+    setTimeout(function () {
+        log(this.id || "no id!");
+    }, 1000);
+
+    setTimeout(()=>{
+        log(this.id || "no id!");
+    }, 2000);
+    return this;
+}
+
+var me = new Person('Felipe');
+                </template>
+            </section>
+
+            <section id="generators">
+                <template>
+function *foo() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+var it = foo(); // it becomes an Iterator
+log(it.next());
+log(it.next());
+log(it.next());
+                </template>
+                <template>
+var count = 10;
+function * foo(x) {
+    yield (x || 1) * 3;
+}
+
+log(foo().next().value);
+log(foo(2).next().value);
+log(foo(3).next().value);
+                </template>
+                <template>
+var count = 10;
+function * foo(x) {
+    yield (x || 1) * 3;
+}
+
+var theFoo = foo();
+log(theFoo.next().value);
+log(theFoo.next().value); // undefined
+                </template>
+                <template>
+function * foo() {
+    yield 111;
+    yield 222;
+    yield 333;
+    return 444; // will NOT show on for..of
+}
+
+for(let val of foo()){
+    log(val);
+}
+
+// this, would create a NEW iterator
+// therefore, on its first yield
+//log(foo().next().value);
+                </template>
+                <template>
+function * counter(){
+    var i = 0;
+    while(true)
+        yield i++;
+}
+
+var it = counter();
+
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
+
+// a for..of here, would be an endless loop
+                </template>
+            </section>
+
+            <section id="promises">
+                <template>
+var goGetThemBoy = (val)=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(val){
+                resolve("worked " + val);
+            }else{
+                reject(Error("It broke"));
+            }
+        }, 1000);
+    });
+}
+
+// try changing this argument to false
+goGetThemBoy(true).then((ret)=>{
+    log('resolved ', ret);
+}).catch((err)=>{
+    log('rejected', err.message);
+});
+
+                </template>
+                <template>
+var goGetThemBoy = (val)=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(val){
+                resolve(val);
+            }else{
+                reject(Error("It broke"));
+            }
+        }, 1000);
+    });
+}
+
+// try changing this argument to false
+goGetThemBoy(1).then((ret)=>{
+    log('resolved with ' + ret);
+    return ret + 1;
+}).then((ret)=>{
+    log('I resolved too: ', ret);
+    throw(new Error('foo'));
+    return ret + 1;
+}).then((ret)=>{
+    log('What about me? ', ret);
+}).catch((err)=>{
+    log('rejected', err.message);
+});
+
+                </template>
+                <template>
+var goGetThemBoy = (val)=>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(val){
+                resolve(val);
+            }else{
+                reject(Error("It broke"));
+            }
+        }, 1000);
+    });
+}
+
+goGetThemBoy(1).then((ret)=>{
+    log('resolved with ' + ret);
+    return ret + 1;
+}).then((ret)=>{
+    log('I resolved too: ', ret);
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(9);
+        }, 1000);
+    });
+}).then((ret)=>{
+    log('What about me? ', ret);
+}).catch((err)=>{
+    log('rejected', err.message);
+});
+
+                </template>
+                <template>
+// race and all
+var p1 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 3000, 'p1');
+});
+
+var p2 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 1000, 'p2');
+});
+
+var p3 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 2000, 'p3');
+});
+
+Promise.race([p1, p2, p3]).then((val)=>{
+    log(val, 'was faster');
+});
+
+Promise.all([p1, p2, p3]).then((val)=>{
+    log(val, 'all finished');
+});
+                </template>
+            </section>
+
+            <section id="classes">
+                <template>
+class ClassName {
+    constructor(data){
+        /* ... */
+    }
+
+    method1(){
+        /* ... */
+    }
+}
+
+var p = new ClassName({/* ... */});
+
+                </template>
+                <template>
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    getName(){
+        return this.name;
+    }
+}
+
+var p = new Person('Felipe', 29);
+log(p);
+log(p.getName());
+
+                </template>
+                <template>
+class Being {
+    constructor (legs= 4, species= 'alien') {
+        this.legs= legs;
+        this.species = species;
+    }
+
+    eat () {
+        log('ate');
+    }
+
+    runAway () {
+        log('gone!');
+    }
+}
+
+class Human extends Being {
+    constructor (name) {
+        this.name = name;
+        super(2, 'human');
+    }
+
+    eat () {
+        log('ate, and saved for later');
+    }
+}
+
+var dog= new Being(4, 'canine');
+var person= new Human('Felipe');
+
+log(person);
+log(person.eat());
+
+                </template>
+            </section>
+
+            <section id="modules">
+                <template>
+                </template>
+                <template>
+                </template>
+            </section>
+        </div>
+
+
+        <script>
+
+            // useeful global shortcuts
+            function log(){
+                window.console.log.apply(window.console, [].slice.call(arguments));
+            };
+
+            (function(){
+
+                "use strict";
+
+                var utils = {};
+                var bodyCL = document.body.classList;
+
+                utils.strToType = function (val) {
+                    return JSON.stringify(val, null, 4);
+                }
+                utils.loadSample = function (sample, step) {
+                    var samples = utils.samples[sample],
+                        sampleName= sample;
+
+                    if(samples){
+                        step = step || samples.cur || 0;
+                        sample = samples[step];
+                        returnedValue.innerHTML = "";
+
+                        if(samples.length > 1){
+                            bodyCL.add('hasSteps');
+                        }else{
+                            bodyCL.remove('hasSteps');
+                        }
+
+                        utils.learning = {
+                            item: sampleName,
+                            idx: step,
+                            last: samples.length-1
+                        };
+
+                        workingOnDesc.innerHTML = samples.description || sampleName;
+                    }else{
+                        sample = false;
+                    }
+
+                    utils.codeEditor.setValue(sample || "\n// sample \""+ sampleName +"\" not found\n");
+                    utils.setStepLabel();
+                }
+                utils.prevStep = function(){
+                    if(utils.learning && utils.learning.idx > 0){
+                        utils.loadSample(utils.learning.item, --utils.learning.idx);
+                    }
+                    utils.setStepLabel();
+                }
+                utils.nextStep = function(){
+                    if(utils.learning && utils.learning.idx < utils.learning.last){
+                        utils.loadSample(utils.learning.item, ++utils.learning.idx);
+                    }
+                    utils.setStepLabel();
+                }
+                utils.setStepLabel = function () {
+                    if(utils.learning){
+                        stepsLabel.innerHTML = (utils.learning.idx + 1) + '/' + (utils.learning.last + 1);
+                    }
+                }
+
+                function bindEvents () {
+                    showBtn.addEventListener('click', function(){
+                        //alert(to5.transform(codeEditor.getValue()).code);
+                        if(this.value == 'Show in ES5'){
+                            this.value = 'Hide';
+                            utils.transpiledTo.setValue(to5.transform(utils.codeEditor.getValue()).code);
+                            document.body.classList.add('showingTranspiler');
+                        }else{
+                            this.value = 'Show in ES5';
+                            document.body.classList.remove('showingTranspiler');
+                        }
+                    });
+
+                    runBtn.addEventListener('click', function(){
+                        returnedValue.innerHTML= "";
+                        var ret= "";
+                        try{
+                            ret= to5.eval(utils.codeEditor.getValue());
+                            returnedValue.innerHTML+= "<br/>> " + utils.strToType(ret);
+                        }catch(e){
+                            ret= "<span class='error-message'>"+e.message+"</span>";
+                            returnedValue.innerHTML+= "<br/>> Error: " + ret;
+                        }
+
+                    });
+
+                    theNav.addEventListener('click', function(event){
+
+                        if(event.target.getAttribute('data-type') == 'preLoad') {
+                            // clicked on a code sample
+                            utils.loadSample(event.target.getAttribute('data-id'));
+                        }
+                    });
+
+                    prevStep.addEventListener('click', function (event) {
+                        utils.prevStep();
+                    });
+                    nextStep.addEventListener('click', function (event) {
+                        utils.nextStep();
+                    });
+                }
+
+                function setEnv () {
+
+                    // prepare samples
+                    utils.samples = (function(){
+                        function getTemplatesFrom (templateSet) {
+                            var list= [];
+                            [].slice.call(templateSet.getElementsByTagName('template')).forEach(function(cur){
+                                list.push(cur.innerHTML.replace(/\&lt;/g, '<').replace(/\&gt;/g, '>'));
+                            });
+                            list.cur = 0;
+                            list.description = templateSet.getElementsByTagName('label');
+                            list.description = list.description.length? list.description[0].innerHTML : false;
+                            return list;
+                        }
+
+                        var sampleEls = document.querySelectorAll('#samples section'),
+                            samples = {};
+                        [].slice.call(sampleEls).forEach(function(cur){
+                            samples[cur.getAttribute('id')] = getTemplatesFrom(cur);
+                        });
+                        return samples;
+                    }());
+
+                    // LOG
+                    var originalLog = window.console.log;
+                    window.console.log = function () {
+                        var args= [].slice.call(arguments),
+                            val,
+                            finalMessage= "";
+
+                        args.forEach(function(cur){
+                            val = utils.strToType(cur);
+                            finalMessage+= " " + (val && val.replace? val.replace(/\\n/g, '\n') : "");
+                        });
+                        returnedValue.innerHTML+= "<br/>> " + finalMessage;
+
+                        originalLog.apply(window.console, args);
+                    }
+
+                    // auto-open
+                    if(location.search){
+                        var s= location.search.match(/[\?\&]learn=([a-z0-9\-\._]+)/i);
+                        var h= location.search.match(/[\?\&]hideDescription=([01])/i);
+                        if(s){
+                            s = s[1];
+                           utils.loadSample(s);
+                        }
+                        if(h && h[1]){
+                            bodyCL.add('hideDescription');
+                        }
+                    }
+                }
+
+                function setEditors () {
+                    utils.codeEditor = CodeMirror(function(elt) {
+                        originalCode.parentNode.replaceChild(elt, originalCode);
+                    }, {
+                        value: originalCode.value,
+                        indentUnit: 4,
+                        tabSize: 4,
+                        indentWithTabs: false,
+                        lineWrapping: false,
+                        lineNumbers: true,
+                        viewportMargin: 5
+                    });
+
+                    utils.transpiledTo = CodeMirror(function(elt) {
+                        transpiledToEl.parentNode.replaceChild(elt, transpiledToEl);
+                    }, {
+                        value: "",
+                        indentUnit: 4,
+                        tabSize: 4,
+                        indentWithTabs: false,
+                        lineWrapping: false,
+                        lineNumbers: true,
+                        viewportMargin: 5
+                    });
+                }
+
+                bindEvents();
+                setEditors();
+                setEnv();
+            }());
+
+
+        </script>
+
+    </body>
+</html>

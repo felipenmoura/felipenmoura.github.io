@@ -1,0 +1,320 @@
+.fulfill{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.fullSlide{
+    padding: 0px !IMPORTANT;
+}
+.fullSlideContainer{
+    padding: 0px !IMPORTANT;
+    margin: 0px !IMPORTANT;
+}
+.cover-slide{
+    background-image: url(../slides/cover/cover.jpg) !IMPORTANT;
+    background-size: 100% 100% !IMPORTANT;
+}
+
+/* MITHS */
+#ppw-slide-container-miths{
+    padding: 0px !IMPORTANT;
+    /*background-color: #bfa286 !IMPORTANT;*/
+}
+#ppw-slide-container-miths section{
+    margin: 0px !IMPORTANT;
+}
+.shoot-in-foot{
+    background-color: #bfa286 !IMPORTANT;
+    background-image: url(../slides/miths/shoot-foot.png);
+    background-size: 100% !IMPORTANT;
+    background-repeat: no-repeat !IMPORTANT;
+    background-position: bottom !IMPORTANT;
+    position: absolute;
+    padding-left: 40px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.miths-contents{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px white;
+}
+.miths-contents span{
+    display: none;
+}
+
+/* MADE OF */
+.made-of{
+    background-color: white;
+    background-image: url(../slides/made-of/people.png);
+    background-repeat: no-repeat !IMPORTANT;
+    background-position: center bottom !IMPORTANT;
+    position: absolute;
+    padding-left: 40px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.made-of div{
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    font-size: 2.4em;
+    color: red;
+    text-shadow: 0px 0px 5px black, 0px 0px 20px white;
+}
+
+.made-of-devs2, #baddesign-gun{
+    background-color: white;
+}
+
+/* DEVELOPMENT ANALYST */
+.devan-1{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.bigdecision{
+    display: none;
+}
+.snoopy-decision{
+    display: none;
+}
+
+/* RIGHT THING */
+.einstein{
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+}
+.righ-thing-content{
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+.righ-thing-content span, .ruby-solution{
+    display: none
+}
+
+.ruby-solution{
+    font-size: 1.4em;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    bottom: 140px;
+    color: red;
+}
+/* TESTS */
+.test-1, .test-2{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px white;
+}
+
+/* OBVIOUS */
+.obvious-surprise{
+    text-align: center;
+    padding-top: 40px;
+    overflow: hidden;
+    display: none;
+}
+.did-you-notice{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px black;
+    display: none;
+}
+
+/* USERS-USING*/
+#users-using .fulfill{
+    z-index: 1 !IMPORTANT;
+}
+#users-using h2{
+    position: absolute !IMPORTANT;
+    z-index: 2 !IMPORTANT;
+}
+.superman-1 h2{
+    bottom: 20px;
+    left: 20px;
+}
+
+.superman-2{
+    background-color: white;
+    background-image: url(../slides/users-using/superman-dev.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    display: none;
+}
+.superman-2 h2{
+    left: 20px;
+}
+
+.superman-3{
+    background-color: white;
+    background-image: url(../slides/users-using/superman-tested.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto 100%;
+    display: none;
+}
+.superman-3 h2{
+    top: 40%;
+    left: 20px;
+}
+
+.superman-4{
+    background-image: url(../slides/users-using/kryptonite.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 100% 100%;
+    display: none;
+}
+.superman-4 h2{
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 4px white;
+}
+
+/* AJAX */
+.ajax-answer{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    display: none;
+}
+.ajax-img{
+    display: none;
+}
+
+/* JSON */
+.jason{
+    background-image: url(../slides/json/jason.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.json{
+    /*background-image: url(../slides/json/json.png);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    width: 600px;
+    margin: auto;
+}
+.json-content{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 0px 0px 4px black;
+}
+
+/* HTACCESS */
+.htaccess-content{
+    height: 100%;
+    margin-top: -10px;
+    background-image: url(../slides/htaccess/htaccess.gif);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+/* DESIGN-PATTERNS */
+#left-hand{
+    background-image: url(../slides/design-patterns/left-hand.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100%;
+    position: absolute;
+    left: -345px;
+    top: 0px;
+    width: 345px;
+    height: 100%;
+}
+
+#right-hand{
+    background-image: url(../slides/design-patterns/right-hand.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100%;
+    position: absolute;
+    right: -273px;
+    top: 0px;
+    width: 273px;
+    height: 100%;
+}
+
+/* RESPONSIVE-DESIGN */
+.responsive-design-content ul li:nth-child(2n-1){
+    float: left;
+    width: 300px;
+}
+.responsive-design-content ul{
+    margin: auto;
+    width: 600px;
+}
+
+.cells-images img{
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    margin-left: -0px;
+    display: none;
+    height: 390px;
+}
+
+.semantic-tags{
+    display: none;
+}
+
+/* VIDEO */
+#video-element{
+    display: block;
+    margin: auto !IMPORTANT;
+    box-shadow: 0px 0px 40px black;
+}
+
+.video-code{
+    position: absolute;
+    top: 80px;
+    white-space: pre;
+    left: 50%;
+    width: 620px;
+    margin-left: -330px;
+    display: none;
+}
+
+/* THANKS */
+.thanks-content{
+    text-shadow: 0px 0px 4px black;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.thanks-content a{
+    text-shadow: 0px 0px 4px #999;
+}

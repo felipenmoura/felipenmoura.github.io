@@ -1,0 +1,28 @@
+<h2>Canvas - Context 3D</h2>
+
+<div>
+    <img id="can-cannot" src="slides/canvas-3d-ctx/yes-we-can.jpg" width="250" style="float: left;" />
+
+    <pre style="width: 500px; float: right;" class="sh_javascript no-numbers">
+
+// logical thought
+var canvas = $('#canvas')[0];
+ctx= canvas.getContext('3D'); // \o/
+</pre>
+
+    <pre id="can-cannot-result" style="display: none; width: 500px; float: right;" class="sh_javascript no-numbers">ctx == null; // :(</pre>
+
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            document.getElementById('can-cannot').src= 'slides/canvas-3d-ctx/no-you-cant.png';
+            document.getElementById('can-cannot-result').style.display= 'block';
+        },
+        undo: function(){
+            document.getElementById('can-cannot').src= 'slides/canvas-3d-ctx/yes-we-can.jpg';
+            document.getElementById('can-cannot-result').style.display= 'none';
+        }
+    });
+</script>

@@ -1,0 +1,130 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <script src="../../ppw/_scripts/jquery-1.8.2.min.js"></script>
+        <script src="../../ppw/ppw.js"></script>
+        
+        <script src="../../ppw/_addons/syntaxhighlighter/sh.js"></script>
+        <script src="../../ppw/_addons/caniuse/caniuse.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="styles/context.css" />
+
+    </head>
+    <body>
+
+
+        <div id="boneco">
+            <div class="cabeca">
+                <div class="olhos"></div>
+                <div class="olhos"></div>
+                <div class="nariz"></div>
+                <div class="boca"></div>
+            </div>
+            <div class="corpo">
+                <div class="manga"></div>
+                <div class="braco"></div>
+            </div>
+            <div class="bermuda">
+                <div class="bolso"></div>
+                <div class="pernaEsq pernaBermuda">
+                    <div class="perna"></div>
+                </div>
+                <div class="pernaDir pernaBermuda">
+                    <div class="perna"></div>
+                </div>
+            </div>
+            <div class="sapato esquerdo"></div>
+            <div class="sapato direito"></div>
+            <div class="sombra"></div>
+        </div>
+        
+        <script>
+            PPW.init({
+                PPWSrc: '../../ppw/',
+                theme: ['thm-orange-n-black', 'thm-parallax-1'],
+                useSplashScreen: true,
+                transition: 'trans-zooming',
+                languages: ['EN', 'PT'],
+                slides: [
+/*OK*/               { id: 'cover',                      type: 'opening' }
+/*OK*/              ,{ id: 'about',                      type: 'content' }
+/*OK*/              ,{ id: 'interface-tt',               type: 'section' }
+/*OK*/              ,{ id: 'interface-1',                type: 'content', notes: ["O que é uma interface?", "Exemplo da maçaneta", ] }
+/*OK*/              ,{ id: 'interface-2',                type: 'content', notes: ["Exemplo do fogão"] }
+/*OK*/              ,{ id: 'interface-3',                type: 'content', notes: ["Exemplo da aplicação web"] }
+/*OK*/              ,{ id: 'web-tt',                     type: 'section' }
+/*OK*/              ,{ id: 'o-que-e-web',                type: 'content', notes: ["definição da web"] }
+/*OK*/              ,{ id: 'pessoas-e-a-web',            type: 'content', notes: ["Como pessoas interagem com a web"] }
+/*OK*/              ,{ id: 'web-2-0',                    type: 'content', notes: ["Interação de conteúdos e agilidade"] }
+/*OK*/              ,{ id: 'acessibilidade',             type: 'content', notes: ["Exemplos de acessibilidade"] }
+/*OK*/              ,{ id: 'nao-me-faca-pensar',         type: 'content', notes: ["Foto de interface de game"] }
+/*OK*/              ,{ id: 'users-using',                type: 'content', notes: ["Como o produto é vendido"] }
+/*OK*/              ,{ id: 'obvious',                    type: 'content' }
+//*OK*/              ,{ id: 'detalhes',                   type: 'section', notes: ["Detalhes fazem a diferença na compreensão"] }
+/*OK*/              ,{ id: 'apresentacao-de-conteudo',   type: 'content', notes: ["Infográficos", "Carrossel", "Mapas", "Paralax"] }
+/*OK*/              ,{ id: 'css3',                       type: 'section' }
+/*OK*/              ,{ id: 'formas-em-css3',             type: 'content', notes: ["Formas geométricas com css3"] }
+/*OK*/              ,{ id: 'formas-em-css3-2',             type: 'content', notes: ["Formas geométricas com css3"] }
+/*OK*/              ,{ id: 'animacoes-em-css3',          type: 'content', notes: ["Animações em CSS3 para exibir conteúdos"] }
+/*OK*/              ,{ id: 'css3-animation-demo-1',      type: 'content' }
+/*OK*/              ,{ id: 'css3-animation-demo-2',      type: 'content' }
+/*OK*/              ,{ id: 'css3-animation-demo-3',      type: 'content' }
+/*OK*/              ,{ id: 'css3-animation-demo-4',      type: 'content' }
+/*OK*/              ,{ id: 'parallax',                   type: 'content' }
+/*OK*/              ,{ id: 'parallax-demo-1',            type: 'content' }
+/*OK*/              ,{ id: 'parallax-demo-2',            type: 'content' }
+/*OK*/              ,{ id: 'svg',                        type: 'section' }
+/*OK*/              ,{ id: 'como-funciona-o-svg',        type: 'content', notes: ["Elementos vetoriais", "Mais pesado"] }
+/*OK*/              ,{ id: 'svg-demo-1',                 type: 'content' }
+/*OK*/              ,{ id: 'svg-demo-2',                 type: 'content' }
+/*OK*/              ,{ id: 'svg-demo-3',                 type: 'content' }
+/*OK*/              ,{ id: 'HTML5',                      type: 'section' }
+/*OK*/              ,{ id: 'sockets',                    type: 'content', notes: ["Uso de sockets para interagir com a apresentação"] }
+/*OK*/              ,{ id: 'sockets-demo',               type: 'content' }
+/*OK*/              ,{ id: 'canvas',                     type: 'section' }
+/*OK*/              ,{ id: 'como-funciona-o-canvas',     type: 'content', notes: ["Frames completos", "requestAnimationFrame"] }
+/*OK*/              ,{ id: 'canvas-demo-1',              type: 'content' }
+/*OK*/              ,{ id: 'canvas-demo-2',              type: 'content' }
+/*OK*/              ,{ id: 'canvas-demo-3',              type: 'content' }
+/*OK*/              ,{ id: 'video',                      type: 'content', notes: ["Um video interativo"] }
+/*OK*/              ,{ id: 'popcorn',                    type: 'content', notes: ["Um video interativo"] }
+/*OK*/              ,{ id: 'webgl',                      type: 'content' }
+/*OK*/              ,{ id: 'webgl-space',                type: 'content' }
+/*OK*/              ,{ id: 'webgl-space-2',              type: 'content' }
+/*OK*/              ,{ id: 'webgl-libs',                 type: 'content' }
+/*OK*/              ,{ id: 'webgl-demo-1',               type: 'content' }
+/*OK*/              ,{ id: 'webgl-demo-2',               type: 'content' }
+/*OK*/              ,{ id: 'webgl-demo-3',               type: 'content' }
+/*OK*/              ,{ id: 'referencias',                type: 'content' }
+/*OK*/              ,{ id: 'isso-e-tudo-pessoal',        type: 'content' }
+                ],
+                themeSettings: {
+                    shTheme: 'sh_bright'
+                },
+                zoomOnScroll: false
+            });
+            
+            PPW.addListener('onslidechange', function(data){
+                switch(data.current.id){
+                    case 'formas-em-css3':
+                    case 'formas-em-css3-2':
+                    case 'css3':
+                        $('#boneco').show();
+                        break;
+                    default:
+                        $('#boneco').hide();
+                        break;
+                }
+            });
+            
+        </script>
+        
+    </body>
+</html>

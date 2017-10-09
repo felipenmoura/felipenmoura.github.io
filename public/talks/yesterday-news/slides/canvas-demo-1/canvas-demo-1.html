@@ -1,0 +1,17 @@
+<h2>Canvas</h2>
+<div style="text-align: center;">
+    <iframe id="canvas-eg-1"
+            style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border: none;"
+            src="javascript:void(0);">
+    </iframe>
+</div>
+<div class="fulfill"></div>
+
+<script>
+    PPW.onSlideEnter(function(){
+        $('#canvas-eg-1').attr('src', 'slides/canvas-demo-1/ponce.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#canvas-eg-1').attr('src', 'javascript:void(0);');
+    })
+</script>

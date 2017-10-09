@@ -1,0 +1,25 @@
+<h2 class="LANG-EN">That's all folks</h2>
+<h2 class="LANG-PT">Isso é tudo, pessoal!</h2>
+
+<ul id="get-in-touch">
+    <li>By <strong>Felipe N. Moura</strong></li>
+    <li>website: <br/><a href="http://felipenmoura.org">http://felipenmoura.org</a></li>
+    <li>twitter: <br/><a href="http://twitter.com/felipenmoura">@felipenmoura</a></li>
+    <li>facebook: <br/><a href="http://facebook.com/felipenmoura">/felipenmoura</a></li>
+    <li>github: <br/><a href="http://github.com/felipenmoura">/felipenmoura</a></li>
+    <li class="LANG-EN">this talk: <br/><a href="http://felipenmoura.org/talks/web-interface">http://felipenmoura.org/talks/web-interface</a></li>
+    <li class="LANG-PT">esta palestra: <br/><a href="http://felipenmoura.org/talks/web-interface">http://felipenmoura.org/talks/web-interface</a></li>
+</ul>
+
+<img id="yeah" src="slides/isso-e-tudo-pessoal/yeah.png" />
+<script>
+    PPW.addAction({
+        timing: 1500,
+        does: function(){
+            PPW.animate('#yeah', 'fadeInRight');
+        },
+        undo: function(){
+            PPW.animate('#yeah', 'fadeOutRight');
+        }
+    });
+</script>

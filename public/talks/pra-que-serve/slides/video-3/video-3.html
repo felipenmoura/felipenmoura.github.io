@@ -1,0 +1,31 @@
+<h2>Video + canvas</h2>
+
+
+<div id="chromakey-eg" style="text-align: center; ">
+    <iframe id="video-chrk-eg-1"
+            style="position: relative; margin: auto; height: 380px; width: 400px;"
+            src="javascript:void(0);">
+    </iframe><br/>
+    <a href="http://felipenmoura.org/articles/javascript/create-a-chromakey-with-javascript-webbr-2012-w3c/">felipenmoura.org</a>
+</div>
+
+
+<script>
+
+    PPW.onSlideEnter(function(){
+        $('#video-chrk-eg-1').attr('src', 'slides/video-3/chromakey.html');
+    });
+    PPW.onSlideExit(function(){
+        $('#video-chrk-eg-1').attr('src', 'javascript:void(0);');
+    })
+
+
+    /*PPW.addAction({
+        does: function(){
+            $('#video-src-code').fadeOut(function(){$('#chromakey-eg').fadeIn();});
+        },
+        undo: function(){
+            $('#chromakey-eg').fadeOut(function(){$('#video-src-code').fadeIn();});
+        }
+    });*/
+</script>

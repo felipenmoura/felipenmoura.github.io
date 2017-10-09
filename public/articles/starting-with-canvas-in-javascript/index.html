@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+    <head>
+
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script src="/dsw.js"></script>
+        <script>
+          DSW.setup()
+            .then(() => {
+                console.log('Service Worker installed')
+            })
+            .catch(() => {
+                console.log('Service Worker failed')
+            });
+        </script>
+
+
+        <!-- Info -->
+        <title>felipenmoura articles: Starting with Canvas in javascript</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5b60d5">
+        <meta name="theme-color" content="#B2ADB2">
+
+        <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles. Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will &quote;learn&quote; it soon.Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
+        <meta name="author" content="Felipe Nascimento de Moura">
+
+        <!-- FACEBOOK -->
+        <meta property="og:url" content="http://felipenmoura.com/articles/starting-with-canvas-in-javascript/"/>
+        <meta property="og:site_name" content="FelipeNMoura.com"/>
+        <meta property="og:image" content="http://felipenmoura.com/articles/starting-with-canvas-in-javascript/canvas.jpg"/>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="felipenmoura articles: Starting with Canvas in javascript | Felipe N Moura"/>
+        <meta property="og:description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will &quote;learn&quote; it soon.Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:locale:alternate" content="en_US" />
+
+        <!-- TWITTER -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@felipenmoura">
+        <meta name="twitter:title" content="felipenmoura articles: Starting with Canvas in javascript | Felipe N Moura">
+        <meta name="twitter:description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will &quote;learn&quote; it soon.Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta name="twitter:creator" content="@felipenmoura">
+        <meta name="twitter:image:src" content="http://felipenmoura.com/articles/starting-with-canvas-in-javascript/canvas.jpg">
+        <meta name="twitter:image" content="http://felipenmoura.com/articles/starting-with-canvas-in-javascript/canvas.jpg">
+
+        <!-- GOOGLE -->
+        <link rel="author" href="https://plus.google.com/u/0/100273419330331113912/"/>
+        <link rel="publisher" href="https://plus.google.com/u/0/100273419330331113912/"/>
+        <meta itemprop="name" content="felipenmoura articles: Starting with Canvas in javascript | Felipe N Moura">
+        <meta itemprop="description" content="Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will &quote;learn&quote; it soon.Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.">
+        <meta itemprop="image" content="http://felipenmoura.com/articles/starting-with-canvas-in-javascript/canvas.jpg">
+
+        <!-- RSS -->
+        <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="https://felipenmoura.com/feed.xml">
+
+    </head>
+    <body data-page="articles" hash-bang-detail=>
+
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="/styles/main.min.css" />
+
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-1270869-17', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <div id="fb-root"></div>
+
+        <div class="background-video videobg">
+            <img id="background-video" class="background-video" src="/images/relax.jpg" alt="">
+            <!--video id="background-video" class="background-video" autoplay loop poster="/images/relax.jpg" >
+                <!--source src="/assets/relax-bg.webm" type="video/webm" /- ->
+                <source src="/assets/relax-bg.mp4" type="video/mp4" />
+            </video-->
+        </div>
+
+        <h1 id="main-header">felipe n. moura</h1>
+
+        
+            <nav id="main-nav" role="navigation">
+            <ul>
+                <li class="menu-home-btn"><a href="/home" class='local' role="menu-item">home</a></li>
+                <li class="menu-about-btn"><a href="/about" class='local' role="menu-item">about</a></li>
+                <li class="menu-utils-btn"><a href="/utils" class='local' role="menu-item">utils</a></li>
+                <li class="menu-articles-btn"><a href="/articles" class='local' role="menu-item">articles</a></li>
+            </ul>
+        </nav>
+            <section id="about-container" class="sect-content" itemscope itemtype="http://schema.org/NewsArticle">
+      <meta itemprop="datePublished" content="2015-01-22T00:29:52.000Z"/>
+            <div class="decorator">
+                <div class="wrapper">
+                    <div class="col-2">
+                        <span class="lang-en" lang="en-US" itemprop="description">
+                            Working with web development for about 12 years, also giving talks and trainings.<br/>
+                            Felipe is a founder and owner at Nasc.
+                            He is a founder/organiser of <a href="http://braziljs.com.br/" target="_blank">BrazilJS</a>, FrontInPoa and RSJS conferences.<br/>
+                            Felipe is a <a href="https://developers.google.com/experts/people/felipe-moura" target="_blank">Google Developer Expert (GDE)</a> in Web Technologies, as well.
+                        </span>
+                        <span class="lang-pt" lang="pt-BR" itemprop="description" style="display: none;">
+                            Trabalhando com desenvolvimento Web por mais de 12 anos, também palestra e ministra treinamentos e cursos.<br/>
+                            Felipe é um dos fundadores da Nasc.
+                            Ele também é fundador e mantenedor da <a href="http://braziljs.com.br/" target="_blank">BrazilJS</a>, do FrontInPoa, RSJS e de outros eventos.<br/>
+                            Além disso, Felipe é um <a href="https://developers.google.com/experts/people/felipe-moura" target="_blank">Google Developer Expert (GDE)</a> em Tecnologias Web.
+                        </span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="wrapper about-content">
+                <div class="col-1">
+                    <div rel="author">
+                        <span class="author-name">Felipe N. Moura</span>
+                        <div class="picture-square">
+                            <div class="picture-content">
+                                <img src="/images/felipe-moura-felipenmoura-square.jpg"
+                                     alt='Foto de Felipe Nascimento de Moura - felipenmoura'
+                                     title=''
+                                     itemprop="image" />
+                                <span>Me, on stage at BrazilJS 2013</span>
+                            </div>
+                        </div>
+                        <div class="contacts-label">
+                            Contacts
+                        </div>
+                        <ol>
+                            <li><a href="http://twitter.com/felipenmoura" target="_blank">Twitter</a></li>
+                            <li><a href="http://facebook.com/felipenmoura" target="_blank">Facebook</a></li>
+                            <li><a href="http://www.youtube.com/user/flpnm" target="_blank">Youtube</a></li>
+                            <li><a href="http://github.com/felipenmoura" target="_blank">Github</a></li>
+                            <li><a href="https://plus.google.com/u/0/100273419330331113912/" target="_blank" rel="author">Google+</a></li>
+                            <li><a href="http://www.linkedin.com/profile/view?id=60746087&trk=tab_pro" target="_blank">LinkedIn</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-full-content">
+                <div class="wrapper">
+                    <div class="col-2" itemprop="articleBody">
+                        <h2 itemprop="headline">JavaScript and Front End developer and enthusiast.</h2>
+
+                        Open Source projects taught me a lot, and inspired me to start projects from my own.<br/>
+                        <br/>
+                        I am graduated at Senac/RS, a technician from CTT Maxwell, Project Manager by PMTech and have some different specialization courses.<br/>
+                        Actually, I have worked on McDonalds, was an alxiliar of a baker, worked on a super market, on a warehouse...but it doesn't really matter now :p<br/>
+                        <br/>
+                        An advice?<br/>
+                        <blockquote>
+                            Do it because you love it!<br/>
+                            Be passionate to learning and creating new things!<br/>
+                        </blockquote>
+
+                        I work with web development for almost a decade, and nowadays I work at Terra as a Senior Development Analyst.<br/>
+                        Also, I love giving talks in conferences and enjoy giving trainings(I enjoy being an attendee, too!).<br/>
+                        <br/>
+                        Among my projects, you can find Power-polygon, theWebMind, Botaoteca, PHPDevBar and of course, I am an organizer of the <a href="http://rsjs.com.br/" target="_blank">RSJS</a> and <a href="http://braziljs.com.br/" target="_blank">BrazilJS</a>.<br/> Conferences, the first Brazilian JavaScript Conference, also, the biggest one in Latin America, and one of the biggest in the world!<br/>
+                        With the same name, the <a href="http://braziljs.org/" target="_blank">BrazilJS Foundation</a>.<br/>
+                        <br/>
+                        <blockquote>
+                            Changing the world is the least I expect from myself
+                            <cite><a href='http://felipenmoura.org/home'>Myself</a></cite>
+                        </blockquote>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </section>
+
+            <section id="utils-container" class="sect-content">
+
+            <div class="utils-content talks">
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="https://speakerdeck.com/felipenmoura/pwa-progressive-web-apps-en" target="_blank">
+                            <img src="/resources/talk-pwa-voronezh.jpg"
+                                 title="Open PWA - Progressive Web Apps"
+                                 alt="PWA - Progressive Web Apps"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="PWA - Progressive Web Apps">PWA - Progressive Web Apps</h3>
+                        <span class="desc">
+                            Talk presented in Russia during the DeveFest Voronezh 2017. We talked mostly about Service Workers and how they will help us reshape the web, but also about web app manifest and related web technologies.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/accessibility/" target="_blank">
+                            <img src="/resources/talk-accessibility.jpg"
+                                 title="Open Accessibility!"
+                                 alt="Accessibility!"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Accessibility!">Accessibility!</h3>
+                        <span class="desc">
+                            In this talk, we discuss about accessibility on the web, and how to make the best use of web technologies to make it better.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/css-animation/" target="_blank">
+                            <img src="/resources/talk-css-animation.jpg"
+                                 title="Open CSS Animation"
+                                 alt="CSS Animation"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="CSS Animation">CSS Animation</h3>
+                        <span class="desc">
+                            Meet some of the greatest techniques to animate and optimize animations using CSS3.<br/>Besides that, also some interesting techniques to use and combine with your HTML.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/learn-es6/" target="_blank">
+                            <img src="/resources/talk-learn-es6.jpg"
+                                 title="Open Learn ES6"
+                                 alt="Learn ES6"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Learn ES6">Learn ES6</h3>
+                        <span class="desc">
+                            Start learning ES6 now, try and run some code, see how to transpile, understand the differences from the previous version of JavaScript.<br/>This is a talk full of code and examples.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/pra-que-serve/" target="_blank">
+                            <img src="/resources/talk-what-for.jpg"
+                                 title="Open What is that all for?"
+                                 alt="What is that all for?"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="What is that all for?">What is that all for?</h3>
+                        <span class="desc">
+                            Cool new technologies are great! But how can we really use them? Lets see cool and creative ways to combine techniques and tecnologies to build incredible stuff, using the latest features of HTML5, JavaScript and CSS3.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/web-interface/" target="_blank">
+                            <img src="/resources/talk-web-as-interface.jpg"
+                                 title="Open The web, as interface"
+                                 alt="The web, as interface"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="The web, as interface">The web, as interface</h3>
+                        <span class="desc">
+                            An interface is what is between people, and how they reach their goals...nowadays, web is part of it!<br/>Let's make some comparizons with real world, check some techniques to have better interfaces for users, some classic mistakes and good practices.
+                        </span>
+                    </div>
+                </section>
+                
+                <section class="utils-item">
+                    <div class="utils-thumb">
+                        <a href="http://felipenmoura.com/talks/demo-parallax/" target="_blank">
+                            <img src="/resources/talk-ppw-demo.jpg"
+                                 title="Open A Power Polygon parallax demo"
+                                 alt="A Power Polygon parallax demo"
+                                 width="200" />
+                        </a>
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="A Power Polygon parallax demo">A Power Polygon parallax demo</h3>
+                        <span class="desc">
+                            This talk is a demo presentation using some of the Power Polygon features.
+                        </span>
+                    </div>
+                </section>
+                
+            </div>
+
+            <div class="utils-content videos">
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="FgTzmMKzB8c">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=FgTzmMKzB8c" />
+                        <meta itemprop="uploadDate" content="2015-10-23T00:25:36.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/FgTzmMKzB8c" />
+
+                        <img src="/articles/fworld-sozinhos/fworld-thumb-760.png"
+                             title="Watch: FWorld: Sozinhos"
+                             alt="FWorld: Sozinhos"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="FWorld: Sozinhos" itemprop="name" >FWorld: Sozinhos</h3>
+                        <span class="desc" itemprop="description">
+                            Sabe aquele sentimento de solidão? Que estamos sozinhos no mundo? Mas hoje em dia, não fazemos NADA sozinhos...sério! Descubra algumas pessoas ou coisas que estiveram mais isolados, que se tenha notícia, e também, uma forma de nunca mais se sentir realmente sozinho neste mundo!
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="AgZJQT1-ixg">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=AgZJQT1-ixg" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:25:36.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/AgZJQT1-ixg" />
+
+                        <img src="http://i.ytimg.com/vi/AgZJQT1-ixg/mqdefault.jpg"
+                             title="Watch: Matéria na Record sobre a BrazilJS 2014"
+                             alt="Matéria na Record sobre a BrazilJS 2014"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Matéria na Record sobre a BrazilJS 2014" itemprop="name" >Matéria na Record sobre a BrazilJS 2014</h3>
+                        <span class="desc" itemprop="description">
+                            A TV Record foi até a BrazilJS este ano, para fazer uma cobertura sobre o evento e coletar algumas entrevistas.
+O material ficou bem legal e muito bem produzido!
+Saímos no ar, no jornal das 19 horas, no dia 21 em TV Aberta.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="TuwH-oo_UpQ">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=TuwH-oo_UpQ" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:29:52.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/TuwH-oo_UpQ" />
+
+                        <img src="http://i.ytimg.com/vi/TuwH-oo_UpQ/mqdefault.jpg"
+                             title="Watch: Entrevista Jaydson & Felipe sobre o BrazilJS - Programa Tudo Mais TVCom"
+                             alt="Entrevista Jaydson & Felipe sobre o BrazilJS - Programa Tudo Mais TVCom"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Entrevista Jaydson & Felipe sobre o BrazilJS - Programa Tudo Mais TVCom" itemprop="name" >Entrevista Jaydson & Felipe sobre o BrazilJS - Programa Tudo Mais TVCom</h3>
+                        <span class="desc" itemprop="description">
+                            Entrevista feita com os organizadores do BrazilJS (Jaydson Gomes e Felipe Moura) no programa Tudo Mais da TVCom, canal da RBS de Porto Alegre.
+Na entrevista, os organizadores falam sobre a linguagem JavaScript e sobre o BrazilJS 2012.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="cTla3-hUy00">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=cTla3-hUy00" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:26:26.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/cTla3-hUy00" />
+
+                        <img src="http://i.ytimg.com/vi/cTla3-hUy00/mqdefault.jpg"
+                             title="Watch: Matéria no Gabinete Digital sobre o BrazilJS"
+                             alt="Matéria no Gabinete Digital sobre o BrazilJS"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Matéria no Gabinete Digital sobre o BrazilJS" itemprop="name" >Matéria no Gabinete Digital sobre o BrazilJS</h3>
+                        <span class="desc" itemprop="description">
+                            O Gabinete Digital esteve no BrazilJS e fez uma série de mini-entrevistas com alguns participantes, e com os organizadores do evento, Jaydson Gomes e Felipe Moura.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="2ITPOx-p7IU">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=2ITPOx-p7IU" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:15:22.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/2ITPOx-p7IU" />
+
+                        <img src="http://i.ytimg.com/vi/2ITPOx-p7IU/mqdefault.jpg"
+                             title="Watch: Por que eu amo a web"
+                             alt="Por que eu amo a web"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Por que eu amo a web" itemprop="name" >Por que eu amo a web</h3>
+                        <span class="desc" itemprop="description">
+                            É difícil explicar este sentimento, mas é o que tento fazer em 5 minutos neste video que a W3C/Nic.br pediu para a WebBR 2014.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="Sa59Z5pyUl4">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=Sa59Z5pyUl4" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:12:47.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/Sa59Z5pyUl4" />
+
+                        <img src="http://i.ytimg.com/vi/Sa59Z5pyUl4/mqdefault.jpg"
+                             title="Watch: Review: LG G3 após 1 mês de uso (português pt-br)"
+                             alt="Review: LG G3 após 1 mês de uso (português pt-br)"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Review: LG G3 após 1 mês de uso (português pt-br)" itemprop="name" >Review: LG G3 após 1 mês de uso (português pt-br)</h3>
+                        <span class="desc" itemprop="description">
+                            Review do LG G3 que fiz após um mês de experiência usando ele.
+Veja algumas vantagens e desvantagens que encontrei no aparelho, usando-o no dia-a-dia.
+Sou um "heavy user", usando várias apps, redes sociais, e configurando e personalizando bastante coisa, também.
+Neste video, mostro a interface padrão, mas atualmente utilizo launchers e diallers. Até então, estão rodando sem problemas.
+
+Caso queira conhecer alguns dos launchers mais conhecidos para Android, assista a este outro vídeo, em que demonstro um pouco como cada uma funciona, e seus prós e contras:
+7 Launchers (homes) Android: <a href="https://www.youtube.com/watch" target="_blank">https://www.youtube.com/watch</a>?v=Im9b98P5-Vw
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="RonpitSO-u4">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=RonpitSO-u4" />
+                        <meta itemprop="uploadDate" content="2015-01-29T03:22:13.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/RonpitSO-u4" />
+
+                        <img src="http://i.ytimg.com/vi/RonpitSO-u4/mqdefault.jpg"
+                             title="Watch: Experiment/Talk: Chroma key in JS - live code at W3C WebBR 2012"
+                             alt="Experiment/Talk: Chroma key in JS - live code at W3C WebBR 2012"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Experiment/Talk: Chroma key in JS - live code at W3C WebBR 2012" itemprop="name" >Experiment/Talk: Chroma key in JS - live code at W3C WebBR 2012</h3>
+                        <span class="desc" itemprop="description">
+                            During the W3C's WebBR-2012 I had the opportunity to give two talks.
+
+This talk had no slides, just live coding!
+We built in one hour, with just 100 JavaScript lines of code, a chroma key effect with Open Web Technologies, such as HTML5 and CSS3.
+
+To do that, we used canvas, html5 video and the user's camera(user media). And also, a lot of math!
+
+The source code and running demo is on github: 
+<a href="https://github.com/felipenmoura/js-chroma-key" target="_blank">https://github.com/felipenmoura/js-chroma-key</a>
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="K7HAlqzgLk4">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=K7HAlqzgLk4" />
+                        <meta itemprop="uploadDate" content="2015-01-22T00:13:20.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/K7HAlqzgLk4" />
+
+                        <img src="http://i.ytimg.com/vi/K7HAlqzgLk4/mqdefault.jpg"
+                             title="Watch: 3D CG - The tower with flag"
+                             alt="3D CG - The tower with flag"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="3D CG - The tower with flag" itemprop="name" >3D CG - The tower with flag</h3>
+                        <span class="desc" itemprop="description">
+                            This is the 5th time I take a day off, to learn 3D stuff.
+Studying and mixing some of the learned lessons, I managed to build this, using wind, tissue, array transforms, lights, WAY more polygons, and texture effects!
+It took 2.5 days rendering!
+The tool used was Bender with Cycles.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="VDBSv8cBSy8">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=VDBSv8cBSy8" />
+                        <meta itemprop="uploadDate" content="2015-02-06T03:05:52.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/VDBSv8cBSy8" />
+
+                        <img src="http://i.ytimg.com/vi/VDBSv8cBSy8/mqdefault.jpg"
+                             title="Watch: Experiment: HTML5 Image Editor"
+                             alt="Experiment: HTML5 Image Editor"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="Experiment: HTML5 Image Editor" itemprop="name" >Experiment: HTML5 Image Editor</h3>
+                        <span class="desc" itemprop="description">
+                            See it working at: <a href="http://felipenmoura.org/labs/html5-imager/" target="_blank">http://felipenmoura.org/labs/html5-imager/</a>
+This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also pick a color, and remove all the pixels in the image that correspond to that color.
+
+Check this out on github: <a href="https://github.com/felipenmoura/html5-imager" target="_blank">https://github.com/felipenmoura/html5-imager</a>
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="DCalAGCLc74">
+                        <link itemprop="contentUrl" href="https://www.youtube.com/watch?v=DCalAGCLc74" />
+                        <meta itemprop="uploadDate" content="2015-09-15T00:25:36.000Z"/>
+                        <link itemprop="embedUrl" href="https://www.youtube.com/embed/DCalAGCLc74" />
+
+                        <img src="http://i1.ytimg.com/vi/DCalAGCLc74/mqdefault.jpg"
+                             title="Watch: 20 dias com o LG G4 - Review de usuário do celular (português pt-br)"
+                             alt="20 dias com o LG G4 - Review de usuário do celular (português pt-br)"
+                             width="320"
+                             height="180"
+                             itemprop="thumbnailUrl" />
+                    </div>
+                    <div class="utils-description">
+                        <h3 data-title="20 dias com o LG G4 - Review de usuário do celular (português pt-br)" itemprop="name" >20 dias com o LG G4 - Review de usuário do celular (português pt-br)</h3>
+                        <span class="desc" itemprop="description">
+                            Após 20 dias de uso, do LG G4, fiz este video review do aparelho contando minha experiência como usuário! Falo sobre algumas vantagens e desvantagens do aparelho, dificuldades enfrentadas e destaco alguns pontos bastante positivos.
+Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, além de testar novos launchers e diallers, estar conectado em muitas redes sociais e configuro muita coisa do meu jeito. Neste vídeo, porém, mostro a interface e funcionalidades padrão do aparelho.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+            </div>
+
+            <div class="utils-content labs">
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb">
+                        <img src="/resources/vibe.js.png"
+                             title="Open Vibe.js"
+                             alt="Vibe.js" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Vibe.js">Vibe.js</h3>
+                        <span class="desc">
+                            Create and test vibrate patterns in a visual tool generating code to use with the JavaScript's vibrate API.
+                            <br/><br/>
+                            
+                            <a href="https://github.com/NascHQ/vibe.js" target="_blank">
+                                Github
+                            </a><br/>
+                            
+                            
+                            <a href="https://naschq.github.io/vibe.js/index.html" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="VDBSv8cBSy8">
+                        <img src="/resources/lab-canvas-image-editor-gama.png"
+                             title="Watch Tool: HTML5 Image Editor"
+                             alt="Tool: HTML5 Image Editor"
+                             width="300" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Tool: HTML5 Image Editor">Tool: HTML5 Image Editor</h3>
+                        <span class="desc">
+                            This tool helps you changing the hue and saturation of images, as well as it can be used as a color picker. You can also remove all the pixels in the image based on a color.
+                            <br/><br/>
+                            
+                            <a href="https://github.com/felipenmoura/html5-imager/" target="_blank">
+                                Github
+                            </a><br/>
+                            
+                            
+                            <a href="http://felipenmoura.com/labs/html5-imager/" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb">
+                        <img src="/resources/exp-test-your-might.png"
+                             title="Open Game: Test your markup"
+                             alt="Game: Test your markup" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Game: Test your markup">Game: Test your markup</h3>
+                        <span class="desc">
+                            An HTML, CSS and JavaScript based game.<br/>Test your knowledge about HTML tags in a fun way.<br/>It's also great to practice and learn, as well.
+                            <br/><br/>
+                            
+                            <a href="https://github.com/felipenmoura/test-your-markup" target="_blank">
+                                Github
+                            </a><br/>
+                            
+                            
+                            <a href="http://felipenmoura.com/test-your-markup/" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="RonpitSO-u4">
+                        <img src="/resources/lab-chroma-key-js.png"
+                             title="Watch Experiment: ChromaKey in JavaScript"
+                             alt="Experiment: ChromaKey in JavaScript"
+                             width="300" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Experiment: ChromaKey in JavaScript">Experiment: ChromaKey in JavaScript</h3>
+                        <span class="desc">
+                            Chroma key effect using HTML, CSS and JavaScript.<br/>I used canvas, html5 video and the user's camera(user media).
+                            <br/><br/>
+                            
+                            <a href="https://github.com/felipenmoura/js-chroma-key" target="_blank">
+                                Github
+                            </a><br/>
+                            
+                            
+                            <a href="http://felipenmoura.com/talks/chromakey/" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="e2JdJKEz_xE">
+                        <img src="/resources/lab-tv-3d-stereoscopic-html.png"
+                             title="Watch Experiment: Stereoscopic 3D using JS, HTML and CSS"
+                             alt="Experiment: Stereoscopic 3D using JS, HTML and CSS"
+                             width="300" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Experiment: Stereoscopic 3D using JS, HTML and CSS">Experiment: Stereoscopic 3D using JS, HTML and CSS</h3>
+                        <span class="desc">
+                            A video where I demonstrate an experiment of mine, applying Stereoscopic 3D to a webpage using HTML, CSS and JavaScript.
+                            <br/><br/>
+                            
+                            
+                            <a href="http://felipenmoura.com/projects/tv3d/index.html" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    
+                    <div class="utils-thumb youtube"
+                         data-yt-ref="0ZxFwNgc0e0">
+                        <img src="/resources/lab-3d-builder-tool-environment.png"
+                             title="Watch Experiment: CSS3 3D environment tool "
+                             alt="Experiment: CSS3 3D environment tool "
+                             width="300" />
+                    </div>
+                    
+                    <div class="utils-description">
+                        <h3 data-title="Experiment: CSS3 3D environment tool ">Experiment: CSS3 3D environment tool </h3>
+                        <span class="desc">
+                            This is the Root3D, a CSS3, 3D environment, for you to build some cool 3D groups
+                            <br/><br/>
+                            
+                            <a href="https://github.com/felipenmoura/Root3D" target="_blank">
+                                Github
+                            </a><br/>
+                            
+                            
+                            <a href="http://felipenmoura.com/projects/root3d" target="_blank">
+                                See it working
+                            </a><br/>
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+            </div>
+
+
+            <div class="utils-content photos">
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-chrome-summit-2016.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-chrome-summit-2016-thumb.jpg"
+                        
+                             title="Full Size: Chrome Summit 2016"
+                             alt="Chrome Summit 2016"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Chrome Summit 2016">Chrome Summit 2016</h3>
+                        <span class="desc">
+                            Took this picture during the Chrome Summit 2016, in San Francisco.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-google-sp-2016.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-google-sp-2016-thumb.jpg"
+                        
+                             title="Full Size: Google São Paulo - 2016"
+                             alt="Google São Paulo - 2016"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Google São Paulo - 2016">Google São Paulo - 2016</h3>
+                        <span class="desc">
+                            After my talk at Goole São Paulo, in 2016
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-braziljs-2015.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-braziljs-2015-thumb.jpg"
+                        
+                             title="Full Size: BrazilJS 2015"
+                             alt="BrazilJS 2015"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="BrazilJS 2015">BrazilJS 2015</h3>
+                        <span class="desc">
+                            Final picture of BrazilJS 2015, in Porto Alegre
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-braziljs-stage-2013.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-braziljs-stage-2013-thumb.jpg"
+                        
+                             title="Full Size: Watching a talk"
+                             alt="Watching a talk"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Watching a talk">Watching a talk</h3>
+                        <span class="desc">
+                            This is me, sitting on stage behind the courtains, watching a talk in BrazilJS 2013.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-fisl-2012-speaking-talk.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-fisl-2012-speaking-talk-thumb.jpg"
+                        
+                             title="Full Size: Fisl 2012"
+                             alt="Fisl 2012"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Fisl 2012">Fisl 2012</h3>
+                        <span class="desc">
+                            Picture from a talk I gave about CSS3, in 2012.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2012.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2012-thumb.jpg"
+                        
+                             title="Full Size: Presenting at BrazilJS 2012"
+                             alt="Presenting at BrazilJS 2012"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Presenting at BrazilJS 2012">Presenting at BrazilJS 2012</h3>
+                        <span class="desc">
+                            On stage, presenting at BrazilJS, in 2012
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2012-2-brendan-eich.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2012-2-brendan-eich-thumb.jpg"
+                        
+                             title="Full Size: Me, Jaydson and Brendan Eich at BrazilJS 2012"
+                             alt="Me, Jaydson and Brendan Eich at BrazilJS 2012"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Me, Jaydson and Brendan Eich at BrazilJS 2012">Me, Jaydson and Brendan Eich at BrazilJS 2012</h3>
+                        <span class="desc">
+                            In 2012, we invited Brendan Eich to give a talk at Brazil for the first time, and he accepted!<br/>Great experience!
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-5.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-5-thumb.jpg"
+                        
+                             title="Full Size: Dougals Crockford and I at BrazilJS 2013"
+                             alt="Dougals Crockford and I at BrazilJS 2013"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Dougals Crockford and I at BrazilJS 2013">Dougals Crockford and I at BrazilJS 2013</h3>
+                        <span class="desc">
+                            In 2013, we could bring Douglas Crockfor to give an awesome talk at BrazilJS.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2-thumb.jpg"
+                        
+                             title="Full Size: On stage, at BrazilJS 2013"
+                             alt="On stage, at BrazilJS 2013"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="On stage, at BrazilJS 2013">On stage, at BrazilJS 2013</h3>
+                        <span class="desc">
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3-thumb.jpg"
+                        
+                             title="Full Size: Jaydson and I on stage at BrazilJS 2013"
+                             alt="Jaydson and I on stage at BrazilJS 2013"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Jaydson and I on stage at BrazilJS 2013">Jaydson and I on stage at BrazilJS 2013</h3>
+                        <span class="desc">
+                            
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-4.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-4-thumb.jpg"
+                        
+                             title="Full Size: Closing BrazilJS 2013 with the audience"
+                             alt="Closing BrazilJS 2013 with the audience"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Closing BrazilJS 2013 with the audience">Closing BrazilJS 2013 with the audience</h3>
+                        <span class="desc">
+                            Jaydson and I closing BrazilJS 2013 with the audience, behind us.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+                <section class="utils-item">
+                    <a class="utils-thumb"
+                       href="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage.jpg"
+                       target="_blank">
+                        
+                        <img src="/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage-thumb.jpg"
+                        
+                             title="Full Size: Jaydson and I, at BrazilJS 2013"
+                             alt="Jaydson and I, at BrazilJS 2013"
+                             width="300" />
+                    </a>
+                    <div class="utils-description">
+                        <h3 data-title="Jaydson and I, at BrazilJS 2013">Jaydson and I, at BrazilJS 2013</h3>
+                        <span class="desc">
+                            Picture taken on BrazilJS 2013, alongside with Jaydson.
+                        </span>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="decorator">
+                <a class="icon local talks" href="/utils/talks">Talks<span class="tooltip">Slides from Talks</span></a>
+                <a class="icon local videos" href="/utils/videos">Videos<span class="tooltip">My youtube channels</span></a>
+                <a class="icon local labs" href="/utils/labs">Labs<span class="tooltip">Projects/Tools/experiments/demos</span></a>
+                <a class="icon local articles local" href="/articles">Articles<span class="tooltip">Articles</span></a>
+                <a class="icon local photos" href="/utils/photos">Photos<span class="tooltip">Pictures and Albums</span></a>
+            </div>
+
+        </section>
+
+<div id="playerLayer">
+    <iframe id="playerElement"
+            width="560"
+            height="315"
+            frameborder="0"
+            allowfullscreen></iframe>
+    <span class="closeLayerBtn">close >></span>
+</div>
+
+            <div id="articleTmpElement"></div>
+<section id="articles-container"
+         class="sect-content"
+         lang="en-US"
+         itemscope
+         itemtype="http://schema.org/NewsArticle">
+    <nav id="articles-nav" class="articles-nav">
+        <div id="loading-bar"></div>
+        <ul>
+            <li class="btn center">
+                <span class="art-nav-tbn art-see-list" title="See all Posts">
+                    See all&nbsp; |<!--small>▼</small-->
+                </span>
+                <span class="art-nav-tbn art-tools" title="Article Tools">
+                    <!--&nbsp;&#9881; <!--small>▼</small-->
+                </span>
+            </li>
+            <li class="btn left">
+                
+                <a href="/articles/iniciando-com-canvas-no-javascript"
+                   class="local art-nav-tbn"
+                   title="previous: Iniciando com o Canvas javascript">&lt;&lt; Prev
+                
+                   </a>
+            </li>
+            <li class="btn right">
+                
+                <a href="/articles/where-is-this-web-going-to"
+                   class="local art-nav-tbn"
+                   title="Next: Where is this web <em>going to?</em>">Next &gt;&gt;
+                
+                   </a>
+            </li>
+        </ul>
+
+        <div class="article-tools">
+            <span id="article-tool-bigger" class="art-nav-tbn">A</span>
+            <span id="article-tool-smaller" class="art-nav-tbn">A</span>
+            <span id="article-tool-contrast" class="art-nav-tbn"></span>
+        </div>
+    </nav>
+
+    <div id="the-article" class="the-article" data-text-size="2">
+        <div class="decorator
+                    colour-1
+                    ">
+            <h2 itemprop="headline"><a href="/articles/starting-with-canvas-in-javascript">Starting with Canvas in <em>javascript</em></a></h2>
+            <div class="wrapper">
+                
+                    <img src="/articles/starting-with-canvas-in-javascript/canvas.jpg"
+                         alt="Starting with Canvas in javascript"
+                         title=""
+                         itemprop="image" />
+                
+            </div>
+            <span id="article-meta-data">
+                <meta itemprop="datePublished" content="2010-06-18T00:20:10.000Z"/>
+                Jun 17th, 2010 : javascript, canvas
+            </span>
+            
+            <abs itemprop="description">
+                Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.
+            </abs>
+            
+        </div>
+
+        <div class="wrapper articles-content">
+            <div class='social-buttons-container'>
+    <!-- FB LIKE BUTTON -->
+    <div class="fb-like" data-href="http://felipenmoura.com/articles/starting-with-canvas-in-javascript" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    <!-- Tweitter -->
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://felipenmoura.com/articles/starting-with-canvas-in-javascript" data-text="Starting with Canvas in javascript" data-via="felipenmoura" data-count="none">Tweet</a>
+    <!-- GOOGLE PLUS -->
+    <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/starting-with-canvas-in-javascript"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+</div>
+            <article itemprop="articleBody">First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre class="line-numbers"><code class="language-javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+You probably know how to load an image  from js, right?
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre class="line-numbers"><code class="language-javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</code></pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre class="line-numbers"><code class="language-javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.</article>
+
+            <aside>
+                <div id="disqus_thread" data-article-url="/articles/starting-with-canvas-in-javascript"></div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+        
+
+        <div id="articlesListContainer">
+            <nav id="articlesList">
+                <ol>
+                
+                    <li>
+                        <a href="/articles/talk-pwa/" class="local">Palestra: Progressive Web App</a> <span class="tagsList">[talk, progressive web app, pwa, service worker]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/google-io-2016/" class="local">Google I/O 2016</a> <span class="tagsList">[events, conference, google, I/O]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/my-editor/" class="local">O editor que escolhi</a> <span class="tagsList">[editors, IDE, JavaScript]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/fworld-quem-eh-voce/" class="local">FWorld: Quem é VOCÊ?</a> <span class="tagsList">[video, fworld, ciência, curiosidades]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/pre-candidatura-a-vereador/" class="local">Pre-candidatura a Vereador de Porto Alegre</a> <span class="tagsList">[comunidades, atitude, politica]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/fworld-sozinhos/" class="local">FWorld: Quem está realmente sozinho</a> <span class="tagsList">[video, fworld, ciência, curiosidades]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/otimizando-seu-site-parte-2/" class="local">Otimizando seu site - parte 2</a> <span class="tagsList">[otimização, acessibilidade, performance, usabilidade, mobile, ferramentas]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/otimizando-seu-site/" class="local">Otimizando seu site</a> <span class="tagsList">[otimização, acessibilidade, performance, usabilidade, mobile, ferramentas]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/braziljs-2015/" class="local">BrazilJS 2015</a> <span class="tagsList">[braziljs, events, javascript]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/e-dada-largada/" class="local">E é dada a largada!!</a> <span class="tagsList">[empresa, carreira, nasc]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/call-bind-e-apply-no-javascript-parte-2/" class="local">call, bind e apply no JavaScript - parte 2</a> <span class="tagsList">[es6, javascript, ecma6, es2015]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/call-bind-e-apply-no-javascript-parte-1/" class="local">Call, bind e apply no JavaScript - parte 1</a> <span class="tagsList">[JavaScript, ECMA, ES6, ES5]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/hoisting-no-javascript/" class="local">Hoisting no JavaScript</a> <span class="tagsList">[es6, javascript, es2015]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/duas-maneiras-para-centralizar-verticalmente-com-css/" class="local">Duas maneiras para centralizar verticalmente com CSS</a> <span class="tagsList">[css, technique]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/escopo-this-e-that/" class="local">Escopo, this e that</a> <span class="tagsList">[javascript, scope, ecma]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/o-brasil-e-suas-decisoes/" class="local">O Brasil e suas decisões...</a> <span class="tagsList">[politica, brasil, opinião]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/participacao-na-webbr-2013/" class="local">Participação na WebBR 2013</a> <span class="tagsList">[events, web, w3c]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/" class="local">Creating notes, alerts and block quotes for citations using CSS</a> <span class="tagsList">[css, pseudo-element]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/mozilla-summit-2013/" class="local">Mozilla Summit 2013</a> <span class="tagsList">[events, mozilla]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/mortal-kombat-9-list-of-fatalities/" class="local">Mortal Kombat 9 - list of fatalities</a> <span class="tagsList">[MK, Mortal Kombat, games]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/creating-geometric-forms-using-divs-and-css3/" class="local">Criando formas geométricas usando DIVs e CSS3</a> <span class="tagsList">[CSS3, html, formas, geometric]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/php-zce-a-prova-de-certificacao-php/" class="local">PHP ZCE - A prova de certificação PHP</a> <span class="tagsList">[php, zce, certificacao]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/animations-with-css3-on-webkit/" class="local">Animations with CSS3</a> <span class="tagsList">[css3, animações]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/bug-on-ie-when-creating-elements-with-name-submitname/" class="local">Bug on IE - Elements with name/submitName</a> <span class="tagsList">[javascript, bug, ie]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/three-ways-to-reload-or-move-the-page/" class="local">Três maneiras de recarregar a página usando JavaScript</a> <span class="tagsList">[javascript, html]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/where-is-this-web-going-to/" class="local">Where is this web going to?</a> <span class="tagsList">[web, future]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/starting-with-canvas-in-javascript/" class="local">Starting with Canvas in javascript</a> <span class="tagsList">[javascript, canvas]</span>
+                    </li>
+                
+                    <li>
+                        <a href="/articles/iniciando-com-canvas-no-javascript/" class="local">Iniciando com o Canvas javascript</a> <span class="tagsList">[javascript, canvas]</span>
+                    </li>
+                
+                </ol>
+            </nav>
+        </div>
+
+        <div id="decoration" class="glassEffect"></div>
+
+        <!-- Scripts -->
+        <link rel="stylesheet" type="text/css" href="/sh/prism.min.css" />
+        <script src="/sh/prism.js"></script>
+        <script src="/scripts/default.min.js"></script>
+
+    </body>
+</html>

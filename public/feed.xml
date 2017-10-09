@@ -1,0 +1,3074 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     version="2.0">
+
+<channel>
+  <title>Felipe N. de moura Home Page</title>
+  <link>http://felipenmoura.com/</link>
+  <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Mon Oct 09 2017 02:02:18 GMT-0300 (-03)</lastBuildDate>
+  <sy:updatePeriod>daily</sy:updatePeriod>
+  <sy:updateFrequency>1</sy:updateFrequency>
+    
+  <description>Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.</description>
+  
+  <item>
+    <title>Iniciando com o Canvas javascript</title>
+    <link>http://felipenmoura.com/articles/iniciando-com-canvas-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Canvas já não é mais uma funcionalidade tão nova, mesmo assim, vejo muita gente com medo de "mecher nisto". Atualmente a grande maioria dos navegadores já suportam canvas e os outros (leia-se Internet Explorer) acabarão suportando em breve.<br/>
+Agora iriei colocar aqui algumas dicas sobre como iniciar a trabalhar com canvas e também como importar imagens e desenha-las dentro do canvas.
+
+Primeira coisa, você precisa do próprio elemento canvas e também trata-lo para <s>aqueles</s> aquele navegador que não suporta canvas.
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;elementoCanvas&quot;&gt;
+            O que for escrito aqui, aparecerá SOMENTE
+            quando o navegador não puder renderizar o canvas
+            Claro que tags HTML são aceitas.
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Certo, agora, especificaremos uma função para manusear o canvas via javaScript
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // sim, addEventListener não funciona em IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Bom. Assim que a página é carregada, nosso método <em>canvasHandler</em> será chamado. Vamos ver agora como abrir o canvas para iniciar os trabalhos via js.
+
+<pre class="line-numbers"><code class="language-javascript">
+// Vamos criar umas variáveis globais para facilitar
+// mas fica mais &quot;bonito&quot; e organizado se utilizar namespaces
+var canvas= null;
+var ctx= null;
+// aqui, a nossa função a ser chamada assim que a página carregar
+canvasHandler= function(){
+    // antes de tudo, simplesmente pegamos o elemento canvas
+    canvas= document.getElementById('theCanvasElement');
+    // agora nós precisaremos acessar o CONTEXT para trabalhar
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Ótimo, nós temos agora a variável <em>canvas</em> que é o próprio elemento HTML canvas. Enquanto a variável <em>ctx</em> tem o seu contexto. O context é o que utilizaremos para desenhar. Ele tem métodos e propriedades que nos permitirá interagir  com o canvas em 2D.
+Não, infelizmente canvas não suporta outros contextos, somente 2D até o momento.
+
+Nosso canvas ainda não tem propriedades. Não tem uma largura nem altura, por exemplo. Vamos especifica-los
+
+OBS: De agora em diante, todo o código javascript precisará estar dentro do corpo de nossa função canvasHandler, logo abaixo aquelas duas linhas exibidas anteriormente.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+Provavelmente você sabe carregar uma imagem em js, certo? (também conhecido como preload):
+
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, você pode usar exatamente isto para inserir imagens dentro de seu canvas. Assim:
+<pre class="line-numbers"><code class="language-javascript">
+    // instancia uma nova imagem
+    var img= new Image();
+    // usaremos a imagem após ela ser carregada
+    img.addEventListener('load', function(){
+        // após baixar a imagem, podemos desenha-la no canvas
+        ctx.drawImage(this);
+        // onde this representa a imagem recém carregada
+    });
+    // então especificamos a url a iniciar o carregamento
+    img.src= 'url.png';
+</code></pre>
+
+Ok, agora você já deve ver a imagem dentro de seu canvas. O método drawImage suporta algumas estruturas/assinaturas diferentes em relação aos seus parâmetros:
+<pre class="line-numbers"><code class="language-javascript">
+    // desenha a imagem na posição left=30 e top=30
+    ctx.drawImage(this, 30, 30);
+    // desenhará a imagem na posição 0/0, alterando seu tamanho
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // mais complexo, desenha e recorta a imagem (crop)
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+Quando recortamos a imagem, especificamos a imagem propriamente dita (this), a posição a iniciar a exibição da imagem(0, 0), então o tamanho que desejamos recortar(150, 150). Em seguida vão os parâmetros para especificar o tamanho e posições em que a imagem realmente está (0, 0, 480, 340);
+
+Em breve pretendo postar aqui como realmente desenhar no seu canvas, adicionando linhas, pontos e textos.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Starting with Canvas in javascript</title>
+    <link>http://felipenmoura.com/articles/starting-with-canvas-in-javascript/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ canvas ]]>
+    </category>
+    
+    <description><![CDATA[
+Well, canvas is not that young feature, even though, people are still afraid of using it. Most of our browsers can understand it, and the others (I mean, the Internet Explorer, the onlly one which can't) will "learn" it soon.<br/>Now, I want to put here some tips about how to start working with canvas easily, and also, how to import images and draw then into it.<br/>
+First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</code></pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre class="line-numbers"><code class="language-markup">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</code></pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre class="line-numbers"><code class="language-javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</code></pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre class="line-numbers"><code class="language-javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</code></pre>
+
+You probably know how to load an image  from js, right?
+<pre class="line-numbers"><code class="language-javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</code></pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre class="line-numbers"><code class="language-javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</code></pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre class="line-numbers"><code class="language-javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</code></pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Where is this web going to?</title>
+    <link>http://felipenmoura.com/articles/where-is-this-web-going-to/</link>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ future ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Este ano, uma de minhas submissões foi aprovada para este grande, interessante e útil evento.
+Por anos, o Fisl tem trazido para Porto Alegre uma grande quantidade de pessoas especializadas nas mais diversas e desafiadoras áreas, para falar de seu conhecimento, experiências e planos.
+Este evento é sempre uma oporunidade e tanto para aumentar suas ideias, conhecer pessoas <s>loucas</s> inteligentes e muitas vezes, pessoas que literalmente escreveram a história.
+Costumo brincar dizendo que no Fisl, vemos o recorde de nerds por metro quadrado.
+
+Este ano, falarei sobre a revolução do desenvolvimento web, suas novas tecnologias e técnicas, além do modo como vemos a web, e também, como os usuários teem visto a web hoje em dia. Falarei sobre HTML5, CSS3, JavaScript2, mercado, entre outros tópicos interessantes. Acredito que todos podemos ter uma boa discussão sobre tais assuntos e os convido a assistir à minha palestra no sábado, as 10 horas da manhã, entitulada "Até onde vai essa teia?", e também, para que possamos conversar durante o evento, pelos corredores da PUC, para falarmos desta fantástica e revolucionária fase que viemos vivendo.
+
+Links do evento: 
+<a href="http://fisl.org.br/" target='_blank'>http://fisl.org.br/</a>
+<a href="http://softwarelivre.org/fisl11/" target='_blank'>http://softwarelivre.org/fisl11/</a>
+<a href="http://fisl.softwarelivre.org/" target='_blank'>http://fisl.softwarelivre.org/</a>
+<a href="http://verdi.softwarelivre.org/" target='_blank'>http://verdi.softwarelivre.org/</a>
+]]></description>
+  </item>
+  
+  <item>
+    <title>Três maneiras de recarregar a página usando JavaScript</title>
+    <link>http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ html ]]>
+    </category>
+    
+    <description><![CDATA[
+Hey, olá pessoal.<br/>Bom, esta é uma pergunta que vejo muita gente fazendo, então, decidi postar aqui sobre isto.<br/>
+Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
+Por tanto, podemos fazer desta maneira:
+<pre class="line-numbers"><code class="language-javascript">
+ 
+history.go(0);
+ 
+</code></pre>
+Isto irá simplesmente recarregar a página. Claro que você pode usar iframes, adotando parent, top, self ou name para trabalhar com suas relações.
+
+Outra alternativa seria usar o método reload, oferecido pelo <em>location</em>, assim:
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.reload();
+
+</code></pre>
+
+Agora, uma outra alternativa que também servirá para mover-mos para uma nova página, usando a propriedade <em>href</em>, também do <em>location</em>.
+<pre class="line-numbers"><code class="language-javascript">
+
+self.location.href= self.location.href;
+
+</code></pre>
+Este código recarregará a página, ms poderia ser qualquer outro endereço alí, a ser carregado.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Bug on IE - Elements with name/submitName</title>
+    <link>http://felipenmoura.com/articles/bug-on-ie-when-creating-elements-with-name-submitname/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ bug ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ie ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Hi, yesterday I had to fight against this problem, which is not very touched out there.
+In the beginning, people from <em>jQuery</em> thought it was a jQuery bug, but searching a bit more I could find out the root of this problem.
+
+<b>What is it?</b>
+When running your javascript in Internet Explorer 6, or 7 or 8 in compatible mode, if you create dynamically an iframe, for example, and set it a <strong>name</strong> attribute, Internet Explorer will reaplace it by an <strong>submitName</strong> attribute. This attribute cannot be found with .getAttribute('submitName'), but that is the problem, neither can be with .getAttribute('name')!
+
+<b>How to see it happening? Try this:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifr= document.createElement('iframe');
+ifr.setAttribute('name', 'iFrameOne');
+document.body.appendChild(ifr);
+alert(ifr.getAttribute('name'));
+// you can also see it through the &quot;developer tool&quot; in the IE tools menu
+</code></pre>
+
+The main problem is that ... when you have something like a link or a form targeting this iframe, you loose it! The same happens with inputs with name, which are dynamically created.
+
+<b>How to fix it without ask your users to migrate to a real browser? I did this and it worked:</b>
+<pre class="line-numbers"><code class="language-javascript">
+var ifrDiv= document.createElement('div');
+ifrDiv.innerHTML= &quot;&lt;iframe name='iFrameOne' &gt;&lt;/iframe&gt;&quot;;
+document.body.appendChild(ifrDiv);
+</code></pre>
+
+<b>Now, why does it happen?!</b>
+I had the chance to search for this and found in the Microsoft's webpage something about this old, known bug in <em>Internet Explorer</em>, with names on dynamic elements. Due to "fix" this, instead of fixing, then "provided" this workarounded attribute. When you try to deal with the name attribute, it applies like an alias, redirecting it to the Microsoft's Internet Explorer imaginary <strong>submitName</strong> attribute. But with this, you cant access a form that has a name, like this:
+<pre class="line-numbers"><code class="language-javascript">
+document.forms['dynamicFormName'];
+</code></pre>
+because the DOM hasn't rendered that form with the name you asked for.
+
+I hope it can help you, if you get stuck with this some day.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Animations with CSS3</title>
+    <link>http://felipenmoura.com/articles/animations-with-css3-on-webkit/</link>
+    
+    <category>
+    <![CDATA[ css3 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ animações ]]>
+    </category>
+    
+    <description><![CDATA[
+Hey folks. Tonight's talk will be about <strong>CSS3 animations</strong>...yes, animations.<br/>
+Well, one of the most interesting effects is the <em>transition</em> property.
+With this, you can specify how the elements will behave when changing from or to a specific state.
+For example, let's say we have the following structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;div class='toBeAnimated'>content&lt;/div>
+</code></pre>
+Then, with CSS3 we can:
+<pre class="line-numbers"><code class="language-css">
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   text-align:center;
+   transition: background 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+</code></pre>
+
+In case we want to apply more than one transaction, we can use
+<pre class="line-numbers"><code class="language-css">
+   transition: background-color 1s linear, color 1s linear;
+</code></pre>
+
+Here is an example(hover it with your mouse):
+
+<div class='toBeAnimated'>content</div>
+<style type='text/css'>
+.toBeAnimated
+{
+   background-color:red;
+   color:white;
+   height: 30px;
+   padding-top: 8px;
+   border:solid 1px black;
+   text-align:center;
+   transition: background-color 1s ease-in, color 1s linear;
+}
+.toBeAnimated:hover
+{
+   background-color:white;
+   color:red;
+}
+
+</style>
+
+These transition properties accept the property to suffer the animation as it changes, the time to elapse it and the easing of it, working with linear, ease, ease-in, ease-out, ease-in-out or cubic-bezier(n,n,n,n)
+
+Now, let's get deeper :)
+The first thing you'll have to do is to create the animation itself, like this:
+<pre class="line-numbers"><code class="language-css">
+@-webkit-keyframes yourAnimationName
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</code></pre>
+Now that we created out animation called <em>yourAnimationName</em>, it's time to use it by declaring the elements that will adopt it, this way:
+<pre class="line-numbers"><code class="language-css">
+div.animatedDiv
+{
+    -webkit-animation-name: <strong>yourAnimationName</strong>;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    ...
+}
+</code></pre>
+
+And then, all the divs that have the class "animatedDiv" will look like this:
+<style type='text/css'>
+.divToAnimate
+{
+    -webkit-animation-name: yourAnimationName;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
+    height: 50px;
+    width: 140px;
+    margin: auto;
+    padding-top: 1rem;
+    text-align:center;
+}
+@-webkit-keyframes yourAnimationName /*Safari and Chrome */
+{
+  from
+  {
+      background-color:red;
+      font-size: 30px;
+      color: black;
+  }
+  to
+  {
+      background-color:white;
+      font-size: 10px;
+      color: red;
+  }
+}
+</style>
+<div class='divToAnimate' >SPAM</div>
+
+I hope this have helped/inspired you to use and create new things :)
+Cheers...
+]]></description>
+  </item>
+  
+  <item>
+    <title>PHP ZCE - A prova de certificação PHP</title>
+    <link>http://felipenmoura.com/articles/php-zce-a-prova-de-certificacao-php/</link>
+    
+    <category>
+    <![CDATA[ php ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ zce ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ certificacao ]]>
+    </category>
+    
+    <description><![CDATA[
+Opa, adivinhem que se certificou em PHP?<br/>Aqui, reslvi fazer um artigo detalhando a experiência, com algumas dicas, situações e expectativas.<br/>
+<br/>Havia comprado o voucher para a prova há quase um ano, e depois de quase um ano adiando, resolvi fazer a prova.
+<br/>
+<br/>Sabendo do interesse de tantos, resolvi fazer um post aqui sobre minhas impressões.
+<br/>A ZCE é a prova de Certificação PHP oficial da Zend. Ao comprar um voucher(aproximadamente 200 dolares), você ganha(ou não, depende do pacote que você comprou) 10 simulados oficiais e um documento com o material de estudo, bastante completo e didático, diga-se de passagem.
+<br/>
+<br/>Quem conhece a mim, sabe que acabei não estudando um dia sequer, nem fazendo os simulados! Sim...eu sei que é um péssimo exemplo, desculpem!
+<br/>Quando notei, a prova já era no dia seguinte!
+<br/>Fiz um simulado durante a noite anterior e passei, e inclusive achei bastante simples.
+<br/>Ao finalizar um simulado, ele não te diz as questões que você acertou ou errou, mas lhe dá pistas a respeito de que áreas você deve estudar e focar para melhorar.
+<br/>De qualquer forma, ajuda também a se sentir mais confiante antes de ir fazer a prova, e indico que façam o máximo de simulados que precisarem, até sentirem-se tranquilos para o exame.
+O fato de eu não ter estudado nem feito mais simulados simplesmente me rendeu mais estres e preocupação antes da prova(e durante), o que faz com que o exame não seja assim, uma experiência prazerosa ou divertida como bem poderia ser.
+<br/>Mas enfim...
+<br/>
+<br/>Quando comecei a fazer a prova, fiquei surpreso com o grau de dificuldade.
+<br/>São 70 questões(em ingles), e você tem 90 minutos para responde-las. Quando chegou na décima questão, eu percebi que as questões do simulado estavam realmente muito distantes daquela realidade. Acredito que provavelmente eu que dei "pé-frio" no sorteio das questões, mas realmente esperava que a prova não fosse tão pegada assim!
+<br/>
+<br/>Algumas dicas que posso dar é que...a prova NÃO é matemática.
+<br/>Ou seja, se encontrar alguma questão que envolva um cálculo matemático muito longo ou complexo, provavelmente o ponto crucial não está no cálculo, mas sim em algum erro básico no código ou estrutura. O mesmo para expressões regulares, caso apareça alguma questão com uma RegExcp muito longa ou complexa, provavelmente não há sequer motivos para ficar se preocupando em de fato tentar encontrar o resultado final da expressão.
+<br/>
+<br/>O que me surpreendeu é que há algumas questões que envolvem coisas que eu realmente nunca havia tentado, por exemplo, a posição onde aparece o default statment em um switch, ou forma como você define parâmetros por referência ou com valor default em um método.
+<br/>Existem várias questões relacionadas a design patterns, e paradigmas, além de configurações do Apache para otimização ou melhoria da segurança. Segurança é um assunto de bastante foco neste exame.
+<br/>
+<br/>Assim que você termina o exame, a mensagem aparece na tela informando se você foi aprovado ou reprovado, mas pelo que vi, não há indicações a respeito de que questões você acertou ou não, e que áreas deveria estudar mais.
+<br/>
+<br/>Resumindo, é uma prova relativamente desafiadora, mas que ao fazer, você demonstra seu interesse em estudar e comprometimento com seu crescimento. O exame mostra também que você tem muita maturidade com raciocínio lógico, diferentes paradigmas e algoritmos relativamente complexos. Acredito que valha a pena fazer a prova pela experiência e justamente por demonstrar este interesse que comentei.
+<br/>
+<br/>Deixem-me saber sobre seu interesse em fazer a prova, ou mesmo sua opinião a respeito das certificações hoje em dia. Tem interesse em se inscrever para tal exame?
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Criando formas geométricas usando DIVs e CSS3</title>
+    <link>http://felipenmoura.com/articles/creating-geometric-forms-using-divs-and-css3/</link>
+    
+    <category>
+    <![CDATA[ CSS3 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ html ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ formas ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ geometric ]]>
+    </category>
+    
+    <description><![CDATA[
+Abracei este "desafio", de fazer o maior número de formas geométricas em um div, utilizando apenas <strong>CSS3</strong> e <strong>divs</strong>.<br/>Não encare o "um div" como limitação, para alguma forma mais complexa, poderemos utilizar mais de um div.<br/>
+A ideia, basicamente, é criar um grande número de formas geométricas básicas para construção de outras formas mais complexas, apoiando-se puramente em CSS3 e HTML5. Posteriormente, poderemos desenvolver uma interface gráfica que poderá ajudar a construir elementos utilizando estas formas de forma parametrizável.
+Se você pensar em alguma forma otimizada de fazer certos elementos, sinta-se livre para me informar, e adiciono à lista aqui com os devidos créditos ;)
+
+Vamos a algumas destas formas!
+<strong>Losango</strong>:
+<style type='text/css'>
+.square{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #99f;
+    border: solid 2px black;
+}
+.losango{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 30px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
+<div class='losango square'></div>
+<pre class="line-numbers"><code class="language-css">
+.losango{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</code></pre>
+
+<strong>Triângulo(sem borda)</strong>:
+<style type='text/css'>
+.triangulo-sem-borda{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='triangulo-sem-borda square'></div>
+<pre class="line-numbers"><code class="language-css">
+.triangulo-sem-borda{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+</code></pre>
+Caso deseje alterar algum dos ângulos do triângulo para produzir um equilátero, um isósceles ou um escaleno, basta alterar as bordas laterais do div:
+<style type='text/css'>
+.triangulo-escaleno{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-right-width: 30px !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='triangulo-escaleno square'></div>
+<pre class="line-numbers"><code class="language-css">
+.triangulo-escaleno{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-right-width: 30px;
+    border-top: none;
+}
+</code></pre>
+
+Para um triângulo obtuso(ou o obtusângulo), utilize-se do skew no transform do CSS:
+<style type='text/css'>
+.triangulo-obtuso{
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-right-width: 30px !IMPORTANT;
+    border-top: none !IMPORTANT;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+</style>
+<div class='triangulo-obtuso square'></div>
+<pre class="line-numbers"><code class="language-css">
+.triangulo-obtuso{
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-right-width: 30px;
+    border-top: none;
+
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+</code></pre>
+<strong>Triângulo(com borda)</strong>:
+<style type='text/css'>
+.triangulo{
+    width: 1px;
+    height: 1px;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+.triangulo-borda{
+    position: relative;
+    z-index: 1;
+    top: -136px;
+    width: 1px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 100px transparent !IMPORTANT;
+    border-bottom: solid 100px #000 !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div>
+    <div class='triangulo'></div>
+    <div class='triangulo-borda square'></div>
+</div>
+O HTML para este caso é um pouco diferente:
+<pre class="line-numbers"><code class="language-markup">
+&lt;div>
+    &lt;div class='triangulo'>&lt;/div>
+    &lt;div class='triangulo-borda'>&lt;/div>
+&lt;/div>
+</code></pre>
+E aqui, o CSS para estilizar um triângulo com bordas:
+<pre class="line-numbers"><code class="language-css">
+.triangulo{
+    width: 1px;
+    height: 1px;
+    position: relative;
+    z-index: 2;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+.triangulo-borda{
+    position: relative;
+    z-index: 1;
+    top: -136px;
+    width: 1px;
+    height: 1px;
+    border: solid 100px transparent;
+    border-bottom: solid 100px #000;
+    border-top: none;
+}
+</code></pre>
+
+<strong>Trapésio</strong>:
+<style type='text/css'>
+.trapesio{
+    width: 300px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent !IMPORTANT;
+    border-bottom: solid 90px #99f !IMPORTANT;
+    border-top: none !IMPORTANT;
+}
+</style>
+<div class='trapesio square'></div>
+<pre class="line-numbers"><code class="language-css">
+.trapesio{
+    width: 300px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+}
+</code></pre>
+Se você quer um trapésio com borda, basta seguir o padrão adotado para o triângulo.
+Para alterarmos o ângulo, utilize o transform skew:
+<style type='text/css'>
+.trapesio-reto{
+    width: 300px;
+    height: 1px;
+    background-color: transparent !IMPORTANT;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    -o-transform: skew(35deg);
+    transform: skew(35deg);
+}
+</style>
+<div class='trapesio-reto square'></div>
+<pre class="line-numbers"><code class="language-css">
+.trapesio-reto{
+    width: 300px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    -o-transform: skew(35deg);
+    transform: skew(35deg);
+}
+</code></pre>
+Para alterar a largura da parte de cima, basta alterar a propriedade width no css da classe.
+
+<strong>Paralelogramo</strong>:
+<style type='text/css'>
+.paralelogramo{
+    width: 180px;
+    height: 90px;
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+    transform: skew(45deg);
+}
+</style>
+<div class='paralelogramo square'></div>
+<pre class="line-numbers"><code class="language-css">.paralelogramo{
+    width: 180px;
+    height: 90px;
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+    transform: skew(45deg);
+}
+</code></pre>
+
+<strong>Quadrado de pontas arredondadas</strong>:
+<style type='text/css'>
+.bola-quadrada{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 25%;
+    border: solid 2px black;
+}
+</style>
+<div class='bola-quadrada square'></div>
+<pre class="line-numbers"><code class="language-css">
+.bola-quadrada{
+    border-radius: 25%;
+    border: solid 2px black;
+}
+</code></pre>
+
+<strong>Círculo</strong>:
+<style type='text/css'>
+.circulo{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+</style>
+<div class='circulo square'></div>
+<pre class="line-numbers"><code class="language-css">
+.circulo{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+}
+</code></pre>
+
+<strong>Elípse</strong>:
+<style type='text/css'>
+.elipse{
+    border-radius: 100%;
+    width: 140px;
+    height: 80px;
+    margin: auto;
+}
+</style>
+<div class='elipse square'></div>
+<pre class="line-numbers"><code class="language-css">
+.elipse{
+    border-radius: 100%;
+    width: 140px;
+    height: 80px;
+    margin: auto;
+}
+</code></pre>
+
+<strong>Meia-Lua</strong>:
+<style type='text/css'>
+.meia-lua{
+    width: 150px;
+    height: 75px;
+    border-radius: 150px 150px 0px 0px;
+}
+</style>
+<div class='meia-lua square'></div>
+<pre class="line-numbers"><code class="language-css">
+.meia-lua{
+    width: 150px;
+    height: 75px;
+    border-radius: 150px 150px 0px 0px;
+}
+</code></pre>
+
+<strong>Quarto de Lua</strong>:
+<style type='text/css'>
+.quarto-de-lua{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px 0px 0px 0px;
+}
+</style>
+<div class='quarto-de-lua square'></div>
+<pre class="line-numbers"><code class="language-css">
+.quarto-de-lua{
+    width: 75px;
+    height: 75px;
+    border-radius: 75px 0px 0px 0px;
+}
+</code></pre>
+
+<strong>Polígonos complexos(utilizando uma combinação do que vimos até aqui)</strong>:
+<style type='text/css'>
+.poly{
+    background-color: transparent !IMPORTANT;
+    width: 60px;
+    height: 60px;
+    border-color: transparent #99f #99f transparent !IMPORTANT;
+    border-width: 60px !IMPORTANT;
+}
+</style>
+<div class='poly square'></div>
+<pre class="line-numbers"><code class="language-css">
+    width: 60px;
+    height: 60px;
+    border-color: transparent #99f #99f transparent;
+    border-width: 60px;
+</code></pre>
+* Sim, este último utiliza apenas UM div.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Mortal Kombat 9 - list of fatalities</title>
+    <link>http://felipenmoura.com/articles/mortal-kombat-9-list-of-fatalities/</link>
+    
+    <category>
+    <![CDATA[ MK ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ Mortal Kombat ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ games ]]>
+    </category>
+    
+    <description><![CDATA[
+This is just a list of the Fatalities you may use in the Mortal Kombat 9(2011).<br/>Once you do the fatality the first time, it will be enabled for you. So, just perform each fatality the fist time, to have it in the list of movements.<br/>
+This is just a list of the Fatalities you may use in the Mortal Kombat 9(2011).
+Once you do the fatality the first time, it will be enabled for you. So, just perform each fatality the fist time, to have it in the list of movements.
+
+The Stage Fatalities can only be excecuted on these stages:
+
+Hell
+Subway
+The Dead Pool
+The Living Forest
+The Pit Day
+The Pit Night
+The Street
+
+Now, the list of fatalities:
+
+<strong>Baraka</strong>
+<pre class="line-numbers"><code class="language-ini">
+Take A Spin – Forward, Forward, Down, Down, A within sweeping distance
+Up The Middle – Back, Forward, Down, Forward, X within sweeping distance
+Babality – Forward, Back, Forward, B in jumping distance
+Stage Fatality – Down, Down, Down, Down, A at close range
+</code></pre>
+<strong>Cyber Sub-Zero</strong>
+<pre class="line-numbers"><code class="language-ini">
+Brain Freeze – Down, Down, Back, Down, X in jumping distance
+Kold Fusion – Down, Back, Down, Forward, Y in jumping distance
+Babality – Down, Back, Forward, RT in jumping distance
+Stage Fatality – Down, Down, Up, RT at close range
+</code></pre>
+<strong>Cyrax</strong>
+<pre class="line-numbers"><code class="language-ini">
+Buzz Kill – Forward, Down, Forward, Back, Y when touching the opponent
+Nothing But Net – Back, Down, Back, Forward, X in jumping distance
+Babality – Down, Forward, Back, Y in jumping distance
+Stage Fatality – Down, Up, RT at close range
+</code></pre>
+<strong>Ermac</strong>
+<pre class="line-numbers"><code class="language-ini">
+Mind Over Splatter – Down, Up, Down, Down, RT in jumping distance
+Pest Control – Forward, Back, Forward, Down, B in jumping distance
+Babality – Down, Down, Back, Down, Y in jumping distance
+Stage Fatality – Down, Up, Down, Down, A at close range
+</code></pre>
+<strong>Freddy Krueger</strong>
+<pre class="line-numbers"><code class="language-ini">
+Tell’Em Freddy Sent Ya – Back Forward, Down, Down, X at any distance
+Welcome To My Nightmare – Down, Up, Forward, Back, RT within sweeping distance
+Babality – Back, Forward, Down, X at far distance
+Stage Fatality – Forward, Down, Down, A at close range
+</code></pre>
+<strong>Jade</strong>
+<pre class="line-numbers"><code class="language-ini">
+Half Mast – Back, Down, Back, Down, B within sweeping distance
+Head-A-Rang – Up, Up, Down, Forward, X when in max distance
+Babality – Down, Down, Forward, Down, B in jumping distance
+Stage Fatality – Back, Forward, Down, RT at close range
+</code></pre>
+<strong>Jax</strong>
+<pre class="line-numbers"><code class="language-ini">
+Smash And Grab – Back, Forward, Forward, Back, Y when touching the opponent
+Three Points! – Forward, Forward, Back, Down, A within sweeping distance
+Babality – Down, Down, Down, A in jumping distance
+Stage Fatality – Down, Forward, Down, X at close range
+</code></pre>
+<strong>Johnny Cage</strong>
+<pre class="line-numbers"><code class="language-ini">
+And The Winner Is!… – Down, Forward, Down, Forward, B while in sweeping distance
+Heads Up! – Forward, Forward, Back, Down, A when close to your opponent
+Babality – Forward, Back, Forward, B in jumping distance
+Stage Fatality – Down, Back, Forward, RT at close range
+</code></pre>
+<strong>Kabal</strong>
+<pre class="line-numbers"><code class="language-ini">
+Hook Up – Back, Forward, Back, Forward, X while in sweeping distance
+It Takes Guts – Down, Down, Back, Forward, RT while in sweeping distance
+Babality – Forward, Down, Back, A in jumping distance
+Stage Fatality – Down, Down, B at close range
+</code></pre>
+<strong>Kano</strong>
+<pre class="line-numbers"><code class="language-ini">
+Eat Your Heart Out – Down, Down, Forward, Back, B within sweeping distance
+Heartbreak – Back, Down, Back, Forward, X within sweeping distance
+Babality – Forward, Forward, Down, Down, A in jumping distance
+Stage Fatality – Up, Up, Back, A at close range
+</code></pre>
+<strong>Kenshi</strong>
+<pre class="line-numbers"><code class="language-ini">
+Scatterbrained – Up, Down, Up, Down, RT within sweeping distance
+Split Ends – Back, Forward, Down, Forward, Y in jumping distance
+Babality – Down, Back, Down, X in jumping distance
+Stage Fatality – Down, Foward, Down, A in close range
+</code></pre>
+<strong>Kitana</strong>
+<pre class="line-numbers"><code class="language-ini">
+Fan Opener – Down, Down, Back, Forward, Y when close to your opponent
+Splitting Headache – Forward, Down, Forward, Back, A when in sweeping distance
+Babality – Forward, Down, Forward, B in jumping distance
+Stage Fatality – Forward, Down, Down, A at close range
+</code></pre>
+<strong>Kung Lao</strong>
+<pre class="line-numbers"><code class="language-ini">
+Hat Trick – Back, Forward, Forward, Back, Y while in sweeping distance
+Razor’s Edge – Down, Down, Forward, Back, X while in sweeping distance
+Babality – Down, Forward, Down, Y in jumping distance
+Stage Fatality – Down, Forward, Down, A at close range
+</code></pre>
+<strong>Liu Kang</strong>
+<pre class="line-numbers"><code class="language-ini">
+Fist Of Flame – Forward, Back, Down, Down, A while in sweeping distance
+The Beast Within – Down, Down, Forward, Down, B in jumping distance
+Babality – Down, Down, Down, B in jumping distance
+Stage Fatality – Down, Forward, Back, A at close range
+</code></pre>
+<strong>Mileena</strong>
+<pre class="line-numbers"><code class="language-ini">
+Be Mine – Back, Forward, Back, Forward, Y in jumping distance
+Rip Off – Back, Forward, Back, Down, A in jumping distance
+Babality – Down, Down, Forward, Back, Y in jumping distance
+Stage Fatality – Down, Down, Down, X at close range
+</code></pre>
+<strong>Nightwolf</strong>
+<pre class="line-numbers"><code class="language-ini">
+Ascension – Down, Down, Forward, Back, X within sweeping distance
+Little Off The Top – Down, Forward, Down, Back, B in jumping distance
+Babality – Forward, Back, Forward, Back, X in jumping distance
+Stage Fatality – Down, Down, Down, RT at close range
+</code></pre>
+<strong>Noob Saibot</strong>
+<pre class="line-numbers"><code class="language-ini">
+As One – Down, Down, Back, Down, RT within sweeping distance
+Make A Wish – Back, Forward, Back, Down, B within sweeping distance
+Babality – Forward, Up, Forward, X in jumping distance
+Stage Fatality – Forward, Down, Forward, RT at close range
+</code></pre>
+<strong>Quan Chi</strong>
+<pre class="line-numbers"><code class="language-ini">
+Beat Down – Forward, Forward, Down, Down, X within sweeping distance
+On Your Knees – Down, Forward, Down, Forward, B within sweeping distance
+Babality – Forward, Down, Back, Y in jumping distance
+Stage Fatality – Back, Forward, Down, Y at close range
+</code></pre>
+<strong>Raiden</strong>
+<pre class="line-numbers"><code class="language-ini">
+Just A Scratch – Down, Forward, Down, Forward, X within sweeping distance
+Transplant – Back, Forward, Forward, Down, B within sweeping distance
+Babality – Down, Back, Down, B in jumping distance
+Stage Fatality – Down, Down, Down, Y at close range
+</code></pre>
+<strong>Rain</strong>
+<pre class="line-numbers"><code class="language-ini">
+Bubble Burst – Back, Forward, Down, Back, RT in jumping distance
+Does it Sting – Up, Down, Back, Forward, Y in jumping distance
+Babality – Back, Down, Forward, X in full screen distance
+Stage Fatality – Forward, Down, Forward, B touching the opponent
+</code></pre>
+<strong>Reptile</strong>
+<pre class="line-numbers"><code class="language-ini">
+Acid Yak – Forward, Forward, Down, Up, A in sweeping distance
+Tasty Meal – Back, Back, Forward, Down, RT in jumping distance (requires Reptile’s Classic costume from DLC to have access to this move)
+Weight Loss – Down, Down, Forward, Back, X while in sweeping distance
+Babality – Back, Forward, Back, Down, A in jumping distance
+Stage Fatality – Forward, Down, Down, RT at close range
+</code></pre>
+<strong>Scorpion</strong>
+<pre class="line-numbers"><code class="language-ini">
+Nether Gates – Back, Forward, Back, A when touching your opponent
+Split Descision – Forward, Down, Forward, Y when touching your opponent
+Toasty! – Down, Up, Up, Y in jumping distance (requires Scorpion’s Classic costume from DLC to have access to this move)
+Babality – Down, Back, Forward, Down, Y in jumping distance
+Stage Fatality – Forward, Up, Up, X at close range
+</code></pre>
+<strong>Sektor</strong>
+<pre class="line-numbers"><code class="language-ini">
+Robo-Sek – Forward, Down, Back, Forward, A at max distance
+The Scarecrow – Down, Down, Forward, Back, X at max distance
+Babality – Back, Down, Down, Down, B in jumping distance
+Stage Fatality – Down, Forward, Down, RT at close range
+</code></pre>
+<strong>Shang Tsung</strong>
+<pre class="line-numbers"><code class="language-ini">
+Bang Bang! – Down, Back, Down, Forward, A in jumping distance
+Identity Theft – Down, Down, Back, Down, Y in jumping distance
+Babality – Down, Back, Down, A in jumping distance
+Stage Fatality – Up, Up, Back, X at close range
+</code></pre>
+<strong>Sheeva</strong>
+<pre class="line-numbers"><code class="language-ini">
+Lend A Hand – Forward, Back, Forward, Back, B within sweeping distance
+Stripped Down – Forward, Down, Down, Forward, X within sweeping distance
+Babality – Down, Down, Down, Back, B in jumping distance
+Stage Fatality – Down, Down, Down, Down, X at close range
+</code></pre>
+<strong>Sindel</strong>
+<pre class="line-numbers"><code class="language-ini">
+Migraine – Back, Forward, Down, Forward, X while in sweeping distance
+Mouthful – Back, Forward, Up, Y while in sweeping distance
+Babality – Down, Down, Down, Up in jumping distance
+Stage Fatality – Down, Down, Down, X at close range
+</code></pre>
+<strong>Skarlet</strong>
+<pre class="line-numbers"><code class="language-ini">
+Blood Bath – Down, Back, Down, Down, RT at close range
+Make it Rain – Forward, Back, Down, Down, B in jumping distance
+Babality – Down, Back, Down, Forward, Y in jumping distance
+Stage Fatality – Forward, Back, Forward, X at close range
+</code></pre>
+<strong>Smoke</strong>
+<pre class="line-numbers"><code class="language-ini">
+Smoked Out – Back, Forward, Back, Forward, X while in sweeping distance
+Tremor – Back, Back, Down, Forward, Y while in sweeping distance
+Babality – Down, Back, Down, Forward, Down in jumping distance
+Stage Fatality – Forward, Up, Up, X at close range
+</code></pre>
+<strong>Sonya Blade</strong>
+<pre class="line-numbers"><code class="language-ini">
+Kut-Throat – Down, Back, Forward, Back, B while in sweeping distance
+Scissor Split – Down, Down, Back, Forward, X in jumping distance
+Babality – Down, Down, Forward, A in jumping distance
+Stage Fatality – Back, Forward, Down, Y, distance depends on the stage
+</code></pre>
+<strong>Stryker</strong>
+<pre class="line-numbers"><code class="language-ini">
+Have A Blast – Down, Forward, Down, Forward, RT while in sweeping distance
+Time Served – Forward, Down, Forward, A while in sweeping distance
+Babality – Down, Forward, Down, Back, Y in jumping distance
+Stage Fatality – Forward, Up, Up, B at close range
+</code></pre>
+<strong>Sub-Zero</strong>
+<pre class="line-numbers"><code class="language-ini">
+Have An Ice Day – Back, Forward, Down, Forward, B while in sweeping distance
+Spinal Smash – Down, Back, Down, Forward, Y while in sweeping distance
+Spine Rip – Forward, Down, Forward, Y when close to your opponent (requires Sub-Zero’s Classic costume from DLC to have access to this move)
+Babality – Down, Back, Down, B in jumping distance
+Stage Fatality – Forward, Down, Back, Y at close range
+</code></pre>
+
+Hope this can help you!
+
+By the way, every time you finish the game(in arcade mode) and earn something, go to the crypt to claim for it choosing the character you used to finish the game at last.
+To choose an alternative costume, when you earn a new cloth, use the START button when selecting the character, instead of any other button ;)
+]]></description>
+  </item>
+  
+  <item>
+    <title>Mozilla Summit 2013</title>
+    <link>http://felipenmoura.com/articles/mozilla-summit-2013/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ mozilla ]]>
+    </category>
+    
+    <description><![CDATA[
+One of the best experiences of my life, not dought!<br/>The conference was amazing, it's great to be part of this all, and Toronto is an amazing place to meet!<br/>
+<strong>About the conference</strong>
+This year I had the honor of being part of the Mozilla Summit, a really, REALY great meeting with some of the brightest minds at Mozilla(and in the world). Some really cool aspects were discussed about Mozilla and it's future and plans. Also, there were inspiring talks about Mozilla's history and conquers.
+
+<strong>About the sessions</strong>
+One other interesting thing I noticed in the conference was that I could attend some talks related to <em>social psycology</em>, <em>laws/politics</em>, <em>market/stocks</em>, <em>story</em>, <em>motivation</em> and of course, <em>technology</em>...this is pretty interesting to see in such a conference!
+Also, the sessions were way different than what we are used to! With some social interactions, games, group dynamics, meetings, and others.
+This means that each and every room had creative people, interested on discussing and participating, and also, giving something useful back to Mozilla, results, ideas, feedback, etc! Epic win!
+<blockquote>In a conference in an hotel, one guy said:
+<em>You want what, a microchip in each doorknob?</em>
+Ten years later, in the same hotel, they gave him a card instead of a key...there was a microchip on each doorknob in the hotel.</blockquote>
+<strong>About the attendees</strong>
+What about it? Mozilla Summit 2013 happened simultaneously in 3 different countries, summing 1800 attendees!
+In Toronto, there were about 600 people.
+
+<strong>New MDN</strong>
+So, we can now test the new MDN interfaces, and guys, it's really cool!
+The new MDN manager now is based on an useful API, which allows us to use it to list our demos or articles anywhere we want, for example!
+
+<strong>About Toronto, the trip, the Hotel and the parties</strong>
+Toronto is a fantastic city! It's really impressive to see how good is the traffic, and the details of the city!
+The architecture is beautiful and you can see that even the old buildings are quite in good condition! They pay good attention to the details! The street asphalt is perfectly smooth, you see absolutely no dogs on the streets and I could count on my fingers the number of homeless I could see!
+By the way, the "street hot dogs" are really good and cheap there!
+People in Toronto are very, VERY polite! The world I most heard was, for sure, "sorry"!
+
+The bars and pubs were really cool too, their beer is strong and the food very spicy, I think it's because of their winter.
+The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
+
+It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
+Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
+]]></description>
+  </item>
+  
+  <item>
+    <title>Creating notes, alerts and block quotes for citations using CSS</title>
+    <link>http://felipenmoura.com/articles/creating-notes-alerts-and-block-quotes-for-citations-using-css/</link>
+    
+    <category>
+    <![CDATA[ css ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pseudo-element ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Block quotes and citations are always something useful, and sometimes, they just pass through our eyes as if they were part of the text.
+You can create a cool style for them using CSS, like this:
+
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+This is another very cool quote from Albert Einstein that I think Google Guys should think about, but this time, with a link to the author reference:
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/cammta5L/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+How to to this?
+First of all, let's build the HTML structure:
+<pre class="line-numbers"><code class="language-markup">
+&lt;blockquote class="citation-container">
+    &lt;div class="citation-content">The quote message.&lt;/div>
+    &lt;cite class="citation-author">
+        &lt;a href="link" target="_blank">author&lt;/a>
+    &lt;/cite>
+&lt;/blockquote>
+</code></pre>
+Now, let's take care of the CSS:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container{
+    border-left: 0.5em solid #DDD;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: .75em .5em .75em 1em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    margin-right: 40px;
+    font-family: Arial, Tahome, sans-serif;
+}
+
+blockquote.citation-container cite{
+    display: block;
+    font-size: 0.8em;
+}
+blockquote.citation-container cite a{
+    text-decoration: none !important;
+    color: #0090D2;
+}
+</code></pre>
+And now, we can add the decoration element:
+<pre class="line-numbers"><code class="language-css">
+blockquote.citation-container:before{
+    display: block;
+    height: 0;
+    content: "“";
+    margin-left: -.95em;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    color: #999;
+}
+</code></pre>
+But...we can go further!
+Why not customize it a little bit more? What about colors and icons?
+Just by adding a class "red" to the blockquote element, we can use this:
+<pre class="line-numbers"><code class="language-css">
+.citation-container.red{
+    border-color: rgb(245, 113, 113);
+    box-shadow: 0 0 6px rgba(253, 0, 0, 0.5);
+    background-color: rgb(255, 210, 210);
+}
+.citation-container.red:before{
+    content: "!";
+    color: rgb(245, 113, 113);
+    line-height: 50px;
+    margin-left: -56px;
+}
+</code></pre>
+And the result would be
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/zwwt0k3u/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<pre class="line-numbers"><code class="language-css">
+.citation-container.yellow{
+    border-color: rgb(243, 243, 62);
+    box-shadow: 0 0 6px rgba(169, 184, 0, 0.5);
+    background-color: rgb(255, 255, 207);
+}
+.citation-container.yellow:before{
+    content: "»";
+    color: rgb(243, 243, 62);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 30px;
+    font-size: 4em;
+    margin-left: -50px;
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/qnyrmkfe/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<pre class="line-numbers"><code class="language-css">
+.citation-container.green{
+    border-color: rgb(155, 255, 171);
+    box-shadow: 0 0 6px rgba(7, 170, 0, 0.5);
+    background-color: rgb(236, 253, 238);
+}
+.citation-container.green:before{
+    content: "✓";
+    color: rgb(155, 255, 171);
+    text-shadow: 0px 0px 3px #444;
+    line-height: 40px;
+    font-size: 2.2em;
+    margin-left: -58px;
+
+}
+</code></pre>
+<iframe width="100%" height="200" src="//jsfiddle.net/felipenmoura/ehkb0w9z/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+Cool thing, right?
+Now go ahead and customize yours!
+]]></description>
+  </item>
+  
+  <item>
+    <title>Participação na WebBR 2013</title>
+    <link>http://felipenmoura.com/articles/participacao-na-webbr-2013/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ web ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ w3c ]]>
+    </category>
+    
+    <description><![CDATA[
+WebBR é a conferência Brasileira organizada pela W3C e Nic.BR<br/>É sempre um prazer participar de tal conferência, que evidentemente, sempre agrega muito aos participantes, e também palestrantes!<br/>
+<strong>WebBR 2013</strong>
+Olá pessoal, este ano a BrazilJS Foundation está participando em peso da WebBR novamente!
+
+Terei a honra de palestrar nesta conferência que é uma das principais conferências da W3C, sintam-se todos convidados a participar!
+Curtam a <a href="https://www.facebook.com/W3CWebbr?ref=ts&fref=ts" title="WebBR2013 no Facebook">página do evento no facebook</a>, e acessem a <a href="http://conferenciaweb.w3c.br/" title="WebBR 2013">página da conferência</a> para maiores detalhes.
+
+E para melhorar, eu tenho uma cortesia e 3 cupons de desconto para dar \o/
+Pensando em qual a melhor maneira de o fazer, decidi usar este post para tal!
+O primeiro a comentar neste post aqui no meu site, ganha a cortesia, e os 3 próximos, ganharão R$60,00 de desconto na inscrição!
+
+e é dada a largada!
+]]></description>
+  </item>
+  
+  <item>
+    <title>O Brasil e suas decisões...</title>
+    <link>http://felipenmoura.com/articles/o-brasil-e-suas-decisoes/</link>
+    
+    <category>
+    <![CDATA[ politica ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ brasil ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ opinião ]]>
+    </category>
+    
+    <description><![CDATA[
+<br/>
+Sabia que os EUA investiram <strong>2.5 Bi</strong>lhoes de <strong>dollares</strong> para enviar a curiosity para Marte? Isso da em torno de <strong>5.6 Bi</strong>lhões de <strong>reais</strong>...
+
+O Brasil gastou <strong>40 Bi</strong>lhões de <strong>DOLLARES</strong> na copa do mundo até agora...e muito mais ainda há de ser gasto no decorrer dos (e quem sabe, no pós) jogos...
+
+Poh, não poderiam ter posto <strong>5</strong> bilhoezinhos de <strong>REAIS</strong> em investimentos para exploração espacial brasileira? que fossemos até a Lua, "apenas"!
+e podiam ter posto mais uns <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em educação e mudar a historia deste país? E quem sabe, mais <strong>5 bi</strong>lhoes de <strong>REAIS</strong> em saúde e segurança, e sabe o que aconteceria?
+
+Teríamos gasto em torno de <strong>32 bi</strong>lhões de <strong>dollares</strong> na copa...o que é equivalente a <strong>SOMA DO QUE FOI GASTO NAS 3 ULTIMAS COPAS</strong>, e ainda assim, seria a <strong>COPA MAIS CARA DA HISTÓRIA</strong>!
+Bom...acho que a dilminha não tem muita desculpa pra dar sobre por que o país não vai pra frente, né? É só má vontade mesmo, pura, e simples má vontade!
+
+O que realmente me entristece é saber que este país tinha tanto potencial!
+Acabamos de passar por uma oportunidade ÚNICA para este país! Não, não estou falando da copa! Estou falando do andamento financeiro, acesso a informações, à situação financeira de outros países, o interesse que eles despertaram sobre o Brasil, a valorização da terra e da moeda(ok, sabemos que há uma bolha), etc...
+Poderíamos, atrevo-me a dizer, ter nos tornado quase um país de primeiro mundo! Poderíamos ter passado de um "país granjeiro e agropecuário" a um país que oferece produtos de fato, tecnologia, etc...fora isso, a copa está aí para dar o maior destaque internacional ao país e seu povo e...não estamos preparados!
+Não, Dilma, não estamos preparados...psicologicamente, filosoficamente, emocionalmente, culturalmente...o país não está pronto!
+
+O Brasil perdeu esta oportunidade...que não teremos novamente tão cedo!
+]]></description>
+  </item>
+  
+  <item>
+    <title>Escopo, this e that</title>
+    <link>http://felipenmoura.com/articles/escopo-this-e-that/</link>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ scope ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma ]]>
+    </category>
+    
+    <description><![CDATA[
+Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!</br>Vamos discutir um pouco aqui sobre estes caras.<br/>
+<strong>Escopo</strong>
+
+O escopo no JavaScript, como você já deve saber, é capaz agrupar variáveis e funções, e um fluxo de execução.
+Um escopo tem acesso às variáveis e funções do escopo do nível acima, até chegar ao escopo mais ao topo, o <strong>escopo global</strong>.
+Uma maneira de criar um escopo, é utilizando uma função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function someFunc () {
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+}
+
+someFunc();
+
+</code></pre>
+
+Funções que cumprem o papel de construtores também.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// escopo global
+var globalVariable= 123;
+
+function SomeConstructor () {
+
+    var localVariable= 456;
+    
+    // tem acesso ao escopo superior
+    console.log(globalVariable);
+
+    function internalFunc () {
+        var secondLevelVariable= 789;
+
+        console.log(localVariable);
+        console.log(secondLevelVariable);
+        console.log(globalVariable);
+    }
+  
+    internalFunc();
+}
+
+var instance= new SomeConstructor();
+
+</code></pre>
+
+Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+
+var global1= 1;
+
+function someFunc () {
+    var localVar= 123;
+    global2= 456; // isto, criará uma variável global, por acidente.
+
+    console.log( window.global1 );
+}
+
+</code></pre>
+
+<strong>this</strong>
+
+Escopos, normalmente setam um valor para <em>this</em>.
+Caso você não tenha especificado um valor para this ao escopo atual, o padrão será <em>window</em>.
+
+Portanto, ao evocar o <em>this</em> dentro de uma função, por exemplo, o que temos é o objeto <em>window</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+"use strict";
+function blah(){
+    console.log(this); // imprime Window
+}
+blah();
+</code></pre>
+
+Para setar a propriedade <em>this</em> em um escopo, existem basicamente 4 maneiras:
+
+- Dentro de objetos
+<pre class="line-numbers"><code class="language-javascript">
+var o= {
+    doSomething: function () {
+        console.log(this); // imprime Object(o)
+    }
+}
+o.doSomething();
+</code></pre>
+
+- Em funções construtoras
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    console.log(this); // imprime Klass {foo: "bar"} 
+}
+
+var instance= new Klass();
+</code></pre>
+
+- Usando call, bind e apply
+Será discutido em outro post, com maiores detalhes.
+
+<strong>that</strong>
+
+A variável that, na verdade, é meramente um conceito, e você pode encontrar códigos utilizando também o nome _this.
+O que acontece, é que há situações em que você pode perder o contexto de this, perdendo a referência dele no escopo e fluxo atual.
+
+Uma destas situações é quando usamos o <em>setTimeout</em>, por exemplo.
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(this);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"} 
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Window
+</code></pre>
+
+Quando agendamos uma execução utilizando setTimeout(ou interval), estamos criando um novo fluxo, por tando, a referência ao this muda!
+
+<pre class="line-numbers"><code class="language-javascript">
+function Klass () {
+    var that= this; // guarda a referência ao this
+    this.foo= 'bar';
+    this.logIt= function () {
+        console.log(that);
+    }
+}
+
+var k= new Klass();
+k.logIt(); // imprime Klass {foo: "bar"}
+setTimeout(k.logIt, 1000); // após 1 segundo: imprime Klass {foo: "bar"}
+</code></pre>
+
+Quando utilizamos o <em>that</em>, como referência ao que era o "this" no fluxo inicial, aquela referência continua viva nesta variável.
+Assim, mesmo estando em um novo fluxo, onde o this aponta para o objeto Window, temos acesso a uma variável local que aponta para o this do fluxo inicial.
+
+Uma melhor abordagem para isto, é utilizando um dos métodos <strong>.call</strong>, <strong>.apply</strong> ou <strong>.bind</strong>, que discutirei num próximo post.
+
+Espero que tenha sido útil! :)
+
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Duas maneiras para centralizar verticalmente com CSS</title>
+    <link>http://felipenmoura.com/articles/duas-maneiras-para-centralizar-verticalmente-com-css/</link>
+    
+    <category>
+    <![CDATA[ css ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ technique ]]>
+    </category>
+    
+    <description><![CDATA[
+Centralizar com <em>CSS</em>, algumas vezes, pode ser meio "tricky"!<br/><br/>Mas não se escabele, há mais de uma maneira de atingir este objetivo, só depende de quais dados você já tem à mão!<br/>
+<strong>Usando Margin negativa</strong>
+
+Por exemplo, caso o elemento a ser centralizado tenha um tamanho pré-definido, podemos posiciona-lo a 50% do topo e left, e utilizamos uma margin negativa para ajustar isto.
+Este é o método mais tradicionalmente utilizado para fazer isto.
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
+</code></pre>
+<pre class="line-numbers"><code class="language-css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+}
+#centrelized {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    margin-top: -50px;
+    width: 100px;
+    margin-left: -50px;
+}
+</code></pre>
+
+O resultado final pode ser visto <a href="http://jsfiddle.net/kxe2thsw/" title="Centralizando verticalmente com margin negativa" target="_blank">aqui</a>.
+
+<strong>Usando posicionamento</strong>
+
+Este é um método pouco conhecido, mas que pode atender bem a demanda caso você não tenha os tamanhos do elemento a ser centralizado, já definidos...a única condição é que este elemento precisa estar com <em>display:inline</em>
+
+<pre class="line-numbers"><code class="language-markup">
+&lt;div id="container">
+    &lt;img id="centrelized" src="..."/>
+&lt;/div>
+</code></pre>
+<pre class="line-numbers"><code class="language-css">
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: red;
+    left: 0;
+    top: 0;
+}
+#centrelized {
+    display: inline;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+</code></pre>
+
+Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.
+]]></description>
+  </item>
+  
+  <item>
+    <title>Hoisting no JavaScript</title>
+    <link>http://felipenmoura.com/articles/hoisting-no-javascript/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Conheça o <strong>Hoisting</strong>, do JavaScript, e previna-se de pequenos erros ou perda de tempo ao debugar.<br/>
+O JavaScript irá, ANTES de executar seu código/fluxo, procurar por todas as declarações no escopo atual, e declara-las antes de tudo(irá içar estas definições para o topo, daí a palavra "hoisting")!
+Todavia, o valor apenas será atribuído no momento correto.
+
+Para ver isto acontecendo, abra o console do seu navegador, e cole o código abaixo:
+<pre class="line-numbers"><code class="language-javascript">
+var x= 1;
+
+if(x === 3){
+    var y= 1;
+}
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+</code></pre>
+
+Notou a diferença? Ao logar "y", o browser expõe "undefined", mas ao logar "z", um erro é disparado pois a variável z não foi definida.
+A variável y foi definida, antes de tudo, mesmo que nunca tenha-se entrado naquele "if". Antes de tudo, o browser "sobe" a definição/declaração de "var y;". O valor "1" será atribuído a ela, apenas se o fluxo entrar neste "if statement".
+
+Ainda duvida?
+Façamos assim, então:
+
+<pre class="line-numbers"><code class="language-javascript">
+var x= 1;
+
+console.log(x); // 1
+console.log(y); // undefined
+console.log(z); // ERROR
+
+if(x === 3){
+    var y= 1;
+}
+
+</code></pre>
+
+O mesmo acontece, pois a variável "y" já foi declarada(pois foi içada ao topo do seu código antes de tudo), ela simplesmente ainda não recebeu o seu valor adequado.
+
+Da mesma forma, funções podem ser declaradas ou atribuídas.
+
+<pre class="line-numbers"><code class="language-javascript">
+// chamando a funcão 1
+func1(); // joga 1 no console
+
+// a declaração desta função foi puxada para o topo
+// pelo JavaScript
+function func1(){
+    console.log(1);
+}
+
+// chamando a função 2
+func2(); // ERROR
+
+// a variável func2 foi criada antes, com o valor "undefined"
+// e foi apenas NESTE MOMENTO, que ela recebeu se torna uma função
+var func2= function(){
+    console.log(2);
+}
+
+// a partir de agora, func2 poderia ser evocada
+</code></pre>
+
+Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
+
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+
+Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Call, bind e apply no JavaScript - parte 1</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-1/</link>
+    
+    <category>
+    <![CDATA[ JavaScript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ECMA ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ES5 ]]>
+    </category>
+    
+    <description><![CDATA[
+Como prometido <a href='/articles/escopo-this-e-that' title='Escopo no JavaScript' class='local'>neste post</a>, resolvi abordar o mais didaticamente possível, o uso dos métodos <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>, do JavaScript.<br/><br/>Como o assunto foi se tornando um pouco mais extenso do que eu imaginava, resolvi dividi-lo em dois posts.Vamos então, à primeira parte.<br/>
+Primeiro, precisamos saber que existem duas maneiras de criar funções, por meio de uma <em>definição</em> ou de uma <em>instrução</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+// declarando uma função no escopo atual
+function funcName () {};
+
+// uma instrução, setando uma função à uma variável
+// no escopo atual
+var funcName = function () {};
+</code></pre>
+
+Mas que diferença isto faz?
+Já ouviu falar de uma coizinha chamada <em>hoisting</em>?
+Leia sobre como ele funciona, neste breve <a href="/articles/hoisting-no-javascript" title="Hoisting no JavaScript" class="local">post sobre o hoisting</a> que escrevi.
+
+Vale notar também, que funções não declaradas, não podem ser referenciadas por seus nomes, por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+// atribuímos uma função com nome, a uma variável
+var myFunc= function funcName(){
+    return 123;
+};
+
+myFunc(); // 123
+funcName(); // ERROR
+</code></pre>
+
+Apesar disto, é aconselhado o uso de nomes nas funções, pois facilita ao debugar seu código, já que um erro que acontecer dentro desta função indicará o nome da mesma como referência ;)
+
+<strong>Funções Imediatamente Evocadas</strong>
+
+Quando uma função é uma instrução, você pode chama-la(ou evoca-la) imediatamente.
+Uma função é uma declaração sempre que o JavaScript encontra o token "<em>function</em>" como início de um comando. Caso contrário, trata-se de uma instrução.
+
+Por exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+
+console.log(func1); // function
+console.log(func2); // undefined
+
+// ou seja:
+func1(); // 1
+func2(); // ERROR
+
+// estamos declarando uma função, que será içada
+function func1(){ return 1; }
+
+// a variável func2 foi içada(com valor de "undefined"),
+// mas a função somente foi criada agora, e atribuída a ela
+var func2= function(){ return 2; };
+
+</code></pre>
+
+Agora, pense no seguinte exemplo:
+<pre class="line-numbers"><code class="language-javascript">
+var d= new Date().getTime();
+</code></pre>
+
+Estamos instanciando um novo objeto do tipo <em>Date</em>, mas a variável <em>d</em> receberá o retorno do método <em>getTime</em> desta instância, a qual acaba de ser perdida, pois ela, a própria instância, não foi atribuída a ninguém. A variável "d" trata-se de um valor, apenas.
+
+Da mesma forma, podemos evocar automáticamente uma função: 
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ return 123; }();
+console.log(x); // 123
+</code></pre>
+Note que a função foi imediatamente evocada, e o valor retornado foi passado automaticamente à variável <em>x</em>.
+
+Uma curiosidade aqui, é que:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function(){ /* faz algo, mas não retorna nada*/ }();
+console.log(x); // undefined
+</code></pre>
+
+E também:
+<pre class="line-numbers"><code class="language-javascript">
+var x= function doSomething(arg){ return arg; }(123);
+console.log(x); // 123
+doSomething(); // ERROR
+</code></pre>
+Neste caso, há dois detalhes interessantes. Estamos passando um valor à função que está sendo imediatamente evocada, o valor "123", que é recebido dentro desta função como <em>arg</em>.
+O segundo detalhe, é que a função <em>doSomething</em> na verdade, não existe, a referência a ela também foi perdida(e ela será eliminada da memória na próxima vez que o garbage collector rodar).
+Este é um dos motivos pelos quais <strong>você não deve criar funções dentro de loops</strong>.
+
+Ainda assim, podemos auto-evocar uma função, sem sequer atribuí-la a uma variável:
+<pre class="line-numbers"><code class="language-javascript">
+(function (){
+    ...
+    console.log( "algo" );
+}());
+</code></pre>
+
+Como a função está entre parênteses, a engine não encontrou o token "function" como início da instrução(o primeiro token é "(" ), por isto, é apenas uma instrução normal, não uma declaração/definição.
+Desta forma, como o objeto Date citado acima, não temos como referenciar esta função novamente, a referência a ela foi perdida.
+
+Mas a função não precisa necessariamente estar entre parênteses, não se surpreenda se encontrar códigos assim, pela internet:
+<pre class="line-numbers"><code class="language-javascript">
+-function (){
+    ...
+    console.log( "algo" );
+}();
+
+// ou
+
+!function (){
+    ...
+    console.log( "algo" );
+}();
+</code></pre>
+
+Esta foi a primeira parte deste assunto.
+
+Em seguida, farei um novo post, desta vez, focado apenas no <strong>.bind</strong>, <strong>.call</strong> e <strong>.apply</strong>.
+]]></description>
+  </item>
+  
+  <item>
+    <title>call, bind e apply no JavaScript - parte 2</title>
+    <link>http://felipenmoura.com/articles/call-bind-e-apply-no-javascript-parte-2/</link>
+    
+    <category>
+    <![CDATA[ es6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ecma6 ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ es2015 ]]>
+    </category>
+    
+    <description><![CDATA[
+Este post, é uma continuação de outro post, <a href='/articles/call-bind-e-apply-no-javascript-parte-1' title='Call, Bind e Apply no JavaScript (parte 1) - Funções' class='local'>mais focado em funções</a>.<br/>Neste, focaremos realmente nos três métodos do título deste artigo, <strong>.call</strong>, <strong>.bind</strong> e <strong>.apply</strong>.<br/><br/>Agora que você já leu sobre <a href='/articles/hoisting-no-javascript' title='Hoisting no JavaScript' target='_blank' class='local'>hoisting</a>, <a href='/articles/article/escopo-this-e-that/' title='Escopos no JavaScript' class='local'>escopos</a>, e como as funções funcionam e podem ser declaradas e executadas na primeira parte deste artigo, podemos abordar esta, que considero ser uma parte um pouco mais avançada do JavaScript.<br/><br/>Estes três métodos estão presentes no <em>prototype</em> de <em>Function</em>, ou seja, toda função terá estes métodos, nativamente.<br/>Uma coisa bacana, também, é que isto funciona igualzinho em nodejs ;)<br/><br/>
+
+<strong>.call()</strong>
+
+O método <em>.call</em>, literalmente, "chama" a sua função.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    return 1;
+}
+
+var func2= function(){
+    return 2;
+}
+
+func1.call(); // 1
+func2.call(); // 2
+
+</code></pre>
+
+A diferença, está nos argumentos(parâmetros) passados a esta função.
+Ela permite que você possa <em>setar</em> qual o escopo daquela função.
+
+<pre class="line-numbers"><code class="language-javascript">
+// criando uma variável global apenas para demonstração
+window.blah= 1;
+
+// uma função que utiliza o this
+function func1 () {
+    console.log(this.blah);
+}
+
+// um objeto a ser usado como exemplo
+var obj= {
+    blah: 2
+};
+
+func1(); // 1 (vindo do objeto window), escopo atual
+func1.call(obj); // 2 (vindo do objecto obj)
+
+</code></pre>
+
+Além disso, podemos passar parâmetros para aquela função, além do escopo atual.
+<pre class="line-numbers"><code class="language-javascript">
+
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+func1.call(obj, "a", 3); // "x", "a", 3
+
+</code></pre>
+
+Um macete interessante, é que por exemplo, ao utilizar o objeto <em>arguments</em>, ele trata-se de uma <em>collection</em>, e não uma <em>Array</em>, por tanto, não tem alguns métodos do prototype de Array, como <em>.forEach</em>, ou <em>.sort</em>.
+Daí, podemos resolver isto usando:
+
+<pre class="line-numbers"><code class="language-javascript">
+function (){
+    var args= Array.prototype.slice.call(arguments);
+    args.forEach(...);
+}
+</code></pre>
+
+Isto funciona por que o método slice da Array basicamente pega uma "fatia" da array (o this, do ponto de vista do prototype), devolvendo em uma nova Array.
+Neste caso, estamos dizendo para o método slice, que o "this" dele, é na verdade aquela collection, e ele nos devolverá uma nova Array, com a fatia de 0 até o final dela(pois não passamos nenhum outro argumento a ela).
+
+<strong>.apply()</strong>
+
+O método apply da função, é parecido com o call, porém, ele recebe uma lista de argumentos, na forma de uma Array, mesmo.
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// apply está enviando uma Array, com a lista de parâmetros
+func1.apply(obj, ["a", 3]); // "x", "a", 3
+</code></pre>
+
+A principal vantagem é que algumas vezes, queremos apenas repassar os argumentos recebidos em uma função, diretamente para outra, usando o próprio <em>arguments</em>.
+
+<pre class="line-numbers"><code class="language-javascript">
+function func1(){
+    someOtherFunc.apply(obj, Array.prototype.slice.call(arguments));
+}
+</code></pre>
+
+<strong>.bind()</strong>
+
+O bind, funciona um pouco diferente.
+Ele não executará sua função na mesma hora, como o call e o apply, ao contrário disto, ele RETORNARÁ uma nova função, a qual já estará com seu escopo definido.
+
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// a variável theFunction se tornará a função func1
+// amarrada ao obj.
+var theFunction= func1.bind(obj);
+
+// ao chamar theFunction, o "this" dela já é o obj
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+Quando finalmente chamamos a função "theFunction", ela já ligada ao objeto "obj", e então, passamos neste momento os argumentos.
+Uma coisa interessante que vale lembrar, é que o bind, infelizmente, tem uma performance meio pobre! Então, cuidado ao sair usando e abusando dele por aí(em especial em loops)!
+Eis uma alternativa que o pessoal faz:
+
+<pre class="line-numbers"><code class="language-javascript">
+// igual exemplo anterior
+function func1 (arg1, arg2) {
+    console.log(this.blah, arg1, arg2);
+}
+
+var obj= {
+    blah: "x"
+};
+
+// theFunction recebe, literalmente, uma função, a qual usará
+// o .apply, quando chamada
+var theFunction= function(){
+    func1.apply(obj, Array.prototype.slice.call(arguments));
+};
+
+theFunction("a", 123); // "x", "a", 123
+
+</code></pre>
+
+O resultado produzido é o mesmo, mas ao contrário de utilizar o .bind, estamos utilizando o .apply, passando adiante qualquer parâmetro passado àquela função.
+
+<strong>Finalizando</strong>
+
+Uma outra coisa interessante, é que o "this" em uma função, pode ser qualquer coisa...
+
+<pre class="line-numbers"><code class="language-javascript">
+function func3() {
+    console.log(this);
+}
+
+func3(); // window
+func3.call({ some: "prop" }); // object { some: "prop" }
+func3.call("just a string"); // string "just a string"
+func3.call(123); // number 123
+func3.call(document.body); // object HTMLBodyElement
+
+</code></pre>
+
+O que pode acabar sendo usado em situações como esta:
+
+<pre class="line-numbers"><code class="language-javascript">
+function calc(val1, val2){
+    console.log(this.max(val1, val2));
+    console.log(this.cos(val2));
+    console.log(this.min(val1, val2));
+    console.log(this.pow(val1, val2));
+}
+
+calc.call(Math, 2, 3); // 3, -0.9899924966004446, 2, 8
+
+</code></pre>
+
+Espero que tenha sido um post útil e bem explicativo! :)
+
+Não deixem de divulgar o post, e dar sua opinião.
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>E é dada a largada!!</title>
+    <link>http://felipenmoura.com/articles/e-dada-largada/</link>
+    
+    <category>
+    <![CDATA[ empresa ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ carreira ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ nasc ]]>
+    </category>
+    
+    <description><![CDATA[
+Há momentos na nossa vida que nós não sabemos o que fazer!<br/>Mas há momentos em que <strong>sabemos</strong> exatamente qual <strong>direção</strong> devemos seguir!<br/>
+Há algum tempo que tanto <a href="http://twitter.com/jaydson" target="_blank">Jaydson Gomes</a> quanto eu vínhamos sentindo "um chamado" para focar no mercado!
+Nós já vínhamos discutindo isto há algum tempo, e era algo inevitável!
+
+Quem me conhece sabe que estou sempre "mirando alto", almejando o maior objetivo possível, e gosto de fazer isto focando bastante em ajudar os outros, a comunidade, inventar coisas novas, e por que não, me divertir!
+
+<h2>&lt;/terra></h2>
+Pois é, é fechado um ciclo de 4 anos! Trabalhando com uma equipe muito boa e divertida, conseguimos superar enormes desafios, aprender muito juntos e amadurecer em diversos sentidos!
+Foi um prazer <em>ininarrável</em>, e <em>parabéns aos envolvidos</em> (piadas internas).
+
+<h2>Nasce a NASC</h2>
+Agora é hora de apostar firme nesta nova etapa!
+E vocês nos conhecem, não vai ser "qualquer coizinha"!!
+
+A Nasc é a empresa que abrimos há alguns anos para cuidar burocratica e fiscalmente de diversos detalhes na organização de eventos, e agora será nosso foco!
+Bom, na verdade, um de nossos focos(spoiler alert)!
+Vamos manter o trabalho e contato com as comunidades, buscando sempre o melhor!
+Mais novidades a caminho!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>BrazilJS 2015</title>
+    <link>http://felipenmoura.com/articles/braziljs-2015/</link>
+    
+    <category>
+    <![CDATA[ braziljs ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ javascript ]]>
+    </category>
+    
+    <description><![CDATA[
+A BrazilJS 2015 foi um novo desafio para nós! Afinal, foram muitas mudanças, inovações, experimentos e, um aumento de público!<br/>Além de mais palestras, também teve uma mídia que repercutiu muito mais que o ano passado, tivemos um público ainda mais ativo!<br/>
+<div class="multi-lang" lang="pt-BR">
+Eis que aconteceu a BrazilJS 2015!
+Depois de cerca de 14 meses de organização, centenas de horas de reuniões, horas de ligações, milhares de e-mails, centenas de notas fiscais, contratos, correspondências, etc...
+Finalmente chegou a hora!
+
+<h2>BrazilJS 2015</h2>
+Foi nos dias 21 e 22 de agosto, no Barra Shopping Sul, em Porto Alegre, que a BrazilJS bateu seu próprio record, com um <strong>público de 1300 pessoas</strong>!
+Junto com estes participantes, ajudaram a fazer o evento acontecer:
+
+- <strong>22 palestrantes</strong> top
+- <strong>9 patrocinadores</strong> incríveis
+- <strong>5 apoiadores</strong> muito dedicados
+- <strong>11 assistentes</strong> esforçadíssimas
+- <strong>+20</strong> envolvidos no coffee
+- <strong>14</strong> envolvidos no audio-vídeo e internet
+
+Fora, é claro, tradutores, assessoria de imprensa, carregadores, limpeza, bombeiros, segurança...
+
+Bom, dá pra dizer que deu bastante trabalho, mas como sempre, foi um prazer enorme trabalhar na BrazilJS e ver isto tudo acontecendo!
+Ver a comunidade se manifestando, se dedicando, participando...enfim, <b>presente</b>!
+
+Durante a organização, <a href="http://jaydson.org/" target="blank">Jaydson</a> e <a href="http://felipenmoura.com/" target="blank">eu</a> tivemos uma grande ajuda do nosso amigo <a href="http://dnl.pw/" target="blank">Daniel Filho</a>, que também fez um trabalho fantástico como apresentador do evento!
+Gostou de nosso site? Banners, lonas, etc...? Então mande um parabéns para <a href="https://twitter.com/italowaxman" target="blank">Italo Waxman</a>, o cara por trás de todo esse design!
+
+E não é possível falar da <a href="http://braziljs.com.br/" target="blank"> BrazilJS 2015</a> sem falar da Ju!
+A <a href="http://about.me/jumacedo" target="blank">Juliana Macedo</a> trabalhou com a gente os últimos meses e nos impressionou! Trabalho fantástico, profissionalismo extremo e, como sempre fazemos, demos liberdade total a ela para interagir e contribuir com ideias e sugestões. Ela fez diversas contribuições fantásticas e certamente contaremos com o trabalho dela para próximos eventos!
+
+<div class="picture" class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/trio-braziljs-2015.jpg" alt="Felipe N Moura, Juliana Gonçalves e Jaydson Gomes" /></div>
+
+<h2>Os desafios</h2>
+Fizemos muitas experiências este ano!
+Todas expunham um pouco de risco, mas também uma grande chance de inovar e crescer. Entre essas mudanças, algumas das maiores foram:
+
+- local (pela primeira vez no Barra Shopping Sul)
+- formato (primeira vez em um ambiente único)
+- datas (primeira vez em uma sexta e sábado)
+- banda (primeira vez, uma banda no encerramento)
+- área BrazilJS (pela primeira vez tivemos uma área própria do evento)
+- abertura (finalmente, uma apresentação na abertura)
+
+Estes experimentos foram importantes para já identificarmos problemas e dificuldades, e testarmos inclusive, soluções para o próximo ano!
+Agradecemos a paciência e a compreensão de todos por qualquer dificuldade enfrentada e esperamos usar todo o feedback para promover a melhor experiência possível na próxima edição.
+
+<h2>A temática</h2>
+O JavaScript fez 20 anos em 2015, e por isso, decidimos adotar uma temática nostálgica. Muitos desenvolvedores JS cresceram (ou até nasceram) nos anos 90!
+Esta década foi muito rica! Muitos filmes, muitas músicas, bandas, desenhos, games! Foi um prato cheio!
+
+<h2>O local</h2>
+Um dos experimentos: troca de local!
+Pudemos assim ter mais participantes, e manter tudo acontecendo no mesmo lugar! Coffee break, estandes, área do evento(outra novidade), palestras...tudo.
+Como em toda conferência, houveram contra tempos! Nossa missão era minimiza-los ao máximo, de forma rápida, e afetando o mínimo possível a experiência dos participantes!
+O barulho foi um dos problemas, que no segundo dia foi resolvido! Algumas parentes para separar um pouco a platéia da área dos estandes foi o suficiente!
+Tivemos alguma dificuldade com a internet também. As empresas ainda menosprezam um pouco o poder de uso de banda de 1300 nerds equipados com celulares, tablets e notebooks conectados o tempo todo! :p
+
+<div class="picture" style="text-align: center; float: right;"><img itemprop="image" src="/articles/braziljs-2015/venue.jpg" alt="Local da BrazilJS 2015 - Barra Shopping Sul" style="margin: auto" /></div>
+A área BrazilJS foi outra inovação! Resolvemos criar um ambiente para o pessoal se sentir em casa, descontrair, fazer um network diferente! E isto fluiu muito bem!
+Nesta área havia uma máquina do tempo(sim, pergunte para quem foi, que vão te descrever!), fliperamas, sofás e video games (um nintendo e um mega driver).
+
+Veja no nosso álbum algumas fotos tiradas nos <a href="https://www.facebook.com/media/set/?set=a.10206623163673828.1073741872.1114477480&type=1&l=51cd44519d" target="blank">bastidores do evento</a> deste ano.
+
+<h2>Os números</h2>
+Foram quase <strong>9 mil acessos</strong> ao site durante os dois dias de evento, <strong>20 mil</strong> acessos ao longo do mês!
+Estes acessos vieram, impressionantemente, de <strong>81 países diferentes</strong>!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/countries.png" alt="Acessos ao site(países)" /></div>
+Bastante? Bem, também houve a transmissão ao vivo no <a href="http://terra.com.br/" target="blank">Terra</a>!
+Na metade do segundo dia, soubemos que já havíamos tido <strong>395 MIL unique visitors</strong> no live streaming!!!
+
+Além disso, fomos <strong>trending topics Brasil</strong> nos dois dias de evento.
+
+<h2>As campanhas</h2>
+Nossa <a href="http://vivacomunicacaors.com.br" target="blank">assessoria de imprensa </a> conseguiu uma bela divulgação em grandes jornais impressos, portais da internet e uma entrevista ao vivo em um programa de televisão e também na rádio.
+
+<div style="text-align: center;"><iframe width="420" height="315" src="https://www.youtube.com/embed/fVlkmc_nCEI" frameborder="0" allowfullscreen></iframe></div>
+
+Tivemos também bastante repercução nas mídias sociais e com publicações em mailing lists de apoiadores e parceiros.
+
+<h2>O respeito</h2>
+Focamos forte, este ano, no respeito, diversidade e acessibilidade!
+Fizemos diversas campanhas em grupos de desenvolvedores que representavam certas minorias, além de incentivar ou oferecer cortesias para professores de comunidades carentes ou membros de programas sociais.
+
+A <a href="http://bocoup.com/pt-br" target="blank">Bocoup</a> fez também uma campanha fantástica conosco! Uma campanha de <strong>diversidade</strong>!
+Houve muito respeito entre palestrantes e participantes, o que nos deixou bastante felizes! Infelizmente, tivemos algumas situações muito pontuais que tomamos conhecimento.
+Apesar disso, sabemos que tratou-se de algumas situações muito específicas e que faremos com que não se repitam!
+Na platéia, bastante diversidade de gênero, orientação sexual, religião, raça...tudo isto, de forma respeitosa e pacífica.
+
+<h2>A abertura</h2>
+Apagam-se as luzes...e inicia o vídeo de abertura!
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/p1EdfnnPn28" frameborder="0" allowfullscreen></iframe></div>
+
+Depois disto...contratamos alguns artistas para encenar uma luta entre o bem e o mau na abertura do evento, tudo, é claro, no estilo mais <strong>anos 90</strong> possível!
+Sim, Power Rangers!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/ao-vivo.png" alt="Transmitido ao vivo" style="margin: auto; width: 100%" /></div>
+E sim, Jaydson e eu nos vestimos de alienígena e power ranger, respectivamente, para fazermos a apresentação de abertura! Só uma pitada de vergonha alheia logo de cara! hehe
+
+<h2>As palestras</h2>
+Pelo que acompanhamos, as palestras foram de alta qualidade, e o pessoal proveu um feedback fantástico!
+Nossa equipe de assessoria de imprensa cobriu o evento respondendo tweets e comentários nas mais diversas redes sociais, além de ajudar na divulgação e manter o pessoal informado.
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/palestra-julian-braziljs-2015.jpg" alt="Palestra de Julián Duque na BrazilJS 2015" style="margin: auto" /></div>
+
+<h2>O pedido</h2>
+Nesta hora, eu, pessoalmente, fiquei apavorado!
+Isto por que eu tinha um "plano secreto"! Estava planejando(e muito poucas pessoas sabiam disto) pedir a <a href="https://www.facebook.com/francielen.cunha.9" target="blank">Franciélen</a> em casamento!!!
+Planejei isto por meses e na hora de executar, eu estava apavorado! Imagina só, essa mulher resolve dizer "não" na frente de todo mundo! Normalmente eu não fico nervoso no palco, mas desta vez...minha nossa!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/pedido-casament-braziljs-felipe-fran.jpg" alt="Pedido de casamento feito no final da BrazilJS 2015 - Felipe e Franciélen" style="margin: auto" /></div>
+
+Nota, o pedido também foi transmitido ao vivo! E filmado e fotografado em HD! Quantos tem a oportunidade de ter seu pedido assim, né? Eu não pude deixar de aproveitar o momento!
+E ela disse sim! Na verdade...ela disse "É CLARO"! hehe :)
+
+Um dia eu farei um artigo só sobre as dificuldades que tive sobre pra manter isto um segredo! hehe
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/aliancas.jpg" alt="Alianças - Felipe e Franciélen" style="margin: auto; width: 100%;" /></div>
+
+
+<h2>A festa</h2>
+Logo após os agradecimentos e os pedidos, o <strong>maior bolo de JavaScript do mundo</strong>!
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/bolo-always-bet-on-javascript.jpg" alt="Bolo de JavaScript na BrazilJS 2015" style="margin: auto" /></div>
+
+Depois do evento, nada como uma festa com muito rock e cerveja com a <a href="https://www.facebook.com/crimescenepoa" target="blank">banda Crime Scene</a>.
+Teve direito até a stage diving e roda punk! Isso tudo num evento de JavaScript, quem diria! \,,/
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/banda-crime-scene-braziljs-2015.jpg" alt="Banda Crime Scene, que fechou a BrazilJS 2015 na festa com cerveja liberada" style="margin: auto" /></div>
+
+<h2>O Pós-evento</h2>
+Agora ainda temos contas a pagar, contratos para enviar, notas fiscais para gerar, etc...mas também, preparar os albums de fotografia e publicar os vídeos!
+Tudo foi filmado e será disponibilizado em breve!
+
+Vimos muitas caras novas no evento, e a todos estes que vieram pela primeira vez à BrazilJS, espero que tenha sido uma experiência inesquecível para vocês, tanto quanto foi para nós!
+E para aqueles que já conheciam, espero que tenham saído do evento com o sentimento de superação!
+A todos, quero que o evento tenha sido compensador, inesquecível e útil!
+
+E...
+<a href="http://braziljs.com.br/2016" target="blank"><div style="text-align: center;" class="picture"><img itemprop="image" src="/articles/braziljs-2015/braziljs-2016-teaser.png" alt="Teaser da BrazilJS 2016 - ingressos a venda" style="margin: auto; width: 100%;" /></div></a>
+Nos vemos na <a href="http://braziljs.com.br/2016" target="blank">BrazilJS 2016</a>!
+Os ingressos já estão a venda, e se tu acredita no evento, SABE que os palestrantes e patrocinadores serão os melhores que pudermos trazer! :)
+</div>
+<div class="multi-lang" lang="en-US">
+So, it happened! BrazilJS 2015!
+After about 14 months of work, hundreds of meeting hours, hours on phones, thousands of calls and e-mails, hundreds of bureaucracy docs, etc...
+The time finally arrived!
+
+<h2>BrazilJS 2015</h2>
+It was on August 21st and 22nd, in Barra Shopping Sul, Porto Alegre, where BrazilJS beat its own record with an audience of <strong>1300 people</strong>!
+Altogether with these attendees:
+
+- <strong>22 speakers</strong>
+- <strong>9 sponsors</strong>
+- <strong>5 supporters</strong>
+- <strong>11 assistants</strong>
+- <strong>+20 workers on coffee/food</strong>
+- <strong>14 audio/video workers</strong>
+
+Besides that, of course, translators, PR, cleaning workers, firemen, security...
+
+Well, we can say that it was plenty of work, but as always, it's been a pleasure working on BrazilJS and see this all happening!
+Watching the community show itself, dedicating its time and effort, participating...being <b>present</b>!
+
+During the organization, <a href="http://jaydson.org/" target="blank">Jaydson</a> and <a href="http://felipenmoura.com/" target="blank">I</a> had a great deal of help from our buddy <a href="http://dnl.pw/" target="blank">Daniel Filho</a>, who was also our amazing presenter/show-man during the conf!
+
+Did you like our website? Our banners, folders, etc...? So say congratz to our designer <a href="https://twitter.com/italowaxman" target="blank">Italo Waxman</a>!
+
+And it's impossible to talk about <a href="http://braziljs.com.br/" target="blank"> BrazilJS 2015</a> not mentioning Ju!
+<a href="http://about.me/jumacedo" target="blank">Juliana Macedo</a> worked with us the last months and really impressed us! With a fantastic work and extreme professionalism and, as we always do, freedom to give ideas and contribute with suggestions, she did some real good improvements to the conference!
+
+<div class="picture" class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/trio-braziljs-2015.jpg" alt="Felipe N Moura, Juliana Gonçalves e Jaydson Gomes" /></div>
+
+<h2>The challenges</h2>
+This year, we made many experiments!
+All of each, had a small risk, but also a good chance of being innovative and offer some good results. Amongst those:
+
+- venue (for the first time in Barra Shopping Sul)
+- format (first time in a single ambient for audience and sponsors)
+- dates (first time on a Friday and Saturday)
+- band (first time, a band and beer for the after party)
+- BrazilJS space (for first time we had a BrazilJS space)
+- opening (we finally managed to have an introduction for the conf)
+
+These experiments were very important for us to identify problems and find solutions for the next year!
+And for that, we thank you for the patience and understanding, for any kind of hard time you may have had! We hope to have lots of feedback and to use that to make it sure that your experience will be the best as possible in the next edition.
+
+<h2>The theme</h2>
+Javascript's 20th birthday was in 2015, therefore, we decided to use a nostalgic theme for the conference this year! Many JS developers grew up or even were born on the 90s!
+This decade was very rich, with lots of movies, songs, bands, cartoons, games...we had plenty of material!
+
+<h2>The venue</h2>
+One of our main experiments: changing the venue!
+This way, we could have even more attendees, and keep them all in the same place! Coffee break, sponsor's areas, talks and audience, and BrazilJS' area...all in the same huge open space!
+As in any conference, there were a few small problems for us to take care of! Our mission was to minimize them quickly.
+The noise was one of the problems in the first day, but fortunately, we found a solution by adding a few walls for the second day!
+We also had some hard time with the internet. These companies always underestimate the power of 1300 nerds equipped with cellphones, notebooks and tablets! :p
+
+<div class="picture" style="text-align: center; float: right;"><img itemprop="image" src="/articles/braziljs-2015/venue.jpg" alt="Local da BrazilJS 2015 - Barra Shopping Sul" style="margin: auto" /></div>
+The BazilJS area was another innovation! We decided to create a space for people to feel at home, hang out and have some special network! That worked really fine!
+In that area, there was a time machine(yes, a time machine...ask for those who tried it), flippers, bean bag chairs and video games (a nintendo e a mega driver).
+
+Check out the <a href="https://www.facebook.com/media/set/?set=a.10206623163673828.1073741872.1114477480&type=1&l=51cd44519d" target="blank">making of</a>, of the conference for a few pictures:
+
+<h2>The numbers</h2>
+It was almost <strong>9 thousand unique visitors</strong> to the website during the two days of conference, <strong>20 thousand</strong> during the month!
+Impressively, these visitors came from <strong>81 different countries</strong>!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/countries.png" alt="Acessos ao site(países)" /></div>
+Enough? Well, there was also the live streaming at <a href="http://terra.com.br/" target="blank">Terra</a>!
+In the second half of the second day, we knew that we had had <strong>395 THOUSAND unique visitors</strong> on live streaming!!!
+
+Besides that, we were also <strong>trending topics Brazil</strong> during both days.
+
+<h2>The campaigns</h2>
+Our <a href="http://vivacomunicacaors.com.br" target="blank">PR</a> got us a some good opportunities, columns on newspapers, internet portals and live interviews on TV and radio.
+
+<div style="text-align: center;"><iframe width="420" height="315" src="https://www.youtube.com/embed/fVlkmc_nCEI" frameborder="0" allowfullscreen></iframe></div>
+
+We also had a lot of visibility on social medias and mailing lists from supporters and partners.
+
+<h2>The respect</h2>
+This year, we focused a lot on respect, diversity and accessibility!
+We worked on many campaigns in developers groups for minorities, and also offered free passes and support for teachers or students from poor communities.
+
+<a href="http://bocoup.com/pt-br" target="blank">Bocoup</a> did an amazing campaign on BrazilJS too! A <strong>diversity</strong> campaign!
+
+There was respect between speakers, sponsors and attendees, what made us very happy! Unfortunately, we had a few, very specific situations that we got to know of!
+We are working on making it sure, that such situations will never happen again!
+In the audience, a lot of diversity of genre, sexual orientation, religion, race...all together, respectfully and peacefully.
+
+<h2>The opening</h2>
+Lights off...play the video!
+
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/p1EdfnnPn28" frameborder="0" allowfullscreen></iframe></div>
+
+After that...we hired a few artists to play a fight between the good and evil! All, of course, on the nerdiest way possible! All on the <strong>90's</strong>!
+Yes...Power Rangers!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/ao-vivo.png" alt="Transmitido ao vivo" style="margin: auto; width: 100%" /></div>
+And yes...both Jaydson and I wore an alien and power ranger costumes for our opening presentation! Just a small second hand embarrassment hehe
+
+<h2>The talks</h2>
+As we could follow, the speakers were all very professional and funny at the same time, and the audience provided an amazing feedback!
+Our PR team covered the conference answering tweets and comments on many social medias.
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/palestra-julian-braziljs-2015.jpg" alt="Palestra de Julián Duque na BrazilJS 2015" style="margin: auto" /></div>
+
+<h2>The engagement</h2>
+At this time, I, personally, was terrified!
+That's because I had a "secret plan"! I was planning (and a very few people knew about it) asking <a href="https://www.facebook.com/francielen.cunha.9" target="blank">Franciélen</a> to be my wife!!!
+I had planned this for months and now it was time to execute! Imagine if this woman say "no" in front of everybody, live streamed! I am usually not nervous on stage, but this time I had motive!
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/pedido-casament-braziljs-felipe-fran.jpg" alt="Pedido de casamento feito no final da BrazilJS 2015 - Felipe e Franciélen" style="margin: auto" /></div>
+
+And she said yes! Actually...what she said was "OF COURSE"! :)
+
+Some day I will write an article specifically about it!
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/aliancas.jpg" alt="Alianças - Felipe e Franciélen" style="margin: auto; width: 100%;" /></div>
+
+
+<h2>The party</h2>
+Afterwards, we had the <strong>biggest JavaScript cake in the world</strong>!
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/bolo-always-bet-on-javascript.jpg" alt="Bolo de JavaScript na BrazilJS 2015" style="margin: auto" /></div>
+
+After the conference, nothing as a lot of beer and rock'n roll with the <a href="https://www.facebook.com/crimescenepoa" target="blank">band Crime Scene</a>.
+We even saw a mosh pit and stage diving! All this in a JavaScript conference, yeah \,,/
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/braziljs-2015/banda-crime-scene-braziljs-2015.jpg" alt="Banda Crime Scene, que fechou a BrazilJS 2015 na festa com cerveja liberada" style="margin: auto" /></div>
+
+<h2>The after event</h2>
+Now, we still have got a few fees to pay, contracts to send, bureaucratic work to do...but we are also working on the videos and pictures! Soon to be released ;)
+
+We met a lot of new faces this year, and I hope this has been a great first impression for them!
+And for those who already knew the conference, I hope you have had a great experience!
+
+And...
+<a href="http://braziljs.com.br/2016" target="blank"><div style="text-align: center;" class="picture"><img itemprop="image" src="/articles/braziljs-2015/braziljs-2016-teaser.png" alt="Teaser da BrazilJS 2016 - ingressos a venda" style="margin: auto; width: 100%;" /></div></a>
+We will see each other at <a href="http://braziljs.com.br/2016" target="blank">BrazilJS 2016</a>!
+Tickets are already for sale, and if you believe in the conference, you DO KNOW our sponsors and speakers will be the best we can bring! :)
+</div>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Otimizando seu site</title>
+    <link>http://felipenmoura.com/articles/otimizando-seu-site/</link>
+    
+    <category>
+    <![CDATA[ otimização ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ acessibilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ performance ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ usabilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ mobile ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ferramentas ]]>
+    </category>
+    
+    <description><![CDATA[
+Neste artigo, discuto sobre ferramentas que uso para saber da <strong>acessibilidade</strong> e <strong>performance</strong> de meu site, além de garantir que é <strong>mobile friendly</strong> e bem <strong>indexado</strong> pelo google, SEO, e redes sociais também.<br/>
+<!--section class="multi-lang" lang="en-US">
+    <h2>test</h2>
+    Content goes here
+</section>
+<section class="multi-lang" lang="pt-BR">
+    <h2>teste</h2>
+    Conteúdo vai aqui
+</section>
+
+<div class="picture"
+     style="float: left;">
+     <img itemprop="image" src="" alt="" />
+</div -->
+
+Pretendo discutir aqui, sobre ferramentas que uso para saber da <strong>acessibilidade</strong> e <strong>performance</strong> de meu site, além de garantir que é <strong>mobile friendly</strong> e bem <strong>indexado</strong> pelo google, SEO, e redes sociais também.
+
+
+<h2>Build e plataforma</h2>
+Esta nova versão do meu site pessoal, eu fiz do zero, e construí uma ferramenta com grunt para gerar todas as páginas estáticas e linkadas, dinamicamente, durante uma task de build.
+Mais ou menos como o <a href="https://github.com/JSRocksHQ/harmonic" target="blank">Harmonic</a> faz.
+
+E desta vez, tive que fazer manualmente diversos ajustes, que me levaram a diversas descobertas, também! A versão anterior de meu site(ainda disponível em <a href="http://felipenmoura.org/" target="blank">felipenmoura.org/</a>) era gerenciada por um wordpress.
+O wordpress é uma ferramenta fantástica, mas eu estava querendo migrar para arquivos estáticos, e hoje hospedo meu site todo no próprio <a href="http://github.com/" target="blank"></a>Github</a>.
+
+<blockquote>Para tudo, há um "asterísco"!</blockquote>
+Quero dizer que há mudanças acontecendo o tempo todo, e por isso, essas ferramentas podem dar resultados diferentes com o tempo.
+Além disso, itens externos, como Videos embedados, facebook, twitter, google plus, ou no meu caso, o Disqus também, podem influenciar gerando erros, ou problemas de acessibilidade ou performance.
+
+Além disso, no caso de estar hospedando seu site no Github, como eu, não é possível configurar o cache nos headers HTTP, e algumas das ferramentas vão reclamar sobre isto!
+
+
+<h2>Testando a Acessibilidade</h2>
+Para acessibilidade, há diversas dicas e artigos na internet, enfatizando alguns dos mesmos itens, mas é sempre bom manter aquecido na mente!
+
+Use tags para o que elas servem! Não crie um <em>div</em> com estilo de botão...crie um <em>botão</em> e estilize ele!
+
+Use o atributo <em>ALT</em> em TODAS as imagens! E se preciso, use o <em>title</em> também.
+
+Faça bom uso dos Headers (<em>H1, H2, H3, H4, H5 e H6</em>).
+
+Coloque <em>tabindex</em> nos elementos que julgar necessários.
+
+Um detalhe que é importante lembrar também, é o contraste! É legal lembrar de conferir bem as cores de fundo e dos textos, por exemplo. Ou também, o <strong>tamanho da fonte</strong>!
+Justamente por isso, decidi colocar algumas ferramentas na página de artigos, onde é possível <em>inverter as cores de contraste</em> ou aumentar e diminuir o tamanho da fonte.
+
+Para testar a acessibilidade da página, eu uso algumas técnicas como <em>navegação por tabs</em> e setas para rolar páginas longas.
+Mas conto também com o <strong>bookmarklet</strong> da Squiz, o <a href="http://squizlabs.github.io/HTML_CodeSniffer/" target="blank">HTML Code Sniffer</a>.
+
+Caso queria usar um leitor de telas, eu aconselho o <a href="http://www.chromevox.com/" target="blank">ChromeVox</a>. Trata-se de uma extensão para o Chrome.
+Assim, o leitor não lerá TUDO o que está na tela(incluindo menus e botões do próprio sistema operacional), mas sim, apenas o que estiver no browser. Além disso, é bastante fácil de liga-lo ou desliga-lo a qualquer momento.
+
+
+<h2>Detalhes de Usabilidade</h2>
+Alguns detalhes de usabilidade que coloquei, e que ainda pretendo acrescentar.
+
+Acho que a interface deve saber "se comunicar" com o usuário, e ser muito, MUITO intuitiva, por isso, por exemplo...
+Ao entrar na página de <a href="/utils" class="local">útils</a>, caso o usuário fique parado, possivelmente sem entender que as opções estão na barra azul, os <em>ícones das opções se movem</em>.
+Uma animação simples, mas que para o usuário que ainda não os identificou, faz toda diferença.
+Outro ponto positivo disto é que foi feito totalmente com CSS, não é preciso JavaScript sequer para controlar quando animar ou não(conteúdo para outro artigo, quem sabe?).
+Nesta mesma página, caso a janela seja muito pequena(como no caso de mobile, por exemplo), a barra azul e os icones se mudam para o topo(usando <em>media queries</em> do <em>design responsivo</em>).
+Isto por que, uma janela no formato paisagem(landscape) tem mais espaço horizontal, e a barra na lateral não atrapalha o espaço que há para o conteúdo.
+Já uma janela mais estreita provavelmente é mais alta do que larga, e por isso, a barra atrapalhará menos estando no topo.
+
+Os menus, por enquanto sempre visíveis, também mutam de tamanho e posição de acordo com o tamanho da janela, mas ainda pretendo fazer mais alterações para que atrapalhem menos a leitura, sem deixar de ser percebidos.
+
+Na página de <a href="/articles" class="local">artigos</a> também, o formato do header muda responsivamente de acordo com o tamanho da janela,
+
+
+<h2>To be continued...</h2>
+No meu próximo artigo, falaremos sobre <strong>SEO</strong> e <strong>Performance</strong>.
+Dois assuntos muito importantes, e até mesmo, interligados.
+
+Note que, obviamente, se você tem alguma dica ou sugestão, inclusive para melhorar meu site, deixe nos comentários!
+Deixe também sua opinião sobre o assunto, e relate situações que enfrentou e como resolveu!
+
+[update] A continuação deste artigo está em <a href="/articles/otimizando-seu-site-parte-2" target="blank">otimizando seu site parte 2</a>.
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Otimizando seu site - parte 2</title>
+    <link>http://felipenmoura.com/articles/otimizando-seu-site-parte-2/</link>
+    
+    <category>
+    <![CDATA[ otimização ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ acessibilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ performance ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ usabilidade ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ mobile ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ferramentas ]]>
+    </category>
+    
+    <description><![CDATA[
+Esta é a continuação do artigo sobre <strong>usabilidade</strong>, <strong>acessibilidade</strong> e <strong>SEO</strong>.<br/>Pretendo mostrar nesta segunda parte, como fiz(com dicas) a parte da otimização de <strong>SEO</strong> e <strong>performance</strong><br/>
+Este artigo é a continuação de <a href="/articles/otimizando-seu-site/" class="local">Otimizando seu site</a>, que contém dicas de <strong>usabilidade</strong> e <strong>acessibilidade</strong>.
+Aqui, vamos discutir alguns outros pontos importantes que usei ou que aprendi e coloquei em prática com meu site.
+
+<h2>Ferramentas de SEO</h2>
+Não sou especialista em SEO (Search Engine Optimization), mas pesquiso bastante sobre o assunto e tentei aplicar o máximo que pude.
+Algumas coisas que enfatizei.<ul>
+    <li>- Título diferente em cada página</li><li>- Meta tag de Descrição diferente em cada página</li><li>- Uso de tags como strong e em nos textos</li><li>- Alt em TODAS as imagens</li><li>- Ter o conteúdo da meta description, escrito em algum lugar na página</li><li>- URL clara e simplificada</li><li>- Um único H1 na página</li><li>- Uso das tags de blockquote e cite</li>
+</ul>Também fiz com que o meu gerador produza um <a href="https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190&vid=1-635775854167847627-3980602726" target="blank">sitemap</a>, para manter o google atualizado sobre minhas alterações.
+Na mesma linha, este cara gera também um .rss.
+
+Faça o teste de <strong>como o seu site está sendo visto pelo Google</strong>, no <a href="https://www.google.com/webmasters/tools/home">Search Console</a> do próprio Google.
+No console, cadastre como sua propriedade todas as versões do seu site, includingo as versões <em>com e sem www</em>.
+Outra dica interessante é <a href="https://support.google.com/webmasters/topic/4564314?utm_source=wnc_376106&utm_medium=gamma&utm_campaign=wnc_376106&hl=pt">verificar a propriedade de seu site</a>.
+
+O Google também está dando cada vez mais valor à forma que sua página se comporta em dispositivos mobile, por isto, é bom usar a ferramenta de testes <a href="https://www.google.com/webmasters/tools/mobile-friendly/" target="blank">mobile friendly</a>, também do próprio Google.
+Nesta ferramenta, é possível testar todas as suas páginas, por exemplo utilizando <em>/articles</em> ou <em>/contato</em> na url de teste.
+
+<div class="picture"
+     style="text-align: center;
+            width: 300px;
+            margin: auto"><img itemprop="image" src="/articles/otimizando-seu-site-parte-2/mobile-friendly-page.png" width="100%" alt="Mobile friendly tester from Google" /></div>
+
+Tive que fazer um trabalho forte sobre as URLs, e ainda as estou evoluindo!
+Ainda acontece de algumas URLs estarem falhando, e agradeço se reportarem qualquer problema encontrado!
+
+Por exemplo, em <em>felipenmoura.com/articles/</em>, eu pricisei fazer com que as redes sociais e o Disqus se atualizassem durante a navegação entre artigos, feita usando Ajax.
+Neste caso, a página em <em>/articles</em> deveria ter os comentários e likes de <em>/articles/otimizando-seu-site/</em>.
+
+
+<h2>Performance</h2>
+Tudo é estático!
+
+O gerador prepara duas versões da página para cada artigo, uma é parcial, apenas com o conteúdo, equanto a outra é a página completa. Desta forma, quando o usuário acessa a página, ela carrega muito rápido, pois todo o conteúdo já estava ali, vindo apenas de páginas estáticas.
+Quando o usuário troca de artigo, um script em js busca apenas a versão básica deste artigo, se tornando também mais leve.
+A barra de loading, ao carregar um artigo, é influenciada também pelo <em>pre-load</em> das imagens contidas nele.
+
+O Google e os usuários dão bastante atenção à performance! Eu utilizo alguns profilers nos próprios consoles, dos navegadores, para ficar de olho na performance e tempo de carregamento.
+<div class="picture"
+     style="text-align: center;"><img itemprop="image" src="/articles/otimizando-seu-site-parte-2/performance-test-chart.png" width="100%" alt="Performance test tool" /></div>
+Normalmente, os gargalos acabam ficando com códigos de terceiros, como scripts do Facebook, Twitter ou Disqus, mas é importante ficar de olho, também para os <strong>repaint</strong> e <strong>reflow</strong>.
+Podes usar também a <a href="https://developers.google.com/speed/pagespeed/insights/" target="blank">ferramenta do Google para <em>page speed</em></a>.
+
+<h2>Structured data</h2>
+Já ouviu falar de <em>structured data</em>, ou <em>micro-data</em> ou mesmo <em>micro-format</em>?
+Então, além de uma boa documentação sobre <a href="https://developers.google.com/structured-data/">structured data e micro formatos</a>, o Google também disponibiliza uma <a href="https://developers.google.com/structured-data/testing-tool/" target="blank">ferramenta para testar structured data</a> na sua página.
+
+Mais do que isto, ele pode usar estas informações na sua página para produzir os <strong>rich snippets</strong> de pesquisa.
+Veja a documentação dos <a href="https://developers.google.com/structured-data/rich-snippets/articles">rich snippets para artigos</a>, mas há para diversas categorias, como <em>receitas</em>, <em>produtos</em>, <em>reviews</em>, <em>eventos</em>, <em>vídeos</em>, etc.
+<div class="picture"
+     style="text-align: center;
+            width: 300px;
+            margin: auto"><img itemprop="image" src="/articles/otimizando-seu-site-parte-2/google-rich-snippet.png" width="100%" alt="google rich snippet" /></div>
+Outra coisa legal, é que no próprio search console do Google, dá pra ver quanto o <a href="https://www.google.com/webmasters/tools/structured-data" target="blank">Google já identificou e indexou</a>, de suas informações estruturadas.
+O Google oferece também, no próprio console, um <a href="https://www.google.com/webmasters/tools/data-highlighter" target="blank">Data Highlighter</a>, para "forçar" um entendimento de como as coisas são, no seu site.
+
+<h2>Analytics</h2>
+Uso o Google Analytics no meu site para registrar o tráfego, mas além de acesso à paginas e cliques, aproveito também para medir certas ações dos usuários.
+Por exemplo, na página de artigos, há a ferramenta de opções para o texto, que permitem aumentar ou diminuir a fonte, bem como mudar o contraste da página.
+Nestas ferramentas também, eu coloco um listener, mas neste caso, para <em>actions</em>, ou <em>eventos de interação</em>.
+Estes eventos me ajudam a saber se uma ou outra funcionalidade está ou não visível e perceptível o suficiente, ou se o usuário está tendo alguma dificuldade para chegar a algum objetivo.
+Serve também para indicar o caminho que estou tomando, se há ferramentas obsoletas, ou até mesmo se algo inesperado está dando mais resultado que eu imaginava.
+
+<hr/>Espero que estes dois artigos tenham sido úteis!
+Não deixem de comentar sobre dificuldades ou enviar ideias e contar experiências!
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>FWorld: Quem está realmente sozinho</title>
+    <link>http://felipenmoura.com/articles/fworld-sozinhos/</link>
+    
+    <category>
+    <![CDATA[ video ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ fworld ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ciência ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ curiosidades ]]>
+    </category>
+    
+    <description><![CDATA[
+<strong>FWorld</strong>, novo canal no youtube sobre ciência, tecnologia e curiosidades!<br/><br/>Episódio piloto: <em>Sozinhos!</em><br/><br/>Sabe aquele sentimento de solidão? Que estamos sozinhos no mundo?<br/>Mas hoje em dia, não fazemos NADA sozinhos...sério!<br/><br/>Descubra algumas pessoas ou coisas que estiveram mais isolados, que se tenha notícia, e também, uma forma de nunca mais se sentir realmente sozinho neste mundo!<br/>
+<section lang="pt-BR">
+    <h2>FWorld</h2>Lancei um novo canal no youtube, o <a href="https://goo.gl/fd5rMn" target="blank">fworld</a>!
+
+    Neste canal, pretendo falar sobre coisas variadas, como ciência, história, filosofia...curiosisades em geral! Pensamentos.
+    Desde criança eu penso em fazer algo assim, e agora resolvi me dedicar um pouco a tentar!
+
+    Se ficou curioso, aproveita e te inscreve lá: <a href="https://goo.gl/NynWdX">FWorld</a>
+
+    Deu bastante trabalho, e envolveu muita pesquisa e muita edição de vídeo, outra coisa que estou aprendendo...tive algumas dificuldades com o áudio, em especial, mas espero que consigam apreciar!
+
+    A ideia é ter conteúdo que chame a atenção e atraia as pessoas para se interessarem em ciência, de crianças a adultos!
+    Penso em escolher um tema, e discutir sobre ele, inclusive, mundo amplamente de assunto ao longo do vídeo, como foi o caso neste primeiro piloto!
+
+    <h2>Sozinhos!</h2>Neste primeiro vídeo publicado no canal, pensei em abordar como tema, o sentimento de solidão que algumas pessoas tem, e pesquisei sobre as pessoas ou comunidades que mais estiveram ou estão isoladas neste mundo...ou fora dele!
+
+    <div class="picture"
+     style="text-align: center; padding: 10px 0 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/FgTzmMKzB8c" frameborder="0" allowfullscreen></iframe></div>
+
+    <h2>Feedback</h2>É claro que todo o feedback é muito bem vindo, estou aprendendo e isto vai me ajudar a fazer algo criativo, cada vez melhor!
+
+    Se encontrou algum problema, pode me enviar pelo twitter, e-mail ou deixar um comentário no vídeo!
+    Se curtiu, e quer me incentivar a continuar produzindo conteúdos do tipo, não deixe de curtir o vídeo, assim eu vou saber, em números, se está dando resultado todo este trabalho!
+
+    E caso queira ver os próximos assim que saírem, aproveita e seja um dos primeiros a se inscrever no canal :)
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Pre-candidatura a Vereador de Porto Alegre</title>
+    <link>http://felipenmoura.com/articles/pre-candidatura-a-vereador/</link>
+    
+    <category>
+    <![CDATA[ comunidades ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ atitude ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ politica ]]>
+    </category>
+    
+    <description><![CDATA[
+Tenho novidades!<br/>Vou concorrer ao cargo de <strong>vereador de Porto Alegre</strong>, nas eleições de <strong>2016!</strong><br/>
+<section>
+    <h2>Por que?</h2>
+    Eu já venho há tempos demonstrando algum interesse por política, por compreender melhor como as coisas funcionam na nossa sociedade e por que algumas coisas vão tão erradas!
+    Além disso, gosto da ideia de poder mudar as coisas, não apenas "palpitar no facebook", e resolvi dar um passo a diante!
+    Já ajudamos a mudar/moldar algumas coisas importantes em algumas comunidades e vejo esta, como uma oportunidade de fazer mais!
+
+    Sinto muita falta de alguém do setor técnico, ou da tecnologia, ou das exatas, atuando no governo em alguma posição!
+    Já temos muitos advogados, sociologos e administradores lá, está na hora de termos uma presença maior! :)
+
+    <h2>Do que se trata?</h2>
+    Um vereador (do verbo verear), tem a tarefa de cuidar da cidade, por isso não se engane, um vereador não pode por exemplo, mandar asfaltar uma rua, ou aumentar a segurança pública, estas são tarefas do prefeito e governador!
+    Por cuidar da cidade, entende-se que ele ficará mais próximo das comunidades contidas nela, será <strong>contato</strong>, o elo, entre as necessidades e demandas da mesma, e certas atitudes ou posições tomadas pelos líderes políticos.
+
+    Sou um "pré-candidato", isto significa que ainda não sou oficialmente um candidato, a lista sai ano que vem.
+    Tecnicamente, não posso pedir por votos(apenas se pode pedir votos em <strong>época de campanha</strong>, se alguém pedir antes, está cometendo um crime, não vote nele!), mas posso já ir discutindo ideias e propostas.
+
+    O vereador pode até mesmo sugerir novas leis, a serem trabalhadas por outros cargos políticos...de qualquer forma, a ideia, a semente, pode ter partido de um vereador.
+
+    <h2>O que?</h2>
+    Pretendo começar a divulgar algumas ideias, e quero muito escutar sugestões.
+    Mesmo que tu não sejas de Porto Alegre, quero a tua opinião, como gostaria que um vereador fosse, na tua cidade?
+    O que sentem falta? O que acham que um representante da sua cidade poderia fazer, e que hoje não fazem?
+
+    Pretendo também ajudar as pessoas a entender melhor como certos aspectos da política funcionam, quem sabe até criar uns vídeos explicando...no Brasil, a política é <em>muito</em> mal vista(e com razão, inclusive) mas muito pouca gente entende do assunto(mesmo o básico)!
+
+    <h2>Onde?</h2>
+    Será em Porto Alegre, pelo PP (Partido Progressista).
+    <div class="picture"
+         style="float: left;"><img itemprop="image" src="/articles/pre-candidatura-a-vereador/pp-partido-progressista.png" alt="PP - Partido Progressista" /></div>
+    Escolhi este partido pois minhas convicções não são tão para o lado socialista ou comunista, e de forma alguma eu queria escolher um partido ligado ao PT. Além disso, também não queria que tivesse raízes religiosas.
+    O PP é um partido em crescimento, e acredito que não tenha sido tão exposto ainda aos níveis mais altos de <em>radiação corrupta</em>, por isso ainda não pegou este verdadeiro cancer!
+    Além disso, é intensão do partido levar maior conhecimento político, e tecnológico às pessoas, e vocês sabem que disseminar conhecimento, é comigo mesmo! :)
+
+    Sim, alguns podem questionar o partido por conta de alguns incidentes aqui e ali...verdade, mas todos os partidos tem isto!
+    Pessoalmente, não vou me corromper ou me dengrir por causa disto. O partido é o ônibus que está nos levando a uma direção, se alguns passageiros são sujos, não é o que me afetará!
+    Complicado é quando o ônibus vai para uma rota ruim, ou a maioria dos passageiros (ou o motorista) é que são o problema!
+
+    <h2>Participem!</h2>
+    É a oportunidade para nós ajudarmos a criar o "nosso político"!
+    Eu quero ser alguém que vai realmente representar as comunidades de desenvolvimento, mas também os nerds em geral, os empresários e autônomos da área, etc.
+    Acho que há muitas coisas legais por fazermos!
+    Deixa um comentário aqui, ou tuita pra mim, que eu vou escutar!
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>FWorld: Quem é VOCÊ?</title>
+    <link>http://felipenmoura.com/articles/fworld-quem-eh-voce/</link>
+    
+    <category>
+    <![CDATA[ video ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ fworld ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ ciência ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ curiosidades ]]>
+    </category>
+    
+    <description><![CDATA[
+<strong>FWorld</strong>, meu canal no youtube sobre ciência, tecnologia e curiosidades!<br/><br/>Segundo episódio, tratando um pouco sobre psicologia, filosofia e é claro, trazendo curiosidades!<br/>
+<section lang="pt-BR">
+    <h2>FWorld</h2>
+    <a href="https://goo.gl/fd5rMn" target="blank">FWorld</a> É o canal que criei para falar sobre curiosidades, conhecimentos científicos, filosofia, psicologia, e explorar algumas teorias!
+    Se ficou curioso, aproveita e te inscreve lá: <a href="https://goo.gl/NynWdX">FWorld</a>
+
+    <h2>Quem é você? Quem sou eu?!</h2>
+    Será que nos conhecemos?
+    Conhecemos...a nós mesmos?!
+    O que nos define como "eu"  ou "tu"?
+    Vamos discutir um pouco sobre personalidade, nosso lado psicológico, como funciona nosso cérebro e onde, dentro dele, nós estamos!
+    E é claro, como isto nos conecta à natureza e a história(o princípio) da vida na Terra!
+
+    <blockquote>O eu não é senhor em sua própria casa.<cite>Sigmund Freud (1856-1939)</cite></blockquote>
+    Isto nos levará até curiosidades como "por que soluçamos", ou "por que acordamos chutando", com aquela sensação de que estamos caindo.
+
+    Assista e comente o novo vídeo em <a href="https://youtu.be/PMD8a9Ynks8">https://youtu.be/PMD8a9Ynks8</a>.
+    Ou assista a versão embeded diretamente aqui:
+
+    <div class="picture"
+     style="text-align: center; padding: 10px 0 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/PMD8a9Ynks8" frameborder="0" allowfullscreen></iframe></div>
+
+    Alguns Links:
+
+    Caso de Phineas Gage:
+    https://pt.wikipedia.org/wiki/Phineas_Gage
+
+    Caso de Ahad Israfil
+    https://en.wikipedia.org/wiki/Ahad_Israfil
+
+    Artigo sobre sobreviventes com metade do cérebro
+    http://www.bbc.com/future/story/20141216-can-you-live-with-half-a-brain
+
+    Cerebellar Agenesis
+    https://en.wikipedia.org/wiki/Cerebellar_agenesis
+
+    Stanford Prision Experiment
+    https://en.wikipedia.org/wiki/Stanford_prison_experiment
+
+    Filme Vingador do futuro (total recall)
+    1990: http://www.adorocinema.com/filmes/filme-6079/
+    2012: http://www.adorocinema.com/filmes/filme-144148/
+
+    Filme Dark City
+    http://www.adorocinema.com/filmes/filme-7165/
+
+    Programa de TV Brain Games
+    http://www.imdb.com/title/tt2078690/
+
+    Imagens: Wikipedia e free stocks
+
+    Songs: Youtube Audio Library
+    Prelude No. 14 by Chris Zabriskie is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/)
+    Source: http://chriszabriskie.com/preludes/
+    Artist: http://chriszabriskie.com/
+
+    <h2>Feedback</h2>É claro que todo o feedback é muito bem vindo, me ajudem a produzir vídeos cada vez melhor!
+
+    Se encontrou algum problema, pode me enviar pelo twitter, e-mail ou deixe um comentário no vídeo ou neste artigo!
+    Se curtiu, e quer me incentivar a continuar produzindo conteúdos do tipo, não deixe de curtir o vídeo, assim eu vou saber, em números, se está dando resultado todo este trabalho!
+
+    E caso queira ver os próximos assim que saírem, aproveita e te inscrever no canal :)
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>O editor que escolhi</title>
+    <link>http://felipenmoura.com/articles/my-editor/</link>
+    
+    <category>
+    <![CDATA[ editors ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ IDE ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ JavaScript ]]>
+    </category>
+    
+    <description><![CDATA[
+Algumas pessoas me perguntam sobre o editor que uso, se o aconselho, quais plugins utilizo, etc.<br/>Resolvi escrever este artigo para falar a respeito.<br/>
+<section>Na minha opinião, o editor é apenas uma ferramenta, assim como um teclado de computador.
+    Dito isto...quero lembrar que para comprar meu último teclado, passei quase uma hora na loja, tirando todos os teclados disponíveis de suas caixas e digitando alguma coisa neles, até encontrar "o teclado perfeito".
+
+    Não é errado procurar a melhor ferramenta, nem é pecado adotar uma para a maior parte do seu trabalho, mas cuidado para não ficar "bitolado" em usar penas uma ferramenta.
+    Esta dica é válida para frameworks, bibliotecas...etc.
+
+    Eu sou um "viciado em abas". Quem me conhece sabe que estou sempre com mais de 60 abas abertas no(s) meu(s) navegador(es). Eventualmente, duas janelas, cada um com diversas abas.
+
+    Evidentemente, não seria diferente com código!
+    Acabo utilizando mais de um editores ao mesmo tempo, para não misturar as abas de projetos diferentes, por exemplo.
+
+    <h2>Teste</h2>
+    Eu aconselho a testar as ferramentas e identificar as que melhor te atendem a demanda, para a maior parte do tempo.
+    Felizmente, com ferramentas como <em>editorconfig</em>, o editor hoje em dia não influencia mais tanto, no resultado final do teu código, o que nos dá muito mais liberdade.
+
+    Para testar realmente uma ferramenta, acho que precisamos de pelo menos duas semanas de uso. Assim, teremos passado por diversas situações que a ferramenta...ou nos impediu/atrapalhou, ou ajudou a resolver.
+
+    Antes de escolher meu editor favorito, testei diversos. Da uma olhada na lista e quem sabe o teu futuro editor do coração não está ali?
+    <ul><li>Atom</li><li>Visual Studio Code</li><li>Brackets</li><li>VI(M)</li><li>Notepad++(só para Windows)</li><li>Edit Plus(só para Windows</li><li>Coda (só para MAC)</li><li>Sublime Text</li><li>TextMate (só para MAC)</li></ul>
+    <h2>Minha escolha</h2>
+    Devo dizer que acabei optando pelo Brackets, e pelo Atom, como minhas duas escolhas!
+    O Brackets é meu editor primário, e caso tenha que abrir algum outro projeto, posso optar por abrir outra janela dele, ou usar o Atom(assim, fica bem claro qual projeto estou trabalhando naquele momento).
+
+    Algumas das coisas que me baseei foram:
+    <ul style="list-style: initial;"><li>Open source: Precisa ser open source, pra garantir privacidade, segurança e rapidez na correção de bugs e falhas de segurança.</li><li>Themes: Precisa ter boas escolhas de tema.</li><li>Linguagens: Precisa ter um bom suporte a linguagens, e inclusive suportar algumas outras syntaxes como stylus, sass ou less, e compreender a syntaxe do ES6/ES2015</li><li>Plugins: Deve ter mais que um bom suporte a plugins, mas também uma ampla variedade deles disponíveis para download...ah, e devem ser fáceis de instalar e avaliar.</li><li>Edição múltipla: Permitir múltiplos cursores e painéis</li></ul>
+    Dentre os motivos que destaco para o Brackets, estão o <em>quick edit</em>.
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-quick-edit.gif" alt=""/></div>
+
+    Ele tem uma ferramenta própria para live-reloading também (ele mesmo inicia um server pra ti), que funciona muito bem, e claro, pode-se editar várias partes do código ao mesmo tempo:
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-multiple-editor.gif" alt="" /></div>
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-multiple-editor-2.gif" alt="" /></div>
+
+    Ele também auto-completa urls diretamente no código:
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-url-auto-completition.png" alt="" /></div>
+
+    Trabalhar com cores no Brackets é um docinho, tanto no CSS quanto no HTML:
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-color-1.png" alt="" /></div>
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-color-2.png" alt="" /></div>
+
+    O supporte e a personalização para snippets é enorme:
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-snippets.gif" alt="" /></div>
+
+    A Adobe (mantenedora do Brackets) trata como a "cereja do bolo", a capacidade do Brackets de lidar com as layers diretamente de arquivos <strong>.psd</strong>.
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-psd-layers.png" alt="" /></div>
+
+    Além disto, é muito fácil de instalar plugins nele, basta pesquisar uma temática, como "todo", ou "terminal", e escolher um da lista.
+    <div class="picture" style="max-width: 600px; margin: auto;"><img itemprop="image" style="width: 100%; margin: 0; margin-bottom: -9px;" src="/articles/my-editor/brackets-plugins.png" alt="" /></div>
+
+    <h2>Plugins</h2>
+    Dentre os plugins que utilizo, atualmente os mais relevantes são:
+    <ul style="list-style: initial;"><li>TODOs: Ele busca por comentários dipo <em>// todo:</em> e lista todos como uma lista de "a fazer".</li><li>Terminal: Permite executar comandos do terminal (inclusive watch) diretamente no editor</li><li>Linters e Hinters: Vão ajudando em tempo real</li><li>Git: Marcam as linhas como novas, alteradas ou deletadas. Há também um plugin para analisar o Diff.</li><li>Tabs: por padrão, o Brackets não tem abas, apenas a lista do projeto na lateral</li><li>Outline: Analista e exibe a árvore do código (funções, classes, tags...)</li><li>Emmet e snippets: Digitar menos coisas repetitivas</li></ul>
+    <h2>Concluindo</h2>
+    Para finalizar...sim, o editor é de tua inteira escolha, só quis descrever aqui algumas das motivações que tive, para adotar o Brackets como meu editor primário.
+
+    E aí, qual o teu editor preferido? Coloca nos comentários e avisa a gente quais os motivos :)
+
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Google I/O 2016</title>
+    <link>http://felipenmoura.com/articles/google-io-2016/</link>
+    
+    <category>
+    <![CDATA[ events ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ conference ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ google ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ I/O ]]>
+    </category>
+    
+    <description><![CDATA[
+Este ano tive o prazer de me tornar um Google Expert, e fui participar do <strong>Google I/O</strong>, um encontro anual promovido pelo Google para divulgar algumas de suas novidades, e aproveitar para unir uma quantidade enorme de <s>nerds</s>gente da tecnologia!<br/>
+<section>
+    <h2>Google I/O 2016</h2>
+    Achei o evento fantástico e com uma estrutura impressionante! Mas a organização do evento certamente tem algumas pequenas coisas para ajustar.
+O evento começou com um keynote no palco principal, e seguiu com diversas palestras segmentadas.
+Todas as palestras estão online agora! Assista aos vídeos delas no site do Google IO 2016.
+
+Vou fazer um resumo aqui do que foi mostrado, comentado ou anunciado nos três dias de evento.
+
+<h3>Firebase</h3>
+Normalmente não colocaria o Firebase aqui, mas a Google está, realmente, dando bastante ênfase no Firebase!
+Não acredita? Foi anunciado a liberação para envio de mensagens (post notifications) ilimitadas, gratuitas! Assim como uso de custom-domains (acredito que a intenção seja pegar uma fatia do mercado do Github, neste quesito), havia uma tenda só para quem quisesse tirar dúvidas com o Firebase, aconteceram diversas palestras sobre o tema e ainda deram $500,00 em serviços no Firebase pra todos lá!<br/>
+Parece que o Google está mesmo, interessado em fazer valer esta sua aquisição!
+
+<h3>VR (Realidade Virtual ou Realidade Aumentada)</h3>
+Alguns anúncios e projetos muito interessantes!
+Entre elas, o <em>Daydream</em>, uma plataforma mobile para a realidade virtual!
+Desta forma, empresas conseguirão desenvolver games ou interações e simulações seguindo alguns certos padrões.
+Além disto, empresas que produzem materiais(hardware) para realidades virtuais, como óculos ou controllers por exemplo, teriam também um padrão pra seguir!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/UGlcsJOt-ng?list=PLOU2XLYxmsILe6_eGvDN3GyiodoV3qNSC" frameborder="0" allowfullscreen></iframe>
+Outra novidade no mundo da Realidade virtual, ou mais para o lado da Realidade Aumentada, é o <strong>Project Tango</strong>. Um projeto muito massa, que testei lá e que realmente, é impressionante, preciso e muito rápido!
+Me lembrou um pouco o que promete fazer o HoloLens da Microsoft.
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/5ZKhxmqhpmM" frameborder="0" allowfullscreen></iframe>
+Além disto, o Youtube já anunciou suporte à plataforma de VR (a própria DayDream) e suporte a live streaming em 360!
+
+<h3>Machine Learning (Inteligência Artificial)</h3>
+
+Google anunciou grandes novidades na área de Machine Learning, com exemplos bastante impressionantes!
+Percebi que há um grande foco na contextualização! Saber exatamente qual o contexto em que o usuário se encontra, local, data, com quem, fazendo o que, etc...
+
+A compreensão de imagens também está ótima! O algoritmo deles consegue até mesmo identificar a raça de um cachorro, em uma foto!
+
+<h3>Home (casa inteligente) e Assistent</h3>
+O Google Home é um projeto bem massa também!
+Não é tão <em>novidade</em> assim, mas tem muito potencial!
+A grande vantagem, é que ele conta com a internet e todo o conhecimento do Google para buscar respostas e também, com uma API que permitirá conecta-lo a outras coisas, como lâmpadas, geladeiras e TVs que sejam smart!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/5bYSX2C4aWc" frameborder="0" allowfullscreen></iframe>
+Google Assistent é uma combinação de machine learning com seu contexto, compreendendo áudio e frases mais complexas, muito melhor.
+
+<div class="picture" style="text-align: center;"><img itemprop="image" src="/articles/google-io-2016/google-home-product.jpg" alt="Product Google Home" /></div>
+
+<h3>Android</h3>
+Já para o Android, estão prestes a lançar uma nova versão e querem que os desenvolvedores sugiram o novo nome!
+Há o lançamento da versão Developer Preview 2.0 do Android Wear e também a versão 2.2 do Android Studio.
+
+Mas o que realmente achei interessante (e se funcionar, promissor) são as tais <em>Android Instant Apps</em>!
+Eles mostraram alguns exemplos e pareceu "interessante" a abordagem.
+Achei meio polêmico por que vai meio de encontro com a evolução da web e das <em>Progressive Web Apps</em>...veremos onde isto vai dar!
+
+<h3>Allo e Duo</h3>
+Dois novos projetos lançados.
+<em>Allo</em> é basicamente um novo "chat", mas bem mais poderoso.
+Ele tenta tratar a forma como expressamos sentimentos ao escrever, lida melhor com imagens, com suporte offline e integra uma cacetada de coisas legais com a plataforma de machine learning do google! Isto quer dizer que eles oferecem dicas enquanto tu está escrevendo, relacionadas ao teu contexto atual.
+Aqui vai um exemplo onde ao planejar um jantar fora em um chat, Google já exibe uma lista de possibilidades, diretamente no chat (alguém lembrou do Wave, aqui?)
+<div class="picture" style="text-align: center;"><img itemprop="image" src="https://3.bp.blogspot.com/-ROYrLax6ggg/Vzx3fKq_mjI/AAAAAAAASUo/M5hptuwxzqYuhcyB1jcYcbwSA0nHiiN0wCLcB/s1600/3-Gbot_animation_v4-GIF_abbrev%2B%25281%2529.gif" alt="Google Allo" /></div>
+
+Já o <em>Duo</em> é uma app para conversas por vídeo.
+Mas entre suas principais diferenças, esta o fato de você ter um preview da camera da pessoa que está te ligando, antes de atender. Novamente, contextualização.
+Admito que ainda não decidi se gostei ou não desta feature :p
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/CIeMysX76pM" frameborder="0" allowfullscreen></iframe>
+<h3>Web Development</h3>
+Ah, finalmente o que mais interessa!
+Achei que o Google I/O poderia ter tido mais apresentações ou foco no desenvolvimento (o foco pareceu realmente ser o Firebase!).
+
+O foco total, no desenvolvimento web, é sem dúvida o <em>Mobile First</em> e <em>Offline First</em>!
+Muita coisa sobre AMP (Accelerated Mobile Pages) e PWA (Progressive Web Apps).
+Além disto, as atualizações no Devtools são bem legais (já disponíveis no Chrome Canary).
+
+A palestra de Jake Archibald foi, na minha opinião, a melhor do evento dentre as que consegui assistir! Vale lembrar que ele estará na <a href="https://braziljs.com.br/conf" target="blank">BrazilJS 2016</a> e ele comentou comigo que está bem empolgado!
+
+<h3>Extras</h3>
+Foi um evento ótimo e a experiência de estar aqui(lá) foi maravilhosa!
+Aconteceram outras coisas incríveis no evento, entre elas a abertura que contou com dois músicos "tocando o auditório"! Ou mais ou menos isto! Eles usaram cordas amarradas à tenda principal do palco como instrumento musical!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/b2Y1GXQk0-I" frameborder="0" allowfullscreen></iframe>
+Além disso, aconteceram as festas também!
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/Xneml1S78_8" frameborder="0" allowfullscreen></iframe>
+Quer ver o <strong>keynote do Google I/O 2016 em 360º</strong>?
+<iframe style="margin: auto; display: block;" width="560" height="315" src="https://www.youtube.com/embed/lFm4s50PnmY" frameborder="0" allowfullscreen></iframe>
+
+Tenho muitas fotos postadas e pretendo finalizar vídeos e materiais que preparei sobre meus passeios e visitas ao longo das próximas semanas.
+
+Dê uma olhada nas fotos em meus álbuns no Facebook:
+<a href="https://www.facebook.com/media/set/?set=a.10208503915091438.1073741891.1114477480&type=3" target="blank">Primeiro dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208509128061759.1073741893.1114477480&type=3" target="blank">Segundo dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208516224959177.1073741894.1114477480&type=3" target="blank">Terceiro dia de Google I/O</a>
+<a href="https://www.facebook.com/media/set/?set=a.10208521483410635.1073741895.1114477480&type=3" target="blank">Museu da História do Computador</a>
+
+</section>
+
+]]></description>
+  </item>
+  
+  <item>
+    <title>Palestra: Progressive Web App</title>
+    <link>http://felipenmoura.com/articles/talk-pwa/</link>
+    
+    <category>
+    <![CDATA[ talk ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ progressive web app ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ pwa ]]>
+    </category>
+    
+    <category>
+    <![CDATA[ service worker ]]>
+    </category>
+    
+    <description><![CDATA[
+Minha palestra em português sobre PWAs (Progressive Web Apps) focada em Service Workers, abordando Cache API, IndexedDB, Web Notifications, entre outras tecnologias.<br/>
+<section class="multi-lang" lang="en-US">
+<h2>Palestra: Progressive Web App</h2>
+Tive o prazer de palestrar no Google Lauchpad em São Paulo, lá na sede do Google Brasil.
+O evento foi muito legal, e a estrutura, como sempre, era excelente.
+
+Uma coisa que achei muito legal, foi justamente o público! O pessoal é muito dedicado e interessado, muito engajado! Conversei com muita gente muito legal.
+
+Farei alguns artigos focados em PWAs (Progressive Web App) e pretendo publica-los no portal da <a href="https://braziljs.org/" target="blank">BrazilJS</a>.
+
+Nesta talk, apresentei vários conceitos relacionados à PWAs, incluindo Web Notifications, Push Notifications, Cache API, IndexedDB e, é claro, Service Workers.
+
+Publiquei minha palestra no SpeakerDeck, veja abaixo:
+<a href="https://speakerdeck.com/felipenmoura/pwas-mais-que-apps-progressive-web-apps" target="blank">Speakerdeck</a>.<br/>
+
+
+]]></description>
+  </item>
+  
+</channel>
+
+</rss>

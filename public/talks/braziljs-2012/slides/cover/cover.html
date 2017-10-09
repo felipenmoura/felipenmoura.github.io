@@ -1,0 +1,36 @@
+<!--<iframe class="LANG-EN fulfill" src="slides/cover/en.html"></iframe>
+<iframe class="LANG-PT fulfill" src="slides/cover/pt.html"></iframe>
+<iframe class="LANG-ES fulfill" src="slides/cover/pt.html"></iframe>-->
+
+<iframe id="cover-iframe" class="fulfill" src=""></iframe>
+
+<div class="fulfill"></div>
+
+<script>
+    
+    window.loadFirstSlide= function(){
+        
+        var l= PPW.language;
+        l= l == 'PT'? 'PT': l == 'ES'? 'es': 'EN';
+        
+        document.getElementById('cover-iframe').src= 'slides/cover/iframe.html?'+l;
+    }
+    
+    PPW.addListener('onlangchange', function(){
+        loadFirstSlide();
+    });
+    
+    PPW.onSlideExit(function(){
+        var el= document.getElementById('cover-iframe');
+        el.src= 'null';
+        el.style.display= 'none';
+    });
+    
+    PPW.onSlideEnter(function(){
+        
+        var el= document.getElementById('cover-iframe');
+        el.style.display= 'block';
+        loadFirstSlide();
+        
+    });
+</script>

@@ -1,0 +1,139 @@
+<h2>ThreeJS</h2>
+
+<canvas id="threejs-libs-demo" ></canvas>
+
+<div id="three-sc">
+    <pre id="three-sh" class="sh_javascript">
+var scene = new THREE.Scene(), width= 500, height= 440;;
+
+var camera = new THREE.PerspectiveCamera( 30, width / height, 1, 1000 );
+camera.position.set(0, 3, 7);
+camera.lookAt( new THREE.Vector3(0,0,0));
+
+var scale = 2.5;
+var geometry = new THREE.CubeGeometry( scale, scale, scale );
+var material = new THREE.MeshPhongMaterial( { color: 0xdddddd } );
+
+var mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh );
+
+var directionalLight = new THREE.DirectionalLight ( 0xffffffff );
+directionalLight.position.set(0, 3, 7);
+scene.add( directionalLight );
+
+var renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true});
+renderer.setSize( width, height );
+
+function animate() {
+  requestAnimationFrame( animate, canvas );
+  mesh.rotation.y += 0.008;
+  renderer.render( scene, camera );
+}
+animate();
+</pre>
+</div>
+<script>
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [1]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', []);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [3, 4, 5]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [1]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [7, 8, 9]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [3, 4, 5]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [11, 12]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [7, 8, 9]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [14, 15, 16]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [11, 12]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [18, 19]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [14, 15, 16]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            PPW.sh.focus('#three-sh', [21, 22, 23, 24, 25, 26]);
+        },
+        undo: function(){
+            PPW.sh.focus('#three-sh', [18, 19]);
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#threejs-libs-demo').fadeIn();
+        },
+        undo: function(){
+            $('#threejs-libs-demo').fadeOut();
+        }
+    });
+    
+    
+    var scene = new THREE.Scene(),
+        width= 500,
+        height= 440;
+
+    var camera = new THREE.PerspectiveCamera( 30, width / height, 1, 1000 );
+    camera.position.set(0, 3, 7);
+    camera.lookAt( new THREE.Vector3(0,0,0));
+
+    var scale = 2.5;
+    var geometry = new THREE.CubeGeometry( scale, scale, scale );
+    var material = new THREE.MeshPhongMaterial( { color: 0xdddddd } );
+
+    var mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+
+    var directionalLight = new THREE.DirectionalLight ( 0xffffffff );
+    directionalLight.position.set(0, 3, 7);
+    scene.add( directionalLight );
+    
+    var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('threejs-libs-demo'), antialias: true});
+    renderer.setSize( width, height );
+    
+    function animate() {
+    requestAnimationFrame( animate, canvas );
+    mesh.rotation.y += 0.008;
+    renderer.render( scene, camera );
+    }
+    animate();
+    
+    
+</script>

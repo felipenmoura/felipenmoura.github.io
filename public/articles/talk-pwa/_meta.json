@@ -1,0 +1,9 @@
+{
+    "title": "<em>Palestra:</em> Progressive Web App",
+    "creationDate": "Wed, 23 Jul 2016 03:00:31 GMT",
+    "tags": ["talk", "progressive web app", "pwa", "service worker"],
+    "resume": "Minha palestra em português sobre PWAs (Progressive Web Apps) focada em Service Workers, abordando Cache API, IndexedDB, Web Notifications, entre outras tecnologias.",
+    "headerImg": "/articles/talk-pwa/pwa-logo.png",
+    "status": "published",
+    "articleLang": "pt-BR"
+}

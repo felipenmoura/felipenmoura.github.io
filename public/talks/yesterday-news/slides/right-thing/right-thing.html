@@ -1,0 +1,76 @@
+
+<div id="devan-right-thing">
+    <img src="slides/right-thing/einstein.png"
+         class="einstein"/>
+    
+    <div class="righ-thing-content LANG-PT">
+        <div class="tips">
+            <span class="rt-1">Não tenha uma "religião tecnológica"</span><br/>
+            <span class="rt-2">Seja calculista! Não há uma fórmula perfeita!</span><br/>
+            <span class="rt-3">Teste e conheça antes de sair usando</span><br/>
+            <span class="rt-4">Aprenda com erros(seus, e dos outros)</span><br/>
+            <span class="rt-5">Faça, fuce, force</span><br/>
+        </div>
+        <div class="ruby-solution">Mas Rails é a solução para tudo!!!</div>
+    </div>
+    
+    <div class="righ-thing-content LANG-EN">
+        <div class="tips">
+            <span class="rt-1">Try not to have a "technical religion"</span><br/>
+            <span class="rt-2">Be a cold calculist! There ain't no perfect formula!</span><br/>
+            <span class="rt-3">Try/test and get to know things before using them</span><br/>
+            <span class="rt-4">Learn with mistakes(yours, and from others)</span><br/>
+            <span class="rt-5">Do, hack, try...</span><br/>
+        </div>
+        <div class="ruby-solution">But rails is the solution for everything!!!</div>
+    </div>
+    
+</div>
+<script>
+    PPW.addAction({
+        timing: '1000',
+        does: function(){ PPW.animate('.rt-1', 'bounceInRight'); },
+        undo: function(){ PPW.animate('.rt-1', 'bounceOutRight'); }
+    });
+    
+    PPW.addAction({
+        does: function(){ PPW.animate('.rt-2', 'bounceInRight'); },
+        undo: function(){ PPW.animate('.rt-2', 'bounceOutRight'); }
+    });
+    
+    PPW.addAction({
+        does: function(){ PPW.animate('.rt-3', 'bounceInRight'); },
+        undo: function(){ PPW.animate('.rt-3', 'bounceOutRight'); }
+    });
+    
+    PPW.addAction({
+        does: function(){ PPW.animate('.rt-4', 'bounceInRight'); },
+        undo: function(){ PPW.animate('.rt-4', 'bounceOutRight'); }
+    });
+    
+    PPW.addAction({
+        does: function(){ PPW.animate('.rt-5', 'bounceInRight'); },
+        undo: function(){ PPW.animate('.rt-5', 'bounceOutRight'); }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('.righ-thing-content .tips').fadeOut(function(){
+                $('.ruby-solution').fadeIn();
+            });
+        },
+        undo: function(){
+            $('.ruby-solution').fadeOut();
+            $('.righ-thing-content .tips').fadeIn();
+            $('.einstein').attr('src', "slides/right-thing/einstein.png");
+        }
+    });
+    
+    
+    PPW.addAction({
+        timing: 2000,
+        does: function(){
+            $('.einstein').attr('src', "slides/right-thing/einstein-serious.png");
+        }
+    });
+</script>

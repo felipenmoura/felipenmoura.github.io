@@ -1,0 +1,193 @@
+<div class="parallax-set white-content">
+    <div class="close mv-closer"><img src="slides/bg.jpg" style="width: 100%; height: 100%" /></div>
+    
+    <div id="num-tt" class="close mv-closer white-content">
+        
+        <h2 class="LANG-EN">Some BrazilJS Numbers</h2>
+        <h2 class="LANG-PT">Alguns números do BrazilJS</h2>
+        <h2 class="LANG-ES">Algunos numeros de BrazilJS</h2>
+        
+    </div>
+    
+    <!--<div id="num-chart" class="close mv-right"><img src="slides/numbers/chart.png"  style="opacity: 0.2;" /></div>-->
+</div>
+
+<div id="num-content" style="z-index: 999;">
+    <div>
+        <ul class="left">
+            <li>
+                <span class="LANG-EN">Audience of <strong>932</strong> attendees</span>
+                <span class="LANG-PT">Plateia de <strong>932</strong> participantes</span>
+                <span class="LANG-ES">Plateia de <strong>932</strong> personas</span>
+            </li>
+            <li>
+                <span class="LANG-EN">About <strong>70 Thousand</strong> live stream viewers</span>
+                <span class="LANG-PT">Cerca de <strong>70 MIL</strong> visualizações ao vivo pela internet</span>
+                <span class="LANG-ES">Cierca de <strong>70 MIL</strong> visualizaciones en vivo via internet</span>
+            </li>
+            <li>
+                <span class="LANG-EN">More than <strong>4900</strong> mentions in two days on Twitter</span>
+                <span class="LANG-PT">Mais de<strong>4900</strong> mensões em dois dias no Twitter</span>
+                <span class="LANG-ES">Más de <strong>4900</strong> mensiones en dos dias en Twitter</span>
+            </li>
+            <li>
+                <span class="LANG-EN">Positive mentions: <strong>91.72%</strong></span>
+                <span class="LANG-PT">Mensões positivas: <strong>91.72%</strong></span>
+                <span class="LANG-ES">Mensiones positivas: <strong>91.72%</strong></span>
+            </li>
+            <li>
+                <span class="LANG-EN">About <strong>8 Thousand</strong> video views on Youtube</span>
+                <span class="LANG-PT">Cerca de <strong>8 MIL</strong> visualizações de vídeos no Youtube</span>
+                <span class="LANG-ES">Cierca de <strong>8 MIL</strong> visualizaciones de videos en Youtube</span>
+            </li>
+        </ul>
+        
+        <ul class="right">
+            <li>
+                <span class="LANG-EN">Almost <strong>2 Thousand</strong> likes in two days</span>
+                <span class="LANG-PT">Quase <strong>2 MIL</strong> likes em dois dias</span>
+                <span class="LANG-ES">Cierca de <strong>2 MILES</strong> likes en dos dias</span>
+            </li>
+            
+            <li>
+                <span class="LANG-EN">More than <strong>76 000</strong> page views</span>
+                <span class="LANG-PT">Mais de <strong>76 000</strong> page views</span>
+                <span class="LANG-ES">Más de <strong>76 000</strong> acessos</span>
+            </li>
+            <li>
+                <span class="LANG-EN">Coming from <strong>109</strong> different countries</span>
+                <span class="LANG-PT">Vindos de <strong>109</strong> países diferentes</span>
+                <span class="LANG-ES">Venidos de <strong>109</strong> países diferientes</span>
+            </li>
+            <li>
+                <span class="LANG-EN">Referred by <strong>348</strong> sources</span>
+                <span class="LANG-PT">Referenciado por <strong>348</strong> fontes</span>
+                <span class="LANG-ES">Referenciado por <strong>348</strong> sitios</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    
+    function showNumbersItems(right){
+        
+        var d= 200,
+            it= 200;
+        
+        PPW.lock();
+        
+        if(right){
+            $('#num-content ul.right li').each(function(){
+                
+                d+= it;
+                PPW.animate(this, 'fadeInLeft', {
+                    delay: d
+                });
+            });
+        }else{
+            $('#num-content ul.left li').each(function(){
+                
+                d+= it;
+                PPW.animate(this, 'fadeInRight', {
+                    delay: d
+                });
+            });
+        }
+        
+        setTimeout(function(){
+            PPW.unlock();
+        }, d);
+            
+        return d;
+    }
+    
+    function hideNumbersItems(right){
+        
+        var d= 0,
+            it= 200,
+            el, ret;
+        
+        PPW.lock();
+        
+        if(right){
+            el= $('#num-content ul.right li');
+            d= it * (el.length);
+            ret= d;
+            el.each(function(){
+                
+                d-= it;
+                PPW.animate(this, 'fadeOutLeft', {
+                    delay: d
+                });
+            });
+        }else{
+            el= $('#num-content ul.left li');
+            d= it * (el.length);
+            ret= d;
+            el.each(function(){
+                
+                d-= it;
+                PPW.animate(this, 'fadeOutRight', {
+                    delay: d
+                });
+            });
+        }
+
+        setTimeout(function(){
+            PPW.unlock();
+        }, d);
+        
+        return ret;
+    }
+    
+    PPW.addAction({
+        timing: auto,
+        does: function(){
+            var d= showNumbersItems();
+        },
+        undo: function(){
+            var d= hideNumbersItems();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            hideNumbersItems();
+            showNumbersItems(true);
+        },
+        undo: function(){
+            var d= hideNumbersItems(true);
+            setTimeout(showNumbersItems, d);
+        }
+    });
+    PPW.addAction({
+        does: function(){
+            var d= hideNumbersItems(true);
+            setTimeout(PPW.goNext, d);
+        },
+        undo: function(){
+            showNumbersItems(true);
+        }
+    });
+    
+    PPW.onSlideEnter(function(){
+        if(PPW.getCurrentSlide().actionIdx != 0){
+            PPW.goPrev();
+        }
+    });
+</script>
+<!--
+
+928 participantes
+Aprocimadamente 70 MIL visualizações da transmissão ao vivo
+
+
+mais de 4900 mentions no twitter
+91.72% positivas
+
+POSITIVOS: 77,45%
+NEUTROS: 14,26%
+NEGATIVOS: 8,28%
+
+-->

@@ -1,0 +1,78 @@
+First thing, you need a canvas element, and you need to treat it for <s>those</s> that which can't render the canvas element properly.
+
+<pre lang="html">
+    &lt;body&gt;
+        &lt;canvas id=&quot;theCanvasElement&quot;&gt;
+            whatever you write in here, will be shown ONLY
+            when your canvas cannot be rendered.
+            Of course, it accepts HTML tags
+        &lt;/canvas&gt;
+    &lt;/body&gt;
+</pre>
+
+Ok, now, using event handlers we will treat it in our  javascript
+
+<pre lang="html">
+    &lt;/body&gt;
+    &lt;script&gt;
+          // yes, addEventListener does not work on IE
+          document.addEventListener('load', canvasHandler, false);
+    &lt;script&gt;
+&lt;/html&gt;
+</pre>
+
+Good. When our page is loaded, it will call our method <em>canvasHandler</em>. Let's see how we will open the canvas to use with javascript:
+<pre lang="javascript">
+// let's create some global variables.
+// You can use it better with namespaces
+var canvas= null;
+var ctx= null;
+canvasHandler= function(){
+    // first of all, we simply get the canvas element itself
+    canvas= document.getElementById('theCanvasElement');
+    // now, we need to have the CONTEXT to work with
+    ctx= canvas.getContext('2d');
+}
+</pre>
+
+Great, we have now in our variable <em>canvas</em>, the HTML canvas element itself. While the variable ctx has got its context. The context is what we will use to draw. It has the mothods and properties to allow us to interact with the canvas in 2D.
+No, unfortunately it does not offer any other context besides 2D.
+Our canvas still has no properties. It has no with and height, we can set it then.
+From now on, all the javascript code must be set inside the canvasHandler function's body, under those  lines shown  before.
+<pre lang="javascript">
+    canvas.width= 480;
+    canvas.height= 340;
+</pre>
+
+You probably know how to load an image  from js, right?
+<pre lang="javascript">
+    var img= new Image();
+    img.src= 'url.png';
+</pre>
+Ok, you can use it to insert images inside your canvas. Just like this.
+<pre lang="javascript">
+    // instantiate an image
+    var img= new Image();
+    // we need to use the image when it has finished to load
+    img.addEventListener('load', function(){
+        // after downloading the image, we can draw it into the canvas
+        ctx.drawImage(this);
+        // where this= the image just downloaded
+    });
+    // then, we say the image's url, to it start loading
+    img.src= 'url.png';
+</pre>
+
+Ok, now you can see an image inside your canvas. The drawImage method supports some different structures refered by its parameters:
+<pre lang="javascript">
+    // draws the image in the position left=30, top=30
+    ctx.drawImage(this, 30, 30);
+    // draws the image in the 0/0 position, changing its size
+    ctx.drawImage(this, 0, 0, 45, 75);
+    // more complex, draws the image croping it
+    ctx.drawImage(this, 0, 0, 150, 150, 0, 0, 480, 340);
+</pre>
+
+When cropping, you specify the image (this), the position to start showing it (0, 0), then the size you want to crop it (150, 150). After that, you will tell the canvas the size and position the image really is(0, 0, 480, 340).
+
+Soon, I'll post about how to really draw  into your canvas through javascript, adding lines, points and texts.

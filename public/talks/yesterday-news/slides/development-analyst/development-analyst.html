@@ -1,0 +1,34 @@
+<img class="fulfill" src="slides/development-analyst/decision-making.jpg" />
+<img class="fulfill bigdecision" src="slides/development-analyst/big-decision.jpg" />
+<img class="fulfill snoopy-decision" src="slides/development-analyst/snoopy-decisions.jpg" />
+
+<div class="fulfill">
+    <div class="LANG-EN">
+        <span class="devan-1">So you are a development analyst!<br/><span style="font-size: 0.7em">Think way before you do!</span></span>
+    </div>
+    <div class="LANG-PT">
+        <span class="devan-1">Então você é um Analista de Desenvolvimento!<br/><span style="font-size: 0.7em">Pense muito antes de sair fazendo!</span></span>
+    </div>
+</div>
+
+<script>
+    PPW.addAction({
+        does: function(){
+            $('.devan-1').hide();
+            $('.bigdecision').fadeIn();
+        },
+        undo: function(){
+            $('.devan-1').show();
+            $('.bigdecision').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('.snoopy-decision').fadeIn();
+        },
+        undo: function(){
+            $('.snoopy-decision').fadeOut();
+        }
+    });
+</script>

@@ -1,0 +1,63 @@
+<div class="parallax-set">
+    <div class="far "><img src="slides/speakers/plateia-cima.jpg" alt="" style="width: 100%;"></div>
+    <div id="spk-tt" class="close mv-closer">
+        <h2 class="LANG-EN">Speakers</h2>
+        <h2 class="LANG-PT">Palestrantes</h2>
+        <h2 class="LANG-ES">Palestrantes</h2>
+    </div>
+</div>
+
+<div id="speakers-1">
+    <img src="slides/speakers/speakers-1.png" />
+</div>
+<div id="speakers-2">
+    <img src="slides/speakers/speakers-2.png" />
+</div>
+
+<div id="speakers-3">
+    <img src="slides/speakers/brendan.png" />
+</div>
+
+<script>
+    
+    PPW.addAction({
+        timing: 1000,
+        does: function(){
+            $('#speakers-1').fadeIn();
+        },
+        undo: function(){
+            $('#speakers-1').stop().fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            
+            $('#speakers-1').stop().fadeOut(function(){
+                $('#speakers-2').stop().fadeIn();
+            });
+            
+        },
+        undo: function(){
+            $('#speakers-2').stop().fadeOut(function(){
+                $('#speakers-1').stop().fadeIn();
+            });
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            
+            $('#speakers-2').stop().fadeOut(function(){
+                $('#speakers-3').stop().fadeIn();
+            });
+            
+        },
+        undo: function(){
+            $('#speakers-3').stop().fadeOut(function(){
+                $('#speakers-2').stop().fadeIn();
+            });
+        }
+    });
+    
+</script>

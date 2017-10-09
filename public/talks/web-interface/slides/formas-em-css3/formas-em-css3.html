@@ -1,0 +1,184 @@
+<h2 class="LANG-EN">CSS3 Forms</h2>
+<h2 class="LANG-PT">Formas em CSS3</h2>
+
+<div id="css3-forms">
+    <div id='step2'
+		 class='anim-step2'
+		 style='text-align:center;'>
+		Borda arredondada:<br/><br/>
+		<div class='arredonde-se quadrado'></div>
+		<br/>
+		<pre class="sh_css">
+.bola-quadrada{
+    border-radius: 50%;
+}</pre>
+	</div>
+	<div id='step3'
+		 class='anim-step3'
+		 style='text-align:center;'>
+		Sombra<br/><br/>
+		<div class='quadrado assombrado'></div>
+		<br/><br/>
+		<pre class="sh_css">
+.assombrado{
+    box-shadow: 10px 10px 30px 10px black;
+}</pre>
+	</div>
+	<div id='step4'
+		 class='anim-step4'
+		 style='text-align:center;'>
+		Transpar&ecirc;ncia
+		<div class='transparente quadrado'></div>
+		<br/>
+		<pre class="sh_css">
+.transparente{
+    opacity: 0.5;
+}</pre>
+	</div>
+	<div id='step5'
+		 class='anim-step5'
+		 style='text-align:center;'>
+		Efeitos de transform<br/><br/><br/><br/><br/><br/>
+		<pre class="sh_css">
+-vendor-transform[-efeito]: efeito(propriedades);</pre>
+	</div>
+	<div id='step6'
+		 class='anim-step6'
+		 style='text-align:center;'>
+		Rotate
+		<div class='girado quadrado'></div>
+		<pre class="sh_css">-webkit-transform: rotate(15deg);
+   -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+     -o-transform: rotate(15deg);
+        transform: rotate(15deg);</pre>
+	</div>
+	<div id='step7'
+		 class='anim-step7'
+		 style='text-align:center;'>
+		Deslocar
+		<div class='deslocado quadrado'></div>
+		<pre class="sh_css">-webkit-transform: translate(30px, 30px);
+   -moz-transform: translate(30px, 30px);
+    -ms-transform: translate(30px, 30px);
+     -o-transform: translate(30px, 30px);
+        transform: translate(30px, 30px);</pre>
+	</div>
+	<div id='step8'
+		 class='anim-step8'
+		 style='text-align:center;'>
+		Escala
+		<div class='escalado quadrado'></div>
+		<pre class="sh_css">-webkit-transform: scale(2);
+   -moz-transform: scale(2);
+    -ms-transform: scale(2);
+     -o-transform: scale(2);
+        transform: scale(2);</pre>
+	</div>
+	<div id='step9'
+		 class='anim-step9'
+		 style='text-align:center;'>
+		Distor&ccedil;&atilde;o
+		<div class='distorcido quadrado'></div>
+		<pre class="sh_css">
+-webkit-transform: skew(15deg, 15deg);
+   -moz-transform: skew(15deg, 15deg);
+    -ms-transform: skew(15deg, 15deg);
+     -o-transform: skew(15deg, 15deg);
+        transform: skew(15deg, 15deg);</pre>
+	</div>
+	<div id='step10'
+		 class='anim-step10'
+		 style='text-align:center;'>
+		Sombra do Texto
+		<div class='textShadowed quadrado'>A</div>
+		<pre class="sh_css">
+text-shadow: 10px 10px 30px black;</pre>
+	</div>
+    
+</div>
+
+<script>
+    
+    PPW.addAction({
+        does: function(){
+            $('#step2').fadeIn();
+        },
+        undo: function(){
+            $('#step2').fadeOut();
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step2').fadeOut(function(){$('#step3').fadeIn();});
+        },
+        undo: function(){
+            $('#step3').fadeOut(function(){$('#step2').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step3').fadeOut(function(){$('#step4').fadeIn();});
+        },
+        undo: function(){
+            $('#step4').fadeOut(function(){$('#step3').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step4').fadeOut(function(){$('#step5').fadeIn();});
+        },
+        undo: function(){
+            $('#step5').fadeOut(function(){$('#step4').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step5').fadeOut(function(){$('#step6').fadeIn();});
+        },
+        undo: function(){
+            $('#step6').fadeOut(function(){$('#step5').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step6').fadeOut(function(){$('#step7').fadeIn();});
+        },
+        undo: function(){
+            $('#step7').fadeOut(function(){$('#step6').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step7').fadeOut(function(){$('#step8').fadeIn();});
+        },
+        undo: function(){
+            $('#step8').fadeOut(function(){$('#step7').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step8').fadeOut(function(){$('#step9').fadeIn();});
+        },
+        undo: function(){
+            $('#step9').fadeOut(function(){$('#step8').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#step9').fadeOut(function(){$('#step10').fadeIn();});
+        },
+        undo: function(){
+            $('#step10').fadeOut(function(){$('#step9').fadeIn();});
+        }
+    });
+    
+</script>

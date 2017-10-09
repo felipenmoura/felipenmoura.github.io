@@ -1,0 +1,118 @@
+pre {
+    max-height: 80%;
+    overflow: auto;
+}
+
+pre:not(.no-numbers) .ppw-sh-line:before {
+    height: 100% !important;
+    left: -22px !important;
+    text-align: center;
+    padding: 0 !important;
+}
+
+#slide-cover div.fulfill {
+    height: auto;
+    width: auto;
+    right: 20px;
+    left: auto;
+    top: auto;
+    bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+
+#slide-cover div.fulfill h2,
+#slide-cover div.fulfill a {
+    color: #aaa;
+}
+
+
+strong {
+    color: red;
+    font-size: 1.2rem;
+    text-shadow: 0 0 1px black;
+}
+
+
+    /* about */
+    #about-me ul{
+        position: relative;
+        z-index: 999999;
+        margin-top: 40px;
+        /*text-shadow: 0px 0px 4px white;*/
+        list-style: none;
+    }
+    #about-me li{
+        margin-bottom: 30px;
+    }
+
+
+    #about-me img{
+        position: absolute;
+        bottom: -100px;
+        right: 0px;
+    }
+
+    @media (min-height: 570px) {
+        #about-me img{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+
+    #about-me a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #about-me li:nth-child(3n-2){ margin-left: 40px; }
+    #about-me li:nth-child(3n-1){ margin-left: 80px; }
+    #about-me li:nth-child(3n){ margin-left: 10px; }
+    #about-me li:nth-child(6n){ margin-left: 50px; }
+
+    #about-es div{
+        opacity: 0;
+        background-color: rgba(255, 255, 255, .7);
+    }
+
+    .on-top-of-iframe {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0 0 20px;
+    }
+
+    .on-top-of-iframe:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        width: 140%;
+        height: 0;
+        display: block;
+        box-shadow: 0 0 120px 30px white;
+    }
+
+    .transparent {
+        background-color: rgba(255, 255, 255, .4);
+    }
+
+    .my-contacts {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+
+    .my-contacts a {
+        color: #fff;
+        text-decoration: none;
+        text-shadow: 0 0 5px #000;
+    }
+
+    .fulfill h2 {
+        margin: 20px;
+    }

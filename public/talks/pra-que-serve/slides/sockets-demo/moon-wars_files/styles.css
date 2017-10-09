@@ -1,0 +1,217 @@
+/*========== GENERAL =========================================================*/
+body {
+	font-size: 75%; /* Resets to 12px */
+	font-family: Tahoma, Verdana, Arial;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	background-color:#e2f4cd;
+	width: 100%;
+	font-weight: normal;
+	/*overflow:hidden;*/
+	}
+h1 {
+	font-weight: bold;
+	margin: 15px 0 15px 0px;
+	font-size: 20px;
+	color: #196119;
+	line-height: 24px;
+	}
+h2 {
+	font-weight: bold;
+	font-size: 17px;
+	padding:0px;
+	margin: 15px 0px 10px 0px;
+	font-weight: bold;
+	color: #196119;
+	line-height: 24px;
+	}
+h3 {
+	font-weight: bold;
+	font-size: 15px;
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 5px 0px;
+	color: #196119;
+	}
+h4 {
+	font-weight: bold;
+	margin-bottom:20px;
+	font-size: 14px;
+	padding: 0px 0px 0px 0px;
+	margin: 10px 0px 5px 0px;
+	color: #196119;
+	}
+a{
+	color:#003399;
+	text-decoration: underline;
+}
+a:hover {
+	color: #ff4b33;
+}
+img{
+	border: none;
+}
+table{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, th{
+	vertical-align:top;
+}
+th{
+	text-align:left;
+}
+div, form{
+	border:0px;
+	padding:0px;
+}
+input{
+	/*border:1px solid #777777;*/
+	border:1px solid #393939;
+	}
+hr {
+	background-color: #e7e7e7;
+	border: 0;
+	clear: both;
+	height: 1px;
+	margin-bottom: 18px;
+}
+a img {
+	border: none;
+}
+canvas{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	
+	position: absolute;
+	top     : 0px;
+	left    : 0px;
+	}
+/*========== MAIN ============================================================*/
+#wrapper {
+	margin: 0px auto;
+	width: 930px;
+	padding: 0 0 10px 0;
+	border:1px solid #dddddd;
+	background-color:#ffffff;
+}
+#header{
+	position:absolute;
+	padding:8px 0px 0px 0px;
+	width:900px;
+	top:0px;
+	margin-left:-1px;
+	}
+#header-wide{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:41px;
+	width:100%;
+	background-color:#69a126;
+	}
+#content{
+	margin-top:25px;
+	padding:15px;
+	}
+#menu{
+	background-color:#8fc74c;
+	border-left:1px solid #196119;
+	border-top:1px solid #196119;
+	border-right:1px solid #196119;
+	width:900px;					
+	padding-left:15px;
+	padding-right:15px;
+	}
+#menu_links a{
+	float:left;
+	position:block;
+	text-decoration:none;
+	color:#ffffff;
+	font-size:11px;
+	font-weight:bold;
+	padding:10px 11px 9px 11px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	}
+#menu_links a:hover{
+	background-color:#a5dc64;
+	}
+#chat_write{
+	position:absolute;
+	border:1px solid #777777;
+	border-radius:5px;
+	background-color:#ffffff;
+	padding:4px;
+	top:470px;
+	left:10px;
+	visibility:hidden;
+	}
+#chat_box{
+	position:absolute;
+	border:1px solid #cdd1c7;
+	background-color:#ffffff;
+	padding:5px;
+	left:10px;
+	width:770px;
+	height:125px;
+	display: none;
+	overflow:scroll;
+	overflow-x:hidden;
+	font-size:11px;
+	}
+#chat_box div{
+	margin-bottom:3px;
+	}
+#popup{
+	position:relative;
+	border:1px solid #393939;
+	background-color:#727272;
+	width:400px;
+	margin:0px auto 0px auto;
+	top:150px;
+	display:none;
+	padding:10px;
+	font-size:11px;
+	}
+#popup h2{
+	margin-top:0px;
+	color:#0e340e;
+	}
+#popup .button{
+	margin-right:5px;
+	background-color:#69a126;
+	width:60px;
+	height:25px;
+	}
+/*========== CLASSES =========================================================*/
+.alert{
+	padding:10px;
+	margin-bottom:5px;
+	width:780px;
+	border:1px solid red;
+	display:none;
+	}
+.safari .alert{
+	display:block;
+	}
+.ie6 .alert{
+	display:block;
+	}
+.ie7 .alertt{
+	display:block;
+	}
+.ie8 .alert{
+	display:block;
+	}
+.ie9 .alert{
+	display:block;
+	}

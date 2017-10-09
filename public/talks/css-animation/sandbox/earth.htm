@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- saved from url=(0154)https://developer.mozilla.org/media/uploads/demos/f/e/felipenmoura/4a241f14aa21911cd6494aeac19bf036/css3-up-and-running_1310446730_demo_package/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CSS3 up and running...really UP</title>
+        
+        <style type="text/css">
+            
+            @-moz-keyframes seasons
+            {
+                from{
+                    -moz-transform: rotate(6deg);
+                }
+                to{
+                    -moz-transform: rotate(16deg);
+                }
+            }
+            @-webkit-keyframes seasons
+            {
+                from{
+                    -webkit-transform: rotate(0deg);
+                }
+                to{
+                    -webkit-transform: rotate(14deg);
+                }
+            }
+            
+            @-moz-keyframes dayByDay
+            {
+                from{
+                    background-position: -1600px;
+                }
+                to{
+                    background-position: 0px;
+                }
+            }
+            @-webkit-keyframes dayByDay
+            {
+                from{
+                    background-position: -1600px;
+                }
+                to{
+                    background-position: 0px;
+                }
+            }
+            
+            html
+            {
+                overflow: hidden;
+            }
+            
+            BODY
+            {
+                overflow: hidden;
+                margin:0px;
+                background-color:#000;
+                background-image:url(images/universe.png);
+                background-position: 0px;
+                background-repeat: repeat;
+                background-size: cover;
+                -moz-animation: dayByDay 360s linear 0s infinite;
+                -webkit-animation: dayByDay 360s linear 0s infinite;
+            }
+            
+            #globe
+            {
+                -moz-animation: dayByDay 24s linear 0s infinite, seasons 2688s linear alternate 0s infinite;
+                -webkit-animation: dayByDay 24s linear 0s infinite, seasons 2688s linear alternate 0s infinite;
+                background-image: url(images/globe-hearth.jpg);
+                background-repeat: repeat-x;
+                border: solid 1px #000;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width: 600px;
+                height: 600px;
+                margin-left: -300px;
+                margin-top: -300px;
+                border-radius: 50%;
+                z-index:0;
+                box-shadow: inset 2px 2px 10px #000, inset -140px -70px 100px #000;
+            }
+            
+            #atmosphere
+            {
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width: 600px;
+                height: 600px;
+                margin-left: -300px;
+                margin-top: -300px;
+                border-radius: 50%;
+                opacity: 0.7;
+                box-shadow: -6px -6px 20px #eef;
+            }
+            
+            #sun
+            {
+                background-image: url(images/sun.png);
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width: 50px;
+                height: 47px;
+                margin-left: -320px;
+                margin-top: -110px;
+            }
+            
+            @-moz-keyframes moon
+            {
+                0%{
+                    width: 30px;
+                    height: 31px;
+                    margin-left: -310px;
+                    margin-top: -40px;
+                    z-index:-1;
+                }
+                10%{
+                    margin-left: -450px;
+                    margin-top: -50px;
+                    width: 60px;
+                    height: 61px;
+                    z-index:1;
+                }
+                20%{
+                    margin-left: -500px;
+                    margin-top: -50px;
+                    width: 80px;
+                    height: 81px;
+                    z-index:1;
+                }
+                30%{
+                    margin-left: -450px;
+                    margin-top: -50px;
+                    width: 90px;
+                    height: 92px;
+                    z-index:1;
+                }
+                50%{
+                    margin-left: 0px;
+                    margin-top: -50px;
+                    width: 120px;
+                    height: 122px;
+                    z-index:1;
+                }
+                60%{
+                    margin-left: 300px;
+                    margin-top: -50px;
+                    width: 120px;
+                    height: 122px;
+                    z-index:1;
+                }
+                60%{
+                    margin-left: 410px;
+                    margin-top: -50px;
+                    width: 90px;
+                    height: 92px;
+                    z-index:1;
+                    box-shadow: inset 0px 0px 80px #000;
+                }
+                70%{
+                    margin-left: 460px;
+                    margin-top: -50px;
+                    width: 80px;
+                    height: 82px;
+                    z-index:1;
+                    box-shadow: inset 0px 0px 80px #000;
+                }
+                80%{
+                    margin-left: 420px;
+                    margin-top: -50px;
+                    width: 60px;
+                    height: 61px;
+                    z-index:-1;
+                    box-shadow: inset 0px 0px 80px #000;
+                }
+                90%{
+                    margin-left: 0px;
+                    margin-top: -50px;
+                    width: 30px;
+                    height: 31px;
+                    z-index:-1;
+                }
+                100%{
+                    width: 30px;
+                    height: 31px;
+                    margin-left: -310px;
+                    margin-top: -40px;
+                    z-index:-1;
+                }
+            }
+            
+            @-webkit-keyframes moon
+            {
+                0%{
+                    width: 30px;
+                    height: 31px;
+                    margin-left: -310px;
+                    margin-top: -40px;
+                    z-index:-1;
+                }
+                10%{
+                    margin-left: -450px;
+                    margin-top: -50px;
+                    width: 60px;
+                    height: 61px;
+                    z-index:-1;
+                }
+                20%{
+                    margin-left: -500px;
+                    margin-top: -50px;
+                    width: 80px;
+                    height: 81px;
+                    z-index:1;
+                }
+                30%{
+                    margin-left: -450px;
+                    margin-top: -50px;
+                    width: 90px;
+                    height: 92px;
+                    z-index:1;
+                }
+                50%{
+                    margin-left: 0px;
+                    margin-top: -50px;
+                    width: 120px;
+                    height: 122px;
+                    z-index:1;
+                }
+                60%{
+                    margin-left: 300px;
+                    margin-top: -50px;
+                    width: 120px;
+                    height: 122px;
+                    z-index:1;
+                }
+                60%{
+                    margin-left: 410px;
+                    margin-top: -50px;
+                    width: 90px;
+                    height: 92px;
+                    z-index:1;
+                }
+                70%{
+                    margin-left: 460px;
+                    margin-top: -50px;
+                    width: 80px;
+                    height: 82px;
+                    z-index:1;
+                    box-shadow: inset 0px 0px 80px #000;
+                }
+                80%{
+                    margin-left: 420px;
+                    margin-top: -50px;
+                    width: 60px;
+                    height: 61px;
+                    z-index:-1;
+                    box-shadow: inset 0px 0px 80px #000;
+                }
+                90%{
+                    margin-left: 0px;
+                    margin-top: -50px;
+                    width: 30px;
+                    height: 31px;
+                    z-index:-1;
+                }
+                100%{
+                    width: 30px;
+                    height: 31px;
+                    margin-left: -310px;
+                    margin-top: -40px;
+                    z-index:-1;
+                }
+            }
+            
+            #moon
+            {
+                background-image: url(images/moon.png);
+                background-size: cover;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                width: 60px;
+                height: 61px;
+                border-radius: 50%;
+                margin-left: -390px;
+                margin-top: -40px;
+                z-index:-1;
+                -moz-animation: moon 64s linear 0s infinite;
+                -webkit-animation: moon 64s linear 0s infinite;
+            }
+            
+            #sunLight1
+            {
+                opacity: 0.3;
+                background-color: rgba(255, 100, 0, 0.2);
+                box-shadow: inset 0px 0px 30px #fa0;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -298px;
+                margin-top: -95px;
+                z-index:2;
+            }
+            
+            #sunLight2
+            {
+                opacity: 0.3;
+                background-color: rgba(255, 255, 0, 0.2);
+                box-shadow: inset 0px 0px 30px #ff0;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -290px;
+                margin-top: -90px;
+                z-index:2;
+            }
+            
+            #sunLight3
+            {
+                opacity: 0.3;
+                background-color: rgba(255, 255, 255, 0.2);
+                box-shadow: inset 0px 0px 30px #ffa;
+                border: solid 1px #ffa;
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -270px;
+                margin-top: -110px;
+                z-index:2;
+            }
+            
+            #sunLight4
+            {
+                opacity: 0.1;
+                background-color: rgba(255, 100, 0, 0.2);
+                box-shadow: inset 0px 0px 30px #fa0;
+                border: solid 1px #fa0;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -80px;
+                margin-top: 50px;
+                z-index:2;
+            }
+            
+            #sunLight5
+            {
+                opacity: 0.2;
+                background-color: rgba(255, 255, 255, 0.2);
+                box-shadow: inset 0px 0px 30px #fff;
+                border: solid 1px #fff;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -380px;
+                margin-top: -110px;
+                z-index:2;
+            }
+            
+            #sunLight6
+            {
+                opacity: 0.3;
+                background-color: rgba(255, 200, 200, 0.2);
+                box-shadow: inset 0px 0px 30px #fcc;
+                border: solid 1px #fff;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -400px;
+                margin-top: -85px;
+                z-index:2;
+            }
+            
+            .message
+            {
+                position:absolute;
+                left:0px;
+                top:0px;
+                width: 100%;
+                background-color: #444;
+                color: white;
+                padding: 3px;
+                font-family: Tahoma, Helvetica, Arial;
+                box-shadow: 0px 0px 20px #aaf;
+            }
+            
+            a, a:active, a:visited, a:link
+            {
+                color: white;
+                text-decoration: underline;
+            }
+            a:hover
+            {
+                color: #aaf;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="message">
+            <div style="float: left;">
+                This demo uses ONLY HTML and CSS3.
+            </div>
+            <div style="float:right; 
+                        padding-right: 8px;">
+                Developed by <a href="http://twitter.com/felipenmoura" target="_quot">Felipe Nascimento de Moura</a>
+            </div>
+        </div>
+        <div id="sun">
+        </div>
+        <div id="atmosphere">
+        </div>
+        <div id="globe">
+        </div>
+        <div id="moon">
+        </div>
+        <div id="sunLight1">
+        </div>
+        <div id="sunLight2">
+        </div>
+        <div id="sunLight3">
+        </div>
+        <div id="sunLight4">
+        </div>
+        <div id="sunLight5">
+        </div>
+        <div id="sunLight6">
+        </div>
+    
+
+</body></html>

@@ -1,0 +1,36 @@
+<h1>
+	Interface
+</h1>
+<div class='content'>
+	<div style='text-align: center;'>
+		<img id="m1" src='slides/interface-1/macaneta1.png' style='margin-top: 50px;'>
+		<img id="m2" src='slides/interface-1/macaneta2.png' style='margin-top: 50px; display: none;'>
+		<img id="m3" src='slides/interface-1/macaneta3.png' style='margin-top: 50px; display: none;'>
+	</div>
+</div>
+<script>
+	PPW.addAction({
+            does: function(){
+		$('#m1').fadeOut(function(){
+                    $('#m2').fadeIn();
+		})
+            },
+            undo: function(){
+		$('#m2').fadeOut(function(){
+                    $('#m1').fadeIn();
+		})
+            }
+        });
+	PPW.addAction({
+            does: function(){
+		$('#m2').fadeOut(function(){
+                    $('#m3').fadeIn();
+		})
+            },
+            undo: function(){
+		$('#m3').fadeOut(function(){
+                    $('#m2').fadeIn();
+		})
+            }
+        });
+</script>

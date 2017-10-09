@@ -1,0 +1,61 @@
+<h1>
+	ARIAS...
+</h1>
+<div class='content' style='width: 100%; margin-left:0px; padding-top: 50px;'>
+	<div id='step1'
+		 style='text-align: center;
+				margin-top: 30px'
+		 class='animate'>
+		<p style='-webkit-transform: rotate(-4deg);
+				  -moz-transform: rotate(-4deg);
+				  -ms-transform: rotate(-4deg);
+				  -o-transform: rotate(-4deg);
+				  transform: rotate(-4deg);'>
+			ARIAs oferecem um sentido <em>sem&acirc;ntico</em> aos leitores de tela
+		<p style='-webkit-transform: rotate(2deg);
+				  -moz-transform: rotate(2deg);
+				  -ms-transform: rotate(2deg);
+				  -o-transform: rotate(2deg);
+				  transform: rotate(2deg);
+				  padding-top: 20px;'>
+			Mas voc&ecirc; ainda far&aacute; uso de <em>Javascript</em> e <em>tabindex</em>
+		<p style='-webkit-transform: rotate(5deg);
+				  -moz-transform: rotate(5deg);
+				  -ms-transform: rotate(5deg);
+				  -o-transform: rotate(5deg);
+				  transform: rotate(5deg);
+				  padding-top: 10px;'>
+			Use <em>ARIA roles</em> para dar um comportamento padr&atilde;o a um elemento gen&eacute;rico
+	</div>
+        <div id='step2' style="display: none; width: 400px;margin: auto;">
+            <strong>Roles: </strong><br/>
+            Fazem um elemento representar outro elemento e se apresentar como ele ao leitor de tela.
+        </div>
+	<div id='step3'
+		 style='text-align: center;
+				margin-top: -30px;
+				display: none;'>
+		<div class='decoratedButton'
+			 tabindex='0'
+			 style='width: 130px; margin: auto; float: none; position: relative;'
+			 role='button' />Send data</div>
+		<pre style='text-align:left; width: 640px; margin: auto;'>
+&lt;div tabindex='0' role='button'>
+    Send data
+&lt;/div>
+		</pre>
+	</div>
+</div>
+<script>
+	PPW.addAction(function(){
+		$('#step1').fadeOut(function(){
+			$('#step2').fadeIn();
+		});
+	});
+        
+	PPW.addAction(function(){
+		$('#step2').fadeOut(function(){
+			$('#step3').fadeIn();
+		});
+	});
+</script>

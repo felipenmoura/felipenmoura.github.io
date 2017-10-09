@@ -1,0 +1,73 @@
+<div class="made-of">
+    <div class="LANG-EN">
+        <div class="made-of-people">PEOPLE</div>
+        <div class="made-of-devs">Developers</div>
+        <div class="made-of-devs2 fulfill">
+            <img src="slides/made-of/interface.png" />
+        </div>
+        <div id="baddesign-gun" class="fulfill">
+            <img src="slides/made-of/bad-design.jpg"/>
+        </div>
+        <div class="made-of-designers">Designers</div>
+    </div>
+    <div class="LANG-PT">
+        <div class="made-of-people">PESSOAS</div>
+        <div class="made-of-devs">Developers</div>
+        <div class="made-of-devs2 fulfill">
+            <img src="slides/made-of/interface.png" />
+        </div>
+        <div id="baddesign-gun" class="fulfill">
+            <img src="slides/made-of/bad-design.jpg"/>
+        </div>
+        <div class="made-of-designers">Designers</div>
+    </div>
+    
+</div>
+<script>
+    
+    PPW.addAction({
+        timing: 'auto',
+        does: function(){
+            $('.made-of-people').fadeIn();
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('.made-of-people').fadeOut(function(){$('.made-of-devs').fadeIn();});
+        },
+        undo: function(){
+            $('.made-of-devs').fadeOut(function(){$('.made-of-people').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('.made-of-devs').fadeOut(function(){$('.made-of-devs2').fadeIn();});
+        },
+        undo: function(){
+            $('.made-of-devs2').fadeOut(function(){$('.made-of-devs').fadeIn();});
+        }
+    });
+    
+    PPW.addAction({
+        does: function(){
+            $('#baddesign-gun').fadeIn();
+        },
+        undo: function(){
+            $('.made-of-devs2').fadeOut();
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('#baddesign-gun, .made-of-devs2').fadeOut(function(){$('.made-of-designers').fadeIn();});
+        },
+        undo: function(){
+            $('.made-of-designers').fadeOut(function(){$('#baddesign-gun, .made-of-devs2').fadeIn();});
+        }
+    });
+    
+</script>

@@ -1,0 +1,72 @@
+<div class="shoot-in-foot">
+    <h2 class="LANG-EN">Mith busters!</h2>
+    <h2 class="LANG-PT">Caçando mitos!</h2>
+
+    <div class="miths-contents">
+        <div class="LANG-EN">
+            <span class="miths-1">HTML5 == DHTML</span>
+            <span class="miths-2">HTML5 is full of drang'n'drop</span>
+            <span class="miths-3">But I use the HTML5' doctype!</span>
+            <span class="miths-4">HTML5 is good for SEO</span>
+            <span class="miths-5">JavaScript is good for forms!</span>
+        </div>
+
+        <div class="LANG-PT">
+            <span class="miths-1">HTML5 == DHTML</span>
+            <span class="miths-2">HTML5 é cheio de drag'n'drop</span>
+            <span class="miths-3">Mas eu já uso o doctype do HTML5 :)</span>
+            <span class="miths-4">HTML5 é bom para o SEO</span>
+            <span class="miths-5">JavaScript é para validar formulário</span>
+        </div>
+    </div>
+</div>
+<script>
+    PPW.addAction({
+        timing: 'auto',
+        does: function(){
+            $('.miths-1').fadeIn();
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('.miths-1').fadeOut(function(){$('.miths-2').fadeIn();});
+        },
+        undo: function(){
+            $('.miths-2').fadeOut(function(){$('.miths-1').fadeIn();});
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('.miths-2').fadeOut(function(){$('.miths-3').fadeIn();});
+        },
+        undo: function(){
+            $('.miths-3').fadeOut(function(){$('.miths-2').fadeIn();});
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('.miths-3').fadeOut(function(){$('.miths-4').fadeIn();});
+        },
+        undo: function(){
+            $('.miths-4').fadeOut(function(){$('.miths-3').fadeIn();});
+        }
+    });
+    
+    
+    PPW.addAction({
+        does: function(){
+            $('.miths-4').fadeOut(function(){$('.miths-5').fadeIn();});
+        },
+        undo: function(){
+            $('.miths-5').fadeOut(function(){$('.miths-4').fadeIn();});
+        }
+    });
+    
+    
+</script>
