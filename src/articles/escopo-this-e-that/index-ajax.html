@@ -42,7 +42,7 @@
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-5
                     ">
             <h2 itemprop="headline"><a href="/articles/escopo-this-e-that">Escopo, this e that</a></h2>
             <div class="wrapper">
@@ -125,7 +125,7 @@ var instance= new SomeConstructor();
 </code></pre>
 
 Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank" rel="noopener">let</a>.
 Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
 
 <pre class="line-numbers"><code class="language-javascript">

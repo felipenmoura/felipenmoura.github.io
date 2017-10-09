@@ -11,7 +11,7 @@
   <title>Felipe N. de moura Home Page</title>
   <link>http://felipenmoura.com/</link>
   <atom:link href="http://felipenmoura.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon Oct 09 2017 11:25:55 GMT-0300 (-03)</lastBuildDate>
+  <lastBuildDate>Mon Oct 09 2017 11:44:48 GMT-0300 (-03)</lastBuildDate>
   <sy:updatePeriod>daily</sy:updatePeriod>
   <sy:updateFrequency>1</sy:updateFrequency>
     
@@ -234,10 +234,10 @@ Costumo brincar dizendo que no Fisl, vemos o recorde de nerds por metro quadrado
 Este ano, falarei sobre a revolução do desenvolvimento web, suas novas tecnologias e técnicas, além do modo como vemos a web, e também, como os usuários teem visto a web hoje em dia. Falarei sobre HTML5, CSS3, JavaScript2, mercado, entre outros tópicos interessantes. Acredito que todos podemos ter uma boa discussão sobre tais assuntos e os convido a assistir à minha palestra no sábado, as 10 horas da manhã, entitulada "Até onde vai essa teia?", e também, para que possamos conversar durante o evento, pelos corredores da PUC, para falarmos desta fantástica e revolucionária fase que viemos vivendo.
 
 Links do evento: 
-<a href="http://fisl.org.br/" target='_blank'>http://fisl.org.br/</a>
-<a href="http://softwarelivre.org/fisl11/" target='_blank'>http://softwarelivre.org/fisl11/</a>
-<a href="http://fisl.softwarelivre.org/" target='_blank'>http://fisl.softwarelivre.org/</a>
-<a href="http://verdi.softwarelivre.org/" target='_blank'>http://verdi.softwarelivre.org/</a>
+<a href="http://fisl.org.br/" target='_blank' rel='noopener'>http://fisl.org.br/</a>
+<a href="http://softwarelivre.org/fisl11/" target='_blank' rel='noopener'>http://softwarelivre.org/fisl11/</a>
+<a href="http://fisl.softwarelivre.org/" target='_blank' rel='noopener'>http://fisl.softwarelivre.org/</a>
+<a href="http://verdi.softwarelivre.org/" target='_blank' rel='noopener'>http://verdi.softwarelivre.org/</a>
 ]]></description>
   </item>
   
@@ -1212,7 +1212,7 @@ The bars and pubs were really cool too, their beer is strong and the food very s
 The flight from Porto Alegre up to Toronto is tiring, indeed(about 14 hours long) but totally worth it!
 
 It was a pleasure to re-meet with people I haven't seen for a while, meet new people, see "monsters" of technology talking...it was an awesome moment! Thank you Mozilla for such opportunity, and thank you mozillians for being such awesome people! :)
-Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank">album</a>
+Check some photos in my <a title="MozSummit 2013, Toronto - Canada" href="https://www.facebook.com/felipenmoura/media_set?set=a.10201674463599419.1073741833.1114477480&amp;type=3" target="_blank" rel="noopener">album</a>
 ]]></description>
   </item>
   
@@ -1243,7 +1243,7 @@ First of all, let's build the HTML structure:
 &lt;blockquote class="citation-container">
     &lt;div class="citation-content">The quote message.&lt;/div>
     &lt;cite class="citation-author">
-        &lt;a href="link" target="_blank">author&lt;/a>
+        &lt;a href="link" target="_blank" rel="noopener">author&lt;/a>
     &lt;/cite>
 &lt;/blockquote>
 </code></pre>
@@ -1475,7 +1475,7 @@ var instance= new SomeConstructor();
 </code></pre>
 
 Mas note que é uma boa prática(inclusive, validada por linters) utilizar <em>window.globalVariable</em> sempre que se quiser acessar uma variável ou função no escopo mais externo. Desta forma, fica bastante explícito que você está acessando uma variável global, propositalmente.
-Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank">let</a>.
+Não utilizar o termo <em>var</em> faz com que sua nova variável seja definida no escopo global, portanto, não esqueça do mesmo. Leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let e var no JavaScript" target="_blank" rel="noopener">let</a>.
 Outra ótima dica, é SEMPRE utilizar <em>"use strict";</em> no topo de seus arquivos.js, ou em seus escopos
 
 <pre class="line-numbers"><code class="language-javascript">
@@ -1625,7 +1625,7 @@ Este é o método mais tradicionalmente utilizado para fazer isto.
 }
 </code></pre>
 
-O resultado final pode ser visto <a href="http://jsfiddle.net/kxe2thsw/" title="Centralizando verticalmente com margin negativa" target="_blank">aqui</a>.
+O resultado final pode ser visto <a href="http://jsfiddle.net/kxe2thsw/" title="Centralizando verticalmente com margin negativa" target="_blank" rel="noopener">aqui</a>.
 
 <strong>Usando posicionamento</strong>
 
@@ -1656,7 +1656,7 @@ Este é um método pouco conhecido, mas que pode atender bem a demanda caso voc�
 }
 </code></pre>
 
-Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank">aqui</a>.
+Confira funcionando <a href="http://jsfiddle.net/qhbhxusv/6/" title="Centralizando verticalmente apenas com posicionamentos em CSS" target="_blank" rel="noopener">aqui</a>.
 ]]></description>
   </item>
   
@@ -1741,7 +1741,7 @@ var func2= function(){
 
 Muitas vezes vemos pessoas colocando a definição de <em>var</em> dentro de um if, imaginando que ela somente seria criada caso o fluxo entrasse naquela condição, mas não se engane, não é este o caso!
 
-Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank">let</a>.
+Caso já esteja se preparando para o <strong>es6</strong>, leia assim que puder, sobre o <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Let no JavaScript" target="_blank" rel="noopener">let</a>.
 
 Espero que estejamos alinhados com o hoisting, e que isto tenha sido útil!
 
@@ -2108,7 +2108,7 @@ Não deixem de divulgar o post, e dar sua opinião.
     
     <description><![CDATA[
 Há momentos na nossa vida que nós não sabemos o que fazer!<br/>Mas há momentos em que <strong>sabemos</strong> exatamente qual <strong>direção</strong> devemos seguir!<br/>
-Há algum tempo que tanto <a href="http://twitter.com/jaydson" target="_blank">Jaydson Gomes</a> quanto eu vínhamos sentindo "um chamado" para focar no mercado!
+Há algum tempo que tanto <a href="http://twitter.com/jaydson" target="_blank" rel="noopener">Jaydson Gomes</a> quanto eu vínhamos sentindo "um chamado" para focar no mercado!
 Nós já vínhamos discutindo isto há algum tempo, e era algo inevitável!
 
 Quem me conhece sabe que estou sempre "mirando alto", almejando o maior objetivo possível, e gosto de fazer isto focando bastante em ajudar os outros, a comunidade, inventar coisas novas, e por que não, me divertir!

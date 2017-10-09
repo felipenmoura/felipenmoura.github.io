@@ -276,7 +276,7 @@ module.exports = function(grunt) {
                     metaData.content = metaData.content.replace(/\<pre lang\=["']([0-9a-z_\-]+)["']\>/ig, '<pre class="line-numbers"><code class="language-$1">');
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.content = metaData.content.replace(/\<img s/ig, '<img itemprop="image" s');
-                    metaData.content = metaData.content.replace(/target=(\"\')_blank(\"\')/ig, 'target=$1_blank$1 rel=$1noopener$1')
+                    metaData.content = metaData.content.replace(/target\=([\"\'])_blank([\"\'])/ig, 'target=$1_blank$1 rel=$1noopener$1')
 
                     //metaData.content = metaData.content.replace(/\<(h[2-6]) /i, '<$1  itemprop="alternativeHeadline" ');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
