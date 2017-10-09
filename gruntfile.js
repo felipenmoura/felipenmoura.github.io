@@ -56,7 +56,7 @@ module.exports = function(grunt) {
     }
 
     function applyURL(val){
-        return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\">$1</a>")
+        return val.replace(/(https?:\/\/[^ \n\!\?\<]+)/ig, "<a href=\"$1\" target=\"_blank\" rel=\"noopener\">$1</a>")
     }
 
     require('./src/scripts/create.js')(grunt);
