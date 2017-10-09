@@ -276,6 +276,8 @@ module.exports = function(grunt) {
                     metaData.content = metaData.content.replace(/\<pre lang\=["']([0-9a-z_\-]+)["']\>/ig, '<pre class="line-numbers"><code class="language-$1">');
                     metaData.content = metaData.content.replace(/\<\/pre>/ig, '</code></pre>');
                     metaData.content = metaData.content.replace(/\<img s/ig, '<img itemprop="image" s');
+                    metaData.content = metaData.content.replace(/target=(\"\')_blank(\"\')/ig, 'target=$1_blank$1 rel=$1noopener$1')
+
                     //metaData.content = metaData.content.replace(/\<(h[2-6]) /i, '<$1  itemprop="alternativeHeadline" ');
                     metaData.colourId = Math.floor(Math.random() * 6 ) + 1;
                     data.pageType = metaData.pageType = 'articles';
@@ -328,12 +330,15 @@ module.exports = function(grunt) {
                     copyDir('./apple-touch-icon.png', 'public/'),
                     copyDir('./android-chrome-192x192.png', 'public/'),
                     copyDir('./android-chrome-256x256.png', 'public/'),
+                    copyDir('./android-chrome-512x512.png', 'public/'),
                     copyDir('./404.html', 'public/'),
                     copyDir('./talks', 'public/talks'),
-                    copyDir('./CNAME', 'public/')
+                    copyDir('./src/fonts', 'public/fonts'),
+                    copyDir('./CNAME', 'public/')//,
+                    // copyDir('./dsw.js', 'public/')
                 ]).then(function () {
                     // return the last article
-                    cb(data, validArticles);
+                    cb(data, validArticles)
                 })
             });
         }
@@ -460,11 +465,11 @@ module.exports = function(grunt) {
 
                 data.pageType = "articles";
                 data.pageTypeDetail = data.currentArticleMetaData.name;
-                data.pageTitle = 'felipenmoura:page:articles | ' + stripTags(data.currentArticleMetaData.title);
+                data.pageTitle = 'felipenmoura:articles | ' + stripTags(data.currentArticleMetaData.title);
                 data.fullURL = DOMAIN + 'articles/';
                 copyIndexTo("articles", data);
 
-                data.pageTitle = 'felipenmoura:page:artigos | ' + stripTags(data.currentArticleMetaData.title);
+                data.pageTitle = 'felipenmoura:artigos | ' + stripTags(data.currentArticleMetaData.title);
                 //data.socialDesc = "Artigos escritos por Felipe, falando sobre desenvolvimento web, tecnologia, anúncios importantes, algumas notícias e eventualmente, pensamentos.";
                 copyIndexTo("artigos", data);
 

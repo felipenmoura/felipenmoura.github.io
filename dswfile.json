@@ -1,0 +1,107 @@
+{
+    "version": 1.1,
+    "applyImmediately": true,
+    "appShell": [
+        "/",
+        "/dsw.js",
+        "/index.html",
+        "/articles/",
+        "/artigos/",
+        "/home/",
+        "/about/",
+        "/sobre/",
+        "/utils/",
+        "/uteis/",
+        "/styles/main.min.css",
+        "/scripts/default.min.js",
+        "/sh/prism.min.css",
+        "/sh/prism.js",
+        "/images/relax.jpg",
+        "/images/felipe-moura-felipenmoura-square.jpg",
+        "/resources/vibe.js.png",
+        "/resources/lab-canvas-image-editor-gama.png",
+        "/resources/exp-test-your-might.png",
+        "/resources/lab-chroma-key-js.png",
+        "/resources/lab-tv-3d-stereoscopic-html.png",
+        "/resources/lab-3d-builder-tool-environment.png",
+        "/images/photos/photo-felipe-n-moura-chrome-summit-2016.jpg",
+        "/images/photos/photo-felipe-n-moura-chrome-summit-2016-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-google-sp-2016.jpg",
+        "/images/photos/photo-felipe-n-moura-google-sp-2016-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-braziljs-2015.jpg",
+        "/images/photos/photo-felipe-n-moura-braziljs-2015-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-braziljs-stage-2013.jpg",
+        "/images/photos/photo-felipe-n-moura-braziljs-stage-2013-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-fisl-2012-speaking-talk.jpg",
+        "/images/photos/photo-felipe-n-moura-fisl-2012-speaking-talk-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2012.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2012-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2012-2-brendan-eich.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2012-2-brendan-eich-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-5.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-5-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-2-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-3-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-4.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-4-thumb.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage.jpg",
+        "/images/photos/photo-felipe-n-moura-stage-braziljs-2013-stage-thumb.jpg"
+    ],
+    "rules": {
+        "notFoundPages": {
+            "match": {
+                "extension": ["html", "htm"],
+                "status": [404, 500]
+            },
+            "apply": {
+            	"fetch": "/404.html"
+            }
+        },
+        "notFoundImages": {
+            "match": {
+                "extension": ["png", "jpg", "jpeg", "webp", "gif"],
+                "status": [404, 500]
+            },
+            "apply": {
+            	"fetch": "/images/transparent.gif"
+            }
+        },
+        "cacheImages": {
+            "match": {
+                "extension": ["png", "jpg", "jpeg", "webp", "gif"]
+            },
+            "apply": {
+            	"cache": {
+            		"name": "cached-images",
+            		"version": 1
+            	}
+            }
+        },
+        "statics": {
+            "match": {
+                "extension": ["js", "css"]
+            },
+            "apply": {
+            	"cache": {
+                    "name": "static-files",
+                    "expires": "1w",
+            	    "version": 1
+            	}
+            }
+        },
+        "cacheFiles": {
+            "match": {
+                "path": "\/.*"
+            },
+            "apply": {
+            	"cache": {
+            	    "name": "cached-files",
+            	    "version": 1,
+                    "expires": "1w"
+            	}
+            }
+        }
+    }
+}

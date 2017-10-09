@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-    <script>
-        if(navigator.language == 'pt-BR'){
-            document.write('<' + 'html lang="pt-BR">');
-        }else{
-            document.write('<' + 'html lang="en-US">');
-        }
-    </script>
+<html lang='en-us'>
     <head>
 
         <!-- Meta -->
         <meta charset="UTF-8">
-        <link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script src="/dsw.js"></script>
+        <script>
+          DSW.setup()
+            .then(() => {
+                console.log('Service Worker installed')
+            })
+            .catch(() => {
+                console.log('Service Worker failed')
+            });
+        </script>
+
 
         <!-- Info -->
         <title>felipenmoura articles: Escopo, this e that</title>
@@ -21,7 +26,7 @@
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
         <link rel="manifest" href="/manifest.json">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5b60d5">
-        <meta name="theme-color" content="#444ae3">
+        <meta name="theme-color" content="#B2ADB2">
 
         <meta name="description" content="Home page of Felipe Nascimento de Moura. Find information about me, my projects, demos, labs, talks and articles. Escopo no JavaScript as vezes pode oferecer algumas pegadinhas!Vamos discutir um pouco aqui sobre estes caras.">
         <meta name="keywords" content="javascript, ecma, es6, ecmascript, css, html, html5, css3, talks, braziljs, rsjs, frontintpoa, conferences, slides, technology, web, development" />
@@ -54,7 +59,7 @@
         <meta itemprop="image" content="http://felipenmoura.com/articles/escopo-this-e-that/scopes-javascript-closure.jpg">
 
         <!-- RSS -->
-        <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="http://felipenmoura.com/feed.xml">
+        <link rel="alternate" type="application/rss+xml" title="Felipe N. Moura RSS Feed" href="https://felipenmoura.com/feed.xml">
 
     </head>
     <body data-page="articles" hash-bang-detail=>
