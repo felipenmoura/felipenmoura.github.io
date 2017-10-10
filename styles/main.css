@@ -1191,12 +1191,11 @@ body[data-page="utils"] #utils-container .decorator {
   overflow: hidden;
 }
 .utils-item .utils-thumb img {
-  width: 320px;
+  width: 100%;
   position: absolute;
   left: 50%;
   top: 0;
   margin-left: -160px;
-  min-height: 100%;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
@@ -2063,6 +2062,7 @@ html[lang="pt-BR"] .multi-lang[lang="en-US"] {
   height: 100%;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 #articles-container .decorator .wrapper:after, #articles-container .decorator img:after {
   content: "";
@@ -2076,6 +2076,14 @@ html[lang="pt-BR"] .multi-lang[lang="en-US"] {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
+}
+#articles-container .decorator .wrapper img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
 }
 #articles-container .decorator abs {
   position: relative;
