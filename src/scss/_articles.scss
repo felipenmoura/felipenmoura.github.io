@@ -431,6 +431,7 @@ html[lang="pt-BR"] {
             height: 100%;
             width: 100%;
             z-index: 1;
+            overflow: hidden;
 
             &:after {
                 content: "";
@@ -445,7 +446,16 @@ html[lang="pt-BR"] {
                 background-position: left bottom;
                 background-repeat: no-repeat;
                 background-size: cover;
+                text-align: center;
             }
+        }
+
+        .wrapper img {
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            margin: auto;
         }
 
         abs {
