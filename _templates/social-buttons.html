@@ -1,9 +1,10 @@
 <div class='social-buttons-container'>
+    Share on:
     <!-- FB LIKE BUTTON -->
-    <div class="fb-like" data-href="{{ fullURL }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-    <!-- Tweitter -->
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ fullURL }}" data-text="{{ title | striptags }}" data-via="felipenmoura" data-count="none">Tweet</a>
+    <a href='javascript:window.open("https://www.facebook.com/sharer/sharer.php?u={{ fullURL }}&t={{ title | striptags }}", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"); void(0)'
+     >Facebook</a>
+    <!-- Twitter -->
+    <a href='javascript:window.open("https://twitter.com/intent/tweet?text={{ title | striptags }}%20-%20{{ fullURL }}", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"); void(0)'>Twitter</a>
     <!-- GOOGLE PLUS -->
-    <div class="g-plusone" data-size="medium" data-href="{{ fullURL }}"></div>
-    <!-- Place this tag after the last +1 button tag. -->
+    <a href='javascript:window.open("https://plus.google.com/share?url={{ fullURL }}", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=400"); void(0)'>G+</a>
 </div>

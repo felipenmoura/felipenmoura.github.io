@@ -217,31 +217,49 @@
     };
 
     UTILS.applySH = function () {
-        Prism.highlightAll();
+        if (window.Prism) {
+            Prism.highlightAll();
+        } else {
+            var prismScr = document.createElement('script')
+            prismScr.async = true
+            prismScr.defer = true
+            prismScr.src = '/sh/prism.js'
+            prismScr.onload = function () {
+                if (window.Prism) {
+                    UTILS.applySH()
+                }
+            }
+            var link  = document.createElement('link')
+            link.rel  = 'stylesheet'
+            link.type = 'text/css'
+            link.href = '/sh/prism.min.css'
+            document.body.appendChild(link)
+            document.body.appendChild(prismScr)
+        }
     };
 
     UTILS.applyComments = function(){
-        return
-        setTimeout(function () {
-            var dsqsEl = document.getElementById('disqus_thread'),
-            //identifier = dsqsEl.getAttribute('data-article-url'),
-            url = dsqsEl.getAttribute('data-article-url');
+        console.log('Applying DISQUS')
+        var dsqsEl = document.getElementById('disqus_thread'),
+        //identifier = dsqsEl.getAttribute('data-article-url'),
+        url = dsqsEl.getAttribute('data-article-url');
 
-            window.disqus_url = "http://felipenmoura.com" + url + "/";
-            window.disqus_identifier = window.disqus_url;
+        window.disqus_url = "http://felipenmoura.com" + url + "/";
+        window.disqus_identifier = window.disqus_url;
 
-            console.warn(window.disqus_identifier);
+        // console.warn(window.disqus_identifier);
 
-            if(UTILS.disqusApplied){
-
-                DISQUS.reset({
-                    reload: true,
-                    config: function () {
-                        this.page.identifier = window.disqus_identifier;
-                        this.page.url = window.disqus_url;
-                    }
-                });
-            }else{
+        if(UTILS.disqusApplied){
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = window.disqus_identifier;
+                    this.page.url = window.disqus_url;
+                }
+            });
+        }else{
+            setTimeout(function () {
+                console.log('Applying disqus')
                 UTILS.disqusApplied = true;
                 var disqus_shortname = 'felipenmoura';
 
@@ -250,11 +268,12 @@
 
                     dsq.type = 'text/javascript';
                     dsq.async = true;
+                    dsq.defer = true;
                     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 })();
-            }
-        }, 2000)
+            }, 5000)
+        }
     }
 
     UTILS.updatePageStatus = function () {
@@ -320,6 +339,10 @@
             history.pushState({}, path, path);
             UTILS.setTitle();
         }
+
+        if (hashData.page === 'articles' || hashData.page === 'artigos') {
+            UTILS.applyComments()
+        }
     };
 
     UTILS.setTitle = function () {
@@ -356,7 +379,6 @@
         var path = url.pathname;
 
         path = path.split('/') ;
-
         if ( path.length ) {
 
             hashData.page = path[1];
@@ -371,39 +393,7 @@
     }
 
     UTILS.applpiedSocialButtons = false;
-    UTILS.applySocialButtons = function () {
-        return
-        setTimeout(function(){
-            if(!UTILS.applpiedSocialButtons){
-                // load twitter
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-
-                // load facebook
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=427975900560419";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-            }else{
-                // reload twitter
-                twttr.widgets.load();
-                // reload facebook
-                FB.XFBML.parse(document.body);
-            }
-
-            // gp
-            //window.___gcfg = {lang: 'pt-BR'};
-            (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/platform.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();
-
-            UTILS.applpiedSocialButtons = true;
-        }, 2000);
-    }
+    UTILS.applySocialButtons = function () {}
 
 
     function applyEvents () {
@@ -426,7 +416,7 @@
             //UTILS.registerPageView();
             UTILS.goToPage(location);
             UTILS.applySH();
-            UTILS.applyComments();
+            // UTILS.applyComments();
             UTILS.applySocialButtons();
             setTimeout(function(){
                 UTILS.loaded = true;

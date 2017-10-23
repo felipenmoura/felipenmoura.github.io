@@ -65,8 +65,6 @@
             ga('send', 'pageview');
         </script>
 
-        <div id="fb-root"></div>
-
         <div class="background-video videobg">
             <img id="background-video" class="background-video" src="/images/relax.jpg" alt="">
             <!--video id="background-video" class="background-video" autoplay loop poster="/images/relax.jpg" >
@@ -1044,14 +1042,16 @@ Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, alé
 
         <div class="wrapper articles-content">
             <div class='social-buttons-container'>
+    Share on:
     <!-- FB LIKE BUTTON -->
-    <div class="fb-like" data-href="http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-    <!-- Tweitter -->
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page" data-text="Três maneiras de recarregar a página usando JavaScript" data-via="felipenmoura" data-count="none">Tweet</a>
+    <a href='javascript:window.open("https://www.facebook.com/sharer/sharer.php?u=http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page&t=Três maneiras de recarregar a página usando JavaScript", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"); void(0)'
+     >Facebook</a>
+    <!-- Twitter -->
+    <a href='javascript:window.open("https://twitter.com/intent/tweet?text=Três maneiras de recarregar a página usando JavaScript%20-%20http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600"); void(0)'>Twitter</a>
     <!-- GOOGLE PLUS -->
-    <div class="g-plusone" data-size="medium" data-href="http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page"></div>
-    <!-- Place this tag after the last +1 button tag. -->
+    <a href='javascript:window.open("https://plus.google.com/share?url=http://felipenmoura.com/articles/three-ways-to-reload-or-move-the-page", "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=400"); void(0)'>G+</a>
 </div>
+
             <article itemprop="articleBody">Temos no javascript, quando lidando com a API DOM, o elemento history, com o qual podemos avançar ou regredir conforme o nosso histórico de navegação, além de podermos especificar a página que queremos carregar com o uso do método <em>go</em>, indicando valores menores que zero para o passado, ou maiores para o futuro.
 Por tanto, podemos fazer desta maneira:
 <pre class="line-numbers"><code class="language-javascript">
@@ -1208,8 +1208,8 @@ Este código recarregará a página, ms poderia ser qualquer outro endereço al�
         <div id="decoration" class="glassEffect"></div>
 
         <!-- Scripts -->
-        <link rel="stylesheet" type="text/css" defer href="/sh/prism.min.css" />
-        <script src="/sh/prism.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" defer href="/sh/prism.min.css" /> -->
+        <!-- <script src="/sh/prism.js"></script> -->
 
         <script>
             var dswScr = document.createElement('script')
