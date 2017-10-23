@@ -31,7 +31,15 @@ module.exports = function(grunt) {
         return str && str.replace? str.replace(/(<([^>]+)>)/ig, ''): str;
     }
 
-    nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''));
+    nunEnv = new NunJucks.Environment(new NunJucks.FileSystemLoader(''), {
+        noCache: true,
+        autoescape: false
+    });
+    
+    // nunEnv = NunJucks.configure('_templates/article.html', {
+    //     autoescape: false
+    // })
+    
     //nunEnv = new NunJucks.FileSystemLoader(['templates']);
     nunEnv.addFilter('striptags', stripTags);
 
@@ -85,6 +93,11 @@ module.exports = function(grunt) {
                     'public/scripts/default.min.js': ['src/scripts/default.js']
                 }
             },
+            // dsw: {
+            //     files: {
+            //         'public/dsw.js': ['dsw.js']
+            //     }
+            // },
             options: {}
         },
 
@@ -291,7 +304,7 @@ module.exports = function(grunt) {
                     data.fullURL = DOMAIN + artPath + cur.name + '/';
                     data.pageTitle = 'felipenmoura ' + metaData.pageType + ': ' + stripTags(metaData.title);
                     data.socialDesc = addslashes(metaData.resume || 'Meet the Felipe N. Moura personal page with his works, projects, demos, talks and articles.');
-
+console.log(metaData.content)
                     renderedArticle = nunEnv.render(tplArtPath, metaData);
                     // the index for ajax requests
                     try {
@@ -299,6 +312,7 @@ module.exports = function(grunt) {
                     } catch (error) {
                         // nothing, thanks
                     }
+    
                     fs.writeFileSync('src/' + artPath + cur.name + '/index-ajax.html',
                                      renderedArticle,
                                      'utf-8');
@@ -306,6 +320,7 @@ module.exports = function(grunt) {
                     metaData.oContent = metaData.content;
                     metaData.content = fs.readFileSync( 'src/' + artPath + cur.name + '/index-ajax.html', 'utf-8');
                     metaData.currentArticle = data.currentArticle = metaData.content;
+
                     fs.writeFileSync('src/' + artPath + cur.name + '/index.html',
                                      applyLinks(nunEnv.render(tplPath, data)),
                                      'utf8');
@@ -575,6 +590,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', ['sass', 'compileArticles', 'compileTemplates', 'uglify', 'cssmin']);
 
     grunt.registerTask('default', ['build']);
+    grunt.registerTask('uglifyDSW', ['uglify:dsw']);
 
 };
 

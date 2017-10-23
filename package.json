@@ -5,23 +5,22 @@
     "cpy": "^6.0.0",
     "fs-extra": "^4.0.2",
     "grunt": "*",
-    "grunt-contrib-sass": ">=0.4.0",
+    "grunt-contrib-sass": ">=1.0.0",
     "grunt-contrib-watch": "*"
   },
   "scripts": {
     "start": "http-server -p 8080 ./public",
-    "build": "grunt build && dsw && uglifyjs dsw.js -o public/dsw.js",
+    "build": "grunt build && dsw && cp dsw.js public/dsw.js # uglifyjs dsw.js -o public/dsw.js",
     "publish": "git push gh `git subtree split --prefix public src`:master --force",
     "watch": "grunt watch"
   },
-  "engine": "node 0.4.1",
   "devDependencies": {
     "dsw": "^1.12.2",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.1.0",
     "grunt-jslint": "*",
     "grunt-nunjucks": "^0.1.4",
-    "grunt-scss-lint": "^0.3.4",
-    "nunjucks": "^1.2.0"
+    "grunt-scss-lint": "^0.5.0",
+    "nunjucks": "^3.0.1"
   }
 }
