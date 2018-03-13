@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang='en-US'>
     <head>
 
         <!-- Meta -->
@@ -1018,7 +1018,7 @@ Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, alé
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-1
+                    colour-3
                     ">
             <h2 itemprop="headline"><a href="/articles/where-is-this-web-going-to">Where is this web <em>going to?</em></a></h2>
             <div class="wrapper">
@@ -1214,6 +1214,13 @@ Links do evento:
                     });
             }
             document.body.appendChild(dswScr)
+        </script>
+        <script>
+            if (navigator.language.substr(0, 2) === 'pt') {
+                document.querySelector('html').setAttribute('lang', 'pt-BR')
+            } else {
+                document.querySelector('html').setAttribute('lang', 'en-US')
+            }
         </script>
 
         <script src="/scripts/default.min.js" defer ></script>

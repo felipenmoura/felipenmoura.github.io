@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang='en-US'>
     <head>
 
         <!-- Meta -->
@@ -1018,7 +1018,7 @@ Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, alé
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-6
+                    colour-4
                     ">
             <h2 itemprop="headline"><a href="/articles/baby-news">Baby <em>news!</em></a></h2>
             <div class="wrapper">
@@ -1337,6 +1337,13 @@ By the way, feel free to send in some diapers :p
                     });
             }
             document.body.appendChild(dswScr)
+        </script>
+        <script>
+            if (navigator.language.substr(0, 2) === 'pt') {
+                document.querySelector('html').setAttribute('lang', 'pt-BR')
+            } else {
+                document.querySelector('html').setAttribute('lang', 'en-US')
+            }
         </script>
 
         <script src="/scripts/default.min.js" defer ></script>
