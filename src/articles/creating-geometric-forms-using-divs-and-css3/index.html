@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang='en-US'>
     <head>
 
         <!-- Meta -->
@@ -1572,6 +1572,13 @@ Para alterar a largura da parte de cima, basta alterar a propriedade width no cs
                     });
             }
             document.body.appendChild(dswScr)
+        </script>
+        <script>
+            if (navigator.language.substr(0, 2) === 'pt') {
+                document.querySelector('html').setAttribute('lang', 'pt-BR')
+            } else {
+                document.querySelector('html').setAttribute('lang', 'en-US')
+            }
         </script>
 
         <script src="/scripts/default.min.js" defer ></script>

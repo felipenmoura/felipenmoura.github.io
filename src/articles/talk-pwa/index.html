@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang='en-US'>
     <head>
 
         <!-- Meta -->
@@ -1018,7 +1018,7 @@ Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, alé
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-3
+                    colour-6
                     ">
             <h2 itemprop="headline"><a href="/articles/talk-pwa"><em>Palestra:</em> Progressive Web App</a></h2>
             <div class="wrapper">
@@ -1221,6 +1221,13 @@ Publiquei minha palestra no SpeakerDeck, veja abaixo:
                     });
             }
             document.body.appendChild(dswScr)
+        </script>
+        <script>
+            if (navigator.language.substr(0, 2) === 'pt') {
+                document.querySelector('html').setAttribute('lang', 'pt-BR')
+            } else {
+                document.querySelector('html').setAttribute('lang', 'en-US')
+            }
         </script>
 
         <script src="/scripts/default.min.js" defer ></script>

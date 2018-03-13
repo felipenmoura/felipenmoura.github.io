@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang='en-US'>
     <head>
 
         <!-- Meta -->
@@ -1018,7 +1018,7 @@ Me considero um "heavy user" pois uso diversas apps, muitas ao mesmo tempo, alé
 
     <div id="the-article" class="the-article" data-text-size="2">
         <div class="decorator
-                    colour-2
+                    colour-6
                     
                     resumeless
                     ">
@@ -1303,6 +1303,13 @@ Now go ahead and customize yours!</article>
                     });
             }
             document.body.appendChild(dswScr)
+        </script>
+        <script>
+            if (navigator.language.substr(0, 2) === 'pt') {
+                document.querySelector('html').setAttribute('lang', 'pt-BR')
+            } else {
+                document.querySelector('html').setAttribute('lang', 'en-US')
+            }
         </script>
 
         <script src="/scripts/default.min.js" defer ></script>
