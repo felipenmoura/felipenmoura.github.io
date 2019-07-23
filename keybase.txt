@@ -1,0 +1,60 @@
+felipenmoura
+Felipe Nascimento de Moura
+Web Developer, Co-creator of BrazilJS and Nasc, speaker, some times teacher, GDE in Web Technologies, content producer (videos, articles, etc).
+Porto Alegre, RS / Brazil
+==================================================================
+https://keybase.io/felipenmoura
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://felipenmoura.com
+  * I am felipenmoura (https://keybase.io/felipenmoura) on keybase.
+  * I have a public key ASDXzF93TujvjtFJel6gwwo-XtmgQ4JAy1FIsC-GYYhUuQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d7cc5f774ee8ef8ed1497a5ea0c30a3e5ed9a0438240cb5148b02f86618854b90a",
+      "host": "keybase.io",
+      "kid": "0120d7cc5f774ee8ef8ed1497a5ea0c30a3e5ed9a0438240cb5148b02f86618854b90a",
+      "uid": "38dbf4c3050023efa5258fa726c9d119",
+      "username": "felipenmoura"
+    },
+    "merkle_root": {
+      "ctime": 1563913830,
+      "hash": "733ea552aac6e714b83f7141cce6732530d64f6409aa11b963da2b766375e22fec2ba8421ad927e9802e8c856b38122f8130d3007600cd490c7848d81076d655",
+      "hash_meta": "b391a6ac7309befb6d8f218e868f3618e48775af97f3936675a90422bc8fb9d5",
+      "seqno": 5836236
+    },
+    "service": {
+      "entropy": "PSV7WmJRg2WrVlL/Cx7nslcX",
+      "hostname": "felipenmoura.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.0"
+  },
+  "ctime": 1563913850,
+  "expire_in": 504576000,
+  "prev": "f29f2572443f12b0eca6460984d895a28e3a39cda0c17f0593ef8765c3bf4587",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg18xfd07o747RSXpeoMMKPl7ZoEOCQMtRSLAvhmGIVLkKp3BheWxvYWTESpcCBsQg8p8lckQ/ErDspkYJhNiVoo46Oc2gwX8Fk++HZcO/RYfEILRGYDu/aeNCWIXW+fMR54QYra7LcRZHQONYzeRtOx3fAgHCo3NpZ8RA8oZ3bq5AMaBA3pW45M7N7RQen+QZqOwJb113RgK4tWdvfaCyRnkWczzW1NI8JlgtS/nlRVjKdIKo2LAroWgYDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIK8t3T+dkDEgOPkzQ14ZUOg12pLAfwFQ+f65NuMsv4WSo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/felipenmoura
+
+==================================================================
