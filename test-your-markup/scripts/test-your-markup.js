@@ -32,7 +32,7 @@
 		energy= 0;
 
 	// go fetch the list from a different file
-	fetch('lists.json').then(result => result.json().then(data => init(data)))
+	fetch('/test-your-markup/lists.json').then(result => result.json().then(data => init(data)))
 
 	function init(lists) {
 		var selectedList= lists['js-libs'];
